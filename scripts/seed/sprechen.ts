@@ -267,6 +267,264 @@ export const ITEMS: Prisma.GoetheItemCreateManyInput[] = [
     },
     guidanceNote: "„Entschuldigung, wie komme ich zum Bahnhof?“ — „Gehen Sie geradeaus …“",
   },
+
+  // ===================== A2 =====================
+  {
+    level: "A2",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_ASK_ANSWER",
+    title: "Eine Geburtstagsfeier planen",
+    prompt: "Plane gemeinsam etwas. Sprich auf Deutsch (etwa eine Minute).",
+    difficulty: "CORE",
+    topicTag: "alltag",
+    payload: {
+      taskPrompt:
+        "Thema: Geburtstagsfeier für einen Freund. Plane die Feier. Sprich über Ort, Datum, Essen und wen ihr einladet. Mach Vorschläge und sag, was du gut findest.",
+      prepSeconds: 30,
+      speakSeconds: 60,
+    },
+    guidanceNote: "Mach Vorschläge mit „Wir könnten …“ oder „Wie wäre es mit …?“",
+  },
+  {
+    level: "A2",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_ASK_ANSWER",
+    title: "Einen Ausflug planen",
+    prompt: "Plane gemeinsam etwas. Sprich auf Deutsch (etwa eine Minute).",
+    difficulty: "CORE",
+    topicTag: "freizeit",
+    payload: {
+      taskPrompt:
+        "Thema: ein Ausflug am Wochenende. Plane den Ausflug. Sprich über das Ziel, die Uhrzeit, das Verkehrsmittel und was ihr mitnehmt.",
+      prepSeconds: 30,
+      speakSeconds: 60,
+    },
+    guidanceNote: "Sag deine Meinung und reagiere auf Vorschläge: „Gute Idee“, „Lieber …“.",
+  },
+  {
+    level: "A2",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_ASK_ANSWER",
+    title: "Über den letzten Urlaub sprechen",
+    prompt: "Erzähle von einer Erfahrung. Sprich auf Deutsch (etwa eine Minute).",
+    difficulty: "STRETCH",
+    topicTag: "reisen",
+    payload: {
+      taskPrompt:
+        "Thema: dein letzter Urlaub. Erzähle: Wohin bist du gefahren? Mit wem? Was hast du dort gemacht? Wie war es?",
+      prepSeconds: 30,
+      speakSeconds: 60,
+    },
+    guidanceNote: "Nutze das Perfekt: „Ich bin … gefahren“, „Wir haben … gemacht“.",
+  },
+  {
+    level: "A2",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_ASK_ANSWER",
+    title: "Über deine Arbeit oder dein Studium sprechen",
+    prompt: "Erzähle von dir. Sprich auf Deutsch (etwa eine Minute).",
+    difficulty: "CORE",
+    topicTag: "arbeit",
+    payload: {
+      taskPrompt:
+        "Thema: deine Arbeit oder dein Studium. Erzähle, was du machst, wie dein Tag aussieht, und was dir gefällt oder nicht gefällt.",
+      prepSeconds: 30,
+      speakSeconds: 60,
+    },
+    guidanceNote: "Sag auch deine Meinung: „Mir gefällt …, weil …“.",
+  },
+  {
+    level: "A2",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_ASK_ANSWER",
+    title: "Ein gemeinsames Abendessen planen",
+    prompt: "Plane gemeinsam etwas. Sprich auf Deutsch (etwa eine Minute).",
+    difficulty: "CORE",
+    topicTag: "essen",
+    payload: {
+      taskPrompt:
+        "Thema: ein Abendessen für Freunde. Plane das Essen. Sprich darüber, was ihr kocht, wer was mitbringt, wann es losgeht und wer abwäscht.",
+      prepSeconds: 30,
+      speakSeconds: 60,
+    },
+    guidanceNote: "Teile die Aufgaben: „Ich kann …“, „Kannst du …?“",
+  },
+  {
+    level: "A2",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_ASK_ANSWER",
+    title: "Über deine Heimatstadt sprechen",
+    prompt: "Erzähle von einem Ort. Sprich auf Deutsch (etwa eine Minute).",
+    difficulty: "CORE",
+    topicTag: "wohnen",
+    payload: {
+      taskPrompt:
+        "Thema: deine Heimatstadt. Erzähle, wo sie liegt, wie groß sie ist, was man dort machen kann und was dir dort gefällt.",
+      prepSeconds: 30,
+      speakSeconds: 60,
+    },
+    guidanceNote: "Beschreibe mit Adjektiven und gib Beispiele.",
+  },
+  {
+    level: "A2",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_ASK_ANSWER",
+    title: "Fragen zum Thema Gesundheit",
+    prompt: "Stell eine Frage und beantworte eine Frage zum Thema. Sprich auf Deutsch.",
+    difficulty: "FOUNDATION",
+    topicTag: "gesundheit",
+    payload: {
+      taskPrompt:
+        "Thema: Gesundheit. Stell eine Frage (zum Beispiel: Was machst du für deine Gesundheit? Wie oft gehst du zum Arzt?) und beantworte sie selbst.",
+      prepSeconds: 20,
+      speakSeconds: 45,
+    },
+    guidanceNote: "„Was machst du für deine Gesundheit?“ — „Ich gehe oft spazieren.“",
+  },
+  {
+    level: "A2",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_ASK_ANSWER",
+    title: "Einen Kinobesuch planen",
+    prompt: "Plane gemeinsam etwas. Sprich auf Deutsch (etwa eine Minute).",
+    difficulty: "FOUNDATION",
+    topicTag: "freizeit",
+    payload: {
+      taskPrompt:
+        "Thema: zusammen ins Kino gehen. Plane den Abend. Sprich über den Film, die Uhrzeit, den Treffpunkt und was ihr danach macht.",
+      prepSeconds: 30,
+      speakSeconds: 60,
+    },
+    guidanceNote: "Schlag etwas vor und frag nach der Meinung des anderen.",
+  },
+  {
+    level: "A2",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_ASK_ANSWER",
+    title: "Über das Internet und Handy sprechen",
+    prompt: "Erzähle von dir. Sprich auf Deutsch (etwa eine Minute).",
+    difficulty: "STRETCH",
+    topicTag: "alltag",
+    payload: {
+      taskPrompt:
+        "Thema: Internet und Handy. Erzähle, wofür du dein Handy benutzt, wie viel Zeit du im Internet verbringst, und was du daran gut oder schlecht findest.",
+      prepSeconds: 30,
+      speakSeconds: 60,
+    },
+    guidanceNote: "Sag deine Meinung mit „Ich finde …“ und gib einen Grund.",
+  },
+  {
+    level: "A2",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_ASK_ANSWER",
+    title: "Fragen zum Thema Wohnen",
+    prompt: "Stell eine Frage und beantworte eine Frage zum Thema. Sprich auf Deutsch.",
+    difficulty: "FOUNDATION",
+    topicTag: "wohnen",
+    payload: {
+      taskPrompt:
+        "Thema: Wohnen. Stell eine Frage (zum Beispiel: Wie wohnst du? Wohnung oder Haus? Allein oder mit anderen?) und beantworte sie selbst.",
+      prepSeconds: 20,
+      speakSeconds: 45,
+    },
+    guidanceNote: "„Wie wohnst du?“ — „Ich wohne in einer kleinen Wohnung im Zentrum.“",
+  },
+  {
+    level: "A2",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_ASK_ANSWER",
+    title: "Einen Einkauf für eine Party planen",
+    prompt: "Plane gemeinsam etwas. Sprich auf Deutsch (etwa eine Minute).",
+    difficulty: "CORE",
+    topicTag: "einkaufen",
+    payload: {
+      taskPrompt:
+        "Thema: einkaufen für eine Party. Plane den Einkauf. Sprich darüber, was ihr braucht, wer einkaufen geht, wo ihr einkauft und wie viel Geld ihr ausgebt.",
+      prepSeconds: 30,
+      speakSeconds: 60,
+    },
+    guidanceNote: "Macht eine Liste im Gespräch: „Wir brauchen …“, „Vergiss nicht …“.",
+  },
+  {
+    level: "A2",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_ASK_ANSWER",
+    title: "Über ein Fest in deinem Land sprechen",
+    prompt: "Erzähle von etwas. Sprich auf Deutsch (etwa eine Minute).",
+    difficulty: "STRETCH",
+    topicTag: "person",
+    payload: {
+      taskPrompt:
+        "Thema: ein Fest in deinem Land. Erzähle, welches Fest du magst, wann es ist, was man da macht und isst, und warum du es magst.",
+      prepSeconds: 30,
+      speakSeconds: 60,
+    },
+    guidanceNote: "Erkläre einfach und gib Beispiele. Sag am Ende deine Meinung.",
+  },
+  {
+    level: "A2",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_ASK_ANSWER",
+    title: "Fragen zum Thema Verkehr",
+    prompt: "Stell eine Frage und beantworte eine Frage zum Thema. Sprich auf Deutsch.",
+    difficulty: "FOUNDATION",
+    topicTag: "reisen",
+    payload: {
+      taskPrompt:
+        "Thema: Verkehr und Mobilität. Stell eine Frage (zum Beispiel: Wie kommst du zur Arbeit? Fährst du gern mit dem Bus?) und beantworte sie selbst.",
+      prepSeconds: 20,
+      speakSeconds: 45,
+    },
+    guidanceNote: "„Wie kommst du zur Arbeit?“ — „Ich fahre mit der U-Bahn, das geht schnell.“",
+  },
+  {
+    level: "A2",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_ASK_ANSWER",
+    title: "Einen Deutschkurs zusammen wählen",
+    prompt: "Plane gemeinsam etwas. Sprich auf Deutsch (etwa eine Minute).",
+    difficulty: "STRETCH",
+    topicTag: "lernen",
+    payload: {
+      taskPrompt:
+        "Thema: zusammen einen Deutschkurs besuchen. Plant gemeinsam. Sprich über die Tage, die Uhrzeit, den Preis und wie ihr zum Kurs kommt.",
+      prepSeconds: 30,
+      speakSeconds: 60,
+    },
+    guidanceNote: "Wäge Möglichkeiten ab: „Abends ist besser, weil …“.",
+  },
+  {
+    level: "A2",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_ASK_ANSWER",
+    title: "Über deine Familie und Feste sprechen",
+    prompt: "Erzähle von dir. Sprich auf Deutsch (etwa eine Minute).",
+    difficulty: "CORE",
+    topicTag: "person",
+    payload: {
+      taskPrompt:
+        "Thema: deine Familie. Erzähle, wer zu deiner Familie gehört, was ihr gern zusammen macht, und wann ihr euch trefft.",
+      prepSeconds: 30,
+      speakSeconds: 60,
+    },
+    guidanceNote: "Verbinde Sätze mit „und“, „aber“, „weil“.",
+  },
+  {
+    level: "A2",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_ASK_ANSWER",
+    title: "Fragen zum Thema Wochenende und Freizeit",
+    prompt: "Stell eine Frage und beantworte eine Frage zum Thema. Sprich auf Deutsch.",
+    difficulty: "FOUNDATION",
+    topicTag: "freizeit",
+    payload: {
+      taskPrompt:
+        "Thema: Freizeit. Stell eine Frage (zum Beispiel: Was machst du am liebsten in deiner Freizeit? Triffst du oft Freunde?) und beantworte sie selbst.",
+      prepSeconds: 20,
+      speakSeconds: 45,
+    },
+    guidanceNote: "Antworte in zwei bis drei Sätzen und gib ein Beispiel.",
+  },
 ];
 
 async function main() {
