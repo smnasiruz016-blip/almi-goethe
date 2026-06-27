@@ -847,6 +847,296 @@ export const ITEMS: Prisma.GoetheItemCreateManyInput[] = [
     },
     guidanceNote: "Begründe deine Bitte (Sicherheit) — das macht sie überzeugender.",
   },
+
+  // ===================== B2 =====================
+  {
+    level: "B2",
+    module: "SCHREIBEN",
+    taskType: "SCHREIBEN_ESSAY",
+    title: "Diskussionsbeitrag: Sollte Studieren kostenlos sein?",
+    prompt: "Schreib einen Diskussionsbeitrag in einem Online-Forum auf Deutsch (circa 150 Wörter).",
+    difficulty: "STRETCH",
+    topicTag: "lernen",
+    payload: {
+      situation:
+        "In einem Online-Forum wird über die Frage diskutiert: „Sollte ein Studium an Universitäten für alle kostenlos sein?“ Du möchtest dich an der Diskussion beteiligen.",
+      instruction:
+        "Schreib einen Diskussionsbeitrag. Nenne deine Meinung, führe mindestens zwei Argumente an und belege sie mit Beispielen, gehe auf ein Gegenargument ein und entkräfte es, und schließe mit einem klaren Fazit.",
+      wordMin: 130,
+      wordMax: 180,
+    },
+    guidanceNote: "B2-Struktur: Einleitung – Argumente mit Beispielen – Gegenargument – Fazit. Nutze Konnektoren (zudem, dennoch, folglich).",
+  },
+  {
+    level: "B2",
+    module: "SCHREIBEN",
+    taskType: "SCHREIBEN_ESSAY",
+    title: "Diskussionsbeitrag: Brauchen wir noch Bargeld?",
+    prompt: "Schreib einen Diskussionsbeitrag in einem Online-Forum auf Deutsch (circa 150 Wörter).",
+    difficulty: "STRETCH",
+    topicTag: "alltag",
+    payload: {
+      situation:
+        "In einem Forum wird diskutiert: „Sollten wir Bargeld abschaffen und nur noch digital bezahlen?“",
+      instruction:
+        "Schreib einen Diskussionsbeitrag. Erkläre deine Position, nenne Vorteile und Nachteile des bargeldlosen Bezahlens, gib ein konkretes Beispiel, berücksichtige eine andere Sichtweise, und ziehe ein Fazit.",
+      wordMin: 130,
+      wordMax: 180,
+    },
+    guidanceNote: "Wäge differenziert ab und vergiss das Fazit nicht.",
+  },
+  {
+    level: "B2",
+    module: "SCHREIBEN",
+    taskType: "SCHREIBEN_LETTER",
+    title: "Formelle Beschwerde über eine verspätete Lieferung",
+    prompt: "Schreib eine formelle E-Mail auf Deutsch (circa 120 Wörter).",
+    difficulty: "STRETCH",
+    topicTag: "einkaufen",
+    payload: {
+      situation:
+        "Du hast vor drei Wochen Möbel bestellt und im Voraus bezahlt. Der vereinbarte Liefertermin ist längst verstrichen, und auf deine Nachfragen reagiert die Firma nicht.",
+      instruction:
+        "Schreib eine formelle Beschwerde an die Firma. Schildere den Sachverhalt sachlich, erkläre, warum die Verzögerung für dich ein Problem ist, fordere eine konkrete Lösung mit Frist, und kündige an, was du sonst tun wirst.",
+      wordMin: 100,
+      wordMax: 150,
+    },
+    guidanceNote: "Bleib sachlich, aber bestimmt. Setze eine klare Frist.",
+  },
+  {
+    level: "B2",
+    module: "SCHREIBEN",
+    taskType: "SCHREIBEN_ESSAY",
+    title: "Diskussionsbeitrag: Ist Reisen mit dem Flugzeug noch vertretbar?",
+    prompt: "Schreib einen Diskussionsbeitrag in einem Online-Forum auf Deutsch (circa 150 Wörter).",
+    difficulty: "STRETCH",
+    topicTag: "umwelt",
+    payload: {
+      situation:
+        "In einem Forum geht es um die Frage: „Sollte man wegen der Umwelt seltener fliegen?“",
+      instruction:
+        "Schreib einen Diskussionsbeitrag. Nenne deine Meinung, führe Argumente für weniger Fliegen an, berücksichtige aber auch, warum Fliegen für manche Menschen wichtig ist, schlage einen vernünftigen Mittelweg vor, und schließe mit einem Fazit.",
+      wordMin: 130,
+      wordMax: 180,
+    },
+    guidanceNote: "Ein guter B2-Text berücksichtigt mehrere Perspektiven.",
+  },
+  {
+    level: "B2",
+    module: "SCHREIBEN",
+    taskType: "SCHREIBEN_LETTER",
+    title: "Formelle Anfrage zu einer Weiterbildung",
+    prompt: "Schreib eine formelle E-Mail auf Deutsch (circa 120 Wörter).",
+    difficulty: "CORE",
+    topicTag: "arbeit",
+    payload: {
+      situation:
+        "Du interessierst dich für eine berufliche Weiterbildung, die ein Bildungsinstitut anbietet, brauchst aber noch genauere Informationen.",
+      instruction:
+        "Schreib eine formelle E-Mail an das Institut. Stell dich kurz vor, erkläre dein Interesse, stelle drei konkrete Fragen (z. B. zu Voraussetzungen, Dauer und Kosten), und frag, ob eine Förderung möglich ist.",
+      wordMin: 100,
+      wordMax: 150,
+    },
+    guidanceNote: "Strukturiere deine Anfrage übersichtlich, eine Frage nach der anderen.",
+  },
+  {
+    level: "B2",
+    module: "SCHREIBEN",
+    taskType: "SCHREIBEN_ESSAY",
+    title: "Diskussionsbeitrag: Smartphones in der Schule",
+    prompt: "Schreib einen Diskussionsbeitrag in einem Online-Forum auf Deutsch (circa 150 Wörter).",
+    difficulty: "STRETCH",
+    topicTag: "lernen",
+    payload: {
+      situation:
+        "In einem Bildungsforum wird diskutiert: „Sollten Smartphones an Schulen komplett verboten werden?“",
+      instruction:
+        "Schreib einen Diskussionsbeitrag. Vertritt eine klare Position, nenne Argumente dafür, gehe auf Gegenargumente ein, gib ein Beispiel aus deiner eigenen Erfahrung, und beende den Text mit einer Empfehlung.",
+      wordMin: 130,
+      wordMax: 180,
+    },
+    guidanceNote: "Verbinde deine Absätze logisch: „Einerseits … andererseits … letztlich …“.",
+  },
+  {
+    level: "B2",
+    module: "SCHREIBEN",
+    taskType: "SCHREIBEN_LETTER",
+    title: "Formeller Vorschlag an den Arbeitgeber",
+    prompt: "Schreib eine formelle E-Mail auf Deutsch (circa 120 Wörter).",
+    difficulty: "STRETCH",
+    topicTag: "arbeit",
+    payload: {
+      situation:
+        "In deinem Unternehmen gibt es keine Möglichkeit, im Homeoffice zu arbeiten. Du möchtest deiner Vorgesetzten vorschlagen, das zu ändern.",
+      instruction:
+        "Schreib eine formelle E-Mail an deine Vorgesetzte. Beschreib die aktuelle Situation, mach einen konkreten Vorschlag, begründe ihn mit den Vorteilen für die Firma, gehe kurz auf mögliche Bedenken ein, und bitte um ein Gespräch.",
+      wordMin: 100,
+      wordMax: 150,
+    },
+    guidanceNote: "Argumentiere aus Sicht des Unternehmens, nicht nur aus deiner eigenen.",
+  },
+  {
+    level: "B2",
+    module: "SCHREIBEN",
+    taskType: "SCHREIBEN_ESSAY",
+    title: "Diskussionsbeitrag: Freiwilliges soziales Jahr für alle?",
+    prompt: "Schreib einen Diskussionsbeitrag in einem Online-Forum auf Deutsch (circa 150 Wörter).",
+    difficulty: "STRETCH",
+    topicTag: "alltag",
+    payload: {
+      situation:
+        "In einem Forum wird diskutiert: „Sollte für junge Menschen ein soziales Jahr verpflichtend sein?“",
+      instruction:
+        "Schreib einen Diskussionsbeitrag. Nenne deine Meinung, führe Argumente an, berücksichtige das Argument der persönlichen Freiheit, gib ein Beispiel, und schließe mit einem klaren Fazit.",
+      wordMin: 130,
+      wordMax: 180,
+    },
+    guidanceNote: "Bei einer Pflicht ist das Argument der Freiheit besonders wichtig.",
+  },
+  {
+    level: "B2",
+    module: "SCHREIBEN",
+    taskType: "SCHREIBEN_ESSAY",
+    title: "Diskussionsbeitrag: Gesundes Essen in Kantinen",
+    prompt: "Schreib einen Diskussionsbeitrag in einem Online-Forum auf Deutsch (circa 150 Wörter).",
+    difficulty: "CORE",
+    topicTag: "gesundheit",
+    payload: {
+      situation:
+        "In einem Forum geht es um die Frage: „Sollten Kantinen in Firmen und Schulen nur noch gesundes Essen anbieten?“",
+      instruction:
+        "Schreib einen Diskussionsbeitrag. Erkläre deine Position, nenne Vor- und Nachteile, gehe auf das Thema Wahlfreiheit ein, gib ein Beispiel, und ziehe ein Fazit.",
+      wordMin: 130,
+      wordMax: 180,
+    },
+    guidanceNote: "Wäge zwischen Gesundheit und Wahlfreiheit ab.",
+  },
+  {
+    level: "B2",
+    module: "SCHREIBEN",
+    taskType: "SCHREIBEN_LETTER",
+    title: "Formelle Beschwerde an die Stadtverwaltung",
+    prompt: "Schreib eine formelle E-Mail auf Deutsch (circa 120 Wörter).",
+    difficulty: "STRETCH",
+    topicTag: "umwelt",
+    payload: {
+      situation:
+        "In deiner Straße fehlt es an sicheren Radwegen, und es kommt häufig zu gefährlichen Situationen zwischen Autos und Radfahrern.",
+      instruction:
+        "Schreib eine formelle E-Mail an die Stadtverwaltung. Beschreib das Problem konkret, erkläre, warum es gefährlich ist, mach einen Verbesserungsvorschlag, und bitte um eine Stellungnahme.",
+      wordMin: 100,
+      wordMax: 150,
+    },
+    guidanceNote: "Konkrete Beispiele machen eine Beschwerde überzeugender.",
+  },
+  {
+    level: "B2",
+    module: "SCHREIBEN",
+    taskType: "SCHREIBEN_ESSAY",
+    title: "Diskussionsbeitrag: Werbung für Kinder verbieten?",
+    prompt: "Schreib einen Diskussionsbeitrag in einem Online-Forum auf Deutsch (circa 150 Wörter).",
+    difficulty: "STRETCH",
+    topicTag: "alltag",
+    payload: {
+      situation:
+        "In einem Forum wird diskutiert: „Sollte Werbung, die sich an Kinder richtet, verboten werden?“",
+      instruction:
+        "Schreib einen Diskussionsbeitrag. Vertritt eine Position, nenne Argumente und Beispiele, berücksichtige die Sicht der Wirtschaft, und schließe mit deiner Empfehlung.",
+      wordMin: 130,
+      wordMax: 180,
+    },
+    guidanceNote: "Denke auch an die Gegenseite (z. B. wirtschaftliche Interessen).",
+  },
+  {
+    level: "B2",
+    module: "SCHREIBEN",
+    taskType: "SCHREIBEN_LETTER",
+    title: "Formelle Bewerbung um eine Stelle",
+    prompt: "Schreib eine formelle Bewerbungs-E-Mail auf Deutsch (circa 130 Wörter).",
+    difficulty: "STRETCH",
+    topicTag: "arbeit",
+    payload: {
+      situation:
+        "Du hast eine Stellenanzeige für eine Teilzeitstelle gefunden, die gut zu dir passt, und möchtest dich bewerben.",
+      instruction:
+        "Schreib eine formelle Bewerbung. Nenne die Stelle, auf die du dich beziehst, stell dich und deine Erfahrung kurz vor, erkläre, warum du geeignet bist, nenne deinen frühesten Eintrittstermin, und bitte um ein Vorstellungsgespräch.",
+      wordMin: 110,
+      wordMax: 160,
+    },
+    guidanceNote: "Eine Bewerbung ist sachlich und betont, was du dem Arbeitgeber bietest.",
+  },
+  {
+    level: "B2",
+    module: "SCHREIBEN",
+    taskType: "SCHREIBEN_ESSAY",
+    title: "Diskussionsbeitrag: Müssen wir weniger besitzen?",
+    prompt: "Schreib einen Diskussionsbeitrag in einem Online-Forum auf Deutsch (circa 150 Wörter).",
+    difficulty: "STRETCH",
+    topicTag: "umwelt",
+    payload: {
+      situation:
+        "In einem Forum geht es um die Frage: „Macht uns weniger Besitz glücklicher?“",
+      instruction:
+        "Schreib einen Diskussionsbeitrag. Nenne deine Meinung, führe Argumente und ein persönliches Beispiel an, gehe auf eine Gegenposition ein, und ziehe ein begründetes Fazit.",
+      wordMin: 130,
+      wordMax: 180,
+    },
+    guidanceNote: "Persönliche Beispiele machen einen Meinungstext glaubwürdig.",
+  },
+  {
+    level: "B2",
+    module: "SCHREIBEN",
+    taskType: "SCHREIBEN_MESSAGE",
+    title: "Einer Freundin eine schwierige Entscheidung mitteilen",
+    prompt: "Schreib eine ausführliche E-Mail an eine Freundin auf Deutsch (circa 120 Wörter).",
+    difficulty: "CORE",
+    topicTag: "alltag",
+    payload: {
+      situation:
+        "Du hast ein Jobangebot im Ausland bekommen und musst dich bald entscheiden. Eine gute Freundin möchte wissen, wie es dir damit geht.",
+      instruction:
+        "Schreib deiner Freundin eine E-Mail. Erzähle von dem Angebot, beschreibe, was für und was gegen den Schritt spricht, sag, wozu du gerade tendierst, und bitte sie um ihre Meinung.",
+      wordMin: 100,
+      wordMax: 150,
+    },
+    guidanceNote: "Drücke Gefühle und Abwägungen aus: „einerseits …, andererseits …“.",
+  },
+  {
+    level: "B2",
+    module: "SCHREIBEN",
+    taskType: "SCHREIBEN_LETTER",
+    title: "Formelle Bitte um Verlängerung einer Frist",
+    prompt: "Schreib eine formelle E-Mail auf Deutsch (circa 120 Wörter).",
+    difficulty: "CORE",
+    topicTag: "lernen",
+    payload: {
+      situation:
+        "Du machst einen Online-Kurs und sollst eine Abschlussarbeit abgeben. Aus persönlichen Gründen schaffst du die Frist nicht.",
+      instruction:
+        "Schreib eine formelle E-Mail an die Kursleitung. Erkläre höflich deine Situation, bitte um eine Verlängerung der Frist, schlage einen konkreten neuen Termin vor, und versichere, dass du die Arbeit sicher abgibst.",
+      wordMin: 100,
+      wordMax: 150,
+    },
+    guidanceNote: "Eine gute Begründung und ein konkreter Vorschlag erhöhen die Chancen.",
+  },
+  {
+    level: "B2",
+    module: "SCHREIBEN",
+    taskType: "SCHREIBEN_ESSAY",
+    title: "Diskussionsbeitrag: Sollten Städte autofrei werden?",
+    prompt: "Schreib einen Diskussionsbeitrag in einem Online-Forum auf Deutsch (circa 150 Wörter).",
+    difficulty: "STRETCH",
+    topicTag: "umwelt",
+    payload: {
+      situation:
+        "In einem Forum wird diskutiert: „Sollten Innenstädte komplett autofrei werden?“",
+      instruction:
+        "Schreib einen Diskussionsbeitrag. Vertritt eine klare Position, nenne Argumente mit Beispielen, gehe auf das Argument der Geschäfte und älterer Menschen ein, schlage gegebenenfalls Kompromisse vor, und schließe mit einem Fazit.",
+      wordMin: 130,
+      wordMax: 180,
+    },
+    guidanceNote: "Berücksichtige verschiedene Betroffene (Geschäfte, ältere Menschen).",
+  },
 ];
 
 async function main() {

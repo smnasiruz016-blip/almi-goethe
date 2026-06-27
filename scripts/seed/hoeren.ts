@@ -1837,6 +1837,623 @@ export const ITEMS: Prisma.GoetheItemCreateManyInput[] = [
     },
     guidanceNote: "Achte auf den Grund und auf die Anweisung an die Mitarbeiter.",
   },
+
+  // ===================== B2 =====================
+  {
+    level: "B2",
+    module: "HOEREN",
+    taskType: "HOEREN_DETAIL",
+    title: "Ein Experteninterview über Schlaf",
+    prompt: "Du hörst ein Radiointerview. Wähle für jede Frage die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "gesundheit",
+    payload: {
+      audioScript:
+        "Moderatorin: Herr Dr. Lang, viele Menschen klagen über schlechten Schlaf. Was raten Sie? Dr. Lang: Zunächst sollte man unterscheiden: Gelegentlich schlecht zu schlafen ist völlig normal und kein Grund zur Sorge. Problematisch wird es erst, wenn die Schlafstörungen über Wochen anhalten. Moderatorin: Was sind die häufigsten Ursachen? Dr. Lang: Sehr oft ist es Stress. Aber auch unsere Gewohnheiten spielen eine Rolle — etwa, dass wir abends lange auf Bildschirme schauen. Mein wichtigster Rat ist eigentlich ganz banal: regelmäßige Schlafzeiten. Der Körper liebt Routine. Wer jeden Tag zur gleichen Zeit ins Bett geht, schläft langfristig deutlich besser.",
+      speakers: [
+        { role: "Moderatorin", voice: "shimmer" },
+        { role: "Dr. Lang", voice: "onyx" },
+      ],
+      questions: [
+        {
+          id: "q1",
+          stem: "Wann sind Schlafprobleme laut Dr. Lang ernst zu nehmen?",
+          options: [
+            { id: "a", text: "wenn sie über Wochen anhalten" },
+            { id: "b", text: "schon nach einer schlechten Nacht" },
+            { id: "c", text: "nie, sie sind immer harmlos" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Was ist sein wichtigster Rat?",
+          options: [
+            { id: "a", text: "regelmäßige Schlafzeiten einzuhalten" },
+            { id: "b", text: "Medikamente zu nehmen" },
+            { id: "c", text: "tagsüber zu schlafen" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Achte auf Differenzierungen: „normal“ versus „problematisch“.",
+  },
+  {
+    level: "B2",
+    module: "HOEREN",
+    taskType: "HOEREN_DETAIL",
+    title: "Eine Diskussion über die autofreie Innenstadt",
+    prompt: "Du hörst eine Diskussion. Wähle für jede Frage die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "umwelt",
+    payload: {
+      audioScript:
+        "Frau Berg: Ich bin absolut dafür, die Innenstadt für Autos zu sperren. Die Luft würde besser, und die Stadt wäre lebenswerter. Herr Klein: Im Prinzip verstehe ich das, aber wir dürfen die Geschäfte nicht vergessen. Viele Kunden kommen mit dem Auto. Frau Berg: Das ist ein verbreiteter Irrtum. Studien zeigen, dass Fußgänger und Radfahrer am Ende sogar mehr einkaufen. Herr Klein: Das mag stimmen, trotzdem brauchen wir gute Alternativen — etwa mehr Busse und Parkplätze am Rand. Frau Berg: Da bin ich ganz Ihrer Meinung. Ohne ein gutes Gesamtkonzept funktioniert es nicht.",
+      speakers: [
+        { role: "Frau Berg", voice: "nova" },
+        { role: "Herr Klein", voice: "echo" },
+      ],
+      questions: [
+        {
+          id: "q1",
+          stem: "Was ist Herrn Kleins Hauptsorge?",
+          options: [
+            { id: "a", text: "dass die Geschäfte Kunden verlieren könnten" },
+            { id: "b", text: "dass die Luft schlechter wird" },
+            { id: "c", text: "dass es zu viele Radfahrer gibt" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Worauf einigen sich beide am Ende?",
+          options: [
+            { id: "a", text: "dass es ein gutes Gesamtkonzept braucht" },
+            { id: "b", text: "dass alles so bleiben soll" },
+            { id: "c", text: "dass Autos nie verboten werden dürfen" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Verfolge, wie sich die Positionen annähern: „Da bin ich ganz Ihrer Meinung.“",
+  },
+  {
+    level: "B2",
+    module: "HOEREN",
+    taskType: "HOEREN_DETAIL",
+    title: "Ein Vortrag über Konsum",
+    prompt: "Du hörst einen Vortragsausschnitt. Wähle für jede Frage die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "umwelt",
+    payload: {
+      audioScript:
+        "Meine Damen und Herren, wir kaufen heute mehr als je zuvor — und werfen auch mehr weg. Besonders deutlich zeigt sich das bei Kleidung. Im Durchschnitt trägt man ein Kleidungsstück nur noch wenige Male, bevor es im Müll landet. Das ist nicht nur eine Frage des Geldes, sondern vor allem ein ökologisches Problem, denn die Herstellung verbraucht enorme Mengen an Wasser und Energie. Doch ich möchte heute nicht den moralischen Zeigefinger heben. Stattdessen schlage ich einen einfachen Perspektivwechsel vor: Wer Kleidung als etwas Wertvolles betrachtet, kauft automatisch bewusster — und hat am Ende sogar mehr Freude daran.",
+      speakers: [{ role: "Vortrag", voice: "fable" }],
+      questions: [
+        {
+          id: "q1",
+          stem: "Welches Problem nennt der Redner vor allem?",
+          options: [
+            { id: "a", text: "ein ökologisches Problem durch hohen Konsum" },
+            { id: "b", text: "dass Kleidung zu teuer ist" },
+            { id: "c", text: "dass es zu wenig Geschäfte gibt" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Was schlägt der Redner vor?",
+          options: [
+            { id: "a", text: "Kleidung bewusster als etwas Wertvolles zu sehen" },
+            { id: "b", text: "gar keine Kleidung mehr zu kaufen" },
+            { id: "c", text: "mehr und billiger einzukaufen" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Der Redner lehnt den „moralischen Zeigefinger“ ab und schlägt etwas anderes vor.",
+  },
+  {
+    level: "B2",
+    module: "HOEREN",
+    taskType: "HOEREN_DETAIL",
+    title: "Ein Interview: Berufswechsel mit 40",
+    prompt: "Du hörst ein Interview. Wähle für jede Frage die richtige Antwort.",
+    difficulty: "CORE",
+    topicTag: "arbeit",
+    payload: {
+      audioScript:
+        "Moderator: Frau Solak, Sie waren fünfzehn Jahre Anwältin und sind jetzt Köchin. Wie kam es dazu? Frau Solak: Ehrlich gesagt war ich in meinem alten Beruf nicht mehr glücklich. Ich habe gut verdient, aber die Arbeit hat mich innerlich leer gelassen. Moderator: War der Wechsel schwierig? Frau Solak: Sehr. Vor allem finanziell musste ich kürzertreten, und viele in meinem Umfeld haben den Schritt nicht verstanden. Aber ich habe es keinen Tag bereut. Moderator: Was würden Sie anderen raten? Frau Solak: Man sollte den Mut zur Veränderung nicht zu lange aufschieben. Es ist nie zu spät, aber es wird auch nicht leichter, je länger man wartet.",
+      speakers: [
+        { role: "Moderator", voice: "alloy" },
+        { role: "Frau Solak", voice: "shimmer" },
+      ],
+      questions: [
+        {
+          id: "q1",
+          stem: "Warum hat Frau Solak ihren Beruf gewechselt?",
+          options: [
+            { id: "a", text: "Sie war im alten Beruf nicht mehr glücklich." },
+            { id: "b", text: "Sie hat zu wenig verdient." },
+            { id: "c", text: "Sie wurde entlassen." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Was rät sie anderen?",
+          options: [
+            { id: "a", text: "den Mut zur Veränderung nicht zu lange aufzuschieben" },
+            { id: "b", text: "niemals den Beruf zu wechseln" },
+            { id: "c", text: "immer auf das Geld zu achten" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Achte auf die Begründung des Wechsels und auf den abschließenden Rat.",
+  },
+  {
+    level: "B2",
+    module: "HOEREN",
+    taskType: "HOEREN_DETAIL",
+    title: "Ein Radiobeitrag über das Ehrenamt",
+    prompt: "Du hörst einen Radiobeitrag. Wähle für jede Frage die richtige Antwort.",
+    difficulty: "CORE",
+    topicTag: "alltag",
+    payload: {
+      audioScript:
+        "Ohne ehrenamtliche Helfer würde in unserer Gesellschaft vieles nicht funktionieren — von der Feuerwehr auf dem Land bis zur Hausaufgabenhilfe für Kinder. Interessant ist, dass jüngere Menschen sich heute zwar engagieren, aber anders als früher. Statt sich für viele Jahre fest an einen Verein zu binden, bevorzugen sie kürzere, flexible Projekte. Vereine, die das ignorieren, haben es schwer, Nachwuchs zu finden. Erfolgreich sind dagegen Organisationen, die auch kurzfristige Hilfe ermöglichen. Die Bereitschaft zu helfen ist also keineswegs gesunken — sie hat nur ihre Form verändert.",
+      speakers: [{ role: "Beitrag", voice: "echo" }],
+      questions: [
+        {
+          id: "q1",
+          stem: "Wie engagieren sich jüngere Menschen heute?",
+          options: [
+            { id: "a", text: "eher in kürzeren, flexiblen Projekten" },
+            { id: "b", text: "gar nicht mehr" },
+            { id: "c", text: "nur in festen, langjährigen Vereinen" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Was ist die Kernaussage des Beitrags?",
+          options: [
+            { id: "a", text: "Die Hilfsbereitschaft hat sich nicht verringert, sondern verändert." },
+            { id: "b", text: "Niemand engagiert sich mehr ehrenamtlich." },
+            { id: "c", text: "Nur ältere Menschen helfen noch." },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„keineswegs gesunken — nur die Form verändert“ ist die Pointe.",
+  },
+  {
+    level: "B2",
+    module: "HOEREN",
+    taskType: "HOEREN_DETAIL",
+    title: "Ein Gespräch über Work-Life-Balance",
+    prompt: "Du hörst ein Gespräch zwischen Kollegen. Wähle für jede Frage die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "arbeit",
+    payload: {
+      audioScript:
+        "Tim: Sag mal, wie schaffst du das eigentlich alles — Job, zwei Kinder, und du wirkst trotzdem entspannt? Sara: Das Geheimnis ist, dass ich gelernt habe, auch mal Nein zu sagen. Früher habe ich jede Zusatzaufgabe übernommen und mich völlig überfordert. Tim: Aber ist das nicht riskant, im Job Nein zu sagen? Sara: Im Gegenteil. Wer ständig Ja sagt, liefert am Ende schlechtere Arbeit, weil er zu viel auf einmal macht. Mein Chef schätzt mich heute mehr, weil meine Ergebnisse besser sind. Tim: Das klingt eigentlich logisch. Vielleicht sollte ich das auch mal ausprobieren.",
+      speakers: [
+        { role: "Tim", voice: "onyx" },
+        { role: "Sara", voice: "nova" },
+      ],
+      questions: [
+        {
+          id: "q1",
+          stem: "Was ist laut Sara ihr „Geheimnis“?",
+          options: [
+            { id: "a", text: "dass sie gelernt hat, auch mal Nein zu sagen" },
+            { id: "b", text: "dass sie weniger arbeitet als früher" },
+            { id: "c", text: "dass sie keine Kinder mehr betreut" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Warum schätzt der Chef sie heute mehr?",
+          options: [
+            { id: "a", text: "weil ihre Ergebnisse besser sind" },
+            { id: "b", text: "weil sie jede Aufgabe annimmt" },
+            { id: "c", text: "weil sie länger arbeitet" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Achte auf den scheinbaren Widerspruch: Nein sagen führt zu besserer Arbeit.",
+  },
+  {
+    level: "B2",
+    module: "HOEREN",
+    taskType: "HOEREN_TRUE_FALSE",
+    title: "Eine Durchsage zur Renovierung der Bibliothek",
+    prompt: "Du hörst eine Durchsage. Sind die Sätze richtig oder falsch?",
+    difficulty: "CORE",
+    topicTag: "lernen",
+    payload: {
+      audioScript:
+        "Liebe Besucherinnen und Besucher, wir möchten Sie darüber informieren, dass unsere Bibliothek ab nächstem Monat für etwa acht Wochen umgebaut wird. Während dieser Zeit bleibt das Gebäude geschlossen. Bereits ausgeliehene Bücher müssen Sie aber nicht zurückbringen — alle Leihfristen werden automatisch verlängert. Außerdem steht Ihnen während des Umbaus unser digitales Angebot wie gewohnt zur Verfügung. Wir bitten um Ihr Verständnis und freuen uns darauf, Sie in den neuen, moderneren Räumen begrüßen zu dürfen.",
+      speakers: [{ role: "Durchsage", voice: "fable" }],
+      questions: [
+        {
+          id: "q1",
+          stem: "Während des Umbaus muss man ausgeliehene Bücher sofort zurückbringen.",
+          options: [
+            { id: "r", text: "Richtig" },
+            { id: "f", text: "Falsch" },
+          ],
+          answer: "f",
+        },
+        {
+          id: "q2",
+          stem: "Das digitale Angebot bleibt während des Umbaus nutzbar.",
+          options: [
+            { id: "r", text: "Richtig" },
+            { id: "f", text: "Falsch" },
+          ],
+          answer: "r",
+        },
+      ],
+    },
+    guidanceNote: "Achte genau auf Verneinungen: „müssen Sie aber nicht zurückbringen“.",
+  },
+  {
+    level: "B2",
+    module: "HOEREN",
+    taskType: "HOEREN_DETAIL",
+    title: "Ein Interview über digitales Lernen",
+    prompt: "Du hörst ein Interview. Wähle für jede Frage die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "lernen",
+    payload: {
+      audioScript:
+        "Moderatorin: Frau Roth, ersetzen Lern-Apps bald den klassischen Unterricht? Frau Roth: Nein, das glaube ich nicht. Apps sind ein hervorragendes Werkzeug, gerade zum Wiederholen von Vokabeln oder Grammatik. Aber sie ersetzen nicht den Menschen. Moderatorin: Warum nicht? Frau Roth: Weil Sprache vor allem Kommunikation ist. Eine App kann mir nicht widersprechen, mich nicht zum Lachen bringen, nicht spüren, wann ich frustriert bin. Das kann nur ein Lehrer oder ein Gesprächspartner. Am wirksamsten ist deshalb eine Kombination: die App für das Üben zu Hause, der Unterricht für das echte Sprechen.",
+      speakers: [
+        { role: "Moderatorin", voice: "shimmer" },
+        { role: "Frau Roth", voice: "nova" },
+      ],
+      questions: [
+        {
+          id: "q1",
+          stem: "Was meint Frau Roth zu Lern-Apps?",
+          options: [
+            { id: "a", text: "Sie sind ein gutes Werkzeug, ersetzen aber den Menschen nicht." },
+            { id: "b", text: "Sie werden den Unterricht bald ersetzen." },
+            { id: "c", text: "Sie sind völlig nutzlos." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Was hält sie für am wirksamsten?",
+          options: [
+            { id: "a", text: "eine Kombination aus App und Unterricht" },
+            { id: "b", text: "nur die App" },
+            { id: "c", text: "nur das Auswendiglernen" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Achte auf die Begründung („weil Sprache Kommunikation ist“).",
+  },
+  {
+    level: "B2",
+    module: "HOEREN",
+    taskType: "HOEREN_DETAIL",
+    title: "Ein Beitrag über Reisen und Umwelt",
+    prompt: "Du hörst einen Radiobeitrag. Wähle für jede Frage die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "reisen",
+    payload: {
+      audioScript:
+        "Reisen bildet, heißt es — doch es belastet auch die Umwelt, vor allem durch das Fliegen. Muss man deshalb auf Reisen verzichten? Die meisten Experten sagen: nein, aber bewusster reisen. Konkret bedeutet das: seltener, dafür länger an einem Ort bleiben, statt für ein Wochenende um die halbe Welt zu fliegen. Auch die Bahn ist für viele Ziele eine gute Alternative. Wer einmal im Zug durch die Landschaft gefahren ist, weiß, dass auch die Anreise ein Teil der Reise sein kann. Der Trend zum sogenannten ‚langsamen Reisen‘ wächst — nicht aus Verzicht, sondern weil viele dabei sogar mehr erleben.",
+      speakers: [{ role: "Beitrag", voice: "echo" }],
+      questions: [
+        {
+          id: "q1",
+          stem: "Was empfehlen die Experten?",
+          options: [
+            { id: "a", text: "bewusster reisen, zum Beispiel seltener und länger" },
+            { id: "b", text: "gar nicht mehr zu reisen" },
+            { id: "c", text: "möglichst oft kurz wegzufliegen" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Warum wächst der Trend zum „langsamen Reisen“?",
+          options: [
+            { id: "a", text: "weil viele dabei sogar mehr erleben" },
+            { id: "b", text: "weil Fliegen verboten wurde" },
+            { id: "c", text: "weil es immer billiger ist" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„nicht aus Verzicht, sondern weil …“ nennt den eigentlichen Grund.",
+  },
+  {
+    level: "B2",
+    module: "HOEREN",
+    taskType: "HOEREN_DETAIL",
+    title: "Ein Gespräch über soziale Medien",
+    prompt: "Du hörst ein Gespräch. Wähle für jede Frage die richtige Antwort.",
+    difficulty: "CORE",
+    topicTag: "alltag",
+    payload: {
+      audioScript:
+        "Lena: Ich habe meine Social-Media-Apps vom Handy gelöscht und fühle mich viel besser. Max: Echt? Ich könnte das nicht. Ich brauche das für meine Arbeit und um mit Freunden in Kontakt zu bleiben. Lena: Das verstehe ich. Es geht mir auch nicht darum, alles schlechtzureden. Aber ich habe gemerkt, wie viel Zeit ich sinnlos vertrödelt habe. Max: Da hast du recht. Vielleicht ist nicht die App das Problem, sondern wie man sie benutzt. Lena: Genau. Ich würde sagen: Wer es bewusst einsetzt, profitiert. Wer nur aus Langeweile scrollt, verliert.",
+      speakers: [
+        { role: "Lena", voice: "nova" },
+        { role: "Max", voice: "onyx" },
+      ],
+      questions: [
+        {
+          id: "q1",
+          stem: "Warum nutzt Max soziale Medien weiterhin?",
+          options: [
+            { id: "a", text: "für seine Arbeit und den Kontakt zu Freunden" },
+            { id: "b", text: "nur aus Langeweile" },
+            { id: "c", text: "weil Lena es ihm empfohlen hat" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Worauf einigen sich beide?",
+          options: [
+            { id: "a", text: "Es kommt darauf an, wie man die Apps benutzt." },
+            { id: "b", text: "Soziale Medien sind immer schlecht." },
+            { id: "c", text: "Man sollte alle Apps löschen." },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Beide nähern sich an: „Nicht die App, sondern wie man sie benutzt.“",
+  },
+  {
+    level: "B2",
+    module: "HOEREN",
+    taskType: "HOEREN_DETAIL",
+    title: "Eine Vorlesung über Sprachen",
+    prompt: "Du hörst den Anfang einer Vorlesung. Wähle für jede Frage die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "lernen",
+    payload: {
+      audioScript:
+        "Guten Tag. Heute beschäftigen wir uns mit einer erstaunlichen Tatsache: Etwa alle zwei Wochen stirbt irgendwo auf der Welt eine Sprache aus. Mit jeder Sprache geht nicht nur ein Kommunikationsmittel verloren, sondern auch ein einzigartiges Wissen über die Welt. Manche Sprachen kennen zum Beispiel Dutzende Wörter für verschiedene Arten von Schnee oder Wind. Geht die Sprache verloren, verschwindet auch dieses feine Wissen. In dieser Vorlesung werden wir uns ansehen, warum Sprachen aussterben und was man dagegen tun kann. Beginnen wir mit der Frage: Was genau bedeutet es überhaupt, dass eine Sprache lebt?",
+      speakers: [{ role: "Dozent", voice: "fable" }],
+      questions: [
+        {
+          id: "q1",
+          stem: "Was geht laut Vortrag mit einer Sprache verloren?",
+          options: [
+            { id: "a", text: "ein einzigartiges Wissen über die Welt" },
+            { id: "b", text: "nur ein paar Wörter" },
+            { id: "c", text: "nichts Wichtiges" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Womit beginnt der Dozent als Nächstes?",
+          options: [
+            { id: "a", text: "mit der Frage, was es bedeutet, dass eine Sprache lebt" },
+            { id: "b", text: "mit einer Prüfung" },
+            { id: "c", text: "mit einer Pause" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Am Ende kündigt der Dozent an, womit es weitergeht.",
+  },
+  {
+    level: "B2",
+    module: "HOEREN",
+    taskType: "HOEREN_DETAIL",
+    title: "Ein Beratungsgespräch in der Bank",
+    prompt: "Du hörst ein Beratungsgespräch. Wähle für jede Frage die richtige Antwort.",
+    difficulty: "CORE",
+    topicTag: "alltag",
+    payload: {
+      audioScript:
+        "Berater: Sie möchten also etwas Geld zur Seite legen. Wie viel Risiko sind Sie bereit einzugehen? Kundin: Ehrlich gesagt möglichst wenig. Ich möchte das Geld in ein paar Jahren für eine Wohnung verwenden. Berater: Dann rate ich Ihnen von riskanten Anlagen ab. Bei einem so kurzen Zeitraum ist Sicherheit wichtiger als eine hohe Rendite. Kundin: Das sehe ich auch so. Gibt es trotzdem eine Möglichkeit, ein bisschen mehr als auf dem normalen Konto zu bekommen? Berater: Ja, ein Festgeldkonto wäre für Sie passend. Es bringt etwas mehr Zinsen, und Ihr Geld bleibt sicher.",
+      speakers: [
+        { role: "Berater", voice: "echo" },
+        { role: "Kundin", voice: "shimmer" },
+      ],
+      questions: [
+        {
+          id: "q1",
+          stem: "Wofür möchte die Kundin das Geld sparen?",
+          options: [
+            { id: "a", text: "für eine Wohnung" },
+            { id: "b", text: "für ein Auto" },
+            { id: "c", text: "für eine Reise" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Was empfiehlt der Berater?",
+          options: [
+            { id: "a", text: "ein sicheres Festgeldkonto" },
+            { id: "b", text: "eine riskante Anlage mit hoher Rendite" },
+            { id: "c", text: "das Geld bar zu Hause zu lassen" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Achte auf den Zusammenhang: kurzer Zeitraum — Sicherheit wichtiger.",
+  },
+  {
+    level: "B2",
+    module: "HOEREN",
+    taskType: "HOEREN_DETAIL",
+    title: "Ein Interview über Stadtentwicklung",
+    prompt: "Du hörst ein Interview. Wähle für jede Frage die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "umwelt",
+    payload: {
+      audioScript:
+        "Moderator: Frau Architektin, wie sieht die Stadt der Zukunft aus? Frau Vogel: Vor allem grüner und ruhiger. Wir haben jahrzehntelang Städte vor allem für Autos gebaut. Jetzt denken wir um — mehr Platz für Menschen, Bäume und Begegnung. Moderator: Klingt teuer. Frau Vogel: Kurzfristig ja. Aber langfristig sparen Städte sogar Geld, etwa bei den Gesundheitskosten, weil die Menschen sich mehr bewegen und die Luft besser ist. Der größte Widerstand kommt übrigens nicht von den Bürgern, sondern oft aus der Verwaltung — aus Angst vor Veränderung. Dabei wollen die meisten Menschen genau das: eine Stadt zum Leben, nicht nur zum Durchfahren.",
+      speakers: [
+        { role: "Moderator", voice: "alloy" },
+        { role: "Frau Vogel", voice: "nova" },
+      ],
+      questions: [
+        {
+          id: "q1",
+          stem: "Wie soll die Stadt der Zukunft laut Frau Vogel sein?",
+          options: [
+            { id: "a", text: "grüner und ruhiger, mehr Platz für Menschen" },
+            { id: "b", text: "vor allem für Autos gebaut" },
+            { id: "c", text: "größer und lauter" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Von wem kommt laut Frau Vogel der größte Widerstand?",
+          options: [
+            { id: "a", text: "oft aus der Verwaltung" },
+            { id: "b", text: "von den meisten Bürgern" },
+            { id: "c", text: "von den Architekten" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„nicht von den Bürgern, sondern aus der Verwaltung“ — achte auf den Kontrast.",
+  },
+  {
+    level: "B2",
+    module: "HOEREN",
+    taskType: "HOEREN_TRUE_FALSE",
+    title: "Eine Mitteilung über ein neues Arbeitszeitmodell",
+    prompt: "Du hörst eine Mitteilung. Sind die Sätze richtig oder falsch?",
+    difficulty: "CORE",
+    topicTag: "arbeit",
+    payload: {
+      audioScript:
+        "Liebe Kolleginnen und Kollegen, ab dem nächsten Quartal führen wir ein neues, flexibleres Arbeitszeitmodell ein. Sie können künftig selbst entscheiden, wann Sie mit der Arbeit beginnen, solange Sie zwischen zehn und fünfzehn Uhr erreichbar sind. Die Gesamtzahl der Stunden bleibt dabei unverändert. Wichtig ist: Das neue Modell ist freiwillig. Wer lieber zu festen Zeiten arbeitet, kann das selbstverständlich weiterhin tun. Bei Fragen wenden Sie sich bitte an die Personalabteilung. Wir hoffen, dass dieses Modell vielen von Ihnen mehr Freiheit im Alltag ermöglicht.",
+      speakers: [{ role: "Mitteilung", voice: "fable" }],
+      questions: [
+        {
+          id: "q1",
+          stem: "Die Gesamtzahl der Arbeitsstunden ändert sich durch das neue Modell.",
+          options: [
+            { id: "r", text: "Richtig" },
+            { id: "f", text: "Falsch" },
+          ],
+          answer: "f",
+        },
+        {
+          id: "q2",
+          stem: "Das neue Arbeitszeitmodell ist freiwillig.",
+          options: [
+            { id: "r", text: "Richtig" },
+            { id: "f", text: "Falsch" },
+          ],
+          answer: "r",
+        },
+      ],
+    },
+    guidanceNote: "Achte darauf, was sich ändert und was gleich bleibt.",
+  },
+  {
+    level: "B2",
+    module: "HOEREN",
+    taskType: "HOEREN_DETAIL",
+    title: "Ein Gespräch über ehrenamtliche Arbeit",
+    prompt: "Du hörst ein Gespräch. Wähle für jede Frage die richtige Antwort.",
+    difficulty: "CORE",
+    topicTag: "alltag",
+    payload: {
+      audioScript:
+        "Paul: Du arbeitest doch ehrenamtlich bei der Tafel, oder? Lohnt sich das? Nadia: Lohnen ist das falsche Wort, ich verdiene ja nichts. Aber es gibt mir sehr viel zurück. Paul: Inwiefern? Nadia: Ich treffe Menschen, die ich sonst nie kennenlernen würde, und ich habe das Gefühl, wirklich gebraucht zu werden. Das ist im Büroalltag oft anders. Paul: Aber kostet das nicht viel Zeit? Nadia: Doch, ein paar Stunden pro Woche. Aber ich plane es fest ein, wie einen Termin. Sonst würde es im Alltag immer untergehen.",
+      speakers: [
+        { role: "Paul", voice: "onyx" },
+        { role: "Nadia", voice: "shimmer" },
+      ],
+      questions: [
+        {
+          id: "q1",
+          stem: "Was gibt Nadia die ehrenamtliche Arbeit?",
+          options: [
+            { id: "a", text: "das Gefühl, gebraucht zu werden, und neue Kontakte" },
+            { id: "b", text: "vor allem Geld" },
+            { id: "c", text: "einen besseren Job im Büro" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Wie schafft Nadia es, die Zeit dafür zu finden?",
+          options: [
+            { id: "a", text: "Sie plant es fest ein wie einen Termin." },
+            { id: "b", text: "Sie arbeitet dafür weniger im Büro." },
+            { id: "c", text: "Sie macht es nur, wenn sie zufällig Zeit hat." },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„Lohnen ist das falsche Wort“ — höre, was Nadia stattdessen meint.",
+  },
+  {
+    level: "B2",
+    module: "HOEREN",
+    taskType: "HOEREN_DETAIL",
+    title: "Ein Vortrag über gesunde Städte",
+    prompt: "Du hörst einen Vortragsausschnitt. Wähle für jede Frage die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "gesundheit",
+    payload: {
+      audioScript:
+        "Eine spannende Frage lautet: Macht die Stadt, in der wir leben, uns gesünder oder kränker? Die Antwort hängt stark davon ab, wie die Stadt gebaut ist. Gibt es Parks, sichere Radwege und kurze Wege zu Geschäften, bewegen sich die Menschen mehr — ganz automatisch, ohne dass sie sich extra anstrengen müssen. In autogerechten Städten dagegen nimmt man für jede Kleinigkeit das Auto. Das Spannende ist also: Gesundheit ist nicht nur eine Frage des persönlichen Willens, sondern auch der Umgebung. Wer eine gesunde Bevölkerung will, muss bei der Stadtplanung anfangen, nicht erst beim einzelnen Menschen.",
+      speakers: [{ role: "Vortrag", voice: "fable" }],
+      questions: [
+        {
+          id: "q1",
+          stem: "Wovon hängt laut Vortrag die Gesundheit der Stadtbewohner ab?",
+          options: [
+            { id: "a", text: "davon, wie die Stadt gebaut ist" },
+            { id: "b", text: "nur vom Willen des Einzelnen" },
+            { id: "c", text: "vom Wetter" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Was folgt für den Redner daraus?",
+          options: [
+            { id: "a", text: "Man muss bei der Stadtplanung anfangen." },
+            { id: "b", text: "Jeder ist allein für seine Gesundheit verantwortlich." },
+            { id: "c", text: "Städte sind grundsätzlich ungesund." },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Die Schlussfolgerung steht am Ende: „muss bei der Stadtplanung anfangen“.",
+  },
 ];
 
 async function main() {

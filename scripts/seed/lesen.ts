@@ -2043,6 +2043,675 @@ export const ITEMS: Prisma.GoetheItemCreateManyInput[] = [
     },
     guidanceNote: "Höfliche Bitten mit „Könnten Sie …?“ enthalten die Wünsche.",
   },
+
+  // ===================== B2 =====================
+  {
+    level: "B2",
+    module: "LESEN",
+    taskType: "LESEN_GLOBAL",
+    title: "Ein Artikel: Die Digitalisierung der Arbeitswelt",
+    prompt: "Lies den Artikel und wähle für jede Frage die richtige Antwort.",
+    difficulty: "CORE",
+    topicTag: "arbeit",
+    payload: {
+      passages: [
+        {
+          id: "p1",
+          heading: "Wenn Maschinen mitarbeiten",
+          body:
+            "Die Digitalisierung verändert die Arbeitswelt grundlegend. Während früher die Sorge bestand, dass Maschinen den Menschen vollständig ersetzen, zeichnet sich heute ein differenzierteres Bild ab. Zwar fallen einfache, wiederholbare Tätigkeiten zunehmend weg, doch gleichzeitig entstehen neue Berufe, die es vor wenigen Jahren noch gar nicht gab. Entscheidend ist daher nicht die Frage, ob Arbeit verschwindet, sondern wie sich Beschäftigte auf den Wandel einstellen. Wer bereit ist, sich regelmäßig weiterzubilden, wird von der Entwicklung eher profitieren als unter ihr zu leiden. Die Verantwortung liegt allerdings nicht allein beim Einzelnen: Auch Unternehmen und Politik müssen Weiterbildung ermöglichen und fördern.",
+        },
+      ],
+      questions: [
+        {
+          id: "q1",
+          kind: "mcq",
+          stem: "Welche Aussage entspricht dem Text?",
+          options: [
+            { id: "a", text: "Die Digitalisierung vernichtet insgesamt nur Arbeitsplätze." },
+            { id: "b", text: "Es entstehen auch neue Berufe; entscheidend ist die Anpassung." },
+            { id: "c", text: "Maschinen werden den Menschen vollständig ersetzen." },
+          ],
+          answer: "b",
+        },
+        {
+          id: "q2",
+          kind: "mcq",
+          stem: "Wer trägt laut Text Verantwortung für die Weiterbildung?",
+          options: [
+            { id: "a", text: "nur die einzelnen Beschäftigten" },
+            { id: "b", text: "ausschließlich die Politik" },
+            { id: "c", text: "Beschäftigte, Unternehmen und Politik gemeinsam" },
+          ],
+          answer: "c",
+        },
+      ],
+    },
+    guidanceNote: "Achte auf abwägende Wendungen wie „zwar … doch“ und „nicht … sondern“.",
+  },
+  {
+    level: "B2",
+    module: "LESEN",
+    taskType: "LESEN_DETAIL",
+    title: "Eine Kolumne: Die Kunst, weniger zu besitzen",
+    prompt: "Lies die Kolumne und wähle für jede Frage die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "alltag",
+    payload: {
+      passages: [
+        {
+          id: "p1",
+          heading: "Weniger ist mehr",
+          body:
+            "Seit einigen Jahren versuche ich, bewusster zu konsumieren. Angefangen hat alles mit einem Umzug, bei dem mir klar wurde, wie viele Dinge ich besitze, ohne sie je zu benutzen. Statt immer Neues zu kaufen, frage ich mich heute vor jeder Anschaffung, ob ich den Gegenstand wirklich brauche. Das bedeutet keineswegs Verzicht im negativen Sinne. Im Gegenteil: Ich habe festgestellt, dass weniger Besitz mir mehr Freiheit gibt. Meine Wohnung wirkt aufgeräumter, ich spare Geld, und ich verbringe meine Zeit lieber mit Erlebnissen als mit dem Pflegen von Dingen. Natürlich ist Minimalismus kein Allheilmittel, und jeder muss seinen eigenen Weg finden. Doch die Erfahrung, dass Glück nicht vom Besitz abhängt, möchte ich nicht mehr missen.",
+        },
+      ],
+      questions: [
+        {
+          id: "q1",
+          kind: "mcq",
+          stem: "Was war der Auslöser für das Umdenken der Autorin?",
+          options: [
+            { id: "a", text: "ein Umzug" },
+            { id: "b", text: "ein finanzielles Problem" },
+            { id: "c", text: "ein Ratschlag einer Freundin" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          kind: "mcq",
+          stem: "Wie bewertet die Autorin Minimalismus?",
+          options: [
+            { id: "a", text: "als Verzicht, der unglücklich macht" },
+            { id: "b", text: "als Gewinn an Freiheit, aber nicht als Allheilmittel" },
+            { id: "c", text: "als die einzig richtige Lebensweise für alle" },
+          ],
+          answer: "b",
+        },
+      ],
+    },
+    guidanceNote: "Bei differenzierten Texten zählt die Abwägung, nicht nur die Hauptaussage.",
+  },
+  {
+    level: "B2",
+    module: "LESEN",
+    taskType: "LESEN_TRUE_FALSE",
+    title: "Studie: Ehrenamtliches Engagement",
+    prompt: "Lies den Text. Sind die Sätze richtig oder falsch?",
+    difficulty: "CORE",
+    topicTag: "alltag",
+    payload: {
+      passages: [
+        {
+          id: "p1",
+          heading: "Wer engagiert sich – und warum?",
+          body:
+            "Eine aktuelle Studie zeigt, dass sich rund ein Drittel der Bevölkerung ehrenamtlich engagiert. Anders als oft angenommen, sind es nicht vor allem ältere Menschen mit viel Freizeit, sondern Berufstätige zwischen 30 und 50 Jahren bilden die größte Gruppe. Als Hauptmotiv nennen die Befragten nicht etwa das Pflichtgefühl, sondern den Wunsch, etwas Sinnvolles zu tun und mit anderen in Kontakt zu kommen. Allerdings beklagen viele, dass ihnen die Zeit fehlt. Die Studienautoren empfehlen daher den Arbeitgebern, Engagement stärker zu unterstützen, etwa durch flexible Arbeitszeiten.",
+        },
+      ],
+      questions: [
+        {
+          id: "q1",
+          kind: "truefalse",
+          stem: "Laut Studie engagieren sich vor allem ältere Menschen.",
+          options: [
+            { id: "r", text: "Richtig" },
+            { id: "f", text: "Falsch" },
+          ],
+          answer: "f",
+        },
+        {
+          id: "q2",
+          kind: "truefalse",
+          stem: "Viele Engagierte beklagen einen Mangel an Zeit.",
+          options: [
+            { id: "r", text: "Richtig" },
+            { id: "f", text: "Falsch" },
+          ],
+          answer: "r",
+        },
+      ],
+    },
+    guidanceNote: "„Anders als oft angenommen“ kündigt eine überraschende Tatsache an.",
+  },
+  {
+    level: "B2",
+    module: "LESEN",
+    taskType: "LESEN_GLOBAL",
+    title: "Ein Kommentar: Tourismus in historischen Städten",
+    prompt: "Lies den Kommentar und wähle die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "reisen",
+    payload: {
+      passages: [
+        {
+          id: "p1",
+          heading: "Wenn die Schönheit zur Last wird",
+          body:
+            "Viele historische Städte ziehen jedes Jahr Millionen Besucher an. Was zunächst wie ein Segen klingt, entwickelt sich für die Einheimischen zunehmend zur Belastung. Die Mieten steigen, weil Wohnungen lieber an Touristen vermietet werden, traditionelle Geschäfte weichen Souvenirläden, und die Innenstädte verlieren ihren Charakter. Es wäre jedoch zu einfach, den Tourismus pauschal zu verurteilen, denn er sichert auch zahlreiche Arbeitsplätze. Sinnvoller erscheint ein Mittelweg: Städte könnten die Zahl der Besucher begrenzen, Eintrittsgebühren erheben oder den Tourismus auf weniger bekannte Viertel lenken. Entscheidend ist, dass nicht nur die Wirtschaft, sondern auch die Lebensqualität der Bewohner berücksichtigt wird.",
+        },
+      ],
+      questions: [
+        {
+          id: "q1",
+          kind: "mcq",
+          stem: "Welche Haltung vertritt der Autor?",
+          options: [
+            { id: "a", text: "Tourismus sollte komplett verboten werden." },
+            { id: "b", text: "Tourismus ist uneingeschränkt positiv." },
+            { id: "c", text: "Tourismus braucht Regeln, die auch die Bewohner schützen." },
+          ],
+          answer: "c",
+        },
+      ],
+    },
+    guidanceNote: "Der Autor sucht einen „Mittelweg“ — das ist seine Position.",
+  },
+  {
+    level: "B2",
+    module: "LESEN",
+    taskType: "LESEN_MATCHING",
+    title: "Vier Meinungen zum Thema Homeoffice",
+    prompt: "Lies die Aussagen und ordne jede Person der passenden Position zu.",
+    difficulty: "STRETCH",
+    topicTag: "arbeit",
+    payload: {
+      passages: [
+        {
+          id: "p1",
+          heading: "Leserstimmen: Wie stehen Sie zum Homeoffice?",
+          body:
+            "Anja: Ich arbeite seit drei Jahren komplett von zu Hause und möchte nie wieder zurück ins Büro.\nBoris: Homeoffice macht mich einsam — mir fehlt der direkte Austausch mit den Kollegen.\nClara: Am besten finde ich eine Mischung: zwei Tage Büro, drei Tage zu Hause.\nDavid: Für mich ist entscheidend, dass der Arbeitgeber die Technik bezahlt, sonst lohnt es sich nicht.",
+        },
+      ],
+      questions: [
+        {
+          id: "q1",
+          kind: "match",
+          stem: "Wer bevorzugt eine Kombination aus Büro und Homeoffice?",
+          options: [
+            { id: "a", text: "Anja" },
+            { id: "b", text: "Clara" },
+            { id: "c", text: "Boris" },
+          ],
+          answer: "b",
+        },
+        {
+          id: "q2",
+          kind: "match",
+          stem: "Wer sieht im Homeoffice vor allem ein soziales Problem?",
+          options: [
+            { id: "a", text: "Boris" },
+            { id: "b", text: "David" },
+            { id: "c", text: "Anja" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Ordne jeder Person ihren Kernpunkt zu, nicht einzelne Wörter.",
+  },
+  {
+    level: "B2",
+    module: "LESEN",
+    taskType: "LESEN_DETAIL",
+    title: "Ein Interview: Wie wir Entscheidungen treffen",
+    prompt: "Lies das Interview und wähle für jede Frage die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "gesundheit",
+    payload: {
+      passages: [
+        {
+          id: "p1",
+          heading: "„Zu viel Auswahl macht unglücklich“",
+          body:
+            "Die Psychologin Dr. Henkel erforscht, wie Menschen Entscheidungen treffen. „Viele glauben, dass mehr Auswahl automatisch besser ist“, sagt sie. „Tatsächlich ist oft das Gegenteil der Fall. Wer zwischen dreißig Sorten Marmelade wählen muss, ist hinterher unzufriedener als jemand, der nur drei zur Auswahl hatte.“ Der Grund liege darin, dass wir bei großer Auswahl ständig befürchten, die falsche Entscheidung getroffen zu haben. Ihr Rat: „Man sollte sich vorher überlegen, was einem wirklich wichtig ist, und dann nicht mehr alle Alternativen vergleichen. Eine gute Entscheidung muss nicht perfekt sein – sie muss nur gut genug sein.“",
+        },
+      ],
+      questions: [
+        {
+          id: "q1",
+          kind: "mcq",
+          stem: "Was ist laut Dr. Henkel ein Problem bei großer Auswahl?",
+          options: [
+            { id: "a", text: "Man ist hinterher oft unzufriedener." },
+            { id: "b", text: "Man spart zu viel Geld." },
+            { id: "c", text: "Man entscheidet immer perfekt." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          kind: "mcq",
+          stem: "Was empfiehlt die Psychologin?",
+          options: [
+            { id: "a", text: "vorher zu klären, was einem wichtig ist" },
+            { id: "b", text: "immer alle Alternativen zu vergleichen" },
+            { id: "c", text: "nie eine Entscheidung zu treffen" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "In Zitaten steht die eigentliche Aussage der Expertin.",
+  },
+  {
+    level: "B2",
+    module: "LESEN",
+    taskType: "LESEN_DETAIL",
+    title: "Ein Artikel: Lebenslanges Lernen",
+    prompt: "Lies den Artikel und wähle für jede Frage die richtige Antwort.",
+    difficulty: "CORE",
+    topicTag: "lernen",
+    payload: {
+      passages: [
+        {
+          id: "p1",
+          heading: "Lernen hört nie auf",
+          body:
+            "In einer Welt, die sich rasch verändert, reicht das einmal Gelernte längst nicht mehr für ein ganzes Berufsleben. Der Begriff „lebenslanges Lernen“ beschreibt die Notwendigkeit, sich immer wieder neues Wissen anzueignen. Das betrifft nicht nur Akademiker, sondern Menschen in nahezu allen Berufen. Erfreulich ist, dass Lernen heute leichter zugänglich ist als je zuvor: Online-Kurse, Lern-Apps und kostenlose Angebote machen es möglich, sich auch neben dem Beruf weiterzubilden. Allerdings setzt das eine gewisse Selbstdisziplin voraus, denn ohne festen Stundenplan fällt es vielen schwer, am Ball zu bleiben. Experten empfehlen, sich kleine, realistische Ziele zu setzen, statt sich zu überfordern.",
+        },
+      ],
+      questions: [
+        {
+          id: "q1",
+          kind: "mcq",
+          stem: "Was ist heute laut Text einfacher geworden?",
+          options: [
+            { id: "a", text: "der Zugang zu Lernangeboten" },
+            { id: "b", text: "das Bezahlen von Kursen" },
+            { id: "c", text: "das Finden eines festen Jobs" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          kind: "mcq",
+          stem: "Welche Schwierigkeit nennt der Text?",
+          options: [
+            { id: "a", text: "Man braucht Selbstdisziplin, um dranzubleiben." },
+            { id: "b", text: "Es gibt keine kostenlosen Angebote." },
+            { id: "c", text: "Nur Akademiker dürfen lernen." },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„Allerdings“ leitet oft eine Einschränkung ein.",
+  },
+  {
+    level: "B2",
+    module: "LESEN",
+    taskType: "LESEN_TRUE_FALSE",
+    title: "Bericht: Eine Bürgerinitiative",
+    prompt: "Lies den Bericht. Sind die Sätze richtig oder falsch?",
+    difficulty: "CORE",
+    topicTag: "umwelt",
+    payload: {
+      passages: [
+        {
+          id: "p1",
+          heading: "Bürger kämpfen für mehr Grün",
+          body:
+            "In einem Stadtviertel hat sich eine Bürgerinitiative gegründet, die sich für mehr Grünflächen einsetzt. Auslöser war der Plan der Stadt, einen kleinen Park in einen Parkplatz umzuwandeln. Innerhalb weniger Wochen sammelte die Initiative über zweitausend Unterschriften. Daraufhin lud die Stadtverwaltung die Bewohner zu einem Gespräch ein. Ein endgültiges Ergebnis steht zwar noch aus, doch die Stadt hat zugesagt, den Plan noch einmal zu überdenken. Die Initiative wertet das bereits als Erfolg und betont, wie wichtig es sei, dass sich Bürger einmischen.",
+        },
+      ],
+      questions: [
+        {
+          id: "q1",
+          kind: "truefalse",
+          stem: "Die Stadt wollte den Park in einen Parkplatz umwandeln.",
+          options: [
+            { id: "r", text: "Richtig" },
+            { id: "f", text: "Falsch" },
+          ],
+          answer: "r",
+        },
+        {
+          id: "q2",
+          kind: "truefalse",
+          stem: "Die Entscheidung der Stadt steht bereits endgültig fest.",
+          options: [
+            { id: "r", text: "Richtig" },
+            { id: "f", text: "Falsch" },
+          ],
+          answer: "f",
+        },
+      ],
+    },
+    guidanceNote: "„steht noch aus“ bedeutet: es ist noch nicht entschieden.",
+  },
+  {
+    level: "B2",
+    module: "LESEN",
+    taskType: "LESEN_DETAIL",
+    title: "Eine formelle E-Mail: Ein Projektvorschlag",
+    prompt: "Lies die E-Mail und wähle für jede Frage die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "arbeit",
+    payload: {
+      passages: [
+        {
+          id: "p1",
+          heading: "E-Mail an die Abteilungsleitung",
+          body:
+            "Sehr geehrte Frau Dr. Sommer,\n\nim Anschluss an unsere letzte Besprechung möchte ich Ihnen einen Vorschlag unterbreiten. Wie Sie wissen, klagen viele Mitarbeitende über die hohe Zahl an Meetings, die wertvolle Arbeitszeit kosten. Ich schlage daher vor, einen festen meetingfreien Tag pro Woche einzuführen, an dem sich alle auf konzentrierte Arbeit fokussieren können. Erste Erfahrungen in anderen Unternehmen zeigen, dass dadurch die Produktivität steigt und die Zufriedenheit zunimmt. Gerne würde ich das Konzept in der nächsten Sitzung ausführlicher vorstellen. Über Ihre Rückmeldung würde ich mich freuen.\n\nMit freundlichen Grüßen\nJonas Weber",
+        },
+      ],
+      questions: [
+        {
+          id: "q1",
+          kind: "mcq",
+          stem: "Was schlägt Herr Weber vor?",
+          options: [
+            { id: "a", text: "einen meetingfreien Tag pro Woche" },
+            { id: "b", text: "mehr Meetings einzuführen" },
+            { id: "c", text: "die Arbeitszeit zu verlängern" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          kind: "mcq",
+          stem: "Womit begründet er seinen Vorschlag?",
+          options: [
+            { id: "a", text: "Erfahrungen anderer Unternehmen zeigen mehr Produktivität." },
+            { id: "b", text: "Die Mitarbeitenden wünschen sich mehr Besprechungen." },
+            { id: "c", text: "Die Abteilungsleitung hat es angeordnet." },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "In formellen Vorschlägen folgt auf die Idee meist eine Begründung.",
+  },
+  {
+    level: "B2",
+    module: "LESEN",
+    taskType: "LESEN_GLOBAL",
+    title: "Ein Essay: Der Wert der Langeweile",
+    prompt: "Lies den Text und wähle die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "gesundheit",
+    payload: {
+      passages: [
+        {
+          id: "p1",
+          heading: "Warum wir Langeweile brauchen",
+          body:
+            "Sobald sich auch nur ein Moment der Leere einstellt, greifen die meisten von uns sofort zum Handy. Langeweile gilt als etwas, das man unbedingt vermeiden muss. Dabei zeigen Forschungen, dass gerade diese scheinbar verlorenen Momente wertvoll sein können. Wenn das Gehirn nicht ständig mit neuen Reizen beschäftigt ist, beginnt es zu wandern, Ideen zu verbinden und kreativ zu werden. Viele große Einfälle entstehen nicht am Schreibtisch, sondern beim Spazieren oder Duschen. Wer also nie Langeweile zulässt, beraubt sich womöglich seiner besten Gedanken. Vielleicht sollten wir lernen, die Leere nicht zu fürchten, sondern sie hin und wieder bewusst auszuhalten.",
+        },
+      ],
+      questions: [
+        {
+          id: "q1",
+          kind: "mcq",
+          stem: "Was ist die zentrale Aussage des Textes?",
+          options: [
+            { id: "a", text: "Langeweile kann Kreativität fördern und ist deshalb wertvoll." },
+            { id: "b", text: "Man sollte Langeweile immer mit dem Handy vermeiden." },
+            { id: "c", text: "Kreative Ideen entstehen nur am Schreibtisch." },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Essays stellen oft eine verbreitete Meinung infrage („Dabei zeigen …“).",
+  },
+  {
+    level: "B2",
+    module: "LESEN",
+    taskType: "LESEN_DETAIL",
+    title: "Ein Artikel: Stress und Achtsamkeit",
+    prompt: "Lies den Artikel und wähle für jede Frage die richtige Antwort.",
+    difficulty: "CORE",
+    topicTag: "gesundheit",
+    payload: {
+      passages: [
+        {
+          id: "p1",
+          heading: "Im Hier und Jetzt",
+          body:
+            "Der Begriff „Achtsamkeit“ ist in den letzten Jahren beinahe zum Modewort geworden. Gemeint ist die Fähigkeit, den gegenwärtigen Moment bewusst wahrzunehmen, ohne ihn sofort zu bewerten. Studien deuten darauf hin, dass regelmäßige Achtsamkeitsübungen Stress reduzieren und die Konzentration verbessern können. Kritiker geben allerdings zu bedenken, dass Achtsamkeit kein Ersatz für gesellschaftliche Veränderungen sei: Wer unter zu viel Arbeit leidet, dem helfe letztlich nicht Meditation, sondern weniger Arbeit. Beide Sichtweisen schließen sich jedoch nicht aus. Achtsamkeit kann ein nützliches Werkzeug sein, solange man nicht erwartet, dass sie alle Probleme von allein löst.",
+        },
+      ],
+      questions: [
+        {
+          id: "q1",
+          kind: "mcq",
+          stem: "Was bedeutet Achtsamkeit laut Text?",
+          options: [
+            { id: "a", text: "den Moment bewusst wahrzunehmen, ohne ihn sofort zu bewerten" },
+            { id: "b", text: "möglichst viel gleichzeitig zu tun" },
+            { id: "c", text: "Probleme zu ignorieren" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          kind: "mcq",
+          stem: "Was geben die Kritiker zu bedenken?",
+          options: [
+            { id: "a", text: "Achtsamkeit ersetzt keine gesellschaftlichen Veränderungen." },
+            { id: "b", text: "Achtsamkeit löst alle Probleme von allein." },
+            { id: "c", text: "Achtsamkeit ist gefährlich." },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Der Text wägt ab: Nutzen und Grenzen stehen nebeneinander.",
+  },
+  {
+    level: "B2",
+    module: "LESEN",
+    taskType: "LESEN_MATCHING",
+    title: "Weiterbildungsangebote",
+    prompt: "Lies die Beschreibungen und ordne jeder Person das passende Angebot zu.",
+    difficulty: "CORE",
+    topicTag: "lernen",
+    payload: {
+      passages: [
+        {
+          id: "p1",
+          heading: "Vier Weiterbildungen im Überblick",
+          body:
+            "A: „Rhetorik & Präsentation“ — für alle, die sicherer vor Publikum sprechen wollen. Wochenendseminar.\nB: „Buchhaltung für Einsteiger“ — Grundlagen für Selbstständige, online, abends.\nC: „Programmieren lernen“ — Intensivkurs für Quereinsteiger, Vollzeit, vier Wochen.\nD: „Stressmanagement“ — praktische Übungen für mehr Gelassenheit im Beruf, einmal pro Woche.",
+        },
+      ],
+      questions: [
+        {
+          id: "q1",
+          kind: "match",
+          stem: "Frau Voss ist selbstständig und möchte ihre Finanzen selbst verwalten, hat aber nur abends Zeit. Welches Angebot passt?",
+          options: [
+            { id: "a", text: "Buchhaltung für Einsteiger (B)" },
+            { id: "b", text: "Programmieren lernen (C)" },
+            { id: "c", text: "Rhetorik & Präsentation (A)" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          kind: "match",
+          stem: "Herr Adam möchte den Beruf wechseln und sucht einen intensiven Kurs in Vollzeit. Welches Angebot passt?",
+          options: [
+            { id: "a", text: "Stressmanagement (D)" },
+            { id: "b", text: "Programmieren lernen (C)" },
+            { id: "c", text: "Buchhaltung für Einsteiger (B)" },
+          ],
+          answer: "b",
+        },
+      ],
+    },
+    guidanceNote: "Achte auf mehrere Kriterien: Inhalt, Zeitform und Verfügbarkeit.",
+  },
+  {
+    level: "B2",
+    module: "LESEN",
+    taskType: "LESEN_DETAIL",
+    title: "Eine Reportage: Urban Gardening",
+    prompt: "Lies die Reportage und wähle für jede Frage die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "umwelt",
+    payload: {
+      passages: [
+        {
+          id: "p1",
+          heading: "Gemüse aus der Großstadt",
+          body:
+            "Mitten in der Stadt, auf einer ehemals ungenutzten Brachfläche, wachsen heute Tomaten, Kräuter und Salat. Möglich gemacht hat das eine Gruppe von Nachbarn, die das Stück Land gemeinsam bewirtschaftet. Was zunächst nur als Hobby gedacht war, hat sich zu einem Treffpunkt für das ganze Viertel entwickelt. Menschen, die sich vorher kaum kannten, arbeiten nun Seite an Seite. „Es geht uns gar nicht in erster Linie um die Ernte“, erklärt eine der Gärtnerinnen. „Viel wichtiger ist, dass wir wieder miteinander ins Gespräch kommen.“ Inzwischen plant die Stadt, weitere solcher Flächen zur Verfügung zu stellen.",
+        },
+      ],
+      questions: [
+        {
+          id: "q1",
+          kind: "mcq",
+          stem: "Was ist laut der Gärtnerin am wichtigsten?",
+          options: [
+            { id: "a", text: "der Kontakt zwischen den Menschen" },
+            { id: "b", text: "eine möglichst große Ernte" },
+            { id: "c", text: "Geld zu verdienen" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          kind: "mcq",
+          stem: "Wie reagiert die Stadt auf das Projekt?",
+          options: [
+            { id: "a", text: "Sie plant, weitere Flächen bereitzustellen." },
+            { id: "b", text: "Sie will das Projekt verbieten." },
+            { id: "c", text: "Sie ignoriert es." },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„gar nicht in erster Linie … viel wichtiger“ betont eine Priorität.",
+  },
+  {
+    level: "B2",
+    module: "LESEN",
+    taskType: "LESEN_DETAIL",
+    title: "Ein Kommentar: Bücher oder E-Books?",
+    prompt: "Lies den Kommentar und wähle für jede Frage die richtige Antwort.",
+    difficulty: "CORE",
+    topicTag: "freizeit",
+    payload: {
+      passages: [
+        {
+          id: "p1",
+          heading: "Das Buch ist nicht tot",
+          body:
+            "Als die ersten E-Books auf den Markt kamen, sagten manche das Ende des gedruckten Buches voraus. Heute, viele Jahre später, zeigt sich: Diese Vorhersage war voreilig. Zwar haben E-Books ihren festen Platz gefunden, besonders bei Vielreisenden, die nicht schwer tragen wollen. Doch das gedruckte Buch erfreut sich nach wie vor großer Beliebtheit. Viele Leser schätzen das Gefühl des Papiers, den Geruch und die Möglichkeit, ein schönes Buch ins Regal zu stellen. Offenbar erfüllen beide Formen unterschiedliche Bedürfnisse und müssen sich keineswegs ausschließen. Statt von einem Verdrängungswettbewerb zu sprechen, sollte man sie als Ergänzung betrachten.",
+        },
+      ],
+      questions: [
+        {
+          id: "q1",
+          kind: "mcq",
+          stem: "Wie bewertet der Autor die Vorhersage vom „Ende des Buches“?",
+          options: [
+            { id: "a", text: "Sie war voreilig." },
+            { id: "b", text: "Sie ist genau eingetreten." },
+            { id: "c", text: "Sie war richtig für Vielreisende." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          kind: "mcq",
+          stem: "Wie sieht der Autor das Verhältnis von Buch und E-Book?",
+          options: [
+            { id: "a", text: "als Ergänzung, nicht als Konkurrenz" },
+            { id: "b", text: "als reinen Verdrängungswettbewerb" },
+            { id: "c", text: "E-Books werden Bücher völlig ersetzen" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„keineswegs ausschließen“ und „Ergänzung“ zeigen die Position des Autors.",
+  },
+  {
+    level: "B2",
+    module: "LESEN",
+    taskType: "LESEN_GLOBAL",
+    title: "Ein Leserbrief: Ehrenamt sollte anerkannt werden",
+    prompt: "Lies den Leserbrief und wähle die richtige Antwort.",
+    difficulty: "CORE",
+    topicTag: "arbeit",
+    payload: {
+      passages: [
+        {
+          id: "p1",
+          heading: "Leserbrief",
+          body:
+            "Mit großem Interesse habe ich Ihren Artikel über das ehrenamtliche Engagement gelesen. Allerdings vermisse ich einen wichtigen Punkt: die mangelnde Anerkennung. Wer sich neben dem Beruf engagiert, investiert wertvolle Zeit, oft ohne jede Gegenleistung. Ich finde, dieses Engagement sollte stärker gewürdigt werden, etwa durch Zeugnisse, die man bei Bewerbungen vorlegen kann, oder durch kleine steuerliche Vorteile. Es geht mir nicht um Bezahlung – das würde dem Gedanken des Ehrenamts widersprechen. Doch ein sichtbares Zeichen der Wertschätzung würde sicher noch mehr Menschen motivieren, sich einzubringen.",
+        },
+      ],
+      questions: [
+        {
+          id: "q1",
+          kind: "mcq",
+          stem: "Was fordert der Verfasser des Leserbriefs?",
+          options: [
+            { id: "a", text: "mehr Anerkennung für ehrenamtliches Engagement, aber keine Bezahlung" },
+            { id: "b", text: "eine feste Bezahlung für alle Ehrenamtlichen" },
+            { id: "c", text: "ein Verbot von Ehrenämtern" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Der Verfasser grenzt seine Forderung klar ab: „nicht um Bezahlung“.",
+  },
+  {
+    level: "B2",
+    module: "LESEN",
+    taskType: "LESEN_DETAIL",
+    title: "Ein Artikel: Die Vier-Tage-Woche",
+    prompt: "Lies den Artikel und wähle für jede Frage die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "arbeit",
+    payload: {
+      passages: [
+        {
+          id: "p1",
+          heading: "Weniger arbeiten, mehr leisten?",
+          body:
+            "Immer mehr Unternehmen experimentieren mit der Vier-Tage-Woche. Die Idee dahinter: Wer weniger, aber konzentrierter arbeitet, ist nicht unbedingt weniger produktiv. In mehreren Versuchen blieb die Leistung tatsächlich gleich, während die Zufriedenheit der Beschäftigten deutlich stieg. Kritiker wenden jedoch ein, dass sich das Modell nicht auf alle Branchen übertragen lasse. In einem Krankenhaus oder einem Geschäft könne man nicht einfach einen Tag schließen. Befürworter entgegnen, dass es nicht um ein starres Modell gehe, sondern um die grundsätzliche Frage, wie viel Arbeitszeit wirklich nötig ist. Klar ist: Die Diskussion über die Zukunft der Arbeit hat gerade erst begonnen.",
+        },
+      ],
+      questions: [
+        {
+          id: "q1",
+          kind: "mcq",
+          stem: "Was zeigten mehrere Versuche mit der Vier-Tage-Woche?",
+          options: [
+            { id: "a", text: "Die Leistung blieb gleich, die Zufriedenheit stieg." },
+            { id: "b", text: "Die Leistung sank stark." },
+            { id: "c", text: "Die Beschäftigten waren unzufriedener." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          kind: "mcq",
+          stem: "Was wenden die Kritiker ein?",
+          options: [
+            { id: "a", text: "Das Modell passt nicht zu allen Branchen." },
+            { id: "b", text: "Vier Tage sind zu viel Arbeit." },
+            { id: "c", text: "Die Beschäftigten wollen mehr arbeiten." },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„Kritiker wenden ein … Befürworter entgegnen“ markiert die zwei Seiten.",
+  },
 ];
 
 async function main() {

@@ -783,6 +783,264 @@ export const ITEMS: Prisma.GoetheItemCreateManyInput[] = [
     },
     guidanceNote: "Gib praktische Beispiele: Müll trennen, weniger Plastik, Rad fahren.",
   },
+
+  // ===================== B2 =====================
+  {
+    level: "B2",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_PRESENT",
+    title: "Vortrag: Die Rolle der sozialen Medien in der Gesellschaft",
+    prompt: "Halte einen kurzen, strukturierten Vortrag auf Deutsch (etwa zwei Minuten).",
+    difficulty: "STRETCH",
+    topicTag: "alltag",
+    payload: {
+      taskPrompt:
+        "Thema: Welche Rolle spielen soziale Medien in unserer Gesellschaft? Halte einen Vortrag. Führe in das Thema ein, beschreibe die aktuelle Situation, nenne Vor- und Nachteile mit Beispielen, vertritt deine eigene Meinung mit Argumenten, und fasse am Ende zusammen.",
+      prepSeconds: 120,
+      speakSeconds: 120,
+    },
+    guidanceNote: "Gliedere klar: Einleitung – Hauptteil (Argumente) – Schluss. Nutze Konnektoren.",
+  },
+  {
+    level: "B2",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_DISCUSS",
+    title: "Diskussion: Sollte der öffentliche Nahverkehr kostenlos sein?",
+    prompt: "Diskutiere und vertritt deine Position auf Deutsch (etwa anderthalb Minuten).",
+    difficulty: "STRETCH",
+    topicTag: "umwelt",
+    payload: {
+      taskPrompt:
+        "Thema zur Diskussion: „Bus und Bahn sollten für alle kostenlos sein.“ Sag, ob du dafür oder dagegen bist, begründe deine Position mit mindestens zwei Argumenten, reagiere auf ein mögliches Gegenargument, und versuche, dein Gegenüber zu überzeugen.",
+      prepSeconds: 60,
+      speakSeconds: 120,
+    },
+    guidanceNote: "Vertritt eine klare Position und reagiere auf Gegenargumente: „Man könnte einwenden, dass … Dem halte ich entgegen …“.",
+  },
+  {
+    level: "B2",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_PRESENT",
+    title: "Vortrag: Vor- und Nachteile des Stadtlebens",
+    prompt: "Halte einen kurzen, strukturierten Vortrag auf Deutsch (etwa zwei Minuten).",
+    difficulty: "CORE",
+    topicTag: "wohnen",
+    payload: {
+      taskPrompt:
+        "Thema: Leben in der Großstadt — Vor- und Nachteile. Halte einen Vortrag. Führe ein, beschreibe typische Vorteile und Nachteile mit Beispielen, sag, was für dich persönlich überwiegt, und schließe mit einem Fazit.",
+      prepSeconds: 120,
+      speakSeconds: 120,
+    },
+    guidanceNote: "Belege deine Punkte mit konkreten Beispielen.",
+  },
+  {
+    level: "B2",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_DISCUSS",
+    title: "Diskussion: Sollten Hausaufgaben abgeschafft werden?",
+    prompt: "Diskutiere und vertritt deine Position auf Deutsch (etwa anderthalb Minuten).",
+    difficulty: "STRETCH",
+    topicTag: "lernen",
+    payload: {
+      taskPrompt:
+        "Thema zur Diskussion: „Hausaufgaben sollten an Schulen abgeschafft werden.“ Beziehe Stellung, nenne Argumente, gehe auf die Gegenseite ein, und begründe, warum deine Position überzeugender ist.",
+      prepSeconds: 60,
+      speakSeconds: 120,
+    },
+    guidanceNote: "Strukturiere deine Argumente nach Wichtigkeit.",
+  },
+  {
+    level: "B2",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_PRESENT",
+    title: "Vortrag: Fremdsprachenkenntnisse im Berufsleben",
+    prompt: "Halte einen kurzen, strukturierten Vortrag auf Deutsch (etwa zwei Minuten).",
+    difficulty: "STRETCH",
+    topicTag: "arbeit",
+    payload: {
+      taskPrompt:
+        "Thema: Wie wichtig sind Fremdsprachen im Beruf? Halte einen Vortrag. Führe ein, beschreibe, in welchen Bereichen Sprachen heute wichtig sind, nenne Vorteile guter Sprachkenntnisse, gib ein Beispiel aus deiner Erfahrung, und ziehe ein Fazit.",
+      prepSeconds: 120,
+      speakSeconds: 120,
+    },
+    guidanceNote: "Verbinde allgemeine Aussagen mit deiner persönlichen Erfahrung.",
+  },
+  {
+    level: "B2",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_DISCUSS",
+    title: "Diskussion: Müssen Mitarbeiter ins Büro kommen?",
+    prompt: "Diskutiere und vertritt deine Position auf Deutsch (etwa anderthalb Minuten).",
+    difficulty: "STRETCH",
+    topicTag: "arbeit",
+    payload: {
+      taskPrompt:
+        "Thema zur Diskussion: „Unternehmen sollten verlangen können, dass alle Mitarbeiter wieder ins Büro kommen.“ Sag, ob du zustimmst oder nicht, begründe es, reagiere auf Gegenargumente, und schlage gegebenenfalls einen Kompromiss vor.",
+      prepSeconds: 60,
+      speakSeconds: 120,
+    },
+    guidanceNote: "Ein Kompromissvorschlag wirkt am Ende oft überzeugend.",
+  },
+  {
+    level: "B2",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_PRESENT",
+    title: "Vortrag: Gesundheit und Bewegung im Alltag",
+    prompt: "Halte einen kurzen, strukturierten Vortrag auf Deutsch (etwa zwei Minuten).",
+    difficulty: "CORE",
+    topicTag: "gesundheit",
+    payload: {
+      taskPrompt:
+        "Thema: Wie kann man im Alltag gesund und aktiv bleiben? Halte einen Vortrag. Führe ein, beschreibe das Problem (viele Menschen bewegen sich zu wenig), nenne praktische Möglichkeiten, sag deine Meinung, und fasse zusammen.",
+      prepSeconds: 120,
+      speakSeconds: 120,
+    },
+    guidanceNote: "Gib konkrete, alltagstaugliche Beispiele.",
+  },
+  {
+    level: "B2",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_DISCUSS",
+    title: "Diskussion: Sollte Werbung für ungesundes Essen eingeschränkt werden?",
+    prompt: "Diskutiere und vertritt deine Position auf Deutsch (etwa anderthalb Minuten).",
+    difficulty: "STRETCH",
+    topicTag: "gesundheit",
+    payload: {
+      taskPrompt:
+        "Thema zur Diskussion: „Werbung für ungesunde Lebensmittel sollte stärker eingeschränkt werden.“ Beziehe Stellung, nenne Argumente, berücksichtige die Sicht der Wirtschaft und die persönliche Freiheit, und begründe deine Position.",
+      prepSeconds: 60,
+      speakSeconds: 120,
+    },
+    guidanceNote: "Wäge zwischen Schutz und Freiheit ab.",
+  },
+  {
+    level: "B2",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_PRESENT",
+    title: "Vortrag: Online einkaufen oder im Geschäft?",
+    prompt: "Halte einen kurzen, strukturierten Vortrag auf Deutsch (etwa zwei Minuten).",
+    difficulty: "CORE",
+    topicTag: "einkaufen",
+    payload: {
+      taskPrompt:
+        "Thema: Online-Shopping im Vergleich zum Einkaufen im Geschäft. Halte einen Vortrag. Führe ein, vergleiche beide Möglichkeiten anhand von Beispielen, sag, was du selbst bevorzugst und warum, und schließe mit einem Fazit.",
+      prepSeconds: 120,
+      speakSeconds: 120,
+    },
+    guidanceNote: "Vergleiche systematisch: Preis, Bequemlichkeit, Erlebnis.",
+  },
+  {
+    level: "B2",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_DISCUSS",
+    title: "Diskussion: Ist ein soziales Pflichtjahr sinnvoll?",
+    prompt: "Diskutiere und vertritt deine Position auf Deutsch (etwa anderthalb Minuten).",
+    difficulty: "STRETCH",
+    topicTag: "alltag",
+    payload: {
+      taskPrompt:
+        "Thema zur Diskussion: „Junge Menschen sollten ein verpflichtendes soziales Jahr leisten.“ Beziehe Stellung, nenne Argumente dafür und dagegen, gehe besonders auf das Thema Freiheit ein, und begründe deine Meinung.",
+      prepSeconds: 60,
+      speakSeconds: 120,
+    },
+    guidanceNote: "Bei einer Pflicht ist das Freiheitsargument zentral — geh darauf ein.",
+  },
+  {
+    level: "B2",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_PRESENT",
+    title: "Vortrag: Umweltschutz — Aufgabe des Einzelnen oder der Politik?",
+    prompt: "Halte einen kurzen, strukturierten Vortrag auf Deutsch (etwa zwei Minuten).",
+    difficulty: "STRETCH",
+    topicTag: "umwelt",
+    payload: {
+      taskPrompt:
+        "Thema: Wer ist für den Umweltschutz verantwortlich — der einzelne Mensch oder die Politik? Halte einen Vortrag. Führe ein, stelle beide Seiten dar, vertritt deine eigene Meinung mit Argumenten, und fasse zusammen.",
+      prepSeconds: 120,
+      speakSeconds: 120,
+    },
+    guidanceNote: "Stelle beide Seiten fair dar, bevor du dich positionierst.",
+  },
+  {
+    level: "B2",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_DISCUSS",
+    title: "Diskussion: Sollte es ein generelles Tempolimit geben?",
+    prompt: "Diskutiere und vertritt deine Position auf Deutsch (etwa anderthalb Minuten).",
+    difficulty: "STRETCH",
+    topicTag: "reisen",
+    payload: {
+      taskPrompt:
+        "Thema zur Diskussion: „Auf Autobahnen sollte es ein allgemeines Tempolimit geben.“ Beziehe Stellung, nenne mindestens zwei Argumente, reagiere auf ein typisches Gegenargument, und versuche zu überzeugen.",
+      prepSeconds: 60,
+      speakSeconds: 120,
+    },
+    guidanceNote: "Untermauere deine Argumente mit Gründen (Sicherheit, Umwelt).",
+  },
+  {
+    level: "B2",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_PRESENT",
+    title: "Vortrag: Die Bedeutung von Ehrenamt",
+    prompt: "Halte einen kurzen, strukturierten Vortrag auf Deutsch (etwa zwei Minuten).",
+    difficulty: "CORE",
+    topicTag: "alltag",
+    payload: {
+      taskPrompt:
+        "Thema: Welche Bedeutung hat ehrenamtliches Engagement für die Gesellschaft? Halte einen Vortrag. Führe ein, erkläre, warum Ehrenamt wichtig ist, nenne Beispiele und auch Schwierigkeiten, sag deine Meinung, und schließe ab.",
+      prepSeconds: 120,
+      speakSeconds: 120,
+    },
+    guidanceNote: "Nenne sowohl den Nutzen als auch die Herausforderungen.",
+  },
+  {
+    level: "B2",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_DISCUSS",
+    title: "Diskussion: Bargeld abschaffen?",
+    prompt: "Diskutiere und vertritt deine Position auf Deutsch (etwa anderthalb Minuten).",
+    difficulty: "STRETCH",
+    topicTag: "alltag",
+    payload: {
+      taskPrompt:
+        "Thema zur Diskussion: „Wir sollten das Bargeld abschaffen und nur noch digital bezahlen.“ Beziehe Stellung, nenne Argumente, gehe auf das Thema Datenschutz und auf Menschen ohne Bankkarte ein, und begründe deine Meinung.",
+      prepSeconds: 60,
+      speakSeconds: 120,
+    },
+    guidanceNote: "Denke an Betroffene, die du nicht vergessen solltest (z. B. ohne Karte).",
+  },
+  {
+    level: "B2",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_PRESENT",
+    title: "Vortrag: Digitale Medien und Kinder",
+    prompt: "Halte einen kurzen, strukturierten Vortrag auf Deutsch (etwa zwei Minuten).",
+    difficulty: "STRETCH",
+    topicTag: "lernen",
+    payload: {
+      taskPrompt:
+        "Thema: Wie sollten Kinder mit digitalen Medien umgehen? Halte einen Vortrag. Führe ein, beschreibe Chancen und Risiken, nenne, was Eltern und Schule tun können, vertritt deine Meinung, und fasse zusammen.",
+      prepSeconds: 120,
+      speakSeconds: 120,
+    },
+    guidanceNote: "Strukturiere: Chancen – Risiken – Lösungen – Meinung.",
+  },
+  {
+    level: "B2",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_DISCUSS",
+    title: "Diskussion: Brauchen wir die Vier-Tage-Woche?",
+    prompt: "Diskutiere und vertritt deine Position auf Deutsch (etwa anderthalb Minuten).",
+    difficulty: "STRETCH",
+    topicTag: "arbeit",
+    payload: {
+      taskPrompt:
+        "Thema zur Diskussion: „Die Vier-Tage-Woche sollte überall eingeführt werden.“ Beziehe Stellung, nenne Argumente, gehe darauf ein, dass das Modell nicht zu allen Branchen passt, und begründe deine Position.",
+      prepSeconds: 60,
+      speakSeconds: 120,
+    },
+    guidanceNote: "Räume Grenzen deines Standpunkts ein — das macht dich glaubwürdiger.",
+  },
 ];
 
 async function main() {
