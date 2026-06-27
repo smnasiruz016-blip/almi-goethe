@@ -525,6 +525,264 @@ export const ITEMS: Prisma.GoetheItemCreateManyInput[] = [
     },
     guidanceNote: "Antworte in zwei bis drei Sätzen und gib ein Beispiel.",
   },
+
+  // ===================== B1 =====================
+  {
+    level: "B1",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_PRESENT",
+    title: "Präsentation: Einkaufen im Internet",
+    prompt: "Halte eine kurze Präsentation auf Deutsch (etwa anderthalb Minuten).",
+    difficulty: "CORE",
+    topicTag: "einkaufen",
+    payload: {
+      taskPrompt:
+        "Thema: Einkaufen im Internet. Halte eine kurze Präsentation. Beschreibe, wie die Situation in deinem Land ist, erzähle von deinen eigenen Erfahrungen, nenne Vor- und Nachteile, und sag am Ende deine Meinung.",
+      prepSeconds: 60,
+      speakSeconds: 90,
+    },
+    guidanceNote: "Gliedere deine Präsentation: Situation – Erfahrung – Vor-/Nachteile – Meinung.",
+  },
+  {
+    level: "B1",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_PRESENT",
+    title: "Präsentation: Leben in der Stadt oder auf dem Land",
+    prompt: "Halte eine kurze Präsentation auf Deutsch (etwa anderthalb Minuten).",
+    difficulty: "STRETCH",
+    topicTag: "wohnen",
+    payload: {
+      taskPrompt:
+        "Thema: Stadt oder Land. Halte eine kurze Präsentation. Beschreibe, wo die Menschen in deinem Land lieber wohnen, erzähle, wo du wohnst und warum, nenne Vor- und Nachteile von Stadt und Land, und sag deine Meinung.",
+      prepSeconds: 60,
+      speakSeconds: 90,
+    },
+    guidanceNote: "Vergleiche mit „im Vergleich zu“, „während“, „dagegen“.",
+  },
+  {
+    level: "B1",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_DISCUSS",
+    title: "Gemeinsam planen: Ein Abschiedsfest für eine Kollegin",
+    prompt: "Plant gemeinsam etwas. Sprich auf Deutsch (etwa anderthalb Minuten).",
+    difficulty: "CORE",
+    topicTag: "arbeit",
+    payload: {
+      taskPrompt:
+        "Eine Kollegin verlässt die Firma. Plant gemeinsam ein kleines Abschiedsfest. Sprich über Ort, Zeit, Essen und ein Geschenk. Mach Vorschläge, reagiere auf Vorschläge, und kommt am Ende zu einer Entscheidung.",
+      prepSeconds: 30,
+      speakSeconds: 90,
+    },
+    guidanceNote: "Mach Vorschläge und reagiere: „Das ist eine gute Idee“, „Ich bin nicht sicher, ob …“.",
+  },
+  {
+    level: "B1",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_PRESENT",
+    title: "Präsentation: Fremdsprachen lernen",
+    prompt: "Halte eine kurze Präsentation auf Deutsch (etwa anderthalb Minuten).",
+    difficulty: "CORE",
+    topicTag: "lernen",
+    payload: {
+      taskPrompt:
+        "Thema: Fremdsprachen lernen. Halte eine kurze Präsentation. Beschreibe, welche Sprachen man in deinem Land lernt, erzähle, wie und warum du Deutsch lernst, nenne Vor- und Nachteile verschiedener Lernmethoden, und sag deine Meinung.",
+      prepSeconds: 60,
+      speakSeconds: 90,
+    },
+    guidanceNote: "Beziehe eigene Erfahrungen ein — das macht die Präsentation persönlich.",
+  },
+  {
+    level: "B1",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_DISCUSS",
+    title: "Gemeinsam planen: Ein Ausflug mit dem Deutschkurs",
+    prompt: "Plant gemeinsam etwas. Sprich auf Deutsch (etwa anderthalb Minuten).",
+    difficulty: "CORE",
+    topicTag: "freizeit",
+    payload: {
+      taskPrompt:
+        "Euer Deutschkurs möchte einen gemeinsamen Ausflug machen. Plant den Ausflug. Sprich über das Ziel, den Tag, die Anreise und die Kosten. Macht Vorschläge und einigt euch am Ende auf einen Plan.",
+      prepSeconds: 30,
+      speakSeconds: 90,
+    },
+    guidanceNote: "Bringt das Gespräch zu einem Ergebnis: „Dann machen wir es so.“",
+  },
+  {
+    level: "B1",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_PRESENT",
+    title: "Präsentation: Gesunde Ernährung",
+    prompt: "Halte eine kurze Präsentation auf Deutsch (etwa anderthalb Minuten).",
+    difficulty: "STRETCH",
+    topicTag: "gesundheit",
+    payload: {
+      taskPrompt:
+        "Thema: Gesunde Ernährung. Halte eine kurze Präsentation. Beschreibe, wie sich die Menschen in deinem Land ernähren, erzähle, wie du selbst isst, nenne Vor- und Nachteile von gesundem Essen, und sag deine Meinung.",
+      prepSeconds: 60,
+      speakSeconds: 90,
+    },
+    guidanceNote: "Nenne konkrete Beispiele aus dem Alltag.",
+  },
+  {
+    level: "B1",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_DISCUSS",
+    title: "Gemeinsam planen: Besuch aus dem Ausland",
+    prompt: "Plant gemeinsam etwas. Sprich auf Deutsch (etwa anderthalb Minuten).",
+    difficulty: "STRETCH",
+    topicTag: "reisen",
+    payload: {
+      taskPrompt:
+        "Ein Freund aus dem Ausland besucht euch für ein Wochenende. Plant gemeinsam das Programm. Sprich darüber, was ihr ihm zeigt, wo ihr esst und wie ihr euch fortbewegt. Macht Vorschläge und einigt euch.",
+      prepSeconds: 30,
+      speakSeconds: 90,
+    },
+    guidanceNote: "Begründe deine Vorschläge: „Das sollten wir machen, weil …“.",
+  },
+  {
+    level: "B1",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_PRESENT",
+    title: "Präsentation: Soziale Medien",
+    prompt: "Halte eine kurze Präsentation auf Deutsch (etwa anderthalb Minuten).",
+    difficulty: "STRETCH",
+    topicTag: "alltag",
+    payload: {
+      taskPrompt:
+        "Thema: Soziale Medien. Halte eine kurze Präsentation. Beschreibe, wie wichtig soziale Medien in deinem Land sind, erzähle, wie du sie nutzt, nenne Vor- und Nachteile, und sag deine Meinung.",
+      prepSeconds: 60,
+      speakSeconds: 90,
+    },
+    guidanceNote: "Sag deine Meinung klar: „Insgesamt finde ich, dass …“.",
+  },
+  {
+    level: "B1",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_DISCUSS",
+    title: "Gemeinsam planen: Eine Überraschungsparty",
+    prompt: "Plant gemeinsam etwas. Sprich auf Deutsch (etwa anderthalb Minuten).",
+    difficulty: "CORE",
+    topicTag: "freizeit",
+    payload: {
+      taskPrompt:
+        "Ein gemeinsamer Freund hat bald Geburtstag und ihr wollt eine Überraschungsparty machen. Plant die Party. Sprich über Ort, Gäste, Essen und wie ihr die Überraschung geheim haltet. Einigt euch am Ende.",
+      prepSeconds: 30,
+      speakSeconds: 90,
+    },
+    guidanceNote: "Teilt die Aufgaben auf: „Ich kümmere mich um …“, „Kannst du …?“",
+  },
+  {
+    level: "B1",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_PRESENT",
+    title: "Präsentation: Reisen",
+    prompt: "Halte eine kurze Präsentation auf Deutsch (etwa anderthalb Minuten).",
+    difficulty: "CORE",
+    topicTag: "reisen",
+    payload: {
+      taskPrompt:
+        "Thema: Reisen. Halte eine kurze Präsentation. Beschreibe, wohin die Menschen in deinem Land gern reisen, erzähle von einer eigenen Reise, nenne Vor- und Nachteile des Reisens, und sag deine Meinung.",
+      prepSeconds: 60,
+      speakSeconds: 90,
+    },
+    guidanceNote: "Erzähle eine kleine Geschichte aus deiner eigenen Erfahrung.",
+  },
+  {
+    level: "B1",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_DISCUSS",
+    title: "Gemeinsam planen: Ein gesundes Mittagessen im Büro",
+    prompt: "Plant gemeinsam etwas. Sprich auf Deutsch (etwa anderthalb Minuten).",
+    difficulty: "CORE",
+    topicTag: "essen",
+    payload: {
+      taskPrompt:
+        "Ihr wollt im Büro einmal pro Woche zusammen ein gesundes Mittagessen machen. Plant das. Sprich darüber, was ihr kocht, wer einkauft, wo ihr esst und wie ihr die Kosten teilt. Einigt euch am Ende.",
+      prepSeconds: 30,
+      speakSeconds: 90,
+    },
+    guidanceNote: "Reagiere auf die Vorschläge der anderen und finde einen Kompromiss.",
+  },
+  {
+    level: "B1",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_PRESENT",
+    title: "Präsentation: Sport in der Freizeit",
+    prompt: "Halte eine kurze Präsentation auf Deutsch (etwa anderthalb Minuten).",
+    difficulty: "CORE",
+    topicTag: "freizeit",
+    payload: {
+      taskPrompt:
+        "Thema: Sport in der Freizeit. Halte eine kurze Präsentation. Beschreibe, welche Sportarten in deinem Land beliebt sind, erzähle, ob und welchen Sport du machst, nenne Vor- und Nachteile, und sag deine Meinung.",
+      prepSeconds: 60,
+      speakSeconds: 90,
+    },
+    guidanceNote: "Eine klare Struktur hilft den Zuhörern, dir zu folgen.",
+  },
+  {
+    level: "B1",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_DISCUSS",
+    title: "Gemeinsam planen: Ein Geschenk für den Lehrer",
+    prompt: "Plant gemeinsam etwas. Sprich auf Deutsch (etwa anderthalb Minuten).",
+    difficulty: "FOUNDATION",
+    topicTag: "lernen",
+    payload: {
+      taskPrompt:
+        "Euer Deutschkurs ist bald zu Ende und ihr möchtet eurem Lehrer ein Geschenk machen. Plant gemeinsam. Sprich über das Geschenk, das Geld, wer es kauft und wann ihr es übergebt. Einigt euch.",
+      prepSeconds: 30,
+      speakSeconds: 90,
+    },
+    guidanceNote: "Mach Vorschläge und frag die anderen nach ihrer Meinung.",
+  },
+  {
+    level: "B1",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_PRESENT",
+    title: "Präsentation: Handys im Alltag",
+    prompt: "Halte eine kurze Präsentation auf Deutsch (etwa anderthalb Minuten).",
+    difficulty: "STRETCH",
+    topicTag: "alltag",
+    payload: {
+      taskPrompt:
+        "Thema: Handys im Alltag. Halte eine kurze Präsentation. Beschreibe, wie Menschen in deinem Land ihr Handy nutzen, erzähle, wofür du dein Handy brauchst, nenne Vor- und Nachteile, und sag deine Meinung.",
+      prepSeconds: 60,
+      speakSeconds: 90,
+    },
+    guidanceNote: "Nenne sowohl positive als auch negative Seiten.",
+  },
+  {
+    level: "B1",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_DISCUSS",
+    title: "Gemeinsam planen: Eine Wohnung gemeinsam renovieren",
+    prompt: "Plant gemeinsam etwas. Sprich auf Deutsch (etwa anderthalb Minuten).",
+    difficulty: "STRETCH",
+    topicTag: "wohnen",
+    payload: {
+      taskPrompt:
+        "Ihr zieht zusammen in eine Wohnung und wollt sie vorher renovieren. Plant die Arbeit. Sprich über die Aufgaben (streichen, putzen, Möbel kaufen), wer was macht und wann. Einigt euch am Ende auf einen Plan.",
+      prepSeconds: 30,
+      speakSeconds: 90,
+    },
+    guidanceNote: "Verteilt die Aufgaben fair und legt einen Zeitplan fest.",
+  },
+  {
+    level: "B1",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_PRESENT",
+    title: "Präsentation: Umweltschutz im Alltag",
+    prompt: "Halte eine kurze Präsentation auf Deutsch (etwa anderthalb Minuten).",
+    difficulty: "STRETCH",
+    topicTag: "umwelt",
+    payload: {
+      taskPrompt:
+        "Thema: Umweltschutz im Alltag. Halte eine kurze Präsentation. Beschreibe, was die Menschen in deinem Land für die Umwelt tun, erzähle, was du selbst machst, nenne Vor- und Nachteile, und sag deine Meinung.",
+      prepSeconds: 60,
+      speakSeconds: 90,
+    },
+    guidanceNote: "Gib praktische Beispiele: Müll trennen, weniger Plastik, Rad fahren.",
+  },
 ];
 
 async function main() {

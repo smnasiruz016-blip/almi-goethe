@@ -1226,6 +1226,617 @@ export const ITEMS: Prisma.GoetheItemCreateManyInput[] = [
     },
     guidanceNote: "Achte auf Miete und auf den vereinbarten Termin.",
   },
+
+  // ===================== B1 =====================
+  {
+    level: "B1",
+    module: "HOEREN",
+    taskType: "HOEREN_DETAIL",
+    title: "Ein Interview über ein Hobby",
+    prompt: "Du hörst ein Interview im Radio. Wähle für jede Frage die richtige Antwort.",
+    difficulty: "CORE",
+    topicTag: "freizeit",
+    payload: {
+      audioScript:
+        "Moderatorin: Heute spreche ich mit Markus, der ein ungewöhnliches Hobby hat. Markus, was machst du in deiner Freizeit? Markus: Ich sammle alte Postkarten. Angefangen habe ich vor zehn Jahren, als ich auf einem Flohmarkt eine schöne Karte von meiner Heimatstadt gefunden habe. Moderatorin: Wie viele hast du heute? Markus: Über zweitausend. Das Schönste daran ist, dass jede Karte eine kleine Geschichte erzählt. Manche sind über hundert Jahre alt. Moderatorin: Und wo findest du die Karten? Markus: Meistens auf Flohmärkten, aber auch im Internet.",
+      speakers: [
+        { role: "Moderatorin", voice: "shimmer" },
+        { role: "Markus", voice: "onyx" },
+      ],
+      questions: [
+        {
+          id: "q1",
+          stem: "Wie hat Markus mit dem Hobby angefangen?",
+          options: [
+            { id: "a", text: "Er hat auf einem Flohmarkt eine Karte gefunden." },
+            { id: "b", text: "Ein Freund hat ihm Karten geschenkt." },
+            { id: "c", text: "Er hat es in der Schule gelernt." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Was findet Markus am Sammeln am schönsten?",
+          options: [
+            { id: "a", text: "Jede Karte erzählt eine Geschichte." },
+            { id: "b", text: "Man kann damit Geld verdienen." },
+            { id: "c", text: "Die Karten sind sehr günstig." },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "In Interviews stehen die wichtigen Aussagen in den Antworten des Gastes.",
+  },
+  {
+    level: "B1",
+    module: "HOEREN",
+    taskType: "HOEREN_DETAIL",
+    title: "Eine Nachricht über eine Terminänderung",
+    prompt: "Du hörst eine Nachricht. Wähle für jede Frage die richtige Antwort.",
+    difficulty: "CORE",
+    topicTag: "arbeit",
+    payload: {
+      audioScript:
+        "Hallo Frau Richter, hier spricht Paul Meyer von der Firma Bauer. Ich rufe an, weil sich unser Termin am Donnerstag leider verschieben muss. Meine Kollegin ist krank geworden, deshalb können wir das Projekt erst am Montag besprechen. Würde Ihnen Montag um zehn Uhr passen? Bitte rufen Sie mich zurück oder schreiben Sie mir eine kurze E-Mail. Meine Nummer haben Sie ja. Vielen Dank und bis bald.",
+      speakers: [{ role: "Paul", voice: "echo" }],
+      questions: [
+        {
+          id: "q1",
+          stem: "Warum muss der Termin verschoben werden?",
+          options: [
+            { id: "a", text: "Eine Kollegin ist krank geworden." },
+            { id: "b", text: "Herr Meyer ist im Urlaub." },
+            { id: "c", text: "Das Projekt ist fertig." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Was soll Frau Richter tun?",
+          options: [
+            { id: "a", text: "zurückrufen oder eine E-Mail schreiben" },
+            { id: "b", text: "zum Büro kommen" },
+            { id: "c", text: "nichts tun" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Achte auf Grund der Änderung und auf die gewünschte Reaktion.",
+  },
+  {
+    level: "B1",
+    module: "HOEREN",
+    taskType: "HOEREN_DETAIL",
+    title: "Eine Stadtführung",
+    prompt: "Du hörst eine Stadtführerin. Wähle für jede Frage die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "reisen",
+    payload: {
+      audioScript:
+        "Herzlich willkommen zu unserer Stadtführung. Wir stehen hier vor dem Rathaus, das über vierhundert Jahre alt ist. Gleich gehen wir weiter zur alten Kirche und danach zum Markt, wo Sie eine kurze Pause machen können. Dort gibt es viele kleine Cafés. Bitte bleiben Sie zusammen und passen Sie auf Ihre Taschen auf. Die Führung dauert insgesamt etwa neunzig Minuten. Am Ende bekommen Sie einen kleinen Stadtplan als Andenken.",
+      speakers: [{ role: "Führerin", voice: "nova" }],
+      questions: [
+        {
+          id: "q1",
+          stem: "Wo kann man eine Pause machen?",
+          options: [
+            { id: "a", text: "am Markt" },
+            { id: "b", text: "im Rathaus" },
+            { id: "c", text: "in der Kirche" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Wie lange dauert die Führung?",
+          options: [
+            { id: "a", text: "etwa 90 Minuten" },
+            { id: "b", text: "etwa 30 Minuten" },
+            { id: "c", text: "etwa drei Stunden" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Höre auf den Ablauf und auf Zeitangaben.",
+  },
+  {
+    level: "B1",
+    module: "HOEREN",
+    taskType: "HOEREN_DETAIL",
+    title: "Zwei Meinungen über das Auto",
+    prompt: "Du hörst ein Gespräch. Wähle für jede Frage die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "umwelt",
+    payload: {
+      audioScript:
+        "Lena: Ich überlege, mein Auto zu verkaufen. In der Stadt brauche ich es kaum noch. Tarek: Wirklich? Ich finde ein Auto sehr praktisch, besonders mit Kindern oder beim Einkaufen. Lena: Das verstehe ich, aber das Auto kostet viel Geld und steht meistens nur herum. Ich fahre lieber mit dem Rad oder nehme den Bus. Tarek: Für die Umwelt ist das natürlich besser. Vielleicht hast du recht — für die Stadt braucht man wirklich nicht unbedingt ein Auto.",
+      speakers: [
+        { role: "Lena", voice: "shimmer" },
+        { role: "Tarek", voice: "echo" },
+      ],
+      questions: [
+        {
+          id: "q1",
+          stem: "Warum möchte Lena ihr Auto verkaufen?",
+          options: [
+            { id: "a", text: "Sie braucht es in der Stadt kaum und es kostet viel Geld." },
+            { id: "b", text: "Das Auto ist kaputt." },
+            { id: "c", text: "Sie zieht aufs Land." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Wie reagiert Tarek am Ende?",
+          options: [
+            { id: "a", text: "Er gibt Lena teilweise recht." },
+            { id: "b", text: "Er ist völlig dagegen." },
+            { id: "c", text: "Er möchte auch sein Auto verkaufen." },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Bei zwei Meinungen: Wie verändert sich die Haltung am Ende?",
+  },
+  {
+    level: "B1",
+    module: "HOEREN",
+    taskType: "HOEREN_DETAIL",
+    title: "Ein Bericht über ein Stadtfest",
+    prompt: "Du hörst einen Radiobericht. Wähle für jede Frage die richtige Antwort.",
+    difficulty: "CORE",
+    topicTag: "freizeit",
+    payload: {
+      audioScript:
+        "Am Wochenende findet wieder das große Stadtfest statt. Auf drei Bühnen gibt es Live-Musik, dazu viele Stände mit Essen aus aller Welt. Neu ist in diesem Jahr ein Bereich nur für Kinder, mit Spielen und einem kleinen Karussell. Das Fest beginnt am Samstag um vierzehn Uhr und endet am Sonntagabend. Der Eintritt ist frei. Die Veranstalter bitten die Besucher, mit Bus und Bahn zu kommen, weil es nur wenige Parkplätze gibt.",
+      speakers: [{ role: "Reporter", voice: "alloy" }],
+      questions: [
+        {
+          id: "q1",
+          stem: "Was ist dieses Jahr neu?",
+          options: [
+            { id: "a", text: "ein Bereich für Kinder" },
+            { id: "b", text: "der freie Eintritt" },
+            { id: "c", text: "die Live-Musik" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Worum bitten die Veranstalter?",
+          options: [
+            { id: "a", text: "mit Bus und Bahn zu kommen" },
+            { id: "b", text: "Eintritt zu bezahlen" },
+            { id: "c", text: "Essen mitzubringen" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Achte auf das Wort „neu“ und auf Bitten der Veranstalter.",
+  },
+  {
+    level: "B1",
+    module: "HOEREN",
+    taskType: "HOEREN_DETAIL",
+    title: "Ein Gespräch über einen Umzug ins Ausland",
+    prompt: "Du hörst ein Gespräch. Wähle für jede Frage die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "person",
+    payload: {
+      audioScript:
+        "Maria: Ich habe gehört, du ziehst nach Kanada? Stimmt das? David: Ja, im Herbst. Ich habe dort eine Stelle als Ingenieur bekommen. Maria: Das ist toll! Aber ist das nicht schwer, so weit weg von der Familie? David: Doch, das ist der schwierigste Teil. Meine Eltern sind traurig. Aber wir telefonieren oft, und sie wollen mich nächstes Jahr besuchen. Maria: Und die Sprache? David: Mein Englisch ist ganz gut, aber ich nehme trotzdem noch einen Kurs, um sicherer zu werden.",
+      speakers: [
+        { role: "Maria", voice: "nova" },
+        { role: "David", voice: "onyx" },
+      ],
+      questions: [
+        {
+          id: "q1",
+          stem: "Warum zieht David nach Kanada?",
+          options: [
+            { id: "a", text: "Er hat dort eine Arbeitsstelle bekommen." },
+            { id: "b", text: "Seine Familie wohnt dort." },
+            { id: "c", text: "Er möchte dort studieren." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Was findet David am schwierigsten?",
+          options: [
+            { id: "a", text: "weit weg von der Familie zu sein" },
+            { id: "b", text: "die neue Arbeit" },
+            { id: "c", text: "das Wetter" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„der schwierigste Teil“ zeigt, was die Person besonders belastet.",
+  },
+  {
+    level: "B1",
+    module: "HOEREN",
+    taskType: "HOEREN_DETAIL",
+    title: "Tipps von einem Experten",
+    prompt: "Du hörst einen kurzen Beitrag. Wähle für jede Frage die richtige Antwort.",
+    difficulty: "CORE",
+    topicTag: "gesundheit",
+    payload: {
+      audioScript:
+        "Viele von uns sitzen den ganzen Tag am Schreibtisch. Der Sportexperte Herr Frank gibt Tipps: „Stehen Sie jede Stunde einmal auf und bewegen Sie sich ein paar Minuten. Trinken Sie genug Wasser und machen Sie in der Mittagspause einen kurzen Spaziergang. Sie müssen kein teures Fitnessstudio besuchen — schon kleine Bewegungen im Alltag helfen viel. Wer das regelmäßig macht, hat weniger Rückenschmerzen und fühlt sich fitter.“",
+      speakers: [{ role: "Beitrag", voice: "fable" }],
+      questions: [
+        {
+          id: "q1",
+          stem: "Was empfiehlt der Experte?",
+          options: [
+            { id: "a", text: "jede Stunde aufstehen und sich bewegen" },
+            { id: "b", text: "ein teures Fitnessstudio besuchen" },
+            { id: "c", text: "den ganzen Tag sitzen bleiben" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Was bringt regelmäßige Bewegung laut Experte?",
+          options: [
+            { id: "a", text: "weniger Rückenschmerzen" },
+            { id: "b", text: "mehr Geld" },
+            { id: "c", text: "besseren Schlaf am Wochenende" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Achte auf konkrete Empfehlungen und ihre Wirkung.",
+  },
+  {
+    level: "B1",
+    module: "HOEREN",
+    taskType: "HOEREN_TRUE_FALSE",
+    title: "Durchsage am Bahnhof: Streik",
+    prompt: "Du hörst eine Durchsage. Sind die Sätze richtig oder falsch?",
+    difficulty: "STRETCH",
+    topicTag: "reisen",
+    payload: {
+      audioScript:
+        "Sehr geehrte Fahrgäste, wir informieren Sie über den Streik am morgigen Tag. Von vier Uhr morgens bis zehn Uhr fahren keine Regionalzüge. Die Fernzüge sind nicht betroffen und fahren normal. Wir empfehlen Ihnen, Ihre Reise gut zu planen und sich vorher im Internet über Ihre Verbindung zu informieren. Bereits gekaufte Tickets bleiben gültig und können auch an einem anderen Tag benutzt werden.",
+      speakers: [{ role: "Durchsage", voice: "alloy" }],
+      questions: [
+        {
+          id: "q1",
+          stem: "Morgen fahren am Vormittag keine Regionalzüge.",
+          options: [
+            { id: "r", text: "Richtig" },
+            { id: "f", text: "Falsch" },
+          ],
+          answer: "r",
+        },
+        {
+          id: "q2",
+          stem: "Bereits gekaufte Tickets verlieren ihre Gültigkeit.",
+          options: [
+            { id: "r", text: "Richtig" },
+            { id: "f", text: "Falsch" },
+          ],
+          answer: "f",
+        },
+      ],
+    },
+    guidanceNote: "Unterscheide, was betroffen ist (Regionalzüge) und was nicht (Fernzüge).",
+  },
+  {
+    level: "B1",
+    module: "HOEREN",
+    taskType: "HOEREN_DETAIL",
+    title: "Ein Gespräch im Möbelhaus",
+    prompt: "Du hörst ein Beratungsgespräch. Wähle für jede Frage die richtige Antwort.",
+    difficulty: "CORE",
+    topicTag: "einkaufen",
+    payload: {
+      audioScript:
+        "Verkäufer: Guten Tag, kann ich Ihnen helfen? Kundin: Ja, ich suche einen Schreibtisch für mein Arbeitszimmer, aber er soll nicht zu groß sein. Verkäufer: Dann empfehle ich Ihnen dieses Modell hier. Es ist kompakt und hat trotzdem zwei Schubladen. Kundin: Sehr schön. Und kann man ihn liefern lassen? Verkäufer: Natürlich. Die Lieferung kostet allerdings zwanzig Euro extra. Wenn Sie ihn selbst abholen, sparen Sie das Geld. Kundin: Dann hole ich ihn lieber selbst ab.",
+      speakers: [
+        { role: "Verkäufer", voice: "onyx" },
+        { role: "Kundin", voice: "shimmer" },
+      ],
+      questions: [
+        {
+          id: "q1",
+          stem: "Was sucht die Kundin?",
+          options: [
+            { id: "a", text: "einen nicht zu großen Schreibtisch" },
+            { id: "b", text: "ein großes Sofa" },
+            { id: "c", text: "einen Schrank" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Warum will die Kundin den Tisch selbst abholen?",
+          options: [
+            { id: "a", text: "um die Liefergebühr zu sparen" },
+            { id: "b", text: "weil keine Lieferung möglich ist" },
+            { id: "c", text: "weil sie es eilig hat" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Achte auf Bedingungen wie „wenn Sie … abholen, sparen Sie …“.",
+  },
+  {
+    level: "B1",
+    module: "HOEREN",
+    taskType: "HOEREN_DETAIL",
+    title: "Eine Nachricht über einen Kurs",
+    prompt: "Du hörst eine Nachricht. Wähle für jede Frage die richtige Antwort.",
+    difficulty: "CORE",
+    topicTag: "lernen",
+    payload: {
+      audioScript:
+        "Guten Tag, hier ist die Sprachschule Lingua. Sie haben sich für unseren Abendkurs Spanisch angemeldet. Wir möchten Ihnen mitteilen, dass der Kurs nicht wie geplant am Montag, sondern erst am Mittwoch beginnt, weil sich noch ein paar Teilnehmer angemeldet haben. Die Uhrzeit bleibt gleich, also achtzehn Uhr dreißig. Bitte bringen Sie zum ersten Termin das Kursbuch mit. Bei Fragen erreichen Sie uns vormittags im Büro.",
+      speakers: [{ role: "Ansage", voice: "nova" }],
+      questions: [
+        {
+          id: "q1",
+          stem: "Was hat sich am Kurs geändert?",
+          options: [
+            { id: "a", text: "Der Kurs beginnt erst am Mittwoch." },
+            { id: "b", text: "Die Uhrzeit ist anders." },
+            { id: "c", text: "Der Kurs fällt aus." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Was soll man zum ersten Termin mitbringen?",
+          options: [
+            { id: "a", text: "das Kursbuch" },
+            { id: "b", text: "Geld" },
+            { id: "c", text: "einen Laptop" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Was ändert sich, was bleibt gleich? Höre genau.",
+  },
+  {
+    level: "B1",
+    module: "HOEREN",
+    taskType: "HOEREN_DETAIL",
+    title: "Ein Interview über das Reisen",
+    prompt: "Du hörst ein Interview. Wähle für jede Frage die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "reisen",
+    payload: {
+      audioScript:
+        "Moderator: Frau Berg, Sie reisen sehr viel. Was ist Ihnen beim Reisen am wichtigsten? Frau Berg: Für mich sind nicht die berühmten Sehenswürdigkeiten das Wichtigste, sondern die Menschen. Ich rede gern mit Einheimischen und probiere das lokale Essen. Moderator: Reisen Sie lieber allein oder mit anderen? Frau Berg: Meistens allein. So bin ich flexibler und lerne leichter neue Leute kennen. Moderator: Haben Sie einen Tipp für unsere Hörer? Frau Berg: Ja: Planen Sie nicht jeden Tag durch. Lassen Sie Platz für Überraschungen.",
+      speakers: [
+        { role: "Moderator", voice: "echo" },
+        { role: "Frau Berg", voice: "shimmer" },
+      ],
+      questions: [
+        {
+          id: "q1",
+          stem: "Was ist Frau Berg beim Reisen am wichtigsten?",
+          options: [
+            { id: "a", text: "die Menschen und das lokale Essen" },
+            { id: "b", text: "die berühmten Sehenswürdigkeiten" },
+            { id: "c", text: "günstige Hotels" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Welchen Tipp gibt sie?",
+          options: [
+            { id: "a", text: "nicht jeden Tag durchplanen" },
+            { id: "b", text: "immer mit einer Gruppe reisen" },
+            { id: "c", text: "nur teure Reisen machen" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Achte auf Kontraste: „nicht …, sondern …“.",
+  },
+  {
+    level: "B1",
+    module: "HOEREN",
+    taskType: "HOEREN_DETAIL",
+    title: "Eine Beschwerde im Restaurant",
+    prompt: "Du hörst ein Gespräch. Wähle für jede Frage die richtige Antwort.",
+    difficulty: "CORE",
+    topicTag: "essen",
+    payload: {
+      audioScript:
+        "Gast: Entschuldigung, ich warte schon fast vierzig Minuten auf mein Essen. Kellner: Das tut mir wirklich leid. Heute ist sehr viel los und die Küche ist langsam. Gast: Ich habe aber gleich einen Termin und kann nicht mehr lange warten. Kellner: Ich verstehe. Ich frage sofort in der Küche nach. Als Entschuldigung lade ich Sie zu einem Getränk ein. Gast: Das ist nett, danke. Aber wenn das Essen in zehn Minuten nicht kommt, muss ich leider gehen.",
+      speakers: [
+        { role: "Gast", voice: "onyx" },
+        { role: "Kellner", voice: "alloy" },
+      ],
+      questions: [
+        {
+          id: "q1",
+          stem: "Warum beschwert sich der Gast?",
+          options: [
+            { id: "a", text: "Er wartet sehr lange auf sein Essen." },
+            { id: "b", text: "Das Essen schmeckt nicht." },
+            { id: "c", text: "Der Tisch ist schmutzig." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Was bietet der Kellner als Entschuldigung an?",
+          options: [
+            { id: "a", text: "ein Getränk" },
+            { id: "b", text: "ein kostenloses Essen" },
+            { id: "c", text: "einen Gutschein" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Höre auf das Problem und auf die angebotene Lösung.",
+  },
+  {
+    level: "B1",
+    module: "HOEREN",
+    taskType: "HOEREN_DETAIL",
+    title: "Ein Vortrag über gesunde Ernährung",
+    prompt: "Du hörst den Anfang eines Vortrags. Wähle für jede Frage die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "gesundheit",
+    payload: {
+      audioScript:
+        "Guten Abend und herzlich willkommen zu meinem Vortrag über gesunde Ernährung. Viele Menschen glauben, gesund essen sei kompliziert und teuer. Das stimmt aber nicht. Wichtig ist vor allem, viel Gemüse und Obst zu essen und wenig Zucker. Man muss nicht auf alles verzichten — auch ein Stück Kuchen am Sonntag ist in Ordnung. Entscheidend ist das Gleichgewicht über die ganze Woche. In den nächsten Minuten zeige ich Ihnen drei einfache Rezepte, die wenig kosten und schnell gehen.",
+      speakers: [{ role: "Vortrag", voice: "fable" }],
+      questions: [
+        {
+          id: "q1",
+          stem: "Was sagt der Redner über gesunde Ernährung?",
+          options: [
+            { id: "a", text: "Sie ist nicht kompliziert und nicht teuer." },
+            { id: "b", text: "Sie ist nur für reiche Menschen." },
+            { id: "c", text: "Man muss auf alles verzichten." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Was zeigt der Redner als Nächstes?",
+          options: [
+            { id: "a", text: "drei einfache, günstige Rezepte" },
+            { id: "b", text: "ein Video über Sport" },
+            { id: "c", text: "eine Liste mit teuren Produkten" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Am Anfang eines Vortrags wird oft gesagt, was noch kommt.",
+  },
+  {
+    level: "B1",
+    module: "HOEREN",
+    taskType: "HOEREN_DETAIL",
+    title: "Ein Gespräch über die Wohnungssuche",
+    prompt: "Du hörst ein Gespräch zwischen Freunden. Wähle für jede Frage die richtige Antwort.",
+    difficulty: "CORE",
+    topicTag: "wohnen",
+    payload: {
+      audioScript:
+        "Nina: Und, hast du schon eine neue Wohnung gefunden? Jonas: Noch nicht, es ist wirklich schwierig. Die Wohnungen im Zentrum sind viel zu teuer. Nina: Hast du auch außerhalb der Stadt gesucht? Jonas: Ja, dort sind die Mieten günstiger, aber dann brauche ich länger zur Arbeit. Nina: Vielleicht ist das trotzdem besser. Mit dem Geld, das du sparst, kannst du ein Monatsticket für den Zug kaufen. Jonas: Da hast du recht, das überlege ich mir.",
+      speakers: [
+        { role: "Nina", voice: "shimmer" },
+        { role: "Jonas", voice: "echo" },
+      ],
+      questions: [
+        {
+          id: "q1",
+          stem: "Warum hat Jonas noch keine Wohnung im Zentrum?",
+          options: [
+            { id: "a", text: "Die Wohnungen dort sind zu teuer." },
+            { id: "b", text: "Es gibt dort keine Wohnungen." },
+            { id: "c", text: "Er möchte nicht im Zentrum wohnen." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Was schlägt Nina vor?",
+          options: [
+            { id: "a", text: "außerhalb zu wohnen und ein Zugticket zu kaufen" },
+            { id: "b", text: "bei den Eltern zu wohnen" },
+            { id: "c", text: "die Arbeit zu wechseln" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Vor- und Nachteile werden abgewogen — achte auf den Rat am Ende.",
+  },
+  {
+    level: "B1",
+    module: "HOEREN",
+    taskType: "HOEREN_TRUE_FALSE",
+    title: "Wettervorhersage für das Wochenende",
+    prompt: "Du hörst die Wettervorhersage. Sind die Sätze richtig oder falsch?",
+    difficulty: "FOUNDATION",
+    topicTag: "wetter",
+    payload: {
+      audioScript:
+        "Und nun das Wetter für das Wochenende. Am Samstag wird es freundlich und warm, mit Temperaturen bis zu fünfundzwanzig Grad — ideal für einen Ausflug. Am Sonntag ändert sich das Wetter: Es wird deutlich kühler und am Nachmittag kommen Wolken und Regen. Nehmen Sie also für Sonntag eine Jacke mit. In der nächsten Woche bleibt es wechselhaft.",
+      speakers: [{ role: "Wetter", voice: "nova" }],
+      questions: [
+        {
+          id: "q1",
+          stem: "Am Samstag wird es warm und freundlich.",
+          options: [
+            { id: "r", text: "Richtig" },
+            { id: "f", text: "Falsch" },
+          ],
+          answer: "r",
+        },
+        {
+          id: "q2",
+          stem: "Am Sonntag bleibt es den ganzen Tag sonnig.",
+          options: [
+            { id: "r", text: "Richtig" },
+            { id: "f", text: "Falsch" },
+          ],
+          answer: "f",
+        },
+      ],
+    },
+    guidanceNote: "Vergleiche die beiden Tage genau.",
+  },
+  {
+    level: "B1",
+    module: "HOEREN",
+    taskType: "HOEREN_DETAIL",
+    title: "Eine Mitteilung am Arbeitsplatz",
+    prompt: "Du hörst eine Mitteilung. Wähle für jede Frage die richtige Antwort.",
+    difficulty: "CORE",
+    topicTag: "arbeit",
+    payload: {
+      audioScript:
+        "Liebe Kolleginnen und Kollegen, eine kurze Information: Nächste Woche wird das Computersystem erneuert. Deshalb bleibt das Büro am Freitag geschlossen und wir arbeiten alle im Homeoffice. Bitte nehmen Sie am Donnerstagabend Ihren Laptop mit nach Hause. Am Montag funktioniert dann hoffentlich alles wieder normal. Bei technischen Problemen wenden Sie sich bitte an die IT-Abteilung. Vielen Dank für Ihr Verständnis.",
+      speakers: [{ role: "Mitteilung", voice: "alloy" }],
+      questions: [
+        {
+          id: "q1",
+          stem: "Warum bleibt das Büro am Freitag geschlossen?",
+          options: [
+            { id: "a", text: "Das Computersystem wird erneuert." },
+            { id: "b", text: "Es ist ein Feiertag." },
+            { id: "c", text: "Es wird renoviert." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Was sollen die Mitarbeiter am Donnerstag tun?",
+          options: [
+            { id: "a", text: "den Laptop mit nach Hause nehmen" },
+            { id: "b", text: "früher nach Hause gehen" },
+            { id: "c", text: "die IT-Abteilung anrufen" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Achte auf den Grund und auf die Anweisung an die Mitarbeiter.",
+  },
 ];
 
 async function main() {

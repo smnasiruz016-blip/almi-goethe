@@ -559,6 +559,294 @@ export const ITEMS: Prisma.GoetheItemCreateManyInput[] = [
     },
     guidanceNote: "Für Pläne kannst du „möchte“, „will“ und das Futur mit „werde“ nutzen.",
   },
+
+  // ===================== B1 =====================
+  {
+    level: "B1",
+    module: "SCHREIBEN",
+    taskType: "SCHREIBEN_ESSAY",
+    title: "Forum: Sind soziale Medien gut oder schlecht?",
+    prompt: "Schreib einen Beitrag in einem Online-Forum auf Deutsch (circa 80 Wörter).",
+    difficulty: "STRETCH",
+    topicTag: "alltag",
+    payload: {
+      situation:
+        "In einem Online-Forum wird diskutiert: „Soziale Medien — Fluch oder Segen?“ Du möchtest deine Meinung schreiben.",
+      instruction:
+        "Schreib einen Forumsbeitrag. Sag deine Meinung zu sozialen Medien, nenne einen Vorteil und einen Nachteil, gib ein Beispiel aus deinem Leben, und schreib einen kurzen Schluss.",
+      wordMin: 70,
+      wordMax: 100,
+    },
+    guidanceNote: "Strukturiere: Meinung – Vorteil – Nachteil – Beispiel – Schluss. Nutze „einerseits/andererseits“.",
+  },
+  {
+    level: "B1",
+    module: "SCHREIBEN",
+    taskType: "SCHREIBEN_MESSAGE",
+    title: "Einem Freund von einem Problem erzählen",
+    prompt: "Schreib eine E-Mail an einen Freund auf Deutsch (circa 80 Wörter).",
+    difficulty: "CORE",
+    topicTag: "alltag",
+    payload: {
+      situation:
+        "Du wolltest mit einem Freund in den Urlaub fahren, aber jetzt klappt es bei dir nicht.",
+      instruction:
+        "Schreib deinem Freund eine E-Mail. Erkläre, warum die Reise für dich nicht klappt, entschuldige dich, schlag eine andere Lösung vor, und frag nach seiner Meinung.",
+      wordMin: 70,
+      wordMax: 100,
+    },
+    guidanceNote: "Verbinde deine Gedanken mit „weil“, „deshalb“, „trotzdem“.",
+  },
+  {
+    level: "B1",
+    module: "SCHREIBEN",
+    taskType: "SCHREIBEN_LETTER",
+    title: "Beschwerde über einen Kurs",
+    prompt: "Schreib eine formelle E-Mail auf Deutsch (circa 80 Wörter).",
+    difficulty: "STRETCH",
+    topicTag: "lernen",
+    payload: {
+      situation:
+        "Du besuchst einen Sprachkurs, aber du bist nicht zufrieden: Der Raum ist zu klein und der Unterricht beginnt oft zu spät.",
+      instruction:
+        "Schreib eine höfliche, formelle E-Mail an die Sprachschule. Beschreib die Probleme, erkläre, warum sie dich stören, und mach einen Vorschlag, wie man die Situation verbessern könnte.",
+      wordMin: 70,
+      wordMax: 100,
+    },
+    guidanceNote: "Bleib sachlich und höflich. Formell: „Sehr geehrte Damen und Herren“ … „Mit freundlichen Grüßen“.",
+  },
+  {
+    level: "B1",
+    module: "SCHREIBEN",
+    taskType: "SCHREIBEN_ESSAY",
+    title: "Forum: Auto oder öffentliche Verkehrsmittel?",
+    prompt: "Schreib einen Beitrag in einem Online-Forum auf Deutsch (circa 80 Wörter).",
+    difficulty: "STRETCH",
+    topicTag: "umwelt",
+    payload: {
+      situation:
+        "In einem Forum geht es um die Frage: „Sollte man in der Stadt lieber das Auto oder Bus und Bahn benutzen?“",
+      instruction:
+        "Schreib einen Forumsbeitrag. Nenne deine Meinung, gib Argumente für die öffentlichen Verkehrsmittel und ein Argument für das Auto, und schreib einen kurzen Schluss mit deiner Empfehlung.",
+      wordMin: 70,
+      wordMax: 100,
+    },
+    guidanceNote: "Gegenargumente machen einen Text stärker: „Zwar …, aber …“.",
+  },
+  {
+    level: "B1",
+    module: "SCHREIBEN",
+    taskType: "SCHREIBEN_MESSAGE",
+    title: "Eine Einladung zu einer Feier",
+    prompt: "Schreib eine E-Mail an Freunde auf Deutsch (circa 80 Wörter).",
+    difficulty: "CORE",
+    topicTag: "freizeit",
+    payload: {
+      situation: "Du hast eine Prüfung bestanden und möchtest das mit deinen Freunden feiern.",
+      instruction:
+        "Schreib deinen Freunden eine E-Mail. Erzähle die gute Nachricht, lade sie zu einer Feier ein (Datum, Ort, Zeit), sag, was du planst, und bitte sie, dir bis Freitag zu antworten.",
+      wordMin: 70,
+      wordMax: 100,
+    },
+    guidanceNote: "Achte darauf, alle vier Punkte aus der Aufgabe zu behandeln.",
+  },
+  {
+    level: "B1",
+    module: "SCHREIBEN",
+    taskType: "SCHREIBEN_LETTER",
+    title: "Anfrage an ein Hotel",
+    prompt: "Schreib eine formelle E-Mail auf Deutsch (circa 80 Wörter).",
+    difficulty: "CORE",
+    topicTag: "reisen",
+    payload: {
+      situation: "Du planst eine Reise und interessierst dich für ein bestimmtes Hotel.",
+      instruction:
+        "Schreib eine formelle E-Mail an das Hotel. Frag nach einem Zimmer für eine Woche im August, frag nach dem Preis und ob Frühstück inklusive ist, frag, ob es in der Nähe einen Strand gibt, und bitte um eine Bestätigung.",
+      wordMin: 70,
+      wordMax: 100,
+    },
+    guidanceNote: "Ordne deine Fragen klar, eine nach der anderen.",
+  },
+  {
+    level: "B1",
+    module: "SCHREIBEN",
+    taskType: "SCHREIBEN_ESSAY",
+    title: "Forum: Sollte man weniger Fleisch essen?",
+    prompt: "Schreib einen Beitrag in einem Online-Forum auf Deutsch (circa 80 Wörter).",
+    difficulty: "STRETCH",
+    topicTag: "gesundheit",
+    payload: {
+      situation:
+        "In einem Gesundheitsforum wird diskutiert: „Sollten wir weniger Fleisch essen?“",
+      instruction:
+        "Schreib einen Forumsbeitrag. Sag deine Meinung, nenne mindestens zwei Gründe, gib ein persönliches Beispiel oder eine Erfahrung, und schreib einen kurzen Schluss.",
+      wordMin: 70,
+      wordMax: 100,
+    },
+    guidanceNote: "Begründe deine Meinung mit „weil“ und „außerdem“.",
+  },
+  {
+    level: "B1",
+    module: "SCHREIBEN",
+    taskType: "SCHREIBEN_MESSAGE",
+    title: "Einem Freund einen Rat geben",
+    prompt: "Schreib eine E-Mail an einen Freund auf Deutsch (circa 80 Wörter).",
+    difficulty: "CORE",
+    topicTag: "alltag",
+    payload: {
+      situation:
+        "Dein Freund hat dir geschrieben, dass er nicht weiß, ob er ein Praktikum im Ausland machen soll.",
+      instruction:
+        "Schreib ihm zurück. Sag deine Meinung dazu, nenne Vorteile eines Praktikums im Ausland, weise auf eine mögliche Schwierigkeit hin, und gib ihm einen Rat.",
+      wordMin: 70,
+      wordMax: 100,
+    },
+    guidanceNote: "Ratschläge gibt man mit „Ich würde …“, „Du solltest …“, „An deiner Stelle …“.",
+  },
+  {
+    level: "B1",
+    module: "SCHREIBEN",
+    taskType: "SCHREIBEN_LETTER",
+    title: "Reklamation: Ein defektes Gerät",
+    prompt: "Schreib eine formelle E-Mail auf Deutsch (circa 80 Wörter).",
+    difficulty: "STRETCH",
+    topicTag: "einkaufen",
+    payload: {
+      situation:
+        "Du hast vor drei Wochen eine Kaffeemaschine gekauft. Jetzt funktioniert sie nicht mehr.",
+      instruction:
+        "Schreib eine formelle E-Mail an das Geschäft. Beschreib das Problem, sag, wann du das Gerät gekauft hast, erkläre, was du möchtest (Reparatur, Umtausch oder Geld zurück), und bitte um eine schnelle Antwort.",
+      wordMin: 70,
+      wordMax: 100,
+    },
+    guidanceNote: "Nenne wichtige Fakten: Kaufdatum, Problem, gewünschte Lösung.",
+  },
+  {
+    level: "B1",
+    module: "SCHREIBEN",
+    taskType: "SCHREIBEN_ESSAY",
+    title: "Forum: Homeoffice — Vorteil oder Nachteil?",
+    prompt: "Schreib einen Beitrag in einem Online-Forum auf Deutsch (circa 80 Wörter).",
+    difficulty: "STRETCH",
+    topicTag: "arbeit",
+    payload: {
+      situation:
+        "In einem Forum geht es um die Frage: „Ist Homeoffice eher ein Vorteil oder ein Nachteil?“",
+      instruction:
+        "Schreib einen Forumsbeitrag. Nenne deine Meinung, einen Vorteil und einen Nachteil des Homeoffice, gib ein Beispiel, und beende den Text mit deiner persönlichen Empfehlung.",
+      wordMin: 70,
+      wordMax: 100,
+    },
+    guidanceNote: "Ein klarer Schluss rundet einen Meinungstext ab.",
+  },
+  {
+    level: "B1",
+    module: "SCHREIBEN",
+    taskType: "SCHREIBEN_MESSAGE",
+    title: "Sich für eine Hilfe bedanken und berichten",
+    prompt: "Schreib eine E-Mail an eine Freundin auf Deutsch (circa 80 Wörter).",
+    difficulty: "FOUNDATION",
+    topicTag: "alltag",
+    payload: {
+      situation:
+        "Eine Freundin hat dir beim Umzug geholfen. Jetzt wohnst du in der neuen Wohnung.",
+      instruction:
+        "Schreib ihr eine E-Mail. Bedank dich für die Hilfe, erzähle, wie es dir in der neuen Wohnung gefällt, lade sie zum Essen ein, und schlag einen Termin vor.",
+      wordMin: 70,
+      wordMax: 100,
+    },
+    guidanceNote: "Verbinde Dank, Bericht und Einladung zu einem flüssigen Text.",
+  },
+  {
+    level: "B1",
+    module: "SCHREIBEN",
+    taskType: "SCHREIBEN_LETTER",
+    title: "Bewerbung um einen Ferienjob",
+    prompt: "Schreib eine formelle E-Mail auf Deutsch (circa 80 Wörter).",
+    difficulty: "STRETCH",
+    topicTag: "arbeit",
+    payload: {
+      situation:
+        "Ein Café in deiner Stadt sucht für den Sommer Aushilfen. Du möchtest dort arbeiten.",
+      instruction:
+        "Schreib eine formelle E-Mail an das Café. Stell dich kurz vor, sag, warum du dich für die Stelle interessierst, nenne, wann du Zeit hast, und frag nach den nächsten Schritten.",
+      wordMin: 70,
+      wordMax: 100,
+    },
+    guidanceNote: "Eine Bewerbung ist sachlich: Vorstellung, Motivation, Verfügbarkeit.",
+  },
+  {
+    level: "B1",
+    module: "SCHREIBEN",
+    taskType: "SCHREIBEN_MESSAGE",
+    title: "Über das Wochenende berichten",
+    prompt: "Schreib eine E-Mail an einen Freund auf Deutsch (circa 80 Wörter).",
+    difficulty: "FOUNDATION",
+    topicTag: "freizeit",
+    payload: {
+      situation:
+        "Du warst am Wochenende auf einem Konzert. Ein Freund möchte wissen, wie es war.",
+      instruction:
+        "Schreib deinem Freund eine E-Mail. Erzähle, wo du warst und mit wem, beschreibe, wie es war, sag, was dir besonders gefallen hat, und frag, was er am Wochenende gemacht hat.",
+      wordMin: 70,
+      wordMax: 100,
+    },
+    guidanceNote: "Erzähle im Perfekt und nutze Adjektive, um es lebendig zu machen.",
+  },
+  {
+    level: "B1",
+    module: "SCHREIBEN",
+    taskType: "SCHREIBEN_ESSAY",
+    title: "Forum: Brauchen Kinder ein Smartphone?",
+    prompt: "Schreib einen Beitrag in einem Online-Forum auf Deutsch (circa 80 Wörter).",
+    difficulty: "STRETCH",
+    topicTag: "lernen",
+    payload: {
+      situation:
+        "In einem Elternforum wird diskutiert: „Ab welchem Alter sollten Kinder ein Smartphone haben?“",
+      instruction:
+        "Schreib einen Forumsbeitrag. Sag deine Meinung, nenne Argumente dafür und dagegen, gib einen Vorschlag für ein passendes Alter, und schreib einen kurzen Schluss.",
+      wordMin: 70,
+      wordMax: 100,
+    },
+    guidanceNote: "Wäge ab: „Auf der einen Seite … auf der anderen Seite …“.",
+  },
+  {
+    level: "B1",
+    module: "SCHREIBEN",
+    taskType: "SCHREIBEN_MESSAGE",
+    title: "Ein gemeinsames Geschenk organisieren",
+    prompt: "Schreib eine E-Mail an Kollegen auf Deutsch (circa 80 Wörter).",
+    difficulty: "CORE",
+    topicTag: "arbeit",
+    payload: {
+      situation:
+        "Eine Kollegin geht bald in Rente. Ihr möchtet ihr zusammen ein Geschenk kaufen.",
+      instruction:
+        "Schreib eine E-Mail an deine Kollegen. Erkläre die Idee, mach einen Vorschlag für das Geschenk, frag, wer mitmacht und Geld dazugibt, und nenne einen Termin, bis wann sie antworten sollen.",
+      wordMin: 70,
+      wordMax: 100,
+    },
+    guidanceNote: "Sei klar und freundlich, damit alle wissen, was zu tun ist.",
+  },
+  {
+    level: "B1",
+    module: "SCHREIBEN",
+    taskType: "SCHREIBEN_LETTER",
+    title: "Eine Bitte an die Hausverwaltung",
+    prompt: "Schreib eine formelle E-Mail auf Deutsch (circa 80 Wörter).",
+    difficulty: "CORE",
+    topicTag: "wohnen",
+    payload: {
+      situation:
+        "In deinem Haus ist das Treppenlicht seit Wochen kaputt und es ist abends sehr dunkel.",
+      instruction:
+        "Schreib eine formelle E-Mail an die Hausverwaltung. Beschreib das Problem, erkläre, warum es gefährlich ist, bitte um eine baldige Reparatur, und frag, bis wann das erledigt sein kann.",
+      wordMin: 70,
+      wordMax: 100,
+    },
+    guidanceNote: "Begründe deine Bitte (Sicherheit) — das macht sie überzeugender.",
+  },
 ];
 
 async function main() {

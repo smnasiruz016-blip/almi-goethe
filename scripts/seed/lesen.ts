@@ -1374,6 +1374,675 @@ export const ITEMS: Prisma.GoetheItemCreateManyInput[] = [
     },
     guidanceNote: "Kursinfos nennen Alter, Zeit, Preis und Anmeldung.",
   },
+
+  // ===================== B1 =====================
+  {
+    level: "B1",
+    module: "LESEN",
+    taskType: "LESEN_GLOBAL",
+    title: "Ein Kommentar: Homeoffice",
+    prompt: "Lies den Kommentar und wähle für jede Frage die richtige Antwort.",
+    difficulty: "CORE",
+    topicTag: "arbeit",
+    payload: {
+      passages: [
+        {
+          id: "p1",
+          heading: "Arbeiten von zu Hause",
+          body:
+            "Seit einigen Jahren arbeiten immer mehr Menschen im Homeoffice. Für viele hat das Vorteile: Sie sparen die Zeit für den Weg zur Arbeit und können flexibler arbeiten. Allerdings gibt es auch Nachteile. Manche Menschen vermissen den Kontakt zu den Kollegen, und zu Hause ist es oft schwer, Arbeit und Privatleben zu trennen. Meiner Meinung nach ist eine Mischung am besten: ein paar Tage im Büro und ein paar Tage zu Hause. So bleibt man in Kontakt, hat aber trotzdem genug Ruhe für konzentrierte Arbeit.",
+        },
+      ],
+      questions: [
+        {
+          id: "q1",
+          kind: "mcq",
+          stem: "Welchen Nachteil vom Homeoffice nennt der Autor?",
+          options: [
+            { id: "a", text: "Man verdient weniger Geld." },
+            { id: "b", text: "Man vermisst den Kontakt zu den Kollegen." },
+            { id: "c", text: "Man muss früher aufstehen." },
+          ],
+          answer: "b",
+        },
+        {
+          id: "q2",
+          kind: "mcq",
+          stem: "Was hält der Autor für die beste Lösung?",
+          options: [
+            { id: "a", text: "nur im Büro arbeiten" },
+            { id: "b", text: "nur zu Hause arbeiten" },
+            { id: "c", text: "eine Mischung aus Büro und Homeoffice" },
+          ],
+          answer: "c",
+        },
+      ],
+    },
+    guidanceNote: "Die Meinung des Autors steht oft nach „meiner Meinung nach“.",
+  },
+  {
+    level: "B1",
+    module: "LESEN",
+    taskType: "LESEN_DETAIL",
+    title: "Ein Blogbeitrag: Eine Reise nach Hamburg",
+    prompt: "Lies den Blogbeitrag und wähle für jede Frage die richtige Antwort.",
+    difficulty: "CORE",
+    topicTag: "reisen",
+    payload: {
+      passages: [
+        {
+          id: "p1",
+          heading: "Mein Wochenende in Hamburg",
+          body:
+            "Letztes Wochenende war ich zum ersten Mal in Hamburg. Ich bin am Freitagabend mit dem Zug angekommen und habe in einem kleinen Hotel im Zentrum übernachtet. Am Samstag habe ich eine Hafenrundfahrt gemacht — das war das Beste an der ganzen Reise. Danach habe ich auf dem Fischmarkt gegessen. Eigentlich wollte ich auch ins Museum, aber dafür hatte ich keine Zeit mehr. Am Sonntag hat es leider geregnet, deshalb bin ich früher nach Hause gefahren. Trotzdem hat mir die Stadt sehr gut gefallen, und ich möchte bald wiederkommen.",
+        },
+      ],
+      questions: [
+        {
+          id: "q1",
+          kind: "mcq",
+          stem: "Was hat der Person am besten gefallen?",
+          options: [
+            { id: "a", text: "die Hafenrundfahrt" },
+            { id: "b", text: "das Museum" },
+            { id: "c", text: "das Hotel" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          kind: "mcq",
+          stem: "Warum ist die Person am Sonntag früher nach Hause gefahren?",
+          options: [
+            { id: "a", text: "Sie war krank." },
+            { id: "b", text: "Es hat geregnet." },
+            { id: "c", text: "Der Zug fuhr früher." },
+          ],
+          answer: "b",
+        },
+      ],
+    },
+    guidanceNote: "Achte auf „das Beste“ und auf Begründungen mit „deshalb“.",
+  },
+  {
+    level: "B1",
+    module: "LESEN",
+    taskType: "LESEN_TRUE_FALSE",
+    title: "Information: Müll richtig trennen",
+    prompt: "Lies den Text. Sind die Sätze richtig oder falsch?",
+    difficulty: "CORE",
+    topicTag: "umwelt",
+    payload: {
+      passages: [
+        {
+          id: "p1",
+          heading: "Mülltrennung leicht gemacht",
+          body:
+            "In Deutschland trennt man den Müll, damit man möglichst viel wiederverwenden kann. Papier kommt in die blaue Tonne, Verpackungen aus Plastik und Metall in den gelben Sack. Glas bringt man zu den Containern, dabei sollte man nach Farben sortieren. Reste von Essen gehören in die Biotonne. Wichtig ist: Batterien und alte Medikamente dürfen nicht in den normalen Müll, sondern müssen extra entsorgt werden. Wer Müll richtig trennt, hilft der Umwelt und spart wertvolle Rohstoffe.",
+        },
+      ],
+      questions: [
+        {
+          id: "q1",
+          kind: "truefalse",
+          stem: "Altglas soll man nach Farben sortieren.",
+          options: [
+            { id: "r", text: "Richtig" },
+            { id: "f", text: "Falsch" },
+          ],
+          answer: "r",
+        },
+        {
+          id: "q2",
+          kind: "truefalse",
+          stem: "Alte Batterien darf man in den normalen Müll werfen.",
+          options: [
+            { id: "r", text: "Richtig" },
+            { id: "f", text: "Falsch" },
+          ],
+          answer: "f",
+        },
+      ],
+    },
+    guidanceNote: "Achte auf Ausnahmen mit „nicht … sondern“.",
+  },
+  {
+    level: "B1",
+    module: "LESEN",
+    taskType: "LESEN_GLOBAL",
+    title: "Ein Forumsbeitrag: Handys in der Schule",
+    prompt: "Lies den Beitrag und wähle die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "lernen",
+    payload: {
+      passages: [
+        {
+          id: "p1",
+          heading: "Forum: Sollen Handys in der Schule verboten sein?",
+          body:
+            "Ich finde, Handys sollten im Unterricht nicht erlaubt sein. Viele Schüler schauen ständig auf das Display und passen nicht mehr auf. Natürlich kann ein Handy auch nützlich sein, zum Beispiel um schnell etwas nachzuschlagen. Aber das geht nur, wenn der Lehrer es klar regelt. In den Pausen sollten die Schüler ihr Handy ruhig benutzen dürfen. Ein komplettes Verbot finde ich übertrieben — wichtiger ist, dass die Schüler lernen, das Handy sinnvoll zu nutzen.",
+        },
+      ],
+      questions: [
+        {
+          id: "q1",
+          kind: "mcq",
+          stem: "Welche Meinung vertritt der Autor?",
+          options: [
+            { id: "a", text: "Handys sollten im Unterricht nicht erlaubt, aber in den Pausen okay sein." },
+            { id: "b", text: "Handys sollten überall in der Schule verboten sein." },
+            { id: "c", text: "Handys sollten immer und überall erlaubt sein." },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Bei Meinungstexten: Wäge ab, was der Autor wirklich befürwortet.",
+  },
+  {
+    level: "B1",
+    module: "LESEN",
+    taskType: "LESEN_MATCHING",
+    title: "Ehrenamt: Welche Tätigkeit passt?",
+    prompt: "Lies die Angebote und ordne jeder Person die passende Tätigkeit zu.",
+    difficulty: "STRETCH",
+    topicTag: "alltag",
+    payload: {
+      passages: [
+        {
+          id: "p1",
+          heading: "Ehrenamtliche Helfer gesucht",
+          body:
+            "A: Lesepate/Lesepatin — einmal pro Woche Kindern in der Bibliothek vorlesen.\nB: Sprachcafé — Geflüchteten beim Deutschlernen helfen, dienstagsabends.\nC: Tierheim — am Wochenende mit Hunden spazieren gehen.\nD: Seniorentreff — älteren Menschen am Nachmittag Gesellschaft leisten.",
+        },
+      ],
+      questions: [
+        {
+          id: "q1",
+          kind: "match",
+          stem: "Frau Nowak ist Lehrerin und möchte Menschen beim Deutschlernen unterstützen. Welche Tätigkeit passt?",
+          options: [
+            { id: "a", text: "Sprachcafé (B)" },
+            { id: "b", text: "Tierheim (C)" },
+            { id: "c", text: "Seniorentreff (D)" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          kind: "match",
+          stem: "Herr Koch liebt Tiere und hat nur am Wochenende Zeit. Welche Tätigkeit passt?",
+          options: [
+            { id: "a", text: "Lesepate (A)" },
+            { id: "b", text: "Tierheim (C)" },
+            { id: "c", text: "Seniorentreff (D)" },
+          ],
+          answer: "b",
+        },
+      ],
+    },
+    guidanceNote: "Beachte Interesse UND verfügbare Zeit der Person.",
+  },
+  {
+    level: "B1",
+    module: "LESEN",
+    taskType: "LESEN_DETAIL",
+    title: "Ein Artikel: Gesunder Schlaf",
+    prompt: "Lies den Artikel und wähle für jede Frage die richtige Antwort.",
+    difficulty: "CORE",
+    topicTag: "gesundheit",
+    payload: {
+      passages: [
+        {
+          id: "p1",
+          heading: "Besser schlafen",
+          body:
+            "Viele Menschen schlafen schlecht und sind tagsüber müde. Experten geben einige einfache Tipps. Erstens sollte man jeden Tag ungefähr zur gleichen Zeit ins Bett gehen. Zweitens ist es besser, vor dem Schlafen nicht mehr auf das Handy oder den Fernseher zu schauen, weil das helle Licht wach macht. Auch Kaffee am Abend stört den Schlaf. Wer abends lieber einen Tee trinkt und das Schlafzimmer dunkel und kühl hält, schläft meistens schneller ein und fühlt sich am Morgen erholter.",
+        },
+      ],
+      questions: [
+        {
+          id: "q1",
+          kind: "mcq",
+          stem: "Warum soll man vor dem Schlafen nicht auf das Handy schauen?",
+          options: [
+            { id: "a", text: "Das helle Licht macht wach." },
+            { id: "b", text: "Es kostet zu viel Strom." },
+            { id: "c", text: "Man bekommt Hunger." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          kind: "mcq",
+          stem: "Wie sollte das Schlafzimmer sein?",
+          options: [
+            { id: "a", text: "dunkel und kühl" },
+            { id: "b", text: "hell und warm" },
+            { id: "c", text: "laut und voll" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Ratgeber nennen Gründe mit „weil“ — verbinde Tipp und Grund.",
+  },
+  {
+    level: "B1",
+    module: "LESEN",
+    taskType: "LESEN_DETAIL",
+    title: "Eine E-Mail über ein Missverständnis",
+    prompt: "Lies die E-Mail und wähle für jede Frage die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "arbeit",
+    payload: {
+      passages: [
+        {
+          id: "p1",
+          heading: "E-Mail an eine Kollegin",
+          body:
+            "Liebe Frau Aydın,\n\nich glaube, es gab ein kleines Missverständnis wegen des Termins am Mittwoch. Sie haben geschrieben, dass das Treffen um 14 Uhr beginnt, aber im Kalender steht 15 Uhr. Könnten Sie mir bitte sagen, welche Zeit richtig ist? Außerdem wäre es gut, wenn wir vorher kurz telefonieren, damit wir alles besprechen können. Ich bin den ganzen Vormittag erreichbar.\n\nVielen Dank im Voraus und viele Grüße\nThomas Berg",
+        },
+      ],
+      questions: [
+        {
+          id: "q1",
+          kind: "mcq",
+          stem: "Worum geht es in der E-Mail?",
+          options: [
+            { id: "a", text: "um eine unklare Uhrzeit für ein Treffen" },
+            { id: "b", text: "um einen neuen Arbeitsvertrag" },
+            { id: "c", text: "um eine Beschwerde über die Kollegin" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          kind: "mcq",
+          stem: "Was schlägt Herr Berg vor?",
+          options: [
+            { id: "a", text: "vorher kurz zu telefonieren" },
+            { id: "b", text: "das Treffen abzusagen" },
+            { id: "c", text: "einen anderen Tag zu wählen" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "In Höflichkeitsformen („Könnten Sie …?“) stecken Bitten und Vorschläge.",
+  },
+  {
+    level: "B1",
+    module: "LESEN",
+    taskType: "LESEN_GLOBAL",
+    title: "Ein Leserbrief: Weniger Autos in der Stadt",
+    prompt: "Lies den Leserbrief und wähle die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "umwelt",
+    payload: {
+      passages: [
+        {
+          id: "p1",
+          heading: "Leserbrief",
+          body:
+            "Ich habe Ihren Artikel über die neue Fußgängerzone gelesen und möchte dazu etwas sagen. Ich finde es richtig, dass in der Innenstadt weniger Autos fahren. Die Luft wird besser und die Straßen werden sicherer für Kinder. Manche Geschäfte haben Angst, dass weniger Kunden kommen. Ich glaube aber, das Gegenteil ist der Fall: Wenn die Stadt schöner und ruhiger wird, bleiben die Leute länger und kaufen mehr ein. Wir sollten der Umwelt und den Menschen mehr Platz geben als den Autos.",
+        },
+      ],
+      questions: [
+        {
+          id: "q1",
+          kind: "mcq",
+          stem: "Was ist die Hauptaussage des Leserbriefs?",
+          options: [
+            { id: "a", text: "Weniger Autos in der Innenstadt sind gut für Umwelt und Menschen." },
+            { id: "b", text: "Die Geschäfte sollten schließen." },
+            { id: "c", text: "Autos sind das beste Verkehrsmittel." },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Der Autor entkräftet ein Gegenargument („Ich glaube aber …“).",
+  },
+  {
+    level: "B1",
+    module: "LESEN",
+    taskType: "LESEN_DETAIL",
+    title: "Ein Artikel: Sprachen lernen als Erwachsener",
+    prompt: "Lies den Artikel und wähle für jede Frage die richtige Antwort.",
+    difficulty: "CORE",
+    topicTag: "lernen",
+    payload: {
+      passages: [
+        {
+          id: "p1",
+          heading: "Nie zu spät zum Lernen",
+          body:
+            "Viele Erwachsene denken, dass nur Kinder leicht eine neue Sprache lernen können. Das stimmt aber nicht ganz. Erwachsene lernen anders, aber nicht unbedingt schlechter. Sie können zum Beispiel ihre Erfahrung nutzen und Grammatik schneller verstehen. Wichtig ist vor allem, regelmäßig zu üben — lieber jeden Tag zwanzig Minuten als einmal pro Woche drei Stunden. Außerdem hilft es, die Sprache im Alltag zu benutzen, etwa beim Einkaufen oder mit Nachbarn. Wer keine Angst vor Fehlern hat, macht die schnellsten Fortschritte.",
+        },
+      ],
+      questions: [
+        {
+          id: "q1",
+          kind: "mcq",
+          stem: "Was ist laut Text beim Sprachenlernen am wichtigsten?",
+          options: [
+            { id: "a", text: "regelmäßig zu üben" },
+            { id: "b", text: "möglichst jung zu sein" },
+            { id: "c", text: "nur Grammatik zu lernen" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          kind: "mcq",
+          stem: "Was hilft laut Text zusätzlich?",
+          options: [
+            { id: "a", text: "die Sprache im Alltag zu benutzen" },
+            { id: "b", text: "nie Fehler zu machen" },
+            { id: "c", text: "nur am Wochenende zu lernen" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„vor allem“ und „außerdem“ markieren wichtige Punkte.",
+  },
+  {
+    level: "B1",
+    module: "LESEN",
+    taskType: "LESEN_TRUE_FALSE",
+    title: "Information: Eine Sprachreise",
+    prompt: "Lies den Text. Sind die Sätze richtig oder falsch?",
+    difficulty: "CORE",
+    topicTag: "reisen",
+    payload: {
+      passages: [
+        {
+          id: "p1",
+          heading: "Sprachreise nach Wien",
+          body:
+            "Unsere Sprachreise nach Wien dauert zwei Wochen. Am Vormittag besuchen die Teilnehmer einen Deutschkurs, am Nachmittag gibt es ein Freizeitprogramm mit Ausflügen und Stadtführungen. Die Teilnehmer wohnen bei Gastfamilien, so können sie auch außerhalb des Unterrichts Deutsch sprechen. Im Preis sind der Kurs, die Unterkunft und das Frühstück enthalten. Den Flug muss jeder selbst buchen. Anmeldeschluss ist der 15. Mai.",
+        },
+      ],
+      questions: [
+        {
+          id: "q1",
+          kind: "truefalse",
+          stem: "Die Teilnehmer wohnen im Hotel.",
+          options: [
+            { id: "r", text: "Richtig" },
+            { id: "f", text: "Falsch" },
+          ],
+          answer: "f",
+        },
+        {
+          id: "q2",
+          kind: "truefalse",
+          stem: "Den Flug muss jeder selbst buchen.",
+          options: [
+            { id: "r", text: "Richtig" },
+            { id: "f", text: "Falsch" },
+          ],
+          answer: "r",
+        },
+      ],
+    },
+    guidanceNote: "Achte darauf, was im Preis enthalten ist und was nicht.",
+  },
+  {
+    level: "B1",
+    module: "LESEN",
+    taskType: "LESEN_DETAIL",
+    title: "Ein Interview: Beruf Krankenpfleger",
+    prompt: "Lies das Interview und wähle für jede Frage die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "arbeit",
+    payload: {
+      passages: [
+        {
+          id: "p1",
+          heading: "„Ich helfe gern Menschen“",
+          body:
+            "Wir haben mit Daniel gesprochen, der seit fünf Jahren als Krankenpfleger arbeitet. „Mein Beruf ist anstrengend, das stimmt“, sagt er. „Ich arbeite oft am Wochenende und manchmal nachts. Aber ich mache die Arbeit trotzdem gern, weil ich Menschen helfen kann.“ Besonders schwierig findet er, wenn es einem Patienten sehr schlecht geht. Schön sei dagegen der Moment, wenn jemand gesund nach Hause gehen kann. Jungen Leuten, die den Beruf lernen möchten, rät er: „Man braucht Geduld und ein gutes Herz, aber die Arbeit gibt einem auch viel zurück.“",
+        },
+      ],
+      questions: [
+        {
+          id: "q1",
+          kind: "mcq",
+          stem: "Warum macht Daniel seine Arbeit trotzdem gern?",
+          options: [
+            { id: "a", text: "weil er Menschen helfen kann" },
+            { id: "b", text: "weil er nie am Wochenende arbeitet" },
+            { id: "c", text: "weil er sehr viel Geld verdient" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          kind: "mcq",
+          stem: "Was rät Daniel jungen Leuten?",
+          options: [
+            { id: "a", text: "Sie brauchen Geduld und ein gutes Herz." },
+            { id: "b", text: "Sie sollten den Beruf nicht lernen." },
+            { id: "c", text: "Sie sollten nur tagsüber arbeiten." },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "In Interviews stehen Meinungen oft in den Zitaten.",
+  },
+  {
+    level: "B1",
+    module: "LESEN",
+    taskType: "LESEN_MATCHING",
+    title: "Veranstaltungen in der Stadt",
+    prompt: "Lies die Anzeigen und ordne jeder Person die passende Veranstaltung zu.",
+    difficulty: "CORE",
+    topicTag: "freizeit",
+    payload: {
+      passages: [
+        {
+          id: "p1",
+          heading: "Was ist los am Wochenende?",
+          body:
+            "A: Konzert im Park — klassische Musik, Samstagabend, Eintritt frei.\nB: Flohmarkt am Hafen — Sonntag, 9 bis 15 Uhr, für Schnäppchenjäger.\nC: Kochworkshop — gesund kochen lernen, Samstagnachmittag, Anmeldung nötig.\nD: Familienfest — Spiele und Essen für Kinder, Sonntagnachmittag.",
+        },
+      ],
+      questions: [
+        {
+          id: "q1",
+          kind: "match",
+          stem: "Herr Lang möchte gern alte Sachen günstig kaufen. Welche Veranstaltung passt?",
+          options: [
+            { id: "a", text: "Konzert im Park (A)" },
+            { id: "b", text: "Flohmarkt am Hafen (B)" },
+            { id: "c", text: "Kochworkshop (C)" },
+          ],
+          answer: "b",
+        },
+        {
+          id: "q2",
+          kind: "match",
+          stem: "Familie Schulz sucht etwas mit den Kindern für Sonntagnachmittag. Welche Veranstaltung passt?",
+          options: [
+            { id: "a", text: "Familienfest (D)" },
+            { id: "b", text: "Konzert im Park (A)" },
+            { id: "c", text: "Kochworkshop (C)" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Achte auf Interesse, Tag und Zielgruppe (z. B. Kinder).",
+  },
+  {
+    level: "B1",
+    module: "LESEN",
+    taskType: "LESEN_DETAIL",
+    title: "Ein Artikel: Online einkaufen",
+    prompt: "Lies den Artikel und wähle für jede Frage die richtige Antwort.",
+    difficulty: "CORE",
+    topicTag: "einkaufen",
+    payload: {
+      passages: [
+        {
+          id: "p1",
+          heading: "Im Internet oder im Geschäft?",
+          body:
+            "Immer mehr Menschen kaufen im Internet ein, weil es bequem ist und oft billiger. Man kann zu jeder Zeit bestellen und die Ware kommt nach Hause. Doch das Online-Shopping hat auch Nachteile. Man kann die Produkte vorher nicht anfassen oder anprobieren, und manchmal muss man Sachen wieder zurückschicken. Außerdem leiden die kleinen Geschäfte in den Städten, wenn alle nur noch online bestellen. Viele Menschen machen es deshalb so: Sie informieren sich im Internet, kaufen aber im Laden, um die Geschäfte vor Ort zu unterstützen.",
+        },
+      ],
+      questions: [
+        {
+          id: "q1",
+          kind: "mcq",
+          stem: "Welchen Nachteil vom Online-Shopping nennt der Text?",
+          options: [
+            { id: "a", text: "Man kann die Produkte vorher nicht anprobieren." },
+            { id: "b", text: "Man kann nur nachts bestellen." },
+            { id: "c", text: "Die Ware kommt nie an." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          kind: "mcq",
+          stem: "Was machen viele Menschen laut Text?",
+          options: [
+            { id: "a", text: "Sie informieren sich online und kaufen im Laden." },
+            { id: "b", text: "Sie kaufen nur noch online." },
+            { id: "c", text: "Sie kaufen gar nichts mehr." },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Vor- und Nachteile stehen oft mit „doch“ oder „außerdem“ nebeneinander.",
+  },
+  {
+    level: "B1",
+    module: "LESEN",
+    taskType: "LESEN_DETAIL",
+    title: "Eine Nachricht über einen Stromausfall",
+    prompt: "Lies die Mitteilung und wähle für jede Frage die richtige Antwort.",
+    difficulty: "FOUNDATION",
+    topicTag: "wohnen",
+    payload: {
+      passages: [
+        {
+          id: "p1",
+          heading: "Mitteilung der Hausverwaltung",
+          body:
+            "Sehr geehrte Mieterinnen und Mieter,\n\nam Donnerstag, dem 12. März, wird zwischen 9 und 13 Uhr der Strom im ganzen Haus abgestellt. Der Grund sind Reparaturarbeiten an der Elektrik. Bitte denken Sie daran: In dieser Zeit funktionieren auch der Aufzug und die Türklingel nicht. Wir bitten Sie um Verständnis und entschuldigen uns für die Unannehmlichkeiten.\n\nIhre Hausverwaltung",
+        },
+      ],
+      questions: [
+        {
+          id: "q1",
+          kind: "mcq",
+          stem: "Was ist der Grund für den Stromausfall?",
+          options: [
+            { id: "a", text: "Reparaturarbeiten an der Elektrik" },
+            { id: "b", text: "ein Fest im Haus" },
+            { id: "c", text: "ein Sturm" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          kind: "mcq",
+          stem: "Was funktioniert in dieser Zeit nicht?",
+          options: [
+            { id: "a", text: "der Aufzug und die Türklingel" },
+            { id: "b", text: "das Wasser" },
+            { id: "c", text: "die Heizung" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Offizielle Mitteilungen nennen Zeit, Grund und Folgen.",
+  },
+  {
+    level: "B1",
+    module: "LESEN",
+    taskType: "LESEN_GLOBAL",
+    title: "Ein Beitrag: Weniger Fleisch essen",
+    prompt: "Lies den Beitrag und wähle die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "gesundheit",
+    payload: {
+      passages: [
+        {
+          id: "p1",
+          heading: "Mein Versuch ohne Fleisch",
+          body:
+            "Vor einem Jahr habe ich beschlossen, weniger Fleisch zu essen. Am Anfang war ich skeptisch, weil ich dachte, vegetarisches Essen schmeckt langweilig. Aber das Gegenteil ist passiert: Ich habe viele neue Gerichte und Gewürze entdeckt und koche jetzt mit mehr Freude. Ich fühle mich auch leichter und gesünder. Ganz auf Fleisch verzichte ich nicht, aber ich esse es nur noch selten, vielleicht einmal pro Woche. Für mich war das eine gute Entscheidung, und ich kann es jedem empfehlen, es einfach mal auszuprobieren.",
+        },
+      ],
+      questions: [
+        {
+          id: "q1",
+          kind: "mcq",
+          stem: "Wie denkt die Person heute über ihre Entscheidung?",
+          options: [
+            { id: "a", text: "Sie war eine gute Entscheidung." },
+            { id: "b", text: "Sie war ein Fehler." },
+            { id: "c", text: "Sie hat nichts verändert." },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Die Bewertung am Ende zeigt, wie die Person heute denkt.",
+  },
+  {
+    level: "B1",
+    module: "LESEN",
+    taskType: "LESEN_DETAIL",
+    title: "Eine E-Mail: Eine Bitte an den Kurslehrer",
+    prompt: "Lies die E-Mail und wähle für jede Frage die richtige Antwort.",
+    difficulty: "CORE",
+    topicTag: "lernen",
+    payload: {
+      passages: [
+        {
+          id: "p1",
+          heading: "E-Mail an den Deutschlehrer",
+          body:
+            "Sehr geehrter Herr Wagner,\n\nleider konnte ich letzte Woche nicht zum Unterricht kommen, weil ich krank war. Könnten Sie mir bitte sagen, welches Thema Sie behandelt haben und welche Hausaufgaben ich machen soll? Wenn es Materialien gibt, wäre ich froh, wenn Sie mir diese per E-Mail schicken könnten. Außerdem möchte ich fragen, ob ich den verpassten Test nachholen kann.\n\nVielen Dank und freundliche Grüße\nLena Petrova",
+        },
+      ],
+      questions: [
+        {
+          id: "q1",
+          kind: "mcq",
+          stem: "Warum war Lena nicht im Unterricht?",
+          options: [
+            { id: "a", text: "Sie war krank." },
+            { id: "b", text: "Sie war im Urlaub." },
+            { id: "c", text: "Sie hatte keine Zeit." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          kind: "mcq",
+          stem: "Worum bittet Lena außerdem?",
+          options: [
+            { id: "a", text: "den Test nachholen zu dürfen" },
+            { id: "b", text: "einen anderen Kurs zu bekommen" },
+            { id: "c", text: "weniger Hausaufgaben zu machen" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Höfliche Bitten mit „Könnten Sie …?“ enthalten die Wünsche.",
+  },
 ];
 
 async function main() {
