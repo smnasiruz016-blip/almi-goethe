@@ -25,18 +25,22 @@ import {
 } from "./kit";
 
 function levelCard(o: Occupation, country?: CountryEntry) {
+  const statutory = o.levelBasis === "statutory";
   const regTail = o.regulated
     ? " This is a regulated profession in Germany, so you also need formal recognition of your qualification before you can work."
-    : " Recognition requirements depend on the employer and the federal state.";
+    : " It is not a regulated profession, so the German level is set by the employer (and the visa/Chancenkarte), not by law.";
+  const basisTail = statutory
+    ? " For this profession the German level is part of the recognition requirement — it is set in regulation, not just preferred."
+    : " There is no statutory German-language level for this role; the figure shown is the level employers and the visa typically expect.";
   return (
     <RequirementCard
       heading={`German level for ${o.name}`}
-      headline={o.germanLevel}
-      detail={`${o.levelDetail}${regTail}`}
+      headline={`${o.germanLevel}${statutory ? " — required for recognition" : " — typical expectation"}`}
+      detail={`${o.levelDetail}${regTail}${basisTail}`}
       note={
         country
-          ? `This is the established guidance and can change. Confirm the exact German level and recognition path for ${o.name.toLowerCase()} from ${country.name} with the competent authority and your employer.`
-          : `This is the established guidance and can change. Confirm the exact German level and recognition path with the competent authority and your employer.`
+          ? `This is established guidance and can change. Confirm the exact German level and recognition path for ${o.name.toLowerCase()} from ${country.name} with the competent authority and your employer.`
+          : `This is established guidance and can change. Confirm the exact German level and recognition path with the competent authority and your employer.`
       }
       links={[
         { label: "Make it in Germany — official portal", href: MAKE_IT_IN_GERMANY_URL },
