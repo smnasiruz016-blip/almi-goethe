@@ -39,7 +39,7 @@ const PROMISES = [
   {
     title: "Feedback you can act on",
     detail:
-      "AI feedback on Schreiben and Sprechen points to what to fix next — against the four Goethe criteria, level-aware, constructive and never inflated.",
+      "AI feedback on Schreiben and Sprechen points to what to fix next — against the official Goethe criteria, level-aware, constructive and never inflated.",
   },
 ] as const;
 
@@ -186,7 +186,7 @@ export default function Home() {
           <h2 className="text-center text-3xl font-semibold text-almi-ink">The four Goethe modules</h2>
           <p className="mx-auto mt-3 max-w-2xl text-center text-base text-almi-text-muted">
             Lesen and Hören are auto-marked and free to practise. Schreiben and Sprechen are graded with
-            honest AI feedback against the four Goethe criteria.
+            honest AI feedback against the official Goethe criteria.
           </p>
           <ul className="mt-10 grid gap-4 md:grid-cols-2">
             {MODULE_ORDER.map((m) => {

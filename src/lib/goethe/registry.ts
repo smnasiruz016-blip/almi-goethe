@@ -33,7 +33,7 @@ export type ModuleDef = {
 
 // All four modules ship live: Lesen + Hören are deterministic (German MCQ /
 // matching / richtig-falsch with German TTS audio); Schreiben + Sprechen are Sonnet
-// AI graders against the four Goethe criteria, level-aware (Sprechen grades the
+// AI graders against the official Goethe criteria, level-aware (Sprechen grades the
 // Whisper transcript only, never accent). Content is filled level-by-level (A1→C2).
 export const MODULE_DEFS: Record<GoetheModule, ModuleDef> = {
   LESEN: {
@@ -58,7 +58,7 @@ export const MODULE_DEFS: Record<GoetheModule, ModuleDef> = {
     label: "Schreiben (Writing)",
     scoringMode: "AI",
     live: true,
-    blurb: "Write a German message, letter or essay. Honest AI feedback on the four Goethe criteria.",
+    blurb: "Write a German message, letter or essay. Honest AI feedback on the official Goethe criteria.",
   },
   SPRECHEN: {
     module: "SPRECHEN",
@@ -66,7 +66,7 @@ export const MODULE_DEFS: Record<GoetheModule, ModuleDef> = {
     label: "Sprechen (Speaking)",
     scoringMode: "AI",
     live: true,
-    blurb: "Record a spoken German answer. Graded on the four Goethe criteria — never your accent.",
+    blurb: "Record a spoken German answer. Graded on the official Goethe criteria — never your accent.",
   },
 };
 

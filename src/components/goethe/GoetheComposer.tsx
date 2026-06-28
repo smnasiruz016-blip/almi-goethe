@@ -322,7 +322,7 @@ function WritingComposer({ attemptId, prompt, payload }: { attemptId: string; pr
       />
       <p className="text-xs text-almi-text-muted">
         {words} words{p.wordMin ? ` · Goethe expects ${p.wordMin}–${p.wordMax ?? p.wordMin}` : ""}. You&apos;ll get
-        honest feedback against the four Goethe writing criteria.
+        honest feedback against the official Goethe writing criteria.
       </p>
       {error && <p className="text-sm font-medium text-almi-coral-deep">{error}</p>}
       <button type="button" onClick={() => submit({ text })} disabled={submitting} className={SUBMIT_BTN}>

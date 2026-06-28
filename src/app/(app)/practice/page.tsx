@@ -37,7 +37,7 @@ export default async function PracticePage() {
         <h1 className="mt-1 text-3xl font-semibold text-almi-ink">Choose a module</h1>
         <p className="mt-2 max-w-2xl text-sm text-almi-text">
           Lesen and Hören are auto-marked and free to practise. Schreiben and Sprechen are graded with
-          honest AI feedback against the four Goethe criteria. Each module is estimated as a points
+          honest AI feedback against the official Goethe criteria. Each module is estimated as a points
           range with a 60% pass mark — a practice estimate, never an official score.
         </p>
         {user.targetLevel ? (
