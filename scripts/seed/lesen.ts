@@ -2712,6 +2712,675 @@ export const ITEMS: Prisma.GoetheItemCreateManyInput[] = [
     },
     guidanceNote: "„Kritiker wenden ein … Befürworter entgegnen“ markiert die zwei Seiten.",
   },
+
+  // ===================== C1 =====================
+  {
+    level: "C1",
+    module: "LESEN",
+    taskType: "LESEN_GLOBAL",
+    title: "Essay: Die Ökonomie der Aufmerksamkeit",
+    prompt: "Lies den Essay und wähle für jede Frage die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "alltag",
+    payload: {
+      passages: [
+        {
+          id: "p1",
+          heading: "Worauf wir achten",
+          body:
+            "Lange galt Information als das knappe Gut unserer Zeit. Diese Annahme erweist sich zunehmend als Trugschluss. Information gibt es im Überfluss; knapp geworden ist vielmehr die Aufmerksamkeit, die wir ihr schenken können. Zahlreiche Unternehmen haben daraus ein Geschäftsmodell gemacht, dessen eigentliche Ware nicht das angebotene Produkt ist, sondern unsere Zeit. Je länger ein Mensch auf einen Bildschirm blickt, desto profitabler ist er. Problematisch daran ist weniger die Tatsache, dass wir abgelenkt werden — Ablenkung hat es immer gegeben —, sondern dass diese Ablenkung systematisch und mit erheblichem Aufwand erzeugt wird. Wer sich dem entziehen will, kämpft nicht gegen die eigene Willensschwäche, wie oft behauptet wird, sondern gegen eine ganze Industrie. Vor diesem Hintergrund erscheint die verbreitete Aufforderung, man müsse eben nur disziplinierter sein, beinahe zynisch.",
+        },
+      ],
+      questions: [
+        {
+          id: "q1",
+          kind: "mcq",
+          stem: "Was ist laut Text das eigentlich knappe Gut?",
+          options: [
+            { id: "a", text: "die Information selbst" },
+            { id: "b", text: "die Aufmerksamkeit der Menschen" },
+            { id: "c", text: "die Zahl der Produkte" },
+          ],
+          answer: "b",
+        },
+        {
+          id: "q2",
+          kind: "mcq",
+          stem: "Wie bewertet der Autor die Aufforderung, einfach disziplinierter zu sein?",
+          options: [
+            { id: "a", text: "als angemessen und hilfreich" },
+            { id: "b", text: "als beinahe zynisch, weil man gegen eine Industrie kämpft" },
+            { id: "c", text: "als wissenschaftlich gut belegt" },
+          ],
+          answer: "b",
+        },
+      ],
+    },
+    guidanceNote: "Achte auf die ironische Distanzierung: „wie oft behauptet wird“, „beinahe zynisch“.",
+  },
+  {
+    level: "C1",
+    module: "LESEN",
+    taskType: "LESEN_DETAIL",
+    title: "Ein Interview: Über die Vermittlung von Wissenschaft",
+    prompt: "Lies das Interview und wähle für jede Frage die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "lernen",
+    payload: {
+      passages: [
+        {
+          id: "p1",
+          heading: "„Fakten allein überzeugen niemanden“",
+          body:
+            "Die Kommunikationsforscherin Prof. Adler beschäftigt sich damit, warum wissenschaftliche Erkenntnisse oft auf Skepsis stoßen. „Ein verbreiteter Irrtum besteht in der Annahme, man müsse den Menschen nur genügend Fakten liefern, dann änderten sie ihre Meinung“, erklärt sie. „Tatsächlich funktioniert das Gegenteil: Wer sich in seiner Identität bedroht fühlt, hält erst recht an seiner Überzeugung fest.“ Entscheidend sei daher nicht die Menge der Daten, sondern das Vertrauen in die Quelle. „Wissenschaft sollte nicht belehren, sondern erklären — und dabei ehrlich zugeben, was sie noch nicht weiß. Gerade dieses Eingeständnis von Unsicherheit, das viele für eine Schwäche halten, schafft paradoxerweise Glaubwürdigkeit.“",
+        },
+      ],
+      questions: [
+        {
+          id: "q1",
+          kind: "mcq",
+          stem: "Welchen Irrtum nennt Prof. Adler?",
+          options: [
+            { id: "a", text: "dass mehr Fakten automatisch die Meinung ändern" },
+            { id: "b", text: "dass Wissenschaft nie irrt" },
+            { id: "c", text: "dass Vertrauen unwichtig ist" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          kind: "mcq",
+          stem: "Was schafft laut Adler paradoxerweise Glaubwürdigkeit?",
+          options: [
+            { id: "a", text: "das ehrliche Eingeständnis von Unsicherheit" },
+            { id: "b", text: "möglichst viele Daten" },
+            { id: "c", text: "ein belehrender Ton" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„paradoxerweise“ signalisiert einen überraschenden Zusammenhang.",
+  },
+  {
+    level: "C1",
+    module: "LESEN",
+    taskType: "LESEN_TRUE_FALSE",
+    title: "Studie: Einsamkeit in der vernetzten Welt",
+    prompt: "Lies den Text. Sind die Sätze richtig oder falsch?",
+    difficulty: "STRETCH",
+    topicTag: "gesundheit",
+    payload: {
+      passages: [
+        {
+          id: "p1",
+          heading: "Allein unter vielen",
+          body:
+            "Dass ausgerechnet in einer Zeit ständiger Vernetzung die Einsamkeit zunimmt, mag auf den ersten Blick widersprüchlich erscheinen. Eine aktuelle Untersuchung legt jedoch nahe, dass digitale Kontakte persönliche Begegnungen nicht ersetzen, sondern bestenfalls ergänzen. Wer viele Online-Kontakte pflegt, ist demnach nicht zwangsläufig weniger einsam — entscheidend bleibt die Qualität, nicht die Quantität der Beziehungen. Bemerkenswert ist zudem, dass Einsamkeit längst nicht mehr nur ältere Menschen betrifft. Im Gegenteil: Gerade unter jungen Erwachsenen ist sie auffällig verbreitet. Die Autoren der Studie warnen jedoch davor, voreilig die Technik allein verantwortlich zu machen. Soziale Isolation habe vielfältige Ursachen, von denen die Digitalisierung lediglich eine sei.",
+        },
+      ],
+      questions: [
+        {
+          id: "q1",
+          kind: "truefalse",
+          stem: "Laut Studie betrifft Einsamkeit vor allem ältere Menschen.",
+          options: [
+            { id: "r", text: "Richtig" },
+            { id: "f", text: "Falsch" },
+          ],
+          answer: "f",
+        },
+        {
+          id: "q2",
+          kind: "truefalse",
+          stem: "Die Autoren machen allein die Technik für Einsamkeit verantwortlich.",
+          options: [
+            { id: "r", text: "Richtig" },
+            { id: "f", text: "Falsch" },
+          ],
+          answer: "f",
+        },
+      ],
+    },
+    guidanceNote: "„warnen davor, voreilig … verantwortlich zu machen“ — achte auf die Vorsicht der Aussage.",
+  },
+  {
+    level: "C1",
+    module: "LESEN",
+    taskType: "LESEN_GLOBAL",
+    title: "Eine Kolumne: Das Lob der Langsamkeit",
+    prompt: "Lies die Kolumne und wähle die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "alltag",
+    payload: {
+      passages: [
+        {
+          id: "p1",
+          heading: "Schneller ist nicht immer besser",
+          body:
+            "Effizienz gilt als unbestrittene Tugend unserer Zeit. Wer langsam ist, gerät schnell unter Rechtfertigungsdruck. Dabei lohnt es sich, diese Selbstverständlichkeit zu hinterfragen. Manche Tätigkeiten gewinnen ihren Wert gerade dadurch, dass sie sich nicht beschleunigen lassen — ein Gespräch unter Freunden, das Lesen eines anspruchsvollen Buches, das Erlernen eines Instruments. Würde man sie optimieren, zerstörte man genau das, was sie ausmacht. Es geht mir nicht darum, Langsamkeit pauschal zu verklären; selbstverständlich ist es sinnvoll, Routineaufgaben effizient zu erledigen. Mein Einwand richtet sich vielmehr gegen die unausgesprochene Annahme, dass Beschleunigung grundsätzlich Fortschritt bedeute. In Wahrheit ist die Fähigkeit, zwischen dem zu Beschleunigenden und dem zu Bewahrenden zu unterscheiden, womöglich die wichtigere Kompetenz.",
+        },
+      ],
+      questions: [
+        {
+          id: "q1",
+          kind: "mcq",
+          stem: "Wogegen richtet sich der Einwand des Autors?",
+          options: [
+            { id: "a", text: "gegen die Annahme, Beschleunigung sei immer Fortschritt" },
+            { id: "b", text: "gegen jede Form von Effizienz" },
+            { id: "c", text: "gegen das Lesen von Büchern" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Der Autor grenzt seine These ab („Es geht mir nicht darum …“) — das schärft seine eigentliche Aussage.",
+  },
+  {
+    level: "C1",
+    module: "LESEN",
+    taskType: "LESEN_MATCHING",
+    title: "Vier Stimmen zur Zukunft der Arbeit",
+    prompt: "Lies die Aussagen und ordne jede Person der passenden Position zu.",
+    difficulty: "STRETCH",
+    topicTag: "arbeit",
+    payload: {
+      passages: [
+        {
+          id: "p1",
+          heading: "Wie arbeiten wir morgen?",
+          body:
+            "Frau Renner: Die Automatisierung wird viele Berufe verändern, aber nicht das Bedürfnis nach sinnvoller Tätigkeit beseitigen.\nHerr Bach: Entscheidend ist nicht, ob Maschinen Arbeit übernehmen, sondern wie wir den dadurch gewonnenen Wohlstand verteilen.\nFrau Imai: Ich warne vor Technikgläubigkeit — nicht jede Aufgabe lässt sich oder sollte automatisiert werden.\nHerr Olsen: Mich interessiert weniger die Technik als die Frage, ob Arbeit künftig überhaupt noch die Quelle unserer Identität sein muss.",
+        },
+      ],
+      questions: [
+        {
+          id: "q1",
+          kind: "match",
+          stem: "Wer betont die Frage der Verteilung des Wohlstands?",
+          options: [
+            { id: "a", text: "Herr Bach" },
+            { id: "b", text: "Frau Imai" },
+            { id: "c", text: "Herr Olsen" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          kind: "match",
+          stem: "Wer stellt infrage, ob Arbeit die Quelle der Identität bleiben muss?",
+          options: [
+            { id: "a", text: "Frau Renner" },
+            { id: "b", text: "Herr Olsen" },
+            { id: "c", text: "Herr Bach" },
+          ],
+          answer: "b",
+        },
+      ],
+    },
+    guidanceNote: "Erfasse den gedanklichen Schwerpunkt jeder Aussage, nicht einzelne Stichwörter.",
+  },
+  {
+    level: "C1",
+    module: "LESEN",
+    taskType: "LESEN_DETAIL",
+    title: "Ein Essay: Konsum und Identität",
+    prompt: "Lies den Essay und wähle für jede Frage die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "alltag",
+    payload: {
+      passages: [
+        {
+          id: "p1",
+          heading: "Ich kaufe, also bin ich?",
+          body:
+            "Dass Menschen über ihren Besitz definiert werden, ist kein neues Phänomen. Neu ist allenfalls die Selbstverständlichkeit, mit der wir unsere Persönlichkeit über Marken und Produkte zum Ausdruck bringen. Der Konsum verspricht uns, jemand Bestimmtes zu sein — nur ein Kauf entfernt von der besseren Version unserer selbst. Dass dieses Versprechen sich nie einlöst, gehört zu seiner Logik: Wäre es je erfüllt, gäbe es keinen Grund mehr, weiter zu konsumieren. Man könnte einwenden, dass auch frühere Generationen ihre Zugehörigkeit über Symbole zeigten. Der Unterschied liegt jedoch in der Geschwindigkeit, mit der heute neue Bedürfnisse erzeugt werden. Wer sich dem entziehen möchte, steht vor einer paradoxen Aufgabe: Selbst der Verzicht ist inzwischen zu einem Lebensstil geworden, den man — natürlich — käuflich erwerben kann.",
+        },
+      ],
+      questions: [
+        {
+          id: "q1",
+          kind: "mcq",
+          stem: "Warum löst sich das Versprechen des Konsums laut Text nie ein?",
+          options: [
+            { id: "a", text: "Sonst gäbe es keinen Grund, weiter zu konsumieren." },
+            { id: "b", text: "weil die Produkte zu teuer sind" },
+            { id: "c", text: "weil niemand mehr einkauft" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          kind: "mcq",
+          stem: "Worin sieht der Autor das Paradox des Verzichts?",
+          options: [
+            { id: "a", text: "Auch der Verzicht ist zu einem käuflichen Lebensstil geworden." },
+            { id: "b", text: "Verzicht ist unmöglich." },
+            { id: "c", text: "Verzicht macht reich." },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Der ironische Einschub „natürlich“ unterstreicht das Paradox.",
+  },
+  {
+    level: "C1",
+    module: "LESEN",
+    taskType: "LESEN_DETAIL",
+    title: "Ein Artikel: Sprachwandel als Normalfall",
+    prompt: "Lies den Artikel und wähle für jede Frage die richtige Antwort.",
+    difficulty: "CORE",
+    topicTag: "lernen",
+    payload: {
+      passages: [
+        {
+          id: "p1",
+          heading: "Verfällt unsere Sprache?",
+          body:
+            "Kaum eine Klage ist so alt wie die über den angeblichen Verfall der Sprache. Schon vor Jahrhunderten beklagten Gelehrte, die Jugend spreche schlechter als ihre Vorfahren. Aus sprachwissenschaftlicher Sicht beruht diese Sorge auf einem Missverständnis: Sprache ist kein festes Gebäude, das man bewahren müsste, sondern ein lebendiges System, das sich notwendig verändert. Was die einen als Verfall empfinden, ist lediglich Wandel — derselbe Prozess, dem auch die heute als korrekt geltenden Formen ihre Existenz verdanken. Das bedeutet keineswegs, dass alles gleich gut sei oder dass man auf Normen verzichten sollte. Doch wer den Wandel grundsätzlich als Niedergang deutet, verkennt das Wesen der Sprache. Sie war nie statisch und wird es nie sein.",
+        },
+      ],
+      questions: [
+        {
+          id: "q1",
+          kind: "mcq",
+          stem: "Wie beurteilt der Autor die Klage über den Sprachverfall?",
+          options: [
+            { id: "a", text: "Sie beruht auf einem Missverständnis über das Wesen der Sprache." },
+            { id: "b", text: "Sie ist vollkommen berechtigt." },
+            { id: "c", text: "Sie ist neu und einzigartig." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          kind: "mcq",
+          stem: "Was räumt der Autor ein?",
+          options: [
+            { id: "a", text: "dass man trotzdem nicht auf Normen verzichten sollte" },
+            { id: "b", text: "dass jede Sprachform gleich gut ist" },
+            { id: "c", text: "dass Sprache niemals korrekt sein kann" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„keineswegs, dass …“ grenzt die These gegen ein Missverständnis ab.",
+  },
+  {
+    level: "C1",
+    module: "LESEN",
+    taskType: "LESEN_GLOBAL",
+    title: "Eine Reflexion: Individuum und Gemeinschaft",
+    prompt: "Lies den Text und wähle die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "alltag",
+    payload: {
+      passages: [
+        {
+          id: "p1",
+          heading: "Der Einzelne und die anderen",
+          body:
+            "Selten zuvor wurde die Selbstverwirklichung des Einzelnen so hoch geschätzt wie heute. Jeder solle sein eigenes Leben gestalten, frei von den Erwartungen anderer — ein verlockendes Versprechen. Doch dieses Ideal hat eine Kehrseite, die selten benannt wird. Wer ausschließlich sich selbst verpflichtet ist, dem fehlt mitunter jenes Netz aus Bindungen, das in schwierigen Zeiten trägt. Freiheit ohne Zugehörigkeit kann in Einsamkeit umschlagen. Es wäre allerdings ein Fehler, deshalb in die entgegengesetzte Richtung zu streben und das Individuum der Gemeinschaft unterzuordnen. Die Geschichte kennt genug Beispiele, wohin das führt. Die eigentliche Aufgabe besteht darin, beides zu versöhnen: die Freiheit, man selbst zu sein, und die Verantwortung, Teil eines größeren Ganzen zu bleiben.",
+        },
+      ],
+      questions: [
+        {
+          id: "q1",
+          kind: "mcq",
+          stem: "Was ist die zentrale Aussage des Textes?",
+          options: [
+            { id: "a", text: "Freiheit und Zugehörigkeit müssen miteinander versöhnt werden." },
+            { id: "b", text: "Das Individuum sollte sich der Gemeinschaft unterordnen." },
+            { id: "c", text: "Selbstverwirklichung ist immer schlecht." },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Der Autor lehnt beide Extreme ab und sucht eine Synthese.",
+  },
+  {
+    level: "C1",
+    module: "LESEN",
+    taskType: "LESEN_DETAIL",
+    title: "Ein Kommentar: Künstliche Intelligenz und Kreativität",
+    prompt: "Lies den Kommentar und wähle für jede Frage die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "arbeit",
+    payload: {
+      passages: [
+        {
+          id: "p1",
+          heading: "Kann eine Maschine kreativ sein?",
+          body:
+            "Seit Programme Bilder malen und Texte verfassen, wird heftig darüber gestritten, ob Maschinen kreativ sein können. Die Frage selbst ist jedoch womöglich falsch gestellt. Sie setzt voraus, dass es eine eindeutige Grenze zwischen echter und nachgeahmter Kreativität gäbe — eine Annahme, die schon beim Menschen schwer zu halten ist. Auch wir kombinieren Bekanntes zu vermeintlich Neuem. Aufschlussreicher als die Frage, ob Maschinen kreativ sind, scheint mir die Frage, was ihre Fähigkeiten über uns selbst verraten. Wenn eine Maschine das nachahmen kann, was wir für zutiefst menschlich hielten, sollten wir vielleicht weniger über die Maschine nachdenken als über unsere eigenen Vorstellungen davon, was uns ausmacht.",
+        },
+      ],
+      questions: [
+        {
+          id: "q1",
+          kind: "mcq",
+          stem: "Warum hält der Autor die Ausgangsfrage für problematisch?",
+          options: [
+            { id: "a", text: "Sie setzt eine klare Grenze voraus, die schon beim Menschen fraglich ist." },
+            { id: "b", text: "Maschinen können sicher nicht kreativ sein." },
+            { id: "c", text: "Kreativität ist unwichtig." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          kind: "mcq",
+          stem: "Welche Frage hält der Autor für aufschlussreicher?",
+          options: [
+            { id: "a", text: "was die Fähigkeiten der Maschinen über uns selbst verraten" },
+            { id: "b", text: "wie teuer die Programme sind" },
+            { id: "c", text: "wer die Maschine programmiert hat" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Der Autor verschiebt die Perspektive von der Maschine auf den Menschen.",
+  },
+  {
+    level: "C1",
+    module: "LESEN",
+    taskType: "LESEN_TRUE_FALSE",
+    title: "Ein Bericht: Die Debatte um die Bildungsgerechtigkeit",
+    prompt: "Lies den Bericht. Sind die Sätze richtig oder falsch?",
+    difficulty: "CORE",
+    topicTag: "lernen",
+    payload: {
+      passages: [
+        {
+          id: "p1",
+          heading: "Gleiche Chancen für alle?",
+          body:
+            "Dass Bildung der Schlüssel zum sozialen Aufstieg sei, gilt vielen als ausgemacht. Empirische Befunde zeichnen jedoch ein nüchterneres Bild. Zwar hat sich der Zugang zu höherer Bildung formal geöffnet, doch hängt der Bildungserfolg nach wie vor stark von der Herkunft ab. Kinder aus akademischen Elternhäusern haben deutlich bessere Aussichten, unabhängig von ihrer Begabung. Verantwortlich dafür sind nicht in erster Linie die Schulen selbst, sondern Faktoren, die lange vor der Einschulung wirken: der Wortschatz im Elternhaus, der Zugang zu Büchern, die Selbstverständlichkeit des Lernens. Reformen, die erst in der Schule ansetzen, kommen daher oft zu spät. Die Fachleute sind sich allerdings uneinig, welche Maßnahmen wirklich Abhilfe schaffen.",
+        },
+      ],
+      questions: [
+        {
+          id: "q1",
+          kind: "truefalse",
+          stem: "Laut Text hängt der Bildungserfolg kaum noch von der Herkunft ab.",
+          options: [
+            { id: "r", text: "Richtig" },
+            { id: "f", text: "Falsch" },
+          ],
+          answer: "f",
+        },
+        {
+          id: "q2",
+          kind: "truefalse",
+          stem: "Die Fachleute sind sich über die wirksamen Maßnahmen uneinig.",
+          options: [
+            { id: "r", text: "Richtig" },
+            { id: "f", text: "Falsch" },
+          ],
+          answer: "r",
+        },
+      ],
+    },
+    guidanceNote: "„gilt vielen als ausgemacht“ kündigt oft an, dass der Text dies relativiert.",
+  },
+  {
+    level: "C1",
+    module: "LESEN",
+    taskType: "LESEN_DETAIL",
+    title: "Ein Essay: Über das Erinnern",
+    prompt: "Lies den Essay und wähle für jede Frage die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "person",
+    payload: {
+      passages: [
+        {
+          id: "p1",
+          heading: "Was bleibt",
+          body:
+            "Wir neigen dazu, unser Gedächtnis für eine Art Archiv zu halten, in dem das Erlebte unverändert aufbewahrt wird. Die Forschung zeichnet ein anderes Bild. Erinnern ist kein Abrufen, sondern ein Rekonstruieren: Jedes Mal, wenn wir uns erinnern, verändern wir das Erinnerte ein wenig, passen es an, wer wir heute sind. So gesehen ist Erinnerung weniger ein Blick in die Vergangenheit als ein Spiegel der Gegenwart. Das mag beunruhigend klingen — wenn wir uns nicht auf unsere Erinnerungen verlassen können, worauf dann? Doch es liegt auch ein Trost darin. Gerade weil das Gedächtnis nicht starr ist, können wir mit schmerzhaften Erfahrungen Frieden schließen. Wir sind nicht die Gefangenen unserer Vergangenheit, sondern ihre fortlaufenden Erzähler.",
+        },
+      ],
+      questions: [
+        {
+          id: "q1",
+          kind: "mcq",
+          stem: "Wie beschreibt der Text das Erinnern?",
+          options: [
+            { id: "a", text: "als Rekonstruieren, das die Gegenwart spiegelt" },
+            { id: "b", text: "als exaktes Abrufen unveränderter Daten" },
+            { id: "c", text: "als völlig unzuverlässig und wertlos" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          kind: "mcq",
+          stem: "Worin liegt laut Autor der Trost?",
+          options: [
+            { id: "a", text: "Wir können mit schmerzhaften Erfahrungen Frieden schließen." },
+            { id: "b", text: "Wir vergessen alles Schlechte sofort." },
+            { id: "c", text: "Die Vergangenheit ist unveränderlich." },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Der Text wendet eine beunruhigende Einsicht ins Tröstliche.",
+  },
+  {
+    level: "C1",
+    module: "LESEN",
+    taskType: "LESEN_MATCHING",
+    title: "Buchempfehlungen für unterschiedliche Leser",
+    prompt: "Lies die Beschreibungen und ordne jeder Person das passende Buch zu.",
+    difficulty: "CORE",
+    topicTag: "freizeit",
+    payload: {
+      passages: [
+        {
+          id: "p1",
+          heading: "Vier Bücher im Überblick",
+          body:
+            "A: Ein dichtes Sachbuch über die Geschichte des Geldes, anspruchsvoll, aber erhellend.\nB: Ein leiser Roman über das Älterwerden, ohne große Handlung, dafür sprachlich fein.\nC: Ein Sammelband mit kurzen, humorvollen Alltagsbeobachtungen — ideal für zwischendurch.\nD: Ein Reisebericht, der politische Analyse mit persönlichen Begegnungen verbindet.",
+        },
+      ],
+      questions: [
+        {
+          id: "q1",
+          kind: "match",
+          stem: "Frau Cho liest gern Anspruchsvolles und interessiert sich für wirtschaftliche Zusammenhänge. Welches Buch passt?",
+          options: [
+            { id: "a", text: "Buch A" },
+            { id: "b", text: "Buch C" },
+            { id: "c", text: "Buch B" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          kind: "match",
+          stem: "Herr Linde hat wenig Zeit am Stück und mag heitere, kurze Texte. Welches Buch passt?",
+          options: [
+            { id: "a", text: "Buch B" },
+            { id: "b", text: "Buch C" },
+            { id: "c", text: "Buch D" },
+          ],
+          answer: "b",
+        },
+      ],
+    },
+    guidanceNote: "Achte auf Stil, Anspruch und Lesesituation der Personen.",
+  },
+  {
+    level: "C1",
+    module: "LESEN",
+    taskType: "LESEN_DETAIL",
+    title: "Ein Kommentar: Daten als Währung",
+    prompt: "Lies den Kommentar und wähle für jede Frage die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "alltag",
+    payload: {
+      passages: [
+        {
+          id: "p1",
+          heading: "Der Preis des Kostenlosen",
+          body:
+            "Dass viele digitale Dienste nichts kosten, hat uns daran gewöhnt, sie für Geschenke zu halten. Tatsächlich bezahlen wir sehr wohl — nur eben mit unseren Daten statt mit Geld. Diese Erkenntnis ist inzwischen Allgemeingut, und doch ändert sie erstaunlich wenig an unserem Verhalten. Das liegt nicht allein an Bequemlichkeit. Der eigentliche Grund ist, dass die Kosten unsichtbar bleiben: Niemand spürt unmittelbar, was es bedeutet, wenn das eigene Verhalten in jeder Einzelheit vermessen wird. Ein Schaden, den man nicht fühlt, motiviert kaum zur Vorsicht. Hier liegt die eigentliche Herausforderung — nicht im Mangel an Information, sondern in der Schwierigkeit, eine abstrakte Gefahr ernst zu nehmen, solange sie folgenlos erscheint.",
+        },
+      ],
+      questions: [
+        {
+          id: "q1",
+          kind: "mcq",
+          stem: "Warum ändert sich laut Autor das Verhalten kaum, obwohl alle Bescheid wissen?",
+          options: [
+            { id: "a", text: "weil die Kosten unsichtbar bleiben und sich der Schaden nicht spüren lässt" },
+            { id: "b", text: "weil die Dienste zu teuer sind" },
+            { id: "c", text: "weil niemand die Dienste nutzt" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          kind: "mcq",
+          stem: "Worin sieht der Autor die eigentliche Herausforderung?",
+          options: [
+            { id: "a", text: "eine abstrakte Gefahr ernst zu nehmen, die folgenlos erscheint" },
+            { id: "b", text: "mehr Informationen zu verbreiten" },
+            { id: "c", text: "die Dienste zu verbieten" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„nicht im Mangel an Information, sondern …“ nennt den wahren Kern.",
+  },
+  {
+    level: "C1",
+    module: "LESEN",
+    taskType: "LESEN_DETAIL",
+    title: "Ein Artikel: Arbeit jenseits des Geldes",
+    prompt: "Lies den Artikel und wähle für jede Frage die richtige Antwort.",
+    difficulty: "CORE",
+    topicTag: "arbeit",
+    payload: {
+      passages: [
+        {
+          id: "p1",
+          heading: "Warum wir arbeiten",
+          body:
+            "Würde man Menschen fragen, warum sie arbeiten, fiele die Antwort oft knapp aus: um Geld zu verdienen. So plausibel das klingt, so unvollständig ist es. Studien zeigen, dass viele Menschen auch dann weiterarbeiten würden, wenn sie finanziell nicht darauf angewiesen wären — wenn auch vielleicht anders. Arbeit stiftet Struktur, vermittelt das Gefühl, gebraucht zu werden, und schafft soziale Zugehörigkeit. Wer den Wert der Arbeit allein in der Bezahlung sieht, übersieht diese Funktionen. Das erklärt auch, warum der Verlust des Arbeitsplatzes für viele weit über die finanzielle Not hinaus belastend ist. Eine Gesellschaft, die über die Zukunft der Arbeit nachdenkt, sollte daher nicht nur fragen, wovon die Menschen leben, sondern auch, wofür.",
+        },
+      ],
+      questions: [
+        {
+          id: "q1",
+          kind: "mcq",
+          stem: "Was übersieht laut Text, wer Arbeit nur über die Bezahlung definiert?",
+          options: [
+            { id: "a", text: "dass Arbeit Struktur, Anerkennung und Zugehörigkeit stiftet" },
+            { id: "b", text: "dass Arbeit immer Spaß macht" },
+            { id: "c", text: "dass Geld unwichtig ist" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          kind: "mcq",
+          stem: "Welche Frage sollte eine Gesellschaft laut Autor zusätzlich stellen?",
+          options: [
+            { id: "a", text: "wofür die Menschen arbeiten, nicht nur wovon sie leben" },
+            { id: "b", text: "wie man Arbeit ganz abschafft" },
+            { id: "c", text: "wie man am meisten Geld verdient" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Das Wortspiel „wovon … wofür“ fasst die These zu.",
+  },
+  {
+    level: "C1",
+    module: "LESEN",
+    taskType: "LESEN_GLOBAL",
+    title: "Ein Leitartikel: Die Grenzen der Messbarkeit",
+    prompt: "Lies den Leitartikel und wähle die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "lernen",
+    payload: {
+      passages: [
+        {
+          id: "p1",
+          heading: "Nicht alles, was zählt, lässt sich zählen",
+          body:
+            "In immer mehr Bereichen gilt das Messbare als das einzig Maßgebliche. Was sich nicht in Zahlen fassen lässt, gerät leicht in den Verdacht, unwichtig zu sein. Diese Haltung hat unbestreitbare Vorzüge: Sie schafft Vergleichbarkeit und schützt vor reiner Willkür. Doch sie hat auch einen blinden Fleck. Manches, was für ein gelingendes Leben oder eine gute Schule entscheidend ist — Vertrauen, Neugier, Zuwendung —, entzieht sich der Quantifizierung. Wo man es dennoch zu messen versucht, misst man am Ende nur, was sich leicht messen lässt, und hält es fälschlich für das Wesentliche. Es wäre naiv, deshalb auf Messung ganz zu verzichten. Klüger wäre, sich ihrer Grenzen bewusst zu bleiben und das nicht Messbare nicht mit dem Unwichtigen zu verwechseln.",
+        },
+      ],
+      questions: [
+        {
+          id: "q1",
+          kind: "mcq",
+          stem: "Was ist die Kernaussage des Leitartikels?",
+          options: [
+            { id: "a", text: "Messung ist nützlich, aber man darf das nicht Messbare nicht für unwichtig halten." },
+            { id: "b", text: "Alles Wichtige lässt sich messen." },
+            { id: "c", text: "Man sollte auf jede Messung verzichten." },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Der Autor sucht erneut einen Mittelweg: weder blind messen noch ganz darauf verzichten.",
+  },
+  {
+    level: "C1",
+    module: "LESEN",
+    taskType: "LESEN_DETAIL",
+    title: "Eine formelle Stellungnahme: Kulturförderung",
+    prompt: "Lies die Stellungnahme und wähle für jede Frage die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "freizeit",
+    payload: {
+      passages: [
+        {
+          id: "p1",
+          heading: "Offener Brief an den Stadtrat",
+          body:
+            "Sehr geehrte Damen und Herren,\n\nmit Sorge haben wir vom geplanten Abbau der Mittel für die Stadtbibliothek erfahren. Wir verkennen nicht die angespannte Haushaltslage; Einsparungen sind unter den gegebenen Umständen unvermeidlich. Wir geben jedoch zu bedenken, dass gerade öffentliche Bibliotheken eine Funktion erfüllen, die sich nicht durch private Angebote ersetzen lässt: Sie stehen allen offen, unabhängig vom Einkommen. Wer hier spart, spart an der Teilhabe der Schwächsten. Wir bitten den Stadtrat daher eindringlich, die geplanten Kürzungen zu überdenken und nach Alternativen zu suchen. Gern stehen wir für ein Gespräch zur Verfügung.\n\nMit freundlichen Grüßen\nDer Förderverein der Stadtbibliothek",
+        },
+      ],
+      questions: [
+        {
+          id: "q1",
+          kind: "mcq",
+          stem: "Wie positioniert sich der Förderverein zur Haushaltslage?",
+          options: [
+            { id: "a", text: "Er erkennt sie an, hält die Kürzung bei der Bibliothek aber für falsch." },
+            { id: "b", text: "Er bestreitet, dass es Geldprobleme gibt." },
+            { id: "c", text: "Er fordert, überall zu sparen." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          kind: "mcq",
+          stem: "Welches Hauptargument führt der Verein an?",
+          options: [
+            { id: "a", text: "Bibliotheken sichern die Teilhabe unabhängig vom Einkommen." },
+            { id: "b", text: "Bibliotheken sind sehr billig." },
+            { id: "c", text: "Bücher sind altmodisch." },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Ein geschicktes Argument räumt die Gegenseite ein („Wir verkennen nicht …“), bevor es widerspricht.",
+  },
 ];
 
 async function main() {

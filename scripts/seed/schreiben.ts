@@ -1137,6 +1137,296 @@ export const ITEMS: Prisma.GoetheItemCreateManyInput[] = [
     },
     guidanceNote: "Berücksichtige verschiedene Betroffene (Geschäfte, ältere Menschen).",
   },
+
+  // ===================== C1 =====================
+  {
+    level: "C1",
+    module: "SCHREIBEN",
+    taskType: "SCHREIBEN_ESSAY",
+    title: "Stellungnahme: Soziale Medien und politische Meinungsbildung",
+    prompt: "Schreib einen argumentativen Text für eine Zeitschrift auf Deutsch (circa 230 Wörter).",
+    difficulty: "STRETCH",
+    topicTag: "alltag",
+    payload: {
+      situation:
+        "Eine Zeitschrift bittet ihre Leser um Stellungnahmen zu der Frage: „Schaden soziale Medien der demokratischen Meinungsbildung?“",
+      instruction:
+        "Schreib einen argumentativen Text. Führe differenziert in das Thema ein, entwickle eine eigene These, stütze sie mit mehreren Argumenten und Beispielen, setze dich ernsthaft mit Gegenpositionen auseinander, und ziehe ein abgewogenes Fazit. Achte auf einen sachlichen, gehobenen Stil.",
+      wordMin: 200,
+      wordMax: 260,
+    },
+    guidanceNote: "C1: differenziertes Abwägen, klare Gliederung, anspruchsvolle Konnektoren (gleichwohl, infolgedessen, einerseits/andererseits).",
+  },
+  {
+    level: "C1",
+    module: "SCHREIBEN",
+    taskType: "SCHREIBEN_ESSAY",
+    title: "Stellungnahme: Lebenslanges Lernen – Pflicht oder Privatsache?",
+    prompt: "Schreib einen argumentativen Text auf Deutsch (circa 230 Wörter).",
+    difficulty: "STRETCH",
+    topicTag: "lernen",
+    payload: {
+      situation:
+        "In einem Bildungsmagazin wird diskutiert, ob Weiterbildung allein Sache des Einzelnen ist oder ob Staat und Arbeitgeber dafür Verantwortung tragen.",
+      instruction:
+        "Schreib einen argumentativen Text. Stelle die unterschiedlichen Sichtweisen dar, entwickle deine eigene Position, begründe sie nachvollziehbar mit Beispielen, gehe auf mögliche Einwände ein, und schließe mit einer begründeten Empfehlung.",
+      wordMin: 200,
+      wordMax: 260,
+    },
+    guidanceNote: "Stelle die Verantwortung von Individuum, Staat und Wirtschaft gegeneinander ab.",
+  },
+  {
+    level: "C1",
+    module: "SCHREIBEN",
+    taskType: "SCHREIBEN_LETTER",
+    title: "Formeller Beschwerdebrief an einen Anbieter",
+    prompt: "Schreib eine formelle E-Mail auf Deutsch (circa 160 Wörter).",
+    difficulty: "STRETCH",
+    topicTag: "alltag",
+    payload: {
+      situation:
+        "Du hast ein Online-Abo für eine Lernplattform abgeschlossen. Trotz Kündigung wurde dir erneut der Jahresbeitrag abgebucht, und der Kundenservice reagiert ausweichend.",
+      instruction:
+        "Schreib eine formelle Beschwerde an den Anbieter. Schildere den Sachverhalt präzise und chronologisch, mach deutlich, worin das Fehlverhalten besteht, fordere die Rückerstattung mit einer angemessenen Frist, und kündige weitere Schritte an, falls keine Reaktion erfolgt. Wahre dabei einen sachlichen, bestimmten Ton.",
+      wordMin: 140,
+      wordMax: 190,
+    },
+    guidanceNote: "Bestimmt, aber sachlich. Eine klare Chronologie macht die Beschwerde stark.",
+  },
+  {
+    level: "C1",
+    module: "SCHREIBEN",
+    taskType: "SCHREIBEN_ESSAY",
+    title: "Stellungnahme: Braucht Fortschritt immer Wachstum?",
+    prompt: "Schreib einen argumentativen Text auf Deutsch (circa 230 Wörter).",
+    difficulty: "STRETCH",
+    topicTag: "umwelt",
+    payload: {
+      situation:
+        "Ein Debattenforum stellt die Frage, ob wirtschaftliches Wachstum die Voraussetzung für gesellschaftlichen Fortschritt ist oder ob es Alternativen gibt.",
+      instruction:
+        "Schreib einen argumentativen Text. Kläre kurz die Begriffe, entwickle eine eigene Position, führe Argumente und Beispiele an, berücksichtige ernsthaft die Gegenseite, und beende den Text mit einem differenzierten Fazit.",
+      wordMin: 200,
+      wordMax: 260,
+    },
+    guidanceNote: "Ein abstraktes Thema verlangt, die Begriffe zu klären, bevor man argumentiert.",
+  },
+  {
+    level: "C1",
+    module: "SCHREIBEN",
+    taskType: "SCHREIBEN_LETTER",
+    title: "Formelle Bewerbung um ein Stipendium",
+    prompt: "Schreib eine formelle E-Mail auf Deutsch (circa 170 Wörter).",
+    difficulty: "STRETCH",
+    topicTag: "lernen",
+    payload: {
+      situation:
+        "Du möchtest dich um ein Stipendium für eine Weiterbildung bewerben, das an gesellschaftliches Engagement geknüpft ist.",
+      instruction:
+        "Schreib eine formelle Bewerbung an die Stiftung. Stelle dich und dein Vorhaben überzeugend vor, erläutere deine Motivation und dein Engagement, lege dar, warum du gefördert werden solltest, und bitte um Auskunft über das weitere Verfahren.",
+      wordMin: 150,
+      wordMax: 200,
+    },
+    guidanceNote: "Überzeuge durch konkrete Belege deiner Motivation, nicht durch bloße Behauptungen.",
+  },
+  {
+    level: "C1",
+    module: "SCHREIBEN",
+    taskType: "SCHREIBEN_ESSAY",
+    title: "Stellungnahme: Sollte ehrenamtliches Engagement belohnt werden?",
+    prompt: "Schreib einen argumentativen Text auf Deutsch (circa 230 Wörter).",
+    difficulty: "STRETCH",
+    topicTag: "alltag",
+    payload: {
+      situation:
+        "In einer Diskussion wird vorgeschlagen, ehrenamtliches Engagement mit Vergünstigungen oder Punkten zu belohnen. Manche befürchten, das widerspreche dem Wesen des Ehrenamts.",
+      instruction:
+        "Schreib einen argumentativen Text. Stelle das Spannungsfeld dar, beziehe begründet Stellung, wäge Vor- und Nachteile von Anreizen ab, gehe auf den Einwand ein, dies untergrabe die Freiwilligkeit, und schließe mit einem Fazit.",
+      wordMin: 200,
+      wordMax: 260,
+    },
+    guidanceNote: "Das zentrale Spannungsfeld (Anreiz vs. Freiwilligkeit) sollte den Text strukturieren.",
+  },
+  {
+    level: "C1",
+    module: "SCHREIBEN",
+    taskType: "SCHREIBEN_LETTER",
+    title: "Formelle Eingabe an die Stadtverwaltung",
+    prompt: "Schreib eine formelle E-Mail auf Deutsch (circa 160 Wörter).",
+    difficulty: "STRETCH",
+    topicTag: "umwelt",
+    payload: {
+      situation:
+        "In deinem Viertel soll eine kleine Grünfläche einem Parkplatz weichen. Du möchtest als Anwohner Einspruch erheben.",
+      instruction:
+        "Schreib eine sachliche Eingabe an die Stadtverwaltung. Erkenne das zugrunde liegende Anliegen (Parkraum) an, lege überzeugend dar, warum die Grünfläche erhalten werden sollte, schlage einen Alternativstandort oder eine Kompromisslösung vor, und bitte um Prüfung und Rückmeldung.",
+      wordMin: 140,
+      wordMax: 190,
+    },
+    guidanceNote: "Wer das Gegenanliegen anerkennt, wirkt glaubwürdiger und konstruktiver.",
+  },
+  {
+    level: "C1",
+    module: "SCHREIBEN",
+    taskType: "SCHREIBEN_ESSAY",
+    title: "Stellungnahme: Kann man Glück lernen?",
+    prompt: "Schreib einen argumentativen Text auf Deutsch (circa 230 Wörter).",
+    difficulty: "STRETCH",
+    topicTag: "gesundheit",
+    payload: {
+      situation:
+        "Eine Zeitschrift fragt: „Lässt sich Zufriedenheit trainieren, oder ist Glück vor allem eine Frage der Umstände?“",
+      instruction:
+        "Schreib einen argumentativen Text. Erörtere beide Sichtweisen, entwickle eine eigene, differenzierte Position, belege sie mit Beispielen oder Erfahrungen, gehe auf Einwände ein, und ziehe ein abgewogenes Fazit.",
+      wordMin: 200,
+      wordMax: 260,
+    },
+    guidanceNote: "Vermeide ein einseitiges Urteil; gerade hier ist eine abgewogene Position überzeugend.",
+  },
+  {
+    level: "C1",
+    module: "SCHREIBEN",
+    taskType: "SCHREIBEN_ESSAY",
+    title: "Stellungnahme: Verlernen wir das Zuhören?",
+    prompt: "Schreib einen argumentativen Text auf Deutsch (circa 230 Wörter).",
+    difficulty: "STRETCH",
+    topicTag: "alltag",
+    payload: {
+      situation:
+        "In einem Magazin wird behauptet, in einer Zeit ständiger Selbstdarstellung gehe die Fähigkeit zum echten Zuhören verloren.",
+      instruction:
+        "Schreib einen argumentativen Text. Prüfe die Behauptung kritisch, entwickle eine eigene Position, stütze sie mit Argumenten und Beispielen, berücksichtige Gegenargumente, und schließe mit einem Fazit, das auch einen Ausblick enthält.",
+      wordMin: 200,
+      wordMax: 260,
+    },
+    guidanceNote: "Hinterfrage die Ausgangsbehauptung, statt sie nur zu bestätigen.",
+  },
+  {
+    level: "C1",
+    module: "SCHREIBEN",
+    taskType: "SCHREIBEN_LETTER",
+    title: "Formelle Reaktion auf eine Absage",
+    prompt: "Schreib eine formelle E-Mail auf Deutsch (circa 150 Wörter).",
+    difficulty: "CORE",
+    topicTag: "arbeit",
+    payload: {
+      situation:
+        "Du hast eine Absage auf eine Bewerbung erhalten. Du möchtest höflich um eine ehrliche Rückmeldung bitten, um dich künftig zu verbessern.",
+      instruction:
+        "Schreib eine formelle E-Mail an das Unternehmen. Bedanke dich für die Rückmeldung, drücke dein weiterhin bestehendes Interesse an dem Unternehmen aus, bitte taktvoll um eine kurze Begründung der Absage, und biete an, für künftige Stellen in Kontakt zu bleiben.",
+      wordMin: 130,
+      wordMax: 180,
+    },
+    guidanceNote: "Eine professionelle, freundliche Reaktion auf eine Absage kann Türen offen halten.",
+  },
+  {
+    level: "C1",
+    module: "SCHREIBEN",
+    taskType: "SCHREIBEN_ESSAY",
+    title: "Stellungnahme: Grenzen des Messbaren",
+    prompt: "Schreib einen argumentativen Text auf Deutsch (circa 230 Wörter).",
+    difficulty: "STRETCH",
+    topicTag: "lernen",
+    payload: {
+      situation:
+        "In einer Debatte über Schulen wird gefordert, den Lernerfolg möglichst genau in Zahlen zu messen. Kritiker warnen vor einer Verengung auf das Messbare.",
+      instruction:
+        "Schreib einen argumentativen Text. Erörtere Nutzen und Gefahren der Messbarkeit im Bildungsbereich, entwickle eine eigene Position, illustriere sie mit Beispielen, gehe auf Gegenargumente ein, und schließe mit einem differenzierten Fazit.",
+      wordMin: 200,
+      wordMax: 260,
+    },
+    guidanceNote: "Zeige, dass du beide Seiten verstehst, bevor du dich klar positionierst.",
+  },
+  {
+    level: "C1",
+    module: "SCHREIBEN",
+    taskType: "SCHREIBEN_LETTER",
+    title: "Formeller Vorschlag zur Verbesserung am Arbeitsplatz",
+    prompt: "Schreib eine formelle E-Mail auf Deutsch (circa 170 Wörter).",
+    difficulty: "STRETCH",
+    topicTag: "arbeit",
+    payload: {
+      situation:
+        "In deinem Unternehmen werden Fehler oft verschwiegen, weil man Nachteile fürchtet. Du möchtest der Geschäftsleitung vorschlagen, eine offenere Fehlerkultur zu fördern.",
+      instruction:
+        "Schreib eine formelle E-Mail an die Geschäftsleitung. Beschreibe das Problem diplomatisch, lege dar, warum eine offene Fehlerkultur dem Unternehmen nützt, mach konkrete Vorschläge, antizipiere mögliche Bedenken, und bitte um die Gelegenheit, die Idee vorzustellen.",
+      wordMin: 150,
+      wordMax: 200,
+    },
+    guidanceNote: "Kritik an Bestehendem wirkt am besten, wenn sie mit konstruktiven Vorschlägen verbunden ist.",
+  },
+  {
+    level: "C1",
+    module: "SCHREIBEN",
+    taskType: "SCHREIBEN_ESSAY",
+    title: "Stellungnahme: Tourismus zwischen Segen und Last",
+    prompt: "Schreib einen argumentativen Text auf Deutsch (circa 230 Wörter).",
+    difficulty: "STRETCH",
+    topicTag: "reisen",
+    payload: {
+      situation:
+        "Eine Reisezeitschrift diskutiert, wie sich der Tourismus in beliebten Städten so gestalten lässt, dass er nicht zulasten der Einheimischen geht.",
+      instruction:
+        "Schreib einen argumentativen Text. Stelle das Spannungsverhältnis zwischen wirtschaftlichem Nutzen und Belastung dar, entwickle eigene Lösungsvorschläge, begründe sie, gehe auf mögliche Nachteile deiner Vorschläge ein, und ziehe ein Fazit.",
+      wordMin: 200,
+      wordMax: 260,
+    },
+    guidanceNote: "Eigene Lösungsvorschläge heben einen C1-Text von einer bloßen Beschreibung ab.",
+  },
+  {
+    level: "C1",
+    module: "SCHREIBEN",
+    taskType: "SCHREIBEN_ESSAY",
+    title: "Stellungnahme: Künstliche Intelligenz in der Arbeitswelt",
+    prompt: "Schreib einen argumentativen Text auf Deutsch (circa 230 Wörter).",
+    difficulty: "STRETCH",
+    topicTag: "arbeit",
+    payload: {
+      situation:
+        "Ein Wirtschaftsmagazin fragt, ob künstliche Intelligenz die Arbeitswelt eher bereichert oder bedroht.",
+      instruction:
+        "Schreib einen argumentativen Text. Vermeide einseitige Schwarzmalerei oder Euphorie, entwickle eine abgewogene These, stütze sie mit Argumenten und Beispielen, gehe auf eine Gegenposition ein, und schließe mit einem Fazit samt Ausblick.",
+      wordMin: 200,
+      wordMax: 260,
+    },
+    guidanceNote: "Gerade bei polarisierenden Themen überzeugt eine nüchtern abwägende Haltung.",
+  },
+  {
+    level: "C1",
+    module: "SCHREIBEN",
+    taskType: "SCHREIBEN_LETTER",
+    title: "Formelle Anfrage an eine Bildungseinrichtung",
+    prompt: "Schreib eine formelle E-Mail auf Deutsch (circa 160 Wörter).",
+    difficulty: "CORE",
+    topicTag: "lernen",
+    payload: {
+      situation:
+        "Du planst, einen anspruchsvollen Fachkurs zu belegen, hast aber noch offene Fragen zu Voraussetzungen, Anerkennung und Aufwand.",
+      instruction:
+        "Schreib eine formelle E-Mail an die Einrichtung. Erläutere kurz deinen Hintergrund und dein Ziel, stelle drei präzise Fragen (z. B. zu Vorkenntnissen, zur Anerkennung des Abschlusses und zum zeitlichen Aufwand), und bitte um eine ausführliche Auskunft.",
+      wordMin: 140,
+      wordMax: 190,
+    },
+    guidanceNote: "Präzise, gut begründete Fragen erleichtern eine hilfreiche Antwort.",
+  },
+  {
+    level: "C1",
+    module: "SCHREIBEN",
+    taskType: "SCHREIBEN_ESSAY",
+    title: "Stellungnahme: Schadet uns der ständige Optimierungsdruck?",
+    prompt: "Schreib einen argumentativen Text auf Deutsch (circa 230 Wörter).",
+    difficulty: "STRETCH",
+    topicTag: "gesundheit",
+    payload: {
+      situation:
+        "In einem Magazin wird die These vertreten, der gesellschaftliche Druck, sich ständig zu optimieren, mache die Menschen eher unzufrieden als erfolgreich.",
+      instruction:
+        "Schreib einen argumentativen Text. Prüfe die These differenziert, entwickle eine eigene Position, belege sie mit Argumenten und Beispielen, würdige auch die positiven Seiten des Strebens nach Verbesserung, und schließe mit einem abgewogenen Fazit.",
+      wordMin: 200,
+      wordMax: 260,
+    },
+    guidanceNote: "Erkenne auch die Vorteile des Optimierens an — das macht deine Kritik glaubwürdiger.",
+  },
 ];
 
 async function main() {

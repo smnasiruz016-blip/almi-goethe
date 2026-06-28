@@ -2454,6 +2454,619 @@ export const ITEMS: Prisma.GoetheItemCreateManyInput[] = [
     },
     guidanceNote: "Die Schlussfolgerung steht am Ende: „muss bei der Stadtplanung anfangen“.",
   },
+
+  // ===================== C1 =====================
+  {
+    level: "C1",
+    module: "HOEREN",
+    taskType: "HOEREN_DETAIL",
+    title: "Ein Vortrag über das Gedächtnis",
+    prompt: "Du hörst einen Vortragsausschnitt. Wähle für jede Frage die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "gesundheit",
+    payload: {
+      audioScript:
+        "Wir stellen uns das Gedächtnis gern wie eine Festplatte vor, auf der Erlebnisse unverändert gespeichert werden. Diese Vorstellung ist jedoch grundfalsch. Jede Erinnerung wird beim Abrufen neu zusammengesetzt — und dabei verändert. Das klingt zunächst wie ein Mangel, ist aber in Wahrheit ein Vorteil. Ein starres Gedächtnis könnte sich nicht an neue Situationen anpassen. Interessant wird es, wenn wir bedenken, was das für Augenzeugenberichte bedeutet. Vor Gericht gilt die Aussage eines Zeugen oft als besonders zuverlässig. Die Forschung zeigt jedoch, dass gerade solche Erinnerungen erstaunlich leicht zu beeinflussen sind, etwa durch die Art, wie eine Frage gestellt wird. Das sollte uns nicht misstrauisch gegen jede Erinnerung machen, wohl aber bescheidener im Umgang mit unserer vermeintlichen Gewissheit.",
+      speakers: [{ role: "Dozentin", voice: "nova" }],
+      questions: [
+        {
+          id: "q1",
+          stem: "Warum ist das veränderliche Gedächtnis laut Vortrag ein Vorteil?",
+          options: [
+            { id: "a", text: "weil ein starres Gedächtnis sich nicht anpassen könnte" },
+            { id: "b", text: "weil man dann alles vergisst" },
+            { id: "c", text: "weil es mehr speichern kann" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Welche Schlussfolgerung zieht die Dozentin für Augenzeugen?",
+          options: [
+            { id: "a", text: "Man sollte bescheidener mit der eigenen Gewissheit umgehen." },
+            { id: "b", text: "Zeugenaussagen sind immer völlig zuverlässig." },
+            { id: "c", text: "Man sollte keiner Erinnerung trauen." },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„nicht …, wohl aber …“ formuliert eine differenzierte Schlussfolgerung.",
+  },
+  {
+    level: "C1",
+    module: "HOEREN",
+    taskType: "HOEREN_DETAIL",
+    title: "Ein Interview über Glücksforschung",
+    prompt: "Du hörst ein Interview. Wähle für jede Frage die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "gesundheit",
+    payload: {
+      audioScript:
+        "Moderator: Frau Professor, macht Geld glücklich? Prof. Weiss: Eine berühmte Frage. Die Antwort lautet: bis zu einem gewissen Punkt ja. Wer aus echter Not herauskommt, gewinnt deutlich an Lebenszufriedenheit. Doch jenseits eines mittleren Einkommens bringt mehr Geld kaum noch zusätzliches Glück. Moderator: Woran liegt das? Prof. Weiss: Vor allem an der Gewöhnung. Wir passen uns erstaunlich schnell an einen höheren Lebensstandard an und nehmen ihn bald als selbstverständlich wahr. Moderator: Was macht denn dann glücklich? Prof. Weiss: Was sich beständig als wichtig erweist, sind tragfähige Beziehungen und das Gefühl, das eigene Leben selbst gestalten zu können. Das ist keine neue Erkenntnis — aber eine, die wir im Alltag immer wieder vergessen.",
+      speakers: [
+        { role: "Moderator", voice: "echo" },
+        { role: "Prof. Weiss", voice: "shimmer" },
+      ],
+      questions: [
+        {
+          id: "q1",
+          stem: "Was sagt Prof. Weiss über Geld und Glück?",
+          options: [
+            { id: "a", text: "Geld hilft bis zu einem mittleren Einkommen, danach kaum noch." },
+            { id: "b", text: "Mehr Geld macht immer glücklicher." },
+            { id: "c", text: "Geld spielt überhaupt keine Rolle." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Was macht laut Prof. Weiss beständig glücklich?",
+          options: [
+            { id: "a", text: "tragfähige Beziehungen und Selbstbestimmung" },
+            { id: "b", text: "ein möglichst hoher Lebensstandard" },
+            { id: "c", text: "ständig neue Anschaffungen" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Achte auf die Einschränkung „bis zu einem gewissen Punkt“.",
+  },
+  {
+    level: "C1",
+    module: "HOEREN",
+    taskType: "HOEREN_DETAIL",
+    title: "Eine Diskussion über das Grundeinkommen",
+    prompt: "Du hörst eine Diskussion. Wähle für jede Frage die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "arbeit",
+    payload: {
+      audioScript:
+        "Herr Frei: Ein bedingungsloses Grundeinkommen würde den Menschen die Existenzangst nehmen und echte Freiheit schaffen. Frau Conrad: Das klingt verlockend, aber ich bin skeptisch. Wer finanziert das auf Dauer? Und arbeiten dann überhaupt noch genug Menschen? Herr Frei: Versuche deuten darauf hin, dass die meisten weiterarbeiten — nur vielleicht in Tätigkeiten, die ihnen sinnvoller erscheinen. Frau Conrad: Solche Versuche sind aber klein und kurz. Ob sich das auf eine ganze Volkswirtschaft übertragen lässt, ist offen. Herr Frei: Da gebe ich Ihnen recht. Ich behaupte ja nicht, dass alle Fragen geklärt sind. Aber wir sollten zumindest ernsthaft darüber nachdenken, statt es vorschnell abzutun.",
+      speakers: [
+        { role: "Herr Frei", voice: "onyx" },
+        { role: "Frau Conrad", voice: "nova" },
+      ],
+      questions: [
+        {
+          id: "q1",
+          stem: "Was ist Frau Conrads Hauptbedenken?",
+          options: [
+            { id: "a", text: "die Finanzierung und ob noch genug gearbeitet wird" },
+            { id: "b", text: "dass es den Menschen die Freiheit nimmt" },
+            { id: "c", text: "dass es zu wenig untersucht wurde, um darüber zu reden" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Wie endet die Position von Herrn Frei?",
+          options: [
+            { id: "a", text: "Er räumt offene Fragen ein, will aber ernsthaft darüber nachdenken." },
+            { id: "b", text: "Er behauptet, alle Fragen seien geklärt." },
+            { id: "c", text: "Er gibt seine Position ganz auf." },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Beide nuancieren: „Da gebe ich Ihnen recht … Aber …“.",
+  },
+  {
+    level: "C1",
+    module: "HOEREN",
+    taskType: "HOEREN_DETAIL",
+    title: "Ein Beitrag über die Kunst des Zuhörens",
+    prompt: "Du hörst einen Radiobeitrag. Wähle für jede Frage die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "alltag",
+    payload: {
+      audioScript:
+        "Wir verbringen einen großen Teil unseres Tages mit Kommunikation, doch erstaunlich wenig davon mit echtem Zuhören. Meist warten wir nur darauf, selbst zu Wort zu kommen, und überlegen schon unsere Antwort, während der andere noch spricht. Echtes Zuhören ist anstrengender, als man denkt: Es verlangt, die eigene Meinung für einen Moment zurückzustellen und auch das wahrzunehmen, was nicht ausgesprochen wird. Studien zeigen, dass sich Menschen, denen wirklich zugehört wird, nicht nur verstandener fühlen, sondern ihre eigenen Gedanken auch klarer ordnen können. Zuhören ist also kein passives Schweigen, sondern eine aktive, ja schöpferische Tätigkeit — eine, die in unserer auf Selbstdarstellung ausgerichteten Zeit selten geworden ist.",
+      speakers: [{ role: "Beitrag", voice: "fable" }],
+      questions: [
+        {
+          id: "q1",
+          stem: "Warum ist echtes Zuhören laut Beitrag anstrengend?",
+          options: [
+            { id: "a", text: "Man muss die eigene Meinung zurückstellen und auf Ungesagtes achten." },
+            { id: "b", text: "Man muss möglichst schnell antworten." },
+            { id: "c", text: "Man muss laut sprechen." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Wie beschreibt der Beitrag das Zuhören?",
+          options: [
+            { id: "a", text: "als aktive, schöpferische Tätigkeit" },
+            { id: "b", text: "als passives Schweigen" },
+            { id: "c", text: "als überflüssig" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„kein …, sondern …“ stellt eine verbreitete Annahme richtig.",
+  },
+  {
+    level: "C1",
+    module: "HOEREN",
+    taskType: "HOEREN_DETAIL",
+    title: "Ein Interview über Stadtnatur",
+    prompt: "Du hörst ein Interview. Wähle für jede Frage die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "umwelt",
+    payload: {
+      audioScript:
+        "Moderatorin: Herr Dr. Kern, brauchen Städte wirklich mehr Natur, oder ist das nur ein schöner Wunsch? Dr. Kern: Es ist weit mehr als das. Grünflächen kühlen die Stadt im Sommer, binden Schadstoffe und fördern nachweislich die psychische Gesundheit. Moderatorin: Aber Platz in Städten ist teuer. Dr. Kern: Das stimmt, und genau hier liegt der Denkfehler. Wir betrachten Natur oft als Luxus, den man sich erst leisten kann, wenn alles andere erledigt ist. Dabei ist sie eine Investition, die sich rechnet — etwa bei den Gesundheitskosten. Moderatorin: Sie sehen das also nicht als romantische Idee. Dr. Kern: Nein, im Gegenteil. Es ist eine ausgesprochen nüchterne, ökonomische Überlegung.",
+      speakers: [
+        { role: "Moderatorin", voice: "shimmer" },
+        { role: "Dr. Kern", voice: "echo" },
+      ],
+      questions: [
+        {
+          id: "q1",
+          stem: "Worin sieht Dr. Kern den „Denkfehler“?",
+          options: [
+            { id: "a", text: "Natur als Luxus zu sehen, statt als lohnende Investition" },
+            { id: "b", text: "dass Natur die Stadt nicht kühlt" },
+            { id: "c", text: "dass Platz in Städten billig ist" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Wie versteht Dr. Kern sein eigenes Argument?",
+          options: [
+            { id: "a", text: "als nüchterne ökonomische Überlegung" },
+            { id: "b", text: "als rein romantische Idee" },
+            { id: "c", text: "als unwichtig" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Dr. Kern wehrt die Einordnung als „romantisch“ ausdrücklich ab.",
+  },
+  {
+    level: "C1",
+    module: "HOEREN",
+    taskType: "HOEREN_DETAIL",
+    title: "Ein Vortrag über Entscheidungen",
+    prompt: "Du hörst einen Vortragsausschnitt. Wähle für jede Frage die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "person",
+    payload: {
+      audioScript:
+        "Wir glauben gern, dass wir unsere Entscheidungen nach reiflicher Überlegung treffen. Die Forschung legt etwas Unbequemeres nahe: Oft entscheiden wir zuerst aus dem Bauch heraus und liefern die Gründe erst hinterher nach. Das heißt nicht, dass Intuition schlecht ist — bei vertrauten Problemen ist sie oft erstaunlich treffsicher. Riskant wird es jedoch in neuen, komplexen Situationen, in denen unsere Erfahrung in die Irre führt. Die eigentliche Kunst besteht deshalb nicht darin, der Intuition blind zu folgen oder sie pauschal zu misstrauen, sondern zu erkennen, in welcher Art von Situation man sich gerade befindet. Genau diese Unterscheidung aber fällt uns besonders schwer.",
+      speakers: [{ role: "Dozent", voice: "fable" }],
+      questions: [
+        {
+          id: "q1",
+          stem: "Was legt die Forschung laut Vortrag nahe?",
+          options: [
+            { id: "a", text: "Wir entscheiden oft intuitiv und begründen es erst hinterher." },
+            { id: "b", text: "Wir entscheiden immer rein rational." },
+            { id: "c", text: "Intuition ist grundsätzlich schlecht." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Worin besteht laut Redner die eigentliche Kunst?",
+          options: [
+            { id: "a", text: "zu erkennen, in welcher Art Situation man sich befindet" },
+            { id: "b", text: "der Intuition immer blind zu folgen" },
+            { id: "c", text: "Intuition immer zu misstrauen" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„weder … noch …, sondern …“ formuliert die differenzierte These.",
+  },
+  {
+    level: "C1",
+    module: "HOEREN",
+    taskType: "HOEREN_TRUE_FALSE",
+    title: "Ein Feature über Freiwilligenarbeit",
+    prompt: "Du hörst ein Radio-Feature. Sind die Sätze richtig oder falsch?",
+    difficulty: "CORE",
+    topicTag: "alltag",
+    payload: {
+      audioScript:
+        "Lange galt das Ehrenamt als Domäne der älteren Generation. Dieses Bild ist überholt. Zwar engagieren sich ältere Menschen weiterhin stark, doch die Art des Engagements hat sich generationsübergreifend gewandelt. Statt lebenslanger Mitgliedschaft in einem Verein bevorzugen viele heute projektbezogene, zeitlich begrenzte Einsätze. Organisationen, die das erkannt haben, finden leichter Helfer. Bemerkenswert ist außerdem, dass digitales Engagement zunimmt — etwa Übersetzungen oder Beratung, die man von zu Hause aus leisten kann. Die oft beklagte sinkende Hilfsbereitschaft lässt sich in den Daten übrigens nicht bestätigen. Was sich ändert, ist nicht der Wille zu helfen, sondern die Form, in der man es tut.",
+      speakers: [{ role: "Feature", voice: "alloy" }],
+      questions: [
+        {
+          id: "q1",
+          stem: "Laut Feature ist die Hilfsbereitschaft insgesamt gesunken.",
+          options: [
+            { id: "r", text: "Richtig" },
+            { id: "f", text: "Falsch" },
+          ],
+          answer: "f",
+        },
+        {
+          id: "q2",
+          stem: "Digitales, von zu Hause geleistetes Engagement nimmt zu.",
+          options: [
+            { id: "r", text: "Richtig" },
+            { id: "f", text: "Falsch" },
+          ],
+          answer: "r",
+        },
+      ],
+    },
+    guidanceNote: "„lässt sich in den Daten nicht bestätigen“ widerlegt eine verbreitete Klage.",
+  },
+  {
+    level: "C1",
+    module: "HOEREN",
+    taskType: "HOEREN_DETAIL",
+    title: "Ein Interview über digitale Privatsphäre",
+    prompt: "Du hörst ein Interview. Wähle für jede Frage die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "alltag",
+    payload: {
+      audioScript:
+        "Moderator: Frau Holm, viele sagen: Ich habe nichts zu verbergen, warum sollte mich Datenschutz kümmern? Frau Holm: Dieses Argument höre ich oft, und es greift zu kurz. Privatsphäre schützt nicht nur Menschen, die etwas Verbotenes tun. Sie ist die Voraussetzung dafür, frei zu denken und zu handeln, ohne ständig beobachtet zu werden. Moderator: Können Sie das konkretisieren? Frau Holm: Stellen Sie sich vor, jeder wüsste, welche Bücher Sie lesen oder welche Ärzte Sie aufsuchen. Schon das Wissen, beobachtet zu werden, verändert unser Verhalten — meist, ohne dass es uns bewusst ist. Wir werden vorsichtiger, angepasster. Genau das ist die eigentliche Gefahr, nicht der einzelne Datensatz.",
+      speakers: [
+        { role: "Moderator", voice: "onyx" },
+        { role: "Frau Holm", voice: "shimmer" },
+      ],
+      questions: [
+        {
+          id: "q1",
+          stem: "Wie bewertet Frau Holm das Argument „Ich habe nichts zu verbergen“?",
+          options: [
+            { id: "a", text: "Es greift zu kurz." },
+            { id: "b", text: "Es ist vollkommen überzeugend." },
+            { id: "c", text: "Es betrifft nur Kriminelle." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Worin sieht Frau Holm die eigentliche Gefahr?",
+          options: [
+            { id: "a", text: "dass das Wissen, beobachtet zu werden, unser Verhalten verändert" },
+            { id: "b", text: "in einem einzelnen Datensatz" },
+            { id: "c", text: "darin, dass niemand mehr Bücher liest" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„nicht der einzelne Datensatz, sondern …“ benennt den eigentlichen Punkt.",
+  },
+  {
+    level: "C1",
+    module: "HOEREN",
+    taskType: "HOEREN_DETAIL",
+    title: "Ein Beitrag über die Macht der Sprache",
+    prompt: "Du hörst einen Beitrag. Wähle für jede Frage die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "lernen",
+    payload: {
+      audioScript:
+        "Worte sind nie neutral. Wie wir etwas benennen, prägt, wie wir darüber denken. Ein und derselbe Sachverhalt kann je nach Wortwahl ganz unterschiedlich wirken — man denke an die Begriffe, mit denen über Migration oder Wirtschaft gesprochen wird. Das ist keine bloße Theorie: Experimente zeigen, dass schon der Austausch eines einzigen Wortes die Urteile von Menschen messbar verschiebt. Daraus folgt jedoch nicht, dass Sprache uns vollständig steuert, wie manchmal behauptet wird. Wir sind nicht hilflos. Wer sich der Wirkung von Wörtern bewusst ist, kann ihr ein Stück weit entgegentreten. Sprachsensibilität ist insofern keine Überempfindlichkeit, sondern eine Form von Aufmerksamkeit.",
+      speakers: [{ role: "Beitrag", voice: "fable" }],
+      questions: [
+        {
+          id: "q1",
+          stem: "Was zeigen die erwähnten Experimente?",
+          options: [
+            { id: "a", text: "Schon ein einziges Wort kann Urteile messbar verschieben." },
+            { id: "b", text: "Sprache hat keinerlei Einfluss." },
+            { id: "c", text: "Nur lange Texte beeinflussen uns." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Wie beurteilt der Beitrag Sprachsensibilität?",
+          options: [
+            { id: "a", text: "als eine Form von Aufmerksamkeit, nicht als Überempfindlichkeit" },
+            { id: "b", text: "als reine Überempfindlichkeit" },
+            { id: "c", text: "als völlig unnötig" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Der Beitrag wehrt zwei Übertreibungen ab: totale Steuerung und Bagatellisierung.",
+  },
+  {
+    level: "C1",
+    module: "HOEREN",
+    taskType: "HOEREN_DETAIL",
+    title: "Eine Diskussion über Kulturförderung",
+    prompt: "Du hörst eine Diskussion. Wähle für jede Frage die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "freizeit",
+    payload: {
+      audioScript:
+        "Frau Adam: In Zeiten knapper Kassen frage ich mich, ob wir Theater und Museen wirklich mit so viel Steuergeld stützen müssen. Herr Pek: Ich verstehe die Frage, aber ich halte sie für gefährlich. Kultur ist kein Luxus, der nur in guten Zeiten erlaubt ist. Frau Adam: Aber wäre das Geld nicht in Schulen oder Krankenhäusern besser angelegt? Herr Pek: Das ist ein falscher Gegensatz. Wir stellen Kultur gegen Bildung und Gesundheit, als müsse man sich entscheiden. Tatsächlich macht der Kulturetat nur einen winzigen Bruchteil des Haushalts aus. Frau Adam: Da haben Sie einen Punkt. Vielleicht ist die Summe wirklich kleiner, als ich dachte.",
+      speakers: [
+        { role: "Frau Adam", voice: "nova" },
+        { role: "Herr Pek", voice: "echo" },
+      ],
+      questions: [
+        {
+          id: "q1",
+          stem: "Was kritisiert Herr Pek an Frau Adams Argumentation?",
+          options: [
+            { id: "a", text: "Sie stellt einen falschen Gegensatz zwischen Kultur und Bildung/Gesundheit her." },
+            { id: "b", text: "Sie gibt zu viel für Kultur aus." },
+            { id: "c", text: "Sie interessiert sich nicht für Schulen." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Wie reagiert Frau Adam am Ende?",
+          options: [
+            { id: "a", text: "Sie räumt ein, dass die Summe kleiner sein könnte als gedacht." },
+            { id: "b", text: "Sie beharrt unverändert auf ihrer Position." },
+            { id: "c", text: "Sie bricht das Gespräch ab." },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„ein falscher Gegensatz“ ist ein typisches Argumentationsmuster — höre, wie es entkräftet wird.",
+  },
+  {
+    level: "C1",
+    module: "HOEREN",
+    taskType: "HOEREN_DETAIL",
+    title: "Ein Vortrag über Optimismus",
+    prompt: "Du hörst einen Vortragsausschnitt. Wähle für jede Frage die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "gesundheit",
+    payload: {
+      audioScript:
+        "Optimismus hat einen guten Ruf, und das nicht zu Unrecht: Optimistische Menschen sind im Schnitt gesünder und geben bei Rückschlägen seltener auf. Doch ich möchte heute vor einem Missverständnis warnen. Echter Optimismus bedeutet nicht, die Augen vor Problemen zu verschließen und sich einzureden, alles werde schon gut. Das wäre naiv und sogar gefährlich. Der hilfreiche Optimismus ist von anderer Art: Er erkennt die Schwierigkeiten klar an, glaubt aber an die eigene Fähigkeit, mit ihnen umzugehen. Es geht also nicht um die Erwartung, dass nichts schiefgeht, sondern um das Vertrauen, dass man auch das Schwierige bewältigen kann. Dieser Unterschied ist entscheidend.",
+      speakers: [{ role: "Redner", voice: "fable" }],
+      questions: [
+        {
+          id: "q1",
+          stem: "Wovor warnt der Redner?",
+          options: [
+            { id: "a", text: "vor einem naiven Optimismus, der Probleme verleugnet" },
+            { id: "b", text: "vor jedem Optimismus" },
+            { id: "c", text: "vor Gesundheit" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Was ist laut Redner der hilfreiche Optimismus?",
+          options: [
+            { id: "a", text: "das Vertrauen, auch Schwieriges bewältigen zu können" },
+            { id: "b", text: "die Erwartung, dass nie etwas schiefgeht" },
+            { id: "c", text: "Probleme zu ignorieren" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Der Redner unterscheidet zwei Arten von Optimismus — achte auf den Kontrast.",
+  },
+  {
+    level: "C1",
+    module: "HOEREN",
+    taskType: "HOEREN_DETAIL",
+    title: "Ein Interview über Mehrsprachigkeit",
+    prompt: "Du hörst ein Interview. Wähle für jede Frage die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "lernen",
+    payload: {
+      audioScript:
+        "Moderatorin: Frau Dr. Sahin, schadet es Kindern, mit zwei Sprachen aufzuwachsen? Man hört das immer wieder. Dr. Sahin: Diese Sorge ist weit verbreitet, aber sie ist unbegründet. Kinder können problemlos mehrere Sprachen gleichzeitig lernen. Dass sie die Sprachen anfangs manchmal mischen, ist völlig normal und kein Zeichen von Überforderung. Moderatorin: Gibt es sogar Vorteile? Dr. Sahin: Durchaus. Mehrsprachige Kinder sind oft geübter darin, zwischen Aufgaben zu wechseln, und entwickeln früh ein Gespür dafür, dass dieselbe Sache verschieden benannt werden kann. Allerdings — und das betone ich gern — ist Mehrsprachigkeit kein Wundermittel. Sie macht niemanden automatisch klüger. Sie ist einfach eine wertvolle Fähigkeit unter vielen.",
+      speakers: [
+        { role: "Moderatorin", voice: "shimmer" },
+        { role: "Dr. Sahin", voice: "nova" },
+      ],
+      questions: [
+        {
+          id: "q1",
+          stem: "Was sagt Dr. Sahin zum anfänglichen Mischen der Sprachen?",
+          options: [
+            { id: "a", text: "Es ist normal und kein Zeichen von Überforderung." },
+            { id: "b", text: "Es ist ein ernstes Problem." },
+            { id: "c", text: "Es kommt nie vor." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Wie schränkt Dr. Sahin die Vorteile ein?",
+          options: [
+            { id: "a", text: "Mehrsprachigkeit ist kein Wundermittel und macht niemanden automatisch klüger." },
+            { id: "b", text: "Mehrsprachigkeit hat gar keine Vorteile." },
+            { id: "c", text: "Mehrsprachige Kinder sind immer die Besten." },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„Allerdings … betone ich gern“ leitet eine wichtige Einschränkung ein.",
+  },
+  {
+    level: "C1",
+    module: "HOEREN",
+    taskType: "HOEREN_DETAIL",
+    title: "Ein Beitrag über Fehlerkultur",
+    prompt: "Du hörst einen Beitrag. Wähle für jede Frage die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "arbeit",
+    payload: {
+      audioScript:
+        "In vielen Unternehmen herrscht eine seltsame Doppelmoral. Offiziell heißt es, man dürfe Fehler machen, denn aus ihnen lerne man. In der Praxis aber wird, wer einen Fehler eingesteht, oft genug benachteiligt. Die Folge ist, dass Probleme verschwiegen werden, bis sie nicht mehr zu übersehen sind — und dann ist der Schaden meist größer. Eine echte Fehlerkultur erkennt man nicht an schönen Worten, sondern daran, wie auf den ersten ehrlich gemeldeten Fehler reagiert wird. Interessanterweise sind gerade die erfolgreichsten Teams nicht jene, die die wenigsten Fehler machen, sondern jene, die am offensten über sie sprechen. Sie machen die Fehler nur einmal.",
+      speakers: [{ role: "Beitrag", voice: "alloy" }],
+      questions: [
+        {
+          id: "q1",
+          stem: "Worin besteht laut Beitrag die „Doppelmoral“?",
+          options: [
+            { id: "a", text: "Offiziell sind Fehler erlaubt, in der Praxis werden sie bestraft." },
+            { id: "b", text: "Fehler werden offiziell verboten, aber gelobt." },
+            { id: "c", text: "Es gibt gar keine Fehler." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Was zeichnet laut Beitrag die erfolgreichsten Teams aus?",
+          options: [
+            { id: "a", text: "Sie sprechen am offensten über Fehler." },
+            { id: "b", text: "Sie machen nie Fehler." },
+            { id: "c", text: "Sie verschweigen Probleme am längsten." },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Die Pointe steht am Ende: „Sie machen die Fehler nur einmal.“",
+  },
+  {
+    level: "C1",
+    module: "HOEREN",
+    taskType: "HOEREN_DETAIL",
+    title: "Eine Diskussion über Tourismus",
+    prompt: "Du hörst eine Diskussion. Wähle für jede Frage die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "reisen",
+    payload: {
+      audioScript:
+        "Herr Voss: Diese Städte ersticken im Tourismus. Ich finde, man sollte die Besucherzahlen einfach deckeln. Frau Lind: Verstehe ich, aber so einfach ist es nicht. Vom Tourismus leben ganze Familien. Ein striktes Limit würde viele Existenzen treffen. Herr Voss: Aber wenn die Einheimischen wegen der Mieten wegziehen, gibt es bald keine echte Stadt mehr, nur noch Kulissen für Besucher. Frau Lind: Da ist etwas dran. Vielleicht ist nicht die Zahl der Touristen das Problem, sondern dass der Gewinn bei wenigen landet, während die Lasten alle tragen. Herr Voss: Das wäre in der Tat der klügere Ansatzpunkt — bei der Verteilung, nicht beim bloßen Verbot.",
+      speakers: [
+        { role: "Herr Voss", voice: "onyx" },
+        { role: "Frau Lind", voice: "shimmer" },
+      ],
+      questions: [
+        {
+          id: "q1",
+          stem: "Was wendet Frau Lind gegen ein striktes Besucherlimit ein?",
+          options: [
+            { id: "a", text: "Es würde viele Existenzen treffen, die vom Tourismus leben." },
+            { id: "b", text: "Touristen geben zu wenig Geld aus." },
+            { id: "c", text: "Es gibt zu wenige Touristen." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Worauf einigen sich beide am Ende?",
+          options: [
+            { id: "a", text: "Das Problem liegt eher in der Verteilung von Gewinn und Lasten." },
+            { id: "b", text: "Tourismus sollte ganz verboten werden." },
+            { id: "c", text: "Alles soll bleiben, wie es ist." },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Die Diskussion verschiebt sich vom Verbot zur Frage der Verteilung.",
+  },
+  {
+    level: "C1",
+    module: "HOEREN",
+    taskType: "HOEREN_DETAIL",
+    title: "Ein Vortrag über Gewohnheiten",
+    prompt: "Du hörst einen Vortragsausschnitt. Wähle für jede Frage die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "gesundheit",
+    payload: {
+      audioScript:
+        "Wer eine Gewohnheit ändern will, scheitert selten am Wissen. Fast jeder weiß, was gesund wäre. Das Problem liegt woanders. Gewohnheiten sind tief in unserem Alltag verankert und an bestimmte Auslöser gekoppelt — eine Tageszeit, ein Ort, eine Stimmung. Genau deshalb funktioniert der gute Vorsatz allein so schlecht. Wirksamer ist es, nicht gegen die Auslöser anzukämpfen, sondern die Umgebung zu verändern. Wer gesünder essen will, sollte nicht auf Willenskraft setzen, sondern Süßigkeiten gar nicht erst kaufen. Das klingt banal, ist aber der entscheidende Unterschied: Man verlässt sich nicht auf Disziplin in einem schwachen Moment, sondern gestaltet die Bedingungen so, dass der schwache Moment seltener kommt.",
+      speakers: [{ role: "Dozentin", voice: "nova" }],
+      questions: [
+        {
+          id: "q1",
+          stem: "Woran scheitert laut Vortrag die Änderung von Gewohnheiten meist nicht?",
+          options: [
+            { id: "a", text: "am Wissen darüber, was gesund wäre" },
+            { id: "b", text: "am Geld" },
+            { id: "c", text: "an der Zeit" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Was empfiehlt die Dozentin?",
+          options: [
+            { id: "a", text: "die Umgebung zu verändern, statt nur auf Willenskraft zu setzen" },
+            { id: "b", text: "sich mehr Vorsätze zu nehmen" },
+            { id: "c", text: "mehr über Gesundheit zu lesen" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„nicht … sondern …“: Umgebung gestalten statt auf Disziplin hoffen.",
+  },
+  {
+    level: "C1",
+    module: "HOEREN",
+    taskType: "HOEREN_DETAIL",
+    title: "Ein Beitrag über Kreativität und Langeweile",
+    prompt: "Du hörst einen Radiobeitrag. Wähle für jede Frage die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "gesundheit",
+    payload: {
+      audioScript:
+        "Kaum stellt sich ein Moment der Leere ein, greifen die meisten von uns sofort zum Handy. Langeweile gilt als etwas, das man unbedingt vermeiden müsse. Dabei zeigt die Forschung ein anderes Bild. Wenn das Gehirn nicht ständig mit neuen Reizen versorgt wird, beginnt es, Gedanken zu verknüpfen und Ideen zu entwickeln. Viele kreative Einfälle entstehen gerade dann, wenn wir scheinbar nichts tun — beim Spazieren, beim Duschen, beim Warten. Das bedeutet keineswegs, dass Nichtstun an sich produktiv wäre. Entscheidend ist vielmehr, dem Geist überhaupt Freiräume zu lassen, statt jede Lücke sofort zu füllen. Wer die Langeweile konsequent vertreibt, beraubt sich womöglich seiner besten Gedanken.",
+      speakers: [{ role: "Beitrag", voice: "fable" }],
+      questions: [
+        {
+          id: "q1",
+          stem: "Was passiert laut Beitrag, wenn das Gehirn keine neuen Reize bekommt?",
+          options: [
+            { id: "a", text: "Es beginnt, Gedanken zu verknüpfen und Ideen zu entwickeln." },
+            { id: "b", text: "Es schaltet sich völlig ab." },
+            { id: "c", text: "Es wird sofort krank." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Worauf kommt es laut Beitrag entscheidend an?",
+          options: [
+            { id: "a", text: "dem Geist Freiräume zu lassen, statt jede Lücke zu füllen" },
+            { id: "b", text: "möglichst viel gleichzeitig zu tun" },
+            { id: "c", text: "das Handy immer dabeizuhaben" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„keineswegs, dass …“ grenzt die These gegen ein Missverständnis ab.",
+  },
 ];
 
 async function main() {

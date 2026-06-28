@@ -1041,6 +1041,264 @@ export const ITEMS: Prisma.GoetheItemCreateManyInput[] = [
     },
     guidanceNote: "Räume Grenzen deines Standpunkts ein — das macht dich glaubwürdiger.",
   },
+
+  // ===================== C1 =====================
+  {
+    level: "C1",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_PRESENT",
+    title: "Vortrag: Der Wert des Scheiterns",
+    prompt: "Halte einen strukturierten Vortrag auf Deutsch (etwa zwei bis drei Minuten).",
+    difficulty: "STRETCH",
+    topicTag: "person",
+    payload: {
+      taskPrompt:
+        "Thema: Kann Scheitern wertvoll sein? Halte einen Vortrag. Führe differenziert ein, entwickle eine eigene These, stütze sie mit Argumenten und Beispielen, gehe auf eine Gegenposition ein, und schließe mit einem abgewogenen Fazit.",
+      prepSeconds: 150,
+      speakSeconds: 150,
+    },
+    guidanceNote: "C1: gegliederter Aufbau, nuancierte These, anspruchsvolle Redemittel. Vermeide einseitige Urteile.",
+  },
+  {
+    level: "C1",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_DISCUSS",
+    title: "Diskussion: Sollte es ein bedingungsloses Grundeinkommen geben?",
+    prompt: "Diskutiere und vertritt deine Position differenziert auf Deutsch (etwa zwei Minuten).",
+    difficulty: "STRETCH",
+    topicTag: "arbeit",
+    payload: {
+      taskPrompt:
+        "Thema zur Diskussion: „Ein bedingungsloses Grundeinkommen sollte eingeführt werden.“ Beziehe begründet Stellung, führe mehrere Argumente an, setze dich ernsthaft mit den stärksten Gegenargumenten auseinander, räume offene Fragen ein, und versuche dennoch zu überzeugen.",
+      prepSeconds: 60,
+      speakSeconds: 150,
+    },
+    guidanceNote: "Gehe auf das STÄRKSTE Gegenargument ein, nicht auf das schwächste.",
+  },
+  {
+    level: "C1",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_PRESENT",
+    title: "Vortrag: Welche Rolle sollte Kunst in der Gesellschaft spielen?",
+    prompt: "Halte einen strukturierten Vortrag auf Deutsch (etwa zwei bis drei Minuten).",
+    difficulty: "STRETCH",
+    topicTag: "freizeit",
+    payload: {
+      taskPrompt:
+        "Thema: Welche Rolle sollte Kunst in der Gesellschaft spielen? Halte einen Vortrag. Kläre kurz, was du unter dem Thema verstehst, entwickle deine Position, begründe sie mit Beispielen, berücksichtige Einwände (etwa zur staatlichen Förderung), und ziehe ein Fazit.",
+      prepSeconds: 150,
+      speakSeconds: 150,
+    },
+    guidanceNote: "Bei abstrakten Themen hilft es, zu Beginn die zentralen Begriffe zu klären.",
+  },
+  {
+    level: "C1",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_DISCUSS",
+    title: "Diskussion: Sollte Wahlpflicht eingeführt werden?",
+    prompt: "Diskutiere und vertritt deine Position differenziert auf Deutsch (etwa zwei Minuten).",
+    difficulty: "STRETCH",
+    topicTag: "alltag",
+    payload: {
+      taskPrompt:
+        "Thema zur Diskussion: „Es sollte eine gesetzliche Pflicht zur Teilnahme an Wahlen geben.“ Beziehe Stellung, führe Argumente an, gehe besonders auf das Spannungsverhältnis zwischen Beteiligung und Freiheit ein, und begründe deine Haltung überzeugend.",
+      prepSeconds: 60,
+      speakSeconds: 150,
+    },
+    guidanceNote: "Das Argument der Freiheit ist hier zentral — entkräfte oder gewichte es bewusst.",
+  },
+  {
+    level: "C1",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_PRESENT",
+    title: "Vortrag: Bedeutet Fortschritt immer Wachstum?",
+    prompt: "Halte einen strukturierten Vortrag auf Deutsch (etwa zwei bis drei Minuten).",
+    difficulty: "STRETCH",
+    topicTag: "umwelt",
+    payload: {
+      taskPrompt:
+        "Thema: Muss Fortschritt immer mit wirtschaftlichem Wachstum verbunden sein? Halte einen Vortrag. Führe ein, entwickle eine eigene Position, stütze sie mit Argumenten und Beispielen, gehe auf Gegenpositionen ein, und schließe mit einem Fazit.",
+      prepSeconds: 150,
+      speakSeconds: 150,
+    },
+    guidanceNote: "Definiere „Fortschritt“ und „Wachstum“ – sonst redet man aneinander vorbei.",
+  },
+  {
+    level: "C1",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_DISCUSS",
+    title: "Diskussion: Sollten soziale Medien stärker reguliert werden?",
+    prompt: "Diskutiere und vertritt deine Position differenziert auf Deutsch (etwa zwei Minuten).",
+    difficulty: "STRETCH",
+    topicTag: "alltag",
+    payload: {
+      taskPrompt:
+        "Thema zur Diskussion: „Soziale Medien sollten vom Staat stärker reguliert werden.“ Beziehe Stellung, wäge zwischen dem Schutz vor Desinformation und der Meinungsfreiheit ab, gehe auf das stärkste Gegenargument ein, und begründe deine Haltung.",
+      prepSeconds: 60,
+      speakSeconds: 150,
+    },
+    guidanceNote: "Halte die Spannung zwischen Schutz und Freiheit bewusst aus.",
+  },
+  {
+    level: "C1",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_PRESENT",
+    title: "Vortrag: Die Ökonomie der Aufmerksamkeit",
+    prompt: "Halte einen strukturierten Vortrag auf Deutsch (etwa zwei bis drei Minuten).",
+    difficulty: "STRETCH",
+    topicTag: "alltag",
+    payload: {
+      taskPrompt:
+        "Thema: Wie verändert der Wettbewerb um unsere Aufmerksamkeit unser Leben? Halte einen Vortrag. Beschreibe das Phänomen, entwickle eine eigene Einschätzung, belege sie mit Beispielen, gehe auf mögliche Gegenargumente ein, und ziehe ein Fazit mit Ausblick.",
+      prepSeconds: 150,
+      speakSeconds: 150,
+    },
+    guidanceNote: "Verbinde eine gesellschaftliche Beobachtung mit einer persönlichen Bewertung.",
+  },
+  {
+    level: "C1",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_DISCUSS",
+    title: "Diskussion: Sollte Kultur überwiegend öffentlich finanziert werden?",
+    prompt: "Diskutiere und vertritt deine Position differenziert auf Deutsch (etwa zwei Minuten).",
+    difficulty: "STRETCH",
+    topicTag: "freizeit",
+    payload: {
+      taskPrompt:
+        "Thema zur Diskussion: „Theater, Museen und Bibliotheken sollten überwiegend mit öffentlichen Mitteln finanziert werden.“ Beziehe Stellung, führe Argumente an, gehe auf den Einwand knapper Kassen ein, und versuche, deine Position überzeugend zu begründen.",
+      prepSeconds: 60,
+      speakSeconds: 150,
+    },
+    guidanceNote: "Widerlege den „falschen Gegensatz“ zwischen Kultur und anderen Ausgaben.",
+  },
+  {
+    level: "C1",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_PRESENT",
+    title: "Vortrag: Freiheit und Verantwortung des Einzelnen",
+    prompt: "Halte einen strukturierten Vortrag auf Deutsch (etwa zwei bis drei Minuten).",
+    difficulty: "STRETCH",
+    topicTag: "person",
+    payload: {
+      taskPrompt:
+        "Thema: Wie viel Freiheit braucht der Einzelne, und wie viel Verantwortung trägt er für die Gemeinschaft? Halte einen Vortrag. Führe ein, entwickle deine Position, begründe sie, gehe auf das jeweils entgegengesetzte Extrem ein, und schließe mit einem Fazit.",
+      prepSeconds: 150,
+      speakSeconds: 150,
+    },
+    guidanceNote: "Lehne beide Extreme ab und entwickle eine vermittelnde Position.",
+  },
+  {
+    level: "C1",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_DISCUSS",
+    title: "Diskussion: Sollte Bildung vollständig kostenlos sein?",
+    prompt: "Diskutiere und vertritt deine Position differenziert auf Deutsch (etwa zwei Minuten).",
+    difficulty: "STRETCH",
+    topicTag: "lernen",
+    payload: {
+      taskPrompt:
+        "Thema zur Diskussion: „Bildung – von der Schule bis zur Universität – sollte vollständig kostenlos sein.“ Beziehe Stellung, führe Argumente an, gehe auf die Frage der Finanzierung und der Gerechtigkeit ein, und begründe deine Haltung.",
+      prepSeconds: 60,
+      speakSeconds: 150,
+    },
+    guidanceNote: "Greife das stärkste Gegenargument (z. B. Finanzierung) ernsthaft auf.",
+  },
+  {
+    level: "C1",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_PRESENT",
+    title: "Vortrag: Was bedeutet ein gelingendes Leben?",
+    prompt: "Halte einen strukturierten Vortrag auf Deutsch (etwa zwei bis drei Minuten).",
+    difficulty: "STRETCH",
+    topicTag: "gesundheit",
+    payload: {
+      taskPrompt:
+        "Thema: Was macht ein gelingendes, zufriedenes Leben aus? Halte einen Vortrag. Kläre, was du darunter verstehst, entwickle deine Sicht, belege sie mit Beispielen oder Erkenntnissen, berücksichtige andere Sichtweisen, und ziehe ein Fazit.",
+      prepSeconds: 150,
+      speakSeconds: 150,
+    },
+    guidanceNote: "Stütze persönliche Ansichten auch mit allgemeineren Beobachtungen.",
+  },
+  {
+    level: "C1",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_DISCUSS",
+    title: "Diskussion: Sollte es eine Vermögenssteuer geben?",
+    prompt: "Diskutiere und vertritt deine Position differenziert auf Deutsch (etwa zwei Minuten).",
+    difficulty: "STRETCH",
+    topicTag: "arbeit",
+    payload: {
+      taskPrompt:
+        "Thema zur Diskussion: „Große Vermögen sollten stärker besteuert werden.“ Beziehe Stellung, führe Argumente an, gehe auf Gegenargumente (etwa zu Leistung und Abwanderung) ein, und begründe deine Haltung sachlich.",
+      prepSeconds: 60,
+      speakSeconds: 150,
+    },
+    guidanceNote: "Bleib sachlich und gehe auf wirtschaftliche Einwände konkret ein.",
+  },
+  {
+    level: "C1",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_PRESENT",
+    title: "Vortrag: Die Grenzen der Messbarkeit",
+    prompt: "Halte einen strukturierten Vortrag auf Deutsch (etwa zwei bis drei Minuten).",
+    difficulty: "STRETCH",
+    topicTag: "lernen",
+    payload: {
+      taskPrompt:
+        "Thema: „Nicht alles, was zählt, lässt sich zählen.“ Halte einen Vortrag zu der Frage, wo das Messen sinnvoll ist und wo es an Grenzen stößt. Entwickle eine Position, belege sie mit Beispielen, berücksichtige den Nutzen von Messung, und schließe mit einem Fazit.",
+      prepSeconds: 150,
+      speakSeconds: 150,
+    },
+    guidanceNote: "Erkenne den Nutzen des Messens an, bevor du seine Grenzen aufzeigst.",
+  },
+  {
+    level: "C1",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_DISCUSS",
+    title: "Diskussion: Sollten Großstädte autofrei werden?",
+    prompt: "Diskutiere und vertritt deine Position differenziert auf Deutsch (etwa zwei Minuten).",
+    difficulty: "STRETCH",
+    topicTag: "umwelt",
+    payload: {
+      taskPrompt:
+        "Thema zur Diskussion: „Die Innenstädte großer Städte sollten weitgehend autofrei werden.“ Beziehe Stellung, führe Argumente an, gehe auf die Interessen verschiedener Betroffener ein (Anwohner, Geschäfte, Menschen mit Behinderung), und schlage gegebenenfalls Differenzierungen vor.",
+      prepSeconds: 60,
+      speakSeconds: 150,
+    },
+    guidanceNote: "Berücksichtige unterschiedliche Betroffene — pauschale Lösungen überzeugen auf C1 selten.",
+  },
+  {
+    level: "C1",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_PRESENT",
+    title: "Vortrag: Wie verändert die Digitalisierung unser Denken?",
+    prompt: "Halte einen strukturierten Vortrag auf Deutsch (etwa zwei bis drei Minuten).",
+    difficulty: "STRETCH",
+    topicTag: "alltag",
+    payload: {
+      taskPrompt:
+        "Thema: Verändert die ständige Verfügbarkeit von Informationen die Art, wie wir denken und uns erinnern? Halte einen Vortrag. Entwickle eine Position, belege sie, berücksichtige Chancen und Risiken, gehe auf Einwände ein, und ziehe ein Fazit.",
+      prepSeconds: 150,
+      speakSeconds: 150,
+    },
+    guidanceNote: "Stelle Chancen und Risiken gegenüber, statt nur zu warnen oder zu loben.",
+  },
+  {
+    level: "C1",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_DISCUSS",
+    title: "Diskussion: Sollte ehrenamtliches Engagement gefördert und belohnt werden?",
+    prompt: "Diskutiere und vertritt deine Position differenziert auf Deutsch (etwa zwei Minuten).",
+    difficulty: "STRETCH",
+    topicTag: "alltag",
+    payload: {
+      taskPrompt:
+        "Thema zur Diskussion: „Der Staat sollte ehrenamtliches Engagement mit Vergünstigungen belohnen.“ Beziehe Stellung, führe Argumente an, gehe auf den Einwand ein, dass Belohnungen die Freiwilligkeit untergraben könnten, und begründe deine Haltung.",
+      prepSeconds: 60,
+      speakSeconds: 150,
+    },
+    guidanceNote: "Das Spannungsfeld Anreiz vs. Freiwilligkeit sollte deine Argumentation tragen.",
+  },
 ];
 
 async function main() {
