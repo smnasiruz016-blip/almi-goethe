@@ -1299,6 +1299,264 @@ export const ITEMS: Prisma.GoetheItemCreateManyInput[] = [
     },
     guidanceNote: "Das Spannungsfeld Anreiz vs. Freiwilligkeit sollte deine Argumentation tragen.",
   },
+
+  // ===================== C2 =====================
+  {
+    level: "C2",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_PRESENT",
+    title: "Vortrag: Der Wert des Zweifels",
+    prompt: "Halte einen anspruchsvollen Vortrag auf Deutsch (etwa drei Minuten).",
+    difficulty: "STRETCH",
+    topicTag: "lernen",
+    payload: {
+      taskPrompt:
+        "Thema: Ist der Zweifel eine Stärke oder eine Schwäche? Halte einen Vortrag. Kläre den Begriff, entwickle eine nuancierte These, stütze sie mit Argumenten und Beispielen, grenze produktiven Zweifel von lähmendem ab, gehe auf eine Gegenposition ein, und schließe mit einem prägnanten Fazit.",
+      prepSeconds: 180,
+      speakSeconds: 180,
+    },
+    guidanceNote: "C2: nuancierte These, gehobene Redemittel, klare Gliederung, Differenzierungen statt Schwarz-Weiß.",
+  },
+  {
+    level: "C2",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_DISCUSS",
+    title: "Diskussion: Ist grenzenlose Wahlfreiheit eine Last?",
+    prompt: "Diskutiere und vertritt deine Position differenziert auf Deutsch (etwa zwei Minuten).",
+    difficulty: "STRETCH",
+    topicTag: "person",
+    payload: {
+      taskPrompt:
+        "These zur Diskussion: „Die grenzenlose Freiheit der Wahl macht uns nicht freier, sondern unsicherer.“ Beziehe begründet Stellung, führe tragfähige Argumente an, setze dich mit dem stärksten Gegenargument auseinander, vermeide beide Extreme, und versuche, durch Differenzierung zu überzeugen.",
+      prepSeconds: 60,
+      speakSeconds: 150,
+    },
+    guidanceNote: "Vermeide eine einseitige Antwort; gerade die Differenzierung überzeugt auf C2.",
+  },
+  {
+    level: "C2",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_PRESENT",
+    title: "Vortrag: Authentizität – Befreiung oder Zwang?",
+    prompt: "Halte einen anspruchsvollen Vortrag auf Deutsch (etwa drei Minuten).",
+    difficulty: "STRETCH",
+    topicTag: "alltag",
+    payload: {
+      taskPrompt:
+        "Thema: Ist die Forderung, „authentisch“ zu sein, eine Befreiung oder ein neuer Zwang? Halte einen Vortrag. Prüfe die Annahme eines „wahren Selbst“, entwickle eine eigene Position, belege sie, berücksichtige Gegenargumente, und schließe mit einem reflektierten Fazit.",
+      prepSeconds: 180,
+      speakSeconds: 180,
+    },
+    guidanceNote: "Hinterfrage die Voraussetzung der Forderung, statt sie zu übernehmen.",
+  },
+  {
+    level: "C2",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_DISCUSS",
+    title: "Diskussion: Lässt sich das Werk vom Künstler trennen?",
+    prompt: "Diskutiere und vertritt deine Position differenziert auf Deutsch (etwa zwei Minuten).",
+    difficulty: "STRETCH",
+    topicTag: "freizeit",
+    payload: {
+      taskPrompt:
+        "These zur Diskussion: „Ein Kunstwerk sollte unabhängig vom Charakter seines Schöpfers beurteilt werden.“ Beziehe Stellung, zeige, warum beide Extrempositionen zu kurz greifen, entwickle eine vermittelnde Haltung, und begründe sie überzeugend.",
+      prepSeconds: 60,
+      speakSeconds: 150,
+    },
+    guidanceNote: "Entwickle eine dritte Position jenseits der beiden Extreme.",
+  },
+  {
+    level: "C2",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_PRESENT",
+    title: "Vortrag: Die Grenzen des Mitgefühls",
+    prompt: "Halte einen anspruchsvollen Vortrag auf Deutsch (etwa drei Minuten).",
+    difficulty: "STRETCH",
+    topicTag: "person",
+    payload: {
+      taskPrompt:
+        "Thema: Kann uns das Mitgefühl in die Irre führen? Halte einen Vortrag. Beschreibe die Parteilichkeit des Mitgefühls, entwickle eine eigene Einschätzung, wende dich gegen die Forderung, das Gefühl durch reine Vernunft zu ersetzen, und schließe mit einer vermittelnden These.",
+      prepSeconds: 180,
+      speakSeconds: 180,
+    },
+    guidanceNote: "Verbinde Gefühl und Vernunft, statt eines gegen das andere auszuspielen.",
+  },
+  {
+    level: "C2",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_DISCUSS",
+    title: "Diskussion: Untergräbt sich grenzenlose Toleranz selbst?",
+    prompt: "Diskutiere und vertritt deine Position differenziert auf Deutsch (etwa zwei Minuten).",
+    difficulty: "STRETCH",
+    topicTag: "alltag",
+    payload: {
+      taskPrompt:
+        "These zur Diskussion: „Eine Toleranz, die auch das Intolerante duldet, zerstört sich am Ende selbst.“ Beziehe Stellung, erörtere das Paradox, weise auf die Gefahr willkürlicher Grenzziehung hin, und begründe eine differenzierte Haltung, ohne die Spannung vorschnell aufzulösen.",
+      prepSeconds: 60,
+      speakSeconds: 150,
+    },
+    guidanceNote: "Verweigere die „bequeme Formel“ und halte das Paradox bewusst aus.",
+  },
+  {
+    level: "C2",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_PRESENT",
+    title: "Vortrag: Hat jeder Fortschritt seinen Preis?",
+    prompt: "Halte einen anspruchsvollen Vortrag auf Deutsch (etwa drei Minuten).",
+    difficulty: "STRETCH",
+    topicTag: "umwelt",
+    payload: {
+      taskPrompt:
+        "Thema: Bringt jeder Fortschritt stille Verluste mit sich? Halte einen Vortrag. Entwickle eine Position, illustriere Gewinne und unsichtbare Kosten an Beispielen, wende dich gegen pauschale Fortschrittsfeindschaft, und schließe mit einem Plädoyer für einen abwägenden Blick.",
+      prepSeconds: 180,
+      speakSeconds: 180,
+    },
+    guidanceNote: "Weder Euphorie noch Kulturpessimismus — strebe einen nüchternen Kassensturz an.",
+  },
+  {
+    level: "C2",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_DISCUSS",
+    title: "Diskussion: Sollte man alles messen, was sich messen lässt?",
+    prompt: "Diskutiere und vertritt deine Position differenziert auf Deutsch (etwa zwei Minuten).",
+    difficulty: "STRETCH",
+    topicTag: "lernen",
+    payload: {
+      taskPrompt:
+        "These zur Diskussion: „Nur was sich messen lässt, lässt sich verbessern.“ Beziehe Stellung, würdige den berechtigten Kern, zeige die Grenzen auf, gehe auf den Einwand der Willkür ohne Messung ein, und entwickle eine vermittelnde Position.",
+      prepSeconds: 60,
+      speakSeconds: 150,
+    },
+    guidanceNote: "Verwechsle das nicht Messbare nicht mit dem Unwichtigen.",
+  },
+  {
+    level: "C2",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_PRESENT",
+    title: "Vortrag: Die Illusion der Kontrolle",
+    prompt: "Halte einen anspruchsvollen Vortrag auf Deutsch (etwa drei Minuten).",
+    difficulty: "STRETCH",
+    topicTag: "gesundheit",
+    payload: {
+      taskPrompt:
+        "Thema: Lässt sich das Leben wirklich planen und kontrollieren? Halte einen Vortrag. Beschreibe den modernen Drang zur Kontrolle, lege seine Selbsttäuschung dar, entwickle eine eigene Position, berücksichtige, was sich sehr wohl gestalten lässt, und schließe mit einer reifen Synthese.",
+      prepSeconds: 180,
+      speakSeconds: 180,
+    },
+    guidanceNote: "Erkenne an, was gestaltbar ist, bevor du die Grenzen der Kontrolle aufzeigst.",
+  },
+  {
+    level: "C2",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_DISCUSS",
+    title: "Diskussion: Steht Freiheit im Gegensatz zu Sicherheit?",
+    prompt: "Diskutiere und vertritt deine Position differenziert auf Deutsch (etwa zwei Minuten).",
+    difficulty: "STRETCH",
+    topicTag: "alltag",
+    payload: {
+      taskPrompt:
+        "These zur Diskussion: „Mehr Sicherheit lässt sich nur auf Kosten der Freiheit gewinnen.“ Beziehe Stellung, hinterfrage den unterstellten Gegensatz, führe Argumente an, gehe auf das stärkste Gegenargument ein, und begründe eine differenzierte Haltung.",
+      prepSeconds: 60,
+      speakSeconds: 150,
+    },
+    guidanceNote: "Prüfe zuerst, ob der behauptete Gegensatz überhaupt zutrifft.",
+  },
+  {
+    level: "C2",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_PRESENT",
+    title: "Vortrag: Vom Wert des Nutzlosen",
+    prompt: "Halte einen anspruchsvollen Vortrag auf Deutsch (etwa drei Minuten).",
+    difficulty: "STRETCH",
+    topicTag: "lernen",
+    payload: {
+      taskPrompt:
+        "Thema: Hat das vermeintlich Nutzlose einen eigenen Wert? Halte einen Vortrag. Lege die Engstirnigkeit der reinen Nutzenfrage dar, entwickle eine Position, illustriere sie an Beispielen wie Freundschaft oder zweckfreier Neugier, gehe auf den Einwand der Effizienz ein, und schließe mit einem Fazit.",
+      prepSeconds: 180,
+      speakSeconds: 180,
+    },
+    guidanceNote: "Unterscheide „Mittel zum Zweck“ und „Zweck in sich“.",
+  },
+  {
+    level: "C2",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_DISCUSS",
+    title: "Diskussion: Ist Authentizität eine Illusion?",
+    prompt: "Diskutiere und vertritt deine Position differenziert auf Deutsch (etwa zwei Minuten).",
+    difficulty: "STRETCH",
+    topicTag: "person",
+    payload: {
+      taskPrompt:
+        "These zur Diskussion: „Ein wahres, authentisches Selbst, das man nur freilegen müsste, gibt es nicht.“ Beziehe Stellung, prüfe die Annahme kritisch, führe Argumente an, gehe auf Einwände ein, und begründe deine Haltung souverän.",
+      prepSeconds: 60,
+      speakSeconds: 150,
+    },
+    guidanceNote: "Wäge ab, ob wir uns „ausdrücken“ oder erst im Umgang mit anderen „werden“.",
+  },
+  {
+    level: "C2",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_PRESENT",
+    title: "Vortrag: Ironie und der Mut zum Ernst",
+    prompt: "Halte einen anspruchsvollen Vortrag auf Deutsch (etwa drei Minuten).",
+    difficulty: "STRETCH",
+    topicTag: "alltag",
+    payload: {
+      taskPrompt:
+        "Thema: Hat die allgegenwärtige Ironie unserer Zeit auch Schattenseiten? Halte einen Vortrag. Beschreibe die Ironie als Schutzhaltung, lege ihren Preis dar, würdige zugleich ihren kritischen Wert, und schließe mit einem Plädoyer, das weder die Ironie verdammt noch den naiven Ernst verklärt.",
+      prepSeconds: 180,
+      speakSeconds: 180,
+    },
+    guidanceNote: "Würdige den Wert der Ironie, bevor du ihren Preis benennst.",
+  },
+  {
+    level: "C2",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_DISCUSS",
+    title: "Diskussion: Sollte alles dauerhaft speicherbar sein?",
+    prompt: "Diskutiere und vertritt deine Position differenziert auf Deutsch (etwa zwei Minuten).",
+    difficulty: "STRETCH",
+    topicTag: "alltag",
+    payload: {
+      taskPrompt:
+        "These zur Diskussion: „In einer Welt, die alles dauerhaft speichert, braucht der Mensch ein Recht auf Vergessenwerden.“ Beziehe Stellung, lege den Wert des Vergessens dar, gehe auf Einwände (etwa Transparenz) ein, und begründe eine differenzierte Haltung.",
+      prepSeconds: 60,
+      speakSeconds: 150,
+    },
+    guidanceNote: "Das Vergessen als „Leistung“ statt als „Mangel“ kann deine Argumentation tragen.",
+  },
+  {
+    level: "C2",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_PRESENT",
+    title: "Vortrag: Was bedeutet Arbeit, wenn Maschinen sie übernehmen?",
+    prompt: "Halte einen anspruchsvollen Vortrag auf Deutsch (etwa drei Minuten).",
+    difficulty: "STRETCH",
+    topicTag: "arbeit",
+    payload: {
+      taskPrompt:
+        "Thema: Verliert die Arbeit ihren Sinn, wenn Maschinen immer mehr übernehmen? Halte einen Vortrag. Hinterfrage die Annahme, der Sinn der Arbeit liege allein im Produzieren, entwickle eine Position, gehe auf die Frage von Würde und Anerkennung ein, und schließe mit einem Ausblick.",
+      prepSeconds: 180,
+      speakSeconds: 180,
+    },
+    guidanceNote: "Verschiebe die Frage vom „Ob wir arbeiten“ zum „Woran wir Würde knüpfen“.",
+  },
+  {
+    level: "C2",
+    module: "SPRECHEN",
+    taskType: "SPRECHEN_DISCUSS",
+    title: "Diskussion: Freiheit ohne Bindung – Gewinn oder Verlust?",
+    prompt: "Diskutiere und vertritt deine Position differenziert auf Deutsch (etwa zwei Minuten).",
+    difficulty: "STRETCH",
+    topicTag: "alltag",
+    payload: {
+      taskPrompt:
+        "These zur Diskussion: „Wer ausschließlich sich selbst verpflichtet ist, gewinnt Freiheit, riskiert aber Vereinzelung.“ Beziehe Stellung, lehne die jeweiligen Extreme ab, strebe eine Versöhnung von Freiheit und Verantwortung an, und begründe deine Haltung.",
+      prepSeconds: 60,
+      speakSeconds: 150,
+    },
+    guidanceNote: "„Nicht das eine gegen das andere, sondern beides zugleich“ als Leitgedanke.",
+  },
 ];
 
 async function main() {

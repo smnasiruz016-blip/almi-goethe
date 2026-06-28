@@ -3381,6 +3381,684 @@ export const ITEMS: Prisma.GoetheItemCreateManyInput[] = [
     },
     guidanceNote: "Ein geschicktes Argument räumt die Gegenseite ein („Wir verkennen nicht …“), bevor es widerspricht.",
   },
+
+  // ===================== C2 =====================
+  {
+    level: "C2",
+    module: "LESEN",
+    taskType: "LESEN_GLOBAL",
+    title: "Essay: Die Last der Wahl",
+    prompt: "Lies den Essay und wähle für jede Frage die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "person",
+    payload: {
+      passages: [
+        {
+          id: "p1",
+          heading: "Frei, aber wozu?",
+          body:
+            "Nichts gilt uns als kostbarer als die Freiheit, zu wählen. Und doch mehren sich die Stimmen, die in eben dieser Freiheit eine neue Form der Überforderung erkennen. Wo frühere Generationen ihren Platz im Leben weitgehend vorgefunden haben, müssen wir ihn selbst erfinden — und tragen seither die volle Verantwortung für das Gelingen wie das Misslingen. Das Versprechen, alles sei möglich, kippt unter der Hand in die Last, alles entscheiden zu müssen. Wer scheitert, kann sich nicht länger auf widrige Umstände berufen, sondern bleibt mit dem nagenden Verdacht zurück, er habe bloß die falsche Wahl getroffen. Es wäre indes verfehlt, daraus eine Sehnsucht nach alten Zwängen abzuleiten. Niemand wünscht sich die Enge vergangener Ordnungen zurück. Die eigentliche Aufgabe besteht vielmehr darin, mit einer Freiheit zu leben, die uns nicht nur befreit, sondern auch entwurzelt — ohne der einen wie der anderen Versuchung zu erliegen: weder der Flucht in die nostalgische Verklärung noch der Selbsttäuschung, grenzenlose Wahl mache uns ohne Weiteres glücklich.",
+        },
+      ],
+      questions: [
+        {
+          id: "q1",
+          kind: "mcq",
+          stem: "Worin sieht der Autor das eigentliche Problem der Wahlfreiheit?",
+          options: [
+            { id: "a", text: "Sie verkehrt sich in den Zwang, alles selbst verantworten zu müssen." },
+            { id: "b", text: "Sie führt automatisch zu mehr Glück." },
+            { id: "c", text: "Sie existiert in Wahrheit gar nicht." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          kind: "mcq",
+          stem: "Welche Haltung lehnt der Autor ausdrücklich ab?",
+          options: [
+            { id: "a", text: "sowohl die nostalgische Verklärung als auch die Illusion grenzenlosen Glücks durch Wahl" },
+            { id: "b", text: "jede Form von Freiheit" },
+            { id: "c", text: "die Rückkehr zu alten Zwängen ausschließlich" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Der Autor verwirft beide Extreme — achte auf „weder … noch …“.",
+  },
+  {
+    level: "C2",
+    module: "LESEN",
+    taskType: "LESEN_DETAIL",
+    title: "Ein Essay: Lob des Zweifels",
+    prompt: "Lies den Essay und wähle für jede Frage die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "lernen",
+    payload: {
+      passages: [
+        {
+          id: "p1",
+          heading: "Die Tugend des Vielleicht",
+          body:
+            "In einer Zeit, die nach klaren Antworten verlangt, hat der Zweifel einen schweren Stand. Wer zögert, gilt rasch als schwach, wer Gewissheit ausstrahlt, als kompetent. Dabei verwechselt diese Gleichsetzung Lautstärke mit Wahrheit. Der Zweifel ist nicht das Gegenteil der Erkenntnis, sondern ihre Voraussetzung: Nur wer für möglich hält, sich zu irren, kann überhaupt dazulernen. Die Geschichte des Denkens ist nicht die Geschichte unerschütterlicher Überzeugungen, sondern die ihrer fortwährenden Revision. Freilich lässt sich der Zweifel auch übertreiben. Wer an allem zweifelt, auch am Naheliegenden, verliert die Handlungsfähigkeit und macht aus einer Tugend eine Lähmung. Die Kunst besteht darin, jenen produktiven Zweifel zu kultivieren, der die eigene Position prüft, ohne sich in der Prüfung zu verlieren. Nicht die Abwesenheit von Zweifel zeichnet den klugen Geist aus, sondern der souveräne Umgang mit ihm.",
+        },
+      ],
+      questions: [
+        {
+          id: "q1",
+          kind: "mcq",
+          stem: "In welchem Verhältnis stehen laut Text Zweifel und Erkenntnis?",
+          options: [
+            { id: "a", text: "Der Zweifel ist die Voraussetzung der Erkenntnis." },
+            { id: "b", text: "Der Zweifel verhindert jede Erkenntnis." },
+            { id: "c", text: "Beide haben nichts miteinander zu tun." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          kind: "mcq",
+          stem: "Wovor warnt der Autor?",
+          options: [
+            { id: "a", text: "vor einem übertriebenen Zweifel, der zur Lähmung wird" },
+            { id: "b", text: "vor jeder Form von Überzeugung" },
+            { id: "c", text: "vor dem Dazulernen" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„Freilich …“ leitet die Einschränkung der eigenen These ein.",
+  },
+  {
+    level: "C2",
+    module: "LESEN",
+    taskType: "LESEN_TRUE_FALSE",
+    title: "Ein Text über Nostalgie",
+    prompt: "Lies den Text. Sind die Sätze richtig oder falsch?",
+    difficulty: "STRETCH",
+    topicTag: "person",
+    payload: {
+      passages: [
+        {
+          id: "p1",
+          heading: "Die schöne Lüge der guten alten Zeit",
+          body:
+            "Nostalgie hat einen zweifelhaften Ruf, und nicht ganz zu Unrecht: Die verklärte Erinnerung an eine angeblich bessere Vergangenheit blendet deren Härten geflissentlich aus. Was wir vermissen, ist selten die Vergangenheit selbst, sondern das Gefühl, das wir mit ihr verbinden — oft die eigene Jugend, in der noch alles möglich schien. Insofern sagt Nostalgie mehr über die Gegenwart aus als über das, woran sie sich zu erinnern glaubt. Dennoch wäre es vorschnell, sie bloß als Realitätsflucht abzutun. Jüngere Untersuchungen deuten darauf hin, dass ein wohldosierter Blick zurück durchaus tröstlich wirken und das Gefühl von Kontinuität stärken kann. Problematisch wird die Nostalgie erst dort, wo sie sich politisch instrumentalisieren lässt und die Sehnsucht nach gestern jeden Entwurf für morgen erstickt.",
+        },
+      ],
+      questions: [
+        {
+          id: "q1",
+          kind: "truefalse",
+          stem: "Laut Text sagt Nostalgie oft mehr über die Gegenwart als über die Vergangenheit aus.",
+          options: [
+            { id: "r", text: "Richtig" },
+            { id: "f", text: "Falsch" },
+          ],
+          answer: "r",
+        },
+        {
+          id: "q2",
+          kind: "truefalse",
+          stem: "Der Autor hält Nostalgie für ausschließlich schädlich.",
+          options: [
+            { id: "r", text: "Richtig" },
+            { id: "f", text: "Falsch" },
+          ],
+          answer: "f",
+        },
+      ],
+    },
+    guidanceNote: "„Dennoch wäre es vorschnell …“ relativiert das anfängliche Urteil.",
+  },
+  {
+    level: "C2",
+    module: "LESEN",
+    taskType: "LESEN_DETAIL",
+    title: "Ein Essay: Das Gebot der Authentizität",
+    prompt: "Lies den Essay und wähle für jede Frage die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "alltag",
+    payload: {
+      passages: [
+        {
+          id: "p1",
+          heading: "Sei du selbst — aber welcher?",
+          body:
+            "Kaum eine Forderung wird heute so bereitwillig erhoben wie die, man möge authentisch sein, ganz man selbst. Was zunächst befreiend klingt, entpuppt sich bei näherem Hinsehen als eigentümlich gebieterisch. Denn das Gebot der Authentizität setzt voraus, dass es ein wahres Selbst gäbe, das man nur freizulegen brauchte — als läge unter den Schichten gesellschaftlicher Prägung ein unverfälschter Kern. Eben diese Annahme aber ist fragwürdig. Wir sind keine fertigen Wesen, die sich bloß auszudrücken hätten, sondern werden zu dem, was wir sind, im Umgang mit anderen. Das vermeintlich authentische Ich ist selbst ein Produkt — nicht zuletzt der Erwartung, authentisch zu sein. So verkehrt sich das Versprechen der Befreiung in einen subtilen Zwang: Wer ständig sich selbst sein soll, dem wird gerade die Möglichkeit verwehrt, ein anderer zu werden. Vielleicht läge die größere Freiheit nicht darin, ein vorgegebenes Selbst zu verwirklichen, sondern darin, sich selbst entwerfen zu dürfen.",
+        },
+      ],
+      questions: [
+        {
+          id: "q1",
+          kind: "mcq",
+          stem: "Welche Annahme hält der Autor für fragwürdig?",
+          options: [
+            { id: "a", text: "dass es ein unverfälschtes, wahres Selbst zum Freilegen gäbe" },
+            { id: "b", text: "dass Menschen sich verändern können" },
+            { id: "c", text: "dass andere Menschen wichtig sind" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          kind: "mcq",
+          stem: "Worin läge laut Autor womöglich die größere Freiheit?",
+          options: [
+            { id: "a", text: "sich selbst entwerfen zu dürfen, statt ein vorgegebenes Selbst zu verwirklichen" },
+            { id: "b", text: "ständig authentisch zu sein" },
+            { id: "c", text: "den wahren Kern freizulegen" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Der Essay deckt einen versteckten Zwang im Befreiungsversprechen auf.",
+  },
+  {
+    level: "C2",
+    module: "LESEN",
+    taskType: "LESEN_MATCHING",
+    title: "Vier Positionen zum Wert der Kunst",
+    prompt: "Lies die Aussagen und ordne jeder Person die passende Position zu.",
+    difficulty: "STRETCH",
+    topicTag: "freizeit",
+    payload: {
+      passages: [
+        {
+          id: "p1",
+          heading: "Wozu Kunst?",
+          body:
+            "Frau Adorján: Kunst muss keinem Zweck dienen; gerade ihre Nutzlosigkeit ist ihr eigentlicher Wert.\nHerr Veit: Ich misstraue solcher Verklärung — Kunst hat stets gesellschaftliche Funktionen erfüllt, ob man das will oder nicht.\nFrau Mende: Mich interessiert weniger, wozu Kunst dient, als dass sie unsere gewohnte Wahrnehmung aufbricht.\nHerr Rauch: Entscheidend ist für mich nicht das Werk selbst, sondern was es im Betrachter auslöst.",
+        },
+      ],
+      questions: [
+        {
+          id: "q1",
+          kind: "match",
+          stem: "Wer betont die Wirkung der Kunst auf den Betrachter?",
+          options: [
+            { id: "a", text: "Herr Rauch" },
+            { id: "b", text: "Frau Adorján" },
+            { id: "c", text: "Herr Veit" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          kind: "match",
+          stem: "Wer widerspricht der Vorstellung von der zweckfreien Kunst?",
+          options: [
+            { id: "a", text: "Herr Veit" },
+            { id: "b", text: "Frau Mende" },
+            { id: "c", text: "Herr Rauch" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Erfasse die feinen Unterschiede zwischen verwandten Positionen.",
+  },
+  {
+    level: "C2",
+    module: "LESEN",
+    taskType: "LESEN_DETAIL",
+    title: "Ein Essay: Die Illusion der Kontrolle",
+    prompt: "Lies den Essay und wähle für jede Frage die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "gesundheit",
+    payload: {
+      passages: [
+        {
+          id: "p1",
+          heading: "Wer hat hier das Steuer?",
+          body:
+            "Der moderne Mensch ist besessen von Kontrolle. Wir vermessen unseren Schlaf, optimieren unsere Ernährung und planen unsere Tage bis in die Zwischenräume hinein, als ließe sich das Leben restlos beherrschen, sofern man es nur klug genug organisiert. Diese Anstrengung ist nicht grundlos — vieles lässt sich tatsächlich gestalten. Doch sie ruht auf einer Selbsttäuschung. Das Entscheidende entzieht sich der Planung: wen wir lieben, was uns widerfährt, wann uns eine Idee zufällt. Gerade die kostbarsten Erfahrungen verdanken sich nicht der Kontrolle, sondern ihrem Gegenteil — der Bereitschaft, sich überraschen zu lassen. Wer das Leben zwingt, sich seinem Plan zu fügen, erntet am Ende oft nur die Erfüllung seiner ohnehin begrenzten Erwartungen. Vielleicht liegt eine reifere Form von Souveränität nicht im Mehr an Kontrolle, sondern in der Gelassenheit gegenüber dem, was sich ihr ohnehin entzieht.",
+        },
+      ],
+      questions: [
+        {
+          id: "q1",
+          kind: "mcq",
+          stem: "Worauf beruht laut Autor das Streben nach totaler Kontrolle?",
+          options: [
+            { id: "a", text: "auf einer Selbsttäuschung, da sich das Entscheidende der Planung entzieht" },
+            { id: "b", text: "auf wissenschaftlich gesicherten Tatsachen" },
+            { id: "c", text: "auf reiner Faulheit" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          kind: "mcq",
+          stem: "Worin sieht der Autor eine reifere Form von Souveränität?",
+          options: [
+            { id: "a", text: "in der Gelassenheit gegenüber dem Unkontrollierbaren" },
+            { id: "b", text: "in noch mehr Planung" },
+            { id: "c", text: "im völligen Verzicht auf jede Gestaltung" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Die These steht im Schlusssatz, eingeleitet durch „Vielleicht …“.",
+  },
+  {
+    level: "C2",
+    module: "LESEN",
+    taskType: "LESEN_GLOBAL",
+    title: "Eine Kolumne: Ironie und Ernst",
+    prompt: "Lies die Kolumne und wähle die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "alltag",
+    payload: {
+      passages: [
+        {
+          id: "p1",
+          heading: "Die Angst vor dem Pathos",
+          body:
+            "Es gilt heute als peinlich, etwas vorbehaltlos ernst zu meinen. Wer sich begeistert, schiebt sicherheitshalber ein ironisches Augenzwinkern hinterher, um nicht naiv zu wirken. Die Ironie, einst ein Mittel der Kritik, ist zur Schutzhaltung geworden — zur Methode, sich nicht festlegen zu müssen und damit unangreifbar zu bleiben. Wer nichts ganz ernst meint, kann auch nicht widerlegt, nicht verletzt, nicht enttäuscht werden. Doch dieser Schutz hat seinen Preis. Wer sich nie bloßstellt, geht auch kein Wagnis ein, und ohne Wagnis bleibt alles unverbindlich. Es geht mir nicht darum, die Ironie zu verteufeln; sie bleibt unentbehrlich, wo sie Heuchelei entlarvt. Wohl aber täte uns der Mut gut, gelegentlich etwas zu meinen, wie wir es sagen — auf die Gefahr hin, uns zu irren. Denn nur wer sich angreifbar macht, kann auch etwas gewinnen.",
+        },
+      ],
+      questions: [
+        {
+          id: "q1",
+          kind: "mcq",
+          stem: "Was kritisiert die Autorin an der heutigen Ironie?",
+          options: [
+            { id: "a", text: "Sie ist zur Schutzhaltung geworden, die jede Festlegung vermeidet." },
+            { id: "b", text: "Sie ist als Mittel der Kritik völlig wertlos." },
+            { id: "c", text: "Sie wird zu selten verwendet." },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Die Autorin grenzt ihre Kritik ein („Es geht mir nicht darum …“), bevor sie ihr Plädoyer formuliert.",
+  },
+  {
+    level: "C2",
+    module: "LESEN",
+    taskType: "LESEN_DETAIL",
+    title: "Ein Essay: Sprache und Wahrnehmung",
+    prompt: "Lies den Essay und wähle für jede Frage die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "lernen",
+    payload: {
+      passages: [
+        {
+          id: "p1",
+          heading: "Worte, die die Welt formen",
+          body:
+            "Die Vorstellung, unsere Sprache forme, wie wir die Welt wahrnehmen, übt eine eigentümliche Faszination aus. In ihrer starken Form behauptet sie, wir könnten nur denken, wofür uns Worte zur Verfügung stehen. So verlockend diese These ist, so wenig hält sie der Prüfung stand: Auch ohne fertiges Wort lassen sich Unterscheidungen treffen, und neue Begriffe werden geprägt, eben weil das Bezeichnete bereits empfunden wird. Verabschiedet man jedoch die starke Behauptung, bleibt eine schwächere, die umso ernster zu nehmen ist: Sprache lenkt unsere Aufmerksamkeit. Sie macht manche Unterscheidungen bequem und andere mühsam, und worauf hinzuweisen ein Wort bereitsteht, das fällt uns eher auf. Sprache determiniert das Denken also nicht, aber sie kanalisiert es. Wer dies erkennt, wird die eigene Sprache weder für ein Gefängnis halten noch für ein bloßes Werkzeug, sondern für einen Mitspieler, dessen Vorlieben man kennen sollte.",
+        },
+      ],
+      questions: [
+        {
+          id: "q1",
+          kind: "mcq",
+          stem: "Warum lehnt der Autor die „starke Form“ der These ab?",
+          options: [
+            { id: "a", text: "weil man auch ohne fertiges Wort Unterscheidungen treffen kann" },
+            { id: "b", text: "weil Sprache überhaupt keinen Einfluss hat" },
+            { id: "c", text: "weil neue Begriffe nie entstehen" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          kind: "mcq",
+          stem: "Wie beschreibt der Autor das Verhältnis von Sprache und Denken?",
+          options: [
+            { id: "a", text: "Sprache determiniert das Denken nicht, kanalisiert es aber." },
+            { id: "b", text: "Sprache bestimmt das Denken vollständig." },
+            { id: "c", text: "Sprache und Denken sind völlig unabhängig." },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Der Autor verwirft die starke und stützt die schwache Version der These.",
+  },
+  {
+    level: "C2",
+    module: "LESEN",
+    taskType: "LESEN_TRUE_FALSE",
+    title: "Ein Text über das Recht zu vergessen",
+    prompt: "Lies den Text. Sind die Sätze richtig oder falsch?",
+    difficulty: "STRETCH",
+    topicTag: "alltag",
+    payload: {
+      passages: [
+        {
+          id: "p1",
+          heading: "Wenn nichts mehr verfällt",
+          body:
+            "Lange galt das Vergessen als Makel, als Versagen eines Gedächtnisses, das eigentlich alles bewahren sollte. Erst die digitale Speicherung, die nichts mehr verfallen lässt, lehrt uns den Wert des Vergessens neu schätzen. Denn ein Leben, in dem jede unbedachte Äußerung auf Dauer abrufbar bleibt, kennt keine Gnade des Neuanfangs. Wer einmal gefehlt hat, bleibt für immer auffindbar damit verbunden. Das Vergessen aber ist nicht bloß ein Mangel, sondern eine Leistung: Es erlaubt uns, uns zu wandeln, ohne ewig an unser früheres Ich gekettet zu sein. Eine Gesellschaft, die alles aufzeichnet, läuft Gefahr, ihren Mitgliedern eben jene Veränderung zu verwehren, die sie zugleich von ihnen verlangt. Das vielzitierte „Recht auf Vergessenwerden“ ist insofern kein technisches Detail, sondern die Verteidigung einer zutiefst menschlichen Möglichkeit.",
+        },
+      ],
+      questions: [
+        {
+          id: "q1",
+          kind: "truefalse",
+          stem: "Laut Text ist das Vergessen nicht nur ein Mangel, sondern auch eine Leistung.",
+          options: [
+            { id: "r", text: "Richtig" },
+            { id: "f", text: "Falsch" },
+          ],
+          answer: "r",
+        },
+        {
+          id: "q2",
+          kind: "truefalse",
+          stem: "Der Autor hält das „Recht auf Vergessenwerden“ für ein unwichtiges technisches Detail.",
+          options: [
+            { id: "r", text: "Richtig" },
+            { id: "f", text: "Falsch" },
+          ],
+          answer: "f",
+        },
+      ],
+    },
+    guidanceNote: "„nicht bloß … sondern …“ wertet das Vergessen um.",
+  },
+  {
+    level: "C2",
+    module: "LESEN",
+    taskType: "LESEN_DETAIL",
+    title: "Ein Essay: Fortschritt und Wehmut",
+    prompt: "Lies den Essay und wähle für jede Frage die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "umwelt",
+    payload: {
+      passages: [
+        {
+          id: "p1",
+          heading: "Was der Gewinn verbirgt",
+          body:
+            "Jeder Fortschritt hat seinen Preis, und er besteht selten nur in Geld. Mit jeder neuen Möglichkeit verschwindet zugleich eine alte Selbstverständlichkeit. Die ständige Erreichbarkeit etwa, zweifellos ein Gewinn, hat die wohltuende Gewissheit zerstört, einmal nicht erreichbar sein zu dürfen. Solche Verluste werden selten verbucht, weil sie sich schlecht beziffern lassen und weil derjenige, der sie beklagt, leicht als rückständig erscheint. Doch wer ausschließlich den Zuwachs sieht und die stillen Verluste übergeht, versteht den Wandel nur zur Hälfte. Es geht dabei nicht darum, den Fortschritt zu bremsen — das wäre weder möglich noch wünschenswert. Wohl aber täte uns ein nüchternerer Blick gut, der den Gewinn nicht feiert, ohne nach dem zu fragen, was er kostet. Erst wer beides in Rechnung stellt, kann mündig entscheiden, welchen Fortschritt er will.",
+        },
+      ],
+      questions: [
+        {
+          id: "q1",
+          kind: "mcq",
+          stem: "Warum werden die „stillen Verluste“ laut Text selten beachtet?",
+          options: [
+            { id: "a", text: "weil sie sich schlecht beziffern lassen und Kritik als rückständig gilt" },
+            { id: "b", text: "weil es sie gar nicht gibt" },
+            { id: "c", text: "weil sie immer in Geld messbar sind" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          kind: "mcq",
+          stem: "Was fordert der Autor?",
+          options: [
+            { id: "a", text: "einen nüchternen Blick, der Gewinn und Kosten zugleich bedenkt" },
+            { id: "b", text: "den Fortschritt grundsätzlich zu stoppen" },
+            { id: "c", text: "nur noch den Gewinn zu sehen" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Der Autor lehnt sowohl Fortschrittseuphorie als auch Fortschrittsfeindschaft ab.",
+  },
+  {
+    level: "C2",
+    module: "LESEN",
+    taskType: "LESEN_MATCHING",
+    title: "Essays für anspruchsvolle Leser",
+    prompt: "Lies die Beschreibungen und ordne jeder Person den passenden Essay zu.",
+    difficulty: "CORE",
+    topicTag: "freizeit",
+    payload: {
+      passages: [
+        {
+          id: "p1",
+          heading: "Vier Essaybände im Überblick",
+          body:
+            "A: Eine sprachmächtige Sammlung über die Kunst des Müßiggangs, gegen den Kult der Geschäftigkeit.\nB: Scharfsinnige Analysen zur Rolle der Technik, eher nüchtern als poetisch, mit vielen Belegen.\nC: Persönlich gefärbte Betrachtungen über das Reisen, weniger Argument als Stimmung.\nD: Pointierte Streitschriften zu politischen Streitfragen, bewusst zugespitzt und provokant.",
+        },
+      ],
+      questions: [
+        {
+          id: "q1",
+          kind: "match",
+          stem: "Herr Tan schätzt nüchterne, gut belegte Argumentation über gesellschaftliche Fragen. Welcher Band passt?",
+          options: [
+            { id: "a", text: "Band B" },
+            { id: "b", text: "Band C" },
+            { id: "c", text: "Band A" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          kind: "match",
+          stem: "Frau Bauer liest gern stimmungsvolle, persönliche Texte ohne starken Argumentationsdruck. Welcher Band passt?",
+          options: [
+            { id: "a", text: "Band C" },
+            { id: "b", text: "Band D" },
+            { id: "c", text: "Band B" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Achte auf den Ton (nüchtern, poetisch, provokant) und die Erwartung der Person.",
+  },
+  {
+    level: "C2",
+    module: "LESEN",
+    taskType: "LESEN_DETAIL",
+    title: "Ein Essay: Die Grenzen des Mitgefühls",
+    prompt: "Lies den Essay und wähle für jede Frage die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "person",
+    payload: {
+      passages: [
+        {
+          id: "p1",
+          heading: "Wen wir fühlen lassen",
+          body:
+            "Das Mitgefühl gilt zu Recht als moralische Quelle. Doch es hat eine Eigenheit, die wir ungern zugeben: Es ist parteiisch. Wir fühlen mit dem Einzelnen, dessen Gesicht wir sehen, weit stärker als mit der anonymen Vielen, deren Leid sich nur in Zahlen fassen lässt. Ein einziges Schicksal rührt uns zu Tränen, während uns die Statistik eines weit größeren Elends merkwürdig kaltlässt. Diese Schieflage ist kein moralisches Versagen Einzelner, sondern in unserer Wahrnehmung angelegt. Wer daraus folgert, man müsse das Mitgefühl durch kühle Vernunft ersetzen, verkennt jedoch dessen unersetzlichen Antrieb. Sinnvoller erscheint es, beides zusammenzubringen: das Mitgefühl, das uns überhaupt erst bewegt, und die Vernunft, die korrigiert, wohin es uns blind führen würde. Nicht die Abschaffung des Gefühls also, sondern seine Schulung ist die Aufgabe.",
+        },
+      ],
+      questions: [
+        {
+          id: "q1",
+          kind: "mcq",
+          stem: "Welche „Eigenheit“ des Mitgefühls beschreibt der Autor?",
+          options: [
+            { id: "a", text: "Es ist parteiisch und reagiert stärker auf das einzelne Schicksal als auf die Statistik." },
+            { id: "b", text: "Es ist immer völlig gerecht." },
+            { id: "c", text: "Es betrifft nur große Gruppen." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          kind: "mcq",
+          stem: "Was schlägt der Autor als Aufgabe vor?",
+          options: [
+            { id: "a", text: "Mitgefühl und Vernunft zusammenzubringen, nicht das Gefühl abzuschaffen" },
+            { id: "b", text: "das Mitgefühl durch reine Vernunft zu ersetzen" },
+            { id: "c", text: "auf jede Vernunft zu verzichten" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„nicht … sondern …“ formuliert die abschließende These.",
+  },
+  {
+    level: "C2",
+    module: "LESEN",
+    taskType: "LESEN_GLOBAL",
+    title: "Eine Reflexion: Die Beschleunigung der Zeit",
+    prompt: "Lies den Text und wähle die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "alltag",
+    payload: {
+      passages: [
+        {
+          id: "p1",
+          heading: "Warum die Zeit zu rennen scheint",
+          body:
+            "Dass uns die Zeit immer schneller zu vergehen scheint, ist eine verbreitete Klage. Erstaunlicherweise widerspricht ihr der nüchterne Befund: Wir verfügen heute über mehr freie Zeit als frühere Generationen. Wie passt das zusammen? Die Lösung liegt nicht in der Menge, sondern in der Dichte. Weil sich uns unzählige Möglichkeiten eröffnen, jede Stunde anders zu verbringen, entsteht das quälende Gefühl, jede Wahl sei zugleich der Verzicht auf tausend andere. Nicht der Mangel an Zeit drückt uns, sondern der Überfluss an Optionen. Wer das begreift, dem hilft kein besseres Zeitmanagement, sondern allein die Kunst des Weglassens — die Bereitschaft, vieles bewusst nicht zu tun. Paradoxerweise gewinnt Zeit zurück, wer aufhört, sie maximal nutzen zu wollen.",
+        },
+      ],
+      questions: [
+        {
+          id: "q1",
+          kind: "mcq",
+          stem: "Worin liegt laut Text der eigentliche Grund für das Gefühl der Zeitknappheit?",
+          options: [
+            { id: "a", text: "im Überfluss an Optionen, nicht im Mangel an Zeit" },
+            { id: "b", text: "im tatsächlichen Mangel an freier Zeit" },
+            { id: "c", text: "in schlechtem Zeitmanagement" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Die paradoxe Pointe steht im Schlusssatz.",
+  },
+  {
+    level: "C2",
+    module: "LESEN",
+    taskType: "LESEN_DETAIL",
+    title: "Ein Essay: Das Paradox der Toleranz",
+    prompt: "Lies den Essay und wähle für jede Frage die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "alltag",
+    payload: {
+      passages: [
+        {
+          id: "p1",
+          heading: "Wie viel Unduldsamkeit verträgt die Toleranz?",
+          body:
+            "Toleranz gilt als unbestrittene Tugend offener Gesellschaften. Doch sie birgt einen Widerspruch, der sich nicht leichthin auflösen lässt. Eine Toleranz, die auch das Intolerante duldet, untergräbt am Ende sich selbst, denn sie gewährt jenen Raum, die genau diesen Raum für alle anderen schließen wollen. Grenzenlose Duldsamkeit schlägt so in ihr Gegenteil um. Wer dies erkennt, gerät freilich in eine heikle Lage: Wo verläuft die Grenze, jenseits derer Toleranz nicht mehr Tugend, sondern Selbstaufgabe wäre? Die Versuchung ist groß, sie willkürlich dort zu ziehen, wo einem das Geduldete ohnehin missfällt. Eben deshalb verlangt das Paradox keine bequeme Formel, sondern fortwährende Wachsamkeit. Toleranz ist kein Zustand, den man einmal erreicht, sondern eine Anstrengung, die sich immer wieder neu rechtfertigen muss — gerade dort, wo sie an ihre eigenen Grenzen stößt.",
+        },
+      ],
+      questions: [
+        {
+          id: "q1",
+          kind: "mcq",
+          stem: "Worin besteht das beschriebene Paradox der Toleranz?",
+          options: [
+            { id: "a", text: "Grenzenlose Toleranz duldet auch das Intolerante und untergräbt sich dadurch selbst." },
+            { id: "b", text: "Toleranz ist immer leicht und widerspruchsfrei." },
+            { id: "c", text: "Toleranz sollte ganz abgeschafft werden." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          kind: "mcq",
+          stem: "Was folgt daraus laut Autor?",
+          options: [
+            { id: "a", text: "Toleranz verlangt fortwährende Wachsamkeit statt einer bequemen Formel." },
+            { id: "b", text: "Man sollte die Grenze willkürlich ziehen." },
+            { id: "c", text: "Toleranz ist ein endgültig erreichbarer Zustand." },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Der Autor verweigert eine „bequeme Formel“ und fordert dauerhafte Reflexion.",
+  },
+  {
+    level: "C2",
+    module: "LESEN",
+    taskType: "LESEN_TRUE_FALSE",
+    title: "Ein Text über Kunst und Moral",
+    prompt: "Lies den Text. Sind die Sätze richtig oder falsch?",
+    difficulty: "STRETCH",
+    topicTag: "freizeit",
+    payload: {
+      passages: [
+        {
+          id: "p1",
+          heading: "Darf große Kunst von zweifelhaften Menschen stammen?",
+          body:
+            "Immer wieder entzündet sich Streit an der Frage, ob sich das Werk vom Charakter seines Schöpfers trennen lässt. Die eine Seite besteht darauf, ein moralisch fragwürdiges Leben entwerte auch das Werk. Die andere beharrt auf der Autonomie der Kunst: Ein Gemälde sei schön oder nicht, gleichgültig, wer es gemalt habe. Beide Positionen greifen zu kurz. Es wäre naiv, so zu tun, als wüssten wir nichts über den Urheber; dieses Wissen färbt unweigerlich auf die Wahrnehmung ab. Ebenso verfehlt aber wäre es, ein Werk allein nach der Biografie seines Schöpfers zu beurteilen, denn dann bliebe von der Kunstgeschichte wenig übrig. Vielleicht besteht die reifere Haltung darin, die Spannung auszuhalten, statt sie vorschnell zugunsten einer Seite aufzulösen.",
+        },
+      ],
+      questions: [
+        {
+          id: "q1",
+          kind: "truefalse",
+          stem: "Der Autor schließt sich klar einer der beiden Positionen an.",
+          options: [
+            { id: "r", text: "Richtig" },
+            { id: "f", text: "Falsch" },
+          ],
+          answer: "f",
+        },
+        {
+          id: "q2",
+          kind: "truefalse",
+          stem: "Laut Autor färbt das Wissen über den Urheber unweigerlich auf die Wahrnehmung ab.",
+          options: [
+            { id: "r", text: "Richtig" },
+            { id: "f", text: "Falsch" },
+          ],
+          answer: "r",
+        },
+      ],
+    },
+    guidanceNote: "„Beide Positionen greifen zu kurz“ — der Autor bezieht keine der beiden Seiten.",
+  },
+  {
+    level: "C2",
+    module: "LESEN",
+    taskType: "LESEN_DETAIL",
+    title: "Ein Essay: Vom Nutzen des Nutzlosen",
+    prompt: "Lies den Essay und wähle für jede Frage die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "lernen",
+    payload: {
+      passages: [
+        {
+          id: "p1",
+          heading: "Wozu das alles?",
+          body:
+            "In einer Welt, die alles nach seinem Nutzen bemisst, gerät unter Verdacht, was sich nicht unmittelbar verwerten lässt. Wozu Gedichte lesen, wozu sich mit toten Sprachen plagen, wozu über Fragen grübeln, die keine praktische Antwort zulassen? Die Frage ist verständlich und doch von eigentümlicher Engstirnigkeit. Sie unterstellt, der Wert einer Sache liege in ihrer Verwendbarkeit für etwas anderes. Eben dies trifft aber auf das Wertvollste nicht zu. Eine Freundschaft, die man pflegt, um Vorteile zu erlangen, ist keine; eine Neugier, die nur fragt, was sich verkaufen lässt, hat aufgehört, Neugier zu sein. Das vermeintlich Nutzlose ist oft das, was dem Leben überhaupt erst Sinn verleiht — nicht als Mittel zu einem Zweck, sondern als Zweck in sich. Eine Gesellschaft, die das vergisst, mag effizient werden; reich im eigentlichen Sinne wird sie nicht.",
+        },
+      ],
+      questions: [
+        {
+          id: "q1",
+          kind: "mcq",
+          stem: "Welche Annahme kritisiert der Autor an der Nutzenfrage?",
+          options: [
+            { id: "a", text: "dass der Wert einer Sache allein in ihrer Verwendbarkeit für etwas anderes liege" },
+            { id: "b", text: "dass Effizienz wichtig sei" },
+            { id: "c", text: "dass man Sprachen lernen könne" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          kind: "mcq",
+          stem: "Wie beschreibt der Autor das vermeintlich Nutzlose?",
+          options: [
+            { id: "a", text: "als Zweck in sich, der dem Leben Sinn verleiht" },
+            { id: "b", text: "als reines Mittel zu einem Zweck" },
+            { id: "c", text: "als grundsätzlich wertlos" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„nicht als Mittel zu einem Zweck, sondern als Zweck in sich“ ist der Kern.",
+  },
 ];
 
 async function main() {

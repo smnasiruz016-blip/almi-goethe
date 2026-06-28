@@ -1427,6 +1427,296 @@ export const ITEMS: Prisma.GoetheItemCreateManyInput[] = [
     },
     guidanceNote: "Erkenne auch die Vorteile des Optimierens an — das macht deine Kritik glaubwürdiger.",
   },
+
+  // ===================== C2 =====================
+  {
+    level: "C2",
+    module: "SCHREIBEN",
+    taskType: "SCHREIBEN_ESSAY",
+    title: "Erörterung: Wahlfreiheit – Segen oder Überforderung?",
+    prompt: "Schreib eine anspruchsvolle Erörterung auf Deutsch (circa 300 Wörter).",
+    difficulty: "STRETCH",
+    topicTag: "person",
+    payload: {
+      situation:
+        "Eine intellektuelle Zeitschrift bittet um Beiträge zu der These: „Die grenzenlose Freiheit der Wahl macht die Menschen nicht freier, sondern unsicherer.“",
+      instruction:
+        "Verfasse eine Erörterung. Entfalte das Problem differenziert, entwickle eine eigene, nuancierte These, stütze sie mit tragfähigen Argumenten und treffenden Beispielen, setze dich ernsthaft mit der stärksten Gegenposition auseinander, und schließe mit einem abgewogenen Fazit. Achte auf einen gehobenen, präzisen Stil und kohärente gedankliche Übergänge.",
+      wordMin: 270,
+      wordMax: 350,
+    },
+    guidanceNote: "C2: nuancierte These, gehobener Stil, souveräne Konnektoren (gleichwohl, insofern, mithin), beide Extreme meiden.",
+  },
+  {
+    level: "C2",
+    module: "SCHREIBEN",
+    taskType: "SCHREIBEN_ESSAY",
+    title: "Erörterung: Die Grenzen des Messbaren",
+    prompt: "Schreib eine anspruchsvolle Erörterung auf Deutsch (circa 300 Wörter).",
+    difficulty: "STRETCH",
+    topicTag: "lernen",
+    payload: {
+      situation:
+        "In einer Debatte heißt es, in Bildung und Verwaltung solle möglichst alles in messbaren Kennzahlen erfasst werden, da nur das Messbare steuerbar sei.",
+      instruction:
+        "Verfasse eine Erörterung. Würdige zunächst den berechtigten Kern dieser Forderung, lege dann ihre Grenzen dar, illustriere beides mit Beispielen, gehe auf den Einwand ein, ohne Messung herrsche Willkür, und entwickle eine eigene, vermittelnde Position. Schließe mit einem prägnanten Fazit.",
+      wordMin: 270,
+      wordMax: 350,
+    },
+    guidanceNote: "Anerkenne den Nutzen des Messens, bevor du seine Grenzen aufzeigst.",
+  },
+  {
+    level: "C2",
+    module: "SCHREIBEN",
+    taskType: "SCHREIBEN_LETTER",
+    title: "Formelle Stellungnahme an eine Redaktion",
+    prompt: "Schreib eine formelle, sachlich-argumentative E-Mail auf Deutsch (circa 200 Wörter).",
+    difficulty: "STRETCH",
+    topicTag: "alltag",
+    payload: {
+      situation:
+        "Eine Zeitung hat einen Kommentar veröffentlicht, der ehrenamtliches Engagement pauschal als naiv darstellt. Du möchtest dem in einer Zuschrift sachlich widersprechen.",
+      instruction:
+        "Schreib eine formelle Zuschrift an die Redaktion. Nimm höflich, aber bestimmt Bezug auf den Kommentar, würdige zunächst, was an ihm zutreffend ist, widerlege dann seine Hauptthese mit nachvollziehbaren Argumenten, und schließe mit einer pointierten Schlussbemerkung. Wahre durchgehend einen sachlichen, gehobenen Ton.",
+      wordMin: 180,
+      wordMax: 240,
+    },
+    guidanceNote: "Eine faire Würdigung der Gegenseite macht den Widerspruch glaubwürdiger.",
+  },
+  {
+    level: "C2",
+    module: "SCHREIBEN",
+    taskType: "SCHREIBEN_ESSAY",
+    title: "Erörterung: Das Gebot, authentisch zu sein",
+    prompt: "Schreib eine anspruchsvolle Erörterung auf Deutsch (circa 300 Wörter).",
+    difficulty: "STRETCH",
+    topicTag: "alltag",
+    payload: {
+      situation:
+        "Überall wird gefordert, man solle „authentisch“ sein, ganz man selbst. Manche sehen darin eine Befreiung, andere einen subtilen neuen Zwang.",
+      instruction:
+        "Verfasse eine Erörterung. Kläre, was unter Authentizität verstanden wird, prüfe die Annahme eines „wahren Selbst“ kritisch, entwickle eine eigene Position, belege sie mit Beispielen oder Beobachtungen, berücksichtige Gegenargumente, und schließe mit einem reflektierten Fazit.",
+      wordMin: 270,
+      wordMax: 350,
+    },
+    guidanceNote: "Hinterfrage die Voraussetzung der These (das „wahre Selbst“), statt sie zu übernehmen.",
+  },
+  {
+    level: "C2",
+    module: "SCHREIBEN",
+    taskType: "SCHREIBEN_ESSAY",
+    title: "Erörterung: Das Paradox der Toleranz",
+    prompt: "Schreib eine anspruchsvolle Erörterung auf Deutsch (circa 300 Wörter).",
+    difficulty: "STRETCH",
+    topicTag: "alltag",
+    payload: {
+      situation:
+        "Eine offene Gesellschaft beruft sich auf Toleranz. Doch es stellt sich die Frage, ob eine Toleranz, die auch das Intolerante duldet, sich nicht selbst untergräbt.",
+      instruction:
+        "Verfasse eine Erörterung. Stelle das Paradox klar heraus, erörtere mögliche Auswege, weise auf die Gefahr willkürlicher Grenzziehung hin, entwickle eine eigene, differenzierte Position, und schließe mit einem Fazit, das die Spannung nicht vorschnell auflöst.",
+      wordMin: 270,
+      wordMax: 350,
+    },
+    guidanceNote: "Verweigere die „bequeme Formel“ — gerade hier überzeugt eine reflektierte Offenheit.",
+  },
+  {
+    level: "C2",
+    module: "SCHREIBEN",
+    taskType: "SCHREIBEN_LETTER",
+    title: "Formelle Eingabe zur Erhaltung einer Kultureinrichtung",
+    prompt: "Schreib eine formelle, argumentative E-Mail auf Deutsch (circa 200 Wörter).",
+    difficulty: "STRETCH",
+    topicTag: "freizeit",
+    payload: {
+      situation:
+        "Die Stadt erwägt, ein traditionsreiches kleines Theater aus Spargründen zu schließen. Du verfasst als Bürger eine begründete Eingabe an den Stadtrat.",
+      instruction:
+        "Schreib eine formelle Eingabe. Erkenne die schwierige Haushaltslage ausdrücklich an, lege überzeugend dar, welchen unersetzlichen Wert die Einrichtung hat, entkräfte den scheinbaren Gegensatz zwischen Kultur und anderen Aufgaben, schlage eine Kompromisslösung vor, und bitte um eine erneute Prüfung.",
+      wordMin: 180,
+      wordMax: 240,
+    },
+    guidanceNote: "Entkräfte den „falschen Gegensatz“ zwischen Kultur und anderen Ausgaben.",
+  },
+  {
+    level: "C2",
+    module: "SCHREIBEN",
+    taskType: "SCHREIBEN_ESSAY",
+    title: "Erörterung: Hat jeder Fortschritt seinen Preis?",
+    prompt: "Schreib eine anspruchsvolle Erörterung auf Deutsch (circa 300 Wörter).",
+    difficulty: "STRETCH",
+    topicTag: "umwelt",
+    payload: {
+      situation:
+        "Es wird behauptet, jeder technische Fortschritt bringe stille Verluste mit sich, die selten verbucht werden, weil sie sich schlecht beziffern lassen.",
+      instruction:
+        "Verfasse eine Erörterung. Prüfe diese These, entwickle eine eigene Position, illustriere die stillen Kosten ebenso wie die Gewinne an Beispielen, wende dich gegen eine pauschale Fortschrittsfeindschaft, und schließe mit einem Plädoyer für einen nüchternen, abwägenden Blick.",
+      wordMin: 270,
+      wordMax: 350,
+    },
+    guidanceNote: "Lehne sowohl Fortschrittseuphorie als auch Fortschrittsfeindschaft ab.",
+  },
+  {
+    level: "C2",
+    module: "SCHREIBEN",
+    taskType: "SCHREIBEN_ESSAY",
+    title: "Erörterung: Werk und Charakter des Künstlers",
+    prompt: "Schreib eine anspruchsvolle Erörterung auf Deutsch (circa 300 Wörter).",
+    difficulty: "STRETCH",
+    topicTag: "freizeit",
+    payload: {
+      situation:
+        "Immer wieder wird gestritten, ob sich ein Kunstwerk vom moralisch fragwürdigen Leben seines Schöpfers trennen lässt.",
+      instruction:
+        "Verfasse eine Erörterung. Stelle die beiden gängigen Extrempositionen dar, zeige, warum beide zu kurz greifen, entwickle eine eigene, vermittelnde Haltung, illustriere sie mit Beispielen, und schließe mit einem Fazit, das die Spannung anerkennt.",
+      wordMin: 270,
+      wordMax: 350,
+    },
+    guidanceNote: "Beide Extrempositionen greifen zu kurz — entwickle eine reflektierte dritte Haltung.",
+  },
+  {
+    level: "C2",
+    module: "SCHREIBEN",
+    taskType: "SCHREIBEN_LETTER",
+    title: "Formelle Reklamation mit Nachdruck",
+    prompt: "Schreib eine formelle E-Mail auf Deutsch (circa 200 Wörter).",
+    difficulty: "STRETCH",
+    topicTag: "alltag",
+    payload: {
+      situation:
+        "Ein Bildungsanbieter hat dir trotz schriftlicher Kündigung erneut eine Jahresgebühr berechnet und reagiert seit Wochen ausweichend auf deine Nachfragen.",
+      instruction:
+        "Schreib eine formelle Reklamation mit angemessenem Nachdruck. Schildere den Sachverhalt präzise und chronologisch, benenne klar das Fehlverhalten, fordere die Rückerstattung samt Frist, behalte dabei einen kühlen, sachlichen Ton, und kündige verhältnismäßige weitere Schritte an, falls keine Reaktion erfolgt.",
+      wordMin: 180,
+      wordMax: 240,
+    },
+    guidanceNote: "Nachdruck entsteht durch Präzision und Sachlichkeit, nicht durch Schärfe im Ton.",
+  },
+  {
+    level: "C2",
+    module: "SCHREIBEN",
+    taskType: "SCHREIBEN_ESSAY",
+    title: "Erörterung: Vom Wert des Nutzlosen",
+    prompt: "Schreib eine anspruchsvolle Erörterung auf Deutsch (circa 300 Wörter).",
+    difficulty: "STRETCH",
+    topicTag: "lernen",
+    payload: {
+      situation:
+        "In einer Welt, die alles nach seinem Nutzen bemisst, gerät unter Verdacht, was sich nicht unmittelbar verwerten lässt — von der Poesie bis zur zweckfreien Neugier.",
+      instruction:
+        "Verfasse eine Erörterung. Lege dar, worin die Engstirnigkeit der reinen Nutzenfrage besteht, entwickle eine eigene Position, illustriere sie an Beispielen wie Freundschaft oder Neugier, gehe auf den Einwand der Effizienz ein, und schließe mit einem prägnanten Fazit.",
+      wordMin: 270,
+      wordMax: 350,
+    },
+    guidanceNote: "Unterscheide „Mittel zum Zweck“ und „Zweck in sich“ — darin liegt der Kern.",
+  },
+  {
+    level: "C2",
+    module: "SCHREIBEN",
+    taskType: "SCHREIBEN_ESSAY",
+    title: "Erörterung: Individuum und Gemeinschaft",
+    prompt: "Schreib eine anspruchsvolle Erörterung auf Deutsch (circa 300 Wörter).",
+    difficulty: "STRETCH",
+    topicTag: "alltag",
+    payload: {
+      situation:
+        "Die Selbstverwirklichung des Einzelnen gilt heute als hohes Gut. Manche warnen jedoch, dass Freiheit ohne Bindung in Vereinzelung umschlagen könne.",
+      instruction:
+        "Verfasse eine Erörterung. Stelle das Spannungsverhältnis zwischen individueller Freiheit und Verantwortung für die Gemeinschaft dar, lehne die jeweiligen Extreme begründet ab, entwickle eine vermittelnde Position, belege sie, und schließe mit einem abgewogenen Fazit.",
+      wordMin: 270,
+      wordMax: 350,
+    },
+    guidanceNote: "„Nicht das eine gegen das andere, sondern beides zugleich“ — strebe eine Synthese an.",
+  },
+  {
+    level: "C2",
+    module: "SCHREIBEN",
+    taskType: "SCHREIBEN_LETTER",
+    title: "Formelle Bewerbung um eine anspruchsvolle Position",
+    prompt: "Schreib ein formelles Anschreiben auf Deutsch (circa 210 Wörter).",
+    difficulty: "STRETCH",
+    topicTag: "arbeit",
+    payload: {
+      situation:
+        "Du bewirbst dich um eine verantwortungsvolle Stelle, die neben fachlicher Kompetenz ausdrücklich kommunikatives Geschick und Eigenverantwortung verlangt.",
+      instruction:
+        "Schreib ein überzeugendes Anschreiben. Stelle prägnant deinen Hintergrund dar, lege anhand konkreter Belege dar, inwiefern du die geforderten Kompetenzen mitbringst, formuliere deine Motivation, ohne in Floskeln zu verfallen, und bitte um ein persönliches Gespräch. Achte auf einen souveränen, präzisen Stil.",
+      wordMin: 190,
+      wordMax: 250,
+    },
+    guidanceNote: "Belege Kompetenzen mit konkreten Beispielen statt mit bloßen Behauptungen.",
+  },
+  {
+    level: "C2",
+    module: "SCHREIBEN",
+    taskType: "SCHREIBEN_ESSAY",
+    title: "Erörterung: Freiheit oder Sicherheit?",
+    prompt: "Schreib eine anspruchsvolle Erörterung auf Deutsch (circa 300 Wörter).",
+    difficulty: "STRETCH",
+    topicTag: "alltag",
+    payload: {
+      situation:
+        "In Debatten über Überwachung und Datenschutz wird Freiheit häufig gegen Sicherheit ausgespielt, als müsse man sich zwischen beiden entscheiden.",
+      instruction:
+        "Verfasse eine Erörterung. Hinterfrage den unterstellten Gegensatz, erörtere, in welchem Verhältnis Freiheit und Sicherheit tatsächlich stehen, entwickle eine eigene Position, illustriere sie, gehe auf Gegenargumente ein, und schließe mit einem differenzierten Fazit.",
+      wordMin: 270,
+      wordMax: 350,
+    },
+    guidanceNote: "Prüfe, ob der Gegensatz „Freiheit gegen Sicherheit“ überhaupt zutrifft.",
+  },
+  {
+    level: "C2",
+    module: "SCHREIBEN",
+    taskType: "SCHREIBEN_ESSAY",
+    title: "Erörterung: Der Zwang zur ständigen Optimierung",
+    prompt: "Schreib eine anspruchsvolle Erörterung auf Deutsch (circa 300 Wörter).",
+    difficulty: "STRETCH",
+    topicTag: "gesundheit",
+    payload: {
+      situation:
+        "Der gesellschaftliche Druck, sich ununterbrochen zu verbessern und das eigene Leben zu optimieren, wird zunehmend kritisch betrachtet.",
+      instruction:
+        "Verfasse eine Erörterung. Würdige das berechtigte Streben nach Verbesserung, arbeite heraus, wo es in einen kontraproduktiven Zwang umschlägt, entwickle eine eigene Position, belege sie mit Beispielen, und schließe mit einem reflektierten Fazit.",
+      wordMin: 270,
+      wordMax: 350,
+    },
+    guidanceNote: "Würdige das Streben nach Verbesserung, bevor du seine Schattenseiten zeigst.",
+  },
+  {
+    level: "C2",
+    module: "SCHREIBEN",
+    taskType: "SCHREIBEN_LETTER",
+    title: "Formelle Absage mit Begründung",
+    prompt: "Schreib eine formelle E-Mail auf Deutsch (circa 190 Wörter).",
+    difficulty: "CORE",
+    topicTag: "arbeit",
+    payload: {
+      situation:
+        "Du hast nach langem Bewerbungsprozess ein Stellenangebot erhalten, dich aber für eine andere Stelle entschieden. Du möchtest dem Unternehmen taktvoll absagen.",
+      instruction:
+        "Schreib eine formelle Absage. Bedanke dich aufrichtig für das Angebot und das entgegengebrachte Vertrauen, begründe deine Entscheidung knapp und diplomatisch, ohne das Unternehmen herabzusetzen, drücke deine Wertschätzung aus, und halte die Möglichkeit künftigen Kontakts offen.",
+      wordMin: 170,
+      wordMax: 220,
+    },
+    guidanceNote: "Eine taktvolle Absage wahrt die Beziehung für die Zukunft.",
+  },
+  {
+    level: "C2",
+    module: "SCHREIBEN",
+    taskType: "SCHREIBEN_ESSAY",
+    title: "Erörterung: Ironie und Ernst in unserer Kultur",
+    prompt: "Schreib eine anspruchsvolle Erörterung auf Deutsch (circa 300 Wörter).",
+    difficulty: "STRETCH",
+    topicTag: "alltag",
+    payload: {
+      situation:
+        "Es wird beobachtet, dass es heute als peinlich gilt, etwas vorbehaltlos ernst zu meinen, und dass Ironie zur allgegenwärtigen Schutzhaltung geworden ist.",
+      instruction:
+        "Verfasse eine Erörterung. Analysiere die Funktion der Ironie als Schutz, lege ihren Preis dar, würdige zugleich ihren unentbehrlichen kritischen Wert, entwickle eine eigene Position, und schließe mit einem Plädoyer, das weder die Ironie verdammt noch den naiven Ernst verklärt.",
+      wordMin: 270,
+      wordMax: 350,
+    },
+    guidanceNote: "Verteufle die Ironie nicht — würdige ihren Wert, bevor du ihren Preis benennst.",
+  },
 ];
 
 async function main() {

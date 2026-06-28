@@ -3067,6 +3067,619 @@ export const ITEMS: Prisma.GoetheItemCreateManyInput[] = [
     },
     guidanceNote: "„keineswegs, dass …“ grenzt die These gegen ein Missverständnis ab.",
   },
+
+  // ===================== C2 =====================
+  {
+    level: "C2",
+    module: "HOEREN",
+    taskType: "HOEREN_DETAIL",
+    title: "Ein Vortrag über die Freiheit der Wahl",
+    prompt: "Du hörst einen Vortragsausschnitt. Wähle für jede Frage die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "person",
+    payload: {
+      audioScript:
+        "Wir betrachten die Freiheit, zwischen unzähligen Optionen zu wählen, gemeinhin als reinen Gewinn. Heute möchte ich diese Selbstverständlichkeit hinterfragen. Wo unsere Vorfahren ihren Platz weitgehend vorfanden, müssen wir ihn selbst entwerfen — und haften fortan allein für das Ergebnis. Das Versprechen, alles sei möglich, verwandelt sich unmerklich in die Bürde, alles entscheiden zu müssen. Verstehen Sie mich nicht falsch: Ich verkläre die alten Zwänge keineswegs. Niemand sollte sich die Enge vergangener Ordnungen zurückwünschen. Mein Punkt ist ein anderer. Wir sollten aufhören, die schiere Menge an Optionen mit Freiheit zu verwechseln. Echte Freiheit zeigt sich nicht in der Zahl der Möglichkeiten, sondern in der Fähigkeit, aus ihnen klug zu wählen — und vieles bewusst auszuschlagen.",
+      speakers: [{ role: "Dozent", voice: "fable" }],
+      questions: [
+        {
+          id: "q1",
+          stem: "Wovor warnt der Redner ausdrücklich?",
+          options: [
+            { id: "a", text: "die Menge an Optionen mit Freiheit zu verwechseln" },
+            { id: "b", text: "vor jeder Form von Freiheit" },
+            { id: "c", text: "davor, alte Zwänge abzulehnen" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Worin zeigt sich laut Redner echte Freiheit?",
+          options: [
+            { id: "a", text: "in der Fähigkeit, klug zu wählen und vieles auszuschlagen" },
+            { id: "b", text: "in möglichst vielen Optionen" },
+            { id: "c", text: "in der Rückkehr zu alten Ordnungen" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„Verstehen Sie mich nicht falsch“ kündigt eine Abgrenzung der eigenen These an.",
+  },
+  {
+    level: "C2",
+    module: "HOEREN",
+    taskType: "HOEREN_DETAIL",
+    title: "Ein Interview über den Sinn der Arbeit",
+    prompt: "Du hörst ein Interview. Wähle für jede Frage die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "arbeit",
+    payload: {
+      audioScript:
+        "Moderatorin: Herr Professor, wenn künftig Maschinen vieles übernehmen — verliert die Arbeit dann ihren Sinn? Prof. Reinhardt: Das setzt voraus, dass der Sinn der Arbeit allein im Produzieren läge. Genau das bezweifle ich. Arbeit gibt uns Struktur, das Gefühl, gebraucht zu werden, einen Ort in der Gemeinschaft. Moderatorin: Also bliebe uns auch ohne wirtschaftliche Notwendigkeit ein Bedürfnis nach Tätigkeit? Prof. Reinhardt: Davon bin ich überzeugt. Die spannendere Frage lautet nicht, ob wir noch arbeiten werden, sondern woran wir Würde und Anerkennung knüpfen, wenn die bezahlte Erwerbsarbeit an Bedeutung verliert. Eine Gesellschaft, die darauf keine Antwort findet, wird durch die Befreiung von der Arbeit nicht glücklicher, sondern orientierungsloser.",
+      speakers: [
+        { role: "Moderatorin", voice: "shimmer" },
+        { role: "Prof. Reinhardt", voice: "onyx" },
+      ],
+      questions: [
+        {
+          id: "q1",
+          stem: "Welche Annahme bezweifelt Prof. Reinhardt?",
+          options: [
+            { id: "a", text: "dass der Sinn der Arbeit allein im Produzieren liege" },
+            { id: "b", text: "dass Maschinen Aufgaben übernehmen können" },
+            { id: "c", text: "dass Arbeit Struktur gibt" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Welche Frage hält er für die spannendere?",
+          options: [
+            { id: "a", text: "woran wir Würde und Anerkennung knüpfen, wenn Erwerbsarbeit an Bedeutung verliert" },
+            { id: "b", text: "wie viele Maschinen es geben wird" },
+            { id: "c", text: "wann die Arbeit ganz verschwindet" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Der Professor verschiebt die Frage vom „Ob“ zum „Woran“.",
+  },
+  {
+    level: "C2",
+    module: "HOEREN",
+    taskType: "HOEREN_DETAIL",
+    title: "Eine Diskussion über die Grenzen der Toleranz",
+    prompt: "Du hörst eine Diskussion. Wähle für jede Frage die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "alltag",
+    payload: {
+      audioScript:
+        "Frau Esch: Eine offene Gesellschaft muss alles aushalten, auch Meinungen, die uns zuwider sind. Herr Tom: Im Grundsatz ja. Aber was, wenn jemand die Toleranz nur nutzt, um sie für alle anderen abzuschaffen? Frau Esch: Dann gerät die Toleranz tatsächlich in einen Widerspruch mit sich selbst. Herr Tom: Eben. Grenzenlose Duldsamkeit liefert sich denen aus, die sie verachten. Frau Esch: Und doch ist die Versuchung groß, die Grenze einfach dort zu ziehen, wo uns etwas ohnehin missfällt. Herr Tom: Da haben Sie recht. Deshalb lässt sich das Paradox nicht durch eine bequeme Regel lösen, sondern nur durch ständiges, ehrliches Abwägen. Frau Esch: Dem stimme ich zu — Toleranz ist eben kein Zustand, sondern eine Daueraufgabe.",
+      speakers: [
+        { role: "Frau Esch", voice: "nova" },
+        { role: "Herr Tom", voice: "echo" },
+      ],
+      questions: [
+        {
+          id: "q1",
+          stem: "Worin besteht der Widerspruch, den beide erörtern?",
+          options: [
+            { id: "a", text: "Grenzenlose Toleranz liefert sich denen aus, die sie abschaffen wollen." },
+            { id: "b", text: "Toleranz ist immer einfach." },
+            { id: "c", text: "Toleranz hat keinerlei Wert." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Worauf einigen sich beide am Ende?",
+          options: [
+            { id: "a", text: "Toleranz ist eine Daueraufgabe, kein einmal erreichter Zustand." },
+            { id: "b", text: "Man sollte jede Toleranz aufgeben." },
+            { id: "c", text: "Es gibt eine einfache Regel für alle Fälle." },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Beide kommen zu einer gemeinsamen, differenzierten Schlussfolgerung.",
+  },
+  {
+    level: "C2",
+    module: "HOEREN",
+    taskType: "HOEREN_DETAIL",
+    title: "Ein Beitrag über die Kunst des Weglassens",
+    prompt: "Du hörst einen Radiobeitrag. Wähle für jede Frage die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "alltag",
+    payload: {
+      audioScript:
+        "Wir klagen über zu wenig Zeit und besitzen doch mehr freie Zeit als je eine Generation vor uns. Wie passt das zusammen? Die Antwort liegt nicht in der Menge, sondern in der Dichte der Möglichkeiten. Weil sich uns jede Stunde tausend Arten eröffnen, sie zu verbringen, wird jede Entscheidung zum Verzicht auf alles andere. Nicht der Mangel quält uns, sondern der Überfluss. Wer das durchschaut, dem hilft kein ausgeklügeltes Zeitmanagement weiter, sondern allein die Kunst des Weglassens — der Mut, vieles bewusst nicht zu tun. Es klingt widersinnig, ist aber die Erfahrung vieler: Zeit gewinnt zurück, wer aufhört, sie restlos ausschöpfen zu wollen. Souveränität bedeutet hier nicht, mehr zu schaffen, sondern auswählen zu können.",
+      speakers: [{ role: "Beitrag", voice: "fable" }],
+      questions: [
+        {
+          id: "q1",
+          stem: "Was ist laut Beitrag der eigentliche Grund für das Gefühl der Zeitnot?",
+          options: [
+            { id: "a", text: "der Überfluss an Möglichkeiten, nicht der Mangel an Zeit" },
+            { id: "b", text: "tatsächlich zu wenig freie Zeit" },
+            { id: "c", text: "schlechtes Zeitmanagement" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Was empfiehlt der Beitrag?",
+          options: [
+            { id: "a", text: "die Kunst des Weglassens — vieles bewusst nicht zu tun" },
+            { id: "b", text: "ein noch besseres Zeitmanagement" },
+            { id: "c", text: "jede Möglichkeit auszuschöpfen" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„Es klingt widersinnig, ist aber …“ leitet die paradoxe Pointe ein.",
+  },
+  {
+    level: "C2",
+    module: "HOEREN",
+    taskType: "HOEREN_DETAIL",
+    title: "Ein Interview über Kunst und Charakter",
+    prompt: "Du hörst ein Interview. Wähle für jede Frage die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "freizeit",
+    payload: {
+      audioScript:
+        "Moderator: Frau Dr. Lemke, kann man ein großes Kunstwerk noch genießen, wenn man weiß, dass sein Schöpfer ein zweifelhafter Mensch war? Dr. Lemke: Das ist eine der hartnäckigsten Fragen der Ästhetik, und ich misstraue beiden einfachen Antworten. Wer sagt, das Leben des Künstlers sei völlig belanglos, tut so, als könnten wir unser Wissen abschalten — das können wir nicht. Moderator: Aber das Werk allein nach der Biografie zu beurteilen? Dr. Lemke: Wäre genauso falsch. Dann bliebe von der Kunstgeschichte erschreckend wenig übrig. Die ehrlichere Haltung besteht meines Erachtens darin, die Spannung auszuhalten, statt sie vorschnell zugunsten einer Seite aufzulösen. Reife zeigt sich hier nicht im klaren Urteil, sondern im Ertragen des Unklaren.",
+      speakers: [
+        { role: "Moderator", voice: "onyx" },
+        { role: "Dr. Lemke", voice: "shimmer" },
+      ],
+      questions: [
+        {
+          id: "q1",
+          stem: "Welche Haltung vertritt Dr. Lemke?",
+          options: [
+            { id: "a", text: "Man sollte die Spannung aushalten, statt sich auf eine Seite festzulegen." },
+            { id: "b", text: "Das Leben des Künstlers ist völlig belanglos." },
+            { id: "c", text: "Man sollte ein Werk nur nach der Biografie beurteilen." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Worin zeigt sich laut Dr. Lemke „Reife“?",
+          options: [
+            { id: "a", text: "im Ertragen des Unklaren" },
+            { id: "b", text: "in einem schnellen, klaren Urteil" },
+            { id: "c", text: "im Ignorieren der Kunst" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Sie verwirft „beide einfachen Antworten“ — achte auf die vermittelnde dritte Position.",
+  },
+  {
+    level: "C2",
+    module: "HOEREN",
+    taskType: "HOEREN_DETAIL",
+    title: "Ein Vortrag über das Vergessen",
+    prompt: "Du hörst einen Vortragsausschnitt. Wähle für jede Frage die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "alltag",
+    payload: {
+      audioScript:
+        "Jahrhundertelang galt das Vergessen als Defekt, als Versagen eines Gedächtnisses, das doch alles bewahren sollte. Erst die digitale Speicherung, die nichts mehr verblassen lässt, lehrt uns seinen Wert neu zu sehen. Denn ein Leben, in dem jede unbedachte Äußerung für immer abrufbar bleibt, kennt keine Gnade des Neuanfangs. Wer einmal gefehlt hat, bleibt auf ewig damit verbunden. Das Vergessen aber ist kein bloßer Mangel, sondern eine Leistung: Es erlaubt uns, uns zu verändern, ohne an unser früheres Ich gekettet zu bleiben. Eine Gesellschaft, die alles aufzeichnet, verwehrt ihren Mitgliedern womöglich genau jene Wandlung, die sie zugleich von ihnen verlangt. Das sogenannte Recht auf Vergessenwerden ist deshalb kein technisches Detail, sondern die Verteidigung einer zutiefst menschlichen Möglichkeit.",
+      speakers: [{ role: "Dozentin", voice: "nova" }],
+      questions: [
+        {
+          id: "q1",
+          stem: "Wie bewertet die Rednerin das Vergessen?",
+          options: [
+            { id: "a", text: "als Leistung, die Veränderung ermöglicht — nicht als bloßen Mangel" },
+            { id: "b", text: "als reinen Defekt des Gedächtnisses" },
+            { id: "c", text: "als völlig bedeutungslos" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Wie deutet sie das „Recht auf Vergessenwerden“?",
+          options: [
+            { id: "a", text: "als Verteidigung einer zutiefst menschlichen Möglichkeit" },
+            { id: "b", text: "als unwichtiges technisches Detail" },
+            { id: "c", text: "als Gefahr für die Gesellschaft" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„kein bloßer Mangel, sondern eine Leistung“ wertet das Vergessen um.",
+  },
+  {
+    level: "C2",
+    module: "HOEREN",
+    taskType: "HOEREN_TRUE_FALSE",
+    title: "Ein Feature über das Mitgefühl",
+    prompt: "Du hörst ein Feature. Sind die Sätze richtig oder falsch?",
+    difficulty: "STRETCH",
+    topicTag: "person",
+    payload: {
+      audioScript:
+        "Das Mitgefühl genießt einen tadellosen Ruf, und doch hat es eine unbequeme Eigenschaft: Es ist parteiisch. Ein einzelnes Gesicht rührt uns weit stärker als die Statistik eines tausendfach größeren Leids. Diese Schieflage ist kein moralisches Versagen Einzelner, sondern liegt in unserer Wahrnehmung selbst begründet. Manche schließen daraus, man müsse das Gefühl durch kühle Vernunft ersetzen. Doch das verkennt seinen unersetzlichen Antrieb — ohne Mitgefühl bewegt uns gar nichts. Sinnvoller ist es, beides zu verbinden: das Gefühl, das uns überhaupt erst in Bewegung setzt, und die Vernunft, die korrigiert, wohin uns das Gefühl blind führen würde. Nicht die Abschaffung des Mitgefühls also, sondern seine Schulung ist die Aufgabe.",
+      speakers: [{ role: "Feature", voice: "alloy" }],
+      questions: [
+        {
+          id: "q1",
+          stem: "Laut Feature ist die Parteilichkeit des Mitgefühls ein moralisches Versagen Einzelner.",
+          options: [
+            { id: "r", text: "Richtig" },
+            { id: "f", text: "Falsch" },
+          ],
+          answer: "f",
+        },
+        {
+          id: "q2",
+          stem: "Das Feature empfiehlt, Mitgefühl durch reine Vernunft zu ersetzen.",
+          options: [
+            { id: "r", text: "Richtig" },
+            { id: "f", text: "Falsch" },
+          ],
+          answer: "f",
+        },
+      ],
+    },
+    guidanceNote: "Achte genau: Das Feature lehnt die Ersetzung des Gefühls ausdrücklich ab.",
+  },
+  {
+    level: "C2",
+    module: "HOEREN",
+    taskType: "HOEREN_DETAIL",
+    title: "Ein Interview über Authentizität",
+    prompt: "Du hörst ein Interview. Wähle für jede Frage die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "alltag",
+    payload: {
+      audioScript:
+        "Moderatorin: Überall heißt es, man solle authentisch sein, ganz man selbst. Was halten Sie davon? Herr Dr. Frey: Es klingt befreiend, ist bei näherem Hinsehen aber erstaunlich gebieterisch. Die Forderung setzt voraus, es gäbe ein wahres Selbst, das man nur freilegen müsste. Moderatorin: Und das bezweifeln Sie? Herr Dr. Frey: Durchaus. Wir sind keine fertigen Wesen, die sich bloß ausdrücken, sondern werden zu dem, was wir sind, im Umgang mit anderen. Das angeblich authentische Ich ist selbst ein Produkt — nicht zuletzt der Erwartung, authentisch zu sein. Wer ständig sich selbst sein soll, dem wird gerade verwehrt, ein anderer zu werden. Die größere Freiheit läge womöglich darin, sich selbst entwerfen zu dürfen.",
+      speakers: [
+        { role: "Moderatorin", voice: "shimmer" },
+        { role: "Herr Dr. Frey", voice: "echo" },
+      ],
+      questions: [
+        {
+          id: "q1",
+          stem: "Welche Voraussetzung der Authentizitätsforderung kritisiert Dr. Frey?",
+          options: [
+            { id: "a", text: "dass es ein wahres Selbst gäbe, das man nur freilegen müsste" },
+            { id: "b", text: "dass man sich verändern kann" },
+            { id: "c", text: "dass andere Menschen existieren" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Worin läge laut Dr. Frey die größere Freiheit?",
+          options: [
+            { id: "a", text: "sich selbst entwerfen zu dürfen" },
+            { id: "b", text: "ständig authentisch zu sein" },
+            { id: "c", text: "den wahren Kern freizulegen" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Dr. Frey deckt einen Zwang im scheinbaren Befreiungsversprechen auf.",
+  },
+  {
+    level: "C2",
+    module: "HOEREN",
+    taskType: "HOEREN_DETAIL",
+    title: "Ein Vortrag über den Nutzen des Nutzlosen",
+    prompt: "Du hörst einen Vortragsausschnitt. Wähle für jede Frage die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "lernen",
+    payload: {
+      audioScript:
+        "In einer Welt, die alles nach seinem Nutzen bemisst, gerät unter Verdacht, was sich nicht unmittelbar verwerten lässt. Wozu Gedichte, wozu tote Sprachen, wozu Fragen ohne praktische Antwort? Die Frage ist verständlich und doch von einer eigentümlichen Engstirnigkeit. Sie unterstellt, der Wert einer Sache liege in ihrer Verwendbarkeit für etwas anderes. Genau das aber trifft auf das Wertvollste nicht zu. Eine Freundschaft, die man der Vorteile wegen pflegt, ist keine; eine Neugier, die nur fragt, was sich verkaufen lässt, hat aufgehört, Neugier zu sein. Das vermeintlich Nutzlose ist oft das, was dem Leben überhaupt erst Sinn verleiht — nicht als Mittel zu einem Zweck, sondern als Zweck in sich selbst.",
+      speakers: [{ role: "Redner", voice: "fable" }],
+      questions: [
+        {
+          id: "q1",
+          stem: "Welche Annahme kritisiert der Redner?",
+          options: [
+            { id: "a", text: "dass der Wert einer Sache allein in ihrer Verwendbarkeit liege" },
+            { id: "b", text: "dass Gedichte wertvoll seien" },
+            { id: "c", text: "dass Effizienz nützlich sei" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Wie charakterisiert er das vermeintlich Nutzlose?",
+          options: [
+            { id: "a", text: "als Zweck in sich, der dem Leben Sinn verleiht" },
+            { id: "b", text: "als bloßes Mittel zu einem Zweck" },
+            { id: "c", text: "als grundsätzlich wertlos" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Der Redner stellt „Mittel zum Zweck“ und „Zweck in sich“ einander gegenüber.",
+  },
+  {
+    level: "C2",
+    module: "HOEREN",
+    taskType: "HOEREN_DETAIL",
+    title: "Eine Diskussion über Fortschritt",
+    prompt: "Du hörst eine Diskussion. Wähle für jede Frage die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "umwelt",
+    payload: {
+      audioScript:
+        "Herr Wald: Jeder technische Fortschritt verbessert unser Leben, das lässt sich kaum bestreiten. Frau Ott: Verbessern schon — aber zu welchem Preis? Mit jeder neuen Möglichkeit verschwindet eine alte Selbstverständlichkeit. Herr Wald: Sie meinen etwa die ständige Erreichbarkeit, die das Recht zerstört hat, einmal nicht erreichbar zu sein. Frau Ott: Genau. Nur werden solche Verluste nie verbucht, weil sie sich nicht beziffern lassen. Herr Wald: Aber wollen Sie den Fortschritt deshalb aufhalten? Frau Ott: Keineswegs. Ich plädiere nur für einen nüchterneren Blick, der den Gewinn nicht feiert, ohne nach den Kosten zu fragen. Herr Wald: Dem kann ich mich anschließen — gegen einen ehrlichen Kassensturz ist nichts einzuwenden.",
+      speakers: [
+        { role: "Herr Wald", voice: "onyx" },
+        { role: "Frau Ott", voice: "nova" },
+      ],
+      questions: [
+        {
+          id: "q1",
+          stem: "Was kritisiert Frau Ott am üblichen Blick auf den Fortschritt?",
+          options: [
+            { id: "a", text: "Die stillen Verluste werden nicht verbucht, weil sie sich nicht beziffern lassen." },
+            { id: "b", text: "dass der Fortschritt das Leben verbessert" },
+            { id: "c", text: "dass es überhaupt Technik gibt" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Wofür plädiert Frau Ott?",
+          options: [
+            { id: "a", text: "für einen nüchternen Blick, der Gewinn und Kosten gemeinsam bedenkt" },
+            { id: "b", text: "dafür, den Fortschritt aufzuhalten" },
+            { id: "c", text: "dafür, nur die Kosten zu sehen" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Frau Ott betont, sie wolle den Fortschritt „keineswegs“ aufhalten.",
+  },
+  {
+    level: "C2",
+    module: "HOEREN",
+    taskType: "HOEREN_DETAIL",
+    title: "Ein Vortrag über Ironie",
+    prompt: "Du hörst einen Vortragsausschnitt. Wähle für jede Frage die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "alltag",
+    payload: {
+      audioScript:
+        "Es gilt heute als peinlich, etwas vorbehaltlos ernst zu meinen. Wer sich begeistert, schiebt sicherheitshalber ein ironisches Augenzwinkern hinterher, um bloß nicht naiv zu wirken. Die Ironie, einst eine Waffe der Kritik, ist zur Schutzhaltung verkommen — zur Methode, sich nie festzulegen und damit unangreifbar zu bleiben. Doch dieser Schutz hat seinen Preis. Wer sich nie bloßstellt, wagt auch nichts, und ohne Wagnis bleibt alles unverbindlich. Ich will die Ironie nicht verteufeln; wo sie Heuchelei entlarvt, ist sie unentbehrlich. Aber es täte uns gut, gelegentlich den Mut aufzubringen, etwas zu meinen, wie wir es sagen — auf die Gefahr hin, uns zu irren. Denn nur wer sich angreifbar macht, kann überhaupt etwas gewinnen.",
+      speakers: [{ role: "Redner", voice: "fable" }],
+      questions: [
+        {
+          id: "q1",
+          stem: "Was kritisiert der Redner an der heutigen Ironie?",
+          options: [
+            { id: "a", text: "Sie ist zur Schutzhaltung geworden, die jede Festlegung vermeidet." },
+            { id: "b", text: "Sie wird zu selten benutzt." },
+            { id: "c", text: "Sie ist als Mittel der Kritik wertlos." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Wozu ermutigt der Redner?",
+          options: [
+            { id: "a", text: "gelegentlich etwas ernst zu meinen, auch auf die Gefahr zu irren" },
+            { id: "b", text: "die Ironie ganz abzuschaffen" },
+            { id: "c", text: "nie eine Meinung zu äußern" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„Ich will die Ironie nicht verteufeln; aber …“ grenzt die Kritik ein.",
+  },
+  {
+    level: "C2",
+    module: "HOEREN",
+    taskType: "HOEREN_DETAIL",
+    title: "Ein Interview über Sprache und Denken",
+    prompt: "Du hörst ein Interview. Wähle für jede Frage die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "lernen",
+    payload: {
+      audioScript:
+        "Moderatorin: Frau Professor, formt unsere Sprache, wie wir die Welt sehen? Prof. Brandt: In ihrer starken Form behauptet diese These, wir könnten nur denken, wofür wir Worte haben. So verlockend das ist — es hält der Prüfung nicht stand. Auch ohne fertiges Wort treffen wir Unterscheidungen, und neue Begriffe entstehen, weil das Bezeichnete schon empfunden wird. Moderatorin: Also hat die Sprache gar keinen Einfluss? Prof. Brandt: Das wäre der entgegengesetzte Irrtum. Es bleibt eine schwächere, ernst zu nehmende Wahrheit: Sprache lenkt unsere Aufmerksamkeit. Sie macht manche Unterscheidungen bequem, andere mühsam. Sie determiniert das Denken nicht, aber sie kanalisiert es. Klug ist, wer die eigene Sprache weder für ein Gefängnis hält noch für ein bloßes Werkzeug.",
+      speakers: [
+        { role: "Moderatorin", voice: "shimmer" },
+        { role: "Prof. Brandt", voice: "nova" },
+      ],
+      questions: [
+        {
+          id: "q1",
+          stem: "Warum lehnt Prof. Brandt die „starke Form“ der These ab?",
+          options: [
+            { id: "a", text: "weil man auch ohne fertiges Wort Unterscheidungen treffen kann" },
+            { id: "b", text: "weil Sprache überhaupt keinen Einfluss hat" },
+            { id: "c", text: "weil niemand neue Begriffe bildet" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Wie fasst sie das Verhältnis von Sprache und Denken zusammen?",
+          options: [
+            { id: "a", text: "Sprache determiniert das Denken nicht, kanalisiert es aber." },
+            { id: "b", text: "Sprache bestimmt das Denken vollständig." },
+            { id: "c", text: "Sprache und Denken sind völlig getrennt." },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Prof. Brandt verwirft beide Extreme: totale Determination und völlige Einflusslosigkeit.",
+  },
+  {
+    level: "C2",
+    module: "HOEREN",
+    taskType: "HOEREN_DETAIL",
+    title: "Ein Vortrag über die Illusion der Kontrolle",
+    prompt: "Du hörst einen Vortragsausschnitt. Wähle für jede Frage die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "gesundheit",
+    payload: {
+      audioScript:
+        "Der moderne Mensch ist besessen von Kontrolle. Wir vermessen den Schlaf, optimieren die Ernährung, planen die Tage bis in die Zwischenräume — als ließe sich das Leben restlos beherrschen, wenn man es nur klug genug organisiert. Diese Anstrengung ist nicht grundlos; vieles lässt sich gestalten. Doch sie ruht auf einer Selbsttäuschung. Das Entscheidende entzieht sich der Planung: wen wir lieben, was uns widerfährt, wann uns eine Idee zufällt. Gerade die kostbarsten Erfahrungen verdanken sich nicht der Kontrolle, sondern der Bereitschaft, sich überraschen zu lassen. Wer das Leben zwingt, seinem Plan zu folgen, erntet am Ende oft nur die Erfüllung ohnehin begrenzter Erwartungen. Reife Souveränität liegt deshalb nicht im Mehr an Kontrolle, sondern in der Gelassenheit gegenüber dem Unverfügbaren.",
+      speakers: [{ role: "Dozent", voice: "fable" }],
+      questions: [
+        {
+          id: "q1",
+          stem: "Worauf beruht laut Vortrag das Streben nach totaler Kontrolle?",
+          options: [
+            { id: "a", text: "auf einer Selbsttäuschung, da sich das Entscheidende der Planung entzieht" },
+            { id: "b", text: "auf gesicherten wissenschaftlichen Tatsachen" },
+            { id: "c", text: "auf reiner Bequemlichkeit" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Worin liegt laut Redner reife Souveränität?",
+          options: [
+            { id: "a", text: "in der Gelassenheit gegenüber dem Unverfügbaren" },
+            { id: "b", text: "in noch mehr Planung und Kontrolle" },
+            { id: "c", text: "im Verzicht auf jede Gestaltung" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Die These steht im Schlusssatz: „nicht im Mehr an Kontrolle, sondern …“.",
+  },
+  {
+    level: "C2",
+    module: "HOEREN",
+    taskType: "HOEREN_DETAIL",
+    title: "Eine Diskussion über das Messen",
+    prompt: "Du hörst eine Diskussion. Wähle für jede Frage die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "lernen",
+    payload: {
+      audioScript:
+        "Herr Bren: Wenn wir den Erfolg von Schulen verbessern wollen, müssen wir ihn präzise messen. Was man nicht misst, kann man nicht steuern. Frau Kade: Das klingt vernünftig, hat aber einen blinden Fleck. Vieles, was eine gute Schule ausmacht — Vertrauen, Neugier, Zuwendung —, entzieht sich der Messung. Herr Bren: Heißt das, wir sollen gar nicht messen? Frau Kade: Nein, das wäre naiv. Aber wo wir nur messen, was sich leicht messen lässt, halten wir es bald fälschlich für das Wesentliche. Herr Bren: Da ist etwas dran. Vielleicht ist die Kunst, zu messen, ohne dem Messbaren zu verfallen. Frau Kade: Genau — das nicht Messbare nicht mit dem Unwichtigen zu verwechseln.",
+      speakers: [
+        { role: "Herr Bren", voice: "echo" },
+        { role: "Frau Kade", voice: "shimmer" },
+      ],
+      questions: [
+        {
+          id: "q1",
+          stem: "Welchen „blinden Fleck“ nennt Frau Kade?",
+          options: [
+            { id: "a", text: "Vieles Wesentliche an einer guten Schule entzieht sich der Messung." },
+            { id: "b", text: "Messen ist immer wertlos." },
+            { id: "c", text: "Schulen sollten geschlossen werden." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Worauf einigen sich beide?",
+          options: [
+            { id: "a", text: "zu messen, ohne das nicht Messbare für unwichtig zu halten" },
+            { id: "b", text: "gar nicht mehr zu messen" },
+            { id: "c", text: "nur noch zu messen" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Frau Kade lehnt sowohl blindes Messen als auch den völligen Verzicht ab.",
+  },
+  {
+    level: "C2",
+    module: "HOEREN",
+    taskType: "HOEREN_DETAIL",
+    title: "Ein Beitrag über Optimismus",
+    prompt: "Du hörst einen Beitrag. Wähle für jede Frage die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "gesundheit",
+    payload: {
+      audioScript:
+        "Optimismus hat einen guten Ruf, und das nicht zu Unrecht. Doch ich möchte vor einem Missverständnis warnen. Echter Optimismus heißt nicht, die Augen vor Problemen zu verschließen und sich einzureden, alles werde schon gut. Das wäre naiv, ja gefährlich. Der hilfreiche Optimismus ist von anderer Art: Er sieht die Schwierigkeiten klar, vertraut aber auf die eigene Fähigkeit, mit ihnen umzugehen. Es geht also nicht um die Erwartung, dass nichts schiefgeht, sondern um die Zuversicht, auch das Schwierige bewältigen zu können. Wer diesen Unterschied übersieht, verwechselt Zuversicht mit Verleugnung — und gerade Letztere führt früher oder später in die Enttäuschung.",
+      speakers: [{ role: "Beitrag", voice: "alloy" }],
+      questions: [
+        {
+          id: "q1",
+          stem: "Wovor warnt der Redner?",
+          options: [
+            { id: "a", text: "vor einem naiven Optimismus, der Probleme verleugnet" },
+            { id: "b", text: "vor jeder Zuversicht" },
+            { id: "c", text: "davor, Schwierigkeiten zu sehen" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Was ist laut Beitrag der hilfreiche Optimismus?",
+          options: [
+            { id: "a", text: "die Zuversicht, auch Schwieriges bewältigen zu können" },
+            { id: "b", text: "die Erwartung, dass nie etwas schiefgeht" },
+            { id: "c", text: "das Verleugnen von Problemen" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Der Redner trennt Zuversicht klar von Verleugnung.",
+  },
+  {
+    level: "C2",
+    module: "HOEREN",
+    taskType: "HOEREN_DETAIL",
+    title: "Ein Vortrag über Individuum und Gemeinschaft",
+    prompt: "Du hörst einen Vortragsausschnitt. Wähle für jede Frage die richtige Antwort.",
+    difficulty: "STRETCH",
+    topicTag: "alltag",
+    payload: {
+      audioScript:
+        "Selten zuvor wurde die Selbstverwirklichung des Einzelnen so hoch geschätzt wie heute. Jeder solle sein eigenes Leben gestalten, frei von den Erwartungen anderer. Ein verlockendes Versprechen — und doch hat es eine Kehrseite, die selten benannt wird. Wer ausschließlich sich selbst verpflichtet ist, dem fehlt mitunter jenes Netz aus Bindungen, das in schwierigen Zeiten trägt. Freiheit ohne Zugehörigkeit kann in Einsamkeit umschlagen. Es wäre allerdings ein Fehler, deshalb das Individuum der Gemeinschaft unterzuordnen; die Geschichte zeigt, wohin das führt. Die eigentliche Aufgabe besteht darin, beides zu versöhnen — die Freiheit, man selbst zu sein, und die Verantwortung, Teil eines größeren Ganzen zu bleiben. Nicht das eine gegen das andere, sondern beides zugleich.",
+      speakers: [{ role: "Dozentin", voice: "nova" }],
+      questions: [
+        {
+          id: "q1",
+          stem: "Welche Kehrseite der Selbstverwirklichung nennt die Rednerin?",
+          options: [
+            { id: "a", text: "Freiheit ohne Zugehörigkeit kann in Einsamkeit umschlagen." },
+            { id: "b", text: "Selbstverwirklichung macht immer glücklich." },
+            { id: "c", text: "Bindungen sind grundsätzlich schädlich." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Worin besteht laut Rednerin die eigentliche Aufgabe?",
+          options: [
+            { id: "a", text: "Freiheit und Verantwortung für die Gemeinschaft zu versöhnen" },
+            { id: "b", text: "das Individuum ganz der Gemeinschaft unterzuordnen" },
+            { id: "c", text: "jede Bindung aufzugeben" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„Nicht das eine gegen das andere, sondern beides zugleich“ ist die Synthese.",
+  },
 ];
 
 async function main() {
