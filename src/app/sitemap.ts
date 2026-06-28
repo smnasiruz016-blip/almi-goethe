@@ -1,15 +1,14 @@
 import type { MetadataRoute } from "next";
+import { buildGoetheSitemapUrls, SITEMAP_CHUNK, sitemapChunkCount } from "@/lib/goethe/seo/sitemap-urls";
 
-// Minimal static sitemap for Phase 0 — the public marketing + auth surface. The
-// programmatic German/Goethe SEO surface (level × purpose × origin) is a later phase.
-const SITE_URL = process.env.NEXT_PUBLIC_APP_URL ?? "https://almigoethe.almiworld.com";
+// Chunked sitemap for the full /goethe SEO surface (~112k URLs). Next 16 calls the
+// generateSitemaps id as a Promise — coerce with Number(await Promise.resolve(id)).
+export async function generateSitemaps() {
+  return Array.from({ length: sitemapChunkCount() }, (_, i) => ({ id: i }));
+}
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date();
-  return ["", "/pricing", "/login", "/signup"].map((p) => ({
-    url: `${SITE_URL}${p}`,
-    lastModified: now,
-    changeFrequency: "weekly" as const,
-    priority: p === "" ? 1 : 0.7,
-  }));
+export default async function sitemap({ id }: { id: number }): Promise<MetadataRoute.Sitemap> {
+  const chunk = Number(await Promise.resolve(id));
+  const all = buildGoetheSitemapUrls();
+  return all.slice(chunk * SITEMAP_CHUNK, (chunk + 1) * SITEMAP_CHUNK);
 }

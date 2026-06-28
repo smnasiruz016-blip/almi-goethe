@@ -226,6 +226,26 @@ export default function Home() {
         </div>
       </section>
 
+      {/* German requirements guide → /goethe SEO hub */}
+      <section className="border-t border-almi-bg-peach px-6 py-16">
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 className="text-3xl font-semibold text-almi-ink">Which German level do you actually need?</h2>
+          <p className="mt-3 text-base text-almi-text">
+            Studying at a German university, working in a shortage occupation, a family or citizenship route —
+            each needs a different level. Our free guide gives honest, sourced guidance by goal, profession
+            and university, with the official authority to confirm with.
+          </p>
+          <div className="mt-8">
+            <Link
+              href="/goethe"
+              className="inline-flex min-h-[48px] items-center justify-center rounded-full border border-almi-ink/15 bg-almi-paper px-7 py-3 text-base font-semibold text-almi-ink hover:border-almi-coral"
+            >
+              German for Germany — requirements guide →
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Why honest */}
       <section className="px-6 py-16">
         <div className="mx-auto max-w-4xl">

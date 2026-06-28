@@ -1,0 +1,5644 @@
+{
+  "head" : {
+    "vars" : [ "u", "uLabel", "typeLabel", "website", "cityLabel" ]
+  },
+  "results" : {
+    "bindings" : [ {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q122335127"
+      },
+      "uLabel" : {
+        "type" : "literal",
+        "value" : "Q122335127"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "university"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.uni-wh.de/"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q20645805"
+      },
+      "uLabel" : {
+        "xml:lang" : "de",
+        "type" : "literal",
+        "value" : "Berliner Institut für empirische Integrations- und Migrationsforschung"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.bim.hu-berlin.de/"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q17157209"
+      },
+      "uLabel" : {
+        "xml:lang" : "de",
+        "type" : "literal",
+        "value" : "Deutsches Mode-Institut"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.deutschesmodeinstitut.de/"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q135655112"
+      },
+      "uLabel" : {
+        "xml:lang" : "de",
+        "type" : "literal",
+        "value" : "Else-Frenkel-Brunswik-Institut"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://efbi.de/"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q127324880"
+      },
+      "uLabel" : {
+        "xml:lang" : "de",
+        "type" : "literal",
+        "value" : "Evangelisches Zentralinstitut für Familienberatung gGmbH"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.ezi-berlin.de/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Berlin"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q117009403"
+      },
+      "uLabel" : {
+        "xml:lang" : "de",
+        "type" : "literal",
+        "value" : "Greifenberger Institut für Musikinstrumentenkunde"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.greifenberger-institut.de/"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q118174039"
+      },
+      "uLabel" : {
+        "xml:lang" : "de",
+        "type" : "literal",
+        "value" : "HIS-Institut für Hochschulentwicklung"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://his-he.de/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Hanover"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q22678452"
+      },
+      "uLabel" : {
+        "xml:lang" : "de",
+        "type" : "literal",
+        "value" : "Institut der Deutschen Zahnärzte"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.idz.institute/"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55829994"
+      },
+      "uLabel" : {
+        "xml:lang" : "de",
+        "type" : "literal",
+        "value" : "Institut des Bewertungsausschusses"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://institut-ba.de/"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q56045572"
+      },
+      "uLabel" : {
+        "xml:lang" : "de",
+        "type" : "literal",
+        "value" : "Institut für Automobilwirtschaft"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.ifa-info.de"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Geislingen an der Steige"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q117599313"
+      },
+      "uLabel" : {
+        "xml:lang" : "de",
+        "type" : "literal",
+        "value" : "Institut für Bedarfsgegenstände Lüneburg"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.laves.niedersachsen.de/startseite/wir_uber_uns/institute_fachdezernate/institut-fuer-bedarfsgegenstaende-lueneburg-73543.html"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q131183836"
+      },
+      "uLabel" : {
+        "xml:lang" : "de",
+        "type" : "literal",
+        "value" : "Institut für Digital Humanities"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://dh.phil-fak.uni-koeln.de/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Cologne"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q109732377"
+      },
+      "uLabel" : {
+        "xml:lang" : "de",
+        "type" : "literal",
+        "value" : "Institut für Gesundheitsökonomie und Klinische Epidemiologie"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://gesundheitsoekonomie.uk-koeln.de/"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q52125422"
+      },
+      "uLabel" : {
+        "xml:lang" : "de",
+        "type" : "literal",
+        "value" : "Institut für Integrierte Sozialökologie"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.homo-integralis.de/Institute/ifis/IFIS.html"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q135618483"
+      },
+      "uLabel" : {
+        "xml:lang" : "de",
+        "type" : "literal",
+        "value" : "Institut für Neue Musik und Musikerziehung"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.neue-musik.org/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Darmstadt"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q110409490"
+      },
+      "uLabel" : {
+        "xml:lang" : "de",
+        "type" : "literal",
+        "value" : "Institut für Textiltechnik"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.ita.rwth-aachen.de/"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q132891683"
+      },
+      "uLabel" : {
+        "xml:lang" : "de",
+        "type" : "literal",
+        "value" : "Institut für Wasserbau und Siedlungswasserwirtschaft"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://iws.htwk-leipzig.de/institut"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q106410376"
+      },
+      "uLabel" : {
+        "xml:lang" : "de",
+        "type" : "literal",
+        "value" : "Institut für pharmazeutische und angewandte Analytik"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.inpha.de/"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q84591407"
+      },
+      "uLabel" : {
+        "xml:lang" : "de",
+        "type" : "literal",
+        "value" : "Institutum Judaicum"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://uni-tuebingen.de/fakultaeten/evangelisch-theologische-fakultaet/lehrstuehle-und-institute/religionswissenschaft-und-judaistik/religionswissenschaft-und-judaistik/seminar/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Tübingen"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q28746087"
+      },
+      "uLabel" : {
+        "xml:lang" : "de",
+        "type" : "literal",
+        "value" : "Michael-Balint-Institut"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.michael-balint-institut.de/"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q118189587"
+      },
+      "uLabel" : {
+        "xml:lang" : "de",
+        "type" : "literal",
+        "value" : "Rheinische Friedrich-Wilhelms-Universität Bonn Institut für Geowissenschaften"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.ifgeo.uni-bonn.de/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Bonn"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q134355274"
+      },
+      "uLabel" : {
+        "xml:lang" : "de",
+        "type" : "literal",
+        "value" : "Trierer Institut für Geldwäsche- und Korruptions-Strafrecht"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://trigeko.uni-trier.de/institut/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Trier"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q23786694"
+      },
+      "uLabel" : {
+        "xml:lang" : "de",
+        "type" : "literal",
+        "value" : "Umwelt- und Prognose-Institut"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.upi-institut.de/"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q23908675"
+      },
+      "uLabel" : {
+        "xml:lang" : "de",
+        "type" : "literal",
+        "value" : "Weltethos-Institut Tübingen"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.weltethos-institut.org/"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q323347"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Abraham Geiger College"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.abraham-geiger-kolleg.de"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Potsdam"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q414334"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Academy for Technology Assessment"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://afta-bw.de/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Baden-Baden"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55752747"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Adolf-Wuerth-Center for the History of Psychology"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.awz.uni-wuerzburg.de"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Würzburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q57983007"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Argelander-Institut für Astronomie"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://astro.uni-bonn.de/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "North Rhine-Westphalia"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q107440148"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Berlin School of Business and Innovation"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "university"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.berlinsbi.com/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Berlin"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1592185"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Berlin School of Library and Information Science"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.ibi.hu-berlin.de/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Berlin"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q104281266"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "CEL/KIT"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.cel.kit.edu/"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q104281266"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "CEL/KIT"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.cel.kit.edu/english/"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1047778"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Caspar David Friedrich Institute"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://cdfi.uni-greifswald.de/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Greifswald"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q832464"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Center for Economic Studies"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.en.ces.econ.uni-muenchen.de/index.html"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1548081"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Centre for British Studies (Großbritannienzentrum)"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.gbz.hu-berlin.de/"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1229451"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Chamber of Commerce Wiesbaden"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.ihk-wiesbaden.de/"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q20438765"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Collegium Hungaricum Berlin"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.berlin.balassiintezet.hu/hu/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Berlin"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q133304514"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Columbia International University Korntal"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "university"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.ciu.edu/ciu-korntal"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1684317"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Czech Centre in Berlin"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://berlin.czechcentres.cz"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Berlin"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1262599"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "DHBW Karlsruhe"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "university"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.karlsruhe.dhbw.de/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Karlsruhe"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1122856"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Department Design"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.design.haw-hamburg.de"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Hamburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q61932654"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Dr. Margarete Fischer-Bosch-Institute of Clinical Pharmacology"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://ikp-stuttgart.de/content/language1/html/index.asp"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q5413406"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "EU Business School"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "university"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.euruni.edu"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Geneva"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q5413406"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "EU Business School"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "university"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://onlinembadegree.in/online-mba-with-manipal-university-jaipur/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Geneva"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q5413406"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "EU Business School"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "university"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.euruni.edu"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Barcelona"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q5413406"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "EU Business School"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "university"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://onlinembadegree.in/online-mba-with-manipal-university-jaipur/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Barcelona"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q5413406"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "EU Business School"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "university"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.euruni.edu"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Munich"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q5413406"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "EU Business School"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "university"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://onlinembadegree.in/online-mba-with-manipal-university-jaipur/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Munich"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q5413406"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "EU Business School"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "university"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.euruni.edu"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Montreux"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q5413406"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "EU Business School"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "university"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://onlinembadegree.in/online-mba-with-manipal-university-jaipur/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Montreux"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q450173"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "East Asia Institute"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.oai.de"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Rhineland-Palatinate"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q108737210"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Einstein Center Digital Future"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.digital-future.berlin/"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q28777860"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Emil-Frank-Institut"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.emil-frank-institut.de/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Wittlich"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q17540384"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "European Centre for Jewish Music"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.ezjm.hmtm-hannover.de/de/start/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Mitte"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q30281910"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "European Neuroscience Institute Göttingen"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.eni.gwdg.de/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Göttingen"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q135930158"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "European Open University"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "university"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://academyeurope.eu/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Hambühren"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1378159"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "European Romanesque Centre"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.merseburg.de/de/europaeisches-romanik-zentrum.html"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q43198515"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Ferring Foundation"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.ferring-stiftung.net"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q521612"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Folkwang University of the Arts"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "university"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.folkwang-uni.de/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Dortmund"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q521612"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Folkwang University of the Arts"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "university"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.folkwang-uni.de/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Essen"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q521612"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Folkwang University of the Arts"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "university"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.folkwang-uni.de/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Duisburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q521612"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Folkwang University of the Arts"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "university"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.folkwang-uni.de/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Bochum"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q101259281"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Freie Universität Berlin Institute of Geographical Sciences"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.geo.fu-berlin.de/geog/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Steglitz-Zehlendorf"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q101259281"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Freie Universität Berlin Institute of Geographical Sciences"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.geo.fu-berlin.de/en/geog/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Steglitz-Zehlendorf"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q101259285"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Freie Universität Berlin Institute of Geological Sciences"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.geo.fu-berlin.de/geol/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Steglitz-Zehlendorf"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q101259285"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Freie Universität Berlin Institute of Geological Sciences"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.geo.fu-berlin.de/en/geol/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Steglitz-Zehlendorf"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1457808"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Friedrich Loeffler Institute"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.fli.de/"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q124760176"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Friedrich-Alexander-Universität Erlangen-Nürnberg. Institut für Informatik"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.fau.de/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Bavaria"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1465388"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Fritz-Hüser-Institut"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.dortmund.de/de/leben_in_dortmund/bildungwissenschaft/fritz_hueser_institut/start_fhi/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Lütgendortmund"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1205816"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "German Institute for Literature"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.deutsches-literaturinstitut.de"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Leipzig"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q61705390"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "German Network for Bioinformatics Infrastructure"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.denbi.de/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "North Rhine-Westphalia"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q61705390"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "German Network for Bioinformatics Infrastructure"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.denbi.de"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "North Rhine-Westphalia"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q133538136"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "German University of Digital Science"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "university"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://german-uds.de/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Potsdam"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1518062"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Geschwister-Scholl-Institut für Politikwissenschaft"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.gsi.uni-muenchen.de/"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q5592027"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Graduate School Lübeck"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "university"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.gradschool.uni-luebeck.de"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Lübeck"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q41620246"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Gunda-Werner-Institut"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.gwi-boell.de/de"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q30261353"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Helmholtz Institute for Pharmaceutical Research Saarland"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.helmholtz-hips.de/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Saarbrücken"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1259489"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Hermann von Helmholtz-Zentrum für Kulturtechnik"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.kulturtechnik.hu-berlin.de/"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q75251125"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Humboldt University of Berlin, Institute of Art and Visual History"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.kunstgeschichte.hu-berlin.de/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Berlin"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q15454172"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Humboldt Universität zu Berlin Albrecht Daniel Thaer-Institut für Agrar- und Gartenbauwissenschaften"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.agrar.hu-berlin.de//"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q191281"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Humboldt-Universität zu Berlin. Zentrum für Transdisziplinäre Geschlechterstudien"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.gender.hu-berlin.de/"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1201771"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "ISFATES-DFHI"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.dfhi-isfates.eu/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Saarbrücken"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1201771"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "ISFATES-DFHI"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.dfhi-isfates.eu/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Luxembourg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1201771"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "ISFATES-DFHI"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.dfhi-isfates.eu/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Metz"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q820409"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Information Centre for Foreign Language Research"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.uni-marburg.de/ifs"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Marburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q139571032"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Insitute for Exercise and Occupational Medicine"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.uniklinik-freiburg.de/sportmedizin.html"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Freiburg im Breisgau"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q106622520"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institut für Anorganische Chemie der Universität Hannover"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.aci.uni-hannover.de/de/institut/profil/#c631"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Nord"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q103918825"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institut für Bildungsmonitoring und Qualitätsentwicklung"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.hamburg.de/bsb/ifbq/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Hamburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q103918825"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institut für Bildungsmonitoring und Qualitätsentwicklung"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.hamburg.de/bsb/ifbq/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Hamburg-Mitte"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1664849"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institut für Fenstertechnik"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.ift-rosenheim.de/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Rosenheim"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1664849"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institut für Fenstertechnik"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.ift-rosenheim.de/en/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Rosenheim"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1664849"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institut für Fenstertechnik"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.ift-rosenheim.de/es/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Rosenheim"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1664849"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institut für Fenstertechnik"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.ift-rosenheim.de/it/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Rosenheim"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1664853"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institut für Forschung und Entwicklung von Sportgeräten"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://fes-sport.de/"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q122798427"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institut für Jugendarbeit Gauting"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://institutgauting.de/"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1664905"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institut für Kunststoffverarbeitung"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.ikv-aachen.de/"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q19286193"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institut für Neue Technische Form"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://intef.info"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Darmstadt"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q120983348"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institut für Oberflächen- und Schichtanalytik GmbH"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.ifos.uni-kl.de"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1529890"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institut für Rechtsinformatik"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.rechtsinformatik.saarland/"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q33121079"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institut für Urheber- und Medienrecht"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.urheberrecht.org/"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q77076578"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institut für Wasser und Boden"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.iwb-dresden.de/index.php/en/"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q77076578"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institut für Wasser und Boden"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.iwb-dresden.de/index.php/de/"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q77076578"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institut für Wasser und Boden"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.iwb-dresden.de/index.php/zh/"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55804217"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute B-10: River and Coastal Engineering"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.tuhh.de/wb/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55804226"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute B-11: Water Resources and Water Supply"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.tuhh.de/wwv/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q106559754"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute B-1: Digital and Autonomous Construction"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.tuhh.de/alt/idac/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55798438"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute B-2: Wastewater Management and Water Protection"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.tuhh.de/alt/aww/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55802698"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute B-3: Materials, Physics and Chemistry of Building"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.tuhh.de/bp/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55803545"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute B-4: Structural Analysis"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.tuhh.de/sdb/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55803576"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute B-5: Geotechnical Engineering and Construction Management"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.tuhh.de/gbt/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55803602"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute B-6: Humanities"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.tuhh.de/humanities/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55803634"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute B-7: Concrete Structures"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.tuhh.de/mb/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55803780"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute B-8: Metal and Composite Structures"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.tuhh.de/mvb/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105729557"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute B-9: Geo-Hydroinformatics"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.tuhh.de/ghi/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55805784"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute E-10: Mathematics"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.mat.tuhh.de/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q82688001"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute E-11: Institute for Algorithms and Complexity"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.tuhh.de/algo/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55805793"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute E-12: Optical and Electronic Materials"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.tuhh.de/oem/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55805814"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute E-13: Embedded Systems"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.tuhh.de/es/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55805823"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute E-14: Control Systems"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.tuhh.de/ics/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55805829"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute E-15: Security in Distributed Applications"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.tuhh.de/sva/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55805837"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute E-16: Software Systems"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.sts.tuhh.de"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55805871"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute E-17: Telematics"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.ti5.tuhh.de/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55806124"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute E-18: Electromagnetic Theory"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.tet.tuhh.de/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55806535"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute E-19: Data Engineering"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.tuhh.de/ide/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55804279"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute E-1: Medical Technology and Intelligent Systems"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://mtec.et8.tuhh.de/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q106779321"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute E-21: Data Science Foundations"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.dsf.tuhh.de/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q116008546"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute E-24: Autonomous Cyber-Physical Systems"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.tuhh.de/acps/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55804362"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute E-2: Vision Systems"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.tuhh.de/alt/bvs/institut/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55804656"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute E-3: High Frequency Technology"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.tuhh.de/et3/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55804825"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute E-4: Communication Networks"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.tuhh.de/et6/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55804887"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute E-5: Biomedical Imaging"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.tuhh.de/ibi/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Hamburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55804914"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute E-6: Electrical Power and Energy Technology (ieet)"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.tuhh.de/ieet/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55805021"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute E-7: Microsystem Technology"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.tuhh.de/mst/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55805538"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute E-8: Telecommunications"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.tuhh.de/nt/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55805779"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute E-9: Integrated Circuits"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.et5.tuhh.de/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55806619"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute E-EXK1: Security Analysis"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://e-learning.tuhh.de/studip/dispatch.php/institute/overview?auswahl=2a89c3da4d3ad7699e898f20048a8497"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55806638"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute E-EXK2: smartPORT"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.tuhh.de/smartport/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55806899"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute M-10: Ship Structural Design and Analysis"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.tuhh.de/skf"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55806900"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute M-11: Polymer Composites"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.tuhh.de/kvweb"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55806901"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute M-12: Marine Engineering"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.tuhh.de/asm"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55806902"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute M-13: Mechanics and Ocean Engineering"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.tuhh.de/mum"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55806903"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute M-14: Structural Dynamics"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.tuhh.de/dyn"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55806904"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute M-15: Continuum and Materials Mechanics"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.tuhh.de/icm"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55806905"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute M-16: Modelling and Computation"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.tuhh.de/mub"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55806906"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute M-17: Product Development and Mechanical Engineering Design"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.tuhh.de/pkt/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55806907"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute M-18: Production Management and Technology"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.tuhh.de/ipmt"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55806804"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute M-1: Work-Gender-Technology"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.tuhh.de/agentec/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55806908"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute M-21: Engineering Thermodynamics"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.tuhh.de/tt"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55806909"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute M-22: Materials Physics and Technology"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.tuhh.de/wp"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55806910"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute M-23: Aircraft Production Technology"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://ifpt-tuhh.de/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55806911"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute M-24: Reliability Engineering"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.tuhh.de/mec"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55806912"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute M-25: Aircraft Cabin Systems"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.tuhh.de/fks/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Hamburg-Mitte"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55806913"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute M-26: Central Division Electron Microscopy"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.tuhh.de/beem/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55806914"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute M-28: Air Transportation Systems"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.tuhh.de/ilt/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q111970445"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute M-2: Institute for Materials and X-Ray Physics"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.mxp.tuhh.de"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Hamburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55806835"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute M-3: Biomechanics"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.tuhh.de/bim"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55806840"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute M-4: Institute for Mechatronics"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.tuhh.de/imek/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55806844"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute M-5: Energy Systems"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.tuhh.de/iet/startseite.html"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55806851"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute M-6: Ship Design and Ship Safety"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.tuhh.de/ssi/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55806856"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute M-7: Aircraft Systems Engineering"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.fst.tuhh.de"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Hamburg-Mitte"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55806859"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute M-8: Fluid Dynamics and Ship Theory"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.tuhh.de/fds"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55806898"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute M-9: Advanced Ceramics"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.tuhh.de/alt/gk/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55806915"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute M-EXK1: Structural optimization for lightweight design"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.tuhh.de/sol/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55806676"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute T-1: Applied Building Technology"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.tuhh-abt.de/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55806687"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute T-2: Laser and System Technologies"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.tuhh.de/ilas/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Bergedorf"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55806706"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute T-3: Technical Education and University Didactic"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.itbh-hh.de/de/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q108732933"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute V-10: Process Imaging"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.ipi.tuhh.de/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55807086"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute V-1: Bioprocess and Biosystems Engineering"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.tuhh.de/ibb"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55807087"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute V-2: Chemical Reaction Engineering"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.crt.tuhh.de/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55807088"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute V-3: Solids Process Engineering and Particle Technology"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.tuhh.de/spe"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55807089"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute V-4: Process Systems Engineering"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.tuhh.de/psi/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55807090"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute V-5: Mulitphase Flows"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.ims-tuhh.de/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55807091"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute V-6: Technical Biocatalysis"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www2.tuhh.de/itb"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55807092"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute V-7: Technical Microbiology"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.tuhh.de/tm/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55807093"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute V-8: Thermal and Separation Processes"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.tuhh.de/v8/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55807094"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute V-9: Environmental Technology and Energy Economy"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.tuhh.de/iue"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55807337"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute W-10: Strategical and International Management"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.tuhh.de/isim"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55807338"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute W-11: Entrepreneurship"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.startupengineer.io/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55807339"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute W-12: Maritime Logistics"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.tuhh.de/mls/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55807329"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute W-1: Management Accounting and Simulation"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.tuhh.de/cur/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55807330"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute W-2: Business Logistics and General Management"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.tuhh.de/apw/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55807331"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute W-3: Innovation Marketing"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.tuhh.de/im"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55807332"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute W-4: Operations Research and Information Systems"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.tuhh.de/oris/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55807333"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute W-6: Technical Logistics"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.tuhh.de/itl/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55807334"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute W-7: Technology and Innovation Management"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.tuhh.de/tim/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55807335"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute W-8: Transport Planning and Logistics"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.tuhh.de/vpl"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q55807336"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute W-9: Human Resource Management and Organizations"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.tuhh.de/hrmo/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Harburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1664800"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute for Applied Training Science"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://sport-iat.de/allgemeines"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q77078137"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute for Building Systems Engineering Dresden Research and Application"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.itg-dresden.de"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q77078137"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute for Building Systems Engineering Dresden Research and Application"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.itg-dresden.de/en"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q126810633"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute for Cultural Analysis of the Germans of Eastern Europe"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.ivdebw.de/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Freiburg im Breisgau"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q126810633"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute for Cultural Analysis of the Germans of Eastern Europe"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.ikdebw.de/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Freiburg im Breisgau"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q130224180"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute for Egyptology and Coptology, Ludwigs-Maximilians-University Munich"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.aegyptologie.uni-muenchen.de/index.html"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q15449375"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute for Energy and Environmental Research"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.ifeu.de/"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q704583"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute for Information, Telecommunication and Media Law"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.uni-muenster.de/Jura.itm/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Münster"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q704583"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute for Information, Telecommunication and Media Law"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.itm.nrw"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Münster"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q130224050"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute for Legal History and Papyrus Research, Philipps University Marburg"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.uni-marburg.de/de/fb01/forschung/institute/rechtsgeschichte-und-papyrusforschung"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q477451"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute for New Testament Textual Research"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://egora.uni-muenster.de/intf/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Münster"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1664949"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute for Prevention and Occupational Medicine"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.ipa-dguv.de/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Bochum"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q110699141"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute for Social Movements"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.isb.ruhr-uni-bochum.de/"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q131282288"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute for Test Development and Talent Research"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://itb-academic-tests.org"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q131282288"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute for Test Development and Talent Research"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.itb-consulting.de"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q254717"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute for Transuranium Elements"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://ec.europa.eu/jrc/en/about/itu"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Karlsruhe"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q21042024"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute of Communication and Media Studies of Leipzig University"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.kmw.uni-leipzig.de/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Leipzig"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q101259337"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute of Meteorology Freie Universität Berlin"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.geo.fu-berlin.de/met/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Steglitz-Zehlendorf"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q101259337"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute of Meteorology Freie Universität Berlin"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.geo.fu-berlin.de/en/met/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Steglitz-Zehlendorf"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q110958522"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute of National Anti-Doping Organizations"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.inado.org/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Bonn"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1664945"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Institute of Pharmacy and Molecular Biotechnology"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.ipmb.uni-heidelberg.de/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Heidelberg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q77076460"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Instituts für Rohrleitungsbau an der Fachhochschule Oldenburg"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.iro-online.de/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Oldenburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q15710128"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Intel Visual Computing Institute"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.intel-vci.uni-saarland.de/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Saarbrücken"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1550192"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Konrad Wolf Film University of Babelsberg"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "university"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.filmuniversitaet.de/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Potsdam"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q130235936"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Kulturanthropologisches Institut Oldenburger Münsterland"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://kai-om.de/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Cloppenburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q963452"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Köln International School of Design"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.kisd.de/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Neustadt-Süd"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1813753"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Leibniz Institute for Neurobiology"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.lin-magdeburg.de/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Magdeburg"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1607075"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Leibniz Institute for Tropospheric Research"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.tropos.de/"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1607075"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Leibniz Institute for Tropospheric Research"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.tropos.de/en/"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q118252144"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Leipzig Institute for Meteorology"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.physgeo.uni-leipzig.de/institut-fuer-meteorologie"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Mitte"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q118252144"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Leipzig Institute for Meteorology"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.physgeo.uni-leipzig.de/en/institute-for-meteorology"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Mitte"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q58582504"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Leopold Wenger Institute for Ancient Legal History and Papyrus Research"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.jura.lmu.de/de/fakultaet/einrichtungen/institute/leopold-wenger-institut-fuer-rechtsgeschichte/index.html"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1328309"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "MBA School, Universität des Saarlandes"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.eiabm.de/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Saarbrücken"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q30274266"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Mammendorf Insitute for Physics and Medicine"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://mipm.com/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Mammendorf"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q135399617"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Marburg Center for Digital Culture and Infrastructure"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.uni-marburg.de/de/mcdci"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q20678"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Nordfriisk Instituut"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.nordfriiskinstituut.de/institut2.html"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q7109839"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Otto Stern School for Integrated Doctoral Education"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "university"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.oss.uni-frankfurt.de/"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1792636"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Plastics Institute Lüdenscheid"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.kunststoff-institut.de/"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q77077223"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Reiner Lemoine Institute"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://reiner-lemoine-institut.de"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Berlin"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1665134"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Research Institute for Sustainability"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.rifs-potsdam.de/de/institut"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Potsdam"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1665134"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Research Institute for Sustainability"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.rifs-potsdam.de/en"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Potsdam"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1665134"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Research Institute for Sustainability"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.rifs-potsdam.de/en/institute"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Potsdam"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q101248092"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Rheinische Friedrich-Wilhelms-Universität Bonn Department of Geography"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.geographie.uni-bonn.de/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Stadtbezirk Bonn"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q101248092"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Rheinische Friedrich-Wilhelms-Universität Bonn Department of Geography"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.geographie.uni-bonn.de/en/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Stadtbezirk Bonn"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q7392824"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "SRH Berlin University of Applied Sciences"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "university"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.srh-hochschule-berlin.de/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Berlin"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q895645"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Sankt Georgen Graduate School of Philosophy and Theology"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "university"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.sankt-georgen.de/"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q48756211"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Sigmund Freud Privatuniversität - Standort Berlin"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "university"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.sfu-berlin.de"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Berlin"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q48756211"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Sigmund Freud Privatuniversität - Standort Berlin"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "university"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.sfu-berlin.de"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Berlin"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q591905"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Ulm School of Design"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "university"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.hfg-archiv.ulm.de"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Ulm"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q591905"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Ulm School of Design"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "university"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://hfg-archiv.museumulm.de/en/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Ulm"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q702524"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "University of Erfurt"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "university"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.uni-erfurt.de/"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q702524"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "University of Erfurt"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "university"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.uni-erfurt.de/en/"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q113633597"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "University of Koblenz"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "university"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.uni-koblenz.de/de"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Koblenz"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q118178605"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "University of Potsdam Institute of Geosciences"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.uni-potsdam.de/de/geo/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Potsdam"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q118178605"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "University of Potsdam Institute of Geosciences"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.uni-potsdam.de/en/geo/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Potsdam"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q101248331"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Universitätsklinikum Köln Institut für Rechtsmedizin"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://rechtsmedizin.uk-koeln.de/"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Cologne"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q2511587"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "VdS Schadenverhütung"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://vds.de/"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q117463464"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Vetus Latina Institut"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.vetus-latina.de"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Beuron"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q1327646"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Vserossiĭskiĭ ėlektrotekhnicheskiĭ institut"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "https://www.eti.kit.edu/"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q7949330"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "WFI – Ingolstadt School of Management"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.wfi.edu"
+      },
+      "cityLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Ingolstadt"
+      }
+    }, {
+      "u" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q123561933"
+      },
+      "uLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Wilhelm Fraenger-Institut Berlin gGmbH"
+      },
+      "typeLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "institute"
+      },
+      "website" : {
+        "type" : "uri",
+        "value" : "http://www.fraengerinstitut.de/"
+      }
+    } ]
+  }
+}
