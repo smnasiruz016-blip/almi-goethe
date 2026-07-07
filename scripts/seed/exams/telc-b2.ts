@@ -2395,6 +2395,306 @@ export const ITEMS: ExamItemInput[] = [
     guidanceNote:
       "Auf B2 wird eine klare Position mit Begründung erwartet. Verbinden Sie Ihre Argumente mit „außerdem“, „allerdings“, „daher“.",
   },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SCHRIFTLICHER_AUSDRUCK,
+    taskType: "TELC_B2_SA_OPINION",
+    title: "Forumsbeitrag: Autofreie Innenstädte",
+    prompt: "Schreiben Sie einen zusammenhängenden Beitrag (circa 150 Wörter).",
+    difficulty: "CORE",
+    topicTag: "verkehr",
+    timeLimitSeconds: 2400,
+    payload: {
+      situation:
+        "In einem Online-Forum wird diskutiert, ob Innenstädte für Autos gesperrt werden sollten.",
+      instruction:
+        "Schreiben Sie einen Forumsbeitrag. Nennen Sie Ihre Meinung, führen Sie zwei Argumente an, gehen Sie kurz auf eine Gegenmeinung ein und schließen Sie mit einem Fazit.",
+      wordMin: 120,
+      wordMax: 200,
+    },
+    guidanceNote: "Denken Sie an Anwohner, Geschäfte und Umwelt. Eine klare Position gehört ans Ende.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SCHRIFTLICHER_AUSDRUCK,
+    taskType: "TELC_B2_SA_OPINION",
+    title: "Forumsbeitrag: Verkaufsoffene Sonntage",
+    prompt: "Schreiben Sie einen zusammenhängenden Beitrag (circa 150 Wörter).",
+    difficulty: "CORE",
+    topicTag: "gesellschaft",
+    timeLimitSeconds: 2400,
+    payload: {
+      situation:
+        "Es wird diskutiert, ob Geschäfte auch sonntags öffnen dürfen sollten.",
+      instruction:
+        "Schreiben Sie einen Forumsbeitrag. Nennen Sie Ihre Meinung, bringen Sie zwei Argumente, gehen Sie auf eine Gegenmeinung ein und formulieren Sie ein Fazit.",
+      wordMin: 120,
+      wordMax: 200,
+    },
+    guidanceNote: "Wägen Sie Kundenwunsch und Umsatz gegen Ruhe und Arbeitsbedingungen ab.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SCHRIFTLICHER_AUSDRUCK,
+    taskType: "TELC_B2_SA_OPINION",
+    title: "Forumsbeitrag: Brauchen wir noch Bargeld?",
+    prompt: "Schreiben Sie einen zusammenhängenden Beitrag (circa 150 Wörter).",
+    difficulty: "STRETCH",
+    topicTag: "gesellschaft",
+    timeLimitSeconds: 2400,
+    payload: {
+      situation:
+        "In einem Forum wird gefragt, ob Bargeld angesichts des bargeldlosen Bezahlens noch nötig ist.",
+      instruction:
+        "Schreiben Sie einen Forumsbeitrag. Äußern Sie Ihre Meinung, nennen Sie zwei Argumente, gehen Sie auf eine Gegenmeinung ein und schließen Sie mit einem Fazit.",
+      wordMin: 120,
+      wordMax: 200,
+    },
+    guidanceNote: "Denken Sie an Bequemlichkeit gegen Datenschutz und an Menschen ohne Konto.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SCHRIFTLICHER_AUSDRUCK,
+    taskType: "TELC_B2_SA_OPINION",
+    title: "Forumsbeitrag: Homeoffice für alle?",
+    prompt: "Schreiben Sie einen zusammenhängenden Beitrag (circa 150 Wörter).",
+    difficulty: "CORE",
+    topicTag: "arbeit",
+    timeLimitSeconds: 2400,
+    payload: {
+      situation:
+        "In einem Forum wird diskutiert, ob Beschäftigte, wo möglich, überwiegend von zu Hause arbeiten sollten.",
+      instruction:
+        "Schreiben Sie einen Forumsbeitrag. Nennen Sie Ihre Meinung, führen Sie zwei Argumente an, gehen Sie auf eine Gegenmeinung ein und schließen Sie mit einem Fazit.",
+      wordMin: 120,
+      wordMax: 200,
+    },
+    guidanceNote: "Berücksichtigen Sie Flexibilität, Wohnsituation und den Kontakt im Team.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SCHRIFTLICHER_AUSDRUCK,
+    taskType: "TELC_B2_SA_OPINION",
+    title: "Forumsbeitrag: Kochen als Schulfach",
+    prompt: "Schreiben Sie einen zusammenhängenden Beitrag (circa 150 Wörter).",
+    difficulty: "CORE",
+    topicTag: "bildung",
+    timeLimitSeconds: 2400,
+    payload: {
+      situation:
+        "In einem Forum wird vorgeschlagen, dass Schulen ein Fach anbieten, in dem Kinder gesundes Kochen und Ernährung lernen.",
+      instruction:
+        "Schreiben Sie einen Forumsbeitrag. Äußern Sie Ihre Meinung, bringen Sie zwei Argumente, gehen Sie auf eine Gegenmeinung ein und formulieren Sie ein Fazit.",
+      wordMin: 120,
+      wordMax: 200,
+    },
+    guidanceNote: "Denken Sie an praktischen Nutzen gegen einen ohnehin vollen Stundenplan.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SCHRIFTLICHER_AUSDRUCK,
+    taskType: "TELC_B2_SA_OPINION",
+    title: "Forumsbeitrag: Fliegen und Klima",
+    prompt: "Schreiben Sie einen zusammenhängenden Beitrag (circa 150 Wörter).",
+    difficulty: "STRETCH",
+    topicTag: "umwelt",
+    timeLimitSeconds: 2400,
+    payload: {
+      situation:
+        "In einem Forum wird diskutiert, ob man angesichts des Klimawandels weniger fliegen sollte.",
+      instruction:
+        "Schreiben Sie einen Forumsbeitrag. Nennen Sie Ihre Meinung, führen Sie zwei Argumente an, gehen Sie auf eine Gegenmeinung ein und schließen Sie mit einem Fazit.",
+      wordMin: 120,
+      wordMax: 200,
+    },
+    guidanceNote: "Wägen Sie Umweltschutz gegen persönliche Freiheit und fehlende Alternativen ab.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SCHRIFTLICHER_AUSDRUCK,
+    taskType: "TELC_B2_SA_OPINION",
+    title: "Forumsbeitrag: Smartphones für Kinder",
+    prompt: "Schreiben Sie einen zusammenhängenden Beitrag (circa 150 Wörter).",
+    difficulty: "CORE",
+    topicTag: "gesellschaft",
+    timeLimitSeconds: 2400,
+    payload: {
+      situation:
+        "In einem Forum wird gefragt, ab welchem Alter Kinder ein eigenes Smartphone haben sollten.",
+      instruction:
+        "Schreiben Sie einen Forumsbeitrag. Äußern Sie Ihre Meinung, bringen Sie zwei Argumente, gehen Sie auf eine Gegenmeinung ein und schließen Sie mit einem Fazit.",
+      wordMin: 120,
+      wordMax: 200,
+    },
+    guidanceNote: "Denken Sie an Erreichbarkeit und Selbstständigkeit gegen Ablenkung und Risiken.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SCHRIFTLICHER_AUSDRUCK,
+    taskType: "TELC_B2_SA_OPINION",
+    title: "Forumsbeitrag: Haustiere in Mietwohnungen",
+    prompt: "Schreiben Sie einen zusammenhängenden Beitrag (circa 150 Wörter).",
+    difficulty: "CORE",
+    topicTag: "wohnen",
+    timeLimitSeconds: 2400,
+    payload: {
+      situation:
+        "In einem Forum wird diskutiert, ob Vermieter Haustiere in ihren Wohnungen grundsätzlich erlauben sollten.",
+      instruction:
+        "Schreiben Sie einen Forumsbeitrag. Nennen Sie Ihre Meinung, führen Sie zwei Argumente an, gehen Sie auf eine Gegenmeinung ein und schließen Sie mit einem Fazit.",
+      wordMin: 120,
+      wordMax: 200,
+    },
+    guidanceNote: "Berücksichtigen Sie das Wohl der Tiere gegen mögliche Schäden und Rücksicht auf Nachbarn.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SCHRIFTLICHER_AUSDRUCK,
+    taskType: "TELC_B2_SA_OPINION",
+    title: "Forumsbeitrag: Ehrenamt belohnen?",
+    prompt: "Schreiben Sie einen zusammenhängenden Beitrag (circa 150 Wörter).",
+    difficulty: "STRETCH",
+    topicTag: "gesellschaft",
+    timeLimitSeconds: 2400,
+    payload: {
+      situation:
+        "In einem Forum wird vorgeschlagen, freiwilliges Engagement mit kleinen Vorteilen wie Vergünstigungen zu belohnen.",
+      instruction:
+        "Schreiben Sie einen Forumsbeitrag. Äußern Sie Ihre Meinung, bringen Sie zwei Argumente, gehen Sie auf eine Gegenmeinung ein und formulieren Sie ein Fazit.",
+      wordMin: 120,
+      wordMax: 200,
+    },
+    guidanceNote: "Fragen Sie, ob Belohnungen motivieren oder die Freiwilligkeit untergraben.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SCHRIFTLICHER_AUSDRUCK,
+    taskType: "TELC_B2_SA_OPINION",
+    title: "Forumsbeitrag: Weniger Fleisch essen?",
+    prompt: "Schreiben Sie einen zusammenhängenden Beitrag (circa 150 Wörter).",
+    difficulty: "CORE",
+    topicTag: "umwelt",
+    timeLimitSeconds: 2400,
+    payload: {
+      situation:
+        "In einem Forum wird diskutiert, ob man aus Umwelt- und Gesundheitsgründen weniger Fleisch essen sollte.",
+      instruction:
+        "Schreiben Sie einen Forumsbeitrag. Nennen Sie Ihre Meinung, führen Sie zwei Argumente an, gehen Sie auf eine Gegenmeinung ein und schließen Sie mit einem Fazit.",
+      wordMin: 120,
+      wordMax: 200,
+    },
+    guidanceNote: "Es geht um Maß und persönliche Entscheidung — pauschale Verbote wirken schwächer.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SCHRIFTLICHER_AUSDRUCK,
+    taskType: "TELC_B2_SA_OPINION",
+    title: "Forumsbeitrag: Sport im Betrieb fördern",
+    prompt: "Schreiben Sie einen zusammenhängenden Beitrag (circa 150 Wörter).",
+    difficulty: "CORE",
+    topicTag: "gesundheit",
+    timeLimitSeconds: 2400,
+    payload: {
+      situation:
+        "In einem Forum wird vorgeschlagen, dass Firmen ihren Beschäftigten Sportangebote während der Arbeitszeit ermöglichen.",
+      instruction:
+        "Schreiben Sie einen Forumsbeitrag. Äußern Sie Ihre Meinung, bringen Sie zwei Argumente, gehen Sie auf eine Gegenmeinung ein und formulieren Sie ein Fazit.",
+      wordMin: 120,
+      wordMax: 200,
+    },
+    guidanceNote: "Wägen Sie Gesundheit und Motivation gegen Kosten und Arbeitszeit ab.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SCHRIFTLICHER_AUSDRUCK,
+    taskType: "TELC_B2_SA_OPINION",
+    title: "Forumsbeitrag: Werbung an Kinder richten",
+    prompt: "Schreiben Sie einen zusammenhängenden Beitrag (circa 150 Wörter).",
+    difficulty: "STRETCH",
+    topicTag: "medien",
+    timeLimitSeconds: 2400,
+    payload: {
+      situation:
+        "In einem Forum wird diskutiert, ob Werbung, die sich gezielt an Kinder richtet, stärker eingeschränkt werden sollte.",
+      instruction:
+        "Schreiben Sie einen Forumsbeitrag. Nennen Sie Ihre Meinung, führen Sie zwei Argumente an, gehen Sie auf eine Gegenmeinung ein und schließen Sie mit einem Fazit.",
+      wordMin: 120,
+      wordMax: 200,
+    },
+    guidanceNote: "Denken Sie an den Schutz von Kindern gegen die Freiheit der Wirtschaft.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SCHRIFTLICHER_AUSDRUCK,
+    taskType: "TELC_B2_SA_OPINION",
+    title: "Forumsbeitrag: Ein kostenloses Kulturangebot",
+    prompt: "Schreiben Sie einen zusammenhängenden Beitrag (circa 150 Wörter).",
+    difficulty: "CORE",
+    topicTag: "kultur",
+    timeLimitSeconds: 2400,
+    payload: {
+      situation:
+        "In einem Forum wird vorgeschlagen, dass Museen an einem Tag im Monat kostenlosen Eintritt anbieten.",
+      instruction:
+        "Schreiben Sie einen Forumsbeitrag. Äußern Sie Ihre Meinung, bringen Sie zwei Argumente, gehen Sie auf eine Gegenmeinung ein und formulieren Sie ein Fazit.",
+      wordMin: 120,
+      wordMax: 200,
+    },
+    guidanceNote: "Wägen Sie kulturelle Teilhabe gegen die Finanzierung der Häuser ab.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SCHRIFTLICHER_AUSDRUCK,
+    taskType: "TELC_B2_SA_OPINION",
+    title: "Forumsbeitrag: Ein Jahr Auszeit vor dem Studium",
+    prompt: "Schreiben Sie einen zusammenhängenden Beitrag (circa 150 Wörter).",
+    difficulty: "CORE",
+    topicTag: "bildung",
+    timeLimitSeconds: 2400,
+    payload: {
+      situation:
+        "In einem Forum wird diskutiert, ob es sinnvoll ist, nach der Schule ein Jahr Pause zu machen, bevor man studiert.",
+      instruction:
+        "Schreiben Sie einen Forumsbeitrag. Nennen Sie Ihre Meinung, führen Sie zwei Argumente an, gehen Sie auf eine Gegenmeinung ein und schließen Sie mit einem Fazit.",
+      wordMin: 120,
+      wordMax: 200,
+    },
+    guidanceNote: "Denken Sie an Orientierung und Erfahrung gegen möglichen Zeitverlust.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SCHRIFTLICHER_AUSDRUCK,
+    taskType: "TELC_B2_SA_OPINION",
+    title: "Forumsbeitrag: Weiterbildung im Beruf",
+    prompt: "Schreiben Sie einen zusammenhängenden Beitrag (circa 150 Wörter).",
+    difficulty: "STRETCH",
+    topicTag: "arbeit",
+    timeLimitSeconds: 2400,
+    payload: {
+      situation:
+        "In einem Forum wird diskutiert, ob Arbeitgeber verpflichtet sein sollten, ihren Beschäftigten regelmäßige Weiterbildung zu ermöglichen.",
+      instruction:
+        "Schreiben Sie einen Forumsbeitrag. Äußern Sie Ihre Meinung, bringen Sie zwei Argumente, gehen Sie auf eine Gegenmeinung ein und formulieren Sie ein Fazit.",
+      wordMin: 120,
+      wordMax: 200,
+    },
+    guidanceNote: "Wägen Sie den Nutzen für Beschäftigte und Betrieb gegen Kosten und Zeit ab.",
+  },
 
   // ---------------------------------------------------------------------- SPRECHEN
   {
