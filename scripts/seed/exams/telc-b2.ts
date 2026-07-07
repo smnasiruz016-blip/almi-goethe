@@ -851,6 +851,741 @@ export const ITEMS: ExamItemInput[] = [
     },
     guidanceNote: "„damit“ nennt eine Absicht (Sie können sich vorbereiten). „sodass“ nennt eine Folge — hier passt die Absicht.",
   },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SPRACHBAUSTEINE,
+    taskType: "TELC_B2_SB_GAP",
+    title: "Antwort auf eine Beschwerde",
+    prompt: "Wählen Sie für jede Lücke das passende Wort.",
+    difficulty: "CORE",
+    topicTag: "arbeit",
+    timeLimitSeconds: 540,
+    payload: {
+      instructions: "Wählen Sie für jede Lücke die richtige Möglichkeit (a, b oder c).",
+      passage:
+        "Sehr geehrte Frau Adler, wir bedauern, dass Sie mit unserem Service nicht zufrieden waren. (1) Ihrer berechtigten Kritik haben wir unsere Abläufe überprüft. (2) sich der Fehler nicht wiederholt, schulen wir unsere Mitarbeiter erneut. Als Zeichen unseres Bedauerns (3) wir Ihnen einen Gutschein zu.",
+      questions: [
+        {
+          id: "1",
+          stem: "Lücke 1",
+          options: [
+            { id: "a", text: "Aufgrund" },
+            { id: "b", text: "Trotz" },
+            { id: "c", text: "Entgegen" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "2",
+          stem: "Lücke 2",
+          options: [
+            { id: "a", text: "Damit" },
+            { id: "b", text: "Weil" },
+            { id: "c", text: "Obwohl" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "3",
+          stem: "Lücke 3",
+          options: [
+            { id: "a", text: "senden" },
+            { id: "b", text: "sendet" },
+            { id: "c", text: "gesendet" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„aufgrund“ + Genitiv = Grund; „damit … nicht wiederholt“ nennt die Absicht; „wir senden“.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SPRACHBAUSTEINE,
+    taskType: "TELC_B2_SB_GAP",
+    title: "Mitteilung zur Betriebsversammlung",
+    prompt: "Wählen Sie für jede Lücke das passende Wort.",
+    difficulty: "STRETCH",
+    topicTag: "arbeit",
+    timeLimitSeconds: 540,
+    payload: {
+      instructions: "Wählen Sie für jede Lücke die richtige Möglichkeit (a, b oder c).",
+      passage:
+        "Liebe Kolleginnen und Kollegen, die Betriebsversammlung, (1) Termin verschoben werden musste, findet nun am Freitag statt. Bitte planen Sie ausreichend Zeit ein, (2) alle wichtigen Punkte besprochen werden können. Wer nicht teilnehmen kann, (3) sich bitte im Voraus entschuldigen.",
+      questions: [
+        {
+          id: "1",
+          stem: "Lücke 1",
+          options: [
+            { id: "a", text: "deren" },
+            { id: "b", text: "dessen" },
+            { id: "c", text: "die" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "2",
+          stem: "Lücke 2",
+          options: [
+            { id: "a", text: "damit" },
+            { id: "b", text: "sodass" },
+            { id: "c", text: "obwohl" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "3",
+          stem: "Lücke 3",
+          options: [
+            { id: "a", text: "sollte" },
+            { id: "b", text: "soll" },
+            { id: "c", text: "würde" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„deren Termin“ (fem. Versammlung, Genitiv); „damit … besprochen werden können“ (Absicht).",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SPRACHBAUSTEINE,
+    taskType: "TELC_B2_SB_GAP",
+    title: "Hinweis zum Datenschutz",
+    prompt: "Wählen Sie für jede Lücke das passende Wort.",
+    difficulty: "STRETCH",
+    topicTag: "medien",
+    timeLimitSeconds: 540,
+    payload: {
+      instructions: "Wählen Sie für jede Lücke die richtige Möglichkeit (a, b oder c).",
+      passage:
+        "Ihre Daten werden ausschließlich zur Bearbeitung Ihrer Anfrage verwendet und (1) nicht an Dritte weitergegeben. (2) Sie damit nicht einverstanden sind, können Sie der Verarbeitung jederzeit widersprechen. Ihre Angaben werden gelöscht, (3) der genannte Zweck erfüllt ist.",
+      questions: [
+        {
+          id: "1",
+          stem: "Lücke 1",
+          options: [
+            { id: "a", text: "werden" },
+            { id: "b", text: "wird" },
+            { id: "c", text: "haben" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "2",
+          stem: "Lücke 2",
+          options: [
+            { id: "a", text: "Falls" },
+            { id: "b", text: "Damit" },
+            { id: "c", text: "Indem" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "3",
+          stem: "Lücke 3",
+          options: [
+            { id: "a", text: "sobald" },
+            { id: "b", text: "seit" },
+            { id: "c", text: "bevor" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Passiv Plural „Daten werden … weitergegeben“; „sobald der Zweck erfüllt ist“ (zeitlich).",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SPRACHBAUSTEINE,
+    taskType: "TELC_B2_SB_GAP",
+    title: "Einladung zu einer Fortbildung",
+    prompt: "Wählen Sie für jede Lücke das passende Wort.",
+    difficulty: "CORE",
+    topicTag: "arbeit",
+    timeLimitSeconds: 540,
+    payload: {
+      instructions: "Wählen Sie für jede Lücke die richtige Möglichkeit (a, b oder c).",
+      passage:
+        "Wir laden Sie zu einer Fortbildung ein, (1) der Sie neue Methoden kennenlernen. Die Teilnahme lohnt sich, (2) Sie Ihre Kenntnisse auffrischen möchten. Bitte melden Sie sich bis Freitag an, (3) wir die Materialien vorbereiten können.",
+      questions: [
+        {
+          id: "1",
+          stem: "Lücke 1",
+          options: [
+            { id: "a", text: "bei" },
+            { id: "b", text: "in" },
+            { id: "c", text: "an" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "2",
+          stem: "Lücke 2",
+          options: [
+            { id: "a", text: "falls" },
+            { id: "b", text: "damit" },
+            { id: "c", text: "obwohl" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "3",
+          stem: "Lücke 3",
+          options: [
+            { id: "a", text: "damit" },
+            { id: "b", text: "sodass" },
+            { id: "c", text: "weil" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„bei der Sie … kennenlernen“ (Ort/Gelegenheit); „damit wir … vorbereiten können“ (Absicht).",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SPRACHBAUSTEINE,
+    taskType: "TELC_B2_SB_GAP",
+    title: "Absage einer Bestellung",
+    prompt: "Wählen Sie für jede Lücke das passende Wort.",
+    difficulty: "CORE",
+    topicTag: "alltag",
+    timeLimitSeconds: 540,
+    payload: {
+      instructions: "Wählen Sie für jede Lücke die richtige Möglichkeit (a, b oder c).",
+      passage:
+        "Sehr geehrte Damen und Herren, leider muss ich meine Bestellung stornieren, (1) sich meine Pläne geändert haben. Ich hoffe, dass Ihnen (2) keine Umstände entstehen. Sollten bereits Kosten angefallen sein, (3) ich diese selbstverständlich.",
+      questions: [
+        {
+          id: "1",
+          stem: "Lücke 1",
+          options: [
+            { id: "a", text: "da" },
+            { id: "b", text: "denn" },
+            { id: "c", text: "trotzdem" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "2",
+          stem: "Lücke 2",
+          options: [
+            { id: "a", text: "dadurch" },
+            { id: "b", text: "deshalb" },
+            { id: "c", text: "trotzdem" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "3",
+          stem: "Lücke 3",
+          options: [
+            { id: "a", text: "übernehme" },
+            { id: "b", text: "übernimmt" },
+            { id: "c", text: "übernommen" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„da“ leitet den Grund ein (Verb ans Ende); „dadurch“ = durch die Stornierung.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SPRACHBAUSTEINE,
+    taskType: "TELC_B2_SB_GAP",
+    title: "Ankündigung einer Baumaßnahme",
+    prompt: "Wählen Sie für jede Lücke das passende Wort.",
+    difficulty: "STRETCH",
+    topicTag: "wohnen",
+    timeLimitSeconds: 540,
+    payload: {
+      instructions: "Wählen Sie für jede Lücke die richtige Möglichkeit (a, b oder c).",
+      passage:
+        "Sehr geehrte Mieterinnen und Mieter, ab Montag wird die Fassade unseres Hauses renoviert. (1) der Arbeiten kann es zeitweise zu Lärm kommen. Wir bemühen uns, die Beeinträchtigungen so gering wie möglich zu halten. (2) die Balkone gestrichen werden, bitten wir Sie, diese vorübergehend leerzuräumen. Für Ihr Verständnis danken wir Ihnen, (3) die Arbeiten Ihrer aller Sicherheit dienen.",
+      questions: [
+        {
+          id: "1",
+          stem: "Lücke 1",
+          options: [
+            { id: "a", text: "Während" },
+            { id: "b", text: "Trotz" },
+            { id: "c", text: "Statt" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "2",
+          stem: "Lücke 2",
+          options: [
+            { id: "a", text: "Solange" },
+            { id: "b", text: "Sobald" },
+            { id: "c", text: "Seitdem" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "3",
+          stem: "Lücke 3",
+          options: [
+            { id: "a", text: "da" },
+            { id: "b", text: "damit" },
+            { id: "c", text: "obwohl" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„während der Arbeiten“ (Genitiv); „solange … gestrichen werden“ (Zeitdauer); „da“ = Grund.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SPRACHBAUSTEINE,
+    taskType: "TELC_B2_SB_GAP",
+    title: "Empfehlungsschreiben",
+    prompt: "Wählen Sie für jede Lücke das passende Wort.",
+    difficulty: "STRETCH",
+    topicTag: "arbeit",
+    timeLimitSeconds: 540,
+    payload: {
+      instructions: "Wählen Sie für jede Lücke die richtige Möglichkeit (a, b oder c).",
+      passage:
+        "Frau Kaya war in unserem Team tätig und hat sich (1) durch ihre Zuverlässigkeit ausgezeichnet. Sie arbeitete stets sorgfältig, (2) sie auch unter Zeitdruck ruhig blieb. Ich kann sie (3) besten Gewissen weiterempfehlen.",
+      questions: [
+        {
+          id: "1",
+          stem: "Lücke 1",
+          options: [
+            { id: "a", text: "vor allem" },
+            { id: "b", text: "trotzdem" },
+            { id: "c", text: "dennoch" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "2",
+          stem: "Lücke 2",
+          options: [
+            { id: "a", text: "wobei" },
+            { id: "b", text: "weil" },
+            { id: "c", text: "damit" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "3",
+          stem: "Lücke 3",
+          options: [
+            { id: "a", text: "mit" },
+            { id: "b", text: "bei" },
+            { id: "c", text: "in" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„wobei“ ergänzt eine begleitende Info; „mit bestem Gewissen“ ist eine feste Wendung.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SPRACHBAUSTEINE,
+    taskType: "TELC_B2_SB_GAP",
+    title: "Info zur Rückgabe",
+    prompt: "Wählen Sie für jede Lücke das passende Wort.",
+    difficulty: "CORE",
+    topicTag: "alltag",
+    timeLimitSeconds: 540,
+    payload: {
+      instructions: "Wählen Sie für jede Lücke die richtige Möglichkeit (a, b oder c).",
+      passage:
+        "Gekaufte Waren können Sie innerhalb von vierzehn Tagen zurückgeben, (1) sie unbenutzt sind. Bitte bringen Sie den Kassenbon mit, (2) wir den Kauf nachvollziehen können. Der Betrag wird Ihnen dann (3) Ihr Konto zurückerstattet.",
+      questions: [
+        {
+          id: "1",
+          stem: "Lücke 1",
+          options: [
+            { id: "a", text: "sofern" },
+            { id: "b", text: "damit" },
+            { id: "c", text: "obwohl" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "2",
+          stem: "Lücke 2",
+          options: [
+            { id: "a", text: "damit" },
+            { id: "b", text: "sodass" },
+            { id: "c", text: "weil" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "3",
+          stem: "Lücke 3",
+          options: [
+            { id: "a", text: "auf" },
+            { id: "b", text: "an" },
+            { id: "c", text: "in" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„sofern“ = unter der Bedingung; „auf Ihr Konto erstatten“ ist fest.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SPRACHBAUSTEINE,
+    taskType: "TELC_B2_SB_GAP",
+    title: "Rundschreiben des Vermieters",
+    prompt: "Wählen Sie für jede Lücke das passende Wort.",
+    difficulty: "CORE",
+    topicTag: "wohnen",
+    timeLimitSeconds: 540,
+    payload: {
+      instructions: "Wählen Sie für jede Lücke die richtige Möglichkeit (a, b oder c).",
+      passage:
+        "Sehr geehrte Mieter, (1) der steigenden Energiekosten bitten wir Sie, sparsam zu heizen. Bitte lüften Sie kurz und kräftig, (2) die Wärme nicht unnötig verloren geht. (3) Fragen zur Nebenkostenabrechnung wenden Sie sich gern an die Hausverwaltung.",
+      questions: [
+        {
+          id: "1",
+          stem: "Lücke 1",
+          options: [
+            { id: "a", text: "Angesichts" },
+            { id: "b", text: "Trotz" },
+            { id: "c", text: "Ungeachtet" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "2",
+          stem: "Lücke 2",
+          options: [
+            { id: "a", text: "damit" },
+            { id: "b", text: "sodass" },
+            { id: "c", text: "obwohl" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "3",
+          stem: "Lücke 3",
+          options: [
+            { id: "a", text: "Bei" },
+            { id: "b", text: "In" },
+            { id: "c", text: "Auf" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„angesichts“ + Genitiv (Grund); „bei Fragen“ nennt den Anlass.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SPRACHBAUSTEINE,
+    taskType: "TELC_B2_SB_GAP",
+    title: "Bestätigung einer Reservierung",
+    prompt: "Wählen Sie für jede Lücke das passende Wort.",
+    difficulty: "CORE",
+    topicTag: "alltag",
+    timeLimitSeconds: 540,
+    payload: {
+      instructions: "Wählen Sie für jede Lücke die richtige Möglichkeit (a, b oder c).",
+      passage:
+        "Sehr geehrter Herr Prinz, wir bestätigen Ihre Reservierung für zwei Personen. Ihr Tisch ist bis 20:30 Uhr für Sie reserviert. (1) Sie später kommen, geben Sie uns bitte kurz Bescheid. Bei einer Gruppe ab sechs Personen bitten wir (2) eine Anzahlung. Wir freuen uns (3) Ihren Besuch.",
+      questions: [
+        {
+          id: "1",
+          stem: "Lücke 1",
+          options: [
+            { id: "a", text: "Sollten" },
+            { id: "b", text: "Würden" },
+            { id: "c", text: "Hätten" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "2",
+          stem: "Lücke 2",
+          options: [
+            { id: "a", text: "um" },
+            { id: "b", text: "für" },
+            { id: "c", text: "über" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "3",
+          stem: "Lücke 3",
+          options: [
+            { id: "a", text: "auf" },
+            { id: "b", text: "über" },
+            { id: "c", text: "für" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„Sollten Sie später kommen“ = höfliche Bedingung; „bitten um“; „sich freuen auf“ (Zukunft).",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SPRACHBAUSTEINE,
+    taskType: "TELC_B2_SB_GAP",
+    title: "Mitteilung an das Team",
+    prompt: "Wählen Sie für jede Lücke das passende Wort.",
+    difficulty: "STRETCH",
+    topicTag: "arbeit",
+    timeLimitSeconds: 540,
+    payload: {
+      instructions: "Wählen Sie für jede Lücke die richtige Möglichkeit (a, b oder c).",
+      passage:
+        "Liebe Kolleginnen und Kollegen, das neue Projekt ist erfolgreich gestartet. Ich möchte mich bei allen bedanken, (1) Einsatz das möglich gemacht hat. (2) es in der Anfangsphase einige Schwierigkeiten gab, haben wir den Zeitplan eingehalten. In der nächsten Woche besprechen wir, (3) wir aus den Erfahrungen lernen können.",
+      questions: [
+        {
+          id: "1",
+          stem: "Lücke 1",
+          options: [
+            { id: "a", text: "deren" },
+            { id: "b", text: "dessen" },
+            { id: "c", text: "die" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "2",
+          stem: "Lücke 2",
+          options: [
+            { id: "a", text: "Obwohl" },
+            { id: "b", text: "Weil" },
+            { id: "c", text: "Damit" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "3",
+          stem: "Lücke 3",
+          options: [
+            { id: "a", text: "wie" },
+            { id: "b", text: "dass" },
+            { id: "c", text: "ob" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„deren Einsatz“ (bezieht sich auf „allen“, Plural); „obwohl“ nennt den Gegensatz.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SPRACHBAUSTEINE,
+    taskType: "TELC_B2_SB_GAP",
+    title: "Hinweis der Kursleitung",
+    prompt: "Wählen Sie für jede Lücke das passende Wort.",
+    difficulty: "CORE",
+    topicTag: "bildung",
+    timeLimitSeconds: 540,
+    payload: {
+      instructions: "Wählen Sie für jede Lücke die richtige Möglichkeit (a, b oder c).",
+      passage:
+        "Liebe Teilnehmende, in der nächsten Stunde schreiben wir einen kurzen Test. Bereiten Sie sich gut vor, (1) Sie ein gutes Ergebnis erzielen. Der Test dauert dreißig Minuten. (2) Sie fertig sind, dürfen Sie den Raum leise verlassen. Die Ergebnisse besprechen wir, (3) alle den Test geschrieben haben.",
+      questions: [
+        {
+          id: "1",
+          stem: "Lücke 1",
+          options: [
+            { id: "a", text: "damit" },
+            { id: "b", text: "weil" },
+            { id: "c", text: "obwohl" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "2",
+          stem: "Lücke 2",
+          options: [
+            { id: "a", text: "Sobald" },
+            { id: "b", text: "Solange" },
+            { id: "c", text: "Seitdem" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "3",
+          stem: "Lücke 3",
+          options: [
+            { id: "a", text: "sobald" },
+            { id: "b", text: "während" },
+            { id: "c", text: "bevor" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„damit Sie … erzielen“ (Absicht); „sobald Sie fertig sind“ (unmittelbar danach).",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SPRACHBAUSTEINE,
+    taskType: "TELC_B2_SB_GAP",
+    title: "Antwort an eine Bewerberin",
+    prompt: "Wählen Sie für jede Lücke das passende Wort.",
+    difficulty: "STRETCH",
+    topicTag: "arbeit",
+    timeLimitSeconds: 540,
+    payload: {
+      instructions: "Wählen Sie für jede Lücke die richtige Möglichkeit (a, b oder c).",
+      passage:
+        "Sehr geehrte Frau Weiß, vielen Dank für Ihre Bewerbung, (1) wir mit Interesse gelesen haben. Ihre Erfahrung hat uns überzeugt. Wir (2) Sie gern zu einem Gespräch einladen. Bitte teilen Sie uns mit, (3) Termin Ihnen passt.",
+      questions: [
+        {
+          id: "1",
+          stem: "Lücke 1",
+          options: [
+            { id: "a", text: "die" },
+            { id: "b", text: "der" },
+            { id: "c", text: "deren" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "2",
+          stem: "Lücke 2",
+          options: [
+            { id: "a", text: "würden" },
+            { id: "b", text: "werden" },
+            { id: "c", text: "haben" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "3",
+          stem: "Lücke 3",
+          options: [
+            { id: "a", text: "welcher" },
+            { id: "b", text: "welchen" },
+            { id: "c", text: "welchem" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Relativpronomen für „Bewerbung“ (Akk. fem.) = „die“; „welcher Termin“ (Nom., Subjekt).",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SPRACHBAUSTEINE,
+    taskType: "TELC_B2_SB_GAP",
+    title: "Erinnerung an eine Frist",
+    prompt: "Wählen Sie für jede Lücke das passende Wort.",
+    difficulty: "CORE",
+    topicTag: "bildung",
+    timeLimitSeconds: 540,
+    payload: {
+      instructions: "Wählen Sie für jede Lücke die richtige Möglichkeit (a, b oder c).",
+      passage:
+        "Liebe Studierende, wir erinnern Sie daran, sich rechtzeitig für die Prüfung anzumelden. Die Frist endet am 15. des Monats. Anmeldungen, (1) danach eingehen, können nicht berücksichtigt werden. (2) technischer Probleme wenden Sie sich bitte umgehend an das Prüfungsamt. Wir empfehlen, sich nicht erst am letzten Tag anzumelden, (3) Sie auf der sicheren Seite sind.",
+      questions: [
+        {
+          id: "1",
+          stem: "Lücke 1",
+          options: [
+            { id: "a", text: "die" },
+            { id: "b", text: "denen" },
+            { id: "c", text: "deren" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "2",
+          stem: "Lücke 2",
+          options: [
+            { id: "a", text: "Im Falle" },
+            { id: "b", text: "Im Fall" },
+            { id: "c", text: "Anlässlich" },
+          ],
+          answer: "b",
+        },
+        {
+          id: "3",
+          stem: "Lücke 3",
+          options: [
+            { id: "a", text: "damit" },
+            { id: "b", text: "sodass" },
+            { id: "c", text: "weil" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Relativpronomen Nom. Pl. „die“; „im Fall technischer Probleme“ (Genitiv, ohne Artikel).",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SPRACHBAUSTEINE,
+    taskType: "TELC_B2_SB_GAP",
+    title: "Dank an die Freiwilligen",
+    prompt: "Wählen Sie für jede Lücke das passende Wort.",
+    difficulty: "STRETCH",
+    topicTag: "gesellschaft",
+    timeLimitSeconds: 540,
+    payload: {
+      instructions: "Wählen Sie für jede Lücke die richtige Möglichkeit (a, b oder c).",
+      passage:
+        "Liebe Helferinnen und Helfer, das Fest war ein großer Erfolg, (1) wir Ihrem Einsatz verdanken. Ohne Sie (2) wir das nicht geschafft. (3) es in Zukunft noch besser läuft, freuen wir uns über Ihre Rückmeldungen.",
+      questions: [
+        {
+          id: "1",
+          stem: "Lücke 1",
+          options: [
+            { id: "a", text: "den" },
+            { id: "b", text: "der" },
+            { id: "c", text: "dem" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "2",
+          stem: "Lücke 2",
+          options: [
+            { id: "a", text: "hätten" },
+            { id: "b", text: "haben" },
+            { id: "c", text: "hatten" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "3",
+          stem: "Lücke 3",
+          options: [
+            { id: "a", text: "Damit" },
+            { id: "b", text: "Weil" },
+            { id: "c", text: "Obwohl" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Relativpronomen für „Erfolg“ (Akk. mask.) = „den“; „hätten … geschafft“ (Konjunktiv II).",
+  },
 
   // ----------------------------------------------------------------- HOERVERSTEHEN
   {
