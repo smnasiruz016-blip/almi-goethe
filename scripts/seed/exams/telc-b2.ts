@@ -1637,6 +1637,741 @@ export const ITEMS: ExamItemInput[] = [
     },
     guidanceNote: "„weniger um … als um …“ verschiebt die Gewichtung — hören Sie genau, was wichtiger ist.",
   },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.HOERVERSTEHEN,
+    taskType: "TELC_B2_HV_INTERVIEW",
+    title: "Interview: Als Fahrradkurier unterwegs",
+    prompt: "Hören Sie das Interview und beantworten Sie die Fragen.",
+    difficulty: "CORE",
+    topicTag: "arbeit",
+    timeLimitSeconds: 600,
+    payload: {
+      instructions: "Sie hören ein Interview. Wählen Sie die richtige Antwort.",
+      audioScript:
+        "MODERATORIN: Herr Peters, Sie arbeiten als Fahrradkurier. Was gefällt Ihnen daran? PETERS: Vor allem die Bewegung an der frischen Luft und dass ich mir die Zeit zum Teil selbst einteilen kann. MODERATORIN: Klingt anstrengend. PETERS: Das ist es auch, besonders im Winter. Aber ich bin lieber draußen als den ganzen Tag im Büro. MODERATORIN: Verdient man denn gut? PETERS: Ehrlich gesagt nicht besonders. Für viele ist es eher ein Nebenjob. Ich mache es trotzdem gern, aber auf Dauer bräuchte ich etwas Sichereres.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Was gefällt Herrn Peters an seiner Arbeit?",
+          options: [
+            { id: "a", text: "die Bewegung und die freie Zeiteinteilung" },
+            { id: "b", text: "die Ruhe im Büro" },
+            { id: "c", text: "das hohe Gehalt" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Was sagt er über den Verdienst?",
+          options: [
+            { id: "a", text: "Er ist nicht besonders gut." },
+            { id: "b", text: "Er ist sehr hoch." },
+            { id: "c", text: "Er reicht für ein sicheres Leben." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Wie sieht er die Zukunft?",
+          options: [
+            { id: "a", text: "Auf Dauer bräuchte er etwas Sichereres." },
+            { id: "b", text: "Er will es für immer machen." },
+            { id: "c", text: "Er hört sofort auf." },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„Ehrlich gesagt …“ und „auf Dauer bräuchte ich …“ zeigen seine ehrliche Einschätzung.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.HOERVERSTEHEN,
+    taskType: "TELC_B2_HV_REPORT",
+    title: "Bericht: Weniger Lärm in der Innenstadt",
+    prompt: "Hören Sie den Bericht und beantworten Sie die Fragen.",
+    difficulty: "CORE",
+    topicTag: "gesellschaft",
+    timeLimitSeconds: 600,
+    payload: {
+      instructions: "Sie hören einen kurzen Bericht. Wählen Sie die richtige Antwort.",
+      audioScript:
+        "Eine Stadt im Süden hat ein Modellprojekt gestartet, um den Lärm in der Innenstadt zu verringern. Auf mehreren Straßen wurde die Geschwindigkeit gesenkt, und der Belag wurde erneuert. Erste Messungen zeigen, dass es tatsächlich leiser geworden ist. Anwohner berichten, dass sie nachts besser schlafen. Kritiker bemängeln jedoch die hohen Kosten und fragen, ob sich das Projekt auf größere Städte übertragen lässt. Die Stadt will die Ergebnisse ein Jahr lang beobachten, bevor sie über eine Ausweitung entscheidet.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Was wurde in dem Projekt gemacht?",
+          options: [
+            { id: "a", text: "Tempo gesenkt und der Straßenbelag erneuert" },
+            { id: "b", text: "neue Häuser gebaut" },
+            { id: "c", text: "der Verkehr ganz verboten" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Was berichten die Anwohner?",
+          options: [
+            { id: "a", text: "Sie schlafen nachts besser." },
+            { id: "b", text: "Es ist lauter geworden." },
+            { id: "c", text: "Es hat sich nichts geändert." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Was bemängeln die Kritiker?",
+          options: [
+            { id: "a", text: "die hohen Kosten und die Übertragbarkeit" },
+            { id: "b", text: "dass es zu leise sei" },
+            { id: "c", text: "dass niemand teilnimmt" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„Kritiker bemängeln jedoch …“ leitet die Gegenposition ein.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.HOERVERSTEHEN,
+    taskType: "TELC_B2_HV_INTERVIEW",
+    title: "Interview: Eine kleine Buchhandlung führen",
+    prompt: "Hören Sie das Interview und beantworten Sie die Fragen.",
+    difficulty: "STRETCH",
+    topicTag: "kultur",
+    timeLimitSeconds: 600,
+    payload: {
+      instructions: "Sie hören ein Interview. Wählen Sie die richtige Antwort.",
+      audioScript:
+        "MODERATOR: Frau Lorenz, viele kleine Buchhandlungen mussten schließen. Wie halten Sie sich? LORENZ: Wir setzen auf Beratung und Veranstaltungen. Wer zu uns kommt, sucht oft nicht nur ein Buch, sondern einen Tipp oder ein Gespräch. MODERATOR: Konkurrieren Sie mit dem Onlinehandel? LORENZ: Beim Preis können wir nicht mithalten, das wäre aussichtslos. Aber wir bieten etwas, das der Versand nicht kann: einen Ort zum Stöbern und Menschen, die sich auskennen. MODERATOR: Und die Zukunft? LORENZ: Ich bin vorsichtig optimistisch. Solange Leute den persönlichen Kontakt schätzen, haben wir eine Chance.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Worauf setzt Frau Lorenz?",
+          options: [
+            { id: "a", text: "auf Beratung und Veranstaltungen" },
+            { id: "b", text: "auf die niedrigsten Preise" },
+            { id: "c", text: "auf reinen Onlinehandel" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Was sagt sie zum Preiswettbewerb?",
+          options: [
+            { id: "a", text: "Beim Preis kann sie nicht mithalten." },
+            { id: "b", text: "Sie ist billiger als der Versand." },
+            { id: "c", text: "Der Preis spielt keine Rolle." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Wie sieht sie die Zukunft?",
+          options: [
+            { id: "a", text: "vorsichtig optimistisch, solange Kontakt geschätzt wird" },
+            { id: "b", text: "völlig hoffnungslos" },
+            { id: "c", text: "ohne jede Sorge" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„das wäre aussichtslos“ und „vorsichtig optimistisch“ sind nuancierte Aussagen.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.HOERVERSTEHEN,
+    taskType: "TELC_B2_HV_INTERVIEW",
+    title: "Interview: Umzug in eine neue Stadt",
+    prompt: "Hören Sie das Gespräch und beantworten Sie die Fragen.",
+    difficulty: "CORE",
+    topicTag: "alltag",
+    timeLimitSeconds: 600,
+    payload: {
+      instructions: "Sie hören ein Gespräch. Wählen Sie die richtige Antwort.",
+      audioScript:
+        "ANJA: Und, wie ist es, seit du umgezogen bist? DAVID: Am Anfang war es hart. Ich kannte niemanden und die Stadt war fremd. ANJA: Und jetzt? DAVID: Viel besser. Über die Arbeit habe ich schnell Leute kennengelernt, und inzwischen fühle ich mich fast heimisch. ANJA: Vermisst du deine alte Stadt nicht? DAVID: Manchmal schon, vor allem die Freunde. Aber ich fahre ja regelmäßig zurück. Und die neue Stadt hat auch viel zu bieten, das hatte ich vorher unterschätzt.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Wie war es für David am Anfang?",
+          options: [
+            { id: "a", text: "hart, weil er niemanden kannte" },
+            { id: "b", text: "sofort einfach" },
+            { id: "c", text: "langweilig, aber vertraut" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Wie hat er Leute kennengelernt?",
+          options: [
+            { id: "a", text: "über die Arbeit" },
+            { id: "b", text: "über alte Freunde" },
+            { id: "c", text: "gar nicht" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Was sagt er über die neue Stadt?",
+          options: [
+            { id: "a", text: "Sie hat mehr zu bieten, als er dachte." },
+            { id: "b", text: "Sie ist langweilig." },
+            { id: "c", text: "Sie gefällt ihm gar nicht." },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„das hatte ich vorher unterschätzt“ zeigt, dass sich seine Meinung geändert hat.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.HOERVERSTEHEN,
+    taskType: "TELC_B2_HV_INTERVIEW",
+    title: "Interview: Gesund essen im Alltag",
+    prompt: "Hören Sie das Interview und beantworten Sie die Fragen.",
+    difficulty: "STRETCH",
+    topicTag: "gesundheit",
+    timeLimitSeconds: 600,
+    payload: {
+      instructions: "Sie hören ein Interview. Wählen Sie die richtige Antwort.",
+      audioScript:
+        "MODERATORIN: Frau Doktor Krüger, was ist Ihr wichtigster Rat für gesunde Ernährung? KRÜGER: Ganz einfach: möglichst frisch und abwechslungsreich essen. Man muss nicht auf alles verzichten. MODERATORIN: Viele haben aber wenig Zeit zum Kochen. KRÜGER: Das höre ich oft. Dabei muss gesundes Essen nicht aufwendig sein. Mit etwas Planung, etwa am Wochenende vorzukochen, spart man unter der Woche viel Zeit. MODERATORIN: Und Nahrungsergänzungsmittel? KRÜGER: Für die meisten Gesunden sind sie überflüssig. Eine ausgewogene Ernährung liefert in der Regel alles, was man braucht.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Was ist Frau Krügers wichtigster Rat?",
+          options: [
+            { id: "a", text: "möglichst frisch und abwechslungsreich essen" },
+            { id: "b", text: "auf alles verzichten" },
+            { id: "c", text: "nur teure Produkte kaufen" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Was empfiehlt sie bei wenig Zeit?",
+          options: [
+            { id: "a", text: "mit etwas Planung vorzukochen" },
+            { id: "b", text: "gar nicht mehr zu kochen" },
+            { id: "c", text: "nur Fertiggerichte zu essen" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Was sagt sie zu Nahrungsergänzungsmitteln?",
+          options: [
+            { id: "a", text: "Für die meisten Gesunden sind sie überflüssig." },
+            { id: "b", text: "Jeder sollte sie täglich nehmen." },
+            { id: "c", text: "Sie ersetzen das Essen." },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„Für die meisten Gesunden … überflüssig“ ist eine klare, aber eingeschränkte Aussage.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.HOERVERSTEHEN,
+    taskType: "TELC_B2_HV_REPORT",
+    title: "Bericht: Elektroautos im Alltag",
+    prompt: "Hören Sie den Bericht und beantworten Sie die Fragen.",
+    difficulty: "CORE",
+    topicTag: "verkehr",
+    timeLimitSeconds: 600,
+    payload: {
+      instructions: "Sie hören einen kurzen Bericht. Wählen Sie die richtige Antwort.",
+      audioScript:
+        "Immer mehr Menschen fahren elektrisch. Wer täglich kurze Strecken zurücklegt, ist mit einem Elektroauto oft gut bedient, denn das Aufladen zu Hause ist bequem und günstig. Auf langen Reisen zeigt sich jedoch, dass das Netz der Ladestationen noch Lücken hat, besonders auf dem Land. Fachleute rechnen damit, dass sich das in den nächsten Jahren bessern wird. Für viele bleibt der höhere Anschaffungspreis vorerst ein Hindernis, auch wenn die laufenden Kosten niedriger sind.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Für wen ist ein Elektroauto oft gut geeignet?",
+          options: [
+            { id: "a", text: "für kurze tägliche Strecken" },
+            { id: "b", text: "nur für lange Reisen" },
+            { id: "c", text: "für niemanden" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Wo zeigt sich noch ein Problem?",
+          options: [
+            { id: "a", text: "bei den Ladestationen auf dem Land" },
+            { id: "b", text: "beim Aufladen zu Hause" },
+            { id: "c", text: "bei den niedrigen Kosten" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Was ist für viele vorerst ein Hindernis?",
+          options: [
+            { id: "a", text: "der höhere Anschaffungspreis" },
+            { id: "b", text: "die hohen laufenden Kosten" },
+            { id: "c", text: "das langsame Fahren" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„zeigt sich jedoch, dass …“ leitet die Einschränkung ein; laufende vs. Anschaffungskosten trennen.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.HOERVERSTEHEN,
+    taskType: "TELC_B2_HV_INTERVIEW",
+    title: "Interview: Ein Museum für alle",
+    prompt: "Hören Sie das Interview und beantworten Sie die Fragen.",
+    difficulty: "CORE",
+    topicTag: "kultur",
+    timeLimitSeconds: 600,
+    payload: {
+      instructions: "Sie hören ein Interview. Wählen Sie die richtige Antwort.",
+      audioScript:
+        "MODERATOR: Herr Braun, Sie leiten ein Museum. Wie holt man heute Besucher ins Haus? BRAUN: Indem man mehr bietet als nur Ausstellungen. Wir veranstalten Führungen für Kinder, Konzerte und offene Werkstätten. MODERATOR: Geht dabei nicht der ernste Charakter verloren? BRAUN: Das ist eine berechtigte Sorge. Wir achten darauf, dass die Angebote zur Sammlung passen. Es geht nicht um bloße Unterhaltung, sondern darum, Schwellen abzubauen. MODERATOR: Und der Erfolg? BRAUN: Die Besucherzahlen sind gestiegen, vor allem bei jungen Familien, die früher selten kamen.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Wie holt Herr Braun Besucher ins Museum?",
+          options: [
+            { id: "a", text: "indem er mehr als nur Ausstellungen bietet" },
+            { id: "b", text: "indem er den Eintritt erhöht" },
+            { id: "c", text: "gar nicht" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Wie reagiert er auf die Sorge um den ernsten Charakter?",
+          options: [
+            { id: "a", text: "Die Angebote passen zur Sammlung, es geht ums Schwellen-Abbauen." },
+            { id: "b", text: "Ihm ist der Charakter egal." },
+            { id: "c", text: "Er bietet nur noch Unterhaltung." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Wer kommt jetzt häufiger?",
+          options: [
+            { id: "a", text: "junge Familien" },
+            { id: "b", text: "niemand mehr" },
+            { id: "c", text: "nur Fachleute" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„nicht um bloße Unterhaltung, sondern darum, …“ präzisiert das Ziel.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.HOERVERSTEHEN,
+    taskType: "TELC_B2_HV_INTERVIEW",
+    title: "Interview: Den Beruf wechseln",
+    prompt: "Hören Sie das Gespräch und beantworten Sie die Fragen.",
+    difficulty: "STRETCH",
+    topicTag: "arbeit",
+    timeLimitSeconds: 600,
+    payload: {
+      instructions: "Sie hören ein Gespräch. Wählen Sie die richtige Antwort.",
+      audioScript:
+        "SARA: Du hast dich ja ganz umorientiert. War das nicht riskant? MARKUS: Doch, schon. Ich hatte einen sicheren Job, aber ich war einfach nicht zufrieden. SARA: Und wie hast du den Schritt gewagt? MARKUS: Ich habe erst abends eine Weiterbildung gemacht, während ich noch gearbeitet habe. So konnte ich ausprobieren, ob mir das Neue liegt, ohne alles aufzugeben. SARA: Klug. Und bereust du es? MARKUS: Keine Sekunde. Ich verdiene zwar am Anfang etwas weniger, aber ich stehe morgens viel lieber auf.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Warum hat Markus den Beruf gewechselt?",
+          options: [
+            { id: "a", text: "Er war mit seinem sicheren Job nicht zufrieden." },
+            { id: "b", text: "Er wurde entlassen." },
+            { id: "c", text: "Er wollte mehr verdienen." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Wie hat er den Schritt vorbereitet?",
+          options: [
+            { id: "a", text: "mit einer Weiterbildung neben dem Job" },
+            { id: "b", text: "indem er sofort gekündigt hat" },
+            { id: "c", text: "gar nicht" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Wie bewertet er die Entscheidung heute?",
+          options: [
+            { id: "a", text: "Er bereut sie nicht, obwohl er weniger verdient." },
+            { id: "b", text: "Er bereut sie sehr." },
+            { id: "c", text: "Er ist unsicher." },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„zwar … weniger, aber …“ wägt Nachteil gegen Zufriedenheit ab.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.HOERVERSTEHEN,
+    taskType: "TELC_B2_HV_REPORT",
+    title: "Bericht: Arbeiten im Homeoffice",
+    prompt: "Hören Sie den Bericht und beantworten Sie die Fragen.",
+    difficulty: "CORE",
+    topicTag: "arbeit",
+    timeLimitSeconds: 600,
+    payload: {
+      instructions: "Sie hören einen kurzen Bericht. Wählen Sie die richtige Antwort.",
+      audioScript:
+        "Seit sich das Arbeiten von zu Hause verbreitet hat, verändert sich der Alltag vieler Beschäftigter. Sie sparen den Weg zur Arbeit und können flexibler planen. Umfragen zeigen jedoch, dass nicht alle davon profitieren. Wer zu Hause keinen ruhigen Platz hat, tut sich schwer. Auch die Grenze zwischen Arbeit und Freizeit verschwimmt leicht. Viele Unternehmen setzen deshalb auf Mischformen, bei denen die Beschäftigten teils im Büro, teils zu Hause arbeiten.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Welchen Vorteil nennt der Bericht?",
+          options: [
+            { id: "a", text: "Man spart den Arbeitsweg und plant flexibler." },
+            { id: "b", text: "Man verdient mehr." },
+            { id: "c", text: "Man arbeitet nie." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Wer tut sich laut Umfragen schwer?",
+          options: [
+            { id: "a", text: "wer zu Hause keinen ruhigen Platz hat" },
+            { id: "b", text: "wer gern reist" },
+            { id: "c", text: "niemand" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Worauf setzen viele Unternehmen?",
+          options: [
+            { id: "a", text: "auf Mischformen aus Büro und Homeoffice" },
+            { id: "b", text: "nur auf Büroarbeit" },
+            { id: "c", text: "auf gar keine Arbeit" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„zeigen jedoch, dass nicht alle profitieren“ leitet die Einschränkung ein.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.HOERVERSTEHEN,
+    taskType: "TELC_B2_HV_INTERVIEW",
+    title: "Interview: Trainerin im Verein",
+    prompt: "Hören Sie das Interview und beantworten Sie die Fragen.",
+    difficulty: "CORE",
+    topicTag: "freizeit",
+    timeLimitSeconds: 600,
+    payload: {
+      instructions: "Sie hören ein Interview. Wählen Sie die richtige Antwort.",
+      audioScript:
+        "MODERATOR: Frau Aydin, Sie trainieren eine Jugendmannschaft. Was ist Ihnen dabei am wichtigsten? AYDIN: Nicht in erster Linie der Sieg, sondern dass die Kinder Freude haben und lernen, im Team zu arbeiten. MODERATOR: Ist der Ehrgeiz nicht wichtig? AYDIN: Doch, ein gesunder Ehrgeiz gehört dazu. Aber wenn nur das Gewinnen zählt, verlieren wir die schwächeren Kinder. Und gerade die sollen dranbleiben. MODERATOR: Wie motivieren Sie? AYDIN: Ich lobe Fortschritte, nicht nur Ergebnisse. Wer besser wird, hat etwas erreicht, auch wenn das Spiel verloren geht.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Was ist Frau Aydin am wichtigsten?",
+          options: [
+            { id: "a", text: "Freude und Teamarbeit, nicht in erster Linie der Sieg" },
+            { id: "b", text: "nur das Gewinnen" },
+            { id: "c", text: "möglichst viele Tore" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Was passiert, wenn nur das Gewinnen zählt?",
+          options: [
+            { id: "a", text: "Man verliert die schwächeren Kinder." },
+            { id: "b", text: "Alle werden besser." },
+            { id: "c", text: "Nichts." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Wie motiviert sie die Kinder?",
+          options: [
+            { id: "a", text: "Sie lobt Fortschritte, nicht nur Ergebnisse." },
+            { id: "b", text: "Sie lobt nur die Sieger." },
+            { id: "c", text: "Sie kritisiert alle." },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„nicht in erster Linie …, sondern …“ und „nicht nur Ergebnisse“ zeigen ihre Haltung.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.HOERVERSTEHEN,
+    taskType: "TELC_B2_HV_INTERVIEW",
+    title: "Interview: Ein Bauernhof stellt um",
+    prompt: "Hören Sie das Interview und beantworten Sie die Fragen.",
+    difficulty: "STRETCH",
+    topicTag: "umwelt",
+    timeLimitSeconds: 600,
+    payload: {
+      instructions: "Sie hören ein Interview. Wählen Sie die richtige Antwort.",
+      audioScript:
+        "MODERATORIN: Herr Meier, Sie haben Ihren Hof auf ökologische Landwirtschaft umgestellt. War das schwierig? MEIER: Die ersten Jahre waren hart. Die Erträge waren geringer, und man muss viel dazulernen. MODERATORIN: Warum haben Sie es trotzdem gemacht? MEIER: Aus Überzeugung, aber auch, weil die Nachfrage nach solchen Produkten steigt. Heute verkaufe ich vieles direkt ab Hof. MODERATORIN: Lohnt es sich inzwischen? MEIER: Ja, aber nicht über Nacht. Wer umstellt, braucht Geduld und sollte nicht mit schnellem Gewinn rechnen.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Wie waren die ersten Jahre nach der Umstellung?",
+          options: [
+            { id: "a", text: "hart, mit geringeren Erträgen" },
+            { id: "b", text: "sofort sehr einträglich" },
+            { id: "c", text: "ohne jede Veränderung" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Warum hat Herr Meier umgestellt?",
+          options: [
+            { id: "a", text: "aus Überzeugung und wegen steigender Nachfrage" },
+            { id: "b", text: "weil es vorgeschrieben war" },
+            { id: "c", text: "aus Langeweile" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Was rät er anderen?",
+          options: [
+            { id: "a", text: "Geduld zu haben und nicht mit schnellem Gewinn zu rechnen" },
+            { id: "b", text: "sofort viel Geld zu erwarten" },
+            { id: "c", text: "gar nicht umzustellen" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„Ja, aber nicht über Nacht“ dämpft die Erwartung an schnellen Erfolg.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.HOERVERSTEHEN,
+    taskType: "TELC_B2_HV_INTERVIEW",
+    title: "Interview: Arbeit in der Kita",
+    prompt: "Hören Sie das Interview und beantworten Sie die Fragen.",
+    difficulty: "CORE",
+    topicTag: "bildung",
+    timeLimitSeconds: 600,
+    payload: {
+      instructions: "Sie hören ein Interview. Wählen Sie die richtige Antwort.",
+      audioScript:
+        "MODERATOR: Frau Schulz, Sie sind Erzieherin. Was schätzen Sie an Ihrem Beruf? SCHULZ: Die Arbeit mit den Kindern ist jeden Tag anders, das macht sie so lebendig. Man sieht direkt, wie sie sich entwickeln. MODERATOR: Und die Belastung? SCHULZ: Die ist nicht zu unterschätzen. Große Gruppen und wenig Personal machen die Arbeit anstrengend. MODERATOR: Was würde helfen? SCHULZ: Vor allem kleinere Gruppen und mehr Anerkennung. Der Beruf ist verantwortungsvoll, das wird oft übersehen.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Was schätzt Frau Schulz an ihrem Beruf?",
+          options: [
+            { id: "a", text: "dass die Arbeit lebendig und abwechslungsreich ist" },
+            { id: "b", text: "dass sie wenig zu tun hat" },
+            { id: "c", text: "das hohe Gehalt" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Was macht die Arbeit anstrengend?",
+          options: [
+            { id: "a", text: "große Gruppen und wenig Personal" },
+            { id: "b", text: "zu viel Personal" },
+            { id: "c", text: "zu wenige Kinder" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Was würde laut Frau Schulz helfen?",
+          options: [
+            { id: "a", text: "kleinere Gruppen und mehr Anerkennung" },
+            { id: "b", text: "größere Gruppen" },
+            { id: "c", text: "weniger Anerkennung" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„das wird oft übersehen“ betont, was ihrer Meinung nach fehlt.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.HOERVERSTEHEN,
+    taskType: "TELC_B2_HV_REPORT",
+    title: "Bericht: Tauschen statt kaufen",
+    prompt: "Hören Sie den Bericht und beantworten Sie die Fragen.",
+    difficulty: "CORE",
+    topicTag: "gesellschaft",
+    timeLimitSeconds: 600,
+    payload: {
+      instructions: "Sie hören einen kurzen Bericht. Wählen Sie die richtige Antwort.",
+      audioScript:
+        "In vielen Vierteln entstehen sogenannte Tauschregale, in denen man Dinge, die man nicht mehr braucht, hineinstellen und andere mitnehmen kann. Die Idee ist einfach und kostet nichts. Sie schont Ressourcen und bringt Nachbarn miteinander ins Gespräch. Damit das funktioniert, braucht es allerdings Rücksicht: Wer nur nimmt und nie etwas hineinstellt, gefährdet das System. Auch kaputte Dinge gehören nicht ins Regal. Wo die Regeln beachtet werden, halten sich die Regale erstaunlich gut.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Wie funktioniert ein Tauschregal?",
+          options: [
+            { id: "a", text: "Man stellt Dinge hinein und nimmt andere mit." },
+            { id: "b", text: "Man kauft dort günstig ein." },
+            { id: "c", text: "Man mietet Dinge." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Was braucht es, damit es funktioniert?",
+          options: [
+            { id: "a", text: "Rücksicht — nicht nur nehmen, auch geben" },
+            { id: "b", text: "eine Gebühr" },
+            { id: "c", text: "eine Aufsicht rund um die Uhr" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Was gehört nicht ins Regal?",
+          options: [
+            { id: "a", text: "kaputte Dinge" },
+            { id: "b", text: "Bücher" },
+            { id: "c", text: "Spielzeug" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„braucht es allerdings Rücksicht“ nennt die Bedingung für das Gelingen.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.HOERVERSTEHEN,
+    taskType: "TELC_B2_HV_INTERVIEW",
+    title: "Interview: Wohnungen umweltfreundlich bauen",
+    prompt: "Hören Sie das Interview und beantworten Sie die Fragen.",
+    difficulty: "STRETCH",
+    topicTag: "umwelt",
+    timeLimitSeconds: 600,
+    payload: {
+      instructions: "Sie hören ein Interview. Wählen Sie die richtige Antwort.",
+      audioScript:
+        "MODERATORIN: Frau Richter, Sie planen umweltfreundliche Wohnhäuser. Was heißt das konkret? RICHTER: Zum Beispiel gute Dämmung, damit weniger geheizt werden muss, und Materialien, die man wiederverwenden kann. MODERATORIN: Ist das nicht teurer? RICHTER: In der Anschaffung oft ja. Aber über die Jahre spart man bei Energie und Reparaturen. Man muss also langfristig rechnen. MODERATORIN: Was wünschen sich die Bewohner? RICHTER: Interessanterweise nicht nur niedrige Kosten, sondern auch viel Tageslicht und ein gesundes Raumklima. Das wird oft unterschätzt.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Was gehört zu umweltfreundlichem Bauen?",
+          options: [
+            { id: "a", text: "gute Dämmung und wiederverwendbare Materialien" },
+            { id: "b", text: "möglichst dünne Wände" },
+            { id: "c", text: "keine Fenster" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Was sagt Frau Richter zu den Kosten?",
+          options: [
+            { id: "a", text: "In der Anschaffung teurer, langfristig spart man." },
+            { id: "b", text: "Immer billiger als üblich." },
+            { id: "c", text: "Die Kosten spielen keine Rolle." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Was wünschen sich die Bewohner außerdem?",
+          options: [
+            { id: "a", text: "viel Tageslicht und ein gesundes Raumklima" },
+            { id: "b", text: "möglichst kleine Räume" },
+            { id: "c", text: "keine Heizung" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„nicht nur …, sondern auch …“ und „langfristig rechnen“ sind die Kernaussagen.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.HOERVERSTEHEN,
+    taskType: "TELC_B2_HV_INTERVIEW",
+    title: "Interview: Ein Café gründen",
+    prompt: "Hören Sie das Interview und beantworten Sie die Fragen.",
+    difficulty: "CORE",
+    topicTag: "arbeit",
+    timeLimitSeconds: 600,
+    payload: {
+      instructions: "Sie hören ein Interview. Wählen Sie die richtige Antwort.",
+      audioScript:
+        "MODERATOR: Frau Vogel, Sie haben ein eigenes Café eröffnet. War das ein Sprung ins kalte Wasser? VOGEL: In gewisser Weise ja, aber ich habe mich lange vorbereitet und einen genauen Plan gemacht. MODERATOR: Was war die größte Überraschung? VOGEL: Wie viel Arbeit hinter den Kulissen steckt: Einkauf, Buchhaltung, Personal. Das Kaffeekochen ist nur ein kleiner Teil. MODERATOR: Würden Sie es wieder tun? VOGEL: Ja, sofort. Es ist anstrengend, aber es ist mein eigenes Projekt, und die Stammgäste geben mir viel zurück.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Wie hat sich Frau Vogel vorbereitet?",
+          options: [
+            { id: "a", text: "Sie hat lange geplant und sich vorbereitet." },
+            { id: "b", text: "Sie hat gar nicht geplant." },
+            { id: "c", text: "Sie hat das Café geerbt." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Was war die größte Überraschung?",
+          options: [
+            { id: "a", text: "wie viel Arbeit hinter den Kulissen steckt" },
+            { id: "b", text: "dass niemand kommt" },
+            { id: "c", text: "dass Kaffeekochen alles ist" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Würde sie es wieder tun?",
+          options: [
+            { id: "a", text: "Ja, trotz der Anstrengung." },
+            { id: "b", text: "Nein, auf keinen Fall." },
+            { id: "c", text: "Sie weiß es nicht." },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„Das Kaffeekochen ist nur ein kleiner Teil“ überrascht — genau das wird gefragt.",
+  },
 
   // ------------------------------------------------------------ SCHRIFTLICHER_AUSDRUCK
   {
