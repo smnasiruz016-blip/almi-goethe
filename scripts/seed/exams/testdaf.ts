@@ -988,6 +988,594 @@ export const ITEMS: ExamItemInput[] = [
     },
     guidanceNote: "Sprachnachrichten enthalten oft zwei Optionen — merken Sie sich beide, bevor Sie antworten.",
   },
+  {
+    exam: "TESTDAF",
+    level: L,
+    section: SECTION.HOERVERSTEHEN,
+    taskType: "TESTDAF_HV_ANNOUNCE",
+    title: "Ansage im Schwimmbad",
+    prompt: "Hören Sie die Ansage und beantworten Sie die Fragen.",
+    difficulty: "FOUNDATION",
+    topicTag: "freizeit",
+    timeLimitSeconds: 420,
+    payload: {
+      instructions: "Sie hören eine Ansage. Wählen Sie die richtige Antwort.",
+      audioScript:
+        "Liebe Gäste, wir möchten Sie darüber informieren, dass das Schwimmerbecken heute ab sechzehn Uhr für ein Vereinstraining reserviert ist. Das Nichtschwimmerbecken und die Sauna bleiben wie gewohnt geöffnet. Bitte verlassen Sie das Schwimmerbecken rechtzeitig bis Viertel vor vier. Wir danken für Ihr Verständnis und wünschen Ihnen weiterhin einen angenehmen Aufenthalt.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Was ist ab 16 Uhr reserviert?",
+          options: [
+            { id: "a", text: "das Schwimmerbecken" },
+            { id: "b", text: "die Sauna" },
+            { id: "c", text: "das Nichtschwimmerbecken" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Was bleibt normal geöffnet?",
+          options: [
+            { id: "a", text: "nur das Schwimmerbecken" },
+            { id: "b", text: "Nichtschwimmerbecken und Sauna" },
+            { id: "c", text: "gar nichts" },
+          ],
+          answer: "b",
+        },
+        {
+          id: "q3",
+          stem: "Bis wann soll man das Schwimmerbecken verlassen?",
+          options: [
+            { id: "a", text: "bis Viertel vor vier" },
+            { id: "b", text: "bis sechzehn Uhr dreißig" },
+            { id: "c", text: "bis siebzehn Uhr" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„Viertel vor vier“ = 15:45. Uhrzeiten in Worten sind eine typische Stolperstelle.",
+  },
+  {
+    exam: "TESTDAF",
+    level: L,
+    section: SECTION.HOERVERSTEHEN,
+    taskType: "TESTDAF_HV_DIALOG",
+    title: "Gespräch über eine Wohnungssuche",
+    prompt: "Hören Sie das Gespräch und beantworten Sie die Fragen.",
+    difficulty: "CORE",
+    topicTag: "wohnen",
+    timeLimitSeconds: 540,
+    payload: {
+      instructions: "Sie hören ein Gespräch zwischen zwei Bekannten. Wählen Sie die richtige Antwort.",
+      audioScript:
+        "TOBIAS: Und, hast du inzwischen eine Wohnung gefunden? LENA: Noch nicht. Das Angebot ist knapp, und die Mieten in der Innenstadt sind kaum zu bezahlen. TOBIAS: Hast du auch außerhalb geschaut? LENA: Ja, am Stadtrand wäre es günstiger, aber dann brauche ich unbedingt ein Auto oder eine gute Busverbindung. TOBIAS: Stimmt. Ich an deiner Stelle würde erst prüfen, wie oft die Busse fahren, bevor ich mich festlege. LENA: Guter Punkt, das mache ich.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Warum hat Lena noch keine Wohnung?",
+          options: [
+            { id: "a", text: "Das Angebot ist knapp und die Mieten sind hoch." },
+            { id: "b", text: "Sie sucht gar nicht." },
+            { id: "c", text: "Sie will nicht umziehen." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Was ist am Stadtrand ein Nachteil?",
+          options: [
+            { id: "a", text: "Man braucht ein Auto oder gute Busse." },
+            { id: "b", text: "Es gibt keine Wohnungen." },
+            { id: "c", text: "Die Mieten sind höher." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Was rät Tobias?",
+          options: [
+            { id: "a", text: "erst die Busverbindung zu prüfen" },
+            { id: "b", text: "sofort einen Vertrag zu unterschreiben" },
+            { id: "c", text: "in der Innenstadt zu bleiben" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„Ich an deiner Stelle würde …“ leitet einen Rat ein — oft die dritte Frage.",
+  },
+  {
+    exam: "TESTDAF",
+    level: L,
+    section: SECTION.HOERVERSTEHEN,
+    taskType: "TESTDAF_HV_LECTURE",
+    title: "Kurzvortrag: Zucker und Ernährung",
+    prompt: "Hören Sie den Vortragsausschnitt und beantworten Sie die Fragen.",
+    difficulty: "STRETCH",
+    topicTag: "gesundheit",
+    timeLimitSeconds: 600,
+    payload: {
+      instructions: "Sie hören einen kurzen Vortrag. Wählen Sie die richtige Antwort.",
+      audioScript:
+        "Guten Tag. Häufig heißt es, Zucker sei generell schädlich. So einfach ist es jedoch nicht. Unser Körper braucht Kohlenhydrate als Energiequelle, und Zucker steckt natürlicherweise auch in Obst und Milch. Problematisch ist vor allem der zugesetzte Zucker in stark verarbeiteten Produkten, den wir oft unbemerkt in großen Mengen zu uns nehmen. Wer den Konsum senken möchte, sollte daher weniger auf einzelne Lebensmittel achten als auf die Zutatenlisten im Ganzen.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Wie bewertet der Vortragende die Aussage „Zucker ist generell schädlich“?",
+          options: [
+            { id: "a", text: "Er hält sie für zu einfach." },
+            { id: "b", text: "Er stimmt ihr voll zu." },
+            { id: "c", text: "Er hält Zucker für unnötig." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Was ist laut Vortrag besonders problematisch?",
+          options: [
+            { id: "a", text: "der zugesetzte Zucker in verarbeiteten Produkten" },
+            { id: "b", text: "der Zucker in Obst" },
+            { id: "c", text: "der Zucker in Milch" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Worauf sollte man laut Schluss achten?",
+          options: [
+            { id: "a", text: "auf die Zutatenlisten im Ganzen" },
+            { id: "b", text: "nur auf ein einzelnes Lebensmittel" },
+            { id: "c", text: "auf gar nichts" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„So einfach ist es jedoch nicht“ signalisiert eine Differenzierung — häufig die erste Frage.",
+  },
+  {
+    exam: "TESTDAF",
+    level: L,
+    section: SECTION.HOERVERSTEHEN,
+    taskType: "TESTDAF_HV_ANNOUNCE",
+    title: "Durchsage am Flughafen",
+    prompt: "Hören Sie die Durchsage und beantworten Sie die Fragen.",
+    difficulty: "FOUNDATION",
+    topicTag: "verkehr",
+    timeLimitSeconds: 420,
+    payload: {
+      instructions: "Sie hören eine Durchsage. Wählen Sie die richtige Antwort.",
+      audioScript:
+        "Sehr geehrte Fluggäste des Fluges nach Wien, die Abfertigung erfolgt heute nicht wie angezeigt an Ausgang B zwölf, sondern an Ausgang B sieben. Bitte begeben Sie sich rechtzeitig dorthin, da das Boarding pünktlich beginnt. Passagiere mit kleinen Kindern und Reisende, die Hilfe benötigen, dürfen zuerst einsteigen. Wir wünschen Ihnen einen angenehmen Flug.",
+      questions: [
+        {
+          id: "q1",
+          stem: "An welchem Ausgang erfolgt die Abfertigung heute?",
+          options: [
+            { id: "a", text: "an Ausgang B zwölf" },
+            { id: "b", text: "an Ausgang B sieben" },
+            { id: "c", text: "an Ausgang A sieben" },
+          ],
+          answer: "b",
+        },
+        {
+          id: "q2",
+          stem: "Was wird über das Boarding gesagt?",
+          options: [
+            { id: "a", text: "Es beginnt pünktlich." },
+            { id: "b", text: "Es fällt aus." },
+            { id: "c", text: "Es verspätet sich." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Wer darf zuerst einsteigen?",
+          options: [
+            { id: "a", text: "Reisende mit kleinen Kindern und Hilfsbedürftige" },
+            { id: "b", text: "nur die erste Klasse" },
+            { id: "c", text: "alle gleichzeitig" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„nicht … B zwölf, sondern B sieben“ — die Korrektur ist entscheidend, nicht die erste Zahl.",
+  },
+  {
+    exam: "TESTDAF",
+    level: L,
+    section: SECTION.HOERVERSTEHEN,
+    taskType: "TESTDAF_HV_DIALOG",
+    title: "Im Studierendensekretariat",
+    prompt: "Hören Sie das Gespräch und beantworten Sie die Fragen.",
+    difficulty: "CORE",
+    topicTag: "studium",
+    timeLimitSeconds: 540,
+    payload: {
+      instructions: "Sie hören ein Gespräch am Schalter. Wählen Sie die richtige Antwort.",
+      audioScript:
+        "STUDENT: Guten Tag, ich möchte mich für das nächste Semester zurückmelden. MITARBEITERIN: Dazu müssen Sie zuerst den Semesterbeitrag überweisen. Haben Sie das schon getan? STUDENT: Ja, gestern. MITARBEITERIN: Gut. Dann dauert es meist zwei bis drei Tage, bis die Zahlung bei uns verbucht ist. Danach ist Ihre Rückmeldung automatisch abgeschlossen, Sie müssen nichts weiter tun. STUDENT: Und wenn ich vorher meinen Studierendenausweis verlängern will? MITARBEITERIN: Das können Sie erst nach der Verbuchung an den Automaten im Foyer.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Was muss der Student für die Rückmeldung zuerst tun?",
+          options: [
+            { id: "a", text: "den Semesterbeitrag überweisen" },
+            { id: "b", text: "ein Formular ausfüllen" },
+            { id: "c", text: "eine Prüfung ablegen" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Wie lange dauert die Verbuchung?",
+          options: [
+            { id: "a", text: "zwei bis drei Tage" },
+            { id: "b", text: "zwei bis drei Wochen" },
+            { id: "c", text: "einen Monat" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Wann kann er den Ausweis verlängern?",
+          options: [
+            { id: "a", text: "erst nach der Verbuchung der Zahlung" },
+            { id: "b", text: "sofort" },
+            { id: "c", text: "gar nicht" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Achten Sie auf Reihenfolgen: „zuerst … danach … erst nach …“.",
+  },
+  {
+    exam: "TESTDAF",
+    level: L,
+    section: SECTION.HOERVERSTEHEN,
+    taskType: "TESTDAF_HV_LECTURE",
+    title: "Kurzvortrag: Warum Bienen wichtig sind",
+    prompt: "Hören Sie den Vortragsausschnitt und beantworten Sie die Fragen.",
+    difficulty: "CORE",
+    topicTag: "umwelt",
+    timeLimitSeconds: 600,
+    payload: {
+      instructions: "Sie hören einen kurzen Vortrag. Wählen Sie die richtige Antwort.",
+      audioScript:
+        "Meine Damen und Herren, wenn von Bienen die Rede ist, denken die meisten an Honig. Ihre eigentliche Bedeutung liegt jedoch woanders: Bienen bestäuben zahlreiche Pflanzen und tragen so dazu bei, dass Obst und Gemüse überhaupt wachsen. Geht ihre Zahl zurück, hat das Folgen für die gesamte Landwirtschaft. Wichtig zu wissen ist, dass nicht nur die bekannte Honigbiene diese Arbeit leistet, sondern vor allem auch viele wilde Bienenarten, die oft übersehen werden.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Worin liegt die eigentliche Bedeutung der Bienen laut Vortrag?",
+          options: [
+            { id: "a", text: "in der Bestäubung von Pflanzen" },
+            { id: "b", text: "allein in der Honigproduktion" },
+            { id: "c", text: "im Wachs" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Welche Folge hat ein Rückgang der Bienen?",
+          options: [
+            { id: "a", text: "Folgen für die gesamte Landwirtschaft" },
+            { id: "b", text: "gar keine Folgen" },
+            { id: "c", text: "nur weniger Honig" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Welcher Hinweis wird zu den wilden Bienen gegeben?",
+          options: [
+            { id: "a", text: "Sie leisten einen großen, oft übersehenen Beitrag." },
+            { id: "b", text: "Sie sind unwichtig." },
+            { id: "c", text: "Sie produzieren den meisten Honig." },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„nicht nur …, sondern vor allem auch …“ hebt die wilden Bienen hervor.",
+  },
+  {
+    exam: "TESTDAF",
+    level: L,
+    section: SECTION.HOERVERSTEHEN,
+    taskType: "TESTDAF_HV_ANNOUNCE",
+    title: "Hinweis zur Museumsführung",
+    prompt: "Hören Sie die Ansage und beantworten Sie die Fragen.",
+    difficulty: "FOUNDATION",
+    topicTag: "kultur",
+    timeLimitSeconds: 420,
+    payload: {
+      instructions: "Sie hören eine Ansage im Museum. Wählen Sie die richtige Antwort.",
+      audioScript:
+        "Liebe Besucherinnen und Besucher, die nächste öffentliche Führung beginnt um vierzehn Uhr und dauert etwa eine Stunde. Treffpunkt ist die große Treppe im Eingangsbereich, nicht wie früher der Innenhof. Die Teilnahme ist im Eintritt enthalten, eine Anmeldung ist nicht nötig. Wir bitten Sie, während der Führung nicht zu fotografieren. Vielen Dank.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Wo ist der Treffpunkt für die Führung?",
+          options: [
+            { id: "a", text: "an der großen Treppe im Eingangsbereich" },
+            { id: "b", text: "im Innenhof" },
+            { id: "c", text: "im Café" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Was gilt für die Teilnahme?",
+          options: [
+            { id: "a", text: "Sie ist im Eintritt enthalten, ohne Anmeldung." },
+            { id: "b", text: "Man muss sich anmelden." },
+            { id: "c", text: "Sie kostet extra." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Worum wird gebeten?",
+          options: [
+            { id: "a", text: "während der Führung nicht zu fotografieren" },
+            { id: "b", text: "leise zu sprechen" },
+            { id: "c", text: "die Jacken abzugeben" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„nicht wie früher der Innenhof“ korrigiert eine alte Information — genau hinhören.",
+  },
+  {
+    exam: "TESTDAF",
+    level: L,
+    section: SECTION.HOERVERSTEHEN,
+    taskType: "TESTDAF_HV_DIALOG",
+    title: "Ein Referat vorbereiten",
+    prompt: "Hören Sie das Gespräch und beantworten Sie die Fragen.",
+    difficulty: "CORE",
+    topicTag: "studium",
+    timeLimitSeconds: 540,
+    payload: {
+      instructions: "Sie hören ein Gespräch zwischen zwei Studierenden. Wählen Sie die richtige Antwort.",
+      audioScript:
+        "SARAH: Wir müssen noch unser Referat aufteilen. Möchtest du lieber den theoretischen Teil oder die Beispiele? DANIEL: Ich nehme die Beispiele, das liegt mir mehr. Aber wir sollten unbedingt üben, wie wir die Folien übergeben. SARAH: Ja, sonst wirkt es holprig. Wollen wir uns am Mittwoch treffen und einmal durchgehen? DANIEL: Mittwoch passt schlecht, ich habe bis abends Kurse. Donnerstagvormittag wäre besser. SARAH: Gut, dann Donnerstag um zehn in der Bibliothek.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Welchen Teil übernimmt Daniel?",
+          options: [
+            { id: "a", text: "die Beispiele" },
+            { id: "b", text: "den theoretischen Teil" },
+            { id: "c", text: "die Einleitung" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Was wollen beide unbedingt üben?",
+          options: [
+            { id: "a", text: "die Übergabe der Folien" },
+            { id: "b", text: "das Auswendiglernen" },
+            { id: "c", text: "die Begrüßung" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Wann treffen sie sich?",
+          options: [
+            { id: "a", text: "Donnerstag um zehn in der Bibliothek" },
+            { id: "b", text: "Mittwochabend" },
+            { id: "c", text: "Freitagvormittag" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Terminabsprachen kippen oft: „Mittwoch passt schlecht … Donnerstag wäre besser.“",
+  },
+  {
+    exam: "TESTDAF",
+    level: L,
+    section: SECTION.HOERVERSTEHEN,
+    taskType: "TESTDAF_HV_LECTURE",
+    title: "Kurzvortrag: Gletscher als Wasserspeicher",
+    prompt: "Hören Sie den Vortragsausschnitt und beantworten Sie die Fragen.",
+    difficulty: "STRETCH",
+    topicTag: "wissenschaft",
+    timeLimitSeconds: 600,
+    payload: {
+      instructions: "Sie hören einen kurzen Vortrag. Wählen Sie die richtige Antwort.",
+      audioScript:
+        "Guten Tag. Gletscher wirken auf den ersten Blick wie unbewegliche Eismassen, doch sie erfüllen eine wichtige Aufgabe: Sie speichern im Winter Niederschlag und geben ihn im Sommer als Schmelzwasser ab. Ganze Regionen sind auf dieses Wasser angewiesen, etwa für die Landwirtschaft. Wenn Gletscher schrumpfen, fließt zunächst mehr Wasser ab, langfristig jedoch weniger. Gerade diese langfristige Abnahme bereitet Fachleuten Sorge, weil sie die Wasserversorgung vieler Menschen betrifft.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Welche Aufgabe erfüllen Gletscher laut Vortrag?",
+          options: [
+            { id: "a", text: "Sie speichern Wasser und geben es im Sommer ab." },
+            { id: "b", text: "Sie erzeugen Niederschlag." },
+            { id: "c", text: "Sie haben keine Funktion." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Was passiert, wenn Gletscher schrumpfen?",
+          options: [
+            { id: "a", text: "zunächst mehr, langfristig weniger Wasser" },
+            { id: "b", text: "dauerhaft mehr Wasser" },
+            { id: "c", text: "gar keine Veränderung" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Was bereitet Fachleuten besonders Sorge?",
+          options: [
+            { id: "a", text: "die langfristige Abnahme des Wassers" },
+            { id: "b", text: "das kurzfristige Mehr an Wasser" },
+            { id: "c", text: "die Farbe des Eises" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„zunächst mehr … langfristig jedoch weniger“ — der zeitliche Kontrast ist der Kern.",
+  },
+  {
+    exam: "TESTDAF",
+    level: L,
+    section: SECTION.HOERVERSTEHEN,
+    taskType: "TESTDAF_HV_ANNOUNCE",
+    title: "Hinweis zur Mensa",
+    prompt: "Hören Sie die Ansage und beantworten Sie die Fragen.",
+    difficulty: "FOUNDATION",
+    topicTag: "studium",
+    timeLimitSeconds: 420,
+    payload: {
+      instructions: "Sie hören eine Ansage in der Mensa. Wählen Sie die richtige Antwort.",
+      audioScript:
+        "Liebe Studierende, wegen Umbauarbeiten ist die große Mensa in der nächsten Woche geschlossen. In dieser Zeit können Sie das Cafeteria-Angebot im Nebengebäude nutzen, das allerdings nur ein kleineres Mittagsmenü bietet. Die Öffnungszeiten bleiben unverändert von elf bis vierzehn Uhr dreißig. Ab der übernächsten Woche ist die Mensa wieder wie gewohnt für Sie da. Wir bitten um Ihr Verständnis.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Warum ist die große Mensa geschlossen?",
+          options: [
+            { id: "a", text: "wegen Umbauarbeiten" },
+            { id: "b", text: "wegen der Ferien" },
+            { id: "c", text: "wegen Personalmangels" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Was bietet die Cafeteria im Nebengebäude?",
+          options: [
+            { id: "a", text: "ein kleineres Mittagsmenü" },
+            { id: "b", text: "gar kein Essen" },
+            { id: "c", text: "nur Getränke" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Was gilt für die Öffnungszeiten?",
+          options: [
+            { id: "a", text: "Sie bleiben unverändert (11–14:30 Uhr)." },
+            { id: "b", text: "Sie werden verkürzt." },
+            { id: "c", text: "Sie fallen ganz weg." },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„allerdings nur ein kleineres Menü“ ist die versteckte Einschränkung.",
+  },
+  {
+    exam: "TESTDAF",
+    level: L,
+    section: SECTION.HOERVERSTEHEN,
+    taskType: "TESTDAF_HV_DIALOG",
+    title: "Eine Fahrgemeinschaft absprechen",
+    prompt: "Hören Sie das Gespräch und beantworten Sie die Fragen.",
+    difficulty: "CORE",
+    topicTag: "alltag",
+    timeLimitSeconds: 540,
+    payload: {
+      instructions: "Sie hören ein Gespräch zwischen zwei Kollegen. Wählen Sie die richtige Antwort.",
+      audioScript:
+        "MERT: Du fährst doch auch zur Tagung nach Leipzig, oder? Sollen wir zusammen fahren? ANJA: Gerne, das spart Geld und ist entspannter. Fährst du mit dem Auto? MERT: Ja, ich könnte dich um sieben abholen. Dann sind wir rechtzeitig da. ANJA: Sieben ist ein bisschen früh. Reicht es nicht, wenn wir um halb acht losfahren? MERT: Dann wird es knapp mit dem Beginn um zehn. Fahren wir lieber um Viertel nach sieben, das ist ein guter Kompromiss. ANJA: Einverstanden.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Warum wollen die beiden zusammen fahren?",
+          options: [
+            { id: "a", text: "Es spart Geld und ist entspannter." },
+            { id: "b", text: "Anja hat kein Auto." },
+            { id: "c", text: "Es ist Vorschrift." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Um wie viel Uhr fahren sie schließlich los?",
+          options: [
+            { id: "a", text: "um Viertel nach sieben" },
+            { id: "b", text: "um sieben" },
+            { id: "c", text: "um halb acht" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Warum nicht später?",
+          options: [
+            { id: "a", text: "Sonst wird es knapp mit dem Beginn um zehn." },
+            { id: "b", text: "Weil das Auto kaputt ist." },
+            { id: "c", text: "Weil die Tagung ausfällt." },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Kompromisse liegen oft in der Mitte: sieben ↔ halb acht → Viertel nach sieben.",
+  },
+  {
+    exam: "TESTDAF",
+    level: L,
+    section: SECTION.HOERVERSTEHEN,
+    taskType: "TESTDAF_HV_LECTURE",
+    title: "Kurzvortrag: Lesen und Konzentration",
+    prompt: "Hören Sie den Vortragsausschnitt und beantworten Sie die Fragen.",
+    difficulty: "STRETCH",
+    topicTag: "wissenschaft",
+    timeLimitSeconds: 600,
+    payload: {
+      instructions: "Sie hören einen kurzen Vortrag. Wählen Sie die richtige Antwort.",
+      audioScript:
+        "Guten Tag. Ob wir einen längeren Text auf Papier oder am Bildschirm lesen, macht für das Verständnis oft einen Unterschied. Untersuchungen deuten darauf hin, dass wir am Bildschirm dazu neigen, schneller zu überfliegen und Details zu übersehen. Das liegt weniger am Gerät selbst als an unserer Gewohnheit, online rasch zu scrollen. Wer am Bildschirm gründlich lesen möchte, sollte sich daher bewusst Zeit nehmen und Ablenkungen ausschalten. Dann verschwindet der Unterschied weitgehend.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Wozu neigen wir laut Vortrag am Bildschirm?",
+          options: [
+            { id: "a", text: "schneller zu überfliegen und Details zu übersehen" },
+            { id: "b", text: "besonders langsam zu lesen" },
+            { id: "c", text: "gar nicht zu lesen" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Woran liegt dieser Effekt vor allem?",
+          options: [
+            { id: "a", text: "an unserer Gewohnheit, online zu scrollen" },
+            { id: "b", text: "allein am Gerät" },
+            { id: "c", text: "an der Schriftgröße" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Was hilft laut Vortrag beim gründlichen Lesen am Bildschirm?",
+          options: [
+            { id: "a", text: "sich bewusst Zeit nehmen und Ablenkungen ausschalten" },
+            { id: "b", text: "möglichst schnell scrollen" },
+            { id: "c", text: "nebenbei Musik hören" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„weniger am Gerät … als an der Gewohnheit“ verschiebt die Ursache — genau das wird gefragt.",
+  },
 
   // ------------------------------------------------------------ SCHRIFTLICHER_AUSDRUCK
   {
