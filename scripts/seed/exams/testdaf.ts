@@ -1659,6 +1659,246 @@ export const ITEMS: ExamItemInput[] = [
     },
     guidanceNote: "Denken Sie an mögliche Nebenwirkungen: Wird Ehrenamt durch Geld zur Erwerbsarbeit? Solche Überlegungen zeigen Tiefe.",
   },
+  {
+    exam: "TESTDAF",
+    level: L,
+    section: SECTION.SCHRIFTLICHER_AUSDRUCK,
+    taskType: "TESTDAF_SA_ARGUMENT",
+    title: "Nachrichten über soziale Medien",
+    prompt: "Schreiben Sie einen zusammenhängenden Text (circa 250 Wörter).",
+    difficulty: "CORE",
+    topicTag: "medien",
+    timeLimitSeconds: 3600,
+    payload: {
+      situation:
+        "Eine Umfrage zeigt, dass immer mehr junge Menschen sich hauptsächlich über soziale Medien informieren statt über Zeitungen oder das Fernsehen. Ältere Befragte nutzen weiterhin überwiegend klassische Medien.",
+      instruction:
+        "Beschreiben Sie die in der Umfrage genannte Entwicklung. Erörtern Sie Vor- und Nachteile, wenn Nachrichten vor allem über soziale Medien bezogen werden, und begründen Sie am Ende Ihre eigene Position.",
+      wordMin: 200,
+      wordMax: 320,
+    },
+    guidanceNote: "Denken Sie an Aktualität und Reichweite auf der einen, Verlässlichkeit und Filterblasen auf der anderen Seite.",
+  },
+  {
+    exam: "TESTDAF",
+    level: L,
+    section: SECTION.SCHRIFTLICHER_AUSDRUCK,
+    taskType: "TESTDAF_SA_ARGUMENT",
+    title: "Kostenloser Nahverkehr",
+    prompt: "Schreiben Sie einen zusammenhängenden Text (circa 250 Wörter).",
+    difficulty: "STRETCH",
+    topicTag: "verkehr",
+    timeLimitSeconds: 3600,
+    payload: {
+      situation:
+        "In einer Stadt wird vorgeschlagen, Busse und Bahnen kostenlos anzubieten, um den Autoverkehr zu verringern. Eine Übersicht zeigt: Der Nahverkehr ist stark ausgelastet, gleichzeitig fehlen der Stadt Einnahmen.",
+      instruction:
+        "Fassen Sie das Vorhaben und die genannten Zahlen zusammen. Diskutieren Sie, ob ein kostenloser Nahverkehr sinnvoll ist, und formulieren Sie eine begründete eigene Meinung.",
+      wordMin: 200,
+      wordMax: 320,
+    },
+    guidanceNote: "Wägen Sie Umweltnutzen gegen Finanzierung ab. Ein begründetes Fazit rundet den Text ab.",
+  },
+  {
+    exam: "TESTDAF",
+    level: L,
+    section: SECTION.SCHRIFTLICHER_AUSDRUCK,
+    taskType: "TESTDAF_SA_ARGUMENT",
+    title: "Tourismus in beliebten Städten",
+    prompt: "Schreiben Sie einen zusammenhängenden Text (circa 250 Wörter).",
+    difficulty: "CORE",
+    topicTag: "gesellschaft",
+    timeLimitSeconds: 3600,
+    payload: {
+      situation:
+        "Manche beliebten Städte verzeichnen so viele Besucher, dass Anwohner sich über volle Straßen und steigende Mieten beklagen. Zugleich hängen viele Arbeitsplätze vom Tourismus ab.",
+      instruction:
+        "Stellen Sie den Konflikt dar. Erörtern Sie Vor- und Nachteile des starken Tourismus für eine Stadt und begründen Sie, welche Maßnahmen Sie für sinnvoll halten.",
+      wordMin: 200,
+      wordMax: 320,
+    },
+    guidanceNote: "Konkrete Maßnahmen (Besucherlenkung, Gebühren) machen den Schluss überzeugender als eine reine Meinung.",
+  },
+  {
+    exam: "TESTDAF",
+    level: L,
+    section: SECTION.SCHRIFTLICHER_AUSDRUCK,
+    taskType: "TESTDAF_SA_ARGUMENT",
+    title: "Pflichtpraktikum im Studium",
+    prompt: "Schreiben Sie einen zusammenhängenden Text (circa 250 Wörter).",
+    difficulty: "CORE",
+    topicTag: "bildung",
+    timeLimitSeconds: 3600,
+    payload: {
+      situation:
+        "An einer Hochschule wird diskutiert, ob ein mehrmonatiges Pflichtpraktikum in jeden Studiengang aufgenommen werden soll. Befürworter betonen den Praxisbezug, Gegner die zusätzliche Belastung.",
+      instruction:
+        "Beschreiben Sie den Vorschlag. Erörtern Sie Argumente für und gegen ein verpflichtendes Praktikum und begründen Sie Ihre eigene Sichtweise.",
+      wordMin: 200,
+      wordMax: 320,
+    },
+    guidanceNote: "Unterscheiden Sie zwischen fachnahen und fachfernen Studiengängen — das zeigt differenziertes Denken.",
+  },
+  {
+    exam: "TESTDAF",
+    level: L,
+    section: SECTION.SCHRIFTLICHER_AUSDRUCK,
+    taskType: "TESTDAF_SA_ARGUMENT",
+    title: "Weniger Fleisch essen",
+    prompt: "Schreiben Sie einen zusammenhängenden Text (circa 250 Wörter).",
+    difficulty: "STRETCH",
+    topicTag: "umwelt",
+    timeLimitSeconds: 3600,
+    payload: {
+      situation:
+        "In einer Diskussion über Ernährung und Umwelt wird gefordert, in Kantinen mehr vegetarische Gerichte anzubieten und den Fleischanteil zu senken. Eine Grafik zeigt, dass die Erzeugung von Fleisch besonders viele Ressourcen verbraucht.",
+      instruction:
+        "Beschreiben Sie die in der Grafik genannte Entwicklung. Erörtern Sie, ob Kantinen den Fleischanteil senken sollten, und begründen Sie Ihre Position.",
+      wordMin: 200,
+      wordMax: 320,
+    },
+    guidanceNote: "Achten Sie auf die Frage der Freiheit: Angebot lenken oder vorschreiben? Solche Abwägungen wirken reif.",
+  },
+  {
+    exam: "TESTDAF",
+    level: L,
+    section: SECTION.SCHRIFTLICHER_AUSDRUCK,
+    taskType: "TESTDAF_SA_ARGUMENT",
+    title: "Videospiele und Lernen",
+    prompt: "Schreiben Sie einen zusammenhängenden Text (circa 250 Wörter).",
+    difficulty: "CORE",
+    topicTag: "bildung",
+    timeLimitSeconds: 3600,
+    payload: {
+      situation:
+        "Es wird diskutiert, ob Videospiele beim Lernen helfen können. Manche Studien berichten von besseren Reaktionen und mehr Motivation, andere von Ablenkung und zu langer Bildschirmzeit.",
+      instruction:
+        "Fassen Sie die unterschiedlichen Befunde zusammen. Erörtern Sie Chancen und Risiken von Videospielen für das Lernen und formulieren Sie eine begründete eigene Meinung.",
+      wordMin: 200,
+      wordMax: 320,
+    },
+    guidanceNote: "Es kommt auf Art und Maß an — differenzieren Sie zwischen Lernspielen und reiner Unterhaltung.",
+  },
+  {
+    exam: "TESTDAF",
+    level: L,
+    section: SECTION.SCHRIFTLICHER_AUSDRUCK,
+    taskType: "TESTDAF_SA_ARGUMENT",
+    title: "Ein Jahr zwischen Schule und Studium",
+    prompt: "Schreiben Sie einen zusammenhängenden Text (circa 250 Wörter).",
+    difficulty: "CORE",
+    topicTag: "bildung",
+    timeLimitSeconds: 3600,
+    payload: {
+      situation:
+        "Viele junge Menschen überlegen, nach der Schule ein Jahr zu pausieren, um zu reisen, zu arbeiten oder sich freiwillig zu engagieren, bevor sie ein Studium beginnen.",
+      instruction:
+        "Beschreiben Sie diese Überlegung. Erörtern Sie Vor- und Nachteile eines solchen Zwischenjahres und begründen Sie, was Sie empfehlen würden.",
+      wordMin: 200,
+      wordMax: 320,
+    },
+    guidanceNote: "Denken Sie an Reife und Orientierung einerseits, Zeitverlust und Wiedereinstieg andererseits.",
+  },
+  {
+    exam: "TESTDAF",
+    level: L,
+    section: SECTION.SCHRIFTLICHER_AUSDRUCK,
+    taskType: "TESTDAF_SA_ARGUMENT",
+    title: "Online-Handel und Innenstädte",
+    prompt: "Schreiben Sie einen zusammenhängenden Text (circa 250 Wörter).",
+    difficulty: "STRETCH",
+    topicTag: "gesellschaft",
+    timeLimitSeconds: 3600,
+    payload: {
+      situation:
+        "Der Online-Handel wächst, während in vielen Innenstädten Geschäfte schließen. Eine Übersicht zeigt sinkende Besucherzahlen in den Fußgängerzonen und steigende Paketmengen.",
+      instruction:
+        "Beschreiben Sie die genannte Entwicklung. Erörtern Sie ihre Folgen für die Innenstädte und begründen Sie, welche Gegenmaßnahmen Sie für sinnvoll halten.",
+      wordMin: 200,
+      wordMax: 320,
+    },
+    guidanceNote: "Verknüpfen Sie Ursache und Folge klar mit „dadurch“, „infolgedessen“, „um … zu“.",
+  },
+  {
+    exam: "TESTDAF",
+    level: L,
+    section: SECTION.SCHRIFTLICHER_AUSDRUCK,
+    taskType: "TESTDAF_SA_ARGUMENT",
+    title: "Ganztagsschule",
+    prompt: "Schreiben Sie einen zusammenhängenden Text (circa 250 Wörter).",
+    difficulty: "CORE",
+    topicTag: "bildung",
+    timeLimitSeconds: 3600,
+    payload: {
+      situation:
+        "Es wird diskutiert, ob mehr Schulen zu Ganztagsschulen werden sollen, in denen die Kinder auch am Nachmittag betreut werden und lernen. Befürworter nennen bessere Förderung, Gegner weniger Freizeit.",
+      instruction:
+        "Beschreiben Sie den Vorschlag. Erörtern Sie Argumente für und gegen die Ganztagsschule und begründen Sie Ihre eigene Position.",
+      wordMin: 200,
+      wordMax: 320,
+    },
+    guidanceNote: "Beziehen Sie verschiedene Betroffene ein: Kinder, Eltern, Lehrkräfte. Das zeigt Perspektivenvielfalt.",
+  },
+  {
+    exam: "TESTDAF",
+    level: L,
+    section: SECTION.SCHRIFTLICHER_AUSDRUCK,
+    taskType: "TESTDAF_SA_ARGUMENT",
+    title: "Künstliche Intelligenz im Alltag",
+    prompt: "Schreiben Sie einen zusammenhängenden Text (circa 250 Wörter).",
+    difficulty: "STRETCH",
+    topicTag: "wissenschaft",
+    timeLimitSeconds: 3600,
+    payload: {
+      situation:
+        "Programme mit künstlicher Intelligenz helfen zunehmend im Alltag, etwa beim Schreiben von Texten oder beim Übersetzen. Manche sehen darin eine große Erleichterung, andere fürchten, dass wichtige Fähigkeiten verloren gehen.",
+      instruction:
+        "Beschreiben Sie die Ausgangslage. Erörtern Sie Chancen und Risiken solcher Programme im Alltag und begründen Sie Ihre eigene Einschätzung.",
+      wordMin: 200,
+      wordMax: 320,
+    },
+    guidanceNote: "Vermeiden Sie Pauschalurteile. „Werkzeug, nicht Ersatz“ ist eine tragfähige differenzierte Linie.",
+  },
+  {
+    exam: "TESTDAF",
+    level: L,
+    section: SECTION.SCHRIFTLICHER_AUSDRUCK,
+    taskType: "TESTDAF_SA_ARGUMENT",
+    title: "Hochschulsport für alle",
+    prompt: "Schreiben Sie einen zusammenhängenden Text (circa 250 Wörter).",
+    difficulty: "CORE",
+    topicTag: "gesundheit",
+    timeLimitSeconds: 3600,
+    payload: {
+      situation:
+        "An einer Universität wird vorgeschlagen, ein verpflichtendes Sportangebot für alle Studierenden einzuführen, um Bewegung und Ausgleich zum Lernen zu fördern.",
+      instruction:
+        "Beschreiben Sie den Vorschlag. Erörtern Sie Vor- und Nachteile eines verpflichtenden Sportangebots und begründen Sie, ob Sie es befürworten.",
+      wordMin: 200,
+      wordMax: 320,
+    },
+    guidanceNote: "Prüfen Sie den Unterschied zwischen „Angebot fördern“ und „Pflicht“ — Zwang wirft eigene Fragen auf.",
+  },
+  {
+    exam: "TESTDAF",
+    level: L,
+    section: SECTION.SCHRIFTLICHER_AUSDRUCK,
+    taskType: "TESTDAF_SA_ARGUMENT",
+    title: "Handynutzung in der Freizeit",
+    prompt: "Schreiben Sie einen zusammenhängenden Text (circa 250 Wörter).",
+    difficulty: "CORE",
+    topicTag: "gesellschaft",
+    timeLimitSeconds: 3600,
+    payload: {
+      situation:
+        "Eine Erhebung zeigt, dass viele Menschen täglich mehrere Stunden mit dem Smartphone verbringen. Manche sehen darin nützliche Vernetzung, andere eine Belastung für Konzentration und Schlaf.",
+      instruction:
+        "Beschreiben Sie die in der Erhebung genannte Entwicklung. Erörtern Sie Vor- und Nachteile der intensiven Smartphone-Nutzung und begründen Sie Ihre eigene Meinung.",
+      wordMin: 200,
+      wordMax: 320,
+    },
+    guidanceNote: "Konkrete Beispiele (Erreichbarkeit, Schlaf, Ablenkung) machen die Erörterung anschaulicher.",
+  },
 
   // ------------------------------------------------------------- MUENDLICHER_AUSDRUCK
   {
