@@ -849,6 +849,741 @@ export const ITEMS: ExamItemInput[] = [
     },
     guidanceNote: "„weil“ leitet den Grund ein (Verb ans Ende). „sich freuen über“ + Akkusativ ist fest.",
   },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SPRACHBAUSTEINE,
+    taskType: "TELC_B1_SB_GAP",
+    title: "Nachricht an eine Freundin",
+    prompt: "Wählen Sie für jede Lücke das passende Wort.",
+    difficulty: "FOUNDATION",
+    topicTag: "alltag",
+    timeLimitSeconds: 420,
+    payload: {
+      instructions: "Wählen Sie für jede Lücke die richtige Möglichkeit (a, b oder c).",
+      passage:
+        "Hallo Mia, hast du am Samstag Zeit? Ich möchte gern (1) dir ins Kino gehen. Der neue Film soll sehr gut sein. (2) es dir passt, treffen wir uns um sieben vor dem Kino. Sag mir bitte Bescheid, (3) ich die Karten reservieren kann.",
+      questions: [
+        {
+          id: "1",
+          stem: "Lücke 1",
+          options: [
+            { id: "a", text: "mit" },
+            { id: "b", text: "für" },
+            { id: "c", text: "zu" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "2",
+          stem: "Lücke 2",
+          options: [
+            { id: "a", text: "Wenn" },
+            { id: "b", text: "Als" },
+            { id: "c", text: "Ob" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "3",
+          stem: "Lücke 3",
+          options: [
+            { id: "a", text: "damit" },
+            { id: "b", text: "weil" },
+            { id: "c", text: "obwohl" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„mit dir“ (Dativ) ist fest; „wenn“ nennt eine Bedingung; „damit“ eine Absicht.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SPRACHBAUSTEINE,
+    taskType: "TELC_B1_SB_GAP",
+    title: "E-Mail an den Kursleiter",
+    prompt: "Wählen Sie für jede Lücke das passende Wort.",
+    difficulty: "CORE",
+    topicTag: "bildung",
+    timeLimitSeconds: 420,
+    payload: {
+      instructions: "Wählen Sie für jede Lücke die richtige Möglichkeit (a, b oder c).",
+      passage:
+        "Sehr geehrter Herr Weber, leider kann ich (1) Montag nicht zum Kurs kommen, (2) ich krank bin. Könnten Sie mir bitte sagen, was wir in der Stunde machen? Ich möchte den Stoff zu Hause nachholen, (3) ich nichts verpasse. Vielen Dank und viele Grüße, Ana",
+      questions: [
+        {
+          id: "1",
+          stem: "Lücke 1",
+          options: [
+            { id: "a", text: "am" },
+            { id: "b", text: "im" },
+            { id: "c", text: "um" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "2",
+          stem: "Lücke 2",
+          options: [
+            { id: "a", text: "weil" },
+            { id: "b", text: "denn" },
+            { id: "c", text: "obwohl" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "3",
+          stem: "Lücke 3",
+          options: [
+            { id: "a", text: "damit" },
+            { id: "b", text: "sodass" },
+            { id: "c", text: "weil" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„am Montag“ ist fest; „weil“ stellt das Verb ans Satzende; „damit“ nennt die Absicht.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SPRACHBAUSTEINE,
+    taskType: "TELC_B1_SB_GAP",
+    title: "Bitte an den Nachbarn",
+    prompt: "Wählen Sie für jede Lücke das passende Wort.",
+    difficulty: "FOUNDATION",
+    topicTag: "wohnen",
+    timeLimitSeconds: 420,
+    payload: {
+      instructions: "Wählen Sie für jede Lücke die richtige Möglichkeit (a, b oder c).",
+      passage:
+        "Lieber Herr Sahin, ich fahre nächste Woche (1) den Urlaub. Könnten Sie bitte (2) meine Blumen gießen? Der Schlüssel ist wie immer bei Ihnen. Ich bringe Ihnen (3) eine Kleinigkeit mit. Vielen Dank im Voraus!",
+      questions: [
+        {
+          id: "1",
+          stem: "Lücke 1",
+          options: [
+            { id: "a", text: "in" },
+            { id: "b", text: "an" },
+            { id: "c", text: "auf" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "2",
+          stem: "Lücke 2",
+          options: [
+            { id: "a", text: "kurz" },
+            { id: "b", text: "kurze" },
+            { id: "c", text: "kurzen" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "3",
+          stem: "Lücke 3",
+          options: [
+            { id: "a", text: "bestimmt" },
+            { id: "b", text: "trotzdem" },
+            { id: "c", text: "deshalb" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„in den Urlaub fahren“ ist fest; „kurz gießen“ (Adverb, ohne Endung).",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SPRACHBAUSTEINE,
+    taskType: "TELC_B1_SB_GAP",
+    title: "Antwort auf eine Einladung",
+    prompt: "Wählen Sie für jede Lücke das passende Wort.",
+    difficulty: "CORE",
+    topicTag: "alltag",
+    timeLimitSeconds: 420,
+    payload: {
+      instructions: "Wählen Sie für jede Lücke die richtige Möglichkeit (a, b oder c).",
+      passage:
+        "Liebe Sofia, vielen Dank (1) die Einladung zu deiner Feier. Ich komme sehr gern. Soll ich (2) mitbringen, zum Beispiel einen Salat? Ich freue mich schon (3) den Abend. Bis Samstag! Deine Lena",
+      questions: [
+        {
+          id: "1",
+          stem: "Lücke 1",
+          options: [
+            { id: "a", text: "für" },
+            { id: "b", text: "über" },
+            { id: "c", text: "auf" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "2",
+          stem: "Lücke 2",
+          options: [
+            { id: "a", text: "etwas" },
+            { id: "b", text: "nichts" },
+            { id: "c", text: "alles" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "3",
+          stem: "Lücke 3",
+          options: [
+            { id: "a", text: "auf" },
+            { id: "b", text: "über" },
+            { id: "c", text: "für" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„danke für“ und „sich freuen auf“ (Zukunft) sind feste Verbindungen.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SPRACHBAUSTEINE,
+    taskType: "TELC_B1_SB_GAP",
+    title: "Notiz für die Familie",
+    prompt: "Wählen Sie für jede Lücke das passende Wort.",
+    difficulty: "FOUNDATION",
+    topicTag: "alltag",
+    timeLimitSeconds: 420,
+    payload: {
+      instructions: "Wählen Sie für jede Lücke die richtige Möglichkeit (a, b oder c).",
+      passage:
+        "Ich bin schnell einkaufen gegangen und (1) gleich wieder da. Das Essen steht (2) Kühlschrank. Bitte deckt schon den Tisch, (3) wir gleich essen können. Bis gleich!",
+      questions: [
+        {
+          id: "1",
+          stem: "Lücke 1",
+          options: [
+            { id: "a", text: "bin" },
+            { id: "b", text: "habe" },
+            { id: "c", text: "werde" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "2",
+          stem: "Lücke 2",
+          options: [
+            { id: "a", text: "im" },
+            { id: "b", text: "auf dem" },
+            { id: "c", text: "am" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "3",
+          stem: "Lücke 3",
+          options: [
+            { id: "a", text: "damit" },
+            { id: "b", text: "weil" },
+            { id: "c", text: "obwohl" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„bin … da“ (sein); „im Kühlschrank“ (Dativ, wo?); „damit“ nennt die Absicht.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SPRACHBAUSTEINE,
+    taskType: "TELC_B1_SB_GAP",
+    title: "Anfrage im Fitnessstudio",
+    prompt: "Wählen Sie für jede Lücke das passende Wort.",
+    difficulty: "CORE",
+    topicTag: "gesundheit",
+    timeLimitSeconds: 420,
+    payload: {
+      instructions: "Wählen Sie für jede Lücke die richtige Möglichkeit (a, b oder c).",
+      passage:
+        "Guten Tag, ich interessiere mich (1) eine Mitgliedschaft in Ihrem Studio. Können Sie mir sagen, (2) der Monat kostet? Außerdem würde ich gern wissen, (3) man auch am Wochenende trainieren kann. Vielen Dank für Ihre Auskunft.",
+      questions: [
+        {
+          id: "1",
+          stem: "Lücke 1",
+          options: [
+            { id: "a", text: "für" },
+            { id: "b", text: "an" },
+            { id: "c", text: "über" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "2",
+          stem: "Lücke 2",
+          options: [
+            { id: "a", text: "was" },
+            { id: "b", text: "wie" },
+            { id: "c", text: "wenn" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "3",
+          stem: "Lücke 3",
+          options: [
+            { id: "a", text: "ob" },
+            { id: "b", text: "dass" },
+            { id: "c", text: "wenn" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„sich interessieren für“ ist fest; indirekte Ja/Nein-Frage → „ob“.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SPRACHBAUSTEINE,
+    taskType: "TELC_B1_SB_GAP",
+    title: "Kurze Beschwerde",
+    prompt: "Wählen Sie für jede Lücke das passende Wort.",
+    difficulty: "CORE",
+    topicTag: "alltag",
+    timeLimitSeconds: 420,
+    payload: {
+      instructions: "Wählen Sie für jede Lücke die richtige Möglichkeit (a, b oder c).",
+      passage:
+        "Sehr geehrte Damen und Herren, gestern habe ich bei Ihnen eine Lampe gekauft, (1) leider nicht funktioniert. Ich (2) sie gern umtauschen. Könnten Sie mir sagen, ob ich den Kassenbon (3) muss? Vielen Dank.",
+      questions: [
+        {
+          id: "1",
+          stem: "Lücke 1",
+          options: [
+            { id: "a", text: "die" },
+            { id: "b", text: "der" },
+            { id: "c", text: "das" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "2",
+          stem: "Lücke 2",
+          options: [
+            { id: "a", text: "möchte" },
+            { id: "b", text: "muss" },
+            { id: "c", text: "darf" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "3",
+          stem: "Lücke 3",
+          options: [
+            { id: "a", text: "mitbringen" },
+            { id: "b", text: "mitbringe" },
+            { id: "c", text: "mitgebracht" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Relativpronomen für „Lampe“ (fem.) = „die“; nach Modalverb steht der Infinitiv „mitbringen“.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SPRACHBAUSTEINE,
+    taskType: "TELC_B1_SB_GAP",
+    title: "Verabredung verschieben",
+    prompt: "Wählen Sie für jede Lücke das passende Wort.",
+    difficulty: "CORE",
+    topicTag: "alltag",
+    timeLimitSeconds: 420,
+    payload: {
+      instructions: "Wählen Sie für jede Lücke die richtige Möglichkeit (a, b oder c).",
+      passage:
+        "Hallo Ben, es tut mir leid, aber ich muss unser Treffen (1) verschieben. Mein Chef hat mich gefragt, (2) ich heute länger arbeiten kann. Passt es dir (3) morgen um die gleiche Zeit? Melde dich kurz. Gruß, Jonas",
+      questions: [
+        {
+          id: "1",
+          stem: "Lücke 1",
+          options: [
+            { id: "a", text: "leider" },
+            { id: "b", text: "gern" },
+            { id: "c", text: "bald" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "2",
+          stem: "Lücke 2",
+          options: [
+            { id: "a", text: "ob" },
+            { id: "b", text: "dass" },
+            { id: "c", text: "wenn" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "3",
+          stem: "Lücke 3",
+          options: [
+            { id: "a", text: "auch" },
+            { id: "b", text: "noch" },
+            { id: "c", text: "schon" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„gefragt, ob …“ leitet eine indirekte Ja/Nein-Frage ein.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SPRACHBAUSTEINE,
+    taskType: "TELC_B1_SB_GAP",
+    title: "Nachricht an die Vermieterin",
+    prompt: "Wählen Sie für jede Lücke das passende Wort.",
+    difficulty: "CORE",
+    topicTag: "wohnen",
+    timeLimitSeconds: 420,
+    payload: {
+      instructions: "Wählen Sie für jede Lücke die richtige Möglichkeit (a, b oder c).",
+      passage:
+        "Sehr geehrte Frau Roth, in der Küche tropft seit einigen Tagen der Wasserhahn. Ich habe schon versucht, ihn (1) reparieren, aber es hat nicht geklappt. Könnten Sie bitte einen Handwerker schicken? Am besten erreichen Sie mich (2) Telefon nach 17 Uhr. (3) Ihre Hilfe bedanke ich mich im Voraus.",
+      questions: [
+        {
+          id: "1",
+          stem: "Lücke 1",
+          options: [
+            { id: "a", text: "zu" },
+            { id: "b", text: "für" },
+            { id: "c", text: "um" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "2",
+          stem: "Lücke 2",
+          options: [
+            { id: "a", text: "per" },
+            { id: "b", text: "mit" },
+            { id: "c", text: "bei" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "3",
+          stem: "Lücke 3",
+          options: [
+            { id: "a", text: "Für" },
+            { id: "b", text: "Über" },
+            { id: "c", text: "Auf" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„versuchen zu + Infinitiv“; „per Telefon“ ist fest; „sich bedanken für“.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SPRACHBAUSTEINE,
+    taskType: "TELC_B1_SB_GAP",
+    title: "Kurzer Dank",
+    prompt: "Wählen Sie für jede Lücke das passende Wort.",
+    difficulty: "FOUNDATION",
+    topicTag: "alltag",
+    timeLimitSeconds: 420,
+    payload: {
+      instructions: "Wählen Sie für jede Lücke die richtige Möglichkeit (a, b oder c).",
+      passage:
+        "Liebe Frau Nowak, vielen Dank, dass Sie (1) mich auf das Kind aufgepasst haben. Ohne Sie (2) ich den Termin nicht geschafft. Als kleines Dankeschön habe ich Ihnen einen Kuchen gebacken. Ich hoffe, er (3) Ihnen. Herzliche Grüße",
+      questions: [
+        {
+          id: "1",
+          stem: "Lücke 1",
+          options: [
+            { id: "a", text: "für" },
+            { id: "b", text: "auf" },
+            { id: "c", text: "an" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "2",
+          stem: "Lücke 2",
+          options: [
+            { id: "a", text: "hätte" },
+            { id: "b", text: "habe" },
+            { id: "c", text: "hatte" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "3",
+          stem: "Lücke 3",
+          options: [
+            { id: "a", text: "schmeckt" },
+            { id: "b", text: "schmeckte" },
+            { id: "c", text: "geschmeckt" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„für mich aufpassen“; „hätte … geschafft“ = irreale Vergangenheit (Konjunktiv II).",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SPRACHBAUSTEINE,
+    taskType: "TELC_B1_SB_GAP",
+    title: "Frage an das Sekretariat",
+    prompt: "Wählen Sie für jede Lücke das passende Wort.",
+    difficulty: "CORE",
+    topicTag: "bildung",
+    timeLimitSeconds: 420,
+    payload: {
+      instructions: "Wählen Sie für jede Lücke die richtige Möglichkeit (a, b oder c).",
+      passage:
+        "Guten Tag, ich möchte mich (1) den Deutschkurs anmelden, der im September beginnt. Muss ich vorher einen Test machen, (2) man mein Niveau kennt? Und (3) bezahle ich die Gebühr, bar oder per Überweisung? Vielen Dank.",
+      questions: [
+        {
+          id: "1",
+          stem: "Lücke 1",
+          options: [
+            { id: "a", text: "für" },
+            { id: "b", text: "an" },
+            { id: "c", text: "auf" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "2",
+          stem: "Lücke 2",
+          options: [
+            { id: "a", text: "damit" },
+            { id: "b", text: "weil" },
+            { id: "c", text: "obwohl" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "3",
+          stem: "Lücke 3",
+          options: [
+            { id: "a", text: "wie" },
+            { id: "b", text: "was" },
+            { id: "c", text: "wann" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„sich anmelden für“; „damit man … kennt“ nennt die Absicht; „wie bezahle ich“ = Art und Weise.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SPRACHBAUSTEINE,
+    taskType: "TELC_B1_SB_GAP",
+    title: "Krankmeldung bei der Arbeit",
+    prompt: "Wählen Sie für jede Lücke das passende Wort.",
+    difficulty: "CORE",
+    topicTag: "arbeit",
+    timeLimitSeconds: 420,
+    payload: {
+      instructions: "Wählen Sie für jede Lücke die richtige Möglichkeit (a, b oder c).",
+      passage:
+        "Sehr geehrte Frau Berg, leider bin ich krank und kann heute nicht (1) Arbeit kommen. Ich war beim Arzt, (2) mich für drei Tage krankgeschrieben hat. Die Bescheinigung schicke ich Ihnen (3) Post. Mit freundlichen Grüßen, Herr Ott",
+      questions: [
+        {
+          id: "1",
+          stem: "Lücke 1",
+          options: [
+            { id: "a", text: "zur" },
+            { id: "b", text: "in die" },
+            { id: "c", text: "auf die" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "2",
+          stem: "Lücke 2",
+          options: [
+            { id: "a", text: "der" },
+            { id: "b", text: "die" },
+            { id: "c", text: "den" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "3",
+          stem: "Lücke 3",
+          options: [
+            { id: "a", text: "per" },
+            { id: "b", text: "mit" },
+            { id: "c", text: "bei" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„zur Arbeit kommen“ ist fest; Relativpronomen für „Arzt“ (mask., Nom.) = „der“; „per Post“.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SPRACHBAUSTEINE,
+    taskType: "TELC_B1_SB_GAP",
+    title: "Einladung zum Ausflug",
+    prompt: "Wählen Sie für jede Lücke das passende Wort.",
+    difficulty: "FOUNDATION",
+    topicTag: "freizeit",
+    timeLimitSeconds: 420,
+    payload: {
+      instructions: "Wählen Sie für jede Lücke die richtige Möglichkeit (a, b oder c).",
+      passage:
+        "Hallo zusammen, am Sonntag machen wir einen Ausflug (1) den See. Wir wollen wandern und (2) grillen. Jeder bringt bitte etwas zu essen mit. (3) es regnet, verschieben wir den Ausflug auf nächste Woche. Kommt ihr mit?",
+      questions: [
+        {
+          id: "1",
+          stem: "Lücke 1",
+          options: [
+            { id: "a", text: "an" },
+            { id: "b", text: "auf" },
+            { id: "c", text: "in" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "2",
+          stem: "Lücke 2",
+          options: [
+            { id: "a", text: "danach" },
+            { id: "b", text: "vorher" },
+            { id: "c", text: "deshalb" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "3",
+          stem: "Lücke 3",
+          options: [
+            { id: "a", text: "Falls" },
+            { id: "b", text: "Obwohl" },
+            { id: "c", text: "Damit" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„an den See“ (Bewegung, wohin?); „falls“ = „wenn“ und nennt die Bedingung.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SPRACHBAUSTEINE,
+    taskType: "TELC_B1_SB_GAP",
+    title: "Antwort auf eine Stellenanzeige",
+    prompt: "Wählen Sie für jede Lücke das passende Wort.",
+    difficulty: "CORE",
+    topicTag: "arbeit",
+    timeLimitSeconds: 420,
+    payload: {
+      instructions: "Wählen Sie für jede Lücke die richtige Möglichkeit (a, b oder c).",
+      passage:
+        "Sehr geehrte Damen und Herren, mit großem Interesse habe ich Ihre Anzeige gelesen. Ich (1) mich um die Stelle als Verkäuferin. Ich habe schon drei Jahre (2) einem Geschäft gearbeitet und arbeite gern (3) Menschen. Über eine Einladung zu einem Gespräch würde ich mich sehr freuen.",
+      questions: [
+        {
+          id: "1",
+          stem: "Lücke 1",
+          options: [
+            { id: "a", text: "bewerbe" },
+            { id: "b", text: "melde" },
+            { id: "c", text: "kümmere" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "2",
+          stem: "Lücke 2",
+          options: [
+            { id: "a", text: "in" },
+            { id: "b", text: "an" },
+            { id: "c", text: "auf" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "3",
+          stem: "Lücke 3",
+          options: [
+            { id: "a", text: "mit" },
+            { id: "b", text: "für" },
+            { id: "c", text: "bei" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„sich bewerben um“; „in einem Geschäft arbeiten“ (Dativ, wo?); „mit Menschen arbeiten“.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SPRACHBAUSTEINE,
+    taskType: "TELC_B1_SB_GAP",
+    title: "Nachricht vom Elternabend",
+    prompt: "Wählen Sie für jede Lücke das passende Wort.",
+    difficulty: "CORE",
+    topicTag: "bildung",
+    timeLimitSeconds: 420,
+    payload: {
+      instructions: "Wählen Sie für jede Lücke die richtige Möglichkeit (a, b oder c).",
+      passage:
+        "Liebe Eltern, am nächsten Donnerstag findet ein Elternabend statt, (1) wir über die Klassenfahrt sprechen möchten. Bitte kommen Sie pünktlich um 18 Uhr. (2) Sie nicht teilnehmen können, geben Sie Ihrem Kind bitte eine kurze Notiz mit. Wir freuen uns (3) Ihr Kommen.",
+      questions: [
+        {
+          id: "1",
+          stem: "Lücke 1",
+          options: [
+            { id: "a", text: "an dem" },
+            { id: "b", text: "in dem" },
+            { id: "c", text: "auf dem" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "2",
+          stem: "Lücke 2",
+          options: [
+            { id: "a", text: "Falls" },
+            { id: "b", text: "Damit" },
+            { id: "c", text: "Obwohl" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "3",
+          stem: "Lücke 3",
+          options: [
+            { id: "a", text: "auf" },
+            { id: "b", text: "über" },
+            { id: "c", text: "für" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„an dem … Abend“ (Zeit); „falls“ = Bedingung; „sich freuen auf“ (Zukunft).",
+  },
 
   // ----------------------------------------------------------------- HOERVERSTEHEN
   {
