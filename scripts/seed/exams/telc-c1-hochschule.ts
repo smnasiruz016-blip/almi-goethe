@@ -113,6 +113,692 @@ export const ITEMS: ExamItemInput[] = [
     },
     guidanceNote: "Achten Sie auf „Manche … Andere halten dagegen …“ — ein klassisches Pro-/Kontra-Signal.",
   },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.LESEVERSTEHEN,
+    taskType: "TELC_C1H_LV_MCQ",
+    title: "Vom Nutzen des Scheiterns",
+    prompt: "Lesen Sie den Text und beantworten Sie die Fragen.",
+    difficulty: "STRETCH",
+    topicTag: "wissenschaft",
+    timeLimitSeconds: 900,
+    payload: {
+      instructions: "Wählen Sie für jede Frage die inhaltlich passende Antwort (a, b oder c).",
+      passage:
+        "In der öffentlichen Wahrnehmung gilt Forschung häufig als eine Abfolge von Erfolgen. Der wissenschaftliche Alltag sieht anders aus: Ein großer Teil aller Experimente führt zu keinem verwertbaren Ergebnis. Lange wurden solche Fehlschläge verschwiegen, weil sie als Makel galten. Inzwischen mehren sich Stimmen, die gerade in der Veröffentlichung gescheiterter Versuche einen Wert sehen, denn sie bewahren andere davor, denselben Irrweg einzuschlagen. Kritiker wenden ein, dass die Flut solcher Negativbefunde die ohnehin überlasteten Fachzeitschriften weiter füllen würde. Unbestritten bleibt jedoch, dass ein offenerer Umgang mit dem Misserfolg dem Erkenntnisfortschritt eher nützt als schadet.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Wie sieht der wissenschaftliche Alltag laut Text tatsächlich aus?",
+          options: [
+            { id: "a", text: "Ein großer Teil der Experimente bleibt ohne verwertbares Ergebnis." },
+            { id: "b", text: "Fast alle Experimente sind erfolgreich." },
+            { id: "c", text: "Experimente werden kaum durchgeführt." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Welchen Wert sehen manche in der Veröffentlichung gescheiterter Versuche?",
+          options: [
+            { id: "a", text: "Sie bewahren andere vor demselben Irrweg." },
+            { id: "b", text: "Sie steigern das Ansehen der Autoren." },
+            { id: "c", text: "Sie ersetzen erfolgreiche Studien." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Was bleibt dem Text zufolge unbestritten?",
+          options: [
+            { id: "a", text: "dass ein offener Umgang mit Misserfolg dem Fortschritt eher nützt" },
+            { id: "b", text: "dass Fehlschläge verschwiegen werden sollten" },
+            { id: "c", text: "dass Negativbefunde wertlos sind" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„Unbestritten bleibt jedoch …“ formuliert die Kernthese trotz der Gegenstimmen.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.LESEVERSTEHEN,
+    taskType: "TELC_C1H_LV_MCQ",
+    title: "Die Grenzen der Messbarkeit",
+    prompt: "Lesen Sie den Text und beantworten Sie die Fragen.",
+    difficulty: "STRETCH",
+    topicTag: "gesellschaft",
+    timeLimitSeconds: 900,
+    payload: {
+      instructions: "Wählen Sie für jede Frage die inhaltlich passende Antwort (a, b oder c).",
+      passage:
+        "Was sich zählen lässt, erscheint uns oft als besonders zuverlässig. Diese Vorliebe für das Messbare hat der Wissenschaft enorme Fortschritte ermöglicht, birgt jedoch eine Gefahr: Was sich nicht in Zahlen fassen lässt, gerät leicht aus dem Blick. Die Qualität einer Betreuung, das Vertrauen zwischen Menschen oder der Wert einer freien Stunde entziehen sich der Statistik weitgehend. Wenn Institutionen ausschließlich nach messbaren Kennzahlen gesteuert werden, besteht die Gefahr, dass sie das Zählbare optimieren und das eigentlich Wichtige vernachlässigen. Nicht alles, was zählt, ist zählbar — und nicht alles Zählbare zählt.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Welche Gefahr sieht der Text in der Vorliebe für das Messbare?",
+          options: [
+            { id: "a", text: "Nicht Messbares gerät aus dem Blick." },
+            { id: "b", text: "Zahlen werden völlig unwichtig." },
+            { id: "c", text: "Die Wissenschaft macht keine Fortschritte mehr." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Was geschieht laut Text, wenn nur nach Kennzahlen gesteuert wird?",
+          options: [
+            { id: "a", text: "Das Zählbare wird optimiert, Wichtiges vernachlässigt." },
+            { id: "b", text: "Alles wird automatisch besser." },
+            { id: "c", text: "Kennzahlen verlieren jede Bedeutung." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Wie lässt sich die Schlussaussage zusammenfassen?",
+          options: [
+            { id: "a", text: "Nicht alles Wichtige ist messbar." },
+            { id: "b", text: "Nur Messbares ist wichtig." },
+            { id: "c", text: "Messungen sind grundsätzlich falsch." },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Die abschließende Antithese („Nicht alles, was zählt …“) trägt die Hauptaussage.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.LESEVERSTEHEN,
+    taskType: "TELC_C1H_LV_MCQ",
+    title: "Interdisziplinäre Forschung",
+    prompt: "Lesen Sie den Text und beantworten Sie die Fragen.",
+    difficulty: "CORE",
+    topicTag: "wissenschaft",
+    timeLimitSeconds: 900,
+    payload: {
+      instructions: "Wählen Sie für jede Frage die inhaltlich passende Antwort (a, b oder c).",
+      passage:
+        "Viele der drängendsten Fragen unserer Zeit lassen sich nicht innerhalb eines einzigen Fachs beantworten. Der Klimawandel etwa verlangt naturwissenschaftliche, ökonomische und ethische Perspektiven zugleich. Interdisziplinäre Zusammenarbeit gilt daher als vielversprechend. In der Praxis stößt sie jedoch auf Hürden: Jedes Fach hat seine eigene Sprache, seine Methoden und seine Maßstäbe für gute Arbeit. Wer zwischen den Disziplinen vermittelt, riskiert, in keiner richtig anerkannt zu werden. Damit Interdisziplinarität gelingt, braucht es deshalb nicht nur guten Willen, sondern auch Strukturen, die solche Arbeit belohnen.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Warum reicht ein einzelnes Fach oft nicht aus?",
+          options: [
+            { id: "a", text: "Drängende Fragen verlangen mehrere Perspektiven zugleich." },
+            { id: "b", text: "Einzelne Fächer sind verboten." },
+            { id: "c", text: "Es gibt keine Fachgrenzen mehr." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Welche Hürde nennt der Text?",
+          options: [
+            { id: "a", text: "Jedes Fach hat eigene Sprache, Methoden und Maßstäbe." },
+            { id: "b", text: "Interdisziplinäre Arbeit ist zu einfach." },
+            { id: "c", text: "Es fehlt an Themen." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Was braucht es laut Text, damit Interdisziplinarität gelingt?",
+          options: [
+            { id: "a", text: "Strukturen, die solche Arbeit belohnen" },
+            { id: "b", text: "allein guten Willen" },
+            { id: "c", text: "die Abschaffung aller Fächer" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„nicht nur …, sondern auch …“ nennt die eigentliche Bedingung — hier die Strukturen.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.LESEVERSTEHEN,
+    taskType: "TELC_C1H_LV_MCQ",
+    title: "Freier Zugang zu Wissen",
+    prompt: "Lesen Sie den Text und beantworten Sie die Fragen.",
+    difficulty: "CORE",
+    topicTag: "wissenschaft",
+    timeLimitSeconds: 900,
+    payload: {
+      instructions: "Wählen Sie für jede Frage die inhaltlich passende Antwort (a, b oder c).",
+      passage:
+        "Ein erheblicher Teil der Forschung wird mit öffentlichen Mitteln finanziert, ihre Ergebnisse erscheinen jedoch häufig in Zeitschriften, deren Zugang teuer ist. Die Bewegung für freien Zugang, den sogenannten Open Access, fordert, dass solche Ergebnisse für alle kostenlos verfügbar sein sollten. Befürworter argumentieren, dass Wissen, das die Allgemeinheit bezahlt hat, auch der Allgemeinheit gehören müsse. Verlage hingegen verweisen auf die Kosten für Begutachtung und Herausgabe. Ein Teil der Finanzierung verlagert sich beim Open Access allerdings nur, nämlich von den Lesenden zu den Autorinnen und Autoren, die für die Veröffentlichung zahlen.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Was fordert die Open-Access-Bewegung?",
+          options: [
+            { id: "a", text: "kostenlosen Zugang zu öffentlich finanzierter Forschung" },
+            { id: "b", text: "höhere Preise für Zeitschriften" },
+            { id: "c", text: "ein Ende aller Veröffentlichungen" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Womit begründen die Verlage ihre Position?",
+          options: [
+            { id: "a", text: "mit den Kosten für Begutachtung und Herausgabe" },
+            { id: "b", text: "damit, dass Forschung wertlos sei" },
+            { id: "c", text: "mit dem Wunsch nach mehr Lesern" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Welche Einschränkung nennt der Text zum Open Access?",
+          options: [
+            { id: "a", text: "Die Kosten verlagern sich zu den Autoren." },
+            { id: "b", text: "Es entstehen gar keine Kosten mehr." },
+            { id: "c", text: "Der Zugang wird noch teurer." },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„verlagert sich allerdings nur“ ist die entscheidende Relativierung am Ende.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.LESEVERSTEHEN,
+    taskType: "TELC_C1H_LV_MCQ",
+    title: "Sprache und Weltbild",
+    prompt: "Lesen Sie den Text und beantworten Sie die Fragen.",
+    difficulty: "STRETCH",
+    topicTag: "wissenschaft",
+    timeLimitSeconds: 900,
+    payload: {
+      instructions: "Wählen Sie für jede Frage die inhaltlich passende Antwort (a, b oder c).",
+      passage:
+        "Prägt die Sprache, die wir sprechen, unser Denken? Diese Frage beschäftigt die Forschung seit Langem. In ihrer starken Fassung, wonach Sprache das Denken vollständig bestimmt, gilt die These heute als widerlegt: Menschen können auch Begriffe erfassen, für die ihre Sprache kein eigenes Wort hat. In einer schwächeren Form findet sie jedoch weiterhin Unterstützung. Untersuchungen zeigen etwa, dass die Art, wie eine Sprache Farben oder Richtungen benennt, beeinflussen kann, worauf Sprecher schneller achten. Sprache bestimmt das Denken also nicht, aber sie lenkt die Aufmerksamkeit in bestimmte Bahnen.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Wie gilt die starke Fassung der These heute?",
+          options: [
+            { id: "a", text: "als widerlegt" },
+            { id: "b", text: "als vollständig bestätigt" },
+            { id: "c", text: "als nie untersucht" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Was zeigen Untersuchungen zur schwächeren Form?",
+          options: [
+            { id: "a", text: "Sprache kann beeinflussen, worauf man schneller achtet." },
+            { id: "b", text: "Sprache hat gar keine Wirkung." },
+            { id: "c", text: "Sprache bestimmt das Denken vollständig." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Wie lautet die abschließende Formulierung?",
+          options: [
+            { id: "a", text: "Sprache bestimmt das Denken nicht, lenkt aber die Aufmerksamkeit." },
+            { id: "b", text: "Sprache und Denken haben nichts miteinander zu tun." },
+            { id: "c", text: "Denken bestimmt die Sprache vollständig." },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Unterscheiden Sie „starke“ und „schwache“ Fassung — der Text bewertet beide getrennt.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.LESEVERSTEHEN,
+    taskType: "TELC_C1H_LV_MCQ",
+    title: "Der Zufall in der Wissenschaft",
+    prompt: "Lesen Sie den Text und beantworten Sie die Fragen.",
+    difficulty: "CORE",
+    topicTag: "wissenschaft",
+    timeLimitSeconds: 900,
+    payload: {
+      instructions: "Wählen Sie für jede Frage die inhaltlich passende Antwort (a, b oder c).",
+      passage:
+        "Manche bedeutenden Entdeckungen verdanken sich einem glücklichen Zufall. Ein bekanntes Beispiel ist die Entdeckung eines Wirkstoffs, der eigentlich gar nicht gesucht wurde. Daraus zu schließen, Forschung sei reine Glückssache, wäre allerdings falsch. Der Zufall nützt nur dem vorbereiteten Geist: Erst das geschulte Auge erkennt in einer unerwarteten Beobachtung überhaupt etwas Bedeutsames. Wer nichts weiß, übersieht den Hinweis. Insofern ersetzt der Zufall die sorgfältige Arbeit nicht, sondern belohnt sie gelegentlich mit einem unerwarteten Fund.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Welchen Fehlschluss weist der Text zurück?",
+          options: [
+            { id: "a", text: "dass Forschung reine Glückssache sei" },
+            { id: "b", text: "dass Zufälle nie vorkommen" },
+            { id: "c", text: "dass Wissen unnötig sei" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Was bedeutet „der Zufall nützt nur dem vorbereiteten Geist“?",
+          options: [
+            { id: "a", text: "Nur wer geschult ist, erkennt die Bedeutung einer Beobachtung." },
+            { id: "b", text: "Zufall wirkt bei jedem gleich." },
+            { id: "c", text: "Vorbereitung schadet der Entdeckung." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Wie verhält sich der Zufall laut Schluss zur sorgfältigen Arbeit?",
+          options: [
+            { id: "a", text: "Er ersetzt sie nicht, sondern belohnt sie gelegentlich." },
+            { id: "b", text: "Er macht sie überflüssig." },
+            { id: "c", text: "Er behindert sie." },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„ersetzt … nicht, sondern …“ präzisiert das Verhältnis — genau danach wird gefragt.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.LESEVERSTEHEN,
+    taskType: "TELC_C1H_LV_MCQ",
+    title: "Auslagerung des Gedächtnisses",
+    prompt: "Lesen Sie den Text und beantworten Sie die Fragen.",
+    difficulty: "STRETCH",
+    topicTag: "medien",
+    timeLimitSeconds: 900,
+    payload: {
+      instructions: "Wählen Sie für jede Frage die inhaltlich passende Antwort (a, b oder c).",
+      passage:
+        "Telefonnummern, Termine, Wegbeschreibungen — vieles, was frühere Generationen im Kopf behielten, überlassen wir heute unseren Geräten. Manche befürchten, dass unser Gedächtnis dadurch verkümmere. Untersuchungen zeichnen ein differenzierteres Bild: Wir merken uns tatsächlich seltener die Information selbst, dafür aber besser, wo sie zu finden ist. Das Gedächtnis verschwindet also nicht, es verlagert sich. Ob dieser Wandel ein Verlust ist, hängt vom Maßstab ab. Wer Bildung als das Behalten von Fakten versteht, wird ihn beklagen; wer sie als die Fähigkeit versteht, Wissen zu verknüpfen, weniger.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Was zeigen die Untersuchungen?",
+          options: [
+            { id: "a", text: "Wir merken uns eher, wo Information zu finden ist." },
+            { id: "b", text: "Unser Gedächtnis verschwindet völlig." },
+            { id: "c", text: "Wir behalten alles wie früher." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Wie beschreibt der Text den Wandel des Gedächtnisses?",
+          options: [
+            { id: "a", text: "Es verlagert sich, statt zu verschwinden." },
+            { id: "b", text: "Es wird vollständig ersetzt." },
+            { id: "c", text: "Es bleibt völlig unverändert." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Wovon hängt es ab, ob der Wandel ein Verlust ist?",
+          options: [
+            { id: "a", text: "vom Maßstab, den man an Bildung anlegt" },
+            { id: "b", text: "von der Zahl der Geräte" },
+            { id: "c", text: "vom Alter der Person" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Der Schluss stellt zwei Bildungsbegriffe gegenüber — die Bewertung hängt vom gewählten ab.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.LESEVERSTEHEN,
+    taskType: "TELC_C1H_LV_MCQ",
+    title: "Experten und Laien",
+    prompt: "Lesen Sie den Text und beantworten Sie die Fragen.",
+    difficulty: "CORE",
+    topicTag: "gesellschaft",
+    timeLimitSeconds: 900,
+    payload: {
+      instructions: "Wählen Sie für jede Frage die inhaltlich passende Antwort (a, b oder c).",
+      passage:
+        "Das Verhältnis zwischen Fachleuten und Laien hat sich verändert. Früher galt das Urteil der Expertin oder des Experten als kaum anfechtbar; heute stellen viele Menschen es offener infrage. Diese Entwicklung ist zwiespältig. Einerseits ist eine gesunde Skepsis wünschenswert, denn auch Fachleute irren. Andererseits kann das Misstrauen so weit gehen, dass jede Sachkenntnis pauschal abgewertet wird. Wünschenswert wäre ein mittlerer Weg: Fachwissen ernst zu nehmen, ohne es für unfehlbar zu halten, und Kritik zu üben, ohne sie mit bloßer Ablehnung zu verwechseln.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Wie hat sich das Verhältnis verändert?",
+          options: [
+            { id: "a", text: "Viele stellen das Urteil von Fachleuten offener infrage." },
+            { id: "b", text: "Fachleute werden gar nicht mehr gehört." },
+            { id: "c", text: "Das Urteil der Experten ist wieder unanfechtbar." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Warum ist die Entwicklung zwiespältig?",
+          options: [
+            { id: "a", text: "Skepsis ist gut, übertriebenes Misstrauen wertet Sachkenntnis ab." },
+            { id: "b", text: "Weil Fachleute nie irren." },
+            { id: "c", text: "Weil Kritik immer schädlich ist." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Was wäre laut Text der wünschenswerte Weg?",
+          options: [
+            { id: "a", text: "Fachwissen ernst nehmen, ohne es für unfehlbar zu halten" },
+            { id: "b", text: "jede Sachkenntnis ablehnen" },
+            { id: "c", text: "Kritik ganz unterlassen" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„Einerseits … Andererseits …“ und „Wünschenswert wäre …“ strukturieren die Argumentation.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.LESEVERSTEHEN,
+    taskType: "TELC_C1H_LV_MCQ",
+    title: "Nachhaltigkeit als Leitbegriff",
+    prompt: "Lesen Sie den Text und beantworten Sie die Fragen.",
+    difficulty: "STRETCH",
+    topicTag: "umwelt",
+    timeLimitSeconds: 900,
+    payload: {
+      instructions: "Wählen Sie für jede Frage die inhaltlich passende Antwort (a, b oder c).",
+      passage:
+        "Kaum ein Begriff ist in den letzten Jahren so allgegenwärtig geworden wie „Nachhaltigkeit“. Ursprünglich aus der Forstwirtschaft stammend, bezeichnete er die einfache Regel, nicht mehr Holz zu schlagen, als nachwächst. Heute schmückt das Wort Produkte, Programme und Werbeanzeigen aller Art. Diese Verbreitung hat den Begriff jedoch auch verwässert: Wo alles nachhaltig heißt, sagt das Wort kaum noch etwas aus. Manche fordern deshalb klarere Kriterien, andere warnen, dass zu enge Definitionen der Vielfalt sinnvoller Ansätze nicht gerecht würden.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Woher stammt der Begriff ursprünglich?",
+          options: [
+            { id: "a", text: "aus der Forstwirtschaft" },
+            { id: "b", text: "aus der Werbung" },
+            { id: "c", text: "aus der Medizin" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Welche Folge hatte die weite Verbreitung des Wortes?",
+          options: [
+            { id: "a", text: "Der Begriff wurde verwässert." },
+            { id: "b", text: "Der Begriff wurde präziser." },
+            { id: "c", text: "Der Begriff verschwand." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Worin besteht der Streit über klarere Kriterien?",
+          options: [
+            { id: "a", text: "Enge Definitionen könnten der Vielfalt der Ansätze schaden." },
+            { id: "b", text: "Kriterien seien völlig überflüssig." },
+            { id: "c", text: "Niemand will Nachhaltigkeit." },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„Wo alles nachhaltig heißt, sagt das Wort kaum noch etwas aus“ — die zentrale Kritik.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.LESEVERSTEHEN,
+    taskType: "TELC_C1H_LV_MCQ",
+    title: "Bildung zwischen Nutzen und Selbstzweck",
+    prompt: "Lesen Sie den Text und beantworten Sie die Fragen.",
+    difficulty: "STRETCH",
+    topicTag: "bildung",
+    timeLimitSeconds: 900,
+    payload: {
+      instructions: "Wählen Sie für jede Frage die inhaltlich passende Antwort (a, b oder c).",
+      passage:
+        "Ob Bildung vor allem nützlich sein soll, ist eine alte Streitfrage. Wer sie am wirtschaftlichen Ertrag misst, fördert bevorzugt Fächer, die rasch verwertbares Wissen versprechen. Andere halten dagegen, dass Bildung mehr sei als berufliche Vorbereitung: Sie befähige zu selbstständigem Urteil und trage zur Persönlichkeit bei. Die beiden Sichtweisen müssen sich nicht ausschließen. Ein Studium kann durchaus beruflich qualifizieren und zugleich das Denken schulen. Problematisch wird es erst, wenn der eine Zweck den anderen vollständig verdrängt und Bildung nur noch als Investition gilt.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Was fördert, wer Bildung am wirtschaftlichen Ertrag misst?",
+          options: [
+            { id: "a", text: "Fächer mit rasch verwertbarem Wissen" },
+            { id: "b", text: "ausschließlich geisteswissenschaftliche Fächer" },
+            { id: "c", text: "gar keine Fächer" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Was halten die anderen dagegen?",
+          options: [
+            { id: "a", text: "Bildung befähige zu Urteil und forme die Persönlichkeit." },
+            { id: "b", text: "Bildung sei nur berufliche Vorbereitung." },
+            { id: "c", text: "Bildung sei überflüssig." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Wann wird es laut Text problematisch?",
+          options: [
+            { id: "a", text: "wenn ein Zweck den anderen vollständig verdrängt" },
+            { id: "b", text: "wenn beide Zwecke zugleich verfolgt werden" },
+            { id: "c", text: "wenn Bildung das Denken schult" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„müssen sich nicht ausschließen … Problematisch wird es erst, wenn …“ — der Kern liegt in der Bedingung.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.LESEVERSTEHEN,
+    taskType: "TELC_C1H_LV_MCQ",
+    title: "Vertrauen in Institutionen",
+    prompt: "Lesen Sie den Text und beantworten Sie die Fragen.",
+    difficulty: "CORE",
+    topicTag: "gesellschaft",
+    timeLimitSeconds: 900,
+    payload: {
+      instructions: "Wählen Sie für jede Frage die inhaltlich passende Antwort (a, b oder c).",
+      passage:
+        "Moderne Gesellschaften beruhen in hohem Maße auf Vertrauen in Institutionen, die der Einzelne nicht vollständig durchschauen kann. Wir vertrauen darauf, dass Behörden verlässlich arbeiten und dass Regeln für alle gelten. Solches Vertrauen ist kein blinder Glaube, sondern eine notwendige Voraussetzung des Zusammenlebens, denn niemand kann alles selbst prüfen. Es ist jedoch empfindlich: Einmal beschädigt, lässt es sich nur mühsam wiederherstellen. Deshalb wiegt der Schaden, den einzelne Fälle von Missbrauch anrichten, oft schwerer, als ihre Zahl vermuten lässt.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Warum ist Vertrauen in Institutionen laut Text notwendig?",
+          options: [
+            { id: "a", text: "weil niemand alles selbst prüfen kann" },
+            { id: "b", text: "weil Institutionen unfehlbar sind" },
+            { id: "c", text: "weil Regeln unwichtig sind" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Was sagt der Text über beschädigtes Vertrauen?",
+          options: [
+            { id: "a", text: "Es lässt sich nur mühsam wiederherstellen." },
+            { id: "b", text: "Es kehrt sofort zurück." },
+            { id: "c", text: "Es spielt keine Rolle." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Warum wiegt der Schaden einzelner Missbrauchsfälle oft schwer?",
+          options: [
+            { id: "a", text: "weil er das empfindliche Vertrauen beschädigt" },
+            { id: "b", text: "weil solche Fälle sehr häufig sind" },
+            { id: "c", text: "weil Institutionen daran verdienen" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„kein blinder Glaube, sondern eine notwendige Voraussetzung“ präzisiert, was Vertrauen hier meint.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.LESEVERSTEHEN,
+    taskType: "TELC_C1H_LV_MCQ",
+    title: "Kreativität und Beschränkung",
+    prompt: "Lesen Sie den Text und beantworten Sie die Fragen.",
+    difficulty: "STRETCH",
+    topicTag: "kultur",
+    timeLimitSeconds: 900,
+    payload: {
+      instructions: "Wählen Sie für jede Frage die inhaltlich passende Antwort (a, b oder c).",
+      passage:
+        "Man verbindet Kreativität gern mit grenzenloser Freiheit. Doch viele Schaffende berichten das Gegenteil: Gerade Beschränkungen setzen ihre Einfallskraft frei. Wer ein Gedicht in einer festen Form schreiben oder mit knappem Budget einen Film drehen muss, ist gezwungen, ungewöhnliche Lösungen zu finden. Die leere, völlig offene Fläche dagegen kann lähmen. Das heißt nicht, dass jede Einschränkung förderlich wäre; zu enge Vorgaben ersticken die Fantasie ebenso. Produktiv sind vor allem jene Grenzen, die herausfordern, ohne zu erdrücken.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Was berichten viele Schaffende über Beschränkungen?",
+          options: [
+            { id: "a", text: "Sie setzen die Einfallskraft frei." },
+            { id: "b", text: "Sie verhindern jede Kreativität." },
+            { id: "c", text: "Sie sind völlig bedeutungslos." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Was kann die völlig offene Fläche bewirken?",
+          options: [
+            { id: "a", text: "Sie kann lähmen." },
+            { id: "b", text: "Sie garantiert gute Ergebnisse." },
+            { id: "c", text: "Sie schließt Kreativität aus." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Welche Grenzen sind laut Text besonders produktiv?",
+          options: [
+            { id: "a", text: "solche, die herausfordern, ohne zu erdrücken" },
+            { id: "b", text: "möglichst enge Vorgaben" },
+            { id: "c", text: "gar keine Grenzen" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Der Text vertritt einen mittleren Standpunkt — weder grenzenlos noch zu eng.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.LESEVERSTEHEN,
+    taskType: "TELC_C1H_LV_MCQ",
+    title: "Das Konzept der Resilienz",
+    prompt: "Lesen Sie den Text und beantworten Sie die Fragen.",
+    difficulty: "CORE",
+    topicTag: "wissenschaft",
+    timeLimitSeconds: 900,
+    payload: {
+      instructions: "Wählen Sie für jede Frage die inhaltlich passende Antwort (a, b oder c).",
+      passage:
+        "Der Begriff der Resilienz beschreibt die Fähigkeit, nach Belastungen wieder handlungsfähig zu werden. Ursprünglich in der Psychologie verwendet, findet er heute auch Anwendung auf Städte, Ökosysteme oder ganze Volkswirtschaften. So nützlich das Konzept ist, birgt es eine Gefahr: Wird Resilienz allein beim Einzelnen gesucht, gerät leicht aus dem Blick, dass manche Belastungen struktureller Natur sind. Von Menschen zu verlangen, widerstandsfähiger zu werden, kann dann zur Ausrede werden, die Ursachen der Belastung nicht zu ändern. Resilienz zu stärken ist sinnvoll, ersetzt aber nicht die Frage nach ihren Auslösern.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Was beschreibt der Begriff Resilienz?",
+          options: [
+            { id: "a", text: "die Fähigkeit, nach Belastungen wieder handlungsfähig zu werden" },
+            { id: "b", text: "die Vermeidung jeder Belastung" },
+            { id: "c", text: "den Verzicht auf Veränderung" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Welche Gefahr nennt der Text?",
+          options: [
+            { id: "a", text: "strukturelle Ursachen aus dem Blick zu verlieren" },
+            { id: "b", text: "dass niemand widerstandsfähig sein will" },
+            { id: "c", text: "dass der Begriff zu selten benutzt wird" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Wie lautet die abschließende Einschätzung?",
+          options: [
+            { id: "a", text: "Resilienz stärken ist sinnvoll, ersetzt aber nicht die Ursachenfrage." },
+            { id: "b", text: "Resilienz ist völlig nutzlos." },
+            { id: "c", text: "Nur die Ursachen zählen, Resilienz nie." },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„sinnvoll, ersetzt aber nicht …“ ist die ausgewogene Schlussthese.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.LESEVERSTEHEN,
+    taskType: "TELC_C1H_LV_MCQ",
+    title: "Die Kunst des Zuhörens",
+    prompt: "Lesen Sie den Text und beantworten Sie die Fragen.",
+    difficulty: "CORE",
+    topicTag: "gesellschaft",
+    timeLimitSeconds: 900,
+    payload: {
+      instructions: "Wählen Sie für jede Frage die inhaltlich passende Antwort (a, b oder c).",
+      passage:
+        "In einer Zeit, in der viele darum ringen, gehört zu werden, gerät eine Fähigkeit leicht in Vergessenheit: das Zuhören. Zuhören meint mehr als zu schweigen, während der andere spricht. Es verlangt, den eigenen Standpunkt für einen Moment zurückzustellen und den Gedanken des Gegenübers wirklich zu folgen. Gerade in Auseinandersetzungen zeigt sich der Wert dieser Haltung: Wer den anderen erst genau verstanden hat, kann treffender antworten und findet eher zu einer Verständigung. Zuhören ist damit keine Schwäche, sondern eine anspruchsvolle und oft unterschätzte Leistung.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Was meint Zuhören laut Text mehr als?",
+          options: [
+            { id: "a", text: "mehr als zu schweigen, während der andere spricht" },
+            { id: "b", text: "mehr als laut zu sprechen" },
+            { id: "c", text: "mehr als zuzustimmen" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Was verlangt Zuhören?",
+          options: [
+            { id: "a", text: "den eigenen Standpunkt kurz zurückzustellen" },
+            { id: "b", text: "den anderen zu unterbrechen" },
+            { id: "c", text: "sofort zu widersprechen" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Wie bewertet der Text das Zuhören abschließend?",
+          options: [
+            { id: "a", text: "als anspruchsvolle, oft unterschätzte Leistung" },
+            { id: "b", text: "als Zeichen von Schwäche" },
+            { id: "c", text: "als überflüssig" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„keine Schwäche, sondern eine … Leistung“ — die Umwertung trägt die Aussage.",
+  },
 
   // ----------------------------------------------------------------- SPRACHBAUSTEINE
   {
