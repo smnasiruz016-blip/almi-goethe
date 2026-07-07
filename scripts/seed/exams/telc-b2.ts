@@ -2717,4 +2717,306 @@ export const ITEMS: ExamItemInput[] = [
     },
     guidanceNote: "Struktur zeigt Niveau: „Ich möchte drei Punkte ansprechen …“, „Zusammenfassend …“.",
   },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SPRECHEN,
+    taskType: "TELC_B2_SP_PRESENT",
+    title: "Ein Thema präsentieren: Autofreie Innenstädte",
+    prompt: "Bereiten Sie eine kurze Präsentation vor und sprechen Sie dann.",
+    difficulty: "CORE",
+    topicTag: "verkehr",
+    timeLimitSeconds: 210,
+    payload: {
+      situation:
+        "Ihr Thema: Sollten Innenstädte weitgehend autofrei werden?",
+      instruction:
+        "Präsentieren Sie das Thema strukturiert. Nennen Sie Vor- und Nachteile, bringen Sie ein Beispiel und beenden Sie mit Ihrer begründeten Meinung.",
+      prepSeconds: 90,
+      speakSeconds: 120,
+    },
+    guidanceNote: "Struktur: Einleitung – Vorteile – Nachteile – Beispiel – Fazit.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SPRECHEN,
+    taskType: "TELC_B2_SP_PRESENT",
+    title: "Ein Thema präsentieren: Onlineshopping",
+    prompt: "Bereiten Sie eine kurze Präsentation vor und sprechen Sie dann.",
+    difficulty: "CORE",
+    topicTag: "gesellschaft",
+    timeLimitSeconds: 210,
+    payload: {
+      situation:
+        "Ihr Thema: Welche Vor- und Nachteile hat das Einkaufen im Internet?",
+      instruction:
+        "Präsentieren Sie das Thema strukturiert. Nennen Sie Vor- und Nachteile, bringen Sie ein Beispiel und schließen Sie mit Ihrer begründeten Meinung.",
+      prepSeconds: 90,
+      speakSeconds: 120,
+    },
+    guidanceNote: "Redemittel: „Ein Vorteil ist …“, „Dem steht gegenüber …“, „Meiner Ansicht nach …“.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SPRECHEN,
+    taskType: "TELC_B2_SP_PRESENT",
+    title: "Ein Thema präsentieren: Weniger Auto fahren",
+    prompt: "Bereiten Sie eine kurze Präsentation vor und sprechen Sie dann.",
+    difficulty: "CORE",
+    topicTag: "umwelt",
+    timeLimitSeconds: 210,
+    payload: {
+      situation:
+        "Ihr Thema: Sollte man im Alltag weniger Auto fahren?",
+      instruction:
+        "Präsentieren Sie das Thema strukturiert. Nennen Sie Argumente dafür und dagegen, bringen Sie ein Beispiel und beenden Sie mit Ihrer begründeten Meinung.",
+      prepSeconds: 90,
+      speakSeconds: 120,
+    },
+    guidanceNote: "Denken Sie an Umwelt und Gesundheit gegen Bequemlichkeit und fehlende Alternativen.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SPRECHEN,
+    taskType: "TELC_B2_SP_PRESENT",
+    title: "Ein Thema präsentieren: Soziale Medien",
+    prompt: "Bereiten Sie eine kurze Präsentation vor und sprechen Sie dann.",
+    difficulty: "STRETCH",
+    topicTag: "medien",
+    timeLimitSeconds: 210,
+    payload: {
+      situation:
+        "Ihr Thema: Welche Chancen und Risiken bringen soziale Medien mit sich?",
+      instruction:
+        "Präsentieren Sie das Thema strukturiert. Nennen Sie Chancen und Risiken, bringen Sie ein Beispiel und schließen Sie mit Ihrer begründeten Meinung.",
+      prepSeconds: 90,
+      speakSeconds: 120,
+    },
+    guidanceNote: "Wägen Sie Vernetzung und Information gegen Ablenkung und Falschmeldungen ab.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SPRECHEN,
+    taskType: "TELC_B2_SP_PRESENT",
+    title: "Ein Thema präsentieren: Reisen und Bildung",
+    prompt: "Bereiten Sie eine kurze Präsentation vor und sprechen Sie dann.",
+    difficulty: "CORE",
+    topicTag: "gesellschaft",
+    timeLimitSeconds: 210,
+    payload: {
+      situation:
+        "Ihr Thema: Bildet Reisen wirklich, oder wird das oft überschätzt?",
+      instruction:
+        "Präsentieren Sie das Thema strukturiert. Nennen Sie Argumente dafür und dagegen, bringen Sie ein Beispiel und beenden Sie mit Ihrer begründeten Meinung.",
+      prepSeconds: 90,
+      speakSeconds: 120,
+    },
+    guidanceNote: "Unterscheiden Sie, wie man reist — reine Erholung oder Kontakt mit anderen Kulturen.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SPRECHEN,
+    taskType: "TELC_B2_SP_PRESENT",
+    title: "Ein Thema präsentieren: Regionale Produkte",
+    prompt: "Bereiten Sie eine kurze Präsentation vor und sprechen Sie dann.",
+    difficulty: "CORE",
+    topicTag: "umwelt",
+    timeLimitSeconds: 210,
+    payload: {
+      situation:
+        "Ihr Thema: Sollte man bevorzugt regionale Lebensmittel kaufen?",
+      instruction:
+        "Präsentieren Sie das Thema strukturiert. Nennen Sie Vor- und Nachteile, bringen Sie ein Beispiel und schließen Sie mit Ihrer begründeten Meinung.",
+      prepSeconds: 90,
+      speakSeconds: 120,
+    },
+    guidanceNote: "Denken Sie an kurze Wege und Frische gegen Preis und begrenzte Auswahl.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SPRECHEN,
+    taskType: "TELC_B2_SP_PRESENT",
+    title: "Ein Thema präsentieren: Leben in der Großstadt",
+    prompt: "Bereiten Sie eine kurze Präsentation vor und sprechen Sie dann.",
+    difficulty: "CORE",
+    topicTag: "wohnen",
+    timeLimitSeconds: 210,
+    payload: {
+      situation:
+        "Ihr Thema: Welche Vor- und Nachteile hat das Leben in einer Großstadt?",
+      instruction:
+        "Präsentieren Sie das Thema strukturiert. Nennen Sie Vor- und Nachteile, bringen Sie ein Beispiel und beenden Sie mit Ihrer begründeten Meinung.",
+      prepSeconds: 90,
+      speakSeconds: 120,
+    },
+    guidanceNote: "Wägen Sie Angebot und Arbeit gegen Kosten, Lärm und Anonymität ab.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SPRECHEN,
+    taskType: "TELC_B2_SP_PRESENT",
+    title: "Ein Thema präsentieren: Sport im Alltag",
+    prompt: "Bereiten Sie eine kurze Präsentation vor und sprechen Sie dann.",
+    difficulty: "FOUNDATION",
+    topicTag: "gesundheit",
+    timeLimitSeconds: 210,
+    payload: {
+      situation:
+        "Ihr Thema: Wie wichtig ist regelmäßige Bewegung im Alltag?",
+      instruction:
+        "Präsentieren Sie das Thema strukturiert. Erläutern Sie den Nutzen, nennen Sie mögliche Hindernisse und schließen Sie mit Ihrer begründeten Meinung.",
+      prepSeconds: 90,
+      speakSeconds: 120,
+    },
+    guidanceNote: "Konkrete Beispiele (Rad statt Auto, Treppe statt Aufzug) machen die Präsentation greifbar.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SPRECHEN,
+    taskType: "TELC_B2_SP_PRESENT",
+    title: "Ein Thema präsentieren: Fremdsprachen lernen",
+    prompt: "Bereiten Sie eine kurze Präsentation vor und sprechen Sie dann.",
+    difficulty: "CORE",
+    topicTag: "bildung",
+    timeLimitSeconds: 210,
+    payload: {
+      situation:
+        "Ihr Thema: Warum lohnt es sich, Fremdsprachen zu lernen?",
+      instruction:
+        "Präsentieren Sie das Thema strukturiert. Nennen Sie Gründe, bringen Sie ein Beispiel und beenden Sie mit Ihrer begründeten Meinung.",
+      prepSeconds: 90,
+      speakSeconds: 120,
+    },
+    guidanceNote: "Denken Sie an Beruf, Reisen und den Zugang zu anderen Kulturen.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SPRECHEN,
+    taskType: "TELC_B2_SP_PRESENT",
+    title: "Ein Thema präsentieren: Fertiggerichte",
+    prompt: "Bereiten Sie eine kurze Präsentation vor und sprechen Sie dann.",
+    difficulty: "CORE",
+    topicTag: "gesundheit",
+    timeLimitSeconds: 210,
+    payload: {
+      situation:
+        "Ihr Thema: Sind Fertiggerichte eine sinnvolle Hilfe oder eher ein Problem?",
+      instruction:
+        "Präsentieren Sie das Thema strukturiert. Nennen Sie Vor- und Nachteile, bringen Sie ein Beispiel und schließen Sie mit Ihrer begründeten Meinung.",
+      prepSeconds: 90,
+      speakSeconds: 120,
+    },
+    guidanceNote: "Wägen Sie Zeitersparnis gegen Inhaltsstoffe und Kosten ab.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SPRECHEN,
+    taskType: "TELC_B2_SP_PRESENT",
+    title: "Ein Thema präsentieren: Gebrauchtes kaufen",
+    prompt: "Bereiten Sie eine kurze Präsentation vor und sprechen Sie dann.",
+    difficulty: "CORE",
+    topicTag: "umwelt",
+    timeLimitSeconds: 210,
+    payload: {
+      situation:
+        "Ihr Thema: Sollte man häufiger gebrauchte statt neuer Dinge kaufen?",
+      instruction:
+        "Präsentieren Sie das Thema strukturiert. Nennen Sie Vor- und Nachteile, bringen Sie ein Beispiel und beenden Sie mit Ihrer begründeten Meinung.",
+      prepSeconds: 90,
+      speakSeconds: 120,
+    },
+    guidanceNote: "Denken Sie an Umwelt und Preis gegen Garantie und Auswahl.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SPRECHEN,
+    taskType: "TELC_B2_SP_PRESENT",
+    title: "Ein Thema präsentieren: Haustiere",
+    prompt: "Bereiten Sie eine kurze Präsentation vor und sprechen Sie dann.",
+    difficulty: "FOUNDATION",
+    topicTag: "alltag",
+    timeLimitSeconds: 210,
+    payload: {
+      situation:
+        "Ihr Thema: Welche Vor- und Nachteile bringt es mit sich, ein Haustier zu halten?",
+      instruction:
+        "Präsentieren Sie das Thema strukturiert. Nennen Sie Vor- und Nachteile, bringen Sie ein Beispiel und schließen Sie mit Ihrer begründeten Meinung.",
+      prepSeconds: 90,
+      speakSeconds: 120,
+    },
+    guidanceNote: "Denken Sie an Gesellschaft und Verantwortung gegen Zeit und Kosten.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SPRECHEN,
+    taskType: "TELC_B2_SP_PRESENT",
+    title: "Ein Thema präsentieren: Weiterbildung im Beruf",
+    prompt: "Bereiten Sie eine kurze Präsentation vor und sprechen Sie dann.",
+    difficulty: "STRETCH",
+    topicTag: "arbeit",
+    timeLimitSeconds: 210,
+    payload: {
+      situation:
+        "Ihr Thema: Wie wichtig ist ständige Weiterbildung im Berufsleben?",
+      instruction:
+        "Präsentieren Sie das Thema strukturiert. Erläutern Sie die Bedeutung, nennen Sie mögliche Hürden und schließen Sie mit Ihrer begründeten Meinung.",
+      prepSeconds: 90,
+      speakSeconds: 120,
+    },
+    guidanceNote: "Denken Sie an den schnellen Wandel der Berufe gegen Zeit- und Kostenaufwand.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SPRECHEN,
+    taskType: "TELC_B2_SP_PRESENT",
+    title: "Ein Thema präsentieren: Ehrenamtliches Engagement",
+    prompt: "Bereiten Sie eine kurze Präsentation vor und sprechen Sie dann.",
+    difficulty: "CORE",
+    topicTag: "gesellschaft",
+    timeLimitSeconds: 210,
+    payload: {
+      situation:
+        "Ihr Thema: Welche Bedeutung hat ehrenamtliches Engagement für die Gesellschaft?",
+      instruction:
+        "Präsentieren Sie das Thema strukturiert. Erläutern Sie den Nutzen, nennen Sie mögliche Schwierigkeiten und beenden Sie mit Ihrer begründeten Meinung.",
+      prepSeconds: 90,
+      speakSeconds: 120,
+    },
+    guidanceNote: "Ein Beispiel aus dem Alltag (Feuerwehr, Nachhilfe, Nachbarschaftshilfe) stärkt die Präsentation.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SPRECHEN,
+    taskType: "TELC_B2_SP_PRESENT",
+    title: "Ein Thema präsentieren: Bildschirmzeit",
+    prompt: "Bereiten Sie eine kurze Präsentation vor und sprechen Sie dann.",
+    difficulty: "CORE",
+    topicTag: "medien",
+    timeLimitSeconds: 210,
+    payload: {
+      situation:
+        "Ihr Thema: Sollte man die tägliche Zeit vor dem Bildschirm bewusst begrenzen?",
+      instruction:
+        "Präsentieren Sie das Thema strukturiert. Nennen Sie Argumente dafür und dagegen, bringen Sie ein Beispiel und schließen Sie mit Ihrer begründeten Meinung.",
+      prepSeconds: 90,
+      speakSeconds: 120,
+    },
+    guidanceNote: "Wägen Sie Nutzen für Arbeit und Kontakt gegen Auswirkungen auf Schlaf und Konzentration ab.",
+  },
+
+  // ==== all five telc B2 sections now at full 16/section density ====
 ];
