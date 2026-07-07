@@ -900,6 +900,692 @@ export const ITEMS: ExamItemInput[] = [
     },
     guidanceNote: "Präposition + Dativ: „eine Woche vor dem Termin“. „bevor“ leitet einen Nebensatz ein — hier falsch.",
   },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SPRACHBAUSTEINE,
+    taskType: "TELC_C1H_SB_GAP",
+    title: "Mitteilung zur Bibliotheksnutzung",
+    prompt: "Wählen Sie für jede Lücke das passende Wort.",
+    difficulty: "CORE",
+    topicTag: "studium",
+    timeLimitSeconds: 600,
+    payload: {
+      instructions: "Wählen Sie für jede Lücke die richtige Möglichkeit.",
+      passage:
+        "(1) der begrenzten Zahl an Arbeitsplätzen bitten wir Sie, reservierte Plätze nach dreißig Minuten Abwesenheit freizugeben. Bücher, die Sie nicht mehr benötigen, stellen Sie bitte auf die Wagen, (2) das Personal sie korrekt einordnen kann. Für Rückfragen stehen wir Ihnen (3) der Öffnungszeiten gern zur Verfügung.",
+      questions: [
+        {
+          id: "1",
+          stem: "Lücke 1",
+          options: [
+            { id: "a", text: "Angesichts" },
+            { id: "b", text: "Trotz" },
+            { id: "c", text: "Während" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "2",
+          stem: "Lücke 2",
+          options: [
+            { id: "a", text: "damit" },
+            { id: "b", text: "sodass" },
+            { id: "c", text: "indem" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "3",
+          stem: "Lücke 3",
+          options: [
+            { id: "a", text: "während" },
+            { id: "b", text: "bei" },
+            { id: "c", text: "seit" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„angesichts“ + Genitiv nennt den Grund; „damit“ leitet eine Absicht ein (Personal kann einordnen).",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SPRACHBAUSTEINE,
+    taskType: "TELC_C1H_SB_GAP",
+    title: "Aushang zur Vorlesung",
+    prompt: "Wählen Sie für jede Lücke das passende Wort.",
+    difficulty: "STRETCH",
+    topicTag: "studium",
+    timeLimitSeconds: 600,
+    payload: {
+      instructions: "Wählen Sie für jede Lücke die richtige Möglichkeit.",
+      passage:
+        "Die Vorlesung von Professorin Adler muss (1) einer Erkrankung leider entfallen. Ein Ersatztermin wird bekannt gegeben, (2) die Genesung absehbar ist. Die zur Vorbereitung empfohlene Lektüre, (3) Kenntnis in der Klausur vorausgesetzt wird, finden Sie weiterhin im Lernportal.",
+      questions: [
+        {
+          id: "1",
+          stem: "Lücke 1",
+          options: [
+            { id: "a", text: "aufgrund" },
+            { id: "b", text: "trotz" },
+            { id: "c", text: "entgegen" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "2",
+          stem: "Lücke 2",
+          options: [
+            { id: "a", text: "sobald" },
+            { id: "b", text: "seit" },
+            { id: "c", text: "bevor" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "3",
+          stem: "Lücke 3",
+          options: [
+            { id: "a", text: "deren" },
+            { id: "b", text: "dessen" },
+            { id: "c", text: "derer" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„aufgrund“ + Genitiv = Grund; Relativpronomen „deren“ bezieht sich auf die feminine „Lektüre“.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SPRACHBAUSTEINE,
+    taskType: "TELC_C1H_SB_GAP",
+    title: "Hinweis zur Hausarbeit",
+    prompt: "Wählen Sie für jede Lücke das passende Wort.",
+    difficulty: "CORE",
+    topicTag: "studium",
+    timeLimitSeconds: 600,
+    payload: {
+      instructions: "Wählen Sie für jede Lücke die richtige Möglichkeit.",
+      passage:
+        "Bitte reichen Sie Ihre Hausarbeit fristgerecht ein. Arbeiten, (1) nach dem Abgabetermin eingehen, können nicht mehr berücksichtigt werden. Achten Sie darauf, alle Quellen korrekt anzugeben, (2) der Verdacht eines Plagiats gar nicht erst entsteht. (3) formaler Mängel behalten wir uns Abzüge vor.",
+      questions: [
+        {
+          id: "1",
+          stem: "Lücke 1",
+          options: [
+            { id: "a", text: "die" },
+            { id: "b", text: "denen" },
+            { id: "c", text: "deren" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "2",
+          stem: "Lücke 2",
+          options: [
+            { id: "a", text: "damit" },
+            { id: "b", text: "weil" },
+            { id: "c", text: "obwohl" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "3",
+          stem: "Lücke 3",
+          options: [
+            { id: "a", text: "Im Falle" },
+            { id: "b", text: "Im Fall" },
+            { id: "c", text: "Anlässlich" },
+          ],
+          answer: "b",
+        },
+      ],
+    },
+    guidanceNote: "Relativpronomen im Nominativ Plural = „die“; „im Fall formaler Mängel“ nennt eine Bedingung.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SPRACHBAUSTEINE,
+    taskType: "TELC_C1H_SB_GAP",
+    title: "Einladung zum Kolloquium",
+    prompt: "Wählen Sie für jede Lücke das passende Wort.",
+    difficulty: "STRETCH",
+    topicTag: "studium",
+    timeLimitSeconds: 600,
+    payload: {
+      instructions: "Wählen Sie für jede Lücke die richtige Möglichkeit.",
+      passage:
+        "Wir laden Sie herzlich zum Forschungskolloquium ein, (1) dessen Rahmen aktuelle Projekte vorgestellt werden. Um besser planen zu können, bitten wir Sie, sich vorab anzumelden. (2) Sie verhindert sind, genügt eine kurze Nachricht. Die Vorträge werden aufgezeichnet, (3) auch Interessierte teilhaben können, die nicht vor Ort sind.",
+      questions: [
+        {
+          id: "1",
+          stem: "Lücke 1",
+          options: [
+            { id: "a", text: "in" },
+            { id: "b", text: "an" },
+            { id: "c", text: "auf" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "2",
+          stem: "Lücke 2",
+          options: [
+            { id: "a", text: "Sollten" },
+            { id: "b", text: "Würden" },
+            { id: "c", text: "Hätten" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "3",
+          stem: "Lücke 3",
+          options: [
+            { id: "a", text: "sodass" },
+            { id: "b", text: "damit" },
+            { id: "c", text: "obwohl" },
+          ],
+          answer: "b",
+        },
+      ],
+    },
+    guidanceNote: "„in dessen Rahmen“ ist fest; „Sollten Sie verhindert sein“ = höfliche Konditionalform ohne „wenn“.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SPRACHBAUSTEINE,
+    taskType: "TELC_C1H_SB_GAP",
+    title: "Rückmeldung zum Antrag",
+    prompt: "Wählen Sie für jede Lücke das passende Wort.",
+    difficulty: "CORE",
+    topicTag: "studium",
+    timeLimitSeconds: 600,
+    payload: {
+      instructions: "Wählen Sie für jede Lücke die richtige Möglichkeit.",
+      passage:
+        "Ihr Antrag auf Verlängerung ist bei uns eingegangen. (1) einer Bearbeitung benötigen wir jedoch noch eine Bescheinigung Ihres Betreuers. Sobald diese vorliegt, werden wir Ihren Antrag prüfen und Sie (2) das Ergebnis informieren. Wir bitten Sie, (3) Rückfragen die angegebene Sprechzeit zu nutzen.",
+      questions: [
+        {
+          id: "1",
+          stem: "Lücke 1",
+          options: [
+            { id: "a", text: "Zur" },
+            { id: "b", text: "Für" },
+            { id: "c", text: "Bei" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "2",
+          stem: "Lücke 2",
+          options: [
+            { id: "a", text: "über" },
+            { id: "b", text: "von" },
+            { id: "c", text: "auf" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "3",
+          stem: "Lücke 3",
+          options: [
+            { id: "a", text: "bei" },
+            { id: "b", text: "zu" },
+            { id: "c", text: "an" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„jemanden über etwas informieren“ ist fest; „bei Rückfragen“ nennt den Anlass.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SPRACHBAUSTEINE,
+    taskType: "TELC_C1H_SB_GAP",
+    title: "Mitteilung des Prüfungsamts",
+    prompt: "Wählen Sie für jede Lücke das passende Wort.",
+    difficulty: "STRETCH",
+    topicTag: "studium",
+    timeLimitSeconds: 600,
+    payload: {
+      instructions: "Wählen Sie für jede Lücke die richtige Möglichkeit.",
+      passage:
+        "Die Anmeldung zur Prüfung ist verbindlich. Ein Rücktritt ist nur (1) triftigem Grund möglich, der schriftlich nachzuweisen ist. (2) eines ärztlichen Attests wird eine Erkrankung anerkannt. Wer unentschuldigt fehlt, gilt als durchgefallen, (3) er einen wichtigen Grund glaubhaft macht.",
+      questions: [
+        {
+          id: "1",
+          stem: "Lücke 1",
+          options: [
+            { id: "a", text: "aus" },
+            { id: "b", text: "mit" },
+            { id: "c", text: "von" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "2",
+          stem: "Lücke 2",
+          options: [
+            { id: "a", text: "Mittels" },
+            { id: "b", text: "Trotz" },
+            { id: "c", text: "Statt" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "3",
+          stem: "Lücke 3",
+          options: [
+            { id: "a", text: "es sei denn" },
+            { id: "b", text: "sofern" },
+            { id: "c", text: "damit" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„aus triftigem Grund“ ist fest; „mittels“ + Genitiv = Mittel; „es sei denn“ nennt die Ausnahme.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SPRACHBAUSTEINE,
+    taskType: "TELC_C1H_SB_GAP",
+    title: "Ankündigung eines Workshops",
+    prompt: "Wählen Sie für jede Lücke das passende Wort.",
+    difficulty: "CORE",
+    topicTag: "studium",
+    timeLimitSeconds: 600,
+    payload: {
+      instructions: "Wählen Sie für jede Lücke die richtige Möglichkeit.",
+      passage:
+        "Der Workshop richtet sich an alle, die ihr wissenschaftliches Schreiben verbessern möchten. (1) Vorkenntnisse sind nicht erforderlich. Die Teilnahme ist kostenlos, (2) eine verbindliche Anmeldung wird erwartet. Bringen Sie nach Möglichkeit einen eigenen Text mit, (3) wir konkret daran arbeiten können.",
+      questions: [
+        {
+          id: "1",
+          stem: "Lücke 1",
+          options: [
+            { id: "a", text: "Besondere" },
+            { id: "b", text: "Besonderen" },
+            { id: "c", text: "Besonderes" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "2",
+          stem: "Lücke 2",
+          options: [
+            { id: "a", text: "jedoch" },
+            { id: "b", text: "deshalb" },
+            { id: "c", text: "sofern" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "3",
+          stem: "Lücke 3",
+          options: [
+            { id: "a", text: "damit" },
+            { id: "b", text: "sodass" },
+            { id: "c", text: "obwohl" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„Besondere Vorkenntnisse“ (Nom. Pl., unbestimmt) = Endung -e; „jedoch“ nennt den Gegensatz.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SPRACHBAUSTEINE,
+    taskType: "TELC_C1H_SB_GAP",
+    title: "Hinweis zur Gruppenarbeit",
+    prompt: "Wählen Sie für jede Lücke das passende Wort.",
+    difficulty: "STRETCH",
+    topicTag: "studium",
+    timeLimitSeconds: 600,
+    payload: {
+      instructions: "Wählen Sie für jede Lücke die richtige Möglichkeit.",
+      passage:
+        "Die Aufgabe ist in Gruppen zu bearbeiten. Bewertet wird nicht nur das Ergebnis, (1) auch die Art der Zusammenarbeit. Jede Gruppe benennt eine Person, (2) für die Abgabe verantwortlich ist. (3) alle Mitglieder gleichermaßen beitragen, empfehlen wir eine klare Aufgabenverteilung.",
+      questions: [
+        {
+          id: "1",
+          stem: "Lücke 1",
+          options: [
+            { id: "a", text: "sondern" },
+            { id: "b", text: "aber" },
+            { id: "c", text: "denn" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "2",
+          stem: "Lücke 2",
+          options: [
+            { id: "a", text: "die" },
+            { id: "b", text: "der" },
+            { id: "c", text: "deren" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "3",
+          stem: "Lücke 3",
+          options: [
+            { id: "a", text: "Damit" },
+            { id: "b", text: "Sodass" },
+            { id: "c", text: "Indem" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„nicht nur …, sondern auch …“ ist fest; Relativpronomen für „eine Person“ (fem.) = „die“.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SPRACHBAUSTEINE,
+    taskType: "TELC_C1H_SB_GAP",
+    title: "Nachricht zur Exkursion",
+    prompt: "Wählen Sie für jede Lücke das passende Wort.",
+    difficulty: "CORE",
+    topicTag: "studium",
+    timeLimitSeconds: 600,
+    payload: {
+      instructions: "Wählen Sie für jede Lücke die richtige Möglichkeit.",
+      passage:
+        "Die geplante Exkursion findet (1) des schlechten Wetters wie vorgesehen statt. Bitte kleiden Sie sich (2) entsprechend. Wer aus gesundheitlichen Gründen nicht teilnehmen kann, (3) sich bitte rechtzeitig ab.",
+      questions: [
+        {
+          id: "1",
+          stem: "Lücke 1",
+          options: [
+            { id: "a", text: "ungeachtet" },
+            { id: "b", text: "wegen" },
+            { id: "c", text: "dank" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "2",
+          stem: "Lücke 2",
+          options: [
+            { id: "a", text: "dementsprechend" },
+            { id: "b", text: "trotzdem" },
+            { id: "c", text: "hingegen" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "3",
+          stem: "Lücke 3",
+          options: [
+            { id: "a", text: "melde" },
+            { id: "b", text: "meldet" },
+            { id: "c", text: "gemeldet" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„ungeachtet“ + Genitiv = „trotz“; das unbestimmte „wer …“ verlangt hier „melde sich“ (Aufforderung).",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SPRACHBAUSTEINE,
+    taskType: "TELC_C1H_SB_GAP",
+    title: "Information zum Sprachtandem",
+    prompt: "Wählen Sie für jede Lücke das passende Wort.",
+    difficulty: "CORE",
+    topicTag: "studium",
+    timeLimitSeconds: 600,
+    payload: {
+      instructions: "Wählen Sie für jede Lücke die richtige Möglichkeit.",
+      passage:
+        "Beim Sprachtandem treffen sich zwei Personen, (1) jeweils die Sprache der anderen lernen möchten. (2) beide profitieren, sollte die gemeinsame Zeit fair aufgeteilt werden. Das Angebot ist kostenlos und steht allen offen, (3) ihrem Studienfach.",
+      questions: [
+        {
+          id: "1",
+          stem: "Lücke 1",
+          options: [
+            { id: "a", text: "die" },
+            { id: "b", text: "denen" },
+            { id: "c", text: "deren" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "2",
+          stem: "Lücke 2",
+          options: [
+            { id: "a", text: "Damit" },
+            { id: "b", text: "Weil" },
+            { id: "c", text: "Obwohl" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "3",
+          stem: "Lücke 3",
+          options: [
+            { id: "a", text: "unabhängig von" },
+            { id: "b", text: "abgesehen von" },
+            { id: "c", text: "anstelle von" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Relativpronomen Nom. Pl. = „die“; „unabhängig von“ = „egal welches“ Studienfach.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SPRACHBAUSTEINE,
+    taskType: "TELC_C1H_SB_GAP",
+    title: "Hinweis zur Literaturrecherche",
+    prompt: "Wählen Sie für jede Lücke das passende Wort.",
+    difficulty: "STRETCH",
+    topicTag: "studium",
+    timeLimitSeconds: 600,
+    payload: {
+      instructions: "Wählen Sie für jede Lücke die richtige Möglichkeit.",
+      passage:
+        "Eine sorgfältige Recherche ist die Grundlage jeder Arbeit. (1) Sie sich auf eine einzige Datenbank verlassen, sollten Sie mehrere Quellen vergleichen. Ältere Studien sind nicht automatisch überholt; entscheidend ist, (2) sie methodisch überzeugen. Notieren Sie sich frühzeitig alle Angaben, (3) Sie später mühsames Nachschlagen vermeiden.",
+      questions: [
+        {
+          id: "1",
+          stem: "Lücke 1",
+          options: [
+            { id: "a", text: "Anstatt dass" },
+            { id: "b", text: "Damit" },
+            { id: "c", text: "Sobald" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "2",
+          stem: "Lücke 2",
+          options: [
+            { id: "a", text: "ob" },
+            { id: "b", text: "dass" },
+            { id: "c", text: "wenn" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "3",
+          stem: "Lücke 3",
+          options: [
+            { id: "a", text: "damit" },
+            { id: "b", text: "sodass" },
+            { id: "c", text: "indem" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„Anstatt dass Sie sich verlassen“ = statt einer Handlung; „ob sie überzeugen“ nennt das Entscheidende.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SPRACHBAUSTEINE,
+    taskType: "TELC_C1H_SB_GAP",
+    title: "Ankündigung einer Umfrage",
+    prompt: "Wählen Sie für jede Lücke das passende Wort.",
+    difficulty: "CORE",
+    topicTag: "studium",
+    timeLimitSeconds: 600,
+    payload: {
+      instructions: "Wählen Sie für jede Lücke die richtige Möglichkeit.",
+      passage:
+        "Im Rahmen einer Studie führen wir eine Umfrage durch, (1) Teilnahme freiwillig und anonym ist. Die Ergebnisse werden ausschließlich (2) wissenschaftlichen Zwecken verwendet. Wir danken Ihnen im Voraus, (3) Sie sich die Zeit nehmen, den Fragebogen auszufüllen.",
+      questions: [
+        {
+          id: "1",
+          stem: "Lücke 1",
+          options: [
+            { id: "a", text: "deren" },
+            { id: "b", text: "dessen" },
+            { id: "c", text: "die" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "2",
+          stem: "Lücke 2",
+          options: [
+            { id: "a", text: "zu" },
+            { id: "b", text: "für" },
+            { id: "c", text: "an" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "3",
+          stem: "Lücke 3",
+          options: [
+            { id: "a", text: "dass" },
+            { id: "b", text: "damit" },
+            { id: "c", text: "ob" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„deren Teilnahme“ bezieht sich auf die feminine „Umfrage“; „zu … Zwecken verwenden“ ist fest.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SPRACHBAUSTEINE,
+    taskType: "TELC_C1H_SB_GAP",
+    title: "Hinweis zur Präsentation",
+    prompt: "Wählen Sie für jede Lücke das passende Wort.",
+    difficulty: "STRETCH",
+    topicTag: "studium",
+    timeLimitSeconds: 600,
+    payload: {
+      instructions: "Wählen Sie für jede Lücke die richtige Möglichkeit.",
+      passage:
+        "Ihre Präsentation sollte fünfzehn Minuten nicht überschreiten. (1) Sie den Rahmen einhalten, üben Sie den Vortrag vorher mit der Uhr. Vermeiden Sie überfüllte Folien; (2) weniger Text auf einer Folie steht, desto aufmerksamer folgt das Publikum. Rechnen Sie am Ende Zeit für Fragen ein, (3) eine Diskussion entstehen kann.",
+      questions: [
+        {
+          id: "1",
+          stem: "Lücke 1",
+          options: [
+            { id: "a", text: "Damit" },
+            { id: "b", text: "Obwohl" },
+            { id: "c", text: "Seitdem" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "2",
+          stem: "Lücke 2",
+          options: [
+            { id: "a", text: "je" },
+            { id: "b", text: "desto" },
+            { id: "c", text: "umso" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "3",
+          stem: "Lücke 3",
+          options: [
+            { id: "a", text: "damit" },
+            { id: "b", text: "sodass" },
+            { id: "c", text: "wobei" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„je weniger …, desto aufmerksamer“ ist der feste Vergleich; die Lücke braucht „je“.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SPRACHBAUSTEINE,
+    taskType: "TELC_C1H_SB_GAP",
+    title: "Mitteilung zur Sprechstunde",
+    prompt: "Wählen Sie für jede Lücke das passende Wort.",
+    difficulty: "CORE",
+    topicTag: "studium",
+    timeLimitSeconds: 600,
+    payload: {
+      instructions: "Wählen Sie für jede Lücke die richtige Möglichkeit.",
+      passage:
+        "Meine Sprechstunde findet ab sofort dienstags statt. Um Wartezeiten zu vermeiden, bitte ich Sie, sich vorab einzutragen. Anliegen, (1) sich in einer kurzen E-Mail klären lassen, müssen Sie nicht persönlich vortragen. (2) dringenden Fällen erreichen Sie mich auch außerhalb der Sprechzeit. Bitte haben Sie Verständnis, (3) ich nicht jede Anfrage sofort beantworten kann.",
+      questions: [
+        {
+          id: "1",
+          stem: "Lücke 1",
+          options: [
+            { id: "a", text: "die" },
+            { id: "b", text: "deren" },
+            { id: "c", text: "denen" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "2",
+          stem: "Lücke 2",
+          options: [
+            { id: "a", text: "In" },
+            { id: "b", text: "Bei" },
+            { id: "c", text: "Auf" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "3",
+          stem: "Lücke 3",
+          options: [
+            { id: "a", text: "dass" },
+            { id: "b", text: "damit" },
+            { id: "c", text: "ob" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Relativpronomen Nom. Pl. „die“; „Verständnis haben, dass …“ leitet den Inhalt ein.",
+  },
 
   // ----------------------------------------------------------------- HOERVERSTEHEN
   {
