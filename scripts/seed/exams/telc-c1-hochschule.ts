@@ -1637,6 +1637,741 @@ export const ITEMS: ExamItemInput[] = [
     },
     guidanceNote: "„Zwar … doch …“ und „allerdings“ kündigen Einschränkungen an — dort verstecken sich oft die Antworten.",
   },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.HOERVERSTEHEN,
+    taskType: "TELC_C1H_HV_LECTURE",
+    title: "Vortrag: Erinnerung als Rekonstruktion",
+    prompt: "Hören Sie den Vortragsausschnitt und beantworten Sie die Fragen.",
+    difficulty: "STRETCH",
+    topicTag: "wissenschaft",
+    timeLimitSeconds: 720,
+    payload: {
+      instructions: "Sie hören einen Ausschnitt aus einem Vortrag. Wählen Sie die richtige Antwort.",
+      audioScript:
+        "Meine Damen und Herren, wir stellen uns die Erinnerung gern wie ein Archiv vor, aus dem wir Aufnahmen unverändert abrufen. Die Forschung zeigt jedoch ein anderes Bild: Jede Erinnerung wird im Moment des Abrufs neu zusammengesetzt. Dabei fließen unser heutiges Wissen und unsere Erwartungen mit ein. Das erklärt, warum Zeugen dasselbe Ereignis unterschiedlich schildern und warum Erinnerungen sich mit der Zeit verändern können, ohne dass wir es merken. Erinnern ist also weniger ein Wiedergeben als ein Neuerschaffen.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Wie stellen wir uns Erinnerung laut Vortrag oft vor?",
+          options: [
+            { id: "a", text: "wie ein Archiv mit unveränderten Aufnahmen" },
+            { id: "b", text: "wie einen leeren Raum" },
+            { id: "c", text: "wie eine exakte Kamera" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Was geschieht laut Forschung beim Abruf einer Erinnerung?",
+          options: [
+            { id: "a", text: "Sie wird neu zusammengesetzt." },
+            { id: "b", text: "Sie bleibt völlig unverändert." },
+            { id: "c", text: "Sie wird gelöscht." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Wie fasst der Vortragende das Erinnern zusammen?",
+          options: [
+            { id: "a", text: "als Neuerschaffen statt bloßes Wiedergeben" },
+            { id: "b", text: "als exaktes Wiedergeben" },
+            { id: "c", text: "als reines Vergessen" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„weniger ein … als ein …“ formuliert die Kernthese des Vortrags.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.HOERVERSTEHEN,
+    taskType: "TELC_C1H_HV_INTERVIEW",
+    title: "Interview: Feldforschung",
+    prompt: "Hören Sie das Interview und beantworten Sie die Fragen.",
+    difficulty: "CORE",
+    topicTag: "wissenschaft",
+    timeLimitSeconds: 720,
+    payload: {
+      instructions: "Sie hören ein kurzes Interview. Wählen Sie die richtige Antwort.",
+      audioScript:
+        "MODERATOR: Frau Dr. Renner, Sie erforschen Gemeinschaften vor Ort. Was ist dabei die größte Herausforderung? RENNER: Sicher die Distanz zu wahren. Man lebt oft monatelang mit den Menschen und muss trotzdem den Blick von außen behalten. MODERATOR: Verändert Ihre Anwesenheit nicht das, was Sie beobachten? RENNER: Doch, das lässt sich nie ganz vermeiden. Wichtig ist, diesen Einfluss offen zu benennen, statt so zu tun, als sei man unsichtbar. MODERATOR: Und wie gehen Sie mit persönlichen Beziehungen um? RENNER: Behutsam. Vertrauen ist die Grundlage, aber ich muss aufpassen, dass Nähe mein Urteil nicht trübt.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Was ist laut Renner die größte Herausforderung?",
+          options: [
+            { id: "a", text: "die nötige Distanz zu wahren" },
+            { id: "b", text: "die richtige Ausrüstung zu finden" },
+            { id: "c", text: "genügend Geld zu bekommen" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Wie geht sie mit dem Einfluss ihrer Anwesenheit um?",
+          options: [
+            { id: "a", text: "Sie benennt ihn offen." },
+            { id: "b", text: "Sie leugnet ihn." },
+            { id: "c", text: "Sie ignoriert ihn." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Worauf achtet sie bei persönlichen Beziehungen?",
+          options: [
+            { id: "a", text: "dass Nähe ihr Urteil nicht trübt" },
+            { id: "b", text: "dass sie keinen Kontakt hat" },
+            { id: "c", text: "dass sie schnell fertig wird" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Achten Sie auf „Doch, das lässt sich nie ganz vermeiden“ — eine ehrliche Einschränkung.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.HOERVERSTEHEN,
+    taskType: "TELC_C1H_HV_LECTURE",
+    title: "Vortrag: Warum Prognosen schwierig sind",
+    prompt: "Hören Sie den Vortragsausschnitt und beantworten Sie die Fragen.",
+    difficulty: "STRETCH",
+    topicTag: "wissenschaft",
+    timeLimitSeconds: 720,
+    payload: {
+      instructions: "Sie hören einen Ausschnitt aus einem Vortrag. Wählen Sie die richtige Antwort.",
+      audioScript:
+        "Guten Tag. Vorhersagen über die Zukunft sind aus einem grundsätzlichen Grund schwierig: Viele Systeme, ob Wetter oder Wirtschaft, reagieren empfindlich auf kleinste Ausgangsunterschiede. Ein winziger Fehler in den Anfangsdaten kann sich aufschaukeln und die Prognose nach kurzer Zeit unbrauchbar machen. Das bedeutet nicht, dass Vorhersagen sinnlos wären. Für kurze Zeiträume sind sie oft erstaunlich verlässlich. Je weiter wir jedoch in die Zukunft blicken, desto größer wird die Unsicherheit — und das ist keine Frage besserer Rechner, sondern der Natur solcher Systeme.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Warum sind Vorhersagen grundsätzlich schwierig?",
+          options: [
+            { id: "a", text: "Kleinste Ausgangsunterschiede schaukeln sich auf." },
+            { id: "b", text: "Es fehlt immer an Daten." },
+            { id: "c", text: "Niemand interessiert sich dafür." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Was sagt der Vortrag über kurze Zeiträume?",
+          options: [
+            { id: "a", text: "Vorhersagen sind oft erstaunlich verlässlich." },
+            { id: "b", text: "Vorhersagen sind völlig unmöglich." },
+            { id: "c", text: "Vorhersagen sind dort am schwierigsten." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Woran liegt die wachsende Unsicherheit laut Vortrag?",
+          options: [
+            { id: "a", text: "an der Natur solcher Systeme, nicht an den Rechnern" },
+            { id: "b", text: "allein an zu langsamen Computern" },
+            { id: "c", text: "an mangelndem Interesse" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„keine Frage besserer Rechner, sondern der Natur …“ — die Ursache wird bewusst verschoben.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.HOERVERSTEHEN,
+    taskType: "TELC_C1H_HV_INTERVIEW",
+    title: "Interview: Fußgängerzonen",
+    prompt: "Hören Sie das Interview und beantworten Sie die Fragen.",
+    difficulty: "CORE",
+    topicTag: "gesellschaft",
+    timeLimitSeconds: 720,
+    payload: {
+      instructions: "Sie hören ein kurzes Interview. Wählen Sie die richtige Antwort.",
+      audioScript:
+        "MODERATORIN: Herr Kessler, viele Städte weiten ihre Fußgängerzonen aus. Lohnt sich das? KESSLER: In der Regel ja, aber nicht automatisch. Eine Zone allein belebt noch keine Innenstadt. Es kommt darauf an, ob sie gut erreichbar ist und ob es dort etwas zu erleben gibt. MODERATORIN: Klagen nicht die Geschäfte über wegfallende Parkplätze? KESSLER: Am Anfang oft, ja. Studien zeigen aber, dass der Umsatz nach der Umstellung meist steigt, weil sich mehr Menschen gern länger aufhalten. MODERATORIN: Also ein Selbstläufer? KESSLER: Nein, das wäre zu einfach. Ohne begleitende Maßnahmen kann eine Zone auch veröden.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Belebt eine Fußgängerzone laut Kessler automatisch die Innenstadt?",
+          options: [
+            { id: "a", text: "Nein, es kommt auf Erreichbarkeit und Angebot an." },
+            { id: "b", text: "Ja, immer." },
+            { id: "c", text: "Nein, sie schadet immer." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Was zeigen Studien zum Umsatz nach der Umstellung?",
+          options: [
+            { id: "a", text: "Er steigt meist." },
+            { id: "b", text: "Er bricht immer ein." },
+            { id: "c", text: "Er bleibt gleich." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Ist die Zone ein Selbstläufer?",
+          options: [
+            { id: "a", text: "Nein, ohne begleitende Maßnahmen kann sie veröden." },
+            { id: "b", text: "Ja, sie funktioniert von allein." },
+            { id: "c", text: "Nein, sie ist immer erfolglos." },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„aber nicht automatisch“ und „das wäre zu einfach“ relativieren die Zustimmung.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.HOERVERSTEHEN,
+    taskType: "TELC_C1H_HV_LECTURE",
+    title: "Vortrag: Der Placebo-Effekt",
+    prompt: "Hören Sie den Vortragsausschnitt und beantworten Sie die Fragen.",
+    difficulty: "STRETCH",
+    topicTag: "gesundheit",
+    timeLimitSeconds: 720,
+    payload: {
+      instructions: "Sie hören einen Ausschnitt aus einem Vortrag. Wählen Sie die richtige Antwort.",
+      audioScript:
+        "Guten Tag. Unter dem Placebo-Effekt versteht man, dass ein Scheinmedikament ohne Wirkstoff dennoch eine Besserung bewirken kann. Lange galt das als bloße Einbildung. Heute wissen wir, dass dabei messbare Vorgänge im Körper ablaufen, etwa die Ausschüttung körpereigener Stoffe. Der Effekt ist also real, auch wenn kein Wirkstoff im Spiel ist. Für die Forschung bedeutet das eine Herausforderung: Um die Wirkung eines echten Medikaments zu belegen, muss sie deutlich über den Placebo-Effekt hinausgehen.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Was versteht man unter dem Placebo-Effekt?",
+          options: [
+            { id: "a", text: "Ein Scheinmedikament bewirkt eine Besserung." },
+            { id: "b", text: "Ein Medikament wirkt gar nicht." },
+            { id: "c", text: "Ein Wirkstoff schadet dem Körper." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Wie wird der Effekt heute bewertet?",
+          options: [
+            { id: "a", text: "als real, mit messbaren Vorgängen im Körper" },
+            { id: "b", text: "als bloße Einbildung" },
+            { id: "c", text: "als gefährlich" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Was bedeutet der Effekt für die Forschung?",
+          options: [
+            { id: "a", text: "Ein echtes Medikament muss klar darüber hinauswirken." },
+            { id: "b", text: "Medikamente müssen nicht mehr getestet werden." },
+            { id: "c", text: "Der Effekt macht Forschung überflüssig." },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„auch wenn kein Wirkstoff im Spiel ist“ betont, dass der Effekt trotzdem real ist.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.HOERVERSTEHEN,
+    taskType: "TELC_C1H_HV_INTERVIEW",
+    title: "Interview: Quellenkritik",
+    prompt: "Hören Sie das Interview und beantworten Sie die Fragen.",
+    difficulty: "CORE",
+    topicTag: "wissenschaft",
+    timeLimitSeconds: 720,
+    payload: {
+      instructions: "Sie hören ein kurzes Interview. Wählen Sie die richtige Antwort.",
+      audioScript:
+        "MODERATOR: Frau Professorin Sommer, was heißt eigentlich Quellenkritik? SOMMER: Vereinfacht gesagt, jede Quelle danach zu befragen, wer sie warum verfasst hat. Ein Brief eines Beteiligten ist etwas anderes als ein amtlicher Bericht. MODERATOR: Kann man einer Quelle denn je ganz trauen? SOMMER: Nicht blind. Aber das ist kein Grund zur Verzweiflung. Gerade wenn man die Absicht hinter einer Quelle kennt, kann man sie umso besser deuten. MODERATOR: Verändern digitale Archive Ihre Arbeit? SOMMER: Sehr. Wir haben mehr Material als je zuvor, aber die eigentliche Aufgabe, es kritisch zu prüfen, bleibt dieselbe.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Was heißt Quellenkritik laut Sommer?",
+          options: [
+            { id: "a", text: "zu fragen, wer eine Quelle warum verfasst hat" },
+            { id: "b", text: "alle Quellen abzulehnen" },
+            { id: "c", text: "nur amtliche Berichte zu lesen" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Kann man einer Quelle ganz trauen?",
+          options: [
+            { id: "a", text: "Nicht blind, aber das ist kein Grund zur Verzweiflung." },
+            { id: "b", text: "Ja, jeder Quelle vollständig." },
+            { id: "c", text: "Nein, keiner Quelle jemals." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Was sagt sie über digitale Archive?",
+          options: [
+            { id: "a", text: "Mehr Material, aber die kritische Prüfung bleibt." },
+            { id: "b", text: "Sie machen Quellenkritik überflüssig." },
+            { id: "c", text: "Sie liefern weniger Material." },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„Nicht blind. Aber …“ — die Einschränkung wird sofort relativiert.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.HOERVERSTEHEN,
+    taskType: "TELC_C1H_HV_LECTURE",
+    title: "Vortrag: Zusammenarbeit im Tierreich",
+    prompt: "Hören Sie den Vortragsausschnitt und beantworten Sie die Fragen.",
+    difficulty: "CORE",
+    topicTag: "wissenschaft",
+    timeLimitSeconds: 720,
+    payload: {
+      instructions: "Sie hören einen Ausschnitt aus einem Vortrag. Wählen Sie die richtige Antwort.",
+      audioScript:
+        "Meine Damen und Herren, oft wird die Natur allein als Kampf ums Dasein beschrieben. Dabei gerät leicht in Vergessenheit, wie verbreitet Zusammenarbeit im Tierreich ist. Viele Arten teilen Nahrung, warnen einander vor Feinden oder ziehen gemeinsam Nachwuchs auf. Solches Verhalten widerspricht der Evolution keineswegs. Wer anderen hilft, kann selbst profitieren, etwa wenn die Hilfe später erwidert wird oder wenn nahe Verwandte begünstigt werden. Kooperation ist also keine Ausnahme von der Natur, sondern ein fester Bestandteil von ihr.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Was gerät laut Vortrag oft in Vergessenheit?",
+          options: [
+            { id: "a", text: "wie verbreitet Zusammenarbeit im Tierreich ist" },
+            { id: "b", text: "dass Tiere nie kooperieren" },
+            { id: "c", text: "dass es keinen Wettbewerb gibt" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Widerspricht Kooperation der Evolution?",
+          options: [
+            { id: "a", text: "Nein, wer hilft, kann selbst profitieren." },
+            { id: "b", text: "Ja, sie ist unmöglich." },
+            { id: "c", text: "Ja, sie schadet immer." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Wie fasst der Vortrag Kooperation zusammen?",
+          options: [
+            { id: "a", text: "als fester Bestandteil der Natur" },
+            { id: "b", text: "als seltene Ausnahme" },
+            { id: "c", text: "als Widerspruch zur Natur" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„keine Ausnahme …, sondern ein fester Bestandteil“ — die Umwertung ist der Kern.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.HOERVERSTEHEN,
+    taskType: "TELC_C1H_HV_INTERVIEW",
+    title: "Interview: Warum wir aufschieben",
+    prompt: "Hören Sie das Interview und beantworten Sie die Fragen.",
+    difficulty: "STRETCH",
+    topicTag: "wissenschaft",
+    timeLimitSeconds: 720,
+    payload: {
+      instructions: "Sie hören ein kurzes Interview. Wählen Sie die richtige Antwort.",
+      audioScript:
+        "MODERATORIN: Herr Dr. Falk, warum schieben Menschen unangenehme Aufgaben auf? FALK: Meist nicht aus Faulheit, wie oft angenommen. Häufig steckt die Angst vor dem Scheitern dahinter oder der Wunsch, eine Sache perfekt zu machen. MODERATORIN: Hilft es dann, sich zusammenzureißen? FALK: Nur bedingt. Wirksamer ist es, die Aufgabe in kleine Schritte zu zerlegen, sodass der erste Schritt nicht mehr abschreckt. MODERATORIN: Ist Aufschieben denn immer schlecht? FALK: Nicht unbedingt. Manchmal reift ein Gedanke, während man wartet. Problematisch wird es erst, wenn das Aufschieben zur Gewohnheit wird und Leidensdruck entsteht.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Woran liegt Aufschieben laut Falk meist?",
+          options: [
+            { id: "a", text: "an Angst vor dem Scheitern oder Perfektionswunsch" },
+            { id: "b", text: "allein an Faulheit" },
+            { id: "c", text: "an fehlender Zeit" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Was hält Falk für wirksam?",
+          options: [
+            { id: "a", text: "die Aufgabe in kleine Schritte zu zerlegen" },
+            { id: "b", text: "sich einfach zusammenzureißen" },
+            { id: "c", text: "die Aufgabe ganz zu lassen" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Wann wird Aufschieben laut Falk problematisch?",
+          options: [
+            { id: "a", text: "wenn es zur Gewohnheit wird und Leidensdruck entsteht" },
+            { id: "b", text: "immer, ausnahmslos" },
+            { id: "c", text: "nie" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„nicht aus Faulheit, wie oft angenommen“ korrigiert eine verbreitete Annahme.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.HOERVERSTEHEN,
+    taskType: "TELC_C1H_HV_LECTURE",
+    title: "Vortrag: Der Nutzen der Langeweile",
+    prompt: "Hören Sie den Vortragsausschnitt und beantworten Sie die Fragen.",
+    difficulty: "STRETCH",
+    topicTag: "gesellschaft",
+    timeLimitSeconds: 720,
+    payload: {
+      instructions: "Sie hören einen Ausschnitt aus einem Vortrag. Wählen Sie die richtige Antwort.",
+      audioScript:
+        "Guten Tag. Langeweile hat einen schlechten Ruf, und viele Menschen greifen bei der ersten leeren Minute zum Telefon. Dabei zeigt die Forschung, dass Langeweile durchaus nützlich sein kann. Wenn der Geist nicht ständig beschäftigt ist, beginnt er zu schweifen, und in diesen Momenten entstehen oft neue Ideen. Wer jede Pause sofort füllt, nimmt sich womöglich die Gelegenheit dazu. Das heißt nicht, dass ständige Unterforderung erstrebenswert wäre. Doch gelegentliche Langeweile auszuhalten, statt sie sofort zu vertreiben, kann der Kreativität nützen.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Was tun viele bei der ersten leeren Minute?",
+          options: [
+            { id: "a", text: "Sie greifen zum Telefon." },
+            { id: "b", text: "Sie machen ein Nickerchen." },
+            { id: "c", text: "Sie schreiben Ideen auf." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Was geschieht laut Forschung, wenn der Geist schweift?",
+          options: [
+            { id: "a", text: "Oft entstehen neue Ideen." },
+            { id: "b", text: "Man wird sofort krank." },
+            { id: "c", text: "Nichts von Bedeutung." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Wie lautet die abgewogene Schlussaussage?",
+          options: [
+            { id: "a", text: "Gelegentliche Langeweile auszuhalten kann der Kreativität nützen." },
+            { id: "b", text: "Ständige Unterforderung ist erstrebenswert." },
+            { id: "c", text: "Langeweile ist immer schädlich." },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„Das heißt nicht, dass …“ verhindert ein Missverständnis — der Vortrag bleibt differenziert.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.HOERVERSTEHEN,
+    taskType: "TELC_C1H_HV_INTERVIEW",
+    title: "Interview: Dialekte im Wandel",
+    prompt: "Hören Sie das Interview und beantworten Sie die Fragen.",
+    difficulty: "CORE",
+    topicTag: "wissenschaft",
+    timeLimitSeconds: 720,
+    payload: {
+      instructions: "Sie hören ein kurzes Interview. Wählen Sie die richtige Antwort.",
+      audioScript:
+        "MODERATOR: Frau Dr. Wieland, sterben die Dialekte aus? WIELAND: So dramatisch würde ich es nicht sagen. Sie verändern sich, das ja. Viele starke Formen weichen ab, aber neue regionale Färbungen entstehen auch. MODERATOR: Ist das ein Verlust? WIELAND: Für manche schon, weil ein Stück Identität verschwindet. Ich sehe es nüchterner: Sprache war immer in Bewegung. MODERATOR: Kann man Dialekte bewusst erhalten? WIELAND: In gewissem Maße, etwa durch Theater oder Schulen. Aber erzwingen lässt sich das nicht. Eine Sprachform lebt nur, solange die Menschen sie im Alltag verwenden.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Sterben die Dialekte laut Wieland aus?",
+          options: [
+            { id: "a", text: "Nein, aber sie verändern sich." },
+            { id: "b", text: "Ja, vollständig." },
+            { id: "c", text: "Nein, sie bleiben unverändert." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Wie bewertet sie den Wandel?",
+          options: [
+            { id: "a", text: "nüchtern — Sprache war immer in Bewegung" },
+            { id: "b", text: "als reine Katastrophe" },
+            { id: "c", text: "als bedeutungslos" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Was sagt sie zum bewussten Erhalt?",
+          options: [
+            { id: "a", text: "In gewissem Maße möglich, aber nicht erzwingbar." },
+            { id: "b", text: "vollständig steuerbar" },
+            { id: "c", text: "völlig unmöglich" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„So dramatisch würde ich es nicht sagen“ dämpft die zugespitzte Frage.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.HOERVERSTEHEN,
+    taskType: "TELC_C1H_HV_LECTURE",
+    title: "Vortrag: Schwarmverhalten",
+    prompt: "Hören Sie den Vortragsausschnitt und beantworten Sie die Fragen.",
+    difficulty: "CORE",
+    topicTag: "wissenschaft",
+    timeLimitSeconds: 720,
+    payload: {
+      instructions: "Sie hören einen Ausschnitt aus einem Vortrag. Wählen Sie die richtige Antwort.",
+      audioScript:
+        "Meine Damen und Herren, ein Vogelschwarm, der wie ein einziger Körper am Himmel schwenkt, wirkt fast rätselhaft. Dabei folgt jedes einzelne Tier nur wenigen einfachen Regeln: Halte Abstand zum Nachbarn, richte dich nach ihm aus, bleibe in der Nähe. Aus diesen schlichten Regeln entsteht das komplexe Muster des ganzen Schwarms, ohne dass ein Anführer nötig wäre. Solche Selbstorganisation beobachten Forscher auch anderswo, etwa bei Fischen oder Insekten. Sie zeigt, dass komplexes Verhalten keine zentrale Steuerung voraussetzt.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Wonach richtet sich jedes einzelne Tier im Schwarm?",
+          options: [
+            { id: "a", text: "nach wenigen einfachen Regeln" },
+            { id: "b", text: "nach einem Anführer" },
+            { id: "c", text: "nach dem Zufall allein" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Was entsteht aus diesen Regeln?",
+          options: [
+            { id: "a", text: "das komplexe Muster des ganzen Schwarms" },
+            { id: "b", text: "völliges Durcheinander" },
+            { id: "c", text: "Stillstand" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Was zeigt die Selbstorganisation laut Vortrag?",
+          options: [
+            { id: "a", text: "Komplexes Verhalten braucht keine zentrale Steuerung." },
+            { id: "b", text: "Ohne Anführer geht nichts." },
+            { id: "c", text: "Regeln sind unnötig." },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„ohne dass ein Anführer nötig wäre“ ist der überraschende Kernpunkt.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.HOERVERSTEHEN,
+    taskType: "TELC_C1H_HV_INTERVIEW",
+    title: "Interview: Digitale Archive",
+    prompt: "Hören Sie das Interview und beantworten Sie die Fragen.",
+    difficulty: "STRETCH",
+    topicTag: "medien",
+    timeLimitSeconds: 720,
+    payload: {
+      instructions: "Sie hören ein kurzes Interview. Wählen Sie die richtige Antwort.",
+      audioScript:
+        "MODERATORIN: Herr Brandt, digitale Archive gelten als sicher für die Ewigkeit. Stimmt das? BRANDT: Das ist ein weit verbreiteter Irrtum. Papier kann Jahrhunderte überdauern; digitale Formate veralten oft schon nach wenigen Jahrzehnten. MODERATORIN: Was heißt das konkret? BRANDT: Dateien müssen regelmäßig in neue Formate übertragen werden, sonst kann sie irgendwann niemand mehr öffnen. Das kostet Aufwand und Geld. MODERATORIN: Also lieber alles auf Papier? BRANDT: Nein, das wäre der falsche Schluss. Digitale Archive haben große Vorteile. Man darf nur nicht glauben, sie pflegten sich von selbst.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Was hält Brandt für einen Irrtum?",
+          options: [
+            { id: "a", text: "dass digitale Archive für die Ewigkeit sicher seien" },
+            { id: "b", text: "dass Papier lange hält" },
+            { id: "c", text: "dass Archive wichtig sind" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Was muss laut Brandt regelmäßig geschehen?",
+          options: [
+            { id: "a", text: "Dateien in neue Formate übertragen" },
+            { id: "b", text: "alles ausdrucken" },
+            { id: "c", text: "die Archive löschen" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Sollte man deshalb alles auf Papier speichern?",
+          options: [
+            { id: "a", text: "Nein, das wäre der falsche Schluss." },
+            { id: "b", text: "Ja, unbedingt." },
+            { id: "c", text: "Ja, Papier ist immer besser." },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„das wäre der falsche Schluss“ warnt vor einer voreiligen Folgerung.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.HOERVERSTEHEN,
+    taskType: "TELC_C1H_HV_LECTURE",
+    title: "Vortrag: Warum Wiederholung hilft",
+    prompt: "Hören Sie den Vortragsausschnitt und beantworten Sie die Fragen.",
+    difficulty: "CORE",
+    topicTag: "bildung",
+    timeLimitSeconds: 720,
+    payload: {
+      instructions: "Sie hören einen Ausschnitt aus einem Vortrag. Wählen Sie die richtige Antwort.",
+      audioScript:
+        "Guten Tag. Wer etwas dauerhaft lernen möchte, kommt an der Wiederholung nicht vorbei. Entscheidend ist jedoch nicht, wie oft, sondern wann man wiederholt. Untersuchungen zeigen, dass verteiltes Lernen, bei dem man den Stoff über mehrere Tage immer wieder aufgreift, weit wirksamer ist als das Pauken in einer einzigen langen Sitzung. Der Grund liegt darin, dass das Gedächtnis gerade durch das mühsame Wiederhervorholen gestärkt wird. Kurz vor der Prüfung alles auf einmal zu lernen, mag für den Moment genügen, hinterlässt aber selten dauerhaftes Wissen.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Was ist laut Vortrag entscheidend?",
+          options: [
+            { id: "a", text: "nicht wie oft, sondern wann man wiederholt" },
+            { id: "b", text: "möglichst lange am Stück zu lernen" },
+            { id: "c", text: "gar nicht zu wiederholen" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Was ist wirksamer als Pauken in einer Sitzung?",
+          options: [
+            { id: "a", text: "verteiltes Lernen über mehrere Tage" },
+            { id: "b", text: "eine einzige lange Sitzung" },
+            { id: "c", text: "gar kein Lernen" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Was sagt der Vortrag über Lernen kurz vor der Prüfung?",
+          options: [
+            { id: "a", text: "Es genügt für den Moment, hinterlässt aber selten dauerhaftes Wissen." },
+            { id: "b", text: "Es ist die beste Methode." },
+            { id: "c", text: "Es schadet immer." },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„nicht wie oft, sondern wann“ verschiebt den Fokus — häufig die erste Frage.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.HOERVERSTEHEN,
+    taskType: "TELC_C1H_HV_INTERVIEW",
+    title: "Interview: Verhaltensökonomie",
+    prompt: "Hören Sie das Interview und beantworten Sie die Fragen.",
+    difficulty: "STRETCH",
+    topicTag: "wissenschaft",
+    timeLimitSeconds: 720,
+    payload: {
+      instructions: "Sie hören ein kurzes Interview. Wählen Sie die richtige Antwort.",
+      audioScript:
+        "MODERATOR: Herr Professor Nolte, die klassische Wirtschaftslehre nimmt an, der Mensch entscheide rational. Trifft das zu? NOLTE: Nur eingeschränkt. Menschen verhalten sich oft anders, als es der reine Nutzen nahelegt. Wir überschätzen kurzfristige Belohnungen und scheuen Verluste stärker, als wir Gewinne schätzen. MODERATOR: Ist der Mensch also unvernünftig? NOLTE: Das würde ich nicht sagen. Unsere Abweichungen folgen erkennbaren Mustern. Man kann sie sogar nutzen, um Menschen sanft zu besseren Entscheidungen zu bewegen. MODERATOR: Ohne Zwang? NOLTE: Genau. Man verändert die Rahmenbedingungen, lässt die Wahl aber frei.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Entscheidet der Mensch laut Nolte rein rational?",
+          options: [
+            { id: "a", text: "Nur eingeschränkt." },
+            { id: "b", text: "Ja, immer." },
+            { id: "c", text: "Nie, in keiner Weise." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Ist der Mensch deshalb unvernünftig?",
+          options: [
+            { id: "a", text: "Nein, die Abweichungen folgen erkennbaren Mustern." },
+            { id: "b", text: "Ja, völlig unberechenbar." },
+            { id: "c", text: "Ja, ohne jedes Muster." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Wie kann man Menschen zu besseren Entscheidungen bewegen?",
+          options: [
+            { id: "a", text: "indem man die Rahmenbedingungen ändert, die Wahl aber frei lässt" },
+            { id: "b", text: "durch Zwang" },
+            { id: "c", text: "durch Verbote" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„Das würde ich nicht sagen“ weist die Zuspitzung zurück; achten Sie auf „ohne Zwang“.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.HOERVERSTEHEN,
+    taskType: "TELC_C1H_HV_LECTURE",
+    title: "Vortrag: Die Bedeutung des Vergessens",
+    prompt: "Hören Sie den Vortragsausschnitt und beantworten Sie die Fragen.",
+    difficulty: "STRETCH",
+    topicTag: "wissenschaft",
+    timeLimitSeconds: 720,
+    payload: {
+      instructions: "Sie hören einen Ausschnitt aus einem Vortrag. Wählen Sie die richtige Antwort.",
+      audioScript:
+        "Guten Tag. Vergessen gilt gemeinhin als Schwäche unseres Gedächtnisses. Aus der Sicht der Forschung ist es jedoch eine wichtige Leistung. Würden wir uns an jede Einzelheit erinnern, würde uns die Flut an Nebensächlichem geradezu erdrücken. Vergessen sortiert aus, was nicht mehr gebraucht wird, und lässt Raum für das Wesentliche. Erst dadurch können wir von einzelnen Erfahrungen abstrahieren und allgemeine Regeln bilden. Ein Gedächtnis, das nichts vergisst, wäre also kein Vorteil, sondern eine Last.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Wie gilt Vergessen gemeinhin?",
+          options: [
+            { id: "a", text: "als Schwäche des Gedächtnisses" },
+            { id: "b", text: "als besondere Stärke" },
+            { id: "c", text: "als völlig bedeutungslos" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Welche Leistung erfüllt Vergessen laut Vortrag?",
+          options: [
+            { id: "a", text: "Es sortiert Unwichtiges aus und schafft Raum für Wesentliches." },
+            { id: "b", text: "Es löscht alle Erinnerungen." },
+            { id: "c", text: "Es verhindert das Lernen." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Wie bewertet der Vortrag ein Gedächtnis, das nichts vergisst?",
+          options: [
+            { id: "a", text: "als Last statt Vorteil" },
+            { id: "b", text: "als idealen Zustand" },
+            { id: "c", text: "als unmöglich zu erreichen" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„kein Vorteil, sondern eine Last“ kehrt die verbreitete Sicht um — der Kern des Vortrags.",
+  },
 
   // ------------------------------------------------------------ SCHRIFTLICHER_AUSDRUCK
   {
