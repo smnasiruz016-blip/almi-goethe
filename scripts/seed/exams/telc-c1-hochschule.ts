@@ -2395,6 +2395,306 @@ export const ITEMS: ExamItemInput[] = [
     guidanceNote:
       "Ein Leserbrief braucht Anrede, Bezug zum Artikel und Gruß. Auf C1-Niveau werden Abwägung und präzise Konnektoren erwartet.",
   },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SCHRIFTLICHER_AUSDRUCK,
+    taskType: "TELC_C1H_SA_ESSAY",
+    title: "Stellungnahme: KI-Werkzeuge in Hausarbeiten",
+    prompt: "Schreiben Sie einen strukturierten Text (circa 300 Wörter).",
+    difficulty: "STRETCH",
+    topicTag: "bildung",
+    timeLimitSeconds: 4200,
+    payload: {
+      situation:
+        "An Ihrer Hochschule wird diskutiert, ob und wie Studierende Programme mit künstlicher Intelligenz beim Schreiben von Hausarbeiten nutzen dürfen.",
+      instruction:
+        "Verfassen Sie eine argumentative Stellungnahme. Erläutern Sie Chancen und Risiken solcher Werkzeuge für das wissenschaftliche Arbeiten, gehen Sie auf einen möglichen Einwand ein und begründen Sie am Ende eine eigene, abgewogene Position.",
+      wordMin: 250,
+      wordMax: 380,
+    },
+    guidanceNote: "Unterscheiden Sie zwischen Hilfsmittel und Ersatz eigener Leistung — das ist der Kern der Debatte.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SCHRIFTLICHER_AUSDRUCK,
+    taskType: "TELC_C1H_SA_ESSAY",
+    title: "Stellungnahme: Präsenz- oder Online-Lehre",
+    prompt: "Schreiben Sie einen strukturierten Text (circa 300 Wörter).",
+    difficulty: "CORE",
+    topicTag: "bildung",
+    timeLimitSeconds: 4200,
+    payload: {
+      situation:
+        "Nach den Erfahrungen mit digitaler Lehre wird an vielen Hochschulen erwogen, einen festen Anteil der Veranstaltungen dauerhaft online anzubieten.",
+      instruction:
+        "Verfassen Sie eine Stellungnahme. Wägen Sie Vor- und Nachteile von Präsenz- und Online-Lehre ab, berücksichtigen Sie unterschiedliche Fächer oder Situationen und formulieren Sie eine begründete Empfehlung.",
+      wordMin: 250,
+      wordMax: 380,
+    },
+    guidanceNote: "Differenzieren Sie nach Veranstaltungsart: Vorlesung, Seminar, Labor verlangen Unterschiedliches.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SCHRIFTLICHER_AUSDRUCK,
+    taskType: "TELC_C1H_SA_ESSAY",
+    title: "Stellungnahme: Englisch als Wissenschaftssprache",
+    prompt: "Schreiben Sie einen strukturierten Text (circa 300 Wörter).",
+    difficulty: "STRETCH",
+    topicTag: "wissenschaft",
+    timeLimitSeconds: 4200,
+    payload: {
+      situation:
+        "In der Forschung wird zunehmend auf Englisch publiziert. Manche begrüßen dies als gemeinsame Sprache, andere fürchten um die Rolle des Deutschen in der Wissenschaft.",
+      instruction:
+        "Verfassen Sie eine argumentative Stellungnahme. Erörtern Sie Vor- und Nachteile einer dominanten Wissenschaftssprache, gehen Sie auf einen Gegeneinwand ein und begründen Sie Ihre eigene Haltung.",
+      wordMin: 250,
+      wordMax: 380,
+    },
+    guidanceNote: "Denken Sie an Reichweite gegen Zugänglichkeit sowie an Fachbegriffe, die sich schwer übersetzen lassen.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SCHRIFTLICHER_AUSDRUCK,
+    taskType: "TELC_C1H_SA_ESSAY",
+    title: "Stellungnahme: Anwesenheit als Studienleistung",
+    prompt: "Schreiben Sie einen strukturierten Text (circa 300 Wörter).",
+    difficulty: "CORE",
+    topicTag: "bildung",
+    timeLimitSeconds: 4200,
+    payload: {
+      situation:
+        "An einer Fakultät wird vorgeschlagen, gesellschaftliches Engagement der Studierenden künftig als Studienleistung anzurechnen.",
+      instruction:
+        "Verfassen Sie eine Stellungnahme. Erörtern Sie, ob freiwilliges Engagement angerechnet werden sollte, wägen Sie mögliche Folgen ab und begründen Sie Ihre Position.",
+      wordMin: 250,
+      wordMax: 380,
+    },
+    guidanceNote: "Prüfen Sie, ob eine Anrechnung die Freiwilligkeit des Engagements untergräbt.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SCHRIFTLICHER_AUSDRUCK,
+    taskType: "TELC_C1H_SA_ESSAY",
+    title: "Leserbrief: Studiengebühren für internationale Studierende",
+    prompt: "Schreiben Sie einen strukturierten Text (circa 300 Wörter).",
+    difficulty: "STRETCH",
+    topicTag: "bildung",
+    timeLimitSeconds: 4200,
+    payload: {
+      situation:
+        "In einer Zeitung wurde vorgeschlagen, von internationalen Studierenden höhere Gebühren zu verlangen. Sie möchten mit einem Leserbrief reagieren.",
+      instruction:
+        "Verfassen Sie einen Leserbrief. Nehmen Sie Bezug auf den Vorschlag, führen Sie Argumente an, gehen Sie auf einen Gegeneinwand ein und schließen Sie mit einer klaren Position.",
+      wordMin: 250,
+      wordMax: 380,
+    },
+    guidanceNote: "Ein Leserbrief braucht Bezug zum Artikel, sachlichen Ton und einen deutlichen Standpunkt.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SCHRIFTLICHER_AUSDRUCK,
+    taskType: "TELC_C1H_SA_ESSAY",
+    title: "Stellungnahme: Recht auf Homeoffice",
+    prompt: "Schreiben Sie einen strukturierten Text (circa 300 Wörter).",
+    difficulty: "CORE",
+    topicTag: "arbeit",
+    timeLimitSeconds: 4200,
+    payload: {
+      situation:
+        "Es wird diskutiert, ob Beschäftigte ein gesetzliches Recht auf Arbeit von zu Hause erhalten sollten, sofern die Tätigkeit es zulässt.",
+      instruction:
+        "Verfassen Sie eine argumentative Stellungnahme. Erörtern Sie Vor- und Nachteile eines solchen Rechts für Beschäftigte und Unternehmen und begründen Sie Ihre eigene Einschätzung.",
+      wordMin: 250,
+      wordMax: 380,
+    },
+    guidanceNote: "Beziehen Sie beide Seiten ein: Flexibilität für Beschäftigte, Organisation für Betriebe.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SCHRIFTLICHER_AUSDRUCK,
+    taskType: "TELC_C1H_SA_ESSAY",
+    title: "Stellungnahme: Ein Tempolimit auf Autobahnen",
+    prompt: "Schreiben Sie einen strukturierten Text (circa 300 Wörter).",
+    difficulty: "STRETCH",
+    topicTag: "verkehr",
+    timeLimitSeconds: 4200,
+    payload: {
+      situation:
+        "Über ein allgemeines Tempolimit auf Autobahnen wird seit Langem gestritten. Befürworter nennen Sicherheit und Umwelt, Gegner die persönliche Freiheit.",
+      instruction:
+        "Verfassen Sie eine Stellungnahme. Erörtern Sie die wichtigsten Argumente für und gegen ein Tempolimit, gehen Sie auf einen Einwand ein und begründen Sie Ihre Position.",
+      wordMin: 250,
+      wordMax: 380,
+    },
+    guidanceNote: "Trennen Sie belegbare Wirkungen (Sicherheit, Emissionen) von Wertfragen (Freiheit).",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SCHRIFTLICHER_AUSDRUCK,
+    taskType: "TELC_C1H_SA_ESSAY",
+    title: "Stellungnahme: Kulturförderung mit Steuergeld",
+    prompt: "Schreiben Sie einen strukturierten Text (circa 300 Wörter).",
+    difficulty: "CORE",
+    topicTag: "kultur",
+    timeLimitSeconds: 4200,
+    payload: {
+      situation:
+        "Theater, Museen und Orchester werden vielerorts mit öffentlichen Mitteln unterstützt. Manche fragen, ob sich der Staat das leisten sollte.",
+      instruction:
+        "Verfassen Sie eine argumentative Stellungnahme. Erörtern Sie, ob Kultur mit Steuergeld gefördert werden sollte, wägen Sie Gegenargumente ab und begründen Sie Ihre Sichtweise.",
+      wordMin: 250,
+      wordMax: 380,
+    },
+    guidanceNote: "Denken Sie an den Wert kultureller Teilhabe gegenüber der Frage nach Prioritäten öffentlicher Mittel.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SCHRIFTLICHER_AUSDRUCK,
+    taskType: "TELC_C1H_SA_ESSAY",
+    title: "Stellungnahme: Weniger Einwegverpackungen",
+    prompt: "Schreiben Sie einen strukturierten Text (circa 300 Wörter).",
+    difficulty: "CORE",
+    topicTag: "umwelt",
+    timeLimitSeconds: 4200,
+    payload: {
+      situation:
+        "Um Abfall zu verringern, wird vorgeschlagen, Einwegverpackungen stärker zu besteuern und Mehrwegsysteme verpflichtend zu machen.",
+      instruction:
+        "Verfassen Sie eine Stellungnahme. Erörtern Sie Vor- und Nachteile solcher Maßnahmen für Verbraucher und Handel und begründen Sie, ob Sie sie befürworten.",
+      wordMin: 250,
+      wordMax: 380,
+    },
+    guidanceNote: "Wägen Sie Umweltnutzen gegen praktische Umsetzbarkeit und Kosten ab.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SCHRIFTLICHER_AUSDRUCK,
+    taskType: "TELC_C1H_SA_ESSAY",
+    title: "Stellungnahme: Grünflächen in der Stadt",
+    prompt: "Schreiben Sie einen strukturierten Text (circa 300 Wörter).",
+    difficulty: "CORE",
+    topicTag: "umwelt",
+    timeLimitSeconds: 4200,
+    payload: {
+      situation:
+        "Eine Stadt möchte mehr Parks und begrünte Flächen schaffen. Dafür müssten jedoch teils Parkplätze oder Bauflächen weichen.",
+      instruction:
+        "Verfassen Sie eine argumentative Stellungnahme. Erörtern Sie Nutzen und mögliche Nachteile von mehr Grünflächen und begründen Sie, welchen Weg Sie für sinnvoll halten.",
+      wordMin: 250,
+      wordMax: 380,
+    },
+    guidanceNote: "Konkrete Abwägungen (Klima, Erholung vs. Wohnraum, Verkehr) wirken überzeugender als Allgemeinplätze.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SCHRIFTLICHER_AUSDRUCK,
+    taskType: "TELC_C1H_SA_ESSAY",
+    title: "Stellungnahme: Soziale Netzwerke stärker regulieren",
+    prompt: "Schreiben Sie einen strukturierten Text (circa 300 Wörter).",
+    difficulty: "STRETCH",
+    topicTag: "medien",
+    timeLimitSeconds: 4200,
+    payload: {
+      situation:
+        "Angesichts von Falschmeldungen wird gefordert, soziale Netzwerke gesetzlich stärker zu regulieren. Kritiker warnen vor Eingriffen in die Meinungsfreiheit.",
+      instruction:
+        "Verfassen Sie eine Stellungnahme. Erörtern Sie, wie sich der Schutz vor Falschinformation und die Meinungsfreiheit gegenüberstehen, und begründen Sie eine abgewogene Position.",
+      wordMin: 250,
+      wordMax: 380,
+    },
+    guidanceNote: "Das Spannungsfeld Schutz ↔ Freiheit ist der Kern — vermeiden Sie einseitige Lösungen.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SCHRIFTLICHER_AUSDRUCK,
+    taskType: "TELC_C1H_SA_ESSAY",
+    title: "Stellungnahme: Die Vier-Tage-Woche",
+    prompt: "Schreiben Sie einen strukturierten Text (circa 300 Wörter).",
+    difficulty: "CORE",
+    topicTag: "arbeit",
+    timeLimitSeconds: 4200,
+    payload: {
+      situation:
+        "Einige Unternehmen erproben eine Arbeitswoche von vier Tagen bei gleichem Lohn. Die Ergebnisse werden unterschiedlich bewertet.",
+      instruction:
+        "Verfassen Sie eine argumentative Stellungnahme. Erörtern Sie Chancen und Grenzen der Vier-Tage-Woche für verschiedene Branchen und begründen Sie Ihre eigene Einschätzung.",
+      wordMin: 250,
+      wordMax: 380,
+    },
+    guidanceNote: "Unterscheiden Sie Branchen mit festen Schichten von solchen mit flexibler Projektarbeit.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SCHRIFTLICHER_AUSDRUCK,
+    taskType: "TELC_C1H_SA_ESSAY",
+    title: "Stellungnahme: Ehrenamt und Gesellschaft",
+    prompt: "Schreiben Sie einen strukturierten Text (circa 300 Wörter).",
+    difficulty: "CORE",
+    topicTag: "gesellschaft",
+    timeLimitSeconds: 4200,
+    payload: {
+      situation:
+        "Viele wichtige Aufgaben, von der Feuerwehr bis zur Nachhilfe, werden ehrenamtlich erfüllt. Es wird diskutiert, wie sich freiwilliges Engagement fördern lässt.",
+      instruction:
+        "Verfassen Sie eine Stellungnahme. Erörtern Sie, welche Bedeutung ehrenamtliches Engagement hat und wie man es unterstützen könnte, und begründen Sie Ihre Vorschläge.",
+      wordMin: 250,
+      wordMax: 380,
+    },
+    guidanceNote: "Konkrete Fördervorschläge (Zeit, Anerkennung, Ausbildung) sind überzeugender als reine Appelle.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SCHRIFTLICHER_AUSDRUCK,
+    taskType: "TELC_C1H_SA_ESSAY",
+    title: "Stellungnahme: Lebenslanges Lernen",
+    prompt: "Schreiben Sie einen strukturierten Text (circa 300 Wörter).",
+    difficulty: "STRETCH",
+    topicTag: "bildung",
+    timeLimitSeconds: 4200,
+    payload: {
+      situation:
+        "Weil sich Berufe rasch verändern, wird gefordert, dass Menschen sich ihr Leben lang weiterbilden. Wer dafür Zeit und Kosten tragen soll, ist umstritten.",
+      instruction:
+        "Verfassen Sie eine argumentative Stellungnahme. Erörtern Sie die Bedeutung lebenslangen Lernens und die Frage der Verantwortung, gehen Sie auf einen Einwand ein und begründen Sie Ihre Position.",
+      wordMin: 250,
+      wordMax: 380,
+    },
+    guidanceNote: "Verteilen Sie die Verantwortung differenziert: Einzelne, Arbeitgeber, Staat — mit Begründung.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.SCHRIFTLICHER_AUSDRUCK,
+    taskType: "TELC_C1H_SA_ESSAY",
+    title: "Stellungnahme: Wissenschaft und Öffentlichkeit",
+    prompt: "Schreiben Sie einen strukturierten Text (circa 300 Wörter).",
+    difficulty: "STRETCH",
+    topicTag: "wissenschaft",
+    timeLimitSeconds: 4200,
+    payload: {
+      situation:
+        "Von Forschenden wird zunehmend erwartet, ihre Ergebnisse einer breiten Öffentlichkeit verständlich zu erklären. Manche sehen darin eine Pflicht, andere eine Ablenkung von der eigentlichen Arbeit.",
+      instruction:
+        "Verfassen Sie eine argumentative Stellungnahme. Erörtern Sie, ob und in welchem Maße Forschende zur Vermittlung ihrer Arbeit verpflichtet sind, gehen Sie auf einen Gegeneinwand ein und begründen Sie Ihre Position.",
+      wordMin: 250,
+      wordMax: 380,
+    },
+    guidanceNote: "Wägen Sie den gesellschaftlichen Nutzen der Vermittlung gegen die begrenzte Zeit für Forschung ab.",
+  },
 
   // ------------------------------------------------------------- MUENDLICHER_AUSDRUCK
   {
