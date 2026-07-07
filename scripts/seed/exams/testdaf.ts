@@ -1982,4 +1982,244 @@ export const ITEMS: ExamItemInput[] = [
     },
     guidanceNote: "Strukturieren Sie: erst Ziel, dann Termin, dann Anreise. „Ich schlage vor, dass wir …“ hilft.",
   },
+  {
+    exam: "TESTDAF",
+    level: L,
+    section: SECTION.MUENDLICHER_AUSDRUCK,
+    taskType: "TESTDAF_MA_DESCRIBE",
+    title: "Eine Grafik beschreiben: Verkehrsmittel zur Uni",
+    prompt: "Bereiten Sie sich kurz vor und sprechen Sie dann.",
+    difficulty: "CORE",
+    topicTag: "studium",
+    timeLimitSeconds: 180,
+    payload: {
+      situation:
+        "In einem Seminar sollen Sie eine Grafik beschreiben, die zeigt, wie Studierende zur Universität kommen. Am häufigsten wird das Fahrrad genutzt, gefolgt von Bus und Bahn; nur wenige kommen mit dem Auto.",
+      instruction:
+        "Beschreiben Sie den Aufbau der Grafik und die wichtigsten Angaben. Nennen Sie das am häufigsten und das am seltensten genutzte Verkehrsmittel.",
+      prepSeconds: 60,
+      speakSeconds: 90,
+    },
+    guidanceNote: "Redemittel: „An erster Stelle steht …“, „danach folgt …“, „am seltensten …“.",
+  },
+  {
+    exam: "TESTDAF",
+    level: L,
+    section: SECTION.MUENDLICHER_AUSDRUCK,
+    taskType: "TESTDAF_MA_OPINION",
+    title: "Stellung nehmen: Prüfungen oder Hausarbeiten",
+    prompt: "Bereiten Sie sich kurz vor und sprechen Sie dann.",
+    difficulty: "STRETCH",
+    topicTag: "bildung",
+    timeLimitSeconds: 180,
+    payload: {
+      situation:
+        "In einem Gespräch schlägt eine Kommilitonin vor, Klausuren durch Hausarbeiten zu ersetzen, weil man dabei mehr lerne. Sie sind nicht sicher, ob das für jedes Fach passt.",
+      instruction:
+        "Sagen Sie Ihre Meinung dazu. Nennen Sie mindestens zwei Argumente und gehen Sie auf die Ansicht Ihrer Kommilitonin ein.",
+      prepSeconds: 60,
+      speakSeconds: 90,
+    },
+    guidanceNote: "Differenzieren Sie nach Fach: „In manchen Fächern … in anderen dagegen …“.",
+  },
+  {
+    exam: "TESTDAF",
+    level: L,
+    section: SECTION.MUENDLICHER_AUSDRUCK,
+    taskType: "TESTDAF_MA_ADVISE",
+    title: "Einen Rat geben: Auslandssemester",
+    prompt: "Bereiten Sie sich kurz vor und sprechen Sie dann.",
+    difficulty: "CORE",
+    topicTag: "studium",
+    timeLimitSeconds: 150,
+    payload: {
+      situation:
+        "Ein Freund überlegt, ein Auslandssemester zu machen, hat aber Sorge, dadurch Zeit zu verlieren. Er fragt Sie um Rat.",
+      instruction:
+        "Geben Sie ihm einen Rat. Nennen Sie Vor- und Nachteile eines Auslandssemesters und begründen Sie, was Sie ihm empfehlen würden.",
+      prepSeconds: 45,
+      speakSeconds: 75,
+    },
+    guidanceNote: "„An deiner Stelle würde ich …, weil …“ verbindet Rat und Begründung.",
+  },
+  {
+    exam: "TESTDAF",
+    level: L,
+    section: SECTION.MUENDLICHER_AUSDRUCK,
+    taskType: "TESTDAF_MA_PLAN",
+    title: "Etwas gemeinsam planen: Abschiedsfeier",
+    prompt: "Bereiten Sie sich kurz vor und sprechen Sie dann.",
+    difficulty: "CORE",
+    topicTag: "studium",
+    timeLimitSeconds: 150,
+    payload: {
+      situation:
+        "Ihre Lerngruppe möchte für eine beliebte Dozentin, die die Universität verlässt, eine kleine Abschiedsfeier organisieren. Es geht um Ort, Zeitpunkt und ein passendes Geschenk.",
+      instruction:
+        "Machen Sie Vorschläge zur Planung. Nennen Sie einen Ort, einen Zeitpunkt und eine Geschenkidee und begründen Sie Ihre Vorschläge.",
+      prepSeconds: 45,
+      speakSeconds: 75,
+    },
+    guidanceNote: "Ordnen Sie Ihre Vorschläge: „Zunächst zum Ort … Was den Zeitpunkt angeht … Als Geschenk …“.",
+  },
+  {
+    exam: "TESTDAF",
+    level: L,
+    section: SECTION.MUENDLICHER_AUSDRUCK,
+    taskType: "TESTDAF_MA_DESCRIBE",
+    title: "Eine Grafik beschreiben: Nutzung der Bibliothek",
+    prompt: "Bereiten Sie sich kurz vor und sprechen Sie dann.",
+    difficulty: "FOUNDATION",
+    topicTag: "studium",
+    timeLimitSeconds: 180,
+    payload: {
+      situation:
+        "Sie sollen eine Grafik beschreiben, die zeigt, zu welchen Tageszeiten die Universitätsbibliothek besonders voll ist. Am stärksten besucht ist sie am späten Nachmittag, am ruhigsten am frühen Morgen.",
+      instruction:
+        "Beschreiben Sie, was die Grafik darstellt. Nennen Sie die Zeit mit den meisten und die Zeit mit den wenigsten Besuchern.",
+      prepSeconds: 60,
+      speakSeconds: 90,
+    },
+    guidanceNote: "Zeitangaben klar benennen: „am frühen Morgen“, „gegen Mittag“, „am späten Nachmittag“.",
+  },
+  {
+    exam: "TESTDAF",
+    level: L,
+    section: SECTION.MUENDLICHER_AUSDRUCK,
+    taskType: "TESTDAF_MA_OPINION",
+    title: "Stellung nehmen: Schuluniform",
+    prompt: "Bereiten Sie sich kurz vor und sprechen Sie dann.",
+    difficulty: "CORE",
+    topicTag: "gesellschaft",
+    timeLimitSeconds: 180,
+    payload: {
+      situation:
+        "In einem Gespräch findet ein Freund, dass Schuluniformen eine gute Idee wären, weil sie Unterschiede verringern. Sie sehen das nicht ganz so.",
+      instruction:
+        "Sagen Sie Ihre Meinung zu Schuluniformen. Nennen Sie zwei Argumente und reagieren Sie auf die Ansicht Ihres Freundes.",
+      prepSeconds: 60,
+      speakSeconds: 90,
+    },
+    guidanceNote: "„Ich sehe das etwas anders, weil …“ leitet höflich eine Gegenposition ein.",
+  },
+  {
+    exam: "TESTDAF",
+    level: L,
+    section: SECTION.MUENDLICHER_AUSDRUCK,
+    taskType: "TESTDAF_MA_ADVISE",
+    title: "Einen Rat geben: Prüfungsangst",
+    prompt: "Bereiten Sie sich kurz vor und sprechen Sie dann.",
+    difficulty: "STRETCH",
+    topicTag: "studium",
+    timeLimitSeconds: 150,
+    payload: {
+      situation:
+        "Eine Kommilitonin erzählt Ihnen, dass sie vor Prüfungen so nervös wird, dass sie kaum schlafen kann. Sie bittet Sie um einen Rat.",
+      instruction:
+        "Geben Sie ihr einen Rat. Machen Sie mindestens zwei Vorschläge, wie sie mit der Nervosität umgehen kann, und begründen Sie diese.",
+      prepSeconds: 45,
+      speakSeconds: 75,
+    },
+    guidanceNote: "Konkrete Tipps (Zeitplan, Pausen, Atmung) wirken hilfreicher als allgemeine Beruhigung.",
+  },
+  {
+    exam: "TESTDAF",
+    level: L,
+    section: SECTION.MUENDLICHER_AUSDRUCK,
+    taskType: "TESTDAF_MA_PLAN",
+    title: "Etwas gemeinsam planen: Lernwochenende",
+    prompt: "Bereiten Sie sich kurz vor und sprechen Sie dann.",
+    difficulty: "CORE",
+    topicTag: "studium",
+    timeLimitSeconds: 150,
+    payload: {
+      situation:
+        "Ihre Lerngruppe möchte vor den Prüfungen ein gemeinsames Lernwochenende machen. Zu klären sind Ort, Aufteilung der Themen und Pausen.",
+      instruction:
+        "Machen Sie Vorschläge zur Organisation. Nennen Sie einen Ort, eine Idee zur Aufteilung der Themen und einen Vorschlag zu den Pausen und begründen Sie sie.",
+      prepSeconds: 45,
+      speakSeconds: 75,
+    },
+    guidanceNote: "„Ich schlage vor, dass jeder ein Thema vorbereitet“ zeigt konkrete Planung.",
+  },
+  {
+    exam: "TESTDAF",
+    level: L,
+    section: SECTION.MUENDLICHER_AUSDRUCK,
+    taskType: "TESTDAF_MA_DESCRIBE",
+    title: "Eine Grafik beschreiben: Beliebte Studienfächer",
+    prompt: "Bereiten Sie sich kurz vor und sprechen Sie dann.",
+    difficulty: "CORE",
+    topicTag: "bildung",
+    timeLimitSeconds: 180,
+    payload: {
+      situation:
+        "Sie sollen eine Grafik beschreiben, die zeigt, welche Studienfächer bei Studienanfängern am beliebtesten sind. An der Spitze stehen Wirtschaft und Informatik, weniger häufig gewählt werden geisteswissenschaftliche Fächer.",
+      instruction:
+        "Beschreiben Sie, was die Grafik zeigt. Nennen Sie die beliebtesten und die selteneren Fächer und beschreiben Sie kurz den Gesamteindruck.",
+      prepSeconds: 60,
+      speakSeconds: 90,
+    },
+    guidanceNote: "Vergleichen Sie: „deutlich häufiger als …“, „im Vergleich dazu seltener …“.",
+  },
+  {
+    exam: "TESTDAF",
+    level: L,
+    section: SECTION.MUENDLICHER_AUSDRUCK,
+    taskType: "TESTDAF_MA_OPINION",
+    title: "Stellung nehmen: Rauchfreier Campus",
+    prompt: "Bereiten Sie sich kurz vor und sprechen Sie dann.",
+    difficulty: "CORE",
+    topicTag: "gesundheit",
+    timeLimitSeconds: 180,
+    payload: {
+      situation:
+        "An Ihrer Universität wird überlegt, das gesamte Gelände rauchfrei zu machen. Ein Bekannter findet das übertrieben, weil dann niemand mehr in der Pause rauchen dürfe.",
+      instruction:
+        "Sagen Sie Ihre Meinung zu einem rauchfreien Campus. Nennen Sie zwei Argumente und gehen Sie auf den Einwand Ihres Bekannten ein.",
+      prepSeconds: 60,
+      speakSeconds: 90,
+    },
+    guidanceNote: "Wägen Sie Gesundheitsschutz gegen persönliche Freiheit ab und beziehen Sie klar Position.",
+  },
+  {
+    exam: "TESTDAF",
+    level: L,
+    section: SECTION.MUENDLICHER_AUSDRUCK,
+    taskType: "TESTDAF_MA_ADVISE",
+    title: "Einen Rat geben: allein oder in einer WG wohnen",
+    prompt: "Bereiten Sie sich kurz vor und sprechen Sie dann.",
+    difficulty: "FOUNDATION",
+    topicTag: "wohnen",
+    timeLimitSeconds: 150,
+    payload: {
+      situation:
+        "Ein neuer Student weiß nicht, ob er allein oder in einer Wohngemeinschaft wohnen soll. Er fragt Sie um Ihre Meinung.",
+      instruction:
+        "Geben Sie ihm einen Rat. Vergleichen Sie kurz beide Möglichkeiten und begründen Sie, was Sie empfehlen würden.",
+      prepSeconds: 45,
+      speakSeconds: 75,
+    },
+    guidanceNote: "„Es kommt darauf an, ob du lieber Ruhe oder Gesellschaft hast“ zeigt Abwägung.",
+  },
+  {
+    exam: "TESTDAF",
+    level: L,
+    section: SECTION.MUENDLICHER_AUSDRUCK,
+    taskType: "TESTDAF_MA_PLAN",
+    title: "Etwas gemeinsam planen: Willkommensabend",
+    prompt: "Bereiten Sie sich kurz vor und sprechen Sie dann.",
+    difficulty: "CORE",
+    topicTag: "studium",
+    timeLimitSeconds: 150,
+    payload: {
+      situation:
+        "Ihre Fachschaft möchte einen Willkommensabend für die neuen Erstsemester organisieren. Zu besprechen sind Programm, Ort und wie man die Neuen erreicht.",
+      instruction:
+        "Machen Sie Vorschläge zur Planung. Nennen Sie eine Programmidee, einen Ort und einen Weg, die Erstsemester einzuladen, und begründen Sie Ihre Vorschläge.",
+      prepSeconds: 45,
+      speakSeconds: 75,
+    },
+    guidanceNote: "Denken Sie an die Zielgruppe: Wie erreicht man neue Studierende am besten?",
+  },
 ];
