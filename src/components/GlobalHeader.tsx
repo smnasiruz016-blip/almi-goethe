@@ -49,15 +49,18 @@ export function GlobalHeader() {
           <span className="text-xl font-semibold tracking-tight text-almi-ink">AlmiGoethe</span>
         </Link>
 
+        {/* Nav-typography standard: link text bold (600) + one step larger
+            (text-base). Item spacing tightened (gap-x-4) so the strip still
+            holds 2 rows at 1366px without a 3rd. See reference nav-typography. */}
         <nav
           aria-label="Family navigation"
-          className="hidden flex-1 items-center justify-end gap-x-5 gap-y-2 text-sm lg:flex lg:flex-wrap"
+          className="hidden flex-1 items-center justify-end gap-x-4 gap-y-2 text-base lg:flex lg:flex-wrap"
         >
           {FAMILY_NAV.map((item) => (
             <a
               key={item.href}
               href={item.href}
-              className="rounded-sm text-almi-text hover:text-almi-coral focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-almi-coral focus-visible:ring-offset-2 focus-visible:ring-offset-almi-bg"
+              className="rounded-sm text-base font-semibold text-almi-text hover:text-almi-coral focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-almi-coral focus-visible:ring-offset-2 focus-visible:ring-offset-almi-bg"
             >
               {item.label}
             </a>
@@ -66,7 +69,7 @@ export function GlobalHeader() {
             <Link
               key={item.href}
               href={item.href}
-              className="rounded-sm font-medium text-almi-ink hover:text-almi-coral focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-almi-coral focus-visible:ring-offset-2 focus-visible:ring-offset-almi-bg"
+              className="rounded-sm text-base font-semibold text-almi-ink hover:text-almi-coral focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-almi-coral focus-visible:ring-offset-2 focus-visible:ring-offset-almi-bg"
             >
               {item.label}
             </Link>
