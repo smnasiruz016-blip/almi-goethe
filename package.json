@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "prisma generate && prisma migrate deploy && next build && npm run seed:prod",
-    "seed:prod": "tsx scripts/seed/append.ts || echo 'seed:prod skipped (non-fatal)'",
+    "seed:prod": "(tsx scripts/seed/append.ts && tsx scripts/seed/exam-append.ts) || echo 'seed:prod skipped (non-fatal)'",
     "start": "next start",
     "postinstall": "prisma generate",
     "seed:lesen": "tsx scripts/seed/lesen.ts",
@@ -15,7 +15,9 @@
     "seed:sprechen": "tsx scripts/seed/sprechen.ts",
     "seed:all": "npm run seed:lesen && npm run seed:hoeren && npm run seed:schreiben && npm run seed:sprechen",
     "seed:append": "tsx scripts/seed/append.ts",
-    "validate:seed": "tsx scripts/validate-seed.ts"
+    "seed:exams": "tsx scripts/seed/exam-append.ts",
+    "validate:seed": "tsx scripts/validate-seed.ts",
+    "validate:exam-seed": "tsx scripts/validate-exam-seed.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.91.1",

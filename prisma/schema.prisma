@@ -81,6 +81,8 @@ model User {
   passwordResetTokens PasswordResetToken[]
   goetheAttempts      GoetheAttempt[]
   goetheSessions      GoetheSession[]
+  examAttempts        ExamAttempt[]
+  examSessions        ExamSession[]
   reviews             Review[]
 
   @@index([email])
@@ -344,4 +346,121 @@ model GoetheSession {
   attempts GoetheAttempt[]
 
   @@index([userId, status, startedAt])
+}
+
+// ===================== Additional German exams: TestDaF + telc =====================
+// Separate ENGINES added ALONGSIDE the untouched Goethe-Zertifikat item bank
+// (GoetheItem / GoetheAttempt / GoetheSession stay exactly as they are — this is a
+// live product with ~112K indexed pages + live billing; no migration for cosmetic
+// unification). Each exam owns its own scale in src/lib/exams/scoring/* and they are
+// NEVER blended:
+//   • TestDaF — four sections, each 0–20 points → a TestDaF-Niveaustufe (TDN 3/4/5,
+//     or "unter TDN 3"). NO total, NO pass/fail. (The network's fifth scoring philosophy.)
+//   • telc C1 Hochschule — LV/SB/HV/SA (written) + Sprechen (oral); pass = ≥60% overall
+//     AND ≥60% in each part; modular retake.
+//   • telc B1 — written 225 / oral 75; pass PER-PART ≥60% (135 / 45); modular.
+//   • telc B2 — %-weighted subtests; exact pass threshold pending official quote (verified:false).
+// `level` and `section` are STRINGS: their vocabularies differ per exam, so the ENGINE
+// code (not the DB enum) owns the section list + scoring rules. All content is ORIGINAL
+// German, never copied from telc / g.a.s.t. / TestDaF-Institut. Every `result` is a
+// practice estimate — never an official exam result. Reuses the generic Goethe*
+// enums (Difficulty / AttemptStatus / SessionMode / SessionStatus).
+
+enum GermanExam {
+  TESTDAF
+  TELC_B1
+  TELC_B2
+  TELC_C1_HOCHSCHULE
+}
+
+model ExamItem {
+  id               String           @id @default(cuid())
+  exam             GermanExam
+  level            String //          engine vocabulary — TestDaF single band; telc "B1"/"B2"/"C1H"
+  section          String //          e.g. LESEVERSTEHEN / HOERVERSTEHEN / SPRACHBAUSTEINE / SCHRIFTLICHER_AUSDRUCK / MUENDLICHER_AUSDRUCK
+  taskType         String //          engine-specific task key (owned by the scoring module)
+  difficulty       GoetheDifficulty @default(CORE)
+  title            String
+  prompt           String           @db.Text
+  // Task-specific stimulus + (for objective tasks) the server-side answer key,
+  // never sent raw to the client. Shape validated in the per-exam engine code.
+  payload          Json
+  guidanceNote     String?          @db.Text
+  timeLimitSeconds Int              @default(0)
+  topicTag         String           @default("general")
+  active           Boolean          @default(true)
+  createdAt        DateTime         @default(now())
+  updatedAt        DateTime         @updatedAt
+
+  attempts ExamAttempt[]
+
+  @@unique([exam, level, section, title])
+  @@index([exam, level, section, active])
+}
+
+model ExamAttempt {
+  id      String              @id @default(cuid())
+  userId  String
+  itemId  String
+  exam    GermanExam
+  level   String
+  section String
+  status  GoetheAttemptStatus @default(IN_PROGRESS)
+
+  // The user's raw response; shape depends on the engine/taskType.
+  response Json @default("{}")
+
+  // Engine read-out — NEVER an official result. Shapes per engine:
+  //   TESTDAF { section, points: 0..20, tdn: "5"|"4"|"3"|"under", cefr, note }  — NO total, NO pass/fail
+  //   TELC_*  { section, pointsEst: [lo, hi], percent, partVerdict, passThreshold?, thresholdVerified }
+  result Json?
+
+  // AI trait feedback for productive tasks (Schreiben / Sprechen); qualitative, no fake score.
+  feedback Json?
+
+  aiModel   String?
+  costCents Int?
+  latencyMs Int?
+
+  sessionId   String?
+  sessionStep Int?
+
+  timeSpentSeconds Int       @default(0)
+  startedAt        DateTime  @default(now())
+  submittedAt      DateTime?
+  updatedAt        DateTime  @updatedAt
+
+  user    User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  item    ExamItem     @relation(fields: [itemId], references: [id], onDelete: Cascade)
+  session ExamSession? @relation(fields: [sessionId], references: [id], onDelete: SetNull)
+
+  @@index([userId, exam, status])
+  @@index([itemId])
+  @@index([sessionId, sessionStep])
+}
+
+model ExamSession {
+  id     String @id @default(cuid())
+  userId String
+
+  mode              GoetheSessionMode
+  exam              GermanExam
+  level             String
+  section           String? //           set for PRACTICE_SET; null for a MOCK (all sections of that exam)
+  targetCount       Int
+  currentStep       Int                 @default(0)
+  currentDifficulty GoetheDifficulty    @default(CORE)
+  plan              Json?
+  status            GoetheSessionStatus @default(IN_PROGRESS)
+  // Aggregate practice read-out for a MOCK, per the relevant engine (never official).
+  result            Json?
+
+  startedAt   DateTime  @default(now())
+  completedAt DateTime?
+  updatedAt   DateTime  @updatedAt
+
+  user     User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  attempts ExamAttempt[]
+
+  @@index([userId, exam, status])
 }
