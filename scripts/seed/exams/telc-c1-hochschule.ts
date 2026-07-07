@@ -2718,4 +2718,304 @@ export const ITEMS: ExamItemInput[] = [
     guidanceNote:
       "Gliedern Sie klar: Einleitung – Vorteile – Nachteile – Fazit. Redemittel: „Zunächst …“, „Ein weiterer Aspekt …“, „Abschließend …“.",
   },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.MUENDLICHER_AUSDRUCK,
+    taskType: "TELC_C1H_MA_PRESENT",
+    title: "Kurzvortrag: Anwesenheitspflicht an der Universität",
+    prompt: "Bereiten Sie einen kurzen Vortrag vor und sprechen Sie dann.",
+    difficulty: "CORE",
+    topicTag: "bildung",
+    timeLimitSeconds: 240,
+    payload: {
+      situation:
+        "Ihr Thema lautet: Sollte an Universitäten eine allgemeine Anwesenheitspflicht in Seminaren gelten?",
+      instruction:
+        "Halten Sie einen gegliederten Vortrag. Führen Sie in das Thema ein, nennen Sie Argumente für und gegen eine Anwesenheitspflicht und schließen Sie mit einer begründeten Empfehlung.",
+      prepSeconds: 120,
+      speakSeconds: 120,
+    },
+    guidanceNote: "Gliedern Sie: Einleitung – Pro – Kontra – Fazit. Konnektoren zeigen Ihr Niveau.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.MUENDLICHER_AUSDRUCK,
+    taskType: "TELC_C1H_MA_PRESENT",
+    title: "Kurzvortrag: Ein Studium im Ausland",
+    prompt: "Bereiten Sie einen kurzen Vortrag vor und sprechen Sie dann.",
+    difficulty: "CORE",
+    topicTag: "studium",
+    timeLimitSeconds: 240,
+    payload: {
+      situation:
+        "Ihr Thema lautet: Welche Vor- und Nachteile hat ein Studienaufenthalt im Ausland?",
+      instruction:
+        "Halten Sie einen gegliederten Vortrag. Stellen Sie das Thema vor, erörtern Sie Chancen und mögliche Schwierigkeiten und schließen Sie mit Ihrer eigenen Einschätzung.",
+      prepSeconds: 120,
+      speakSeconds: 120,
+    },
+    guidanceNote: "Nennen Sie konkrete Aspekte: Sprache, Kosten, Anerkennung, persönliche Entwicklung.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.MUENDLICHER_AUSDRUCK,
+    taskType: "TELC_C1H_MA_PRESENT",
+    title: "Kurzvortrag: Verständliche Wissenschaft",
+    prompt: "Bereiten Sie einen kurzen Vortrag vor und sprechen Sie dann.",
+    difficulty: "STRETCH",
+    topicTag: "wissenschaft",
+    timeLimitSeconds: 240,
+    payload: {
+      situation:
+        "Ihr Thema lautet: Sollten Forschende verpflichtet sein, ihre Arbeit allgemein verständlich zu erklären?",
+      instruction:
+        "Halten Sie einen gegliederten Vortrag. Führen Sie in die Frage ein, nennen Sie Argumente dafür und dagegen und schließen Sie mit einer begründeten Position.",
+      prepSeconds: 120,
+      speakSeconds: 120,
+    },
+    guidanceNote: "Wägen Sie gesellschaftlichen Nutzen gegen den Zeitaufwand für die Forschung ab.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.MUENDLICHER_AUSDRUCK,
+    taskType: "TELC_C1H_MA_PRESENT",
+    title: "Kurzvortrag: Fremdsprachen im Studium",
+    prompt: "Bereiten Sie einen kurzen Vortrag vor und sprechen Sie dann.",
+    difficulty: "CORE",
+    topicTag: "bildung",
+    timeLimitSeconds: 240,
+    payload: {
+      situation:
+        "Ihr Thema lautet: Wie wichtig ist das Beherrschen mehrerer Fremdsprachen im Studium und Beruf?",
+      instruction:
+        "Halten Sie einen gegliederten Vortrag. Stellen Sie das Thema vor, nennen Sie Argumente und Beispiele und schließen Sie mit Ihrer eigenen Einschätzung.",
+      prepSeconds: 120,
+      speakSeconds: 120,
+    },
+    guidanceNote: "Ein konkretes Beispiel aus Studium oder Beruf macht den Vortrag anschaulicher.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.MUENDLICHER_AUSDRUCK,
+    taskType: "TELC_C1H_MA_PRESENT",
+    title: "Kurzvortrag: Gedruckte oder digitale Fachliteratur",
+    prompt: "Bereiten Sie einen kurzen Vortrag vor und sprechen Sie dann.",
+    difficulty: "CORE",
+    topicTag: "medien",
+    timeLimitSeconds: 240,
+    payload: {
+      situation:
+        "Ihr Thema lautet: Sollte man im Studium eher gedruckte oder digitale Fachliteratur nutzen?",
+      instruction:
+        "Halten Sie einen gegliederten Vortrag. Erörtern Sie Vor- und Nachteile beider Formen und schließen Sie mit einer begründeten Empfehlung.",
+      prepSeconds: 120,
+      speakSeconds: 120,
+    },
+    guidanceNote: "Vergleichen Sie klar: Verfügbarkeit, Konzentration, Kosten, Umwelt.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.MUENDLICHER_AUSDRUCK,
+    taskType: "TELC_C1H_MA_PRESENT",
+    title: "Kurzvortrag: Der Nutzen von Gruppenarbeit",
+    prompt: "Bereiten Sie einen kurzen Vortrag vor und sprechen Sie dann.",
+    difficulty: "CORE",
+    topicTag: "bildung",
+    timeLimitSeconds: 240,
+    payload: {
+      situation:
+        "Ihr Thema lautet: Ist Gruppenarbeit im Studium sinnvoll oder eher hinderlich?",
+      instruction:
+        "Halten Sie einen gegliederten Vortrag. Nennen Sie Vor- und Nachteile der Gruppenarbeit und schließen Sie mit Ihrer eigenen Einschätzung.",
+      prepSeconds: 120,
+      speakSeconds: 120,
+    },
+    guidanceNote: "Denken Sie an unterschiedliche Beiträge, Lerneffekte und mögliche Konflikte.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.MUENDLICHER_AUSDRUCK,
+    taskType: "TELC_C1H_MA_PRESENT",
+    title: "Kurzvortrag: Noten oder nur bestanden?",
+    prompt: "Bereiten Sie einen kurzen Vortrag vor und sprechen Sie dann.",
+    difficulty: "STRETCH",
+    topicTag: "bildung",
+    timeLimitSeconds: 240,
+    payload: {
+      situation:
+        "Ihr Thema lautet: Sollten Prüfungen benotet werden oder genügt die Unterscheidung bestanden/nicht bestanden?",
+      instruction:
+        "Halten Sie einen gegliederten Vortrag. Erörtern Sie Argumente für Noten und für ein reines Bestehen und schließen Sie mit einer begründeten Position.",
+      prepSeconds: 120,
+      speakSeconds: 120,
+    },
+    guidanceNote: "Denken Sie an Vergleichbarkeit, Leistungsdruck und Motivation.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.MUENDLICHER_AUSDRUCK,
+    taskType: "TELC_C1H_MA_PRESENT",
+    title: "Kurzvortrag: Praktika im Studium",
+    prompt: "Bereiten Sie einen kurzen Vortrag vor und sprechen Sie dann.",
+    difficulty: "CORE",
+    topicTag: "studium",
+    timeLimitSeconds: 240,
+    payload: {
+      situation:
+        "Ihr Thema lautet: Welche Rolle sollten Praktika während des Studiums spielen?",
+      instruction:
+        "Halten Sie einen gegliederten Vortrag. Nennen Sie Nutzen und mögliche Nachteile von Praktika und schließen Sie mit Ihrer eigenen Einschätzung.",
+      prepSeconds: 120,
+      speakSeconds: 120,
+    },
+    guidanceNote: "Berücksichtigen Sie Praxisbezug, Zeitaufwand und die Frage der Bezahlung.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.MUENDLICHER_AUSDRUCK,
+    taskType: "TELC_C1H_MA_PRESENT",
+    title: "Kurzvortrag: Ranglisten für Universitäten",
+    prompt: "Bereiten Sie einen kurzen Vortrag vor und sprechen Sie dann.",
+    difficulty: "STRETCH",
+    topicTag: "bildung",
+    timeLimitSeconds: 240,
+    payload: {
+      situation:
+        "Ihr Thema lautet: Sind Ranglisten, die Universitäten vergleichen, hilfreich oder irreführend?",
+      instruction:
+        "Halten Sie einen gegliederten Vortrag. Erörtern Sie Vor- und Nachteile solcher Ranglisten und schließen Sie mit einer begründeten Position.",
+      prepSeconds: 120,
+      speakSeconds: 120,
+    },
+    guidanceNote: "Hinterfragen Sie, was gemessen wird und was dabei unberücksichtigt bleibt.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.MUENDLICHER_AUSDRUCK,
+    taskType: "TELC_C1H_MA_PRESENT",
+    title: "Kurzvortrag: Der Wert der Grundlagenforschung",
+    prompt: "Bereiten Sie einen kurzen Vortrag vor und sprechen Sie dann.",
+    difficulty: "STRETCH",
+    topicTag: "wissenschaft",
+    timeLimitSeconds: 240,
+    payload: {
+      situation:
+        "Ihr Thema lautet: Sollte Forschung, deren Nutzen nicht sofort erkennbar ist, öffentlich gefördert werden?",
+      instruction:
+        "Halten Sie einen gegliederten Vortrag. Nennen Sie Argumente für und gegen die Förderung solcher Grundlagenforschung und schließen Sie mit Ihrer begründeten Meinung.",
+      prepSeconds: 120,
+      speakSeconds: 120,
+    },
+    guidanceNote: "Ein Beispiel für später nützliche Grundlagenforschung stärkt Ihre Argumentation.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.MUENDLICHER_AUSDRUCK,
+    taskType: "TELC_C1H_MA_PRESENT",
+    title: "Kurzvortrag: Studienwahl nach Neigung oder Aussicht",
+    prompt: "Bereiten Sie einen kurzen Vortrag vor und sprechen Sie dann.",
+    difficulty: "CORE",
+    topicTag: "studium",
+    timeLimitSeconds: 240,
+    payload: {
+      situation:
+        "Ihr Thema lautet: Sollte man ein Studienfach eher nach persönlicher Neigung oder nach den Berufsaussichten wählen?",
+      instruction:
+        "Halten Sie einen gegliederten Vortrag. Erörtern Sie beide Sichtweisen und schließen Sie mit einer begründeten Empfehlung.",
+      prepSeconds: 120,
+      speakSeconds: 120,
+    },
+    guidanceNote: "Ein Mittelweg (Neigung mit Blick auf Realität) ist oft die tragfähigste Position.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.MUENDLICHER_AUSDRUCK,
+    taskType: "TELC_C1H_MA_PRESENT",
+    title: "Kurzvortrag: Kritisches Denken im Studium",
+    prompt: "Bereiten Sie einen kurzen Vortrag vor und sprechen Sie dann.",
+    difficulty: "STRETCH",
+    topicTag: "bildung",
+    timeLimitSeconds: 240,
+    payload: {
+      situation:
+        "Ihr Thema lautet: Warum ist kritisches Denken im Studium wichtig, und wie lässt es sich fördern?",
+      instruction:
+        "Halten Sie einen gegliederten Vortrag. Erläutern Sie die Bedeutung kritischen Denkens, nennen Sie Wege, es zu fördern, und schließen Sie mit einem Fazit.",
+      prepSeconds: 120,
+      speakSeconds: 120,
+    },
+    guidanceNote: "Konkrete Beispiele (Quellen prüfen, Argumente hinterfragen) machen den Vortrag greifbar.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.MUENDLICHER_AUSDRUCK,
+    taskType: "TELC_C1H_MA_PRESENT",
+    title: "Kurzvortrag: Auslandserfahrung und Beruf",
+    prompt: "Bereiten Sie einen kurzen Vortrag vor und sprechen Sie dann.",
+    difficulty: "CORE",
+    topicTag: "arbeit",
+    timeLimitSeconds: 240,
+    payload: {
+      situation:
+        "Ihr Thema lautet: Wie wertvoll ist Auslandserfahrung für die spätere berufliche Laufbahn?",
+      instruction:
+        "Halten Sie einen gegliederten Vortrag. Nennen Sie Vorteile und mögliche Nachteile von Auslandserfahrung und schließen Sie mit Ihrer eigenen Einschätzung.",
+      prepSeconds: 120,
+      speakSeconds: 120,
+    },
+    guidanceNote: "Denken Sie an Sprachkenntnisse, Selbstständigkeit und interkulturelle Kompetenz.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.MUENDLICHER_AUSDRUCK,
+    taskType: "TELC_C1H_MA_PRESENT",
+    title: "Kurzvortrag: Lebenslanges Lernen",
+    prompt: "Bereiten Sie einen kurzen Vortrag vor und sprechen Sie dann.",
+    difficulty: "CORE",
+    topicTag: "bildung",
+    timeLimitSeconds: 240,
+    payload: {
+      situation:
+        "Ihr Thema lautet: Warum wird lebenslanges Lernen immer wichtiger, und wer sollte dafür Verantwortung tragen?",
+      instruction:
+        "Halten Sie einen gegliederten Vortrag. Erläutern Sie die Bedeutung ständiger Weiterbildung, erörtern Sie die Frage der Verantwortung und schließen Sie mit einer begründeten Position.",
+      prepSeconds: 120,
+      speakSeconds: 120,
+    },
+    guidanceNote: "Verteilen Sie Verantwortung differenziert: Einzelne, Arbeitgeber, Staat.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.MUENDLICHER_AUSDRUCK,
+    taskType: "TELC_C1H_MA_PRESENT",
+    title: "Kurzvortrag: Digitale Werkzeuge beim Lernen",
+    prompt: "Bereiten Sie einen kurzen Vortrag vor und sprechen Sie dann.",
+    difficulty: "CORE",
+    topicTag: "bildung",
+    timeLimitSeconds: 240,
+    payload: {
+      situation:
+        "Ihr Thema lautet: Helfen digitale Werkzeuge beim Lernen oder lenken sie eher ab?",
+      instruction:
+        "Halten Sie einen gegliederten Vortrag. Erörtern Sie Chancen und Risiken digitaler Werkzeuge für das Lernen und schließen Sie mit einer begründeten Empfehlung.",
+      prepSeconds: 120,
+      speakSeconds: 120,
+    },
+    guidanceNote: "Es kommt auf den bewussten Einsatz an — dieser Gedanke trägt ein differenziertes Fazit.",
+  },
 ];
