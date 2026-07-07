@@ -112,6 +112,643 @@ export const ITEMS: ExamItemInput[] = [
     },
     guidanceNote: "„bis Freitag“, „bei starkem Regen“ — Bedingungen und Fristen sind beliebte Fragen.",
   },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.LESEVERSTEHEN,
+    taskType: "TELC_B1_LV_MCQ",
+    title: "Anzeige: Fahrrad zu verkaufen",
+    prompt: "Lesen Sie die Anzeige und beantworten Sie die Fragen.",
+    difficulty: "FOUNDATION",
+    topicTag: "alltag",
+    timeLimitSeconds: 420,
+    payload: {
+      instructions: "Wählen Sie für jede Frage die richtige Antwort (a, b oder c).",
+      passage:
+        "Verkaufe mein gut erhaltenes Damenrad, drei Jahre alt. Es hat sieben Gänge und ist erst kürzlich in der Werkstatt geprüft worden. Neue Reifen sind bereits montiert. Preis: 120 Euro. Ein Fahrradkorb und ein Schloss gehören dazu. Abzuholen am Wochenende in der Gartenstraße. Bei Interesse bitte abends anrufen.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Was wurde am Fahrrad kürzlich gemacht?",
+          options: [
+            { id: "a", text: "Es wurde in der Werkstatt geprüft." },
+            { id: "b", text: "Es wurde neu lackiert." },
+            { id: "c", text: "Es wurde umgebaut." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Was gehört zum Preis dazu?",
+          options: [
+            { id: "a", text: "ein Korb und ein Schloss" },
+            { id: "b", text: "ein Helm" },
+            { id: "c", text: "eine Luftpumpe" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Wann kann man das Rad abholen?",
+          options: [
+            { id: "a", text: "am Wochenende" },
+            { id: "b", text: "nur montags" },
+            { id: "c", text: "jederzeit" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "In Anzeigen sind Preis, Zubehör und Abholung typische Fragen.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.LESEVERSTEHEN,
+    taskType: "TELC_B1_LV_MCQ",
+    title: "E-Mail: Einladung zum Grillfest",
+    prompt: "Lesen Sie die E-Mail und beantworten Sie die Fragen.",
+    difficulty: "FOUNDATION",
+    topicTag: "alltag",
+    timeLimitSeconds: 420,
+    payload: {
+      instructions: "Wählen Sie für jede Frage die richtige Antwort (a, b oder c).",
+      passage:
+        "Hallo zusammen, am Samstag mache ich ein kleines Grillfest in meinem Garten. Es geht um sechs Uhr abends los. Für Fleisch und Salate sorge ich, bringt aber bitte selbst etwas zu trinken mit. Falls es regnet, feiern wir einfach in der Wohnung. Sagt mir bis Donnerstag Bescheid, ob ihr kommt, damit ich genug einkaufen kann. Liebe Grüße, Timo",
+      questions: [
+        {
+          id: "q1",
+          stem: "Worum sollen die Gäste sich selbst kümmern?",
+          options: [
+            { id: "a", text: "um Getränke" },
+            { id: "b", text: "um das Fleisch" },
+            { id: "c", text: "um die Salate" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Was passiert bei Regen?",
+          options: [
+            { id: "a", text: "Man feiert in der Wohnung." },
+            { id: "b", text: "Das Fest fällt aus." },
+            { id: "c", text: "Das Fest wird verschoben." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Bis wann soll man Bescheid sagen?",
+          options: [
+            { id: "a", text: "bis Donnerstag" },
+            { id: "b", text: "bis Samstag" },
+            { id: "c", text: "bis Freitag" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Merken Sie sich, wer was mitbringt und welche Fristen genannt werden.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.LESEVERSTEHEN,
+    taskType: "TELC_B1_LV_MCQ",
+    title: "Aushang: Regeln für die Waschküche",
+    prompt: "Lesen Sie den Aushang und beantworten Sie die Fragen.",
+    difficulty: "CORE",
+    topicTag: "wohnen",
+    timeLimitSeconds: 420,
+    payload: {
+      instructions: "Wählen Sie für jede Frage die richtige Antwort (a, b oder c).",
+      passage:
+        "Liebe Mieterinnen und Mieter, bitte tragen Sie Ihre Waschzeiten in den Plan an der Tür ein. Jede Wohnung darf die Maschine höchstens zweimal pro Woche nutzen. Nach dem Waschen reinigen Sie bitte das Flusensieb und wischen die Maschine kurz aus. Nach 22 Uhr soll aus Rücksicht auf die Nachbarn nicht mehr gewaschen werden. Vielen Dank. Die Hausverwaltung",
+      questions: [
+        {
+          id: "q1",
+          stem: "Wie oft darf jede Wohnung die Maschine pro Woche nutzen?",
+          options: [
+            { id: "a", text: "höchstens zweimal" },
+            { id: "b", text: "beliebig oft" },
+            { id: "c", text: "nur einmal" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Was soll man nach dem Waschen tun?",
+          options: [
+            { id: "a", text: "das Flusensieb reinigen und die Maschine auswischen" },
+            { id: "b", text: "die Maschine abschließen" },
+            { id: "c", text: "nichts weiter" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Was gilt nach 22 Uhr?",
+          options: [
+            { id: "a", text: "Man soll nicht mehr waschen." },
+            { id: "b", text: "Man darf doppelt so lange waschen." },
+            { id: "c", text: "Man muss den Plan neu schreiben." },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Hausordnungen enthalten oft Zeiten und Pflichten — genau darauf zielen die Fragen.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.LESEVERSTEHEN,
+    taskType: "TELC_B1_LV_MCQ",
+    title: "Anzeige: Nachhilfe gesucht",
+    prompt: "Lesen Sie die Anzeige und beantworten Sie die Fragen.",
+    difficulty: "CORE",
+    topicTag: "bildung",
+    timeLimitSeconds: 420,
+    payload: {
+      instructions: "Wählen Sie für jede Frage die richtige Antwort (a, b oder c).",
+      passage:
+        "Wir suchen für unseren Sohn (10. Klasse) Nachhilfe in Mathematik. Der Unterricht soll einmal pro Woche bei uns zu Hause stattfinden, am besten am Nachmittag. Erfahrung mit Schülern ist erwünscht, ein Studium ist nicht nötig. Bezahlung nach Absprache. Bei Interesse schreiben Sie bitte eine kurze Nachricht mit ein paar Angaben zu sich.",
+      questions: [
+        {
+          id: "q1",
+          stem: "In welchem Fach wird Nachhilfe gesucht?",
+          options: [
+            { id: "a", text: "Mathematik" },
+            { id: "b", text: "Deutsch" },
+            { id: "c", text: "Englisch" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Wo soll der Unterricht stattfinden?",
+          options: [
+            { id: "a", text: "bei der Familie zu Hause" },
+            { id: "b", text: "in der Schule" },
+            { id: "c", text: "in einer Bibliothek" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Was wird über ein Studium gesagt?",
+          options: [
+            { id: "a", text: "Es ist nicht nötig." },
+            { id: "b", text: "Es ist Voraussetzung." },
+            { id: "c", text: "Es muss abgeschlossen sein." },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Achten Sie auf „nicht nötig“ — solche Verneinungen werden gern abgefragt.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.LESEVERSTEHEN,
+    taskType: "TELC_B1_LV_MCQ",
+    title: "Information: Kurs an der Volkshochschule",
+    prompt: "Lesen Sie den Text und beantworten Sie die Fragen.",
+    difficulty: "CORE",
+    topicTag: "bildung",
+    timeLimitSeconds: 420,
+    payload: {
+      instructions: "Wählen Sie für jede Frage die richtige Antwort (a, b oder c).",
+      passage:
+        "Der Kochkurs „Einfach vegetarisch“ beginnt am 5. Oktober und findet an sechs Abenden jeweils dienstags statt. Die Zutaten sind im Preis enthalten; bitte bringen Sie nur eine Schürze mit. Der Kurs ist für Anfänger geeignet, Vorkenntnisse sind nicht erforderlich. Eine Anmeldung ist bis eine Woche vor Beginn möglich. Die Teilnehmerzahl ist begrenzt.",
+      questions: [
+        {
+          id: "q1",
+          stem: "An welchem Wochentag findet der Kurs statt?",
+          options: [
+            { id: "a", text: "dienstags" },
+            { id: "b", text: "donnerstags" },
+            { id: "c", text: "montags" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Was müssen die Teilnehmer selbst mitbringen?",
+          options: [
+            { id: "a", text: "eine Schürze" },
+            { id: "b", text: "die Zutaten" },
+            { id: "c", text: "Töpfe" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Für wen ist der Kurs geeignet?",
+          options: [
+            { id: "a", text: "für Anfänger" },
+            { id: "b", text: "nur für Profis" },
+            { id: "c", text: "nur für Kinder" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„im Preis enthalten“ und „nur … mitbringen“ trennen, was gestellt wird und was nicht.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.LESEVERSTEHEN,
+    taskType: "TELC_B1_LV_MCQ",
+    title: "Aushang: Aufzug außer Betrieb",
+    prompt: "Lesen Sie den Aushang und beantworten Sie die Fragen.",
+    difficulty: "FOUNDATION",
+    topicTag: "wohnen",
+    timeLimitSeconds: 420,
+    payload: {
+      instructions: "Wählen Sie für jede Frage die richtige Antwort (a, b oder c).",
+      passage:
+        "Sehr geehrte Bewohner, wegen einer Reparatur ist der Aufzug von Montag bis Mittwoch außer Betrieb. Bitte benutzen Sie in dieser Zeit die Treppe. Wer Hilfe beim Tragen benötigt, kann sich beim Hausmeister melden. Ab Donnerstag steht der Aufzug wieder zur Verfügung. Wir bitten um Ihr Verständnis.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Warum ist der Aufzug außer Betrieb?",
+          options: [
+            { id: "a", text: "wegen einer Reparatur" },
+            { id: "b", text: "wegen eines Stromausfalls" },
+            { id: "c", text: "wegen einer Feier" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "An wen kann man sich bei Bedarf wenden?",
+          options: [
+            { id: "a", text: "an den Hausmeister" },
+            { id: "b", text: "an die Feuerwehr" },
+            { id: "c", text: "an die Nachbarn" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Ab wann funktioniert der Aufzug wieder?",
+          options: [
+            { id: "a", text: "ab Donnerstag" },
+            { id: "b", text: "ab Mittwoch" },
+            { id: "c", text: "ab Montag" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Zeiträume („von Montag bis Mittwoch“, „ab Donnerstag“) sind hier entscheidend.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.LESEVERSTEHEN,
+    taskType: "TELC_B1_LV_MCQ",
+    title: "Notiz: Ein Paket beim Nachbarn",
+    prompt: "Lesen Sie die Notiz und beantworten Sie die Fragen.",
+    difficulty: "FOUNDATION",
+    topicTag: "alltag",
+    timeLimitSeconds: 420,
+    payload: {
+      instructions: "Wählen Sie für jede Frage die richtige Antwort (a, b oder c).",
+      passage:
+        "Liebe Frau Yilmaz, ein Paket für Sie ist heute gekommen, aber Sie waren nicht zu Hause. Ich habe es angenommen und bei mir abgestellt. Sie können es jederzeit abholen, ich bin heute Abend und das ganze Wochenende da. Klingeln Sie einfach. Viele Grüße, Ihr Nachbar aus Wohnung 4.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Was hat der Nachbar gemacht?",
+          options: [
+            { id: "a", text: "Er hat das Paket angenommen." },
+            { id: "b", text: "Er hat das Paket zurückgeschickt." },
+            { id: "c", text: "Er hat das Paket geöffnet." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Wann kann Frau Yilmaz das Paket abholen?",
+          options: [
+            { id: "a", text: "heute Abend und am Wochenende" },
+            { id: "b", text: "nur morgen früh" },
+            { id: "c", text: "erst nächste Woche" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Was soll sie tun, um es abzuholen?",
+          options: [
+            { id: "a", text: "einfach klingeln" },
+            { id: "b", text: "vorher anrufen" },
+            { id: "c", text: "eine E-Mail schreiben" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Kurze Notizen fragen nach Wer, Wann und Wie — lesen Sie diese Angaben genau.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.LESEVERSTEHEN,
+    taskType: "TELC_B1_LV_MCQ",
+    title: "Anzeige: Zimmer in einer WG frei",
+    prompt: "Lesen Sie die Anzeige und beantworten Sie die Fragen.",
+    difficulty: "CORE",
+    topicTag: "wohnen",
+    timeLimitSeconds: 420,
+    payload: {
+      instructions: "Wählen Sie für jede Frage die richtige Antwort (a, b oder c).",
+      passage:
+        "In unserer Dreier-WG wird ab dem 1. November ein Zimmer frei. Das Zimmer ist 16 Quadratmeter groß und möbliert. Die Miete beträgt 350 Euro warm. Wir sind zwei Studentinnen und suchen jemanden, der ordentlich ist und gern gemeinsam kocht. Haustiere sind leider nicht möglich. Wer Interesse hat, kann sich gern zu einem Kennenlernen melden.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Ab wann ist das Zimmer frei?",
+          options: [
+            { id: "a", text: "ab dem 1. November" },
+            { id: "b", text: "ab sofort" },
+            { id: "c", text: "ab dem 1. Oktober" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Was ist in der WG nicht möglich?",
+          options: [
+            { id: "a", text: "Haustiere" },
+            { id: "b", text: "gemeinsames Kochen" },
+            { id: "c", text: "ein möbliertes Zimmer" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Wen suchen die Bewohnerinnen?",
+          options: [
+            { id: "a", text: "jemanden, der ordentlich ist und gern kocht" },
+            { id: "b", text: "jemanden mit Auto" },
+            { id: "c", text: "jemanden, der nie zu Hause ist" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Achten Sie auf „nicht möglich“ und die genannten Wünsche der Mitbewohnerinnen.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.LESEVERSTEHEN,
+    taskType: "TELC_B1_LV_MCQ",
+    title: "Information: Schwimmkurs für Kinder",
+    prompt: "Lesen Sie den Text und beantworten Sie die Fragen.",
+    difficulty: "CORE",
+    topicTag: "freizeit",
+    timeLimitSeconds: 420,
+    payload: {
+      instructions: "Wählen Sie für jede Frage die richtige Antwort (a, b oder c).",
+      passage:
+        "Das Hallenbad bietet in den Ferien einen Schwimmkurs für Kinder von sechs bis zehn Jahren an. Der Kurs dauert zwei Wochen und findet jeden Vormittag von zehn bis elf Uhr statt. Die Kinder sollten noch nicht schwimmen können; genau das lernen sie hier. Bitte bringen Sie Badesachen und ein Handtuch mit. Die Anmeldung erfolgt an der Kasse des Hallenbads.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Für welche Kinder ist der Kurs?",
+          options: [
+            { id: "a", text: "für Kinder von sechs bis zehn Jahren" },
+            { id: "b", text: "für alle Altersgruppen" },
+            { id: "c", text: "nur für Jugendliche" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Was sollen die Kinder im Kurs lernen?",
+          options: [
+            { id: "a", text: "schwimmen" },
+            { id: "b", text: "tauchen für Fortgeschrittene" },
+            { id: "c", text: "Wasserball" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Wo meldet man sich an?",
+          options: [
+            { id: "a", text: "an der Kasse des Hallenbads" },
+            { id: "b", text: "im Internet" },
+            { id: "c", text: "beim Trainer zu Hause" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Alter, Zeiten und Anmeldung sind bei Kursinfos die häufigsten Fragen.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.LESEVERSTEHEN,
+    taskType: "TELC_B1_LV_MCQ",
+    title: "Aushang: Flohmarkt im Hof",
+    prompt: "Lesen Sie den Aushang und beantworten Sie die Fragen.",
+    difficulty: "FOUNDATION",
+    topicTag: "freizeit",
+    timeLimitSeconds: 420,
+    payload: {
+      instructions: "Wählen Sie für jede Frage die richtige Antwort (a, b oder c).",
+      passage:
+        "Am nächsten Sonntag findet in unserem Innenhof ein Flohmarkt statt. Wer einen Stand aufbauen möchte, meldet sich bitte bis Freitag bei Familie Braun in Wohnung 2. Ein Stand kostet nichts, aber jeder räumt seinen Platz danach selbst auf. Beginn ist um zehn Uhr. Für Kaffee und Kuchen ist gesorgt. Wir freuen uns auf einen schönen Tag.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Was kostet ein Stand?",
+          options: [
+            { id: "a", text: "nichts" },
+            { id: "b", text: "zehn Euro" },
+            { id: "c", text: "fünf Euro" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Was muss jeder selbst tun?",
+          options: [
+            { id: "a", text: "seinen Platz danach aufräumen" },
+            { id: "b", text: "Kaffee mitbringen" },
+            { id: "c", text: "Tische stellen" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Bis wann meldet man einen Stand an?",
+          options: [
+            { id: "a", text: "bis Freitag" },
+            { id: "b", text: "bis Sonntag" },
+            { id: "c", text: "bis Samstag" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„kostet nichts, aber …“ verbindet einen Vorteil mit einer Pflicht.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.LESEVERSTEHEN,
+    taskType: "TELC_B1_LV_MCQ",
+    title: "Zeitungsnotiz: Ein neuer Radweg",
+    prompt: "Lesen Sie den Text und beantworten Sie die Fragen.",
+    difficulty: "CORE",
+    topicTag: "verkehr",
+    timeLimitSeconds: 420,
+    payload: {
+      instructions: "Wählen Sie für jede Frage die richtige Antwort (a, b oder c).",
+      passage:
+        "Zwischen dem Stadtzentrum und dem neuen Wohngebiet ist ein durchgehender Radweg fertiggestellt worden. Damit können Radfahrer die Strecke nun sicher zurücklegen, ohne die stark befahrene Hauptstraße zu nutzen. Die Stadt hofft, dass mehr Menschen aufs Rad umsteigen. In einem nächsten Schritt sollen entlang des Weges auch Abstellplätze und Beleuchtung folgen.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Was ist neu fertiggestellt worden?",
+          options: [
+            { id: "a", text: "ein durchgehender Radweg" },
+            { id: "b", text: "eine neue Hauptstraße" },
+            { id: "c", text: "ein Parkhaus" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Was hofft die Stadt?",
+          options: [
+            { id: "a", text: "dass mehr Menschen Rad fahren" },
+            { id: "b", text: "dass mehr Autos fahren" },
+            { id: "c", text: "dass weniger Menschen umziehen" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Was soll als Nächstes folgen?",
+          options: [
+            { id: "a", text: "Abstellplätze und Beleuchtung" },
+            { id: "b", text: "eine neue Buslinie" },
+            { id: "c", text: "ein Schwimmbad" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„In einem nächsten Schritt …“ kündigt zukünftige Pläne an — oft die letzte Frage.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.LESEVERSTEHEN,
+    taskType: "TELC_B1_LV_MCQ",
+    title: "E-Mail: Eine Ware zurückgeben",
+    prompt: "Lesen Sie die E-Mail und beantworten Sie die Fragen.",
+    difficulty: "CORE",
+    topicTag: "alltag",
+    timeLimitSeconds: 420,
+    payload: {
+      instructions: "Wählen Sie für jede Frage die richtige Antwort (a, b oder c).",
+      passage:
+        "Sehr geehrte Damen und Herren, letzte Woche habe ich bei Ihnen eine Jacke bestellt. Leider ist sie zu klein, deshalb möchte ich sie zurückschicken. Könnten Sie mir bitte mitteilen, wie ich dabei vorgehen soll und ob das Rückporto von Ihnen übernommen wird? Über eine baldige Antwort würde ich mich freuen. Mit freundlichen Grüßen, Petra Lang",
+      questions: [
+        {
+          id: "q1",
+          stem: "Warum möchte Frau Lang die Jacke zurückschicken?",
+          options: [
+            { id: "a", text: "Sie ist zu klein." },
+            { id: "b", text: "Sie hat die falsche Farbe." },
+            { id: "c", text: "Sie ist beschädigt." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Wonach fragt sie unter anderem?",
+          options: [
+            { id: "a", text: "ob das Rückporto übernommen wird" },
+            { id: "b", text: "ob es die Jacke in Rot gibt" },
+            { id: "c", text: "wann der Laden öffnet" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Was wünscht sich Frau Lang?",
+          options: [
+            { id: "a", text: "eine baldige Antwort" },
+            { id: "b", text: "einen Gutschein" },
+            { id: "c", text: "einen Termin im Geschäft" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "In Beschwerde- und Anfrage-Mails zählt, was genau gewünscht oder gefragt wird.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.LESEVERSTEHEN,
+    taskType: "TELC_B1_LV_MCQ",
+    title: "Information: Bücherei mit neuen Zeiten",
+    prompt: "Lesen Sie den Text und beantworten Sie die Fragen.",
+    difficulty: "FOUNDATION",
+    topicTag: "alltag",
+    timeLimitSeconds: 420,
+    payload: {
+      instructions: "Wählen Sie für jede Frage die richtige Antwort (a, b oder c).",
+      passage:
+        "Ab dem nächsten Monat ändert unsere Stadtbücherei ihre Öffnungszeiten. Sie hat dann auch samstags von zehn bis vierzehn Uhr geöffnet. Dafür bleibt sie montags geschlossen. Die Ausleihe von Büchern ist weiterhin kostenlos; für Filme wird eine kleine Gebühr erhoben. Wer seinen Ausweis verloren hat, kann an der Theke einen neuen beantragen.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Was ändert sich bei den Öffnungszeiten?",
+          options: [
+            { id: "a", text: "Die Bücherei hat jetzt auch samstags offen." },
+            { id: "b", text: "Sie schließt früher am Abend." },
+            { id: "c", text: "Sie öffnet sonntags." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "An welchem Tag bleibt die Bücherei geschlossen?",
+          options: [
+            { id: "a", text: "montags" },
+            { id: "b", text: "samstags" },
+            { id: "c", text: "mittwochs" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Wofür wird eine Gebühr erhoben?",
+          options: [
+            { id: "a", text: "für die Ausleihe von Filmen" },
+            { id: "b", text: "für die Ausleihe von Büchern" },
+            { id: "c", text: "für den Eintritt" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„Dafür bleibt sie montags geschlossen“ nennt die Kehrseite der neuen Zeiten.",
+  },
 
   // ----------------------------------------------------------------- SPRACHBAUSTEINE
   {
