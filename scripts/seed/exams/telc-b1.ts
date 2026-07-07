@@ -1635,6 +1635,741 @@ export const ITEMS: ExamItemInput[] = [
     },
     guidanceNote: "Vorsicht bei Zahlen: „vierzehn Uhr zwölf“ ist die Abfahrt, nicht die Verspätung.",
   },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.HOERVERSTEHEN,
+    taskType: "TELC_B1_HV_ANNOUNCE",
+    title: "Ansage im Supermarkt",
+    prompt: "Hören Sie die Ansage und beantworten Sie die Fragen.",
+    difficulty: "FOUNDATION",
+    topicTag: "alltag",
+    timeLimitSeconds: 360,
+    payload: {
+      instructions: "Sie hören eine Ansage. Wählen Sie die richtige Antwort.",
+      audioScript:
+        "Liebe Kundinnen und Kunden, heute bieten wir Ihnen frische Erdbeeren zum Sonderpreis an, die Schale nur zwei Euro. Sie finden das Angebot am Eingang bei der Obstabteilung. Außerdem möchten wir Sie daran erinnern, dass unser Markt heute wegen einer Inventur bereits um achtzehn Uhr schließt. Wir wünschen Ihnen einen schönen Einkauf.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Was ist heute im Angebot?",
+          options: [
+            { id: "a", text: "Erdbeeren" },
+            { id: "b", text: "Äpfel" },
+            { id: "c", text: "Kirschen" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Wo findet man das Angebot?",
+          options: [
+            { id: "a", text: "am Eingang bei der Obstabteilung" },
+            { id: "b", text: "an der Kasse" },
+            { id: "c", text: "im Lager" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Warum schließt der Markt früher?",
+          options: [
+            { id: "a", text: "wegen einer Inventur" },
+            { id: "b", text: "wegen eines Feiertags" },
+            { id: "c", text: "wegen einer Reparatur" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Preis, Ort und Grund sind bei Supermarkt-Ansagen typische Fragen.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.HOERVERSTEHEN,
+    taskType: "TELC_B1_HV_ANNOUNCE",
+    title: "Nachricht vom Arzt",
+    prompt: "Hören Sie die Nachricht und beantworten Sie die Fragen.",
+    difficulty: "CORE",
+    topicTag: "gesundheit",
+    timeLimitSeconds: 360,
+    payload: {
+      instructions: "Sie hören eine Nachricht auf dem Anrufbeantworter. Wählen Sie die richtige Antwort.",
+      audioScript:
+        "Guten Tag, hier ist die Praxis Dr. Hoffmann. Wir rufen an, weil Ihr Termin am Mittwoch leider verschoben werden muss. Der Arzt ist an dem Tag auf einer Fortbildung. Wir könnten Ihnen den Donnerstag zur gleichen Uhrzeit anbieten. Bitte rufen Sie uns zurück und bestätigen Sie den neuen Termin. Sie erreichen uns vormittags bis zwölf Uhr.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Warum muss der Termin verschoben werden?",
+          options: [
+            { id: "a", text: "Der Arzt ist auf einer Fortbildung." },
+            { id: "b", text: "Die Praxis ist geschlossen." },
+            { id: "c", text: "Der Patient ist krank." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Welcher neue Termin wird angeboten?",
+          options: [
+            { id: "a", text: "Donnerstag zur gleichen Uhrzeit" },
+            { id: "b", text: "Freitagnachmittag" },
+            { id: "c", text: "Montagmorgen" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Wann ist die Praxis erreichbar?",
+          options: [
+            { id: "a", text: "vormittags bis zwölf Uhr" },
+            { id: "b", text: "nur am Abend" },
+            { id: "c", text: "am Wochenende" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Bei Anrufbeantworter-Nachrichten zählen Grund, neuer Termin und Erreichbarkeit.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.HOERVERSTEHEN,
+    taskType: "TELC_B1_HV_DIALOG",
+    title: "Im Restaurant",
+    prompt: "Hören Sie das Gespräch und beantworten Sie die Fragen.",
+    difficulty: "CORE",
+    topicTag: "alltag",
+    timeLimitSeconds: 420,
+    payload: {
+      instructions: "Sie hören ein Gespräch im Restaurant. Wählen Sie die richtige Antwort.",
+      audioScript:
+        "KELLNER: Haben Sie schon gewählt? GAST: Ja, ich nehme die Gemüsesuppe und danach den Fisch mit Kartoffeln. KELLNER: Sehr gern. Und zu trinken? GAST: Ein Wasser, bitte. Ach, und ist im Fischgericht Knoblauch? Ich vertrage das nicht so gut. KELLNER: Nein, da ist kein Knoblauch drin, kein Problem. GAST: Prima, dann passt das. KELLNER: Ich bringe Ihnen gleich das Wasser.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Was bestellt der Gast als Hauptgericht?",
+          options: [
+            { id: "a", text: "Fisch mit Kartoffeln" },
+            { id: "b", text: "Fleisch mit Reis" },
+            { id: "c", text: "einen Salat" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Wonach fragt der Gast?",
+          options: [
+            { id: "a", text: "ob im Gericht Knoblauch ist" },
+            { id: "b", text: "ob es einen Nachtisch gibt" },
+            { id: "c", text: "wie lange es dauert" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Was bringt der Kellner zuerst?",
+          options: [
+            { id: "a", text: "das Wasser" },
+            { id: "b", text: "die Suppe" },
+            { id: "c", text: "die Rechnung" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Achten Sie auf Bestellung, Rückfrage und Reihenfolge.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.HOERVERSTEHEN,
+    taskType: "TELC_B1_HV_ANNOUNCE",
+    title: "Durchsage im Zug",
+    prompt: "Hören Sie die Durchsage und beantworten Sie die Fragen.",
+    difficulty: "CORE",
+    topicTag: "verkehr",
+    timeLimitSeconds: 360,
+    payload: {
+      instructions: "Sie hören eine Durchsage im Zug. Wählen Sie die richtige Antwort.",
+      audioScript:
+        "Sehr geehrte Fahrgäste, in wenigen Minuten erreichen wir den Bahnhof Kassel. Reisende in Richtung Frankfurt steigen bitte hier um; der Anschlusszug fährt von Gleis acht. Bitte beachten Sie, dass der Zug heute geteilt wird: Der vordere Teil fährt weiter nach Hamburg, der hintere Teil nach Hannover. Achten Sie auf die Anzeigen am Bahnsteig.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Wo sollen Reisende nach Frankfurt umsteigen?",
+          options: [
+            { id: "a", text: "in Kassel, von Gleis acht" },
+            { id: "b", text: "in Hamburg" },
+            { id: "c", text: "in Hannover" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Was passiert mit dem Zug?",
+          options: [
+            { id: "a", text: "Er wird geteilt." },
+            { id: "b", text: "Er fällt aus." },
+            { id: "c", text: "Er hat Verspätung." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Wohin fährt der vordere Teil?",
+          options: [
+            { id: "a", text: "nach Hamburg" },
+            { id: "b", text: "nach Hannover" },
+            { id: "c", text: "nach Frankfurt" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„vorderer Teil … hinterer Teil“ — merken Sie sich, welcher wohin fährt.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.HOERVERSTEHEN,
+    taskType: "TELC_B1_HV_ANNOUNCE",
+    title: "Wetterbericht im Radio",
+    prompt: "Hören Sie den Wetterbericht und beantworten Sie die Fragen.",
+    difficulty: "FOUNDATION",
+    topicTag: "alltag",
+    timeLimitSeconds: 360,
+    payload: {
+      instructions: "Sie hören einen Wetterbericht. Wählen Sie die richtige Antwort.",
+      audioScript:
+        "Und nun das Wetter für morgen. Am Vormittag bleibt es zunächst grau und neblig. Am Nachmittag lockert es auf, und die Sonne kommt heraus. Die Temperaturen steigen auf angenehme achtzehn Grad. Gegen Abend kann es im Süden einzelne Schauer geben. Nehmen Sie also sicherheitshalber einen Regenschirm mit, wenn Sie später unterwegs sind.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Wie ist das Wetter am Vormittag?",
+          options: [
+            { id: "a", text: "grau und neblig" },
+            { id: "b", text: "sonnig und warm" },
+            { id: "c", text: "stürmisch" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Wie warm wird es?",
+          options: [
+            { id: "a", text: "achtzehn Grad" },
+            { id: "b", text: "acht Grad" },
+            { id: "c", text: "achtundzwanzig Grad" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Was kann es am Abend im Süden geben?",
+          options: [
+            { id: "a", text: "einzelne Schauer" },
+            { id: "b", text: "Schnee" },
+            { id: "c", text: "Sturm" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Achten Sie auf Tageszeiten und Temperaturen — „achtzehn“ nicht mit „acht“ verwechseln.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.HOERVERSTEHEN,
+    taskType: "TELC_B1_HV_ANNOUNCE",
+    title: "Nachricht vom Handwerker",
+    prompt: "Hören Sie die Nachricht und beantworten Sie die Fragen.",
+    difficulty: "CORE",
+    topicTag: "wohnen",
+    timeLimitSeconds: 360,
+    payload: {
+      instructions: "Sie hören eine Nachricht auf dem Anrufbeantworter. Wählen Sie die richtige Antwort.",
+      audioScript:
+        "Guten Tag, hier ist die Firma Elektro Vogel. Wegen der Reparatur Ihrer Heizung wollten wir morgen früh vorbeikommen. Leider ist unser Kollege krank geworden, deshalb schaffen wir es erst am Freitag. Wir kämen dann zwischen acht und zehn Uhr. Bitte sagen Sie uns kurz, ob das für Sie passt. Vielen Dank und auf Wiederhören.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Warum kann die Firma nicht morgen kommen?",
+          options: [
+            { id: "a", text: "Ein Kollege ist krank geworden." },
+            { id: "b", text: "Das Ersatzteil fehlt." },
+            { id: "c", text: "Die Adresse ist falsch." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Wann kommt die Firma stattdessen?",
+          options: [
+            { id: "a", text: "am Freitag zwischen acht und zehn Uhr" },
+            { id: "b", text: "am Samstag am Nachmittag" },
+            { id: "c", text: "erst nächste Woche" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Worum bittet die Firma?",
+          options: [
+            { id: "a", text: "um eine kurze Rückmeldung, ob der Termin passt" },
+            { id: "b", text: "um eine Vorauszahlung" },
+            { id: "c", text: "um ein neues Angebot" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Grund, neuer Termin und die Bitte um Rückmeldung sind hier die drei Kernpunkte.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.HOERVERSTEHEN,
+    taskType: "TELC_B1_HV_DIALOG",
+    title: "Nach dem Weg fragen",
+    prompt: "Hören Sie das Gespräch und beantworten Sie die Fragen.",
+    difficulty: "CORE",
+    topicTag: "alltag",
+    timeLimitSeconds: 420,
+    payload: {
+      instructions: "Sie hören ein Gespräch auf der Straße. Wählen Sie die richtige Antwort.",
+      audioScript:
+        "TOURISTIN: Entschuldigung, wie komme ich zum Museum? PASSANT: Gehen Sie hier geradeaus bis zur Ampel, dann rechts. Das Museum ist nach etwa fünf Minuten auf der linken Seite. TOURISTIN: Und kann man dort auch parken? PASSANT: Direkt am Museum nicht, aber hinter der Kirche gibt es einen Parkplatz. TOURISTIN: Vielen Dank! PASSANT: Gern, viel Spaß im Museum.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Wohin möchte die Touristin?",
+          options: [
+            { id: "a", text: "zum Museum" },
+            { id: "b", text: "zur Kirche" },
+            { id: "c", text: "zum Bahnhof" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Was soll sie an der Ampel tun?",
+          options: [
+            { id: "a", text: "rechts abbiegen" },
+            { id: "b", text: "links abbiegen" },
+            { id: "c", text: "umkehren" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Wo kann man parken?",
+          options: [
+            { id: "a", text: "hinter der Kirche" },
+            { id: "b", text: "direkt am Museum" },
+            { id: "c", text: "am Bahnhof" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Richtungen (geradeaus, rechts, links) und Ortsangaben genau verfolgen.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.HOERVERSTEHEN,
+    taskType: "TELC_B1_HV_ANNOUNCE",
+    title: "Ansage im Kino",
+    prompt: "Hören Sie die Ansage und beantworten Sie die Fragen.",
+    difficulty: "FOUNDATION",
+    topicTag: "freizeit",
+    timeLimitSeconds: 360,
+    payload: {
+      instructions: "Sie hören eine Ansage im Kino. Wählen Sie die richtige Antwort.",
+      audioScript:
+        "Liebe Gäste, der Film im Saal zwei beginnt in zehn Minuten. Bitte nehmen Sie langsam Ihre Plätze ein. Wir weisen Sie darauf hin, dass während der Vorstellung das Fotografieren nicht erlaubt ist. Getränke und Popcorn erhalten Sie noch bis zum Beginn an der Theke im Foyer. Wir wünschen Ihnen gute Unterhaltung.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Wann beginnt der Film?",
+          options: [
+            { id: "a", text: "in zehn Minuten" },
+            { id: "b", text: "sofort" },
+            { id: "c", text: "in einer Stunde" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Was ist während der Vorstellung nicht erlaubt?",
+          options: [
+            { id: "a", text: "das Fotografieren" },
+            { id: "b", text: "das Essen" },
+            { id: "c", text: "das Sitzen" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Wo bekommt man Getränke?",
+          options: [
+            { id: "a", text: "an der Theke im Foyer" },
+            { id: "b", text: "im Saal" },
+            { id: "c", text: "am Ausgang" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Zeit, Verbot und Ort sind die drei Informationen der Ansage.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.HOERVERSTEHEN,
+    taskType: "TELC_B1_HV_DIALOG",
+    title: "Beim Bäcker",
+    prompt: "Hören Sie das Gespräch und beantworten Sie die Fragen.",
+    difficulty: "FOUNDATION",
+    topicTag: "alltag",
+    timeLimitSeconds: 360,
+    payload: {
+      instructions: "Sie hören ein Gespräch beim Bäcker. Wählen Sie die richtige Antwort.",
+      audioScript:
+        "VERKÄUFERIN: Guten Morgen, was darf es sein? KUNDE: Guten Morgen, ich hätte gern vier Brötchen und ein Vollkornbrot. VERKÄUFERIN: Gern. Möchten Sie das Brot geschnitten? KUNDE: Ja, bitte. Und haben Sie noch Käsekuchen? VERKÄUFERIN: Tut mir leid, der ist heute schon ausverkauft. Aber wir haben frischen Apfelkuchen. KUNDE: Dann nehme ich ein Stück Apfelkuchen. VERKÄUFERIN: Kommt sofort.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Was möchte der Kunde zuerst kaufen?",
+          options: [
+            { id: "a", text: "Brötchen und ein Vollkornbrot" },
+            { id: "b", text: "nur Kuchen" },
+            { id: "c", text: "ein Baguette" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Welcher Kuchen ist ausverkauft?",
+          options: [
+            { id: "a", text: "der Käsekuchen" },
+            { id: "b", text: "der Apfelkuchen" },
+            { id: "c", text: "der Schokokuchen" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Was nimmt der Kunde stattdessen?",
+          options: [
+            { id: "a", text: "ein Stück Apfelkuchen" },
+            { id: "b", text: "ein Brötchen mehr" },
+            { id: "c", text: "nichts" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„ausverkauft … aber wir haben …“ — merken Sie sich die Alternative.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.HOERVERSTEHEN,
+    taskType: "TELC_B1_HV_ANNOUNCE",
+    title: "Hinweis im Museum",
+    prompt: "Hören Sie die Ansage und beantworten Sie die Fragen.",
+    difficulty: "CORE",
+    topicTag: "kultur",
+    timeLimitSeconds: 360,
+    payload: {
+      instructions: "Sie hören eine Ansage im Museum. Wählen Sie die richtige Antwort.",
+      audioScript:
+        "Sehr geehrte Besucher, wir möchten Sie darauf hinweisen, dass das Museum in dreißig Minuten schließt. Bitte beenden Sie Ihren Rundgang rechtzeitig. Der Museumsshop im Erdgeschoss bleibt noch bis zur Schließung geöffnet. Die Sonderausstellung im ersten Stock ist heute leider bereits geschlossen. Wir danken Ihnen für Ihren Besuch und freuen uns, Sie bald wiederzusehen.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Wann schließt das Museum?",
+          options: [
+            { id: "a", text: "in dreißig Minuten" },
+            { id: "b", text: "in einer Stunde" },
+            { id: "c", text: "sofort" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Was bleibt bis zur Schließung geöffnet?",
+          options: [
+            { id: "a", text: "der Museumsshop" },
+            { id: "b", text: "die Sonderausstellung" },
+            { id: "c", text: "das Café" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Was ist heute schon geschlossen?",
+          options: [
+            { id: "a", text: "die Sonderausstellung im ersten Stock" },
+            { id: "b", text: "der Museumsshop" },
+            { id: "c", text: "der Eingang" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Was noch offen ist und was schon zu ist — dieser Gegensatz wird geprüft.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.HOERVERSTEHEN,
+    taskType: "TELC_B1_HV_ANNOUNCE",
+    title: "Verkehrsmeldung im Radio",
+    prompt: "Hören Sie die Verkehrsmeldung und beantworten Sie die Fragen.",
+    difficulty: "CORE",
+    topicTag: "verkehr",
+    timeLimitSeconds: 360,
+    payload: {
+      instructions: "Sie hören eine Verkehrsmeldung. Wählen Sie die richtige Antwort.",
+      audioScript:
+        "Und nun die Verkehrslage. Auf der Autobahn A3 zwischen Würzburg und Nürnberg gibt es nach einem Unfall etwa fünf Kilometer Stau. Bitte rechnen Sie mit einer Verzögerung von rund zwanzig Minuten. Wenn möglich, umfahren Sie den Bereich über die Landstraße. In der Innenstadt von Nürnberg ist außerdem die Hauptstraße wegen eines Marktes gesperrt.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Warum gibt es Stau auf der A3?",
+          options: [
+            { id: "a", text: "wegen eines Unfalls" },
+            { id: "b", text: "wegen einer Baustelle" },
+            { id: "c", text: "wegen Schnee" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Wie lange dauert die Verzögerung etwa?",
+          options: [
+            { id: "a", text: "rund zwanzig Minuten" },
+            { id: "b", text: "rund zwei Stunden" },
+            { id: "c", text: "nur fünf Minuten" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Warum ist die Hauptstraße in Nürnberg gesperrt?",
+          options: [
+            { id: "a", text: "wegen eines Marktes" },
+            { id: "b", text: "wegen eines Unfalls" },
+            { id: "c", text: "wegen Bauarbeiten" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Zwei Orte, zwei Gründe — ordnen Sie sie beim Hören einander zu.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.HOERVERSTEHEN,
+    taskType: "TELC_B1_HV_ANNOUNCE",
+    title: "Nachricht von einer Freundin",
+    prompt: "Hören Sie die Nachricht und beantworten Sie die Fragen.",
+    difficulty: "FOUNDATION",
+    topicTag: "alltag",
+    timeLimitSeconds: 360,
+    payload: {
+      instructions: "Sie hören eine Nachricht auf dem Anrufbeantworter. Wählen Sie die richtige Antwort.",
+      audioScript:
+        "Hallo Nina, ich bin's, Clara. Du, wegen morgen: Ich muss leider etwas früher los, deshalb schaffe ich es nicht um drei. Können wir uns schon um zwei treffen? Wir wollten ja zusammen den Kuchen für Papas Geburtstag backen. Bring bitte die Backform mit, meine ist kaputt. Ruf mich zurück, wenn zwei Uhr passt. Tschüss!",
+      questions: [
+        {
+          id: "q1",
+          stem: "Warum ruft Clara an?",
+          options: [
+            { id: "a", text: "Sie möchte den Treffpunkt eine Stunde vorziehen." },
+            { id: "b", text: "Sie muss das Treffen absagen." },
+            { id: "c", text: "Sie will den Ort ändern." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Was wollen die beiden zusammen machen?",
+          options: [
+            { id: "a", text: "einen Kuchen backen" },
+            { id: "b", text: "einkaufen gehen" },
+            { id: "c", text: "ins Kino gehen" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Was soll Nina mitbringen?",
+          options: [
+            { id: "a", text: "die Backform" },
+            { id: "b", text: "die Geschenke" },
+            { id: "c", text: "die Getränke" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "„schon um zwei statt um drei“ — die Zeitänderung ist der Kern der Nachricht.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.HOERVERSTEHEN,
+    taskType: "TELC_B1_HV_DIALOG",
+    title: "An der Hotelrezeption",
+    prompt: "Hören Sie das Gespräch und beantworten Sie die Fragen.",
+    difficulty: "CORE",
+    topicTag: "alltag",
+    timeLimitSeconds: 420,
+    payload: {
+      instructions: "Sie hören ein Gespräch an der Rezeption. Wählen Sie die richtige Antwort.",
+      audioScript:
+        "GAST: Guten Abend, ich habe ein Zimmer auf den Namen Schneider reserviert. REZEPTION: Guten Abend, Herr Schneider. Ja, ein Einzelzimmer für zwei Nächte, stimmt das? GAST: Genau. Ist das Frühstück inbegriffen? REZEPTION: Ja, das Frühstück gibt es von sieben bis zehn Uhr im Erdgeschoss. GAST: Sehr gut. Und gibt es WLAN im Zimmer? REZEPTION: Ja, kostenlos. Das Passwort steht auf der Karte, die ich Ihnen mit dem Schlüssel gebe.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Was für ein Zimmer hat der Gast reserviert?",
+          options: [
+            { id: "a", text: "ein Einzelzimmer für zwei Nächte" },
+            { id: "b", text: "ein Doppelzimmer für eine Nacht" },
+            { id: "c", text: "eine Suite für eine Woche" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Wann gibt es Frühstück?",
+          options: [
+            { id: "a", text: "von sieben bis zehn Uhr" },
+            { id: "b", text: "von acht bis neun Uhr" },
+            { id: "c", text: "gar nicht" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Was sagt die Rezeption über das WLAN?",
+          options: [
+            { id: "a", text: "Es ist kostenlos, das Passwort steht auf der Karte." },
+            { id: "b", text: "Es kostet extra." },
+            { id: "c", text: "Es gibt kein WLAN." },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Zimmerart, Frühstückszeit und WLAN sind die drei abgefragten Details.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.HOERVERSTEHEN,
+    taskType: "TELC_B1_HV_ANNOUNCE",
+    title: "Ansage beim Stadtfest",
+    prompt: "Hören Sie die Ansage und beantworten Sie die Fragen.",
+    difficulty: "CORE",
+    topicTag: "freizeit",
+    timeLimitSeconds: 360,
+    payload: {
+      instructions: "Sie hören eine Ansage bei einer Veranstaltung. Wählen Sie die richtige Antwort.",
+      audioScript:
+        "Liebe Besucherinnen und Besucher des Stadtfestes, wir freuen uns, Ihnen mitzuteilen, dass das Konzert auf der Hauptbühne um acht Uhr beginnt. Bis dahin können Sie an den vielen Ständen essen und trinken. Wir bitten die Eltern, ihre Kinder im Blick zu behalten. Sollten Sie ein Kind vermissen, wenden Sie sich bitte an den Informationsstand neben dem Rathaus.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Wann beginnt das Konzert?",
+          options: [
+            { id: "a", text: "um acht Uhr" },
+            { id: "b", text: "um sechs Uhr" },
+            { id: "c", text: "um zehn Uhr" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Worum werden die Eltern gebeten?",
+          options: [
+            { id: "a", text: "ihre Kinder im Blick zu behalten" },
+            { id: "b", text: "früher zu gehen" },
+            { id: "c", text: "Eintritt zu zahlen" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Wohin soll man sich bei einem vermissten Kind wenden?",
+          options: [
+            { id: "a", text: "an den Informationsstand neben dem Rathaus" },
+            { id: "b", text: "an die Hauptbühne" },
+            { id: "c", text: "an den Ausgang" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Beginn, Bitte und Anlaufstelle sind die drei Punkte der Ansage.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.HOERVERSTEHEN,
+    taskType: "TELC_B1_HV_DIALOG",
+    title: "Ein Geschenk aussuchen",
+    prompt: "Hören Sie das Gespräch und beantworten Sie die Fragen.",
+    difficulty: "CORE",
+    topicTag: "alltag",
+    timeLimitSeconds: 420,
+    payload: {
+      instructions: "Sie hören ein Gespräch zwischen zwei Freunden. Wählen Sie die richtige Antwort.",
+      audioScript:
+        "LEA: Was schenken wir Opa zum Geburtstag? TIM: Vielleicht ein Buch? Er liest doch so gern. LEA: Gute Idee, aber er hat schon so viele. Wie wäre es mit Karten für ein Konzert? TIM: Konzerte sind ihm meistens zu laut. Aber er wollte doch schon lange mal ins Theater. LEA: Stimmt! Dann schenken wir ihm Theaterkarten. TIM: Super, das machen wir. Ich kümmere mich morgen um die Karten.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Warum ist ein Buch keine gute Idee?",
+          options: [
+            { id: "a", text: "Opa hat schon sehr viele Bücher." },
+            { id: "b", text: "Opa liest nicht gern." },
+            { id: "c", text: "Bücher sind zu teuer." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Was schenken sie Opa schließlich?",
+          options: [
+            { id: "a", text: "Theaterkarten" },
+            { id: "b", text: "Konzertkarten" },
+            { id: "c", text: "ein Buch" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Wer kümmert sich um die Karten?",
+          options: [
+            { id: "a", text: "Tim" },
+            { id: "b", text: "Lea" },
+            { id: "c", text: "Opa" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Der Vorschlag ändert sich mehrmals — nur die letzte Entscheidung zählt.",
+  },
 
   // ------------------------------------------------------------ SCHRIFTLICHER_AUSDRUCK
   {
