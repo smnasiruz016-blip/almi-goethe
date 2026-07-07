@@ -19,6 +19,7 @@ import {
   uniHubUrl,
   uniOriginUrl,
 } from "./urls";
+import { buildExamSitemapUrls } from "@/lib/exams/seo/sitemap-urls";
 
 const SITE_URL = process.env.NEXT_PUBLIC_APP_URL ?? "https://almigoethe.almiworld.com";
 
@@ -53,6 +54,14 @@ export function buildGoetheSitemapUrls(): MetadataRoute.Sitemap {
   return urls;
 }
 
+// The full submitted surface = the Goethe Wave-1 URLs followed by the four new
+// exam engines. Exam URLs are appended at the TAIL so every existing Goethe URL
+// keeps its position (and therefore its chunk) as the set grows — the same
+// stable-order guarantee the Goethe builder relies on.
+export function buildAllSitemapUrls(): MetadataRoute.Sitemap {
+  return [...buildGoetheSitemapUrls(), ...buildExamSitemapUrls()];
+}
+
 export function sitemapChunkCount(): number {
-  return Math.max(1, Math.ceil(buildGoetheSitemapUrls().length / SITEMAP_CHUNK));
+  return Math.max(1, Math.ceil(buildAllSitemapUrls().length / SITEMAP_CHUNK));
 }
