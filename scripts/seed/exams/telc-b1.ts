@@ -749,6 +749,55 @@ export const ITEMS: ExamItemInput[] = [
     },
     guidanceNote: "„Dafür bleibt sie montags geschlossen“ nennt die Kehrseite der neuen Zeiten.",
   },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.LESEVERSTEHEN,
+    taskType: "TELC_B1_LV_MCQ",
+    title: "E-Mail: Ein Termin beim Amt",
+    prompt: "Lesen Sie die E-Mail und beantworten Sie die Fragen.",
+    difficulty: "CORE",
+    topicTag: "alltag",
+    timeLimitSeconds: 420,
+    payload: {
+      instructions: "Wählen Sie für jede Frage die richtige Antwort (a, b oder c).",
+      passage:
+        "Sehr geehrte Frau Koch, Ihren Termin zur Anmeldung haben wir für Dienstag, den 12. März, um neun Uhr eingetragen. Bitte bringen Sie Ihren Ausweis und den ausgefüllten Antrag mit. Sollten Sie den Termin nicht wahrnehmen können, sagen Sie ihn bitte mindestens einen Tag vorher ab. Der Eingang befindet sich auf der Rückseite des Gebäudes. Mit freundlichen Grüßen, Ihr Bürgeramt",
+      questions: [
+        {
+          id: "q1",
+          stem: "Was soll Frau Koch mitbringen?",
+          options: [
+            { id: "a", text: "ihren Ausweis und den ausgefüllten Antrag" },
+            { id: "b", text: "nur Bargeld" },
+            { id: "c", text: "ein Foto" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Was soll sie tun, wenn sie nicht kommen kann?",
+          options: [
+            { id: "a", text: "den Termin mindestens einen Tag vorher absagen" },
+            { id: "b", text: "einfach nicht erscheinen" },
+            { id: "c", text: "am selben Tag anrufen" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Wo ist der Eingang?",
+          options: [
+            { id: "a", text: "auf der Rückseite des Gebäudes" },
+            { id: "b", text: "im ersten Stock" },
+            { id: "c", text: "neben dem Parkplatz" },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Amtliche E-Mails nennen Termin, mitzubringende Unterlagen und Regeln zur Absage.",
+  },
 
   // ----------------------------------------------------------------- SPRACHBAUSTEINE
   {
