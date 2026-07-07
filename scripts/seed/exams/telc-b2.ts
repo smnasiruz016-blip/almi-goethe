@@ -751,6 +751,55 @@ export const ITEMS: ExamItemInput[] = [
     },
     guidanceNote: "„nicht bloß angenehm …, sondern auch der Erholung“ nennt den eigentlichen Nutzen.",
   },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.LESEVERSTEHEN,
+    taskType: "TELC_B2_LV_MCQ",
+    title: "Wenn Roboter im Haushalt helfen",
+    prompt: "Lesen Sie den Text und beantworten Sie die Fragen.",
+    difficulty: "CORE",
+    topicTag: "wissenschaft",
+    timeLimitSeconds: 720,
+    payload: {
+      instructions: "Wählen Sie für jede Frage die richtige Antwort (a, b oder c).",
+      passage:
+        "Geräte, die selbstständig saugen oder den Rasen mähen, sind längst im Handel. Sie versprechen, uns lästige Arbeit abzunehmen und Zeit zu schenken. Tatsächlich schätzen viele Nutzer die Entlastung. Kritiker geben jedoch zu bedenken, dass solche Geräte teuer sind und keineswegs jede Aufgabe zuverlässig erledigen. Zudem stellt sich die Frage, was mit der gewonnenen Zeit geschieht. Wird sie wirklich für Erholung genutzt oder nur mit anderen Pflichten gefüllt? Technik allein, so das Fazit, schafft noch keine freie Zeit.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Was versprechen solche Geräte?",
+          options: [
+            { id: "a", text: "lästige Arbeit abzunehmen und Zeit zu schenken" },
+            { id: "b", text: "mehr Arbeit zu schaffen" },
+            { id: "c", text: "Geld zu verdienen" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q2",
+          stem: "Was geben Kritiker zu bedenken?",
+          options: [
+            { id: "a", text: "Die Geräte sind teuer und nicht immer zuverlässig." },
+            { id: "b", text: "Die Geräte sind kostenlos." },
+            { id: "c", text: "Die Geräte erledigen jede Aufgabe perfekt." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q3",
+          stem: "Wie lautet das Fazit des Textes?",
+          options: [
+            { id: "a", text: "Technik allein schafft noch keine freie Zeit." },
+            { id: "b", text: "Technik macht immer glücklich." },
+            { id: "c", text: "Freie Zeit ist unwichtig." },
+          ],
+          answer: "a",
+        },
+      ],
+    },
+    guidanceNote: "Die rhetorische Frage „Wird sie wirklich …?“ leitet zum Fazit über.",
+  },
 
   // ----------------------------------------------------------------- SPRACHBAUSTEINE
   {
