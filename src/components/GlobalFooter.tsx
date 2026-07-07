@@ -7,6 +7,16 @@ type FooterColumn = { title: string; links: FooterLink[] };
 
 const FOOTER_COLUMNS: FooterColumn[] = [
   {
+    // This site's own pages — internal nav (the two are followed SEO hubs).
+    title: "AlmiGoethe",
+    links: [
+      { label: "Practice", href: "/practice" },
+      { label: "German requirements guide", href: "/goethe" },
+      { label: "TestDaF & telc exams", href: "/pruefung" },
+      { label: "Pricing", href: "/pricing" },
+    ],
+  },
+  {
     title: "AlmiWorld",
     links: [
       { label: "Home", href: "https://almiworld.com/" },
@@ -47,7 +57,7 @@ export function GlobalFooter() {
   return (
     <footer className="bg-[#14110D] text-white/75">
       <div className="mx-auto max-w-7xl px-6 py-12">
-        <div className="grid gap-10 sm:grid-cols-3">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           {FOOTER_COLUMNS.map((col) => (
             <div key={col.title}>
               <p className="text-xs font-bold uppercase tracking-wider text-[#D4A24C]">{col.title}</p>
