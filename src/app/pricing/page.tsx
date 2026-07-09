@@ -8,13 +8,13 @@ import { PricingCheckoutButton } from "./PricingCheckoutButton";
 export const metadata: Metadata = {
   title: "Pricing — 7-day free trial",
   description:
-    "AlmiGoethe Pro — $12/month, cancel anytime. 7-day free trial. Honest AI feedback on Write and Speak About the Photo, full-length practice, and subscore estimates on the 10–160 scale.",
+    "AlmiGoethe Pro — $12/month, cancel anytime. 7-day free trial. Honest AI feedback on Schreiben and Sprechen, full-length practice, and CEFR-level estimates across A1–C2.",
 };
 
 const FEATURES = [
-  "Honest AI feedback on Write About the Photo and Speak About the Photo",
+  "Honest AI feedback on Schreiben and Sprechen",
   "Full-length practice across all four skills",
-  "Subscore estimates on the 10–160 scale, shown as ranges (never a fabricated overall)",
+  "CEFR-level estimates (A1–C2), shown as bands (never a fabricated overall)",
   "Adaptive practice that adjusts to your level",
   "Original material — never copied from Goethe",
   "Cancel anytime from your account",
