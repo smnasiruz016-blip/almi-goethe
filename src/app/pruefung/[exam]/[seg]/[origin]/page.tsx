@@ -6,7 +6,7 @@ import { examSeoBySlug, isRealExamPurpose } from "@/lib/exams/seo/exams-data";
 import { examPurposeOriginUrl } from "@/lib/exams/seo/urls";
 import { ExamPurposeOriginPage } from "@/components/exams-seo/pages";
 
-export const revalidate = 86400;
+export const revalidate = false;
 export const dynamicParams = true;
 
 export function generateStaticParams() {

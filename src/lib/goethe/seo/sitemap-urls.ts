@@ -25,10 +25,15 @@ const SITE_URL = process.env.NEXT_PUBLIC_APP_URL ?? "https://almigoethe.almiworl
 
 export const SITEMAP_CHUNK = 10000;
 
+// Constant data-snapshot date. Emitting `new Date()` told crawlers every URL
+// "just changed" on every fetch, inviting needless re-crawls that turn into ISR
+// first-writes (the almistudy Ph1b cost fix). Bump only when the dataset changes.
+const LASTMOD = new Date("2026-07-13");
+
 type Entry = MetadataRoute.Sitemap[number];
 
 export function buildGoetheSitemapUrls(): MetadataRoute.Sitemap {
-  const now = new Date();
+  const now = LASTMOD;
   const urls: MetadataRoute.Sitemap = [];
   const push = (path: string, priority: number, changeFrequency: Entry["changeFrequency"] = "monthly") =>
     urls.push({ url: `${SITE_URL}${path}`, lastModified: now, changeFrequency, priority });

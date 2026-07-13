@@ -4,7 +4,7 @@ import { uniHubUrl } from "@/lib/goethe/seo/urls";
 import { buildMetadata } from "@/lib/goethe/seo/meta";
 import { UniversityHub } from "@/components/goethe-seo/pages-university";
 
-export const revalidate = 86400;
+export const revalidate = false;
 export const dynamicParams = true;
 
 // 498 hubs prebuilt at deploy; the × origin matrix (≈96k) is on-demand ISR.

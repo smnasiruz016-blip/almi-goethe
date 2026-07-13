@@ -3,7 +3,7 @@ import { sitemapChunkCount } from "@/lib/goethe/seo/sitemap-urls";
 
 // Next 16 with generateSitemaps emits chunk files at /sitemap/<id>.xml. This index
 // lists every chunk so one URL can be submitted to Google Search Console.
-export const revalidate = 86400;
+export const revalidate = false;
 
 export function GET() {
   const count = sitemapChunkCount();

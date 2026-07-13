@@ -4,7 +4,7 @@ import { occupationHubUrl } from "@/lib/goethe/seo/urls";
 import { buildMetadata } from "@/lib/goethe/seo/meta";
 import { OccupationHub } from "@/components/goethe-seo/pages-occupation";
 
-export const revalidate = 86400;
+export const revalidate = false;
 export const dynamicParams = true;
 
 // Prebuild the occupation hubs; the × origin matrix is on-demand.
