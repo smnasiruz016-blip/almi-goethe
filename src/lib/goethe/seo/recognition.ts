@@ -6,7 +6,9 @@
 // mission. No fabrication: where a country's status is nuanced, the page says
 // "check anabin / uni-assist".
 
+import { originContext } from "@smnasiruz016-blip/almi-data";
 import type { CountryEntry } from "./countries";
+import { countrySlug } from "./countries";
 
 // EU + EEA + Switzerland — free movement: no visa/residence permit needed to study
 // or work in Germany.
@@ -45,6 +47,41 @@ export function studyAngle(c: CountryEntry): string {
     ? ` Applicants from ${c.name} must obtain an APS certificate (Akademische Prüfstelle) before applying — plan this step early.`
     : "";
   return `Coming from ${c.name}, you will normally need a German student visa and should apply for admission well in advance; most international applicants go through uni-assist.${aps} Whether your school-leaving qualification grants direct entry or requires a Studienkolleg (and Feststellungsprüfung) depends on how it is rated — check anabin and confirm with the university.`;
+}
+
+// ---- Home-country dimension (AlmiWorld pSEO Localization Standard) ----------
+// The angles above localize the INBOUND direction (getting into Germany). The
+// Standard also wants the ORIGIN's own reference points: the body that
+// recognises a German qualification back home, and the vocabulary that
+// nationality actually searches with. Verified facts come from the shared
+// @smnasiruz016-blip/almi-data layer; unresearched origins get an honest-generic,
+// hedged line — never a fabricated body.
+
+export type HomeRecognition = {
+  localized: boolean;
+  paragraph: string;
+  searchTerms: string[];
+};
+
+const clean = (s: string) => s.replace(/\s*[.?;]+\s*$/, "").trim();
+
+/** "Using a German qualification back in {origin}" — verified, or hedged generic. */
+export function homeRecognition(c: CountryEntry): HomeRecognition {
+  const loc = originContext(countrySlug(c.name));
+  if (loc) {
+    const url = loc.recognitionUrl ? ` (${loc.recognitionUrl.replace(/^https?:\/\//, "")})` : "";
+    return {
+      localized: true,
+      paragraph:
+        `If you plan to use a German qualification back in ${c.name}, recognition of a foreign degree there goes through ${loc.recognitionBody}${url}. ${loc.equivalenceNote} A common concern from ${c.name}: “${clean(loc.commonConcern)}” — worth planning early alongside the German requirement.${loc.sourceNote ? ` (${loc.sourceNote})` : ""}`,
+      searchTerms: loc.searchTerms ?? [],
+    };
+  }
+  return {
+    localized: false,
+    paragraph: `If you plan to use a German qualification back in ${c.name}, confirm how a foreign degree is recognised with the relevant authority there before relying on it — the process and the body differ by country.`,
+    searchTerms: [],
+  };
 }
 
 /** Honest work-from-origin paragraph, derived from real status. */

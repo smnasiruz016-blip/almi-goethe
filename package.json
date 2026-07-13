@@ -5,7 +5,7 @@
   "description": "AlmiGoethe — AI-powered Goethe-Zertifikat German practice in the AlmiWorld family. Four modules (Lesen, Hören, Schreiben, Sprechen) at six CEFR levels (A1–C2), scored per module as a points estimate with a 60% pass mark, no fabricated composite. Separate product (almigoethe.almiworld.com). Original German content — never copied from the Goethe-Institut. Practice estimates only; confirm the level you need with the Goethe-Institut.",
   "scripts": {
     "dev": "next dev",
-    "build": "prisma generate && prisma migrate deploy && next build && npm run seed:prod",
+    "build": "node scripts/seo/uniqueness-gate.mjs && prisma generate && prisma migrate deploy && next build && npm run seed:prod",
     "seed:prod": "(tsx scripts/seed/append.ts && tsx scripts/seed/exam-append.ts) || echo 'seed:prod skipped (non-fatal)'",
     "start": "next start",
     "postinstall": "prisma generate",
@@ -22,6 +22,7 @@
   "dependencies": {
     "@anthropic-ai/sdk": "^0.91.1",
     "@prisma/client": "^6.19.3",
+    "@smnasiruz016-blip/almi-data": "^0.4.0",
     "bcryptjs": "^3.0.3",
     "next": "16.2.6",
     "prisma": "^6.19.3",
