@@ -7,6 +7,7 @@
 import type { CountryEntry } from "@/lib/goethe/seo/countries";
 import { GERMAN_UNIS, type GermanUni } from "@/lib/goethe/seo/universities";
 import { studyAngle, originProfile } from "@/lib/goethe/seo/recognition";
+import { HomeRecognitionBlock } from "./HomeRecognitionBlock";
 import { uniHubUrl, uniOriginUrl, GOETHE_INDEX, levelHubUrl } from "@/lib/goethe/seo/urls";
 import {
   SeoShell,
@@ -112,6 +113,7 @@ export function UniversityOriginPage({ uni, country }: { uni: GermanUni; country
           </p>
         )}
       </section>
+      <HomeRecognitionBlock country={country} />
       <PrepCta levelHint="C1" />
       <LinkChips
         title="Goethe levels"

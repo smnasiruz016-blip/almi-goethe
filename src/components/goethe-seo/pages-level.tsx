@@ -4,6 +4,7 @@ import type { GoetheLevel } from "@prisma/client";
 import type { CountryEntry } from "@/lib/goethe/seo/countries";
 import { LEVEL_INFO, LEVELS, PURPOSES, type Purpose } from "@/lib/goethe/seo/levels";
 import { studyAngle, workAngle } from "@/lib/goethe/seo/recognition";
+import { HomeRecognitionBlock } from "./HomeRecognitionBlock";
 import {
   levelHubUrl,
   levelOriginUrl,
@@ -149,6 +150,7 @@ export function LevelPurposeOriginPage({
         <h2 className="text-xl font-semibold text-almi-ink">From {country.name}</h2>
         <p className="mt-2 text-sm text-almi-text">{isStudy ? studyAngle(country) : workAngle(country)}</p>
       </section>
+      <HomeRecognitionBlock country={country} />
       <PrepCta levelHint={`Goethe ${level}`} />
       <LinkChips
         title={`Other purposes — Goethe ${level} from ${country.name}`}

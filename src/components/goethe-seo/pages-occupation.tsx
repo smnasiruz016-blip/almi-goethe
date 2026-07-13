@@ -11,6 +11,7 @@ import {
   RECOGNITION_PORTAL_URL,
 } from "@/lib/goethe/seo/occupations";
 import { workAngle } from "@/lib/goethe/seo/recognition";
+import { HomeRecognitionBlock } from "./HomeRecognitionBlock";
 import { occupationHubUrl, occupationOriginUrl, GOETHE_INDEX } from "@/lib/goethe/seo/urls";
 import {
   SeoShell,
@@ -131,6 +132,7 @@ export function OccupationOriginPage({
         <h2 className="text-xl font-semibold text-almi-ink">Your route from {country.name}</h2>
         <p className="mt-2 text-sm text-almi-text">{workAngle(country)}</p>
       </section>
+      <HomeRecognitionBlock country={country} />
       <PrepCta levelHint={occupation.germanLevel.split("–")[0].trim()} />
       <CrossLinkFooter country={country} />
       <Disclaimer />
