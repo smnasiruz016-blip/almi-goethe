@@ -9,10 +9,10 @@ export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Goethe-Zertifikat Practice (A1–C2) with Honest AI Feedback | AlmiGoethe",
+    absolute: "Goethe Exam Practice (A1–C2) — Real CEFR Levels | AlmiGoethe",
   },
   description:
-    "Practise the Goethe-Zertifikat German exams at all six CEFR levels (A1–C2) — Lesen, Hören, Schreiben and Sprechen — with honest per-module points estimates (60% pass mark) and AI feedback. Original German material, never copied from the Goethe-Institut. $12/month, 7-day free trial.",
+    "Goethe-Zertifikat practice, all six CEFR levels (A1–C2) — honest per-module estimates for reading, writing, listening and speaking on real formats. Original material.",
   openGraph: {
     title: "AlmiGoethe — honest Goethe-Zertifikat practice (A1–C2)",
     description:
