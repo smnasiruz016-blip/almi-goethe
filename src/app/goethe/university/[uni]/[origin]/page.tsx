@@ -5,7 +5,7 @@ import { uniOriginUrl } from "@/lib/goethe/seo/urls";
 import { buildMetadata } from "@/lib/goethe/seo/meta";
 import { UniversityOriginPage } from "@/components/goethe-seo/pages-university";
 
-export const revalidate = 86400;
+export const revalidate = false;
 export const dynamicParams = true;
 
 export function generateStaticParams() {

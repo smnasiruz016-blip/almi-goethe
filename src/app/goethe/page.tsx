@@ -2,7 +2,7 @@ import { buildMetadata } from "@/lib/goethe/seo/meta";
 import { GOETHE_INDEX } from "@/lib/goethe/seo/urls";
 import { GoetheIndex } from "@/components/goethe-seo/pages-index";
 
-export const revalidate = 86400;
+export const revalidate = false;
 
 export function generateMetadata() {
   return buildMetadata({

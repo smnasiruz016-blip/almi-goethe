@@ -4,7 +4,7 @@ import { ALL_EXAM_SEO, examSeoBySlug } from "@/lib/exams/seo/exams-data";
 import { examHubUrl } from "@/lib/exams/seo/urls";
 import { ExamHubPage } from "@/components/exams-seo/pages";
 
-export const revalidate = 86400;
+export const revalidate = false;
 export const dynamicParams = true;
 
 // Prebuild the four exam hubs (the only prebuilt routes — the rest is on-demand ISR).

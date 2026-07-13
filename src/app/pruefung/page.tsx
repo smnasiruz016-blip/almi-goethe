@@ -2,7 +2,7 @@ import { buildExamMetadata } from "@/lib/exams/seo/meta";
 import { EXAMS_INDEX } from "@/lib/exams/seo/exams-data";
 import { ExamsIndexPage } from "@/components/exams-seo/pages";
 
-export const revalidate = 86400;
+export const revalidate = false;
 
 export function generateMetadata() {
   return buildExamMetadata({

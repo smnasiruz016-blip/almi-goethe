@@ -7,7 +7,7 @@ import { levelPurposeOriginUrl } from "@/lib/goethe/seo/urls";
 import { buildMetadata } from "@/lib/goethe/seo/meta";
 import { LevelPurposeOriginPage } from "@/components/goethe-seo/pages-level";
 
-export const revalidate = 86400;
+export const revalidate = false;
 export const dynamicParams = true;
 
 export function generateStaticParams() {

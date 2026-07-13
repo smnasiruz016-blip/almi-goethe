@@ -12,8 +12,13 @@ import { examHubUrl, examOriginUrl, examPurposeOriginUrl } from "./urls";
 
 type Entry = MetadataRoute.Sitemap[number];
 
+// Constant data-snapshot date (see almistudy Ph1b): a wall-clock `new Date()`
+// makes every sitemap fetch advertise a fresh lastmod, driving needless re-crawls
+// and ISR first-writes. Bump only when the dataset actually changes.
+const LASTMOD = new Date("2026-07-13");
+
 export function buildExamSitemapUrls(): MetadataRoute.Sitemap {
-  const now = new Date();
+  const now = LASTMOD;
   const urls: MetadataRoute.Sitemap = [];
   const push = (path: string, priority: number, changeFrequency: Entry["changeFrequency"] = "monthly") =>
     urls.push({ url: `${SITE_URL}${path}`, lastModified: now, changeFrequency, priority });
