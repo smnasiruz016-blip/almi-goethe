@@ -14,6 +14,7 @@
 
 import { PrismaClient } from "@prisma/client";
 import { ITEMS as LESEN } from "./lesen";
+import { handleSeedFailure } from "./_failure";
 import { ITEMS as HOEREN } from "./hoeren";
 import { ITEMS as SCHREIBEN } from "./schreiben";
 import { ITEMS as SPRECHEN } from "./sprechen";
@@ -69,8 +70,5 @@ async function main() {
 }
 
 main()
-  .catch((e) => {
-    console.error(e);
-    process.exitCode = 1;
-  })
+  .catch((e) => handleSeedFailure("seed:append (GoetheItem)", e))
   .finally(() => prisma.$disconnect());

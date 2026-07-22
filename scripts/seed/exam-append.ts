@@ -10,6 +10,7 @@
 
 import { PrismaClient } from "@prisma/client";
 import { ITEMS as TESTDAF } from "./exams/testdaf";
+import { handleSeedFailure } from "./_failure";
 import { ITEMS as C1H } from "./exams/telc-c1-hochschule";
 import { ITEMS as B1 } from "./exams/telc-b1";
 import { ITEMS as B2 } from "./exams/telc-b2";
@@ -63,8 +64,5 @@ async function main() {
 }
 
 main()
-  .catch((e) => {
-    console.error(e);
-    process.exitCode = 1;
-  })
+  .catch((e) => handleSeedFailure("seed:exams (ExamItem)", e))
   .finally(() => prisma.$disconnect());
