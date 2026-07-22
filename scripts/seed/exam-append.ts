@@ -41,6 +41,7 @@
 import { PrismaClient } from "@prisma/client";
 import { ITEMS as TESTDAF } from "./exams/testdaf";
 import { ITEMS as TESTDAF_LV } from "./exams/testdaf-leseverstehen";
+import { ITEMS as TESTDAF_HV } from "./exams/testdaf-hoerverstehen";
 import { handleSeedFailure } from "./_failure";
 import { isDirectRun } from "./_entry";
 import { ITEMS as C1H } from "./exams/telc-c1-hochschule";
@@ -50,7 +51,7 @@ import { ITEMS as B2 } from "./exams/telc-b2";
 const prisma = new PrismaClient();
 const DRY = process.argv.includes("--dry");
 
-const ALL = [...TESTDAF, ...TESTDAF_LV, ...C1H, ...B1, ...B2];
+const ALL = [...TESTDAF, ...TESTDAF_LV, ...TESTDAF_HV, ...C1H, ...B1, ...B2];
 
 /** Identity: what makes two rows "the same item". Content is NOT part of it —
  *  that is the point, so a corrected item updates in place rather than inserting

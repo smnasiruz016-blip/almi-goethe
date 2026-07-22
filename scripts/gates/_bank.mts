@@ -30,6 +30,7 @@ import { ITEMS as SPRECHEN } from "../seed/sprechen";
 
 import { ITEMS as TESTDAF } from "../seed/exams/testdaf";
 import { ITEMS as TESTDAF_LV } from "../seed/exams/testdaf-leseverstehen";
+import { ITEMS as TESTDAF_HV } from "../seed/exams/testdaf-hoerverstehen";
 import { ITEMS as TELC_C1H } from "../seed/exams/telc-c1-hochschule";
 import { ITEMS as TELC_B1 } from "../seed/exams/telc-b1";
 import { ITEMS as TELC_B2 } from "../seed/exams/telc-b2";
@@ -53,7 +54,7 @@ export function goetheBank(): GoetheRow[] {
  *  registered but absent from this list fails as "0 items", loudly, rather than
  *  disappearing from the counts. */
 export function examBank(): ExamRow[] {
-  return [...TESTDAF, ...TESTDAF_LV, ...TELC_C1H, ...TELC_B1, ...TELC_B2];
+  return [...TESTDAF, ...TESTDAF_LV, ...TESTDAF_HV, ...TELC_C1H, ...TELC_B1, ...TELC_B2];
 }
 
 /** Group rows by a key, preserving insertion order of first appearance. */
