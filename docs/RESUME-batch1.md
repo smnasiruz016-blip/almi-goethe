@@ -3,7 +3,8 @@
 Checkpoint written 2026-07-22, end of day. Work is **committed and pushed to
 `goethe-gate-floor` (PR #12), deliberately NOT merged, NOT forced, NOT deployed.**
 
-Resume by checking out `goethe-gate-floor` and starting at **telc B1 Hörverstehen**.
+Resume by checking out `goethe-gate-floor` and starting at **telc B1 Schriftlicher
+Ausdruck**. (Hörverstehen landed 2026-07-22 — section 7 of 9.)
 
 ---
 
@@ -28,6 +29,7 @@ So the gate floor, the re-authored bank and the single reconcile all land togeth
 | TestDaF Mündlicher Ausdruck | 21 | 1 Aufgabe, speaking 45 · 60 · 90 · 120 · 150 s |
 | telc B1 Leseverstehen | 15 | 3 Teile — 5/5/10 = **20** ✓ |
 | telc B1 Sprachbausteine | 16 | 2 Teile — 10/10 = **20** ✓ |
+| telc B1 Hörverstehen | 15 | 3 Teile — 5/10/5 = **20** ✓, richtig/falsch throughout |
 
 **TestDaF is fully conformant** — zero violations across all four sections.
 
@@ -41,23 +43,31 @@ proof), the seeder rewrite (insert → update → deactivate → verify), the
 
 ## Remaining in batch 1 — resume here
 
-### 1. telc B1 Hörverstehen — counts are now SOURCED
+### ~~1. telc B1 Hörverstehen~~ — DONE 2026-07-22
 
-Upgraded from *convention* to *sourced* (official telc B1 Modellprüfung, Aufgaben
-41–60). **Hard-enforce these, exactly like Leseverstehen** — the structure file must
-have `sourced: true` flipped on this section, which currently reads `false`.
+`sourced: true` flipped on the section and all three Aufgaben; the ⚠️ convention
+note is replaced by the Modellprüfung attribution (Aufgaben 41–60). Authored to
+the sourced structure in `scripts/seed/exams/telc-b1-hoerverstehen.ts` — 15 items,
+5 per Teil, 5/10/5 questions, everyday register.
 
-| Teil | items | shape |
-|---|---|---|
-| Teil 1 | 5 | heard **once**, richtig/falsch on short everyday texts |
-| Teil 2 | 10 | heard **twice**, interview or report |
-| Teil 3 | 5 | heard **twice**, short messages |
+**All twenty items are richtig/falsch.** Confirmed with the founder before
+authoring: Aufgaben 41–60 are one continuous true/false run, and what varies
+between the Teile is how often the recording is heard, not the item shape.
+Authoring Teil 2 or 3 as three-option MC would have taught a task telc does not
+set.
 
-20 items, 75 points. Everyday register, not academic.
+The 16 items removed carried two invented taskTypes (`TELC_B1_HV_ANNOUNCE`,
+`TELC_B1_HV_DIALOG`) and — like Sprachbausteine — answered `a` almost straight
+down.
 
-**Action:** edit `TELC_B1_STRUCTURE.HOERVERSTEHEN` in
-`src/lib/exams/exam-structure.ts` — set `sourced: true` on the section and on all
-three Aufgaben, and delete the ⚠️ convention note. Then author to it.
+⚠️ **The answer-key permutation does not transfer to this section, and pretending
+it does would be worse than skipping it.** A richtig/falsch item has two options
+whose ids are bound to their meaning; shuffling them moves letters without
+changing the true/false split. Distribution here is controlled by authoring and
+then MEASURED. That measurement earned its keep on the first run: the hand-count
+claimed no item alternated, and the probe found three Teil 3 items running
+r-f-r-f-r straight down. Re-authored and re-measured — 52 richtig / 48 falsch
+over 100 statements, no uniform item, no alternating item.
 
 ### 2. telc B1 Schriftlicher Ausdruck — 1 letter
 
@@ -106,14 +116,15 @@ empty. Verified byte-identical across two runs.
 At this checkpoint:
 
 ```
-would INSERT      101
-would DEACTIVATE   80  of 304 active = 26.3%
+would INSERT      116
+would DEACTIVATE   96  of 304 active = 31.6%
 guard: REFUSES without RECONCILE_FORCE=1
 rows flagged ⚠ INVESTIGATE: 0
 ```
 
-(The 15.8% figure from earlier in the day was the state after TestDaF only; it has
-grown with the two telc B1 sections, as expected.)
+(15.8% after TestDaF only → 26.3% with LV and Sprachbausteine → 31.6% with
+Hörverstehen. It grows with each re-authored section, as expected, and every row
+is still "non-conformant predecessor being replaced".)
 
 **The agreed protocol, unchanged:**
 

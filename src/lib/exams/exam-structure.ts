@@ -31,7 +31,10 @@
 //                    which is worse than not checking, because it looks like proof.
 //
 // SOURCE: founder research 2026-07-22 — TestDaF from the official testdaf.de digital
-// Testaufbau; telc Deutsch B1 from telc's published exam structure.
+// Testaufbau; telc Deutsch B1 from telc's published exam structure, and its
+// Hörverstehen additionally from the official telc Deutsch B1 Modellprüfung
+// (Aufgaben 41–60), which is what let that section's 5/10/5 split move from
+// convention to sourced on the same day.
 
 export type Aufgabe = {
   /** Stable key an item declares in its taskType. */
@@ -154,15 +157,20 @@ export const TELC_B1_STRUCTURE: Record<string, SectionStructure> = {
     section: "HOERVERSTEHEN",
     totalItems: 20,
     minutes: null,
-    // ⚠️ The three-part STRUCTURE (global / detailed / selective listening) is
-    // sourced. The 5/10/5 split is this product's CONVENTION and is NOT enforced —
-    // it is reported so it can be pinned against the telc Modellsatz. Enforcing an
-    // unconfirmed count would make the gate ratify our own guess.
-    sourced: false,
+    // PINNED 2026-07-22 against the official telc Deutsch B1 Modellprüfung, where
+    // this section is Aufgaben 41–60 — one continuous twenty-item run. The 5/10/5
+    // split is therefore no longer our convention: it is published, and it is
+    // HARD-ENFORCED, exactly like Leseverstehen.
+    //
+    // All twenty items are richtig/falsch. That uniformity is itself the sourced
+    // figure — authoring Teil 2 or Teil 3 as three-option Mehrfachauswahl would
+    // teach a task this exam does not set. What varies between the Teile is how
+    // often the recording is heard and what kind of text it is, NOT the item shape.
+    sourced: true,
     aufgaben: [
-      { key: "TELC_B1_HV_GLOBAL", label: "Teil 1 — Globalverstehen", items: 5, sourced: false },
-      { key: "TELC_B1_HV_DETAIL", label: "Teil 2 — Detailverstehen", items: 10, sourced: false },
-      { key: "TELC_B1_HV_SELEKTIV", label: "Teil 3 — Selektives Verstehen", items: 5, sourced: false },
+      { key: "TELC_B1_HV_GLOBAL", label: "Teil 1 — Globalverstehen (einmal gehört)", items: 5, sourced: true },
+      { key: "TELC_B1_HV_DETAIL", label: "Teil 2 — Detailverstehen, Interview oder Bericht (zweimal gehört)", items: 10, sourced: true },
+      { key: "TELC_B1_HV_SELEKTIV", label: "Teil 3 — Selektives Verstehen, kurze Mitteilungen (zweimal gehört)", items: 5, sourced: true },
     ],
   },
   SCHRIFTLICHER_AUSDRUCK: {
