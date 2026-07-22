@@ -1,20 +1,69 @@
 # AlmiGoethe
 
-AI-powered **Canadian English Language Proficiency Index Program (DET)** practice — a **separate** product in
-the AlmiWorld family, on its own subdomain **almigoethe.almiworld.com**.
+AI-powered **German exam practice** — a **separate** product in the AlmiWorld family,
+on its own subdomain **almigoethe.almiworld.com**.
 
-Forked from AlmiTOEFL's app chassis; the practice layer is an item-bank ported
-from AlmiPTE (`DetItem ↔ DetAttempt`, data-driven task registry — no if-chains).
-Four tasks: **Read and Select** + **Listen and Type** (deterministic) and
-**Write About the Photo** + **Speak About the Photo** (AI — Claude Sonnet, plus
-Whisper transcription for speaking). Difficulty-pool **adaptive sets** + a
-**full-length mock**.
+Two engines, because German certification splits into two genuinely different shapes:
 
-Honesty doctrine: scores are practice estimates on the **10–160** scale, shown
-as per-subscore **ranges** (Literacy / Comprehension / Conversation / Production)
-plus a readiness band — **never a fabricated overall** (DET's overall is a
-proprietary adaptive estimate). All content is original — **never copied from
-OET**. $12/month + 7-day trial; objective tasks free, AI feedback paid.
+| | level-specific | single-format, score-banded |
+|---|---|---|
+| exams | **Goethe-Zertifikat A1–C2**, **telc Deutsch B1/B2/C1** | **TestDaF** |
+| shape | one paper per level; you sit the level you want | one paper for everyone; the result places you on a band |
+| result | pass/fail per module at that level | TDN 3 / 4 / 5 per module |
 
-Adaptivity here is honest difficulty-pool adaptivity and does **not** reproduce
-DET's scoring engine.
+A level-specific exam and a score-banded one cannot share a scoring model, and they do
+not share one here. Goethe-Zertifikat is **modular** at B1, B2 and C1 (since 2019) —
+each module is passed and certified independently.
+
+## Scope: Germany and Austria
+
+This product covers **German-language** exams — Goethe-Zertifikat, telc, TestDaF and
+the German authorities behind them. Swiss naturalisation (`fide`, cantonal civic
+requirements) belongs to **AlmiSwiss** and is not authored here, even though the
+language overlaps. German and Austrian authorities are likewise kept apart: they are
+different bodies with different rules.
+
+## Honesty doctrine
+
+Results are **per-module practice estimates** against each exam's real pass rule —
+never an official result, never a fabricated overall. All content is **original**.
+
+Where a threshold is not verifiable from the awarding body, the engine ships it as
+**unverified and says so in the UI** rather than presenting a confident number. That
+mechanism is why `thresholdVerified` and `verified` exist as fields at all: a
+threshold nobody has quoted is a threshold the learner should not be shown as fact.
+
+**Citizenship:** German naturalisation generally requires **B1**, alongside other
+criteria. Every surface that says so also tells the reader to confirm with the
+Einbürgerungsbehörde, because the requirement is set by the authority and changes.
+
+$12/month + 7-day trial; objective modules free, AI feedback paid.
+
+## What the build enforces
+
+`build` runs these in order, and any failure blocks the deploy:
+
+| gate | asserts |
+|---|---|
+| `fork-hygiene` | no ancestor or other-product identity in `src`, `scripts`, `prisma` — **or in this README and package.json** |
+| `uniqueness` | per-origin pSEO content is not a name-swap of another origin |
+| `seed:prod` | seeds both banks on every deploy (`append.ts` for Goethe items, `exam-append.ts` for TestDaF/telc) |
+
+## Fork hygiene — and why this repo matters more than most
+
+Lineage: `celpip → goethe`. **This repo is an ancestor**: almi-french, almi-japanese,
+almi-portuguese and others were forked from it, so anything wrong here propagates
+outward.
+
+That is not hypothetical. This README previously described the product as another
+product's exam — a full test name plus that product's task names, scale and Prisma
+models — and the identical file was found in **six** repos, byte for byte, pointing at
+the wrong subdomain. One mistake, propagated by forking, invisible because
+`package.json` was usually right and nobody opens the file that isn't.
+
+Two rules the gate now encodes as a result:
+
+1. **Scan the root identity files**, not just `src`/`scripts`/`prisma`. What a repo
+   says it *is* was the one thing never checked.
+2. **Ban the spelled-out name, not just the acronym.** A list holding only the
+   acronym read that README as clean, because the leak never abbreviated it.
