@@ -22,6 +22,7 @@
 // marked, and nothing depends on punctuation a listener cannot perceive.
 
 import { EXAM_LEVEL, SECTION, type ExamItemInput } from "./_shared";
+import { deGame } from "./_permute";
 
 const L = EXAM_LEVEL.TESTDAF;
 const base = {
@@ -31,7 +32,7 @@ const base = {
   difficulty: "CORE" as const,
 };
 
-export const ITEMS: ExamItemInput[] = [
+const RAW_ITEMS: ExamItemInput[] = [
   // ═══════════════════════════════════════ Aufgabe: Übersicht ergänzen (5 items)
   {
     ...base,
@@ -1135,3 +1136,12 @@ export const ITEMS: ExamItemInput[] = [
     },
   },
 ];
+
+// Repair answer-key distribution (see ./_permute.ts and the answer-distribution
+// gate). MC Aufgaben get their options permuted deterministically so no option is
+// dead or clustered; BEGRIFFSPAAR (binary category-assignment) gets its statements
+// reordered so the key no longer runs a-b-a-b. Correctness is untouched.
+export const ITEMS: ExamItemInput[] = deGame(RAW_ITEMS, {
+  permuteMC: new Set(["TESTDAF_HV_MC", "TESTDAF_HV_FEHLER_ZUSAMMENFASSUNG", "TESTDAF_HV_LAUT_SCHRIFT"]),
+  deRhythm: new Set(["TESTDAF_HV_BEGRIFFSPAAR"]),
+});

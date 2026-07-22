@@ -563,4 +563,11 @@ const teil3Items: ExamItemInput[] = TEIL3.map((t) => ({
   },
 }));
 
-export const ITEMS: ExamItemInput[] = [...teil1Items, ...teil2Items, ...teil3Items];
+import { deGame } from "./_permute";
+
+// Teil 2 (TELC_B1_LV_MC) was authored with option "c" never correct. Permute its
+// options deterministically so all three positions are used. See ./_permute.ts.
+export const ITEMS: ExamItemInput[] = deGame(
+  [...teil1Items, ...teil2Items, ...teil3Items],
+  { permuteMC: new Set(["TELC_B1_LV_MC"]) },
+);

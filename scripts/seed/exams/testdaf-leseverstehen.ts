@@ -28,6 +28,7 @@
 // a learner meets.
 
 import { EXAM_LEVEL, SECTION, type ExamItemInput } from "./_shared";
+import { deGame } from "./_permute";
 
 const L = EXAM_LEVEL.TESTDAF;
 const base = {
@@ -37,7 +38,7 @@ const base = {
   difficulty: "CORE" as const,
 };
 
-export const ITEMS: ExamItemInput[] = [
+const RAW_ITEMS: ExamItemInput[] = [
   // ══════════════════════════════════════════ Aufgabe: Mehrfachauswahl (7 items)
   {
     ...base,
@@ -1281,3 +1282,11 @@ export const ITEMS: ExamItemInput[] = [
     },
   },
 ];
+
+// See ./_permute.ts and the answer-distribution gate. MC options are permuted so no
+// option is dead or clustered; BEGRIFFSPAAR statements are reordered off the a-b-a-b
+// rhythm. Correctness untouched.
+export const ITEMS: ExamItemInput[] = deGame(RAW_ITEMS, {
+  permuteMC: new Set(["TESTDAF_LV_MC", "TESTDAF_LV_FEHLER_ZUSAMMENFASSUNG"]),
+  deRhythm: new Set(["TESTDAF_LV_BEGRIFFSPAAR"]),
+});

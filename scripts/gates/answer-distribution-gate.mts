@@ -45,6 +45,24 @@
 // same logic. Seen red before trusted — see answer-distribution-gate.test.mts.
 
 import { goetheBank, examBank } from "./_bank.mjs";
+import { EXAM_STRUCTURES } from "../../src/lib/exams/exam-structure";
+
+// ── WHAT THIS GATE BLOCKS ON vs. WHAT IT ONLY REPORTS ───────────────────────
+// Founder decision, 2026-07-22: enforce the STRUCTURED exams (the batch-1
+// migration — TestDaF and telc B1) and REPORT the rest. TELC_B2 and
+// TELC_C1_HOCHSCHULE are unstructured (batch 2) and will be re-authored there;
+// the live Goethe bank (no `exam` field in the exam-structure sense) is its own
+// fix track. This mirrors the conformance gate, which iterates every item but
+// only fails on structured exams — invisible is worse than failing, so the
+// unenforced findings are still PRINTED, never silently dropped.
+const ENFORCED_EXAMS = new Set(Object.keys(EXAM_STRUCTURES));
+
+/** A violation is enforced (fails the build) only if its item's exam is one this
+ *  gate is currently responsible for. The scope string is `exam::section::task`. */
+function isEnforced(scope: string): boolean {
+  const exam = scope.split("::")[0];
+  return ENFORCED_EXAMS.has(exam);
+}
 
 // ── thresholds ──────────────────────────────────────────────────────────────
 // Deliberately loose, so a violation is a real pattern and not sampling noise.
@@ -225,22 +243,37 @@ if (isMain) {
   const all = [...(goetheBank() as DistItem[]), ...(examBank() as DistItem[])];
   const { violations, scanned, skipped } = checkDistribution(all);
 
-  if (violations.length > 0) {
-    // Group by scope for a legible report.
+  const enforced = violations.filter((v) => isEnforced(v.scope));
+  const reported = violations.filter((v) => !isEnforced(v.scope));
+
+  const printGroup = (vs: DistViolation[], sink: (s: string) => void) => {
     const byScope = new Map<string, DistViolation[]>();
-    for (const v of violations) byScope.set(v.scope, [...(byScope.get(v.scope) ?? []), v]);
-    console.error(`\n✗ ANSWER-DISTRIBUTION GATE FAILED — ${violations.length} finding(s) in ${byScope.size} Aufgabe(n).\n`);
-    for (const [scope, vs] of [...byScope].sort()) {
-      console.error(`  ${scope}`);
-      for (const v of vs) console.error(`      [${v.kind}] ${v.title} — ${v.detail}`);
-      console.error("");
+    for (const v of vs) byScope.set(v.scope, [...(byScope.get(v.scope) ?? []), v]);
+    for (const [scope, list] of [...byScope].sort()) {
+      sink(`  ${scope}`);
+      for (const v of list) sink(`      [${v.kind}] ${v.title} — ${v.detail}`);
+      sink("");
     }
-    console.error(`  ${scanned} objective items scanned, ${skipped} skipped (free-text gap-fill, no position).`);
+  };
+
+  if (reported.length > 0) {
+    const scopes = new Set(reported.map((v) => v.scope));
+    console.log(`\n⚠ ${reported.length} finding(s) in ${scopes.size} UNENFORCED Aufgabe(n) — reported, not blocking.`);
+    console.log(`  (Unstructured exams = batch 2; the live Goethe bank = its own fix track.)\n`);
+    printGroup(reported, (s) => console.log(s));
+  }
+
+  if (enforced.length > 0) {
+    const scopes = new Set(enforced.map((v) => v.scope));
+    console.error(`\n✗ ANSWER-DISTRIBUTION GATE FAILED — ${enforced.length} finding(s) in ${scopes.size} enforced Aufgabe(n).\n`);
+    printGroup(enforced, (s) => console.error(s));
+    console.error(`  Enforced exams: ${[...ENFORCED_EXAMS].join(", ")}.`);
     console.error(`  Fix the KEY distribution — permute the correct option deterministically (title+index),`);
     console.error(`  or redistribute which option is keyed. Never make an item wrong to satisfy a count.\n`);
     process.exit(1);
   }
 
-  console.log(`\n✓ ANSWER-DISTRIBUTION GATE: ${scanned} objective items — no gameable key pattern.`);
+  console.log(`\n✓ ANSWER-DISTRIBUTION GATE: ${scanned} objective items scanned; no gameable key pattern in the enforced exams (${[...ENFORCED_EXAMS].join(", ")}).`);
   console.log(`  ${skipped} free-text gap-fill item(s) skipped (no answer position).`);
+  if (reported.length > 0) console.log(`  ${reported.length} finding(s) in unenforced exams reported above — batch 2 / Goethe track.`);
 }
