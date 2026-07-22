@@ -51,12 +51,13 @@ import { ITEMS as B1 } from "./exams/telc-b1";
 import { ITEMS as B1_LV } from "./exams/telc-b1-leseverstehen";
 import { ITEMS as B1_SB } from "./exams/telc-b1-sprachbausteine";
 import { ITEMS as B1_HV } from "./exams/telc-b1-hoerverstehen";
+import { ITEMS as B1_SA } from "./exams/telc-b1-schriftlicher-ausdruck";
 import { ITEMS as B2 } from "./exams/telc-b2";
 
 const prisma = new PrismaClient();
 const DRY = process.argv.includes("--dry");
 
-const ALL = [...TESTDAF, ...TESTDAF_LV, ...TESTDAF_HV, ...TESTDAF_SA, ...TESTDAF_MA, ...C1H, ...B1, ...B1_LV, ...B1_SB, ...B1_HV, ...B2];
+const ALL = [...TESTDAF, ...TESTDAF_LV, ...TESTDAF_HV, ...TESTDAF_SA, ...TESTDAF_MA, ...C1H, ...B1, ...B1_LV, ...B1_SB, ...B1_HV, ...B1_SA, ...B2];
 
 /** Identity: what makes two rows "the same item". Content is NOT part of it —
  *  that is the point, so a corrected item updates in place rather than inserting

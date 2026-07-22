@@ -197,6 +197,33 @@ export const TELC_B1_STRUCTURE: Record<string, SectionStructure> = {
   },
 };
 
+/** telc B1 productive bounds.
+ *
+ *  ⚠️ NOTHING HERE IS ENFORCED, DELIBERATELY. telc publishes a TARGET ("circa 80
+ *  Wörter") and a TIME (30 minutes) for the letter — a target is not a floor and
+ *  not a ceiling, and a candidate who writes 70 or 95 words has not broken a
+ *  rule. The 60–120 band this product shows in the UI is OUR convention, chosen
+ *  so the learner sees a range rather than a single number.
+ *
+ *  Enforcing that band would be the exact move this file's header forbids: the
+ *  gate would ratify our own invention and it would look like proof. So the band
+ *  is recorded, flagged as convention, and left unchecked. The TestDaF envelope
+ *  above IS enforced because both of its ends are published. */
+export const TELC_B1_PRODUCTIVE = {
+  SCHRIFTLICHER_AUSDRUCK: {
+    TELC_B1_SA_BRIEF: {
+      wordTarget: 80,
+      wordTargetSourced: true,
+      minutes: 30,
+      minutesSourced: true,
+      // Shown to the learner; not a rule the exam sets.
+      bandMinConvention: 60,
+      bandMaxConvention: 120,
+      bandSourced: false,
+    },
+  },
+} as const;
+
 /** Exams whose structure is recorded here. An exam absent from this map is NOT
  *  silently skipped by the conformance gate — it is reported, because an
  *  unstructured exam is an unchecked exam. */

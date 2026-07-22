@@ -38,6 +38,7 @@ import { ITEMS as TELC_B1 } from "../seed/exams/telc-b1";
 import { ITEMS as TELC_B1_LV } from "../seed/exams/telc-b1-leseverstehen";
 import { ITEMS as TELC_B1_SB } from "../seed/exams/telc-b1-sprachbausteine";
 import { ITEMS as TELC_B1_HV } from "../seed/exams/telc-b1-hoerverstehen";
+import { ITEMS as TELC_B1_SA } from "../seed/exams/telc-b1-schriftlicher-ausdruck";
 import { ITEMS as TELC_B2 } from "../seed/exams/telc-b2";
 
 import type { Prisma } from "@prisma/client";
@@ -59,7 +60,7 @@ export function goetheBank(): GoetheRow[] {
  *  registered but absent from this list fails as "0 items", loudly, rather than
  *  disappearing from the counts. */
 export function examBank(): ExamRow[] {
-  return [...TESTDAF, ...TESTDAF_LV, ...TESTDAF_HV, ...TESTDAF_SA, ...TESTDAF_MA, ...TELC_C1H, ...TELC_B1, ...TELC_B1_LV, ...TELC_B1_SB, ...TELC_B1_HV, ...TELC_B2];
+  return [...TESTDAF, ...TESTDAF_LV, ...TESTDAF_HV, ...TESTDAF_SA, ...TESTDAF_MA, ...TELC_C1H, ...TELC_B1, ...TELC_B1_LV, ...TELC_B1_SB, ...TELC_B1_HV, ...TELC_B1_SA, ...TELC_B2];
 }
 
 /** Group rows by a key, preserving insertion order of first appearance. */
