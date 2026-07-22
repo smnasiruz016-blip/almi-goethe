@@ -150,10 +150,20 @@ async function main() {
   // ── the guard, BEFORE anything is written ──
   if (toDeactivate.length > 0) {
     console.log(`\n  ${toDeactivate.length} row(s) are live but no longer in the seed source:`);
-    for (const d of toDeactivate.slice(0, 40)) {
+    // Printed in a stable order and NOT truncated below 500, so the deploy log
+    // carries the WHOLE live list — the source-side prediction is diffed against
+    // this exact set before RECONCILE_FORCE is ever used, and a 40-row truncation
+    // would make that diff impossible. The 500 cap still bounds output if a broken
+    // import ever produced a runaway (the case this guard exists to refuse).
+    const sorted = [...toDeactivate].sort((a, b) => {
+      const ka = `${a.exam}::${a.section}::${a.taskType}::${a.title}`;
+      const kb = `${b.exam}::${b.section}::${b.taskType}::${b.title}`;
+      return ka < kb ? -1 : ka > kb ? 1 : 0;
+    });
+    for (const d of sorted.slice(0, 500)) {
       console.log(`  - ${d.exam} ${d.section} [${d.taskType}] "${d.title}"`);
     }
-    if (toDeactivate.length > 40) console.log(`  - … and ${toDeactivate.length - 40} more`);
+    if (sorted.length > 500) console.log(`  - … and ${sorted.length - 500} more`);
 
     const fraction = liveCount === 0 ? 0 : toDeactivate.length / liveCount;
     const tooMany = refusesReconcile(toDeactivate.length, liveCount, false);
