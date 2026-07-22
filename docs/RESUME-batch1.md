@@ -3,10 +3,13 @@
 Checkpoint written 2026-07-22, end of day. Work is **committed and pushed to
 `goethe-gate-floor` (PR #12), deliberately NOT merged, NOT forced, NOT deployed.**
 
-Resume by checking out `goethe-gate-floor` and starting at **telc B1 Sprechen**
-(Teil 1 Kontaktaufnahme + Teil 2 über ein Thema — new builds). Hörverstehen and
-Schriftlicher Ausdruck landed 2026-07-22; Sprechen is section 9 of 9 and closes
-batch 1.
+**ALL 9 SECTIONS AUTHORED as of 2026-07-22.** The bank is fully conformant —
+`gate:conformance` passes 180 structured items with zero violations and zero
+uncovered Aufgaben, and the ledger reports 0 cells below policy. What remains is
+the CLOSING SEQUENCE, not authoring: build the two pending gates, review the
+deactivation list, diff against the live refusal, one forced reconcile, wire
+`gate:conformance` into `build`, merge PR #12. Resume at
+**"Batch-1 closing sequence"** below.
 
 ---
 
@@ -33,8 +36,12 @@ So the gate floor, the re-authored bank and the single reconcile all land togeth
 | telc B1 Sprachbausteine | 16 | 2 Teile — 10/10 = **20** ✓ |
 | telc B1 Hörverstehen | 15 | 3 Teile — 5/10/5 = **20** ✓, richtig/falsch throughout |
 | telc B1 Schriftlicher Ausdruck | 16 | 1 Aufgabe — ein Brief, 3 Leitpunkte, 8 Sie / 8 du |
+| telc B1 Sprechen | 32 | 3 Teile — Kontaktaufnahme 8 · über ein Thema 8 · Planen 16 |
 
-**TestDaF is fully conformant** — zero violations across all four sections.
+**Both structured exams are now fully conformant** — `gate:conformance` passes all
+180 items with zero violations and zero uncovered Aufgaben. (TELC_B2 and
+TELC_C1_HOCHSCHULE remain unstructured by design — declared in UNSTRUCTURED_EXAMS,
+counted, not silently skipped; they are batch 2.)
 
 Infrastructure landed and RED-first proven: conformance gate (whole-bank iteration),
 Rule #7 gate (registry-enumerated), title-uniqueness gate (served axis), real-entity
@@ -93,10 +100,45 @@ prose, which is what the grader's `communication` criterion actually reads.
 sixteen rows UPDATE IN PLACE and contribute **zero** deactivations. Verified —
 `SCHRIFTLICHER_AUSDRUCK` does not appear in the predict:deactivations list.
 
-### 3. telc B1 Sprechen — Teil 1 and Teil 2 are NEW BUILDS
+### ~~3. telc B1 Sprechen~~ — DONE 2026-07-22
 
-The bank has only `TELC_B1_SP_PLAN` (Teil 3, *gemeinsam etwas planen*).
-**Teil 1 Kontaktaufnahme** and **Teil 2 über ein Thema sprechen** do not exist.
+Now in `scripts/seed/exams/telc-b1-sprechen.ts` — 32 items, all three Teile
+conformant: Kontaktaufnahme 8 (new), über ein Thema 8 (new), Planen 16 (moved).
+
+⚠️ **The 16 Teil-3 items were NON-CONFORMANT, not "conformant and preserved".**
+The plan going in was to move them verbatim as conformant rows. The gate proved
+that assumption wrong on first run: they carried `TELC_B1_SP_PLAN`, but the
+structure's key is `TELC_B1_SP_PLANEN`. They had been failing conformance all
+along. The fix is to correct the taskType — which, because taskType is a content
+field and not part of identity, is an IN-PLACE update under the unchanged titles:
+zero deactivations, and the rows become conformant. This is exactly why the
+assumption ("should preserve verbatim") was checked against the gate rather than
+trusted — the same discipline that caught the r-f-r-f-r rhythm in Hörverstehen.
+
+Teil 3 stays at 16 (heavier than Teil 1/2 at 8 each) because those items already
+existed. Trimming them to balance the section would deactivate rows — and now
+that the corrected key is conformant, that WOULD trip INVESTIGATE. Left intact.
+
+Both Teil 1 and Teil 2 are productive (no answer keys), so the type-aware
+distribution gate does not apply to them. Teil 2 uses the same 3-Leitpunkte tuple
+discipline as Schriftlicher Ausdruck, points in the instruction prose.
+
+---
+
+## Batch-1 closing sequence — RESUME HERE
+
+Authoring is complete. The remaining steps, in order:
+
+1. **Build the two pending gates, RED-first** (below): type-aware
+   answer-key-distribution, and civic-sourcing.
+2. **Review the source-side deactivation list.** Current: 132 insert / 96
+   deactivate (31.6%), **all** non-conformant predecessors, **0 ⚠ INVESTIGATE**.
+3. **Diff against the live refusal output** on a deploy attempt (the seeder prints
+   every row and fails closed before writing; nobody reads `DATABASE_URL`).
+4. **One `RECONCILE_FORCE=1`** at the reviewed final state.
+5. **Wire `gate:conformance` into `build`** — in this same merge step, never
+   before (it would block deploys of the still-live non-conformant bank).
+6. **Merge PR #12.**
 
 ---
 
@@ -148,14 +190,15 @@ empty. Verified byte-identical across two runs.
 At this checkpoint:
 
 ```
-would INSERT      116
+would INSERT      132
 would DEACTIVATE   96  of 304 active = 31.6%
 guard: REFUSES without RECONCILE_FORCE=1
 rows flagged ⚠ INVESTIGATE: 0
 ```
 
-(15.8% after TestDaF only → 26.3% with LV and Sprachbausteine → 31.6% with
-Hörverstehen. It grows with each re-authored section, as expected, and every row
+(15.8% after TestDaF only → 26.3% with LV and Sprachbausteine → 31.6% with Hörverstehen; the
+insert count then rose 116 → 132 with the two new Sprechen Teile (deactivate held
+at 96, since PLAN→PLANEN was an in-place update). It grows with each re-authored section, as expected, and every row
 is still "non-conformant predecessor being replaced".)
 
 **The agreed protocol, unchanged:**
