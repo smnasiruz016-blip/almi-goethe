@@ -26,6 +26,10 @@
     "gate:reconcile:proof": "tsx scripts/gates/reconcile-guard.test.mts",
     "ledger": "tsx scripts/gates/ledger.mts",
     "gate:conformance": "tsx scripts/gates/conformance-gate.mts",
+    "gate:answer-distribution": "tsx scripts/gates/answer-distribution-gate.mts",
+    "gate:answer-distribution:proof": "tsx scripts/gates/answer-distribution-gate.test.mts",
+    "gate:civic-sourcing": "tsx scripts/gates/civic-sourcing-gate.mts",
+    "gate:civic-sourcing:proof": "tsx scripts/gates/civic-sourcing-gate.test.mts",
     "predict:deactivations": "tsx scripts/gates/predict-deactivations.mts"
   },
   "dependencies": {
