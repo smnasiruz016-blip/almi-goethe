@@ -5,12 +5,12 @@
   "description": "AlmiGoethe — AI-powered Goethe-Zertifikat German practice in the AlmiWorld family. Four modules (Lesen, Hören, Schreiben, Sprechen) at six CEFR levels (A1–C2), scored per module as a points estimate with a 60% pass mark, no fabricated composite. Separate product (almigoethe.almiworld.com). Original German content — never copied from the Goethe-Institut. Practice estimates only; confirm the level you need with the Goethe-Institut.",
   "scripts": {
     "dev": "next dev",
-    "build": "node scripts/seo/fork-hygiene-gate.mjs && node scripts/seo/uniqueness-gate.mjs && npm run gate:rule7 && npm run gate:titles && npm run gate:real-entity:proof && npm run gate:real-entity && prisma generate && prisma migrate deploy && next build && npm run seed:prod",
+    "build": "node scripts/seo/fork-hygiene-gate.mjs && node scripts/seo/uniqueness-gate.mjs && npm run gate:rule7 && npm run gate:titles && npm run gate:real-entity:proof && npm run gate:real-entity && npm run gate:reconcile:proof && prisma generate && prisma migrate deploy && next build && npm run seed:prod",
     "gate:rule7": "tsx scripts/gates/rule7-gate.mts",
     "gate:titles": "tsx scripts/gates/title-uniqueness-gate.mts",
     "gate:real-entity": "tsx scripts/gates/real-entity-gate.mts",
     "gate:real-entity:proof": "tsx scripts/gates/real-entity-gate.test.mts",
-    "gates": "npm run gate:rule7 && npm run gate:titles && npm run gate:real-entity:proof && npm run gate:real-entity",
+    "gates": "npm run gate:rule7 && npm run gate:titles && npm run gate:real-entity:proof && npm run gate:real-entity && npm run gate:reconcile:proof",
     "seed:prod": "tsx scripts/seed/append.ts && tsx scripts/seed/exam-append.ts",
     "start": "next start",
     "postinstall": "prisma generate",
@@ -22,7 +22,8 @@
     "seed:append": "tsx scripts/seed/append.ts",
     "seed:exams": "tsx scripts/seed/exam-append.ts",
     "validate:seed": "tsx scripts/validate-seed.ts",
-    "validate:exam-seed": "tsx scripts/validate-exam-seed.ts"
+    "validate:exam-seed": "tsx scripts/validate-exam-seed.ts",
+    "gate:reconcile:proof": "tsx scripts/gates/reconcile-guard.test.mts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.91.1",
