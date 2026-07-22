@@ -28,6 +28,22 @@ import { join, relative } from "node:path";
 
 const ROOT = process.cwd();
 const SCAN_DIRS = ["src", "scripts", "prisma"];
+
+// ── ROOT IDENTITY FILES — a network-wide blind spot ──────────────────────────
+// Every fork-hygiene gate in the network scanned only src/scripts/prisma, so a
+// repo's own IDENTITY files were never checked. A sweep on 2026-07-22 found the
+// SAME wrong README in SIX repos — goethe, icelandic, danish, norwegian, dutch and
+// portuguese — byte-identical, describing AlmiDET and pointing at the wrong
+// subdomain. One original mistake, propagated by forking, invisible because
+// package.json was usually right and nobody opens the file that isn't.
+//
+// This repo matters more than most: it is an ANCESTOR. Every fork taken from here
+// inherited the wrong README, which is exactly how one typo became six.
+//
+// NAMED FILES ONLY, not the whole root: the root also holds package-lock.json and
+// other generated files, and scanning those would drown the gate in noise and invite
+// someone to switch it off.
+const SCAN_ROOT_FILES = ["package.json", "README.md"];
 const SCAN_EXT = /\.(ts|tsx|js|mjs|json|prisma|css|md)$/;
 
 const ALLOWLIST = new Map([
@@ -43,6 +59,19 @@ const BANNED = [
   // — CELPIP (the sole ancestor) — the Canadian English test and its framework —
   "CELPIP", "Canadian Language Benchmark",
   "Immigration, Refugees and Citizenship Canada",
+  // CELPIP SPELLED OUT. The acronym alone is not enough: this repo's README described
+  // the product as "Canadian English Language Proficiency Index Program (DET)"
+  // practice — CELPIP's full name, never abbreviated there — so a list holding only
+  // the acronym read the file as clean. The same string was found on almi-french's
+  // live PRICING page and in almi-portuguese's README. Ban what was actually written,
+  // not the tidy form.
+  "Canadian English Language Proficiency Index Program",
+  // — OTHER-PRODUCT identities. Not ancestors of this repo, but the leaked README
+  // arrived from AlmiDET's chassis and carried DET's task names, scale and Prisma
+  // models. A German-exam product naming another AlmiWorld product's exam in its OWN
+  // identity files is the same class of leak, whichever direction the fork ran.
+  "Read and Select", "Write About the Photo", "Speak About the Photo",
+  "DetItem", "DetAttempt",
   // Sibling/ancestor PRODUCT names appended below — GENERATED, not hand-listed.
 ];
 
@@ -133,8 +162,16 @@ function walk(dir, out = []) {
 
 const violations = [];
 
-for (const dir of SCAN_DIRS) {
-  for (const file of walk(join(ROOT, dir))) {
+/** Every file to scan: the source trees, plus the named root identity files. */
+const targets = [
+  ...SCAN_DIRS.flatMap((dir) => walk(join(ROOT, dir))),
+  ...SCAN_ROOT_FILES.map((f) => join(ROOT, f)).filter((f) => {
+    try { return statSync(f).isFile(); } catch { return false; }
+  }),
+];
+
+{
+  for (const file of targets) {
     const rel = relative(ROOT, file).replace(/\\/g, "/");
     if (ALLOWLIST.has(rel)) continue;
     const raw = readFileSync(file, "utf8");
@@ -142,10 +179,14 @@ for (const dir of SCAN_DIRS) {
     if (rel.endsWith(".json")) {
       try { text = jsonStrings(JSON.parse(raw)).join("\n"); }
       catch { text = raw; }
-    } else if (rel.endsWith(".prisma")) {
-      text = stripComments(raw);   // prisma comments are //
+    } else if (rel.endsWith(".md")) {
+      // Markdown is scanned RAW. It has no code comments, and running it through
+      // stripComments would treat the // in every https:// URL as the start of a
+      // line comment and blank the rest of the line — silently HIDING a leak in
+      // exactly the file most likely to carry one.
+      text = raw;
     } else {
-      text = stripComments(raw);
+      text = stripComments(raw);   // .ts/.tsx/.js/.mjs/.css, and .prisma (also //)
     }
     const lines = text.split(/\r?\n/);
     const rawLines = raw.split(/\r?\n/);
@@ -175,4 +216,4 @@ if (violations.length) {
   process.exit(1);
 }
 
-console.log(`✓ Fork hygiene gate: clean (no ancestor nouns across ${SCAN_DIRS.join(", ")}).`);
+console.log(`✓ Fork hygiene gate: clean (no ancestor nouns across ${SCAN_DIRS.join(", ")} + ${SCAN_ROOT_FILES.join(", ")}).`);
