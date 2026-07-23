@@ -5,6 +5,7 @@
 //   TELC_B1/B2/C1H     → percentage-first, 60% per-part pass (C1H also overall)
 //   DTZ                → one fixed total /100, summed, banded A2/B1/nicht bestanden
 //   EINBUERGERUNGSTEST → 33 civic MCQs, count-based pass/fail (≥17/33)
+//   DSH                → weighted % (2:2:1:2) banded into DSH-1/2/3
 
 import type { GermanExam } from "@/lib/exams/types";
 
@@ -12,6 +13,7 @@ export * from "./testdaf";
 export * from "./telc";
 export * from "./dtz";
 export * from "./einbuergerung";
+export * from "./dsh";
 
 /** True for the TestDaF engine, whose UI must never render a total or pass/fail. */
 export function isTestDaf(exam: GermanExam): boolean {
@@ -31,4 +33,9 @@ export function isDtz(exam: GermanExam): boolean {
 /** True for the Einbürgerungstest, whose result is a count-based pass/fail (≥17/33). */
 export function isEinb(exam: GermanExam): boolean {
   return exam === "EINBUERGERUNGSTEST";
+}
+
+/** True for DSH, whose result is a weighted % (2:2:1:2) banded into DSH-1/2/3. */
+export function isDsh(exam: GermanExam): boolean {
+  return exam === "DSH";
 }

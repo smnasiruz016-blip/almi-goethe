@@ -334,6 +334,84 @@ export const EINBUERGERUNG_STRUCTURE: Record<string, SectionStructure> = {
   },
 };
 
+// ── ⑤ DSH — Deutsche Sprachprüfung für den Hochschulzugang ──────────────────
+// ⚠️ A FRAMEWORK, NOT A CATALOG. The HRK Rahmenordnung (RO-DT) fixes the four
+// written sections, the weighting 2:2:1:2 and the grade bands — but each university
+// designs its own tasks and sets its own COUNTS. So here the TASK-TYPES are sourced
+// (membership hard-enforced), and every objective Aufgabe carries `items: null`
+// because a fixed per-Teil count is NOT sourced — it is university-variable. The
+// ONE sourced count/envelope is Textproduktion's 200–250 words (see DSH_PRODUCTIVE,
+// hard-enforced). This is the honest position, exactly like the DALF ceilings.
+//
+// SOURCE: HRK RO-DT + Musterprüfungsordnung. Objective sections here are practised
+// as auto-scored MCQ (the SKILL — Hör-/Leseverstehen, wiss. Strukturen — is what is
+// sourced; the response format is a practice adaptation, since DSH itself leaves the
+// format to each university). The oral (Mündliche Prüfung) is a separate part and
+// does NOT enter the weighted written grade.
+export const DSH_STRUCTURE: Record<string, SectionStructure> = {
+  HOERVERSTEHEN: {
+    section: "HOERVERSTEHEN",
+    totalItems: null, // weight 2; count university-variable (convention)
+    minutes: null,
+    sourced: true,
+    aufgaben: [
+      { key: "DSH_HV_FRAGEN", label: "Hörverstehen — Fragen zum Vortrag", items: null, sourced: true },
+      { key: "DSH_HV_HAUPTAUSSAGE", label: "Hörverstehen — Hauptaussagen / Zusammenfassung", items: null, sourced: true },
+    ],
+  },
+  LESEVERSTEHEN: {
+    section: "LESEVERSTEHEN",
+    totalItems: null, // weight 2; count university-variable
+    minutes: null,
+    sourced: true,
+    aufgaben: [
+      { key: "DSH_LV_FRAGEN", label: "Leseverstehen — Fragen zum Text", items: null, sourced: true },
+      { key: "DSH_LV_WORTERKLAERUNG", label: "Leseverstehen — Worterklärung im Kontext", items: null, sourced: true },
+      { key: "DSH_LV_REFORMULIERUNG", label: "Leseverstehen — Umformulieren / Paraphrasieren", items: null, sourced: true },
+    ],
+  },
+  WISS_STRUKTUREN: {
+    section: "WISS_STRUKTUREN",
+    totalItems: null, // weight 1; count university-variable
+    minutes: null,
+    sourced: true,
+    aufgaben: [
+      { key: "DSH_WS_NOMINALISIERUNG", label: "Nominalisierung ↔ Verbalisierung", items: null, sourced: true },
+      { key: "DSH_WS_PASSIV", label: "Aktiv ↔ Passiv", items: null, sourced: true },
+      { key: "DSH_WS_ATTRIBUTE", label: "Partizipial- / erweiterte Attribute", items: null, sourced: true },
+      { key: "DSH_WS_KONNEKTOREN", label: "Konnektoren / Umformung von Nebensätzen", items: null, sourced: true },
+    ],
+  },
+  TEXTPRODUKTION: {
+    section: "TEXTPRODUKTION",
+    totalItems: 1, // weight 2; ONE academic text, 200–250 words (SOURCED — hard-enforced)
+    minutes: null,
+    sourced: true,
+    aufgaben: [
+      { key: "DSH_TP_TEXT", label: "Textproduktion (200–250 Wörter): Grafik / Erörterung / Argumentation", items: 1, sourced: true },
+    ],
+  },
+  SPRECHEN: {
+    section: "SPRECHEN",
+    totalItems: null, // the oral part — assessed separately, NOT in the weighted grade
+    minutes: null,
+    sourced: true,
+    aufgaben: [
+      { key: "DSH_SP_PRAESENTATION", label: "Mündlich — Text zusammenfassen und Position vertreten", items: null, sourced: true },
+      { key: "DSH_SP_DISKUSSION", label: "Mündlich — Diskussion / auf Fragen reagieren", items: null, sourced: true },
+    ],
+  },
+};
+
+/** DSH productive envelope. Only Textproduktion's 200–250-word band is SOURCED (the
+ *  RO-DT names it), so it is hard-enforced. Everything else about DSH counts is
+ *  convention and lives, un-enforced, in the structure above. */
+export const DSH_PRODUCTIVE = {
+  TEXTPRODUKTION: {
+    DSH_TP_TEXT: { wordMin: 200, wordMax: 250, wordMinSourced: true, wordMaxSourced: true },
+  },
+} as const;
+
 /** Exams whose structure is recorded here. An exam absent from this map is NOT
  *  silently skipped by the conformance gate — it is reported, because an
  *  unstructured exam is an unchecked exam. */
@@ -342,6 +420,7 @@ export const EXAM_STRUCTURES: Record<string, Record<string, SectionStructure>> =
   TELC_B1: TELC_B1_STRUCTURE,
   DTZ: DTZ_STRUCTURE,
   EINBUERGERUNGSTEST: EINBUERGERUNG_STRUCTURE,
+  DSH: DSH_STRUCTURE,
 };
 
 /** Exams registered in the product but not yet structured. Explicit, so the gap is

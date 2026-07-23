@@ -48,6 +48,7 @@ const EXAM_NAME: Record<GermanExam, string> = {
   TELC_C1_HOCHSCHULE: "telc Deutsch C1 Hochschule",
   DTZ: "Deutsch-Test für Zuwanderer",
   EINBUERGERUNGSTEST: "Einbürgerungstest",
+  DSH: "DSH (Deutsche Sprachprüfung für den Hochschulzugang)",
 };
 
 type Skill = "writing" | "speaking";

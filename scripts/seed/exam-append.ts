@@ -59,11 +59,16 @@ import { ITEMS as DTZ_LV } from "./exams/dtz-lesen";
 import { ITEMS as DTZ_SA } from "./exams/dtz-schreiben";
 import { ITEMS as DTZ_SP } from "./exams/dtz-sprechen";
 import { ITEMS as EINB } from "./exams/einbuergerungstest";
+import { ITEMS as DSH_HV } from "./exams/dsh-hoerverstehen";
+import { ITEMS as DSH_LV } from "./exams/dsh-leseverstehen";
+import { ITEMS as DSH_WS } from "./exams/dsh-strukturen";
+import { ITEMS as DSH_TP } from "./exams/dsh-textproduktion";
+import { ITEMS as DSH_SP } from "./exams/dsh-muendlich";
 
 const prisma = new PrismaClient();
 const DRY = process.argv.includes("--dry");
 
-const ALL = [...TESTDAF, ...TESTDAF_LV, ...TESTDAF_HV, ...TESTDAF_SA, ...TESTDAF_MA, ...C1H, ...B1, ...B1_LV, ...B1_SB, ...B1_HV, ...B1_SA, ...B1_SP, ...B2, ...DTZ_HV, ...DTZ_LV, ...DTZ_SA, ...DTZ_SP, ...EINB];
+const ALL = [...TESTDAF, ...TESTDAF_LV, ...TESTDAF_HV, ...TESTDAF_SA, ...TESTDAF_MA, ...C1H, ...B1, ...B1_LV, ...B1_SB, ...B1_HV, ...B1_SA, ...B1_SP, ...B2, ...DTZ_HV, ...DTZ_LV, ...DTZ_SA, ...DTZ_SP, ...EINB, ...DSH_HV, ...DSH_LV, ...DSH_WS, ...DSH_TP, ...DSH_SP];
 
 /** Identity: what makes two rows "the same item". Content is NOT part of it —
  *  that is the point, so a corrected item updates in place rather than inserting

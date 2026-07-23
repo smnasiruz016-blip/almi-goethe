@@ -37,6 +37,7 @@ import {
   UNSTRUCTURED_EXAMS,
   TESTDAF_PRODUCTIVE,
   DTZ_PRODUCTIVE,
+  DSH_PRODUCTIVE,
   type Aufgabe,
 } from "../../src/lib/exams/exam-structure";
 import { EXAM_DEFS } from "../../src/lib/exams/registry";
@@ -47,7 +48,9 @@ const warnings: string[] = [];
 let checked = 0;
 let unstructured = 0;
 
-const PRODUCTIVE_SECTIONS = new Set(["SCHRIFTLICHER_AUSDRUCK", "MUENDLICHER_AUSDRUCK", "SPRECHEN"]);
+// Sections graded as AI-productive (a prompt, no answer key) rather than objective.
+// DSH's TEXTPRODUKTION is a writing section like SCHRIFTLICHER_AUSDRUCK.
+const PRODUCTIVE_SECTIONS = new Set(["SCHRIFTLICHER_AUSDRUCK", "MUENDLICHER_AUSDRUCK", "SPRECHEN", "TEXTPRODUKTION"]);
 
 for (const it of examBank() as any[]) {
   const exam = String(it.exam);
@@ -113,6 +116,21 @@ for (const it of examBank() as any[]) {
   // ends, so it is hard-enforced (unlike telc's "circa 80" target). ──
   if (exam === "DTZ" && section === "SCHRIFTLICHER_AUSDRUCK") {
     const spec = (DTZ_PRODUCTIVE.SCHRIFTLICHER_AUSDRUCK as Record<string, any>)[it.taskType];
+    const wMin = it.payload?.wordMin;
+    const wMax = it.payload?.wordMax;
+    if (spec) {
+      if (typeof wMin !== "number" || wMin < spec.wordMin) {
+        violations.push(`${where}\n      wordMin ${wMin} is below the published floor of ${spec.wordMin} for "${aufgabe.label}"`);
+      }
+      if (typeof wMax !== "number" || wMax > spec.wordMax) {
+        violations.push(`${where}\n      wordMax ${wMax} exceeds the published ceiling of ${spec.wordMax} for "${aufgabe.label}"`);
+      }
+    }
+  }
+  // ── DSH productive envelope: only Textproduktion's 200–250-word band is sourced
+  // (the RO-DT names it); DSH counts are otherwise convention and not checked. ──
+  if (exam === "DSH" && section === "TEXTPRODUKTION") {
+    const spec = (DSH_PRODUCTIVE.TEXTPRODUKTION as Record<string, any>)[it.taskType];
     const wMin = it.payload?.wordMin;
     const wMax = it.payload?.wordMax;
     if (spec) {
