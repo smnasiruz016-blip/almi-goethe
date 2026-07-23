@@ -43,6 +43,35 @@ university corridor is revisited.
   NOT fact-base↔world — a wrong capital typed into `civic-factbase.ts` stays green
   (verified by mutating MV→Magdeburg: gate green, only the sourcing review catches
   it). Facts are beta-g's per-item GREEN, not the gate's.
+### DOCTRINE — a green gate proves the AUTHORED DATA, not the code that SERVES it
+
+Any section whose served subset depends on **who is asking** — state-scoped,
+region-scoped, level-scoped, plan-scoped, locale-scoped — needs its **own runtime
+draw gate**. The authoring gates will pass while the draw mixes contexts, because
+they check items in isolation and the defect lives in the SELECTION.
+
+**Precedent: Einbürgerungstest `BUNDESLAND`, PR #22.** 32 items, each correctly
+tagged to one of the 16 Länder, each sourced and cited; `civic-sourcing` GREEN,
+including a cross-state check it had been mutation-tested on. `pickClientItem` still
+drew a random item across the WHOLE (exam, section) pool — a Berliner got another
+Land's capital 15 times in 16. Caught only because the reviewer gated merge on a
+RUNTIME confirmation rather than a diff.
+
+Applying it, on this or any sibling product:
+1. Write the draw gate in the SAME PR as the scoped items. Not after.
+2. Make the draw a PURE function over items, so it is testable without a database.
+3. A scoped section serves NOTHING until the scope is chosen — no default, no "any"
+   fallback. Return a DISCRIMINATED result: "not chosen yet" and "nothing seeded"
+   must render differently. As one nullable they collapse, and the tempting fix for
+   a blank page is to draw something — which is the bug.
+4. Never top up to a sourced envelope from another scope. Serve
+   `min(requested, available)` and REPORT the shortfall.
+5. Mutation-test by deleting the scope filter and confirm the proof goes red.
+
+⚠️ NETWORK CHECK for any future user-scoped content: for every section whose served
+set varies by user, ask "what does the DRAW do?" — and answer it by RUNNING it, not
+by reading the gate output.
+
 - **state-draw** — the RUNTIME half of the Bundesland guarantee. The civic-sourcing
   gate was GREEN while the practice page drew at random across the whole BUNDESLAND
   section, so a Berliner got another Land's capital 15 times in 16: the bank was
@@ -94,12 +123,21 @@ sections) → runner `Outcome.x` + result block → seed files (RED-first) → w
    „Trotz das schlechte Wetter". Re-dump with `npx tsx` over
    `scripts/seed/exams/dsh-strukturen.ts` — note `deGame` permutes option letters, so
    review the SERVED order, not the authored one.
-3. **Bundesland civic facts — PARTIAL.** Domain E is built: `BUNDESLAND_FACTS`
+3. ~~**Bundesland civic facts**~~ **DONE — CLOSED GREEN** (PR #22, live-verified by
+   beta-g: chooser gates the draw, BE serves only Berlin, BY only Bayern, shortfall
+   notice honest, zero cross-state). Domain E is built: `BUNDESLAND_FACTS`
    (16 states × 2 sourced anchors, capital + Landesparlament) + 32 original items in
    `scripts/seed/exams/einbuergerungstest-bundesland.ts`, distractors drawn from other
-   real Länder. ⚠️ STILL OPEN: the real test asks **3** state questions and only **2**
-   anchors per state are sourced (`BUNDESLAND_ITEMS_PER_STATE`), so a mock cannot fill
-   the third without fabricating — beta-g offered one more cited fact per state.
+   real Länder. **2-of-3 is a RULING, not a gap to close:** the real test asks 3 state
+   questions and 2 anchors per state are sourced (`BUNDESLAND_ITEMS_PER_STATE`).
+   Beta-g ruled KEEP 2 — a clean, uniform, text-answerable 3rd civic fact does not
+   exist across all 16 (the official third is the image-based Landeswappen, out of
+   scope for a text engine), so honest 2-of-3 with a documented shortfall beats
+   padding with a non-uniform fact. **The envelope stays at 3 and the gap stays
+   documented — do not "fix" this.** Also ruled: the three Stadtstaat capital items
+   ("Landeshauptstadt von Hamburg?" → "Hamburg") are trivially answerable but correct
+   and real — accepted as-is; the parliament item (Bürgerschaft / Abgeordnetenhaus)
+   carries the value for those states.
    Also NOT sourced: 13 of the 16 state portal domains (only BE/NW/HB were supplied);
    they are cited to bpb.de + the Parlamente-in-Deutschland listing instead of
    guessing a URL. Image-based state questions (coats of arms, maps) are out of scope
