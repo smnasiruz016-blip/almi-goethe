@@ -28,8 +28,25 @@
 // civic-sourcing-gate.test.mts. The pure checker is exported so the proof drives it
 // with fixtures, since the live civic bank does not exist yet (engine ③).
 
+// ── DOMAIN E — THE PER-STATE OBLIGATION (added with the Bundesland fact-base) ──
+// A state-tagged item has a failure mode the federal items do not: it can be
+// perfectly sourced and still WRONG FOR ITS READER. An item tagged BE that keys
+// "München" is internally consistent, cites a real fact, and matches a real
+// fact-base entry — every one of the four original checks passes. It is still a
+// Berliner being taught Bavaria's capital on the test that decides their
+// naturalisation. So the state dimension gets its own checks, and the decisive one
+// is CROSS-STATE: the referenced fact must live under the item's OWN state's key,
+// not merely exist somewhere in the map.
+
 import { goetheBank, examBank } from "./_bank.mjs";
-import { CIVIC_FACTS, CIVIC_EXAMS, type CivicFact } from "../../src/lib/exams/civic-factbase";
+import {
+  CIVIC_FACTS,
+  CIVIC_EXAMS,
+  BUNDESLAND_FACTS,
+  isBundeslandCode,
+  type CivicFact,
+  type BundeslandCode,
+} from "../../src/lib/exams/civic-factbase";
 
 export type CivicItem = {
   exam?: string;
@@ -40,7 +57,15 @@ export type CivicItem = {
 
 export type CivicViolation = {
   title: string;
-  kind: "no-factId" | "unknown-factId" | "no-citation" | "answer-mismatch";
+  kind:
+    | "no-factId"
+    | "unknown-factId"
+    | "no-citation"
+    | "answer-mismatch"
+    // Domain E.
+    | "unknown-bundesland"
+    | "cross-state-fact"
+    | "untagged-state-fact";
   detail: string;
 };
 
@@ -54,20 +79,88 @@ export function isCivic(it: CivicItem): boolean {
 export function checkCivicSourcing(
   items: CivicItem[],
   facts: Record<string, CivicFact> = CIVIC_FACTS,
-): { violations: CivicViolation[]; civicScanned: number } {
+  stateFacts: Record<string, CivicFact[]> = BUNDESLAND_FACTS,
+): { violations: CivicViolation[]; civicScanned: number; stateScanned: number } {
   const violations: CivicViolation[] = [];
   let civicScanned = 0;
+  let stateScanned = 0;
+
+  // Every per-state fact, flattened, so we can tell "this factId belongs to ANOTHER
+  // state" apart from "this factId does not exist at all". The first is a leak; the
+  // second is a typo. Reporting them as the same failure would hide the leak.
+  const stateOf = new Map<string, string>();
+  for (const [code, list] of Object.entries(stateFacts)) {
+    for (const f of list) stateOf.set(f.factId, code);
+  }
 
   for (const it of items) {
     if (!isCivic(it)) continue;
     civicScanned++;
     const title = it.title ?? "(untitled)";
     const factId = it.payload?.factId;
+    const tagged = it.payload?.bundesland;
 
     if (typeof factId !== "string" || factId.length === 0) {
       violations.push({ title, kind: "no-factId", detail: "civic item declares no payload.factId" });
       continue;
     }
+
+    // ── Domain E path: the item declares a Bundesland. ──
+    if (tagged !== undefined) {
+      stateScanned++;
+      if (!isBundeslandCode(tagged)) {
+        violations.push({ title, kind: "unknown-bundesland", detail: `"${tagged}" is not one of the 16 Bundesland codes` });
+        continue;
+      }
+      const owner = stateOf.get(factId);
+      if (owner === undefined) {
+        violations.push({ title, kind: "unknown-factId", detail: `factId "${factId}" maps to no per-state fact` });
+        continue;
+      }
+      // THE CROSS-STATE CHECK. The fact exists and is cited — but it is another
+      // Land's. Every other check in this gate would pass here.
+      if (owner !== tagged) {
+        violations.push({
+          title,
+          kind: "cross-state-fact",
+          detail: `item is tagged ${tagged} but factId "${factId}" belongs to ${owner} — a candidate would be served another Land's answer`,
+        });
+        continue;
+      }
+      // No non-null assertion here on purpose. A mutation test that disabled the
+      // cross-state check made this lookup return undefined and the gate CRASHED
+      // instead of reporting — a gate that throws is a gate whose findings nobody
+      // reads. It resolves defensively and reports instead.
+      const sf = (stateFacts[tagged as BundeslandCode] ?? []).find((f) => f.factId === factId);
+      if (!sf) {
+        violations.push({ title, kind: "unknown-factId", detail: `factId "${factId}" is not among ${tagged}'s facts` });
+        continue;
+      }
+      if (!sf.citation || sf.citation.trim().length === 0) {
+        violations.push({ title, kind: "no-citation", detail: `per-state fact "${factId}" has no citation — not sourced` });
+      }
+      const keyedState = it.payload?.answer;
+      if (typeof keyedState === "string" && sf.answer && keyedState.trim() !== sf.answer.trim()) {
+        violations.push({
+          title,
+          kind: "answer-mismatch",
+          detail: `keyed answer "${keyedState}" disagrees with sourced answer "${sf.answer}" for "${factId}"`,
+        });
+      }
+      continue;
+    }
+
+    // ── Federal path. A per-state factId here is a state fact that lost its tag:
+    // it would be served to every candidate regardless of their Land. ──
+    if (stateOf.has(factId)) {
+      violations.push({
+        title,
+        kind: "untagged-state-fact",
+        detail: `factId "${factId}" is a ${stateOf.get(factId)} per-state fact but the item declares no bundesland — it would be served to every candidate`,
+      });
+      continue;
+    }
+
     const fact = facts[factId];
     if (!fact) {
       violations.push({ title, kind: "unknown-factId", detail: `factId "${factId}" maps to no fact-base entry` });
@@ -87,23 +180,27 @@ export function checkCivicSourcing(
     }
   }
 
-  return { violations, civicScanned };
+  return { violations, civicScanned, stateScanned };
 }
 
 const isMain = import.meta.url === `file://${process.argv[1]}` || process.argv[1]?.endsWith("civic-sourcing-gate.mts");
 if (isMain) {
   const all = [...(goetheBank() as CivicItem[]), ...(examBank() as CivicItem[])];
-  const { violations, civicScanned } = checkCivicSourcing(all);
+  const { violations, civicScanned, stateScanned } = checkCivicSourcing(all);
 
   if (violations.length > 0) {
     console.error(`\n✗ CIVIC-SOURCING GATE FAILED — ${violations.length} finding(s).\n`);
     for (const v of violations) console.error(`  [${v.kind}] ${v.title} — ${v.detail}`);
-    console.error(`\n  ${civicScanned} civic item(s) scanned. A civic fact must reference a sourced`);
-    console.error(`  fact-base entry with a citation, and its key must agree with that entry.\n`);
+    console.error(`\n  ${civicScanned} civic item(s) scanned (${stateScanned} state-tagged). A civic fact`);
+    console.error(`  must reference a sourced fact-base entry with a citation, its key must agree with`);
+    console.error(`  that entry, and a state-tagged item must reference its OWN Land's fact.\n`);
     process.exit(1);
   }
 
-  console.log(`\n✓ CIVIC-SOURCING GATE: ${civicScanned} civic item(s) — all sourced to a cited fact.`);
+  console.log(
+    `\n✓ CIVIC-SOURCING GATE: ${civicScanned} civic item(s) — all sourced to a cited fact` +
+      `${stateScanned > 0 ? `; ${stateScanned} state-tagged item(s) reference their own Land` : ""}.`,
+  );
   if (civicScanned === 0) {
     console.log(`  (No civic items yet — the Einbürgerungstest engine is batch 2, engine ③.`);
     console.log(`   The gate is proven RED against fixtures in civic-sourcing-gate.test.mts.)`);

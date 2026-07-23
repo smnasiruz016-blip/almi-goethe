@@ -332,6 +332,18 @@ export const EINBUERGERUNG_STRUCTURE: Record<string, SectionStructure> = {
     sourced: true,
     aufgaben: [{ key: "EINB_GESELLSCHAFT", label: "Domäne D — Gesellschaft und Zusammenleben", items: 1, sourced: true }],
   },
+  // Domäne E — the per-state questions. The real test asks THREE of these (from the
+  // candidate's own Land) alongside 30 federal questions; that count IS sourced, so
+  // it is recorded here. Our fact-base currently anchors TWO per state, which is a
+  // bank shortfall against a sourced envelope, not a reason to soften the envelope
+  // — the count never bends to match the bank.
+  BUNDESLAND: {
+    section: "BUNDESLAND",
+    totalItems: 3,
+    minutes: null,
+    sourced: true,
+    aufgaben: [{ key: "EINB_BUNDESLAND", label: "Domäne E — Bundesland (Hauptstadt und Landesparlament)", items: 1, sourced: true }],
+  },
 };
 
 // ── ⑤ DSH — Deutsche Sprachprüfung für den Hochschulzugang ──────────────────

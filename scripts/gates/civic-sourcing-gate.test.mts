@@ -15,6 +15,30 @@
 import { checkCivicSourcing, type CivicItem, type CivicViolation } from "./civic-sourcing-gate.mjs";
 import type { CivicFact } from "../../src/lib/exams/civic-factbase";
 
+// ── DOMAIN E FIXTURES ───────────────────────────────────────────────────────
+// Deliberately a two-state fixture map, NOT the live BUNDESLAND_FACTS. A proof
+// driven by the real data proves the data, not the checker: if a future edit broke
+// the cross-state check AND removed the offending fact, a live-data proof would go
+// green on both counts. Fixtures keep the failing shape available forever.
+const STATE_FACTS: Record<string, CivicFact[]> = {
+  BE: [
+    { factId: "BE_CAP", statement: "Berlin ist ein Stadtstaat; die Landeshauptstadt ist Berlin selbst.", answer: "Berlin", citation: "bpb.de; berlin.de", domain: "E_BUNDESLAND", bundesland: "BE" },
+    { factId: "BE_PARL", statement: "Das Landesparlament von Berlin heißt Abgeordnetenhaus von Berlin.", answer: "das Abgeordnetenhaus von Berlin", citation: "bayern.landtag.de", domain: "E_BUNDESLAND", bundesland: "BE" },
+  ],
+  BY: [
+    { factId: "BY_CAP", statement: "Die Landeshauptstadt von Bayern ist München.", answer: "München", citation: "bpb.de", domain: "E_BUNDESLAND", bundesland: "BY" },
+    // Uncited on purpose, to prove no-citation still fires on the Domain-E path.
+    { factId: "BY_PARL", statement: "Das Landesparlament von Bayern heißt Bayerischer Landtag.", answer: "der Bayerische Landtag", citation: "", domain: "E_BUNDESLAND", bundesland: "BY" },
+  ],
+};
+
+const state = (title: string, bundesland: any, factId: any, answer?: string): CivicItem => ({
+  exam: "EINBUERGERUNGSTEST",
+  section: "BUNDESLAND",
+  title,
+  payload: { factId, bundesland, answer, questions: [{ id: "q1", answer, options: [{ id: "a" }] }] },
+});
+
 const FACTS: Record<string, CivicFact> = {
   A_001: {
     factId: "A_001",
@@ -49,7 +73,7 @@ const civic = (title: string, factId: any, answer?: string): CivicItem => ({
 
 let failures = 0;
 function expect(label: string, items: CivicItem[], shouldFire: boolean, wantKind?: CivicViolation["kind"]) {
-  const { violations } = checkCivicSourcing(items, FACTS);
+  const { violations } = checkCivicSourcing(items, FACTS, STATE_FACTS);
   const fired = violations.length > 0;
   const kindOk = !wantKind || violations.some((v) => v.kind === wantKind);
   const ok = fired === shouldFire && kindOk;
@@ -86,6 +110,41 @@ expect(
   [{ exam: "TELC_B1", section: "HOERVERSTEHEN", title: "Durchsage", payload: { questions: [{ id: "q1", answer: "r", options: [{ id: "r" }, { id: "f" }] }] } }],
   false,
 );
+
+// ── DOMAIN E — PER-STATE POSITIVES ──
+// THE ONE THIS DIMENSION EXISTS FOR. Sourced, cited, key matches its entry — and
+// still wrong for its reader, because the fact belongs to another Land. All four
+// original checks pass on this item; only the cross-state check catches it.
+expect(
+  "refuses a BE item that reaches for a BY fact (cross-state leak)",
+  [state("Landeshauptstadt", "BE", "BY_CAP", "München")],
+  true,
+  "cross-state-fact",
+);
+// The same leak in the other direction — a gate blind to the fork that just
+// happened is the family's recurring failure, so it is cut both ways.
+expect(
+  "refuses a BY item that reaches for a BE fact (reverse direction)",
+  [state("Landesparlament", "BY", "BE_PARL", "das Abgeordnetenhaus von Berlin")],
+  true,
+  "cross-state-fact",
+);
+// A state code that is not one of the 16.
+expect("refuses an unknown Bundesland code", [state("Landeshauptstadt", "XX", "BE_CAP", "Berlin")], true, "unknown-bundesland");
+// A per-state fact served with NO state tag — every candidate would get it.
+expect("refuses an untagged per-state fact", [{ exam: "EINBUERGERUNGSTEST", section: "BUNDESLAND", title: "Ohne Land", payload: { factId: "BE_CAP", answer: "Berlin" } }], true, "untagged-state-fact");
+// Right state, right fact, wrong key.
+expect("refuses a state item whose key disagrees with its own state's fact", [state("Landeshauptstadt", "BE", "BE_CAP", "Potsdam")], true, "answer-mismatch");
+// Right state, right fact, but the fact-base entry is uncited.
+expect("refuses a state fact with no citation", [state("Landesparlament", "BY", "BY_PARL", "der Bayerische Landtag")], true, "no-citation");
+// A factId that exists in neither map.
+expect("refuses a state item whose factId exists nowhere", [state("Erfunden", "BE", "BE_WAPPEN", "Bär")], true, "unknown-factId");
+
+// ── DOMAIN E — NEGATIVES ──
+expect("accepts a BE item sourced to BE's own cited fact", [state("Landeshauptstadt", "BE", "BE_CAP", "Berlin")], false);
+expect("accepts a BY item sourced to BY's own cited fact", [state("Landeshauptstadt", "BY", "BY_CAP", "München")], false);
+// A federal item must not be dragged into the state path just because Domain E exists.
+expect("still accepts an untagged FEDERAL item on a federal fact", [civic("Frage: Menschenwürde", "A_001", "Artikel 1")], false);
 
 console.log("");
 if (failures > 0) {
