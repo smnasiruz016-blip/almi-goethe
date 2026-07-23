@@ -190,7 +190,7 @@ const RAW_ITEMS: ExamItemInput[] = [
       { options: ["Sofern", "Damit", "Bevor"], answer: "a" },
       { options: ["damit", "obwohl", "seit"], answer: "a" },
       { options: ["Wegen", "Trotz", "Entgegen"], answer: "a" },
-      { options: ["sofern", "damit", "bevor"], answer: "a" },
+      { options: ["sofern", "obwohl", "bevor"], answer: "a" },
       { options: ["dass", "ob", "als"], answer: "a" },
     ],
   ),
