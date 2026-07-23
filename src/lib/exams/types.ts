@@ -144,5 +144,44 @@ export type DtzExamResult = {
   thresholdVerified: boolean; // true — sourced from the DTZ Prüfungshandbuch
 };
 
+// ---------------------------------------------------------------------------
+// EINBÜRGERUNGSTEST — the engines' FOURTH philosophy, and the first CIVIC one.
+// Not a language test: 33 four-option MCQs about Germany (Grundgesetz, history,
+// institutions, society). COUNT-BASED pass/fail — 17 or more correct out of 33 is
+// "bestanden". No CEFR level, no percentage band, no per-section gate: the verdict
+// is a simple threshold on the count.
+//
+// VERIFIED (official Einbürgerungstest / BAMF): 33 questions (30 general from the
+// federal catalog + 3 Bundesland-specific), 60 minutes, pass ≥ 17.
+// ---------------------------------------------------------------------------
+
+export const EINB_QUESTION_COUNT = 33 as const;
+export const EINB_PASS_MARK = 17 as const;
+
+export type EinbVerdict = "bestanden" | "nicht-bestanden";
+
+// One practised domain (Grundgesetz / Geschichte / Institutionen / Gesellschaft).
+// A single practice attempt reports correct-of-attempted; the pass verdict lives on
+// the full 33-question mock, not on one domain.
+export type EinbSectionResult = {
+  section: string;
+  label: string;
+  correct: number;
+  total: number;
+  passMark: number; // 17, shown as context (the full test's threshold)
+  questionCount: number; // 33, the full test
+};
+
+export type EinbExamResult = {
+  exam: GermanExam;
+  displayName: string;
+  correct: number; // 0..33
+  questionCount: 33;
+  passMark: 17;
+  verdict: EinbVerdict;
+  verdictLabel: string; // "bestanden" | "nicht bestanden"
+  thresholdVerified: boolean; // true — 17/33 is the official pass mark
+};
+
 export const EXAM_ESTIMATE_DISCLAIMER =
   "This is an AlmiGoethe practice estimate, not an official result. TestDaF, telc, and the TestDaF-Institut / g.a.s.t. calibrate the real exams. Confirm the level and result you need with the exam provider, your university, or the relevant German authority.";

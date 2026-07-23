@@ -46,12 +46,16 @@ import { ITEMS as B_B1_HV } from "../../.baseline/scripts/seed/exams/telc-b1-hoe
 import { ITEMS as B_B1_SA } from "../../.baseline/scripts/seed/exams/telc-b1-schriftlicher-ausdruck";
 import { ITEMS as B_B1_SP } from "../../.baseline/scripts/seed/exams/telc-b1-sprechen";
 import { ITEMS as B_B2 } from "../../.baseline/scripts/seed/exams/telc-b2";
+import { ITEMS as B_DTZ_HV } from "../../.baseline/scripts/seed/exams/dtz-hoeren";
+import { ITEMS as B_DTZ_LV } from "../../.baseline/scripts/seed/exams/dtz-lesen";
+import { ITEMS as B_DTZ_SA } from "../../.baseline/scripts/seed/exams/dtz-schreiben";
+import { ITEMS as B_DTZ_SP } from "../../.baseline/scripts/seed/exams/dtz-sprechen";
 import { examBank } from "./_bank.mjs";
 import { EXAM_STRUCTURES, aufgabeFor } from "../../src/lib/exams/exam-structure";
 
 const key = (r: any) => `${r.exam}::${r.level}::${r.section}::${r.title}`;
 
-const baseline = [...B_TESTDAF, ...B_TESTDAF_LV, ...B_TESTDAF_HV, ...B_TESTDAF_SA, ...B_TESTDAF_MA, ...B_C1H, ...B_B1, ...B_B1_LV, ...B_B1_SB, ...B_B1_HV, ...B_B1_SA, ...B_B1_SP, ...B_B2] as any[];
+const baseline = [...B_TESTDAF, ...B_TESTDAF_LV, ...B_TESTDAF_HV, ...B_TESTDAF_SA, ...B_TESTDAF_MA, ...B_C1H, ...B_B1, ...B_B1_LV, ...B_B1_SB, ...B_B1_HV, ...B_B1_SA, ...B_B1_SP, ...B_B2, ...B_DTZ_HV, ...B_DTZ_LV, ...B_DTZ_SA, ...B_DTZ_SP] as any[];
 const current = examBank() as any[];
 const currentKeys = new Set(current.map(key));
 

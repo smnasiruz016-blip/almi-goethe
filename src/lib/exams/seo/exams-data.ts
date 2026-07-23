@@ -142,6 +142,25 @@ const DATA: Record<GermanExam, Omit<ExamSeo, "slug" | "sectionsLine">> = {
     officialLabel: "bamf.de",
     purposeSlugs: ["citizenship"],
   },
+  EINBUERGERUNGSTEST: {
+    exam: "EINBUERGERUNGSTEST",
+    name: "Einbürgerungstest",
+    fullName: "Einbürgerungstest (Leben in Deutschland)",
+    provider: "the Bundesamt für Migration und Flüchtlinge (BAMF)",
+    cefr: "—",
+    eyebrow: "Civic naturalisation test",
+    tagline:
+      "The civic test for German naturalisation — 33 multiple-choice questions about the constitution, history, institutions and society, not a language exam.",
+    format:
+      "33 four-option multiple-choice questions in 60 minutes: 30 from the general federal catalogue plus 3 about your Bundesland. All questions are about Germany — its Grundgesetz, history, institutions and everyday rights and duties.",
+    scoring:
+      "You pass with 17 or more correct answers out of 33. There is no level and no grade — it is a straightforward pass or fail on the number correct.",
+    usedFor:
+      "The Einbürgerungstest is a standard requirement for German naturalisation (usually alongside a B1 language proof such as the DTZ or telc B1). Confirm the current requirement with the relevant authority.",
+    officialUrl: "https://www.bamf.de/",
+    officialLabel: "bamf.de",
+    purposeSlugs: ["citizenship"],
+  },
 };
 
 export const EXAMS_SEO: Record<GermanExam, ExamSeo> = Object.fromEntries(
