@@ -15,13 +15,24 @@ A level-specific exam and a score-banded one cannot share a scoring model, and t
 not share one here. Goethe-Zertifikat is **modular** at B1, B2 and C1 (since 2019) —
 each module is passed and certified independently.
 
-## Scope: Germany and Austria
+## Scope: Germany and Austria — both covered
 
-This product covers **German-language** exams — Goethe-Zertifikat, telc, TestDaF and
-the German authorities behind them. Swiss naturalisation (`fide`, cantonal civic
-requirements) belongs to **AlmiSwiss** and is not authored here, even though the
-language overlaps. German and Austrian authorities are likewise kept apart: they are
-different bodies with different rules.
+This product covers **German-language** exams for **both Germany and Austria**.
+
+- **Germany:** Goethe-Zertifikat, telc, TestDaF, the DTZ (Deutsch-Test für
+  Zuwanderer), the DSH (university admission) and the Einbürgerungstest (civic
+  naturalisation) — with the German authorities behind them.
+- **Austria:** the ÖSD Zertifikat Deutsch Österreich B1 (ZDÖ B1), Module 2 of the
+  Austrian Integration Agreement.
+
+Swiss naturalisation (`fide`, cantonal civic requirements) belongs to **AlmiSwiss**
+and is not authored here, even though the language overlaps. German and Austrian
+authorities are kept apart: they are different bodies with different rules.
+
+**Austrian citizenship** currently requires **B1** (the ÖSD ZDÖ B1 level). Austria has
+*proposed* raising this to B2, but that is **not yet enacted** — every surface states
+B1 and tells the reader to confirm the current requirement with the Austrian authority,
+because a proposal is not a rule.
 
 ## Honesty doctrine
 
