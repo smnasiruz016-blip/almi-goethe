@@ -1,7 +1,10 @@
-// Exam-engine picker — the four NEW German exams that run ALONGSIDE the Goethe-
-// Zertifikat practice (which stays at /practice). Each exam is scored on its own
-// philosophy: TestDaF reports independent per-section levels (no total, no pass/
-// fail); telc B1/B2/C1 Hochschule use a 60% per-part pass mark.
+// Exam-engine picker — the eight German and Austrian exams that run ALONGSIDE the
+// Goethe-Zertifikat practice (which stays at /practice). Each exam is scored on its
+// own philosophy, never blended: TestDaF reports independent per-section levels (no
+// total, no pass/fail); telc B1/B2/C1 Hochschule and ÖSD B1 use a 60% per-part pass
+// mark; the DTZ bands one 100-point total into A2 or B1; DSH grades DSH-1/2/3; the
+// Einbürgerungstest is a straight 17-of-33 pass. The list itself comes from the
+// registry — BLURB and TAG below must stay in step with it.
 
 import Link from "next/link";
 import { requireUser } from "@/lib/auth";
@@ -44,7 +47,7 @@ export default async function ExamsPage() {
     <div className="space-y-8">
       <header>
         <p className="text-xs font-bold uppercase tracking-wider text-almi-accent-deep">
-          AlmiGoethe · TestDaF &amp; telc engines
+          AlmiGoethe · German &amp; Austrian exam engines
         </p>
         <h1 className="mt-1 text-3xl font-semibold text-almi-ink">Choose an exam</h1>
         <p className="mt-2 max-w-2xl text-sm text-almi-text">
