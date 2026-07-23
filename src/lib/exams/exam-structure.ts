@@ -36,6 +36,21 @@
 // (Aufgaben 41–60), which is what let that section's 5/10/5 split move from
 // convention to sourced on the same day.
 
+/**
+ * The ANSWER FORMAT a Teil is answered in. This exists because the answer-distribution
+ * gate is type-aware, and it inferred the type from the payload — so an item authored
+ * in the wrong format was de-gamed on the WRONG AXIS and looked fine. Declaring the
+ * format here lets the gate check the payload against the exam's own envelope instead
+ * of against itself.
+ *
+ *   MC-3 / MC-4      → position spread
+ *   RICHTIG_FALSCH   → truth balance
+ *   RFN              → three-way balance (richtig / falsch / nicht im Text)
+ *   ZUORDNUNG        → assignment spread over a SHARED option bank
+ *   PRODUCTIVE       → not gated (graded by AI)
+ */
+export type AnswerFormat = "MC-3" | "MC-4" | "RICHTIG_FALSCH" | "RFN" | "ZUORDNUNG" | "PRODUCTIVE";
+
 export type Aufgabe = {
   /** Stable key an item declares in its taskType. */
   key: string;
@@ -45,6 +60,16 @@ export type Aufgabe = {
   items: number | null;
   /** true = published by the authority; false = our convention pending confirmation. */
   sourced: boolean;
+  /**
+   * OPTIONAL on purpose. Only telc B2 has its per-Teil answer formats sourced so far;
+   * the other structures were built before this field existed and their formats are
+   * not independently confirmed. Making it required would force a guess at every one
+   * of those call sites, which is how a fabricated envelope gets written by a type
+   * error. Undefined means "not sourced", and the format check skips it.
+   */
+  answerFormat?: AnswerFormat;
+  /** For ZUORDNUNG: how many options the shared bank carries (a–j = 10, a–o = 15). */
+  bankSize?: number;
 };
 
 export type SectionStructure = {
@@ -511,6 +536,72 @@ export const EXAM_STRUCTURES: Record<string, Record<string, SectionStructure>> =
  *  visible in code rather than inferred from a missing key. Batches are staged
  *  deliberately: telc B2, telc C1 Hochschule, Goethe-Zertifikat A1–C2, then the new
  *  engines (DSH, DTZ, Einbürgerungstest, ÖSD ZDÖ B1). */
+// ── ⑧ telc Deutsch B2 ───────────────────────────────────────────────────────
+// SOURCED from the official telc B2 handbook cell tables, corroborated against the
+// item-numbered Übungstest (LV 5/5/10 · SB 10/10 · HV 5/10/5). Objective total 60.
+//
+// ⚠️ NOT YET IN EXAM_STRUCTURES. Declaring it here makes it the RED-first target the
+// format checker measures the current bank against; wiring it into EXAM_STRUCTURES is
+// the deliberate LAST step (reported → enforced), once every cell is authored. Adding
+// it early would fail the build on cells nobody has written yet, which is a red tree
+// that gets negotiated down rather than fixed.
+//
+// The three Hörverstehen Teile are ALL richtig/falsch — the single biggest correction
+// in this restructure, since the whole existing HV bank is MC-3.
+export const B2_STRUCTURE: Record<string, SectionStructure> = {
+  LESEVERSTEHEN: {
+    section: "LESEVERSTEHEN",
+    totalItems: 20,
+    minutes: null,
+    sourced: true,
+    aufgaben: [
+      { key: "TELC_B2_LV_T1_UEBERSCHRIFTEN", label: "Teil 1 — Überschriften zuordnen", items: 5, sourced: true, answerFormat: "ZUORDNUNG", bankSize: 10 },
+      { key: "TELC_B2_LV_T2_MC", label: "Teil 2 — Multiple Choice", items: 5, sourced: true, answerFormat: "MC-3" },
+      // a–l plus x = "keine der Anzeigen passt", so the bank is 13 selectable options.
+      { key: "TELC_B2_LV_T3_ANZEIGEN", label: "Teil 3 — Anzeigen selektiv zuordnen", items: 10, sourced: true, answerFormat: "ZUORDNUNG", bankSize: 13 },
+    ],
+  },
+  SPRACHBAUSTEINE: {
+    section: "SPRACHBAUSTEINE",
+    totalItems: 20,
+    minutes: null,
+    sourced: true,
+    aufgaben: [
+      { key: "TELC_B2_SB_T1_GRAMMATIK", label: "Teil 1 — Grammatik-Lückentext", items: 10, sourced: true, answerFormat: "MC-3" },
+      { key: "TELC_B2_SB_T2_WORTSCHATZ", label: "Teil 2 — Wortschatz aus Wortliste", items: 10, sourced: true, answerFormat: "ZUORDNUNG", bankSize: 15 },
+    ],
+  },
+  HOERVERSTEHEN: {
+    section: "HOERVERSTEHEN",
+    totalItems: 20,
+    minutes: null,
+    sourced: true,
+    aufgaben: [
+      { key: "TELC_B2_HV_T1", label: "Teil 1 — globales Hören (richtig/falsch)", items: 5, sourced: true, answerFormat: "RICHTIG_FALSCH" },
+      { key: "TELC_B2_HV_T2", label: "Teil 2 — detailliertes Hören (richtig/falsch)", items: 10, sourced: true, answerFormat: "RICHTIG_FALSCH" },
+      { key: "TELC_B2_HV_T3", label: "Teil 3 — selektives Hören (richtig/falsch)", items: 5, sourced: true, answerFormat: "RICHTIG_FALSCH" },
+    ],
+  },
+  SCHRIFTLICHER_AUSDRUCK: {
+    section: "SCHRIFTLICHER_AUSDRUCK",
+    totalItems: 1,
+    minutes: null,
+    sourced: true,
+    aufgaben: [{ key: "TELC_B2_SA_BRIEF", label: "Ein Brief (1 von 2 Themen)", items: 1, sourced: true, answerFormat: "PRODUCTIVE" }],
+  },
+  SPRECHEN: {
+    section: "SPRECHEN",
+    totalItems: null,
+    minutes: null,
+    sourced: true,
+    aufgaben: [
+      { key: "TELC_B2_SP_T1", label: "Teil 1 — Präsentation", items: null, sourced: true, answerFormat: "PRODUCTIVE" },
+      { key: "TELC_B2_SP_T2", label: "Teil 2 — Diskussion", items: null, sourced: true, answerFormat: "PRODUCTIVE" },
+      { key: "TELC_B2_SP_T3", label: "Teil 3 — gemeinsam eine Aufgabe lösen", items: null, sourced: true, answerFormat: "PRODUCTIVE" },
+    ],
+  },
+};
+
 export const UNSTRUCTURED_EXAMS = ["TELC_B2", "TELC_C1_HOCHSCHULE"] as const;
 
 /** Look up the Aufgabe an item's taskType claims to be. */
