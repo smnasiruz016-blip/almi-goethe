@@ -9,10 +9,11 @@ export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Goethe Exam Practice (A1–C2) — Real CEFR Levels | AlmiGoethe",
+    absolute:
+      "Goethe-Zertifikat & German Exam Practice (A1–C2) — TestDaF, telc, DTZ, DSH & more | AlmiGoethe",
   },
   description:
-    "Goethe-Zertifikat practice, all six CEFR levels (A1–C2) — honest per-module estimates for reading, writing, listening and speaking on real formats. Original material.",
+    "Goethe-Zertifikat practice at all six CEFR levels (A1–C2), plus TestDaF, telc, DTZ, DSH, the Einbürgerungstest and Austria's ÖSD — honest, original material.",
   openGraph: {
     title: "AlmiGoethe — honest Goethe-Zertifikat practice (A1–C2)",
     description:
@@ -142,6 +143,8 @@ export default function Home() {
             <p className="mt-5 text-lg text-almi-text">
               Original German practice for all four modules at every CEFR level (A1–C2), with a
               per-module points estimate and the 60% pass mark — so you know exactly what to work on next.
+              Preparing for a specific exam instead? We also cover TestDaF, telc, DSH, the DTZ, the
+              Einbürgerungstest and Austria&apos;s ÖSD — each on its real format.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <Link
@@ -226,28 +229,44 @@ export default function Home() {
         </div>
       </section>
 
-      {/* German requirements guide → /goethe SEO hub, and TestDaF/telc → /pruefung */}
+      {/* German requirements guide → /goethe SEO hub */}
       <section className="border-t border-almi-bg-peach px-6 py-16">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-3xl font-semibold text-almi-ink">Which German level do you actually need?</h2>
           <p className="mt-3 text-base text-almi-text">
             Studying at a German university, working in a shortage occupation, a family or citizenship route —
             each needs a different level. Our free guide gives honest, sourced guidance by goal, profession
-            and university, with the official authority to confirm with. Taking a specific exam? See the
-            TestDaF and telc guides too.
+            and university, with the official authority to confirm with.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <Link
               href="/goethe"
               className="inline-flex min-h-[48px] items-center justify-center rounded-full border border-almi-ink/15 bg-almi-paper px-7 py-3 text-base font-semibold text-almi-ink hover:border-almi-coral"
             >
-              German for Germany — requirements guide →
+              Not sure which you need? German requirements guide →
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* The eight German & Austrian exams → /pruefung. Every claim here must match the
+          eight /pruefung cards (src/lib/exams/seo/exams-data.ts) — they are the source of truth. */}
+      <section className="border-t border-almi-bg-peach bg-almi-paper px-6 py-16">
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 className="text-3xl font-semibold text-almi-ink">Taking a specific German or Austrian exam?</h2>
+          <p className="mt-3 text-base text-almi-text">
+            Practise the real exam — not a summary. Eight separate exams, each on its own official format
+            and scoring: TestDaF and DSH for university, telc Deutsch B1, B2 and C1 Hochschule for
+            citizenship, skilled work and university, the Deutsch-Test für Zuwanderer and the
+            Einbürgerungstest for integration and citizenship in Germany, and the ÖSD Zertifikat B1 for
+            Austria.
+          </p>
+          <div className="mt-8 flex justify-center">
             <Link
               href="/pruefung"
-              className="inline-flex min-h-[48px] items-center justify-center rounded-full border border-almi-ink/15 bg-almi-paper px-7 py-3 text-base font-semibold text-almi-ink hover:border-almi-coral"
+              className="inline-flex min-h-[48px] items-center justify-center rounded-full border border-almi-ink/15 bg-almi-bg px-7 py-3 text-base font-semibold text-almi-ink hover:border-almi-coral"
             >
-              TestDaF &amp; telc — exam guides →
+              Practise the eight German &amp; Austrian exams →
             </Link>
           </div>
         </div>

@@ -15,7 +15,7 @@ const FOOTER_COLUMNS: FooterColumn[] = [
     links: [
       { label: "Practice", href: "/practice" },
       { label: "German requirements guide", href: "/goethe" },
-      { label: "TestDaF & telc exams", href: "/pruefung" },
+      { label: "German & Austrian exams", href: "/pruefung" },
       { label: "Pricing", href: "/pricing" },
     ],
   },
