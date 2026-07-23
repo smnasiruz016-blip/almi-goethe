@@ -22,6 +22,8 @@ export const EXAM_LEVEL = {
   EINBUERGERUNGSTEST: "civic",
   // DSH certifies B2–C2 across its three grades (DSH-1/2/3).
   DSH: "B2–C2",
+  // ÖSD ZDÖ B1 — Austrian B1.
+  OESD_B1: "B1",
 } as const;
 
 // Section keys — MUST match SECTION_META in src/lib/exams/registry.ts.

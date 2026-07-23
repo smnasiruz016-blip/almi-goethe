@@ -49,6 +49,7 @@ const EXAM_NAME: Record<GermanExam, string> = {
   DTZ: "Deutsch-Test für Zuwanderer",
   EINBUERGERUNGSTEST: "Einbürgerungstest",
   DSH: "DSH (Deutsche Sprachprüfung für den Hochschulzugang)",
+  OESD_B1: "ÖSD Zertifikat B1 (Österreich)",
 };
 
 type Skill = "writing" | "speaking";

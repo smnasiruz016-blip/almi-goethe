@@ -7,13 +7,14 @@
 // (no total, no pass/fail); telc sections map to a percentage against the 60% mark.
 
 import type { GermanExam } from "@/lib/exams/types";
-import type { TestDafSectionResult, TelcSkillResult, DtzSectionResult, DtzSection, EinbSectionResult, DshSectionResult } from "@/lib/exams/types";
+import type { TestDafSectionResult, TelcSkillResult, DtzSectionResult, DtzSection, EinbSectionResult, DshSectionResult, OesdSectionResult } from "@/lib/exams/types";
 import { fractionToTestDafSection } from "@/lib/exams/scoring/testdaf";
 import { getTelcConfig, scoreTelcSection } from "@/lib/exams/scoring/telc";
 import { scoreDtzSection } from "@/lib/exams/scoring/dtz";
 import { scoreEinbSection } from "@/lib/exams/scoring/einbuergerung";
 import { scoreDshSection } from "@/lib/exams/scoring/dsh";
-import { isTestDaf, isDtz, isEinb, isDsh } from "@/lib/exams/scoring";
+import { scoreOesdSection } from "@/lib/exams/scoring/oesd";
+import { isTestDaf, isDtz, isEinb, isDsh, isOesd } from "@/lib/exams/scoring";
 import { TESTDAF_SECTIONS, DTZ_SECTIONS } from "@/lib/exams/types";
 import {
   objectivePayloadSchema,
@@ -79,6 +80,9 @@ const EINB_SECTION_ORDER: string[] = ["GRUNDGESETZ", "INSTITUTIONEN", "GESCHICHT
 // DSH: the four WRITTEN sections in weight order, then the separate oral part.
 const DSH_SECTION_ORDER: string[] = ["HOERVERSTEHEN", "LESEVERSTEHEN", "WISS_STRUKTUREN", "TEXTPRODUKTION", "SPRECHEN"];
 
+// ÖSD ZDÖ B1: written module (Lesen, Hören, Schreiben) then oral (Sprechen).
+const OESD_SECTION_ORDER: string[] = ["LESEVERSTEHEN", "HOERVERSTEHEN", "SCHRIFTLICHER_AUSDRUCK", "SPRECHEN"];
+
 function sectionDef(key: string): ExamSectionDef {
   const meta = SECTION_META[key];
   if (!meta) throw new Error(`No section meta for ${key}`);
@@ -93,6 +97,7 @@ const LEVEL_LABEL: Record<GermanExam, string> = {
   DTZ: "Deutsch-Test für Zuwanderer · A2–B1",
   EINBUERGERUNGSTEST: "Einbürgerungstest · Leben in Deutschland",
   DSH: "DSH · Hochschulzugang B2–C2",
+  OESD_B1: "ÖSD Zertifikat B1 (Österreich)",
 };
 
 const DISPLAY_NAME: Record<GermanExam, string> = {
@@ -103,6 +108,7 @@ const DISPLAY_NAME: Record<GermanExam, string> = {
   DTZ: "Deutsch-Test für Zuwanderer (DTZ)",
   EINBUERGERUNGSTEST: "Einbürgerungstest",
   DSH: "DSH (Deutsche Sprachprüfung für den Hochschulzugang)",
+  OESD_B1: "ÖSD Zertifikat Deutsch Österreich B1 (ZDÖ)",
 };
 
 function buildExamDef(exam: GermanExam): ExamDef {
@@ -115,7 +121,9 @@ function buildExamDef(exam: GermanExam): ExamDef {
           ? EINB_SECTION_ORDER
           : isDsh(exam)
             ? DSH_SECTION_ORDER
-            : getTelcConfig(exam).sections.map((s) => s.key);
+            : isOesd(exam)
+              ? OESD_SECTION_ORDER
+              : getTelcConfig(exam).sections.map((s) => s.key);
   return {
     exam,
     displayName: DISPLAY_NAME[exam],
@@ -133,9 +141,10 @@ export const EXAM_DEFS: Record<GermanExam, ExamDef> = {
   DTZ: buildExamDef("DTZ"),
   EINBUERGERUNGSTEST: buildExamDef("EINBUERGERUNGSTEST"),
   DSH: buildExamDef("DSH"),
+  OESD_B1: buildExamDef("OESD_B1"),
 };
 
-export const ALL_EXAMS: GermanExam[] = ["TESTDAF", "TELC_C1_HOCHSCHULE", "TELC_B1", "TELC_B2", "DTZ", "EINBUERGERUNGSTEST", "DSH"];
+export const ALL_EXAMS: GermanExam[] = ["TESTDAF", "TELC_C1_HOCHSCHULE", "TELC_B1", "TELC_B2", "DTZ", "EINBUERGERUNGSTEST", "DSH", "OESD_B1"];
 
 export function examBySlug(slug: string): ExamDef | undefined {
   return Object.values(EXAM_DEFS).find(
@@ -159,6 +168,7 @@ export type SectionOutcome = {
   dtz?: DtzSectionResult;
   einb?: EinbSectionResult;
   dsh?: DshSectionResult;
+  oesd?: OesdSectionResult;
   feedback?: ProductiveFeedback;
   telemetry?: { aiModel: string; costCents: number; latencyMs: number };
 };
@@ -168,7 +178,7 @@ function mapFraction(
   section: string,
   fraction: number,
   attempted?: number,
-): Pick<SectionOutcome, "testDaf" | "telc" | "dtz" | "einb" | "dsh"> {
+): Pick<SectionOutcome, "testDaf" | "telc" | "dtz" | "einb" | "dsh" | "oesd"> {
   if (isTestDaf(exam)) {
     return { testDaf: fractionToTestDafSection(section as TestDafSectionResult["section"], fraction) };
   }
@@ -180,6 +190,9 @@ function mapFraction(
   }
   if (isDsh(exam)) {
     return { dsh: scoreDshSection(section, fraction) };
+  }
+  if (isOesd(exam)) {
+    return { oesd: scoreOesdSection(section, fraction) };
   }
   return { telc: scoreTelcSection(exam, section, fraction) };
 }

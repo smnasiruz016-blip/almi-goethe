@@ -412,6 +412,77 @@ export const DSH_PRODUCTIVE = {
   },
 } as const;
 
+// ── ⑥ ÖSD ZDÖ B1 — Zertifikat Deutsch Österreich B1 ─────────────────────────
+// AUSTRIAN, not German. Two separately-certifiable modules: Written (Lesen · Hören
+// · Schreiben) and Oral (Sprechen). SOURCE: osd.at + the ÖSD B1 Modellsatz.
+//
+// COUNTS DISCIPLINE (between DTZ's fixed catalog and DSH's pure framework): the
+// Lesen/Hören section TOTALS (30 each) and the TASK-TYPES are sourced (task-type
+// membership hard-enforced); the exact per-Teil item split is CONVENTION — verify
+// against the Modellsatz, do NOT hard-fail on it — so every Lesen/Hören Aufgabe
+// carries items: null. The Schreiben WORD BANDS (~80 / ~80 / ~40) ARE sourced and
+// hard-enforced (see OESD_PRODUCTIVE + the conformance gate's ÖSD branch).
+export const OESD_STRUCTURE: Record<string, SectionStructure> = {
+  LESEVERSTEHEN: {
+    section: "LESEVERSTEHEN",
+    totalItems: 30, // sourced total; per-Teil split is convention (items: null)
+    minutes: 65,
+    sourced: true,
+    aufgaben: [
+      { key: "OESD_LV_TEIL1", label: "Teil 1 — Richtig/Falsch zu persönlicher Korrespondenz", items: null, sourced: true },
+      { key: "OESD_LV_TEIL2", label: "Teil 2 — Mehrfachauswahl zu Pressetexten", items: null, sourced: true },
+      { key: "OESD_LV_TEIL3", label: "Teil 3 — Anzeigen Situationen zuordnen", items: null, sourced: true },
+      { key: "OESD_LV_TEIL4", label: "Teil 4 — Ja/Nein zu Positionen in Meinungstexten", items: null, sourced: true },
+      { key: "OESD_LV_TEIL5", label: "Teil 5 — Mehrfachauswahl (a/b/c) zu Anweisungen", items: null, sourced: true },
+    ],
+  },
+  HOERVERSTEHEN: {
+    section: "HOERVERSTEHEN",
+    totalItems: 30, // sourced total; per-Teil split convention
+    minutes: 40,
+    sourced: true,
+    aufgaben: [
+      { key: "OESD_HV_TEIL1", label: "Teil 1 — Durchsagen / kurze Mitteilungen (zweimal gehört)", items: null, sourced: true },
+      { key: "OESD_HV_TEIL2", label: "Teil 2 — Monolog / Führung (einmal gehört)", items: null, sourced: true },
+      { key: "OESD_HV_TEIL3", label: "Teil 3 — Gespräch (zwei Personen, einmal gehört)", items: null, sourced: true },
+      { key: "OESD_HV_TEIL4", label: "Teil 4 — Radiodiskussion, Aussagen den Sprechenden zuordnen (zweimal gehört)", items: null, sourced: true },
+    ],
+  },
+  SCHRIFTLICHER_AUSDRUCK: {
+    section: "SCHRIFTLICHER_AUSDRUCK",
+    totalItems: 3,
+    minutes: 60,
+    sourced: true,
+    aufgaben: [
+      { key: "OESD_SA_EMAIL", label: "Aufgabe 1 — persönliche E-Mail, informell (~80 Wörter)", items: 1, sourced: true },
+      { key: "OESD_SA_FORUM", label: "Aufgabe 2 — Meinung / Forumsbeitrag, neutral (~80 Wörter)", items: 1, sourced: true },
+      { key: "OESD_SA_FORMELL", label: "Aufgabe 3 — formelle Mitteilung, Sie-Form (~40 Wörter)", items: 1, sourced: true },
+    ],
+  },
+  SPRECHEN: {
+    section: "SPRECHEN",
+    totalItems: 3,
+    minutes: 15,
+    sourced: true,
+    aufgaben: [
+      { key: "OESD_SP_PLANEN", label: "Aufgabe 1 — gemeinsam etwas planen (4 Leitpunkte)", items: null, sourced: true },
+      { key: "OESD_SP_PRAESENTATION", label: "Aufgabe 2 — ein Thema präsentieren (5 Folien)", items: null, sourced: true },
+      { key: "OESD_SP_FEEDBACK", label: "Aufgabe 3 — auf die Präsentation reagieren (Feedback + Fragen)", items: null, sourced: true },
+    ],
+  },
+};
+
+/** ÖSD productive word bands. The ~80 / ~80 / ~40-word targets are SOURCED, so they
+ *  are hard-enforced within a practice envelope around each target (the CENTRE is
+ *  sourced; the ± band is the practice tolerance). */
+export const OESD_PRODUCTIVE = {
+  SCHRIFTLICHER_AUSDRUCK: {
+    OESD_SA_EMAIL: { wordMin: 70, wordMax: 100, target: 80, targetSourced: true },
+    OESD_SA_FORUM: { wordMin: 70, wordMax: 100, target: 80, targetSourced: true },
+    OESD_SA_FORMELL: { wordMin: 30, wordMax: 55, target: 40, targetSourced: true },
+  },
+} as const;
+
 /** Exams whose structure is recorded here. An exam absent from this map is NOT
  *  silently skipped by the conformance gate — it is reported, because an
  *  unstructured exam is an unchecked exam. */
@@ -421,6 +492,7 @@ export const EXAM_STRUCTURES: Record<string, Record<string, SectionStructure>> =
   DTZ: DTZ_STRUCTURE,
   EINBUERGERUNGSTEST: EINBUERGERUNG_STRUCTURE,
   DSH: DSH_STRUCTURE,
+  OESD_B1: OESD_STRUCTURE,
 };
 
 /** Exams registered in the product but not yet structured. Explicit, so the gap is

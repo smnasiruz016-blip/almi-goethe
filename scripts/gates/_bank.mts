@@ -51,6 +51,10 @@ import { ITEMS as DSH_LV } from "../seed/exams/dsh-leseverstehen";
 import { ITEMS as DSH_WS } from "../seed/exams/dsh-strukturen";
 import { ITEMS as DSH_TP } from "../seed/exams/dsh-textproduktion";
 import { ITEMS as DSH_SP } from "../seed/exams/dsh-muendlich";
+import { ITEMS as OESD_LV } from "../seed/exams/oesd-lesen";
+import { ITEMS as OESD_HV } from "../seed/exams/oesd-hoeren";
+import { ITEMS as OESD_SA } from "../seed/exams/oesd-schreiben";
+import { ITEMS as OESD_SP } from "../seed/exams/oesd-sprechen";
 
 import type { Prisma } from "@prisma/client";
 
@@ -71,7 +75,7 @@ export function goetheBank(): GoetheRow[] {
  *  registered but absent from this list fails as "0 items", loudly, rather than
  *  disappearing from the counts. */
 export function examBank(): ExamRow[] {
-  return [...TESTDAF, ...TESTDAF_LV, ...TESTDAF_HV, ...TESTDAF_SA, ...TESTDAF_MA, ...TELC_C1H, ...TELC_B1, ...TELC_B1_LV, ...TELC_B1_SB, ...TELC_B1_HV, ...TELC_B1_SA, ...TELC_B1_SP, ...TELC_B2, ...DTZ_HV, ...DTZ_LV, ...DTZ_SA, ...DTZ_SP, ...EINB, ...DSH_HV, ...DSH_LV, ...DSH_WS, ...DSH_TP, ...DSH_SP];
+  return [...TESTDAF, ...TESTDAF_LV, ...TESTDAF_HV, ...TESTDAF_SA, ...TESTDAF_MA, ...TELC_C1H, ...TELC_B1, ...TELC_B1_LV, ...TELC_B1_SB, ...TELC_B1_HV, ...TELC_B1_SA, ...TELC_B1_SP, ...TELC_B2, ...DTZ_HV, ...DTZ_LV, ...DTZ_SA, ...DTZ_SP, ...EINB, ...DSH_HV, ...DSH_LV, ...DSH_WS, ...DSH_TP, ...DSH_SP, ...OESD_LV, ...OESD_HV, ...OESD_SA, ...OESD_SP];
 }
 
 /** Group rows by a key, preserving insertion order of first appearance. */

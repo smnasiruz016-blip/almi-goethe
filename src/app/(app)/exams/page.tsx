@@ -23,6 +23,8 @@ const BLURB: Record<GermanExam, string> = {
     "The civic naturalisation test — 33 multiple-choice questions about Germany's constitution, history, institutions and society. Not a language test: you pass with 17 correct out of 33.",
   DSH:
     "University-entry German set by each university within a national framework. Four written sections weighted 2:2:1:2, graded DSH-1 (≈B2), DSH-2 (≈C1) or DSH-3 (≈C2), plus a separate oral.",
+  OESD_B1:
+    "The Austrian B1 certificate (ÖSD ZDÖ B1) — Module 2 of the Integration Agreement, for residence and citizenship in Austria. Two modules (written + oral) certified separately at about 60%.",
 };
 
 const TAG: Record<GermanExam, string> = {
@@ -33,6 +35,7 @@ const TAG: Record<GermanExam, string> = {
   DTZ: "Dual outcome A2/B1 · /100",
   EINBUERGERUNGSTEST: "Civic · pass 17 of 33",
   DSH: "Weighted grade · DSH-1/2/3",
+  OESD_B1: "Austrian B1 · two modules",
 };
 
 export default async function ExamsPage() {
