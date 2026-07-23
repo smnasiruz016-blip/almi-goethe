@@ -17,6 +17,9 @@ export const EXAM_LEVEL = {
   TELC_B1: "B1",
   TELC_B2: "B2",
   DTZ: "A2–B1",
+  // The Einbürgerungstest is CIVIC, not a language level — its `level` is a stable
+  // non-CEFR vocabulary token, not a band.
+  EINBUERGERUNGSTEST: "civic",
 } as const;
 
 // Section keys — MUST match SECTION_META in src/lib/exams/registry.ts.
@@ -27,4 +30,9 @@ export const SECTION = {
   SCHRIFTLICHER_AUSDRUCK: "SCHRIFTLICHER_AUSDRUCK",
   MUENDLICHER_AUSDRUCK: "MUENDLICHER_AUSDRUCK",
   SPRECHEN: "SPRECHEN",
+  // Einbürgerungstest civic domains.
+  GRUNDGESETZ: "GRUNDGESETZ",
+  INSTITUTIONEN: "INSTITUTIONEN",
+  GESCHICHTE: "GESCHICHTE",
+  GESELLSCHAFT: "GESELLSCHAFT",
 } as const;

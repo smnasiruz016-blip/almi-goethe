@@ -289,6 +289,51 @@ export const DTZ_PRODUCTIVE = {
   },
 } as const;
 
+// ── ④ Einbürgerungstest — German civic naturalisation test ──────────────────
+// The first CIVIC exam: 33 four-option MCQs about Germany, count-based pass (≥17/33)
+// — see src/lib/exams/scoring/einbuergerung.ts. SOURCE: official Einbürgerungstest /
+// BAMF (33 questions = 30 general + 3 Bundesland-specific, 60 min, pass ≥17).
+//
+// The 300-question federal catalog is NEVER copied; items are ORIGINAL questions
+// mapped to the verified fact-base (src/lib/exams/civic-factbase.ts), enforced by
+// the civic-sourcing gate. Practice is organised by the four content DOMAINS; each
+// item is a single MCQ, so every Aufgabe carries items: 1 and the domain holds ≥15.
+//
+// ⚠️ Bundesland-specific documented gap: the real test's 3 state-specific questions
+// need per-state facts, which are NOT yet sourced and will NOT be fabricated. This
+// bank covers the four GENERAL domains only; a mock draws 30 general questions and
+// notes the 3 Bundesland questions as pending. See the founder note in the roadmap.
+export const EINBUERGERUNG_STRUCTURE: Record<string, SectionStructure> = {
+  GRUNDGESETZ: {
+    section: "GRUNDGESETZ",
+    totalItems: null,
+    minutes: null,
+    sourced: true,
+    aufgaben: [{ key: "EINB_GRUNDGESETZ", label: "Domäne A — Grundgesetz und Grundrechte", items: 1, sourced: true }],
+  },
+  INSTITUTIONEN: {
+    section: "INSTITUTIONEN",
+    totalItems: null,
+    minutes: null,
+    sourced: true,
+    aufgaben: [{ key: "EINB_INSTITUTIONEN", label: "Domäne C — Staat und Institutionen", items: 1, sourced: true }],
+  },
+  GESCHICHTE: {
+    section: "GESCHICHTE",
+    totalItems: null,
+    minutes: null,
+    sourced: true,
+    aufgaben: [{ key: "EINB_GESCHICHTE", label: "Domäne B — Geschichte und Verantwortung", items: 1, sourced: true }],
+  },
+  GESELLSCHAFT: {
+    section: "GESELLSCHAFT",
+    totalItems: null,
+    minutes: null,
+    sourced: true,
+    aufgaben: [{ key: "EINB_GESELLSCHAFT", label: "Domäne D — Gesellschaft und Zusammenleben", items: 1, sourced: true }],
+  },
+};
+
 /** Exams whose structure is recorded here. An exam absent from this map is NOT
  *  silently skipped by the conformance gate — it is reported, because an
  *  unstructured exam is an unchecked exam. */
@@ -296,6 +341,7 @@ export const EXAM_STRUCTURES: Record<string, Record<string, SectionStructure>> =
   TESTDAF: TESTDAF_STRUCTURE,
   TELC_B1: TELC_B1_STRUCTURE,
   DTZ: DTZ_STRUCTURE,
+  EINBUERGERUNGSTEST: EINBUERGERUNG_STRUCTURE,
 };
 
 /** Exams registered in the product but not yet structured. Explicit, so the gap is

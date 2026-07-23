@@ -8,6 +8,7 @@
 import { fractionToTestDafSection, pointsToTdn } from "./testdaf";
 import { getTelcConfig, scoreTelcExam, scoreTelcSection } from "./telc";
 import { pointsToDtzBand, scoreDtzSection, aggregateDtz } from "./dtz";
+import { countToEinbVerdict, aggregateEinb, scoreEinbSection } from "./einbuergerung";
 import { DTZ_SECTION_MAX } from "@/lib/exams/types";
 
 let failures = 0;
@@ -123,6 +124,22 @@ check("DTZ all-perfect totals 100", dtzPerfect.totalPoints === 100);
 check("DTZ all-perfect → B1", dtzPerfect.band === "B1");
 check("DTZ has no per-section minimums", dtzPerfect.noSectionMinimums === true);
 check("DTZ threshold verified (sourced)", dtzPerfect.thresholdVerified === true);
+
+console.log("\nEinbürgerungstest — verified count-based pass/fail (33 questions, pass ≥17):");
+check("Einb 17/33 → bestanden", countToEinbVerdict(17) === "bestanden");
+check("Einb 16/33 → nicht bestanden", countToEinbVerdict(16) === "nicht-bestanden");
+check("Einb 33/33 → bestanden", countToEinbVerdict(33) === "bestanden");
+check("Einb 0/33 → nicht bestanden", countToEinbVerdict(0) === "nicht-bestanden");
+const einbPass = aggregateEinb("EINBUERGERUNGSTEST", "Einbürgerungstest", 17);
+check("Einb aggregate 17 correct → bestanden", einbPass.verdict === "bestanden");
+check("Einb question count is 33", einbPass.questionCount === 33);
+check("Einb pass mark is 17", einbPass.passMark === 17);
+check("Einb threshold verified (sourced)", einbPass.thresholdVerified === true);
+const einbFail = aggregateEinb("EINBUERGERUNGSTEST", "Einbürgerungstest", 16);
+check("Einb aggregate 16 correct → nicht bestanden", einbFail.verdict === "nicht-bestanden");
+// A single-domain practice attempt reports a count, never a pass verdict.
+const einbSec = scoreEinbSection("GRUNDGESETZ", 1, 1);
+check("Einb single-domain result carries the 17/33 context", einbSec.passMark === 17 && einbSec.questionCount === 33);
 
 console.log(`\n${failures === 0 ? "ALL PASS ✅" : `${failures} FAILED ❌`}`);
 if (failures > 0) process.exit(1);

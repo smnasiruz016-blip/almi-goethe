@@ -19,6 +19,8 @@ const BLURB: Record<GermanExam, string> = {
     "Upper-intermediate B2 for work and study. Confirmed section weights; the exact pass threshold is shown honestly as pending official confirmation.",
   DTZ:
     "Deutsch-Test für Zuwanderer (A2–B1) — the integration exam, often required for citizenship. One paper scored out of 100 and banded into a level: 60+ is B1, 33–59 is A2.",
+  EINBUERGERUNGSTEST:
+    "The civic naturalisation test — 33 multiple-choice questions about Germany's constitution, history, institutions and society. Not a language test: you pass with 17 correct out of 33.",
 };
 
 const TAG: Record<GermanExam, string> = {
@@ -27,6 +29,7 @@ const TAG: Record<GermanExam, string> = {
   TELC_B1: "60% per part · citizenship",
   TELC_B2: "Threshold pending confirmation",
   DTZ: "Dual outcome A2/B1 · /100",
+  EINBUERGERUNGSTEST: "Civic · pass 17 of 33",
 };
 
 export default async function ExamsPage() {

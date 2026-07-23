@@ -53,12 +53,20 @@ type DtzResult = {
   sectionMax: number; // this section's slice of the 100 total
   percentOfSection: number;
 };
+type EinbResult = {
+  label: string; // civic domain
+  correct: number;
+  total: number;
+  passMark: number; // 17
+  questionCount: number; // 33
+};
 type Outcome = {
   pointsEarned?: number;
   pointsMax?: number;
   testDaf?: TestDafResult;
   telc?: TelcResult;
   dtz?: DtzResult;
+  einb?: EinbResult;
   feedback?: Feedback;
 };
 
@@ -274,6 +282,7 @@ function ExamResult({
   const t = outcome.testDaf;
   const c = outcome.telc;
   const d = outcome.dtz;
+  const e = outcome.einb;
   return (
     <div className="space-y-6">
       {isTestDaf && t && (
@@ -336,6 +345,23 @@ function ExamResult({
             across all four sections and read as a <span className="font-semibold text-almi-ink">level</span>:
             60 or more is B1, 33–59 is A2. There are no per-section minimums, so your level comes from the
             full exam, not this one section. This is a practice estimate.
+          </p>
+        </div>
+      )}
+
+      {e && (
+        <div className="rounded-2xl border border-almi-accent/40 bg-almi-accent/5 p-6">
+          <p className="text-xs font-bold uppercase tracking-wider text-almi-accent-deep">
+            Einbürgerungstest · {e.label}
+          </p>
+          <p className="mt-2 text-4xl font-semibold text-almi-ink">
+            {e.correct} <span className="text-2xl text-almi-text">/ {e.total} richtig</span>
+          </p>
+          <p className="mt-4 rounded-xl bg-almi-paper px-4 py-3 text-sm text-almi-text">
+            The real Einbürgerungstest is <span className="font-semibold text-almi-ink">33 questions</span>,
+            and you pass with <span className="font-semibold text-almi-ink">{e.passMark} correct</span>. This
+            is practice for one domain — it isn&apos;t a pass or fail on its own; the verdict comes from the
+            full 33-question test.
           </p>
         </div>
       )}

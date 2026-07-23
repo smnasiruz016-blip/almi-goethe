@@ -58,11 +58,12 @@ import { ITEMS as DTZ_HV } from "./exams/dtz-hoeren";
 import { ITEMS as DTZ_LV } from "./exams/dtz-lesen";
 import { ITEMS as DTZ_SA } from "./exams/dtz-schreiben";
 import { ITEMS as DTZ_SP } from "./exams/dtz-sprechen";
+import { ITEMS as EINB } from "./exams/einbuergerungstest";
 
 const prisma = new PrismaClient();
 const DRY = process.argv.includes("--dry");
 
-const ALL = [...TESTDAF, ...TESTDAF_LV, ...TESTDAF_HV, ...TESTDAF_SA, ...TESTDAF_MA, ...C1H, ...B1, ...B1_LV, ...B1_SB, ...B1_HV, ...B1_SA, ...B1_SP, ...B2, ...DTZ_HV, ...DTZ_LV, ...DTZ_SA, ...DTZ_SP];
+const ALL = [...TESTDAF, ...TESTDAF_LV, ...TESTDAF_HV, ...TESTDAF_SA, ...TESTDAF_MA, ...C1H, ...B1, ...B1_LV, ...B1_SB, ...B1_HV, ...B1_SA, ...B1_SP, ...B2, ...DTZ_HV, ...DTZ_LV, ...DTZ_SA, ...DTZ_SP, ...EINB];
 
 /** Identity: what makes two rows "the same item". Content is NOT part of it —
  *  that is the point, so a corrected item updates in place rather than inserting
