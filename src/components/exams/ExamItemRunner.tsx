@@ -66,6 +66,13 @@ type DshResult = {
   weight: number; // 2/2/1/2 for written; 0 for oral
   countsTowardGrade: boolean;
 };
+type OesdResult = {
+  label: string; // section
+  module: "written" | "oral";
+  percent: number;
+  passPercent: number; // 60
+  verdict: "passed" | "borderline" | "not-yet";
+};
 type Outcome = {
   pointsEarned?: number;
   pointsMax?: number;
@@ -74,6 +81,7 @@ type Outcome = {
   dtz?: DtzResult;
   einb?: EinbResult;
   dsh?: DshResult;
+  oesd?: OesdResult;
   feedback?: Feedback;
 };
 
@@ -291,6 +299,7 @@ function ExamResult({
   const d = outcome.dtz;
   const e = outcome.einb;
   const h = outcome.dsh;
+  const oe = outcome.oesd;
   return (
     <div className="space-y-6">
       {isTestDaf && t && (
@@ -385,6 +394,23 @@ function ExamResult({
             written sections (Hören and Lesen count double, Strukturen once, Textproduktion double):
             <span className="font-semibold text-almi-ink"> 57%+ is DSH-1 (≈B2), 67%+ DSH-2 (≈C1), 82%+ DSH-3 (≈C2)</span>.
             {h.countsTowardGrade ? " This section counts toward that grade." : " The oral part is assessed separately and is not in this weighted grade."} This is a practice estimate for one section.
+          </p>
+        </div>
+      )}
+
+      {oe && (
+        <div className="rounded-2xl border border-almi-accent/40 bg-almi-accent/5 p-6">
+          <p className="text-xs font-bold uppercase tracking-wider text-almi-accent-deep">
+            ÖSD B1 · {oe.label} · {oe.module === "written" ? "schriftliches Modul" : "mündliches Modul"}
+          </p>
+          <p className="mt-2 text-4xl font-semibold text-almi-ink">{oe.percent}%</p>
+          <p className="mt-1 text-sm font-semibold text-almi-ink">
+            {oe.verdict === "passed" ? "On track (≈60% pass)" : oe.verdict === "borderline" ? "Borderline — near the ~60% mark" : "Not yet at the ~60% mark"}
+          </p>
+          <p className="mt-4 rounded-xl bg-almi-paper px-4 py-3 text-sm text-almi-text">
+            ÖSD ZDÖ B1 has <span className="font-semibold text-almi-ink">two modules certified separately</span>:
+            the written module (Lesen · Hören · Schreiben) and the oral module (Sprechen), each passed at about
+            60%. This is a practice estimate for one section — the exact ÖSD point scheme is set by the centre.
           </p>
         </div>
       )}

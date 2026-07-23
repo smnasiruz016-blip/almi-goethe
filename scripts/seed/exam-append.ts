@@ -64,11 +64,15 @@ import { ITEMS as DSH_LV } from "./exams/dsh-leseverstehen";
 import { ITEMS as DSH_WS } from "./exams/dsh-strukturen";
 import { ITEMS as DSH_TP } from "./exams/dsh-textproduktion";
 import { ITEMS as DSH_SP } from "./exams/dsh-muendlich";
+import { ITEMS as OESD_LV } from "./exams/oesd-lesen";
+import { ITEMS as OESD_HV } from "./exams/oesd-hoeren";
+import { ITEMS as OESD_SA } from "./exams/oesd-schreiben";
+import { ITEMS as OESD_SP } from "./exams/oesd-sprechen";
 
 const prisma = new PrismaClient();
 const DRY = process.argv.includes("--dry");
 
-const ALL = [...TESTDAF, ...TESTDAF_LV, ...TESTDAF_HV, ...TESTDAF_SA, ...TESTDAF_MA, ...C1H, ...B1, ...B1_LV, ...B1_SB, ...B1_HV, ...B1_SA, ...B1_SP, ...B2, ...DTZ_HV, ...DTZ_LV, ...DTZ_SA, ...DTZ_SP, ...EINB, ...DSH_HV, ...DSH_LV, ...DSH_WS, ...DSH_TP, ...DSH_SP];
+const ALL = [...TESTDAF, ...TESTDAF_LV, ...TESTDAF_HV, ...TESTDAF_SA, ...TESTDAF_MA, ...C1H, ...B1, ...B1_LV, ...B1_SB, ...B1_HV, ...B1_SA, ...B1_SP, ...B2, ...DTZ_HV, ...DTZ_LV, ...DTZ_SA, ...DTZ_SP, ...EINB, ...DSH_HV, ...DSH_LV, ...DSH_WS, ...DSH_TP, ...DSH_SP, ...OESD_LV, ...OESD_HV, ...OESD_SA, ...OESD_SP];
 
 /** Identity: what makes two rows "the same item". Content is NOT part of it —
  *  that is the point, so a corrected item updates in place rather than inserting

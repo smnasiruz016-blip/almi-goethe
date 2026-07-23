@@ -232,5 +232,56 @@ export type DshExamResult = {
   thresholdVerified: boolean; // true — bands sourced; counts are convention (separate)
 };
 
+// ---------------------------------------------------------------------------
+// ÖSD ZDÖ B1 — Zertifikat Deutsch Österreich B1. AUSTRIAN, not German: Austrian
+// daily-life content, for immigrants to Austria aged 16+. Scored on telc's
+// %-per-part PHILOSOPHY (≈60% pass) — NOT a sixth philosophy, but wrapped in the
+// one thing that IS distinct: TWO SEPARATELY-CERTIFIABLE MODULES.
+//   • Written module = Lesen + Hören + Schreiben.
+//   • Oral module    = Sprechen.
+// Each module can be sat and certified on its own; both within a year at the same
+// centre → the full certificate.
+//
+// VERIFIED (osd.at + the ÖSD B1 Modellsatz): the module split and ~60% pass are
+// sourced; Lesen/Hören totals (30 each) and Schreiben word counts (~80/~80/~40) are
+// sourced; the exact per-Teil item split and the exact point scheme are CONVENTION
+// (verify against the Modellsatz) — so thresholdVerified is false for the points.
+//
+// CORRIDOR (E/F): ÖSD ZDÖ B1 = Module 2 of the Austrian Integration Agreement (B1),
+// for residence / integration / citizenship. Austrian citizenship is B1 TODAY; a
+// B2 reform is PROPOSED, not enacted — never state B2 as required.
+// ---------------------------------------------------------------------------
+
+export type OesdModule = "written" | "oral";
+
+/** Which module each ÖSD section belongs to. */
+export const OESD_MODULE: Record<string, OesdModule> = {
+  LESEVERSTEHEN: "written",
+  HOERVERSTEHEN: "written",
+  SCHRIFTLICHER_AUSDRUCK: "written",
+  SPRECHEN: "oral",
+};
+
+export type OesdSectionResult = {
+  section: string;
+  label: string;
+  module: OesdModule;
+  percent: number; // 0..100 for the attempted item(s)
+  passPercent: 60;
+  verdict: Verdict; // vs the ~60% pass mark
+  thresholdVerified: boolean; // false — the exact point scheme is convention
+};
+
+export type OesdExamResult = {
+  exam: GermanExam;
+  displayName: string;
+  sections: OesdSectionResult[];
+  modules: { module: OesdModule; label: string; percent: number; verdict: Verdict }[];
+  separatelyCertifiable: true; // each module is sat and certified on its own
+  passPercent: 60;
+  thresholdVerified: boolean; // false — points convention
+  moduleNote: string; // the "two modules, within a year, same centre" rule
+};
+
 export const EXAM_ESTIMATE_DISCLAIMER =
   "This is an AlmiGoethe practice estimate, not an official result. TestDaF, telc, and the TestDaF-Institut / g.a.s.t. calibrate the real exams. Confirm the level and result you need with the exam provider, your university, or the relevant German authority.";

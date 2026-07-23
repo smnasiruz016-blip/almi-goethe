@@ -374,6 +374,7 @@ enum GermanExam {
   DTZ
   EINBUERGERUNGSTEST
   DSH
+  OESD_B1
 }
 
 model ExamItem {

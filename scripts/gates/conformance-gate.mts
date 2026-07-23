@@ -38,6 +38,7 @@ import {
   TESTDAF_PRODUCTIVE,
   DTZ_PRODUCTIVE,
   DSH_PRODUCTIVE,
+  OESD_PRODUCTIVE,
   type Aufgabe,
 } from "../../src/lib/exams/exam-structure";
 import { EXAM_DEFS } from "../../src/lib/exams/registry";
@@ -139,6 +140,21 @@ for (const it of examBank() as any[]) {
       }
       if (typeof wMax !== "number" || wMax > spec.wordMax) {
         violations.push(`${where}\n      wordMax ${wMax} exceeds the published ceiling of ${spec.wordMax} for "${aufgabe.label}"`);
+      }
+    }
+  }
+  // ── ÖSD ZDÖ B1 productive envelope: the ~80/~80/~40-word Schreiben targets are
+  // sourced, enforced within a practice band per Aufgabe. ──
+  if (exam === "OESD_B1" && section === "SCHRIFTLICHER_AUSDRUCK") {
+    const spec = (OESD_PRODUCTIVE.SCHRIFTLICHER_AUSDRUCK as Record<string, any>)[it.taskType];
+    const wMin = it.payload?.wordMin;
+    const wMax = it.payload?.wordMax;
+    if (spec) {
+      if (typeof wMin !== "number" || wMin < spec.wordMin) {
+        violations.push(`${where}\n      wordMin ${wMin} is below the ${spec.wordMin} floor (target ~${spec.target}) for "${aufgabe.label}"`);
+      }
+      if (typeof wMax !== "number" || wMax > spec.wordMax) {
+        violations.push(`${where}\n      wordMax ${wMax} exceeds the ${spec.wordMax} ceiling (target ~${spec.target}) for "${aufgabe.label}"`);
       }
     }
   }

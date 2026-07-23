@@ -10,6 +10,7 @@ import { getTelcConfig, scoreTelcExam, scoreTelcSection } from "./telc";
 import { pointsToDtzBand, scoreDtzSection, aggregateDtz } from "./dtz";
 import { countToEinbVerdict, aggregateEinb, scoreEinbSection } from "./einbuergerung";
 import { percentToDshGrade, scoreDshSection, aggregateDsh } from "./dsh";
+import { percentToOesdVerdict, scoreOesdSection, aggregateOesd } from "./oesd";
 import { DTZ_SECTION_MAX, DSH_WRITTEN_WEIGHTS } from "@/lib/exams/types";
 
 let failures = 0;
@@ -164,6 +165,25 @@ check("DSH 74 → DSH-2 grade", dshMock.grade === "DSH-2");
 check("DSH oral does not count toward the grade", dshMock.sections.find((x) => x.section === "SPRECHEN")?.countsTowardGrade === false);
 check("DSH bands sourced (thresholdVerified)", dshMock.thresholdVerified === true);
 check("DSH carries the per-part hedge note", dshMock.perPartMinimumNote.length > 0);
+
+console.log("\nÖSD ZDÖ B1 — telc-style %-per-part (≈60%) with TWO separately-certifiable modules:");
+check("ÖSD 60% → passed", percentToOesdVerdict(60) === "passed");
+check("ÖSD 56% → borderline", percentToOesdVerdict(56) === "borderline");
+check("ÖSD 40% → not-yet", percentToOesdVerdict(40) === "not-yet");
+check("ÖSD Lesen is in the WRITTEN module", scoreOesdSection("LESEVERSTEHEN", 0.7).module === "written");
+check("ÖSD Sprechen is in the ORAL module", scoreOesdSection("SPRECHEN", 0.7).module === "oral");
+check("ÖSD point scheme flagged unverified (convention)", scoreOesdSection("LESEVERSTEHEN", 0.7).thresholdVerified === false);
+// A candidate strong in writing, weak in oral: the two modules verdict SEPARATELY.
+const oesd = aggregateOesd("OESD_B1", "ÖSD B1", [
+  scoreOesdSection("LESEVERSTEHEN", 0.8),
+  scoreOesdSection("HOERVERSTEHEN", 0.8),
+  scoreOesdSection("SCHRIFTLICHER_AUSDRUCK", 0.8),
+  scoreOesdSection("SPRECHEN", 0.4),
+]);
+check("ÖSD rolls up into exactly two modules", oesd.modules.length === 2);
+check("ÖSD written module passes", oesd.modules.find((m) => m.module === "written")?.verdict === "passed");
+check("ÖSD oral module does NOT pass (separate)", oesd.modules.find((m) => m.module === "oral")?.verdict === "not-yet");
+check("ÖSD modules are separately certifiable", oesd.separatelyCertifiable === true);
 
 console.log(`\n${failures === 0 ? "ALL PASS ✅" : `${failures} FAILED ❌`}`);
 if (failures > 0) process.exit(1);

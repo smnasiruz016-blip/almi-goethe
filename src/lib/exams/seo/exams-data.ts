@@ -182,6 +182,27 @@ const DATA: Record<GermanExam, Omit<ExamSeo, "slug" | "sectionsLine">> = {
     officialLabel: "hrk.de",
     purposeSlugs: ["university"],
   },
+  OESD_B1: {
+    exam: "OESD_B1",
+    name: "ÖSD Zertifikat B1",
+    fullName: "ÖSD Zertifikat Deutsch Österreich B1 (ZDÖ B1)",
+    provider: "the Österreichisches Sprachdiplom Deutsch (ÖSD)",
+    cefr: "B1",
+    eyebrow: "Austrian integration & citizenship German",
+    tagline:
+      "The Austrian B1 German certificate — Module 2 of the Integration Agreement, for residence, integration and citizenship in Austria.",
+    format:
+      "Two modules that are certified separately: a written module (Lesen, Hören, Schreiben) and an oral module (Sprechen). You can sit each on its own; passing both within a year at the same centre gives the full certificate. Content is Austrian everyday life.",
+    scoring:
+      "Each module is marked as a percentage and passed at about 60%, independently of the other. This is scored the same way as the telc percentage engines; the exact ÖSD point scheme is set by the exam centre.",
+    scoringNote:
+      "We estimate against ÖSD's roughly 60% pass line so you can gauge where you stand; the exact official point scheme is set by ÖSD — confirm the real requirement with the exam centre.",
+    usedFor:
+      "ÖSD ZDÖ B1 is accepted for the Austrian Integration Agreement (Module 2, B1) and is the German level generally required for Austrian citizenship. Austria has proposed raising this to B2, but that is not yet in force — confirm the current requirement with the Austrian authority.",
+    officialUrl: "https://www.osd.at/",
+    officialLabel: "osd.at",
+    purposeSlugs: ["citizenship"],
+  },
 };
 
 export const EXAMS_SEO: Record<GermanExam, ExamSeo> = Object.fromEntries(
