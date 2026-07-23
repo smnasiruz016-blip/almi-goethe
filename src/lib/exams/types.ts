@@ -89,5 +89,60 @@ export type TelcExamResult = {
   passRuleNote: string;
 };
 
+// ---------------------------------------------------------------------------
+// DTZ — Deutsch-Test für Zuwanderer. The engines' THIRD philosophy (after
+// TestDaF's TDN and telc's %-per-part): a single FIXED TOTAL out of 100, summed
+// from four sections (Hören 25 · Lesen 25 · Schreiben 20 · Sprechen 30), then
+// banded into a DUAL OUTCOME — the one exam that returns A2 OR B1 from the same
+// paper. There are NO per-section minimums; only the aggregate is banded.
+//
+// VERIFIED (official DTZ Prüfungshandbuch, goethe.de): ≥60 → B1 · 33–59 → A2 ·
+// <33 → nicht bestanden. Written 100 min + oral 15 min.
+// ---------------------------------------------------------------------------
+
+export const DTZ_SECTIONS = [
+  "HOERVERSTEHEN",
+  "LESEVERSTEHEN",
+  "SCHRIFTLICHER_AUSDRUCK",
+  "SPRECHEN",
+] as const;
+export type DtzSection = (typeof DTZ_SECTIONS)[number];
+
+// Each section's share of the fixed 100-point total (sourced).
+export const DTZ_SECTION_MAX: Record<DtzSection, number> = {
+  HOERVERSTEHEN: 25,
+  LESEVERSTEHEN: 25,
+  SCHRIFTLICHER_AUSDRUCK: 20,
+  SPRECHEN: 30,
+};
+
+// The dual outcome. "nicht-bestanden" is shown honestly — below A2, the exam is
+// not passed at either level.
+export type DtzBand = "B1" | "A2" | "nicht-bestanden";
+
+export type DtzSectionResult = {
+  section: DtzSection;
+  label: string;
+  pointsEst: Range; // practice estimate of points earned toward the 100 total
+  centerPoints: number; // the point value used, on this section's own scale
+  sectionMax: number; // 25 / 25 / 20 / 30
+  examMax: 100; // this section's max is a slice of the fixed 100
+  percentOfSection: number; // 0..100 within the section (for display only)
+};
+
+export type DtzExamResult = {
+  exam: GermanExam;
+  displayName: string;
+  sections: DtzSectionResult[];
+  totalPoints: number; // sum of section centerPoints, 0..100
+  maxPoints: 100;
+  band: DtzBand;
+  bandLabel: string; // "B1" | "A2" | "nicht bestanden (unter A2)"
+  b1Threshold: 60;
+  a2Threshold: 33;
+  noSectionMinimums: true; // the aggregate is banded; sections have no gate
+  thresholdVerified: boolean; // true — sourced from the DTZ Prüfungshandbuch
+};
+
 export const EXAM_ESTIMATE_DISCLAIMER =
   "This is an AlmiGoethe practice estimate, not an official result. TestDaF, telc, and the TestDaF-Institut / g.a.s.t. calibrate the real exams. Confirm the level and result you need with the exam provider, your university, or the relevant German authority.";

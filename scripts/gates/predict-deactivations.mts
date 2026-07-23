@@ -29,16 +29,29 @@
 // A live row this prediction does not contain is drift — an orphan from an earlier
 // insert-only deploy — and is precisely what the guard exists to catch.
 
+// Baseline = every exam seed file on `main`. After batch 1 split the bank into
+// per-section files, importing only the four original modules undercounted the
+// baseline (the split files were invisible), inflating the predicted insert count.
+// Import the WHOLE baseline tree — the same module set _bank.mts loads for current.
 import { ITEMS as B_TESTDAF } from "../../.baseline/scripts/seed/exams/testdaf";
+import { ITEMS as B_TESTDAF_LV } from "../../.baseline/scripts/seed/exams/testdaf-leseverstehen";
+import { ITEMS as B_TESTDAF_HV } from "../../.baseline/scripts/seed/exams/testdaf-hoerverstehen";
+import { ITEMS as B_TESTDAF_SA } from "../../.baseline/scripts/seed/exams/testdaf-schriftlicher-ausdruck";
+import { ITEMS as B_TESTDAF_MA } from "../../.baseline/scripts/seed/exams/testdaf-muendlicher-ausdruck";
 import { ITEMS as B_C1H } from "../../.baseline/scripts/seed/exams/telc-c1-hochschule";
 import { ITEMS as B_B1 } from "../../.baseline/scripts/seed/exams/telc-b1";
+import { ITEMS as B_B1_LV } from "../../.baseline/scripts/seed/exams/telc-b1-leseverstehen";
+import { ITEMS as B_B1_SB } from "../../.baseline/scripts/seed/exams/telc-b1-sprachbausteine";
+import { ITEMS as B_B1_HV } from "../../.baseline/scripts/seed/exams/telc-b1-hoerverstehen";
+import { ITEMS as B_B1_SA } from "../../.baseline/scripts/seed/exams/telc-b1-schriftlicher-ausdruck";
+import { ITEMS as B_B1_SP } from "../../.baseline/scripts/seed/exams/telc-b1-sprechen";
 import { ITEMS as B_B2 } from "../../.baseline/scripts/seed/exams/telc-b2";
 import { examBank } from "./_bank.mjs";
 import { EXAM_STRUCTURES, aufgabeFor } from "../../src/lib/exams/exam-structure";
 
 const key = (r: any) => `${r.exam}::${r.level}::${r.section}::${r.title}`;
 
-const baseline = [...B_TESTDAF, ...B_C1H, ...B_B1, ...B_B2] as any[];
+const baseline = [...B_TESTDAF, ...B_TESTDAF_LV, ...B_TESTDAF_HV, ...B_TESTDAF_SA, ...B_TESTDAF_MA, ...B_C1H, ...B_B1, ...B_B1_LV, ...B_B1_SB, ...B_B1_HV, ...B_B1_SA, ...B_B1_SP, ...B_B2] as any[];
 const current = examBank() as any[];
 const currentKeys = new Set(current.map(key));
 

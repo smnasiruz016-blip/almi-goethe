@@ -224,12 +224,78 @@ export const TELC_B1_PRODUCTIVE = {
   },
 } as const;
 
+// ── ③ DTZ — Deutsch-Test für Zuwanderer ─────────────────────────────────────
+// A2–B1, everyday/integration register. ONE fixed total /100 (Hören 25 · Lesen 25
+// · Schreiben 20 · Sprechen 30), banded A2/B1 — see src/lib/exams/scoring/dtz.ts.
+// SOURCE: official DTZ Prüfungshandbuch, goethe.de. NO Sprachbausteine — the
+// handbook confirms DTZ has no SB component; grammar is embedded in Lesen, so Lesen
+// is its own section and there is deliberately no SB cell.
+export const DTZ_STRUCTURE: Record<string, SectionStructure> = {
+  HOERVERSTEHEN: {
+    section: "HOERVERSTEHEN",
+    totalItems: 20, // 4+5+8+3; worth 25 points
+    minutes: 25,
+    sourced: true,
+    aufgaben: [
+      { key: "DTZ_HV_TEIL1", label: "Teil 1 — Telefonansagen", items: 4, sourced: true },
+      { key: "DTZ_HV_TEIL2", label: "Teil 2 — Radioinformationen", items: 5, sourced: true },
+      { key: "DTZ_HV_TEIL3", label: "Teil 3 — Gespräche", items: 8, sourced: true },
+      { key: "DTZ_HV_TEIL4", label: "Teil 4 — Meinungsäußerungen im Radio", items: 3, sourced: true },
+    ],
+  },
+  LESEVERSTEHEN: {
+    section: "LESEVERSTEHEN",
+    totalItems: 25, // 5+5+6+3+6; worth 25 points
+    minutes: 45,
+    sourced: true,
+    aufgaben: [
+      { key: "DTZ_LV_TEIL1", label: "Teil 1 — Kataloge / Verzeichnisse", items: 5, sourced: true },
+      { key: "DTZ_LV_TEIL2", label: "Teil 2 — Anzeigen", items: 5, sourced: true },
+      { key: "DTZ_LV_TEIL3", label: "Teil 3 — Presse / amtliche Mitteilungen", items: 6, sourced: true },
+      { key: "DTZ_LV_TEIL4", label: "Teil 4 — Informationsbroschüren", items: 3, sourced: true },
+      { key: "DTZ_LV_TEIL5", label: "Teil 5 — formeller Brief", items: 6, sourced: true },
+    ],
+  },
+  SCHRIFTLICHER_AUSDRUCK: {
+    section: "SCHRIFTLICHER_AUSDRUCK",
+    totalItems: 1, // one letter; worth 20 points
+    minutes: 30,
+    sourced: true,
+    aufgaben: [
+      // ONE letter/e-mail, 80–100 words (SOURCED — hard-enforced, see DTZ_PRODUCTIVE),
+      // to a recipient + situation with FOUR Leitpunkte.
+      { key: "DTZ_SA_BRIEF", label: "Ein Brief / eine E-Mail (80–100 Wörter, 4 Leitpunkte)", items: 1, sourced: true },
+    ],
+  },
+  SPRECHEN: {
+    section: "SPRECHEN",
+    totalItems: 3,
+    minutes: 15,
+    sourced: true,
+    aufgaben: [
+      { key: "DTZ_SP_VORSTELLEN", label: "Teil 1 — Über sich sprechen / sich vorstellen", items: 1, sourced: true },
+      { key: "DTZ_SP_THEMA", label: "Teil 2 — Über ein Thema sprechen", items: 1, sourced: true },
+      { key: "DTZ_SP_PLANEN", label: "Teil 3 — Gemeinsam etwas planen", items: 1, sourced: true },
+    ],
+  },
+};
+
+/** DTZ productive bounds. Unlike telc's "circa 80", the DTZ Prüfungshandbuch gives
+ *  a real 80–100-word ENVELOPE for the letter — both ends published — so it is
+ *  HARD-ENFORCED (see the conformance gate's DTZ branch). */
+export const DTZ_PRODUCTIVE = {
+  SCHRIFTLICHER_AUSDRUCK: {
+    DTZ_SA_BRIEF: { wordMin: 80, wordMax: 100, wordMinSourced: true, wordMaxSourced: true, minutes: 30 },
+  },
+} as const;
+
 /** Exams whose structure is recorded here. An exam absent from this map is NOT
  *  silently skipped by the conformance gate — it is reported, because an
  *  unstructured exam is an unchecked exam. */
 export const EXAM_STRUCTURES: Record<string, Record<string, SectionStructure>> = {
   TESTDAF: TESTDAF_STRUCTURE,
   TELC_B1: TELC_B1_STRUCTURE,
+  DTZ: DTZ_STRUCTURE,
 };
 
 /** Exams registered in the product but not yet structured. Explicit, so the gap is

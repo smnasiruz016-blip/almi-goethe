@@ -123,6 +123,25 @@ const DATA: Record<GermanExam, Omit<ExamSeo, "slug" | "sectionsLine">> = {
     officialLabel: "telc.net",
     purposeSlugs: ["citizenship", "skilled-work"],
   },
+  DTZ: {
+    exam: "DTZ",
+    name: "Deutsch-Test für Zuwanderer",
+    fullName: "Deutsch-Test für Zuwanderer (DTZ)",
+    provider: "the Bundesamt für Migration und Flüchtlinge (BAMF); exam by telc / the Goethe-Institut",
+    cefr: "A2–B1",
+    eyebrow: "Integration & citizenship German",
+    tagline:
+      "The integration-course exam that certifies A2 or B1 from a single paper — the German usually required for naturalisation.",
+    format:
+      "One exam with a written part (Hören, Lesen, Schreiben) and an oral part (Sprechen). There is no separate Sprachbausteine section; grammar is embedded in the reading.",
+    scoring:
+      "One result out of 100 points, summed across the sections (Hören 25, Lesen 25, Schreiben 20, Sprechen 30) and banded into a level: 60 or more certifies B1, 33–59 certifies A2, and below 33 is not passed. There are no per-section minimums — the level is read from the total.",
+    usedFor:
+      "The DTZ closes the state integration course and is the German proof commonly accepted for naturalisation (which generally requires B1). Confirm the current requirement with the relevant authority.",
+    officialUrl: "https://www.bamf.de/",
+    officialLabel: "bamf.de",
+    purposeSlugs: ["citizenship"],
+  },
 };
 
 export const EXAMS_SEO: Record<GermanExam, ExamSeo> = Object.fromEntries(

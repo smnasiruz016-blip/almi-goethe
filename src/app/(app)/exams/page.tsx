@@ -17,6 +17,8 @@ const BLURB: Record<GermanExam, string> = {
     "The B1 certificate (also called Zertifikat Deutsch) — often required for citizenship. Pass = 60% of the written part and 60% of the oral part, independently.",
   TELC_B2:
     "Upper-intermediate B2 for work and study. Confirmed section weights; the exact pass threshold is shown honestly as pending official confirmation.",
+  DTZ:
+    "Deutsch-Test für Zuwanderer (A2–B1) — the integration exam, often required for citizenship. One paper scored out of 100 and banded into a level: 60+ is B1, 33–59 is A2.",
 };
 
 const TAG: Record<GermanExam, string> = {
@@ -24,6 +26,7 @@ const TAG: Record<GermanExam, string> = {
   TELC_C1_HOCHSCHULE: "60% overall + each part",
   TELC_B1: "60% per part · citizenship",
   TELC_B2: "Threshold pending confirmation",
+  DTZ: "Dual outcome A2/B1 · /100",
 };
 
 export default async function ExamsPage() {

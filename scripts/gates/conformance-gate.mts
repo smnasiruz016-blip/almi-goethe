@@ -36,6 +36,7 @@ import {
   EXAM_STRUCTURES,
   UNSTRUCTURED_EXAMS,
   TESTDAF_PRODUCTIVE,
+  DTZ_PRODUCTIVE,
   type Aufgabe,
 } from "../../src/lib/exams/exam-structure";
 import { EXAM_DEFS } from "../../src/lib/exams/registry";
@@ -106,6 +107,21 @@ for (const it of examBank() as any[]) {
     }
     if (spec?.wordMaxSourced && typeof it.payload?.wordMax === "number" && it.payload.wordMax > spec.wordMax) {
       violations.push(`${where}\n      wordMax ${it.payload.wordMax} exceeds the published ceiling of ${spec.wordMax}`);
+    }
+  }
+  // ── DTZ productive envelope: the letter's 80–100-word band is published, both
+  // ends, so it is hard-enforced (unlike telc's "circa 80" target). ──
+  if (exam === "DTZ" && section === "SCHRIFTLICHER_AUSDRUCK") {
+    const spec = (DTZ_PRODUCTIVE.SCHRIFTLICHER_AUSDRUCK as Record<string, any>)[it.taskType];
+    const wMin = it.payload?.wordMin;
+    const wMax = it.payload?.wordMax;
+    if (spec) {
+      if (typeof wMin !== "number" || wMin < spec.wordMin) {
+        violations.push(`${where}\n      wordMin ${wMin} is below the published floor of ${spec.wordMin} for "${aufgabe.label}"`);
+      }
+      if (typeof wMax !== "number" || wMax > spec.wordMax) {
+        violations.push(`${where}\n      wordMax ${wMax} exceeds the published ceiling of ${spec.wordMax} for "${aufgabe.label}"`);
+      }
     }
   }
   if (exam === "TESTDAF" && section === "MUENDLICHER_AUSDRUCK") {

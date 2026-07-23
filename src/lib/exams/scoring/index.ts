@@ -3,11 +3,13 @@
 //
 //   TESTDAF            → per-section 0–20 → TDN, NO total, NO pass/fail
 //   TELC_B1/B2/C1H     → percentage-first, 60% per-part pass (C1H also overall)
+//   DTZ                → one fixed total /100, summed, banded A2/B1/nicht bestanden
 
 import type { GermanExam } from "@/lib/exams/types";
 
 export * from "./testdaf";
 export * from "./telc";
+export * from "./dtz";
 
 /** True for the TestDaF engine, whose UI must never render a total or pass/fail. */
 export function isTestDaf(exam: GermanExam): boolean {
@@ -17,4 +19,9 @@ export function isTestDaf(exam: GermanExam): boolean {
 /** True for the three telc engines (which do have a 60% pass mark). */
 export function isTelc(exam: GermanExam): boolean {
   return exam === "TELC_B1" || exam === "TELC_B2" || exam === "TELC_C1_HOCHSCHULE";
+}
+
+/** True for DTZ, whose result is a single /100 total banded into A2/B1. */
+export function isDtz(exam: GermanExam): boolean {
+  return exam === "DTZ";
 }

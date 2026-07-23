@@ -16,6 +16,7 @@ export const EXAM_LEVEL = {
   TELC_C1_HOCHSCHULE: "C1",
   TELC_B1: "B1",
   TELC_B2: "B2",
+  DTZ: "A2–B1",
 } as const;
 
 // Section keys — MUST match SECTION_META in src/lib/exams/registry.ts.
