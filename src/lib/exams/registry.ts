@@ -42,6 +42,7 @@ const SECTION_META: Record<string, { label: string; kind: SectionKind; slug: str
   GESCHICHTE: { label: "Geschichte und Verantwortung", kind: "objective", slug: "geschichte" },
   INSTITUTIONEN: { label: "Staat und Institutionen", kind: "objective", slug: "institutionen" },
   GESELLSCHAFT: { label: "Gesellschaft und Zusammenleben", kind: "objective", slug: "gesellschaft" },
+  BUNDESLAND: { label: "Bundesland — Hauptstadt und Landesparlament", kind: "objective", slug: "bundesland" },
   // DSH — wissenschaftssprachliche Strukturen (objective) + Textproduktion (writing).
   WISS_STRUKTUREN: { label: "Wissenschaftssprachliche Strukturen", kind: "objective", slug: "wiss-strukturen" },
   TEXTPRODUKTION: { label: "Textproduktion (Writing)", kind: "writing", slug: "textproduktion" },
@@ -75,7 +76,9 @@ const TESTDAF_SECTION_ORDER: string[] = [...TESTDAF_SECTIONS];
 const DTZ_SECTION_ORDER: string[] = [...DTZ_SECTIONS];
 
 // Einbürgerungstest civic domains in exam order (A → C → B → D as presented).
-const EINB_SECTION_ORDER: string[] = ["GRUNDGESETZ", "INSTITUTIONEN", "GESCHICHTE", "GESELLSCHAFT"];
+// BUNDESLAND last: the real test asks the 30 federal questions and then 3 from the
+// candidate's own Land, so the served order mirrors the exam.
+const EINB_SECTION_ORDER: string[] = ["GRUNDGESETZ", "INSTITUTIONEN", "GESCHICHTE", "GESELLSCHAFT", "BUNDESLAND"];
 
 // DSH: the four WRITTEN sections in weight order, then the separate oral part.
 const DSH_SECTION_ORDER: string[] = ["HOERVERSTEHEN", "LESEVERSTEHEN", "WISS_STRUKTUREN", "TEXTPRODUKTION", "SPRECHEN"];

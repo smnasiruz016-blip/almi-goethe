@@ -39,6 +39,9 @@ export const SECTION = {
   INSTITUTIONEN: "INSTITUTIONEN",
   GESCHICHTE: "GESCHICHTE",
   GESELLSCHAFT: "GESELLSCHAFT",
+  // Einbürgerungstest Domäne E — the per-state questions. Every item here is true
+  // of exactly ONE Land and is tagged with it; see civic-factbase BUNDESLAND_FACTS.
+  BUNDESLAND: "BUNDESLAND",
   // DSH.
   WISS_STRUKTUREN: "WISS_STRUKTUREN",
   TEXTPRODUKTION: "TEXTPRODUKTION",

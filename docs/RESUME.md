@@ -11,13 +11,13 @@ German-exam engines are built, gated, reconciled and LIVE in production. Germany
 | **TestDaF** | DE, university | per-section TDN (no total, no pass/fail) | 86 |
 | **telc B1** | DE, citizenship | %-per-part, 60% pass | 94 |
 | **DTZ** | DE, integration | fixed total /100 → A2/B1 dual outcome | 61 |
-| **Einbürgerungstest** | DE, civic | count-based pass/fail (≥17/33) | 60 |
+| **Einbürgerungstest** | DE, civic | count-based pass/fail (≥17/33) | 92 |
 | **DSH** | DE, university | weighted % (2:2:1:2) → DSH-1/2/3 | 76 |
 | **ÖSD ZDÖ B1** | **AT**, citizenship | telc-style %, TWO separately-certifiable modules | 61 |
 | telc B2 | DE, work | %-per-part (threshold unverified) | 80 |
 | telc C1 Hochschule | DE, university | %-per-part + overall | 80 |
 
-**Exam-engine bank: 598 active `ExamItem` rows** (verified in prod), + 96 deactivated
+**Exam-engine bank: 630 active `ExamItem` rows** (verified in prod), + 96 deactivated
 batch-1 predecessors kept (deactivate-never-delete). Plus the untouched
 Goethe-Zertifikat A1–C2 item bank (the original product).
 
@@ -36,7 +36,20 @@ university corridor is revisited.
   gameable key. Enforces all six exams. Fix = deterministic `deGame` in
   `scripts/seed/exams/_permute.ts`.
 - **civic-sourcing** — every Einbürgerungstest item maps key↔WORLD to the 44-fact
-  base (`src/lib/exams/civic-factbase.ts`) with a citation. 60/60.
+  base (`src/lib/exams/civic-factbase.ts`) with a citation. 92/92, of which 32 are
+  state-tagged. Domain E adds three per-state checks, the decisive one being
+  CROSS-STATE: an item tagged BE that references a real, cited BY fact is refused,
+  because every other check passes on it. ⚠️ SCOPE: the gate proves item↔fact-base,
+  NOT fact-base↔world — a wrong capital typed into `civic-factbase.ts` stays green
+  (verified by mutating MV→Magdeburg: gate green, only the sourcing review catches
+  it). Facts are beta-g's per-item GREEN, not the gate's.
+- **state-draw** — the RUNTIME half of the Bundesland guarantee. The civic-sourcing
+  gate was GREEN while the practice page drew at random across the whole BUNDESLAND
+  section, so a Berliner got another Land's capital 15 times in 16: the bank was
+  perfect and the product was wrong. A gate that proves the DATA says nothing about
+  the code that SERVES it. Proves the draw filters to the chosen Land, never pads the
+  3-item envelope from another Land, and reports the shortfall. Mutation-tested by
+  reintroducing the original bug (6 cases go red).
 - rule7 (≥15/module), title-uniqueness, real-entity (no invented doc names a real
   company), reconcile-guard proof, ledger.
 
@@ -70,12 +83,27 @@ sections) → runner `Outcome.x` + result block → seed files (RED-first) → w
    supplementary guides" framing — they and the four new engines are now full
    practice banks. Copy scope for beta-g. (Originally logged in
    [[project_almigoethe]] as the post-reconcile copy gap.)
-2. **WS-grammar independent pass:** the 16 `WISS_STRUKTUREN` (DSH) items are owed to
-   beta-g for a second grammar check (no gate can verify grammar). Dump them with
-   `npx tsx` over `scripts/seed/exams/dsh-strukturen.ts`.
-3. **Bundesland civic facts:** the Einbürgerungstest bank covers the 4 general
-   domains only; the real test's 3 Bundesland-specific questions are a documented gap
-   (not fabricated). Source one state's facts → add to `civic-factbase.ts`.
+2. ~~**WS-grammar independent pass**~~ **DONE.** The 16 `WISS_STRUKTUREN` (DSH)
+   items passed beta-g's independent grammar check — GREEN, no fixes. Every marked
+   key is correct and uniquely correct; no wrong keys, no double answers, no
+   ungrammatical stems. Two soft distractors were ruled KEEP as intentional register
+   traps: 3(a) „Während dem Untersuchen…" and 15(c) „Trotz dem schlechten Wetter"
+   (Duden accepts während/trotz + Dativ colloquially; both are wrong only because the
+   stems demand Genitiv, and both keys stay uniquely correct). Optional hardening is
+   on record but NOT requested: 3a → „Während des Untersuchung der Proben", 15c →
+   „Trotz das schlechte Wetter". Re-dump with `npx tsx` over
+   `scripts/seed/exams/dsh-strukturen.ts` — note `deGame` permutes option letters, so
+   review the SERVED order, not the authored one.
+3. **Bundesland civic facts — PARTIAL.** Domain E is built: `BUNDESLAND_FACTS`
+   (16 states × 2 sourced anchors, capital + Landesparlament) + 32 original items in
+   `scripts/seed/exams/einbuergerungstest-bundesland.ts`, distractors drawn from other
+   real Länder. ⚠️ STILL OPEN: the real test asks **3** state questions and only **2**
+   anchors per state are sourced (`BUNDESLAND_ITEMS_PER_STATE`), so a mock cannot fill
+   the third without fabricating — beta-g offered one more cited fact per state.
+   Also NOT sourced: 13 of the 16 state portal domains (only BE/NW/HB were supplied);
+   they are cited to bpb.de + the Parlamente-in-Deutschland listing instead of
+   guessing a URL. Image-based state questions (coats of arms, maps) are out of scope
+   for a text engine.
 4. **Austrian-brand gate hardening:** add Austrian brands to the real-entity
    blocklist CAREFULLY — `willhaben` is safe; `Spar` (= imperative of sparen) and
    `Hofer` (a surname) are common-word/surname false-positive risks, so likely

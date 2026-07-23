@@ -23,7 +23,22 @@
 // bundestag.de / bundesrat.de / bundesverfassungsgericht.de, and
 // tatsachen-ueber-deutschland.de. 44 verified entries: A 12 · C 10 · B 12 · D 10.
 
-export type CivicDomain = "A_GRUNDGESETZ" | "B_GESCHICHTE" | "C_INSTITUTIONEN" | "D_GESELLSCHAFT";
+export type CivicDomain =
+  | "A_GRUNDGESETZ"
+  | "B_GESCHICHTE"
+  | "C_INSTITUTIONEN"
+  | "D_GESELLSCHAFT"
+  /** The per-state dimension. A fact in this domain is true of ONE Bundesland only. */
+  | "E_BUNDESLAND";
+
+/** The 16 Länder, by their official ISO 3166-2:DE subdivision letters. */
+export type BundeslandCode =
+  | "BW" | "BY" | "BE" | "BB" | "HB" | "HH" | "HE" | "MV"
+  | "NI" | "NW" | "RP" | "SL" | "SN" | "ST" | "SH" | "TH";
+
+export const BUNDESLAND_CODES: readonly BundeslandCode[] = [
+  "BW", "BY", "BE", "BB", "HB", "HH", "HE", "MV", "NI", "NW", "RP", "SL", "SN", "ST", "SH", "TH",
+];
 
 export type CivicFact = {
   /** Stable id an item references from its payload.factId. */
@@ -34,8 +49,15 @@ export type CivicFact = {
   answer: string;
   /** Where the fact is published. A civic fact with no citation is not sourced. */
   citation: string;
-  /** Which of the four Einbürgerungstest domains it anchors. */
+  /** Which Einbürgerungstest domain it anchors. */
   domain: CivicDomain;
+  /**
+   * Set ONLY on E_BUNDESLAND facts: the single Land this fact is true of. A federal
+   * fact leaves it undefined. This is what makes a cross-state leak detectable —
+   * an item tagged BE that reaches for a BY fact is caught because the fact itself
+   * carries its state, rather than the item being trusted to file itself correctly.
+   */
+  bundesland?: BundeslandCode;
 };
 
 /** The 44 verified anchor facts. Keyed by factId. */
@@ -100,3 +122,119 @@ export const CIVIC_EXAMS: readonly string[] = ["EINBUERGERUNGSTEST"];
 export function factsForDomain(domain: CivicDomain): CivicFact[] {
   return Object.values(CIVIC_FACTS).filter((f) => f.domain === domain);
 }
+
+// ═══════════════════════════════════════════════════════════════════════════
+// DOMAIN E — BUNDESLAND. The per-state dimension.
+// ═══════════════════════════════════════════════════════════════════════════
+//
+// ── WHY THIS IS A SEPARATE MAP, NOT MORE ENTRIES IN CIVIC_FACTS ─────────────
+// The 44 federal facts are true for every candidate. These are true for exactly
+// ONE Land, and serving a Berliner a Bavarian answer is not a thin item — it is a
+// wrong one, on the test that decides their naturalisation. Keeping them in a map
+// KEYED BY STATE makes "never mix states" a property of the data structure rather
+// than a rule the drawing code has to remember. CIVIC_FACTS is untouched: 44
+// federal entries, exactly as before.
+//
+// ── SOURCING ────────────────────────────────────────────────────────────────
+// Capitals: bpb.de. Parliament names: the "Parlamente in Deutschland" listing
+// published by the Bayerischer Landtag (bayern.landtag.de). Where the founder's
+// fact-base also named a state's own official portal, it is cited as corroboration
+// — that is three states (BE, NW, HB). The other thirteen portal domains were NOT
+// supplied and are NOT guessed: a citation is the one field that may never be
+// inferred, and "berlin.de exists so baden-wuerttemberg.de probably does" is
+// exactly the reasoning that puts a fabricated source in a civic bank.
+//
+// ── THE OFFICIAL NAME vs THE ANSWER STRING ──────────────────────────────────
+// `parliament` holds the official name VERBATIM as sourced. `answer` is that name
+// with a definite article, per the founder's entry pattern
+// ("das Abgeordnetenhaus von Berlin", "die Bremische Bürgerschaft"). For the five
+// names built on an adjective, the article forces the weak ending — the official
+// "Bayerischer Landtag" becomes "der Bayerische Landtag", and likewise HE, NI, SN
+// and SH. That is German declension, not a change to the sourced fact; the verbatim
+// name is preserved in `parliament` and asserted inside every `statement`.
+// (TH is not one of them: "Thüringer" is an invariable place-name form.)
+
+export type BundeslandInfo = {
+  code: BundeslandCode;
+  /** Official name of the Land. */
+  name: string;
+  /** Landeshauptstadt. */
+  capital: string;
+  /** Official name of the Landesparlament, VERBATIM as sourced. */
+  parliament: string;
+  /** The parliament name carrying its definite article — the answer string. */
+  parliamentAnswer: string;
+  /** True for the three Stadtstaaten, which changes how the capital reads. */
+  stadtstaat?: true;
+  /** The state's own official portal, ONLY where it was supplied. Never inferred. */
+  portal?: string;
+};
+
+export const BUNDESLAENDER: Record<BundeslandCode, BundeslandInfo> = {
+  BW: { code: "BW", name: "Baden-Württemberg", capital: "Stuttgart", parliament: "Landtag von Baden-Württemberg", parliamentAnswer: "der Landtag von Baden-Württemberg" },
+  BY: { code: "BY", name: "Bayern", capital: "München", parliament: "Bayerischer Landtag", parliamentAnswer: "der Bayerische Landtag" },
+  BE: { code: "BE", name: "Berlin", capital: "Berlin", parliament: "Abgeordnetenhaus von Berlin", parliamentAnswer: "das Abgeordnetenhaus von Berlin", stadtstaat: true, portal: "berlin.de" },
+  BB: { code: "BB", name: "Brandenburg", capital: "Potsdam", parliament: "Landtag Brandenburg", parliamentAnswer: "der Landtag Brandenburg" },
+  HB: { code: "HB", name: "Bremen", capital: "Bremen", parliament: "Bremische Bürgerschaft", parliamentAnswer: "die Bremische Bürgerschaft", stadtstaat: true, portal: "bremische-buergerschaft.de" },
+  HH: { code: "HH", name: "Hamburg", capital: "Hamburg", parliament: "Hamburgische Bürgerschaft", parliamentAnswer: "die Hamburgische Bürgerschaft", stadtstaat: true },
+  HE: { code: "HE", name: "Hessen", capital: "Wiesbaden", parliament: "Hessischer Landtag", parliamentAnswer: "der Hessische Landtag" },
+  MV: { code: "MV", name: "Mecklenburg-Vorpommern", capital: "Schwerin", parliament: "Landtag Mecklenburg-Vorpommern", parliamentAnswer: "der Landtag Mecklenburg-Vorpommern" },
+  NI: { code: "NI", name: "Niedersachsen", capital: "Hannover", parliament: "Niedersächsischer Landtag", parliamentAnswer: "der Niedersächsische Landtag" },
+  NW: { code: "NW", name: "Nordrhein-Westfalen", capital: "Düsseldorf", parliament: "Landtag Nordrhein-Westfalen", parliamentAnswer: "der Landtag Nordrhein-Westfalen", portal: "land.nrw" },
+  RP: { code: "RP", name: "Rheinland-Pfalz", capital: "Mainz", parliament: "Landtag Rheinland-Pfalz", parliamentAnswer: "der Landtag Rheinland-Pfalz" },
+  SL: { code: "SL", name: "Saarland", capital: "Saarbrücken", parliament: "Landtag des Saarlandes", parliamentAnswer: "der Landtag des Saarlandes" },
+  SN: { code: "SN", name: "Sachsen", capital: "Dresden", parliament: "Sächsischer Landtag", parliamentAnswer: "der Sächsische Landtag" },
+  ST: { code: "ST", name: "Sachsen-Anhalt", capital: "Magdeburg", parliament: "Landtag von Sachsen-Anhalt", parliamentAnswer: "der Landtag von Sachsen-Anhalt" },
+  SH: { code: "SH", name: "Schleswig-Holstein", capital: "Kiel", parliament: "Schleswig-Holsteinischer Landtag", parliamentAnswer: "der Schleswig-Holsteinische Landtag" },
+  TH: { code: "TH", name: "Thüringen", capital: "Erfurt", parliament: "Thüringer Landtag", parliamentAnswer: "der Thüringer Landtag" },
+};
+
+function capitalFact(b: BundeslandInfo): CivicFact {
+  return {
+    factId: `${b.code}_CAP`,
+    statement: b.stadtstaat
+      ? `${b.name} ist ein Stadtstaat; die Landeshauptstadt ist ${b.capital} selbst.`
+      : `Die Landeshauptstadt von ${b.name} ist ${b.capital}.`,
+    answer: b.capital,
+    citation: b.portal ? `bpb.de; ${b.portal}` : "bpb.de",
+    domain: "E_BUNDESLAND",
+    bundesland: b.code,
+  };
+}
+
+function parliamentFact(b: BundeslandInfo): CivicFact {
+  return {
+    factId: `${b.code}_PARL`,
+    // The VERBATIM official name goes in the statement, so the sourced string
+    // survives even though the answer carries a declined article.
+    statement: `Das Landesparlament von ${b.name} heißt ${b.parliament}.`,
+    answer: b.parliamentAnswer,
+    citation: b.portal
+      ? `bayern.landtag.de (Parlamente in Deutschland); ${b.portal}`
+      : "bayern.landtag.de (Parlamente in Deutschland)",
+    domain: "E_BUNDESLAND",
+    bundesland: b.code,
+  };
+}
+
+/** 16 states × 2 anchors (capital + parliament) = 32 sourced per-state facts. */
+export const BUNDESLAND_FACTS: Record<BundeslandCode, CivicFact[]> = Object.fromEntries(
+  BUNDESLAND_CODES.map((c) => [c, [capitalFact(BUNDESLAENDER[c]), parliamentFact(BUNDESLAENDER[c])]]),
+) as Record<BundeslandCode, CivicFact[]>;
+
+/** Flat factId → fact index over every per-state fact. */
+export const BUNDESLAND_FACT_INDEX: Record<string, CivicFact> = Object.fromEntries(
+  BUNDESLAND_CODES.flatMap((c) => BUNDESLAND_FACTS[c].map((f) => [f.factId, f])),
+);
+
+export function isBundeslandCode(v: unknown): v is BundeslandCode {
+  return typeof v === "string" && (BUNDESLAND_CODES as readonly string[]).includes(v);
+}
+
+/**
+ * How many per-state items a candidate can actually be served for their Land.
+ * The real Einbürgerungstest asks THREE state questions; this fact-base sources
+ * TWO anchors per state, so the honest number is 2 — reported, never padded.
+ */
+export const BUNDESLAND_ITEMS_PER_STATE = 2;
+export const BUNDESLAND_ITEMS_IN_REAL_TEST = 3;
