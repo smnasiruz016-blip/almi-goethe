@@ -34,7 +34,7 @@ export async function generateMetadata({
   if (!e || !purpose || !country) return {};
   const real = isRealExamPurpose(e.exam, purpose.slug);
   return buildExamMetadata({
-    title: `${e.name} for ${purpose.name} from ${country.name} — German requirement | AlmiGoethe`,
+    title: `${e.name} for ${purpose.name} from ${country.name} — German requirement`,
     description: `The real German level ${purpose.name.toLowerCase()} in Germany requires, how ${e.name} fits, the route from ${country.name}, and free practice. Always confirm with ${purpose.authority}.`,
     path: examPurposeOriginUrl(e.exam, purpose, country),
     index: real,

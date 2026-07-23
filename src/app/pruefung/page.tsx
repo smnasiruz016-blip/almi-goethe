@@ -6,9 +6,9 @@ export const revalidate = false;
 
 export function generateMetadata() {
   return buildExamMetadata({
-    title: "TestDaF & telc — German exams for study, work and citizenship in Germany",
+    title: "German & Austrian exams — TestDaF, telc, DTZ, DSH, Einbürgerungstest & ÖSD",
     description:
-      "TestDaF, telc Deutsch B1, B2 and C1 Hochschule compared: real format, honest scoring, what each opens up, and free original practice — from your country.",
+      "Eight German and Austrian exams: TestDaF, telc B1/B2/C1 Hochschule, the DTZ, DSH, the Einbürgerungstest and ÖSD B1 — real format, honest scoring, free practice.",
     path: EXAMS_INDEX,
   });
 }

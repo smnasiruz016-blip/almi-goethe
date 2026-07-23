@@ -1,4 +1,4 @@
-// Scoring dispatch for the four new German-exam engines. Each engine is scored on
+// Scoring dispatch for the eight German and Austrian exam engines. Each engine is scored on
 // its OWN philosophy — never blended, never given a fabricated cross-exam total.
 //
 //   TESTDAF            → per-section 0–20 → TDN, NO total, NO pass/fail

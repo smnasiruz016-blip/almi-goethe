@@ -20,7 +20,11 @@ function buildItems(isAdmin: boolean): Item[] {
   const items: Item[] = [
     { key: "home", href: "/", icon: "🏠", label: "Home", match: "/" },
     { key: "practice", href: "/practice", icon: "✏️", label: "Choose a Test", match: "/practice" },
-    { key: "exams", href: "/exams", icon: "🎓", label: "TestDaF & telc", match: "/exams" },
+    // "German & Austrian exams" measures 160px in Inter 14/500 — exactly the label
+    // width the 240px rail leaves (w-60 minus px-3, item px-3, w-5 icon, gap-3), so it
+    // wrapped to two lines. Short form per the brief's fallback; the full wording lives
+    // on the footer link and the /pruefung page.
+    { key: "exams", href: "/exams", icon: "🎓", label: "Exams", match: "/exams" },
     { key: "progress", href: "/account", icon: "📊", label: "My Progress", match: "/account" },
     { key: "account", href: "/account", icon: "👤", label: "Account", match: "/account" },
   ];

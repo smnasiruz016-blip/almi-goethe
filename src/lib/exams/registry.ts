@@ -1,4 +1,4 @@
-// The data-driven registry for the four new German-exam engines. One place that
+// The data-driven registry for the eight German and Austrian exam engines. One place that
 // knows each exam's SECTIONS and how each is scored. Pages, the practice hub, the
 // mock plan and the submit route read from here; nothing branches on exam/section
 // with a hand-written if-chain.

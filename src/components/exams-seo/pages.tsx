@@ -1,4 +1,4 @@
-// SEO page components for the four new German-exam engines under /pruefung. These
+// SEO page components for the eight German and Austrian exam engines under /pruefung. These
 // reuse the shared Goethe SEO kit (SeoShell, Breadcrumb, Hero, RequirementCard,
 // LinkChips, CountryGrid, CrossLinkFooter) and add two exam-specific pieces: an
 // honest PrepCta pointing at the /exams practice hub, and a disclaimer naming the
@@ -95,11 +95,11 @@ function ExamFacts({ exam }: { exam: ExamSeo }) {
 export function ExamsIndexPage() {
   return (
     <SeoShell>
-      <Breadcrumb trail={[{ label: "German exams for Germany" }]} />
+      <Breadcrumb trail={[{ label: "German & Austrian exams" }]} />
       <Hero
-        eyebrow="TestDaF & telc"
-        title="TestDaF & telc — the German exams for study, work and citizenship"
-        intro="Four separate German exams, each with its own real format and scoring. Pick the one your goal needs, see what it takes from your country, and practise free."
+        eyebrow="German & Austrian exams"
+        title="German and Austrian exams — for study, work, citizenship and integration"
+        intro="Eight separate exams, each with its own real format and scoring — across Germany and Austria. Pick the one your goal needs, see what it takes from your country, and practise free."
       />
       <section className="mt-10 space-y-4">
         {ALL_EXAM_SEO.map((e) => (

@@ -24,7 +24,7 @@ export async function generateMetadata({
   const country = findCountryByOriginParam(seg);
   if (!e || !country) return {};
   return buildExamMetadata({
-    title: `${e.name} from ${country.name} — requirement, route and free practice | AlmiGoethe`,
+    title: `${e.name} from ${country.name} — requirement, route and free practice`,
     description: `${e.name} from ${country.name}: real format and scoring, how it fits study or work in Germany, and free original practice.`,
     path: examOriginUrl(e.exam, country),
   });

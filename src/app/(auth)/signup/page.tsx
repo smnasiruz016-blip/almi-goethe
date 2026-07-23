@@ -69,7 +69,7 @@ export default async function SignupPage({
     <div className="rounded-2xl border border-almi-bg-peach bg-almi-paper p-8 shadow-sm">
       <h1 className="text-2xl font-semibold text-almi-ink">Create your account</h1>
       <p className="mt-2 text-sm text-almi-text-muted">
-        Practise Goethe-Zertifikat, TestDaF and telc German exams with honest AI feedback across every CEFR level (A1–C2).
+        Practise the Goethe-Zertifikat (A1–C2) plus TestDaF, telc, DSH, the DTZ, the Einbürgerungstest and Austria&apos;s ÖSD — real exams, honest AI feedback.
       </p>
 
       {error === "taken" && (

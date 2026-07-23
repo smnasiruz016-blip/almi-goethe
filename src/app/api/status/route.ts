@@ -18,8 +18,8 @@ export async function GET(): Promise<NextResponse> {
       }),
       prisma.goetheItem.count({ where: { active: true } }),
       prisma.review.count({ where: { approved: true } }),
-      // The four new German-exam engines (TestDaF + telc B1/B2/C1H) — separate
-      // ExamItem bank; lets a deploy confirm the exam-append seed step landed.
+      // The eight German and Austrian exam engines — separate ExamItem bank; lets a
+      // deploy confirm the exam-append seed step landed.
       prisma.examItem.groupBy({
         by: ["exam", "section"],
         where: { active: true },
