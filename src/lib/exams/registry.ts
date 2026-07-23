@@ -7,11 +7,12 @@
 // (no total, no pass/fail); telc sections map to a percentage against the 60% mark.
 
 import type { GermanExam } from "@/lib/exams/types";
-import type { TestDafSectionResult, TelcSkillResult } from "@/lib/exams/types";
+import type { TestDafSectionResult, TelcSkillResult, DtzSectionResult, DtzSection } from "@/lib/exams/types";
 import { fractionToTestDafSection } from "@/lib/exams/scoring/testdaf";
 import { getTelcConfig, scoreTelcSection } from "@/lib/exams/scoring/telc";
-import { isTestDaf } from "@/lib/exams/scoring";
-import { TESTDAF_SECTIONS } from "@/lib/exams/types";
+import { scoreDtzSection } from "@/lib/exams/scoring/dtz";
+import { isTestDaf, isDtz } from "@/lib/exams/scoring";
+import { TESTDAF_SECTIONS, DTZ_SECTIONS } from "@/lib/exams/types";
 import {
   objectivePayloadSchema,
   objectiveResponseSchema,
@@ -58,6 +59,10 @@ export type ExamDef = {
 // TestDaF's four sections in exam order (no Sprachbausteine).
 const TESTDAF_SECTION_ORDER: string[] = [...TESTDAF_SECTIONS];
 
+// DTZ's four sections in exam order (no Sprachbausteine — the Prüfungshandbuch
+// confirms DTZ A2–B1 has no SB component; grammar is embedded in Lesen).
+const DTZ_SECTION_ORDER: string[] = [...DTZ_SECTIONS];
+
 function sectionDef(key: string): ExamSectionDef {
   const meta = SECTION_META[key];
   if (!meta) throw new Error(`No section meta for ${key}`);
@@ -69,6 +74,7 @@ const LEVEL_LABEL: Record<GermanExam, string> = {
   TELC_B1: "telc Deutsch B1",
   TELC_B2: "telc Deutsch B2",
   TELC_C1_HOCHSCHULE: "telc Deutsch C1 Hochschule",
+  DTZ: "Deutsch-Test für Zuwanderer · A2–B1",
 };
 
 const DISPLAY_NAME: Record<GermanExam, string> = {
@@ -76,10 +82,16 @@ const DISPLAY_NAME: Record<GermanExam, string> = {
   TELC_B1: "telc Deutsch B1 (Zertifikat Deutsch)",
   TELC_B2: "telc Deutsch B2",
   TELC_C1_HOCHSCHULE: "telc Deutsch C1 Hochschule",
+  DTZ: "Deutsch-Test für Zuwanderer (DTZ)",
 };
 
 function buildExamDef(exam: GermanExam): ExamDef {
-  const keys = exam === "TESTDAF" ? TESTDAF_SECTION_ORDER : getTelcConfig(exam).sections.map((s) => s.key);
+  const keys =
+    exam === "TESTDAF"
+      ? TESTDAF_SECTION_ORDER
+      : isDtz(exam)
+        ? DTZ_SECTION_ORDER
+        : getTelcConfig(exam).sections.map((s) => s.key);
   return {
     exam,
     displayName: DISPLAY_NAME[exam],
@@ -94,9 +106,10 @@ export const EXAM_DEFS: Record<GermanExam, ExamDef> = {
   TELC_B1: buildExamDef("TELC_B1"),
   TELC_B2: buildExamDef("TELC_B2"),
   TELC_C1_HOCHSCHULE: buildExamDef("TELC_C1_HOCHSCHULE"),
+  DTZ: buildExamDef("DTZ"),
 };
 
-export const ALL_EXAMS: GermanExam[] = ["TESTDAF", "TELC_C1_HOCHSCHULE", "TELC_B1", "TELC_B2"];
+export const ALL_EXAMS: GermanExam[] = ["TESTDAF", "TELC_C1_HOCHSCHULE", "TELC_B1", "TELC_B2", "DTZ"];
 
 export function examBySlug(slug: string): ExamDef | undefined {
   return Object.values(EXAM_DEFS).find(
@@ -117,13 +130,21 @@ export type SectionOutcome = {
   // Exactly one engine result is set, per the exam's philosophy.
   testDaf?: TestDafSectionResult;
   telc?: TelcSkillResult;
+  dtz?: DtzSectionResult;
   feedback?: ProductiveFeedback;
   telemetry?: { aiModel: string; costCents: number; latencyMs: number };
 };
 
-function mapFraction(exam: GermanExam, section: string, fraction: number): Pick<SectionOutcome, "testDaf" | "telc"> {
+function mapFraction(
+  exam: GermanExam,
+  section: string,
+  fraction: number,
+): Pick<SectionOutcome, "testDaf" | "telc" | "dtz"> {
   if (isTestDaf(exam)) {
     return { testDaf: fractionToTestDafSection(section as TestDafSectionResult["section"], fraction) };
+  }
+  if (isDtz(exam)) {
+    return { dtz: scoreDtzSection(section as DtzSection, fraction) };
   }
   return { telc: scoreTelcSection(exam, section, fraction) };
 }

@@ -47,11 +47,18 @@ type TelcResult = {
   maxPoints: number | null;
   verdict: "passed" | "borderline" | "not-yet";
 };
+type DtzResult = {
+  label: string; // section name (Hören / Lesen / Schreiben / Sprechen)
+  pointsEst: [number, number];
+  sectionMax: number; // this section's slice of the 100 total
+  percentOfSection: number;
+};
 type Outcome = {
   pointsEarned?: number;
   pointsMax?: number;
   testDaf?: TestDafResult;
   telc?: TelcResult;
+  dtz?: DtzResult;
   feedback?: Feedback;
 };
 
@@ -266,6 +273,7 @@ function ExamResult({
 }) {
   const t = outcome.testDaf;
   const c = outcome.telc;
+  const d = outcome.dtz;
   return (
     <div className="space-y-6">
       {isTestDaf && t && (
@@ -311,6 +319,24 @@ function ExamResult({
               independently at 60%. This is a practice estimate for one part, not an official telc result.
             </p>
           )}
+        </div>
+      )}
+
+      {d && (
+        <div className="rounded-2xl border border-almi-accent/40 bg-almi-accent/5 p-6">
+          <p className="text-xs font-bold uppercase tracking-wider text-almi-accent-deep">
+            DTZ · {d.label}
+          </p>
+          <p className="mt-2 text-4xl font-semibold text-almi-ink">
+            {d.pointsEst[0]}–{d.pointsEst[1]} <span className="text-2xl text-almi-text">/ {d.sectionMax}</span>
+          </p>
+          <p className="mt-1 text-sm text-almi-text">Estimated points from this section toward the 100 total.</p>
+          <p className="mt-4 rounded-xl bg-almi-paper px-4 py-3 text-sm text-almi-text">
+            The DTZ gives <span className="font-semibold text-almi-ink">one result out of 100</span>, summed
+            across all four sections and read as a <span className="font-semibold text-almi-ink">level</span>:
+            60 or more is B1, 33–59 is A2. There are no per-section minimums, so your level comes from the
+            full exam, not this one section. This is a practice estimate.
+          </p>
         </div>
       )}
 

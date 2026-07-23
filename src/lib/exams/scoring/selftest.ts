@@ -7,6 +7,8 @@
 
 import { fractionToTestDafSection, pointsToTdn } from "./testdaf";
 import { getTelcConfig, scoreTelcExam, scoreTelcSection } from "./telc";
+import { pointsToDtzBand, scoreDtzSection, aggregateDtz } from "./dtz";
+import { DTZ_SECTION_MAX } from "@/lib/exams/types";
 
 let failures = 0;
 function check(name: string, cond: boolean) {
@@ -94,6 +96,33 @@ check(
   Object.values(b2w).reduce<number>((a, b) => a + (b ?? 0), 0) === 100,
 );
 check("B2 threshold is UNVERIFIED (verified:false honesty)", b2.thresholdVerified === false);
+
+console.log("\nDTZ — verified fixed-total dual outcome (100 = 25+25+20+30; ≥60 B1 / 33–59 A2 / <33 fail):");
+check("DTZ Hören max 25", DTZ_SECTION_MAX.HOERVERSTEHEN === 25);
+check("DTZ Lesen max 25", DTZ_SECTION_MAX.LESEVERSTEHEN === 25);
+check("DTZ Schreiben max 20", DTZ_SECTION_MAX.SCHRIFTLICHER_AUSDRUCK === 20);
+check("DTZ Sprechen max 30", DTZ_SECTION_MAX.SPRECHEN === 30);
+check(
+  "DTZ section maxes sum to 100",
+  Object.values(DTZ_SECTION_MAX).reduce<number>((a, b) => a + b, 0) === 100,
+);
+check("DTZ 60 → B1", pointsToDtzBand(60) === "B1");
+check("DTZ 59 → A2", pointsToDtzBand(59) === "A2");
+check("DTZ 33 → A2 (lower bound)", pointsToDtzBand(33) === "A2");
+check("DTZ 32 → nicht bestanden", pointsToDtzBand(32) === "nicht-bestanden");
+check("DTZ 0 → nicht bestanden", pointsToDtzBand(0) === "nicht-bestanden");
+check("DTZ 100 → B1", pointsToDtzBand(100) === "B1");
+// Aggregate: sum of section centerPoints, banded. 25+25+20+30 all-perfect = 100 → B1.
+const dtzPerfect = aggregateDtz("DTZ", "DTZ", [
+  scoreDtzSection("HOERVERSTEHEN", 1),
+  scoreDtzSection("LESEVERSTEHEN", 1),
+  scoreDtzSection("SCHRIFTLICHER_AUSDRUCK", 1),
+  scoreDtzSection("SPRECHEN", 1),
+]);
+check("DTZ all-perfect totals 100", dtzPerfect.totalPoints === 100);
+check("DTZ all-perfect → B1", dtzPerfect.band === "B1");
+check("DTZ has no per-section minimums", dtzPerfect.noSectionMinimums === true);
+check("DTZ threshold verified (sourced)", dtzPerfect.thresholdVerified === true);
 
 console.log(`\n${failures === 0 ? "ALL PASS ✅" : `${failures} FAILED ❌`}`);
 if (failures > 0) process.exit(1);

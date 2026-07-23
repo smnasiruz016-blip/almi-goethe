@@ -46,6 +46,7 @@ const EXAM_NAME: Record<GermanExam, string> = {
   TELC_B1: "telc Deutsch B1",
   TELC_B2: "telc Deutsch B2",
   TELC_C1_HOCHSCHULE: "telc Deutsch C1 Hochschule",
+  DTZ: "Deutsch-Test für Zuwanderer",
 };
 
 type Skill = "writing" | "speaking";
