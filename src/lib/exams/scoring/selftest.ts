@@ -9,7 +9,8 @@ import { fractionToTestDafSection, pointsToTdn } from "./testdaf";
 import { getTelcConfig, scoreTelcExam, scoreTelcSection } from "./telc";
 import { pointsToDtzBand, scoreDtzSection, aggregateDtz } from "./dtz";
 import { countToEinbVerdict, aggregateEinb, scoreEinbSection } from "./einbuergerung";
-import { DTZ_SECTION_MAX } from "@/lib/exams/types";
+import { percentToDshGrade, scoreDshSection, aggregateDsh } from "./dsh";
+import { DTZ_SECTION_MAX, DSH_WRITTEN_WEIGHTS } from "@/lib/exams/types";
 
 let failures = 0;
 function check(name: string, cond: boolean) {
@@ -140,6 +141,29 @@ check("Einb aggregate 16 correct → nicht bestanden", einbFail.verdict === "nic
 // A single-domain practice attempt reports a count, never a pass verdict.
 const einbSec = scoreEinbSection("GRUNDGESETZ", 1, 1);
 check("Einb single-domain result carries the 17/33 context", einbSec.passMark === 17 && einbSec.questionCount === 33);
+
+console.log("\nDSH — verified weighting 2:2:1:2 + grade bands (57 DSH-1 / 67 DSH-2 / 82 DSH-3):");
+check("DSH written weights HV2 LV2 WS1 TP2", DSH_WRITTEN_WEIGHTS.HOERVERSTEHEN === 2 && DSH_WRITTEN_WEIGHTS.LESEVERSTEHEN === 2 && DSH_WRITTEN_WEIGHTS.WISS_STRUKTUREN === 1 && DSH_WRITTEN_WEIGHTS.TEXTPRODUKTION === 2);
+check("DSH 56 → nicht bestanden", percentToDshGrade(56) === "nicht-bestanden");
+check("DSH 57 → DSH-1", percentToDshGrade(57) === "DSH-1");
+check("DSH 66 → DSH-1", percentToDshGrade(66) === "DSH-1");
+check("DSH 67 → DSH-2", percentToDshGrade(67) === "DSH-2");
+check("DSH 81 → DSH-2", percentToDshGrade(81) === "DSH-2");
+check("DSH 82 → DSH-3", percentToDshGrade(82) === "DSH-3");
+check("DSH 100 → DSH-3", percentToDshGrade(100) === "DSH-3");
+// Weighting: HV 80, LV 80, WS 40, TP 80 → (2·80+2·80+1·40+2·80)/7 = 520/7 ≈ 74 → DSH-2.
+const dshMock = aggregateDsh("DSH", "DSH", [
+  scoreDshSection("HOERVERSTEHEN", 0.8),
+  scoreDshSection("LESEVERSTEHEN", 0.8),
+  scoreDshSection("WISS_STRUKTUREN", 0.4),
+  scoreDshSection("TEXTPRODUKTION", 0.8),
+  scoreDshSection("SPRECHEN", 0.1), // oral — must NOT drag the weighted grade
+]);
+check("DSH weighted total is 74 (2:2:1:2)", dshMock.weightedPercent === 74);
+check("DSH 74 → DSH-2 grade", dshMock.grade === "DSH-2");
+check("DSH oral does not count toward the grade", dshMock.sections.find((x) => x.section === "SPRECHEN")?.countsTowardGrade === false);
+check("DSH bands sourced (thresholdVerified)", dshMock.thresholdVerified === true);
+check("DSH carries the per-part hedge note", dshMock.perPartMinimumNote.length > 0);
 
 console.log(`\n${failures === 0 ? "ALL PASS ✅" : `${failures} FAILED ❌`}`);
 if (failures > 0) process.exit(1);

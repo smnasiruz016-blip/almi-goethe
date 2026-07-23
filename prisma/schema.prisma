@@ -373,6 +373,7 @@ enum GermanExam {
   TELC_C1_HOCHSCHULE
   DTZ
   EINBUERGERUNGSTEST
+  DSH
 }
 
 model ExamItem {

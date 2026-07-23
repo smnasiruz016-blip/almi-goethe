@@ -161,6 +161,27 @@ const DATA: Record<GermanExam, Omit<ExamSeo, "slug" | "sectionsLine">> = {
     officialLabel: "bamf.de",
     purposeSlugs: ["citizenship"],
   },
+  DSH: {
+    exam: "DSH",
+    name: "DSH",
+    fullName: "Deutsche Sprachprüfung für den Hochschulzugang (DSH)",
+    provider: "German universities (framework by the HRK)",
+    cefr: "B2–C2",
+    eyebrow: "University-admission German",
+    tagline:
+      "A university-entry German exam set by each university within a national framework, reported as a grade — DSH-1, DSH-2 or DSH-3.",
+    format:
+      "A written exam with four sections — Hörverstehen, Leseverstehen, wissenschaftssprachliche Strukturen and Textproduktion — plus a separate oral. The framework is set nationally by the HRK, but each university writes its own tasks and sets its own item counts, so formats vary by institution.",
+    scoring:
+      "The four written sections are weighted 2:2:1:2 into one percentage and graded: 57–66% is DSH-1 (≈B2), 67–81% is DSH-2 (≈C1), 82%+ is DSH-3 (≈C2); below 57% is not passed. Some universities also require a minimum in each part — confirm with your university.",
+    scoringNote:
+      "DSH is decentralised: task formats and item counts are set by each university within the HRK framework, so this practice reflects the national task-types and weighting, not one university's exact paper.",
+    usedFor:
+      "The DSH is one of the recognised proofs of German for admission to German-taught degree programmes, alongside TestDaF. The DSH grade a programme needs is set by the university.",
+    officialUrl: "https://www.hrk.de/",
+    officialLabel: "hrk.de",
+    purposeSlugs: ["university"],
+  },
 };
 
 export const EXAMS_SEO: Record<GermanExam, ExamSeo> = Object.fromEntries(

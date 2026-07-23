@@ -7,12 +7,13 @@
 // (no total, no pass/fail); telc sections map to a percentage against the 60% mark.
 
 import type { GermanExam } from "@/lib/exams/types";
-import type { TestDafSectionResult, TelcSkillResult, DtzSectionResult, DtzSection, EinbSectionResult } from "@/lib/exams/types";
+import type { TestDafSectionResult, TelcSkillResult, DtzSectionResult, DtzSection, EinbSectionResult, DshSectionResult } from "@/lib/exams/types";
 import { fractionToTestDafSection } from "@/lib/exams/scoring/testdaf";
 import { getTelcConfig, scoreTelcSection } from "@/lib/exams/scoring/telc";
 import { scoreDtzSection } from "@/lib/exams/scoring/dtz";
 import { scoreEinbSection } from "@/lib/exams/scoring/einbuergerung";
-import { isTestDaf, isDtz, isEinb } from "@/lib/exams/scoring";
+import { scoreDshSection } from "@/lib/exams/scoring/dsh";
+import { isTestDaf, isDtz, isEinb, isDsh } from "@/lib/exams/scoring";
 import { TESTDAF_SECTIONS, DTZ_SECTIONS } from "@/lib/exams/types";
 import {
   objectivePayloadSchema,
@@ -40,6 +41,9 @@ const SECTION_META: Record<string, { label: string; kind: SectionKind; slug: str
   GESCHICHTE: { label: "Geschichte und Verantwortung", kind: "objective", slug: "geschichte" },
   INSTITUTIONEN: { label: "Staat und Institutionen", kind: "objective", slug: "institutionen" },
   GESELLSCHAFT: { label: "Gesellschaft und Zusammenleben", kind: "objective", slug: "gesellschaft" },
+  // DSH — wissenschaftssprachliche Strukturen (objective) + Textproduktion (writing).
+  WISS_STRUKTUREN: { label: "Wissenschaftssprachliche Strukturen", kind: "objective", slug: "wiss-strukturen" },
+  TEXTPRODUKTION: { label: "Textproduktion (Writing)", kind: "writing", slug: "textproduktion" },
 };
 
 function modeFor(kind: SectionKind): ScoringMode {
@@ -72,6 +76,9 @@ const DTZ_SECTION_ORDER: string[] = [...DTZ_SECTIONS];
 // Einbürgerungstest civic domains in exam order (A → C → B → D as presented).
 const EINB_SECTION_ORDER: string[] = ["GRUNDGESETZ", "INSTITUTIONEN", "GESCHICHTE", "GESELLSCHAFT"];
 
+// DSH: the four WRITTEN sections in weight order, then the separate oral part.
+const DSH_SECTION_ORDER: string[] = ["HOERVERSTEHEN", "LESEVERSTEHEN", "WISS_STRUKTUREN", "TEXTPRODUKTION", "SPRECHEN"];
+
 function sectionDef(key: string): ExamSectionDef {
   const meta = SECTION_META[key];
   if (!meta) throw new Error(`No section meta for ${key}`);
@@ -85,6 +92,7 @@ const LEVEL_LABEL: Record<GermanExam, string> = {
   TELC_C1_HOCHSCHULE: "telc Deutsch C1 Hochschule",
   DTZ: "Deutsch-Test für Zuwanderer · A2–B1",
   EINBUERGERUNGSTEST: "Einbürgerungstest · Leben in Deutschland",
+  DSH: "DSH · Hochschulzugang B2–C2",
 };
 
 const DISPLAY_NAME: Record<GermanExam, string> = {
@@ -94,6 +102,7 @@ const DISPLAY_NAME: Record<GermanExam, string> = {
   TELC_C1_HOCHSCHULE: "telc Deutsch C1 Hochschule",
   DTZ: "Deutsch-Test für Zuwanderer (DTZ)",
   EINBUERGERUNGSTEST: "Einbürgerungstest",
+  DSH: "DSH (Deutsche Sprachprüfung für den Hochschulzugang)",
 };
 
 function buildExamDef(exam: GermanExam): ExamDef {
@@ -104,7 +113,9 @@ function buildExamDef(exam: GermanExam): ExamDef {
         ? DTZ_SECTION_ORDER
         : isEinb(exam)
           ? EINB_SECTION_ORDER
-          : getTelcConfig(exam).sections.map((s) => s.key);
+          : isDsh(exam)
+            ? DSH_SECTION_ORDER
+            : getTelcConfig(exam).sections.map((s) => s.key);
   return {
     exam,
     displayName: DISPLAY_NAME[exam],
@@ -121,9 +132,10 @@ export const EXAM_DEFS: Record<GermanExam, ExamDef> = {
   TELC_C1_HOCHSCHULE: buildExamDef("TELC_C1_HOCHSCHULE"),
   DTZ: buildExamDef("DTZ"),
   EINBUERGERUNGSTEST: buildExamDef("EINBUERGERUNGSTEST"),
+  DSH: buildExamDef("DSH"),
 };
 
-export const ALL_EXAMS: GermanExam[] = ["TESTDAF", "TELC_C1_HOCHSCHULE", "TELC_B1", "TELC_B2", "DTZ", "EINBUERGERUNGSTEST"];
+export const ALL_EXAMS: GermanExam[] = ["TESTDAF", "TELC_C1_HOCHSCHULE", "TELC_B1", "TELC_B2", "DTZ", "EINBUERGERUNGSTEST", "DSH"];
 
 export function examBySlug(slug: string): ExamDef | undefined {
   return Object.values(EXAM_DEFS).find(
@@ -146,6 +158,7 @@ export type SectionOutcome = {
   telc?: TelcSkillResult;
   dtz?: DtzSectionResult;
   einb?: EinbSectionResult;
+  dsh?: DshSectionResult;
   feedback?: ProductiveFeedback;
   telemetry?: { aiModel: string; costCents: number; latencyMs: number };
 };
@@ -155,7 +168,7 @@ function mapFraction(
   section: string,
   fraction: number,
   attempted?: number,
-): Pick<SectionOutcome, "testDaf" | "telc" | "dtz" | "einb"> {
+): Pick<SectionOutcome, "testDaf" | "telc" | "dtz" | "einb" | "dsh"> {
   if (isTestDaf(exam)) {
     return { testDaf: fractionToTestDafSection(section as TestDafSectionResult["section"], fraction) };
   }
@@ -164,6 +177,9 @@ function mapFraction(
   }
   if (isEinb(exam)) {
     return { einb: scoreEinbSection(section, fraction, attempted) };
+  }
+  if (isDsh(exam)) {
+    return { dsh: scoreDshSection(section, fraction) };
   }
   return { telc: scoreTelcSection(exam, section, fraction) };
 }

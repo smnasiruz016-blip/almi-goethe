@@ -183,5 +183,54 @@ export type EinbExamResult = {
   thresholdVerified: boolean; // true — 17/33 is the official pass mark
 };
 
+// ---------------------------------------------------------------------------
+// DSH — Deutsche Sprachprüfung für den Hochschulzugang. The engines' FIFTH
+// philosophy: a WEIGHTED PERCENTAGE banded into three grades.
+//
+// ⚠️ DSH IS A FRAMEWORK, NOT A CATALOG. The HRK Rahmenordnung (RO-DT) fixes only
+// the four written sections, the national weighting 2:2:1:2, and the grade bands;
+// each university designs its own tasks and sets its own item COUNTS. So: the
+// task-types, the weighting and the grade bands are SOURCED (hard-enforced); the
+// per-Teil item counts are university-variable CONVENTION (recorded, never
+// hard-enforced) — the honest position, like the DALF ceilings.
+//
+// VERIFIED (HRK RO-DT + Musterprüfungsordnung): written weighting HV 2 · LV 2 ·
+// WS 1 · TP 2; grade bands DSH-1 57–66 % (≈B2) · DSH-2 67–81 % (≈C1) · DSH-3
+// 82–100 % (≈C2) · below 57 % not passed. A per-part minimum exists at SOME
+// universities but is university-variable — recorded as a hedge, never hard-coded.
+// ---------------------------------------------------------------------------
+
+/** Weights of the four WRITTEN sections in the national 2:2:1:2 grade. The oral is
+ *  assessed separately and does NOT enter this weighted total. */
+export const DSH_WRITTEN_WEIGHTS: Record<string, number> = {
+  HOERVERSTEHEN: 2,
+  LESEVERSTEHEN: 2,
+  WISS_STRUKTUREN: 1,
+  TEXTPRODUKTION: 2,
+};
+
+export type DshGrade = "DSH-3" | "DSH-2" | "DSH-1" | "nicht-bestanden";
+
+export type DshSectionResult = {
+  section: string;
+  label: string;
+  percent: number; // 0..100 for the attempted item(s)
+  weight: number; // 2 / 2 / 1 / 2 for written sections; 0 for the oral
+  countsTowardGrade: boolean; // false for the oral part
+};
+
+export type DshExamResult = {
+  exam: GermanExam;
+  displayName: string;
+  sections: DshSectionResult[];
+  weightedPercent: number; // the national grade %, weighted 2:2:1:2 over the written
+  grade: DshGrade;
+  gradeLabel: string; // "DSH-2" | "nicht bestanden"
+  cefrApprox: string; // "≈ C1" — DSH grades map only APPROXIMATELY to CEFR
+  bands: { dsh1: 57; dsh2: 67; dsh3: 82 };
+  perPartMinimumNote: string; // the university-variable per-part hedge, never hard-coded
+  thresholdVerified: boolean; // true — bands sourced; counts are convention (separate)
+};
+
 export const EXAM_ESTIMATE_DISCLAIMER =
   "This is an AlmiGoethe practice estimate, not an official result. TestDaF, telc, and the TestDaF-Institut / g.a.s.t. calibrate the real exams. Confirm the level and result you need with the exam provider, your university, or the relevant German authority.";

@@ -60,6 +60,12 @@ type EinbResult = {
   passMark: number; // 17
   questionCount: number; // 33
 };
+type DshResult = {
+  label: string; // section
+  percent: number;
+  weight: number; // 2/2/1/2 for written; 0 for oral
+  countsTowardGrade: boolean;
+};
 type Outcome = {
   pointsEarned?: number;
   pointsMax?: number;
@@ -67,6 +73,7 @@ type Outcome = {
   telc?: TelcResult;
   dtz?: DtzResult;
   einb?: EinbResult;
+  dsh?: DshResult;
   feedback?: Feedback;
 };
 
@@ -283,6 +290,7 @@ function ExamResult({
   const c = outcome.telc;
   const d = outcome.dtz;
   const e = outcome.einb;
+  const h = outcome.dsh;
   return (
     <div className="space-y-6">
       {isTestDaf && t && (
@@ -362,6 +370,21 @@ function ExamResult({
             and you pass with <span className="font-semibold text-almi-ink">{e.passMark} correct</span>. This
             is practice for one domain — it isn&apos;t a pass or fail on its own; the verdict comes from the
             full 33-question test.
+          </p>
+        </div>
+      )}
+
+      {h && (
+        <div className="rounded-2xl border border-almi-accent/40 bg-almi-accent/5 p-6">
+          <p className="text-xs font-bold uppercase tracking-wider text-almi-accent-deep">
+            DSH · {h.label}
+          </p>
+          <p className="mt-2 text-4xl font-semibold text-almi-ink">{h.percent}%</p>
+          <p className="mt-4 rounded-xl bg-almi-paper px-4 py-3 text-sm text-almi-text">
+            DSH gives one <span className="font-semibold text-almi-ink">weighted grade</span> from the four
+            written sections (Hören and Lesen count double, Strukturen once, Textproduktion double):
+            <span className="font-semibold text-almi-ink"> 57%+ is DSH-1 (≈B2), 67%+ DSH-2 (≈C1), 82%+ DSH-3 (≈C2)</span>.
+            {h.countsTowardGrade ? " This section counts toward that grade." : " The oral part is assessed separately and is not in this weighted grade."} This is a practice estimate for one section.
           </p>
         </div>
       )}
