@@ -517,3 +517,8 @@ export const UNSTRUCTURED_EXAMS = ["TELC_B2", "TELC_C1_HOCHSCHULE"] as const;
 export function aufgabeFor(exam: string, section: string, taskType: string): Aufgabe | undefined {
   return EXAM_STRUCTURES[exam]?.[section]?.aufgaben.find((a) => a.key === taskType);
 }
+
+/** The sourced number of items this section asks for, or null where not sourced. */
+export function aufgabeCountFor(exam: string, section: string): number | null {
+  return EXAM_STRUCTURES[exam]?.[section]?.totalItems ?? null;
+}

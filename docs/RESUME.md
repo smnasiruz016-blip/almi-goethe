@@ -43,6 +43,13 @@ university corridor is revisited.
   NOT fact-base↔world — a wrong capital typed into `civic-factbase.ts` stays green
   (verified by mutating MV→Magdeburg: gate green, only the sourcing review catches
   it). Facts are beta-g's per-item GREEN, not the gate's.
+- **state-draw** — the RUNTIME half of the Bundesland guarantee. The civic-sourcing
+  gate was GREEN while the practice page drew at random across the whole BUNDESLAND
+  section, so a Berliner got another Land's capital 15 times in 16: the bank was
+  perfect and the product was wrong. A gate that proves the DATA says nothing about
+  the code that SERVES it. Proves the draw filters to the chosen Land, never pads the
+  3-item envelope from another Land, and reports the shortfall. Mutation-tested by
+  reintroducing the original bug (6 cases go red).
 - rule7 (≥15/module), title-uniqueness, real-entity (no invented doc names a real
   company), reconcile-guard proof, ledger.
 
