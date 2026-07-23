@@ -70,18 +70,42 @@ const ALL = [...TESTDAF, ...TESTDAF_LV, ...TESTDAF_HV, ...TESTDAF_SA, ...TESTDAF
 const key = (exam: string, level: string, section: string, title: string) =>
   `${exam}::${level}::${section}::${title}`;
 
-/** The content fields a re-author can change. Compared as canonical JSON so an
- *  unchanged item is not rewritten on every deploy. */
+/** Recursively sort object keys so two objects with identical content but different
+ *  key ORDER serialize identically. Arrays keep their order (order is meaningful);
+ *  only object keys are sorted. This is what makes the comparison below truly
+ *  canonical. */
+function canonicalize(v: any): any {
+  if (Array.isArray(v)) return v.map(canonicalize);
+  if (v && typeof v === "object") {
+    const out: Record<string, any> = {};
+    for (const k of Object.keys(v).sort()) out[k] = canonicalize(v[k]);
+    return out;
+  }
+  return v;
+}
+
+/** The content fields a re-author can change. Compared as CANONICAL JSON so an
+ *  unchanged item is not rewritten on every deploy.
+ *
+ *  ⚠️ WHY canonicalize() IS ESSENTIAL. `it.payload` comes from the source in the
+ *  author's key order, but the DB row's payload comes back from Postgres jsonb,
+ *  which stores object keys in ITS OWN normalized order. Plain JSON.stringify of the
+ *  two therefore differed for every multi-key payload, so ~255 rows were flagged as
+ *  "changed" and rewritten on EVERY deploy — the reconcile diff never went empty and
+ *  "update 0" was unreachable. Sorting keys on both sides removes the false diff;
+ *  arrays are left alone because their order is real content. */
 function contentOf(it: any) {
-  return JSON.stringify({
-    taskType: it.taskType,
-    difficulty: it.difficulty ?? "CORE",
-    prompt: it.prompt,
-    payload: it.payload,
-    guidanceNote: it.guidanceNote ?? null,
-    timeLimitSeconds: it.timeLimitSeconds ?? 0,
-    topicTag: it.topicTag ?? "general",
-  });
+  return JSON.stringify(
+    canonicalize({
+      taskType: it.taskType,
+      difficulty: it.difficulty ?? "CORE",
+      prompt: it.prompt,
+      payload: it.payload,
+      guidanceNote: it.guidanceNote ?? null,
+      timeLimitSeconds: it.timeLimitSeconds ?? 0,
+      topicTag: it.topicTag ?? "general",
+    }),
+  );
 }
 
 // Refuse a reconciliation this large without an explicit human decision.
