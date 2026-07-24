@@ -10,13 +10,14 @@ import { ITEMS as C1H } from "./seed/exams/telc-c1-hochschule";
 import { ITEMS as C1H_LVZ } from "./seed/exams/telc-c1h-lv-zuordnung";
 import { ITEMS as C1H_SB } from "./seed/exams/telc-c1h-sprachbausteine";
 import { ITEMS as C1H_LVT3 } from "./seed/exams/telc-c1h-lv-t3";
+import { ITEMS as C1H_HVT1 } from "./seed/exams/telc-c1h-hv-t1";
 import { ITEMS as B1 } from "./seed/exams/telc-b1";
 import { ITEMS as B2 } from "./seed/exams/telc-b2";
 import { sectionDefFor } from "../src/lib/exams/registry";
 import { objectivePayloadSchema, productivePayloadSchema } from "../src/lib/exams/tasks";
 import type { GermanExam } from "@prisma/client";
 
-const all = [...TESTDAF, ...C1H, ...C1H_LVZ, ...C1H_SB, ...C1H_LVT3, ...B1, ...B2];
+const all = [...TESTDAF, ...C1H, ...C1H_LVZ, ...C1H_SB, ...C1H_LVT3, ...C1H_HVT1, ...B1, ...B2];
 let bad = 0;
 const fail = (msg: string) => {
   bad++;
