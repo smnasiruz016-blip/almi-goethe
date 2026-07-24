@@ -12,7 +12,21 @@ import type { ClientItem } from "@/lib/exams/pick";
 
 type Option = { id: string; text: string };
 type Question = { id: string; stem: string; options?: Option[] };
-type ObjectivePayload = { instructions?: string; passage?: string; audioScript?: string; questions: Question[] };
+type BankEntry = { id: string; text: string };
+type Segment = { id: string; label?: string; script: string };
+type NoteLine = { text: string; gap?: string };
+type ObjectivePayload = {
+  instructions?: string;
+  passage?: string;
+  audioScript?: string;
+  // Several short spoken texts (telc HV Teil 1 speakers, B2 HV Teil 3 Ansagen).
+  segments?: Segment[];
+  // Shared option bank for a Zuordnung (LV Teil 1/2, HV Teil 1). Questions assign INTO it.
+  bank?: BankEntry[];
+  // Note-sheet skeleton for note-taking (C1H HV Teil 3). Gap lines carry the question id.
+  notizen?: NoteLine[];
+  questions: Question[];
+};
 type ProductivePayload = {
   situation: string;
   instruction: string;
@@ -102,10 +116,13 @@ function wordCount(s: string): number {
 
 export function ExamItemRunner({
   item,
+  choices,
   isTestDaf,
   thresholdPending,
 }: {
   item: ClientItem;
+  /** For a 1-of-2 writing task: the two themes. The learner picks one before writing. */
+  choices?: ClientItem[];
   isTestDaf: boolean;
   thresholdPending: boolean;
 }) {
@@ -115,10 +132,15 @@ export function ExamItemRunner({
   const [error, setError] = useState<string | null>(null);
   const [upgrade, setUpgrade] = useState<string | null>(null);
   const [outcome, setOutcome] = useState<Outcome | null>(null);
+  // 1-of-2 writing: which theme the learner chose (null = not chosen yet).
+  const isChoice = !!(choices && choices.length === 2);
+  const [chosen, setChosen] = useState<number | null>(null);
 
-  const isObjective = item.kind === "objective";
-  const obj = isObjective ? (item.payload as ObjectivePayload) : null;
-  const prod = !isObjective ? (item.payload as ProductivePayload) : null;
+  // The item that will actually be submitted: the chosen theme, or the single item.
+  const activeItem = isChoice && chosen != null ? choices![chosen] : item;
+  const isObjective = activeItem.kind === "objective";
+  const obj = isObjective ? (activeItem.payload as ObjectivePayload) : null;
+  const prod = !isObjective ? (activeItem.payload as ProductivePayload) : null;
   const words = useMemo(() => wordCount(text), [text]);
 
   async function submit() {
@@ -127,14 +149,15 @@ export function ExamItemRunner({
     setUpgrade(null);
     const response = isObjective
       ? { answers }
-      : item.kind === "speaking"
+      : activeItem.kind === "speaking"
         ? { transcript: text }
         : { text };
     try {
       const res = await fetch("/api/exams/submit", {
         method: "POST",
         headers: { "content-type": "application/json" },
-        body: JSON.stringify({ itemId: item.id, response }),
+        // For a 1-of-2 writing task, submit the CHOSEN theme's id (activeItem).
+        body: JSON.stringify({ itemId: activeItem.id, response }),
       });
       const data = await res.json();
       if (!res.ok || !data.ok) {
@@ -152,7 +175,9 @@ export function ExamItemRunner({
 
   const answeredAll = isObjective
     ? (obj?.questions ?? []).every((q) => answers[q.id])
-    : text.trim().length > 0;
+    : isChoice
+      ? chosen != null && text.trim().length > 0
+      : text.trim().length > 0;
 
   if (outcome) {
     return (
@@ -184,7 +209,65 @@ export function ExamItemRunner({
         </details>
       )}
 
-      {isObjective &&
+      {/* Several short spoken texts (HV Teil 1 speakers, B2 HV Teil 3 Ansagen). The
+          client receives these in `segments`; without this branch a Zuordnung showed
+          questions with nothing to read. Audio narration is TTS, coming soon. */}
+      {obj?.segments && obj.segments.length > 0 && (
+        <details open className="rounded-2xl border border-almi-bg-peach bg-almi-paper p-4">
+          <summary className="cursor-pointer text-sm font-semibold text-almi-ink">
+            🎧 Aussagen (Audio kommt bald — zum Üben als Text)
+          </summary>
+          <div className="mt-3 space-y-2 text-[15px] leading-relaxed text-almi-text">
+            {obj.segments.map((s) => (
+              <p key={s.id}>
+                {s.label && <span className="font-semibold text-almi-ink">{s.label}: </span>}
+                {s.script}
+              </p>
+            ))}
+          </div>
+        </details>
+      )}
+
+      {/* Shared Zuordnung bank. Client-facing (the learner reads it to assign); the
+          per-question answer is the bank id, chosen below. */}
+      {isObjective && obj?.bank && obj.bank.length > 0 && (
+        <div className="rounded-2xl border border-almi-bg-peach bg-almi-paper p-5">
+          <p className="text-sm font-semibold text-almi-ink">Zur Auswahl</p>
+          <ul className="mt-2 space-y-1 text-sm text-almi-text">
+            {obj.bank.map((b) => (
+              <li key={b.id}>
+                <span className="font-semibold text-almi-ink">{b.id})</span> {b.text}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {/* Note-taking: render the note-sheet skeleton (context lines + inline gap
+          inputs) instead of a flat question list. Gap lines carry the question id. */}
+      {isObjective && obj?.notizen && obj.notizen.length > 0 && (
+        <div className="space-y-3 rounded-2xl border border-almi-bg-peach bg-almi-paper p-5">
+          {obj.notizen.map((line, i) => {
+            const q = line.gap ? obj.questions.find((qq) => qq.id === line.gap) : undefined;
+            if (!q) return <p key={i} className="text-sm font-semibold text-almi-ink">{line.text}</p>;
+            const n = obj.questions.indexOf(q) + 1;
+            return (
+              <label key={i} className="block text-sm text-almi-text">
+                <span className="text-almi-ink">{n}. {line.text}</span>
+                <input
+                  type="text"
+                  value={answers[q.id] ?? ""}
+                  onChange={(e) => setAnswers((a) => ({ ...a, [q.id]: e.target.value }))}
+                  className="mt-1 w-full rounded-lg border border-almi-bg-peach px-3 py-2 text-sm"
+                  placeholder="Ihre Notiz"
+                />
+              </label>
+            );
+          })}
+        </div>
+      )}
+
+      {isObjective && !(obj?.notizen && obj.notizen.length > 0) &&
         obj?.questions.map((q, i) => (
           <fieldset key={q.id} className="rounded-2xl border border-almi-bg-peach bg-almi-paper p-5">
             <legend className="px-1 text-sm font-semibold text-almi-ink">
@@ -205,6 +288,19 @@ export function ExamItemRunner({
                     <span className="text-sm text-almi-text">{o.text}</span>
                   </label>
                 ))
+              ) : obj?.bank && obj.bank.length > 0 ? (
+                <select
+                  value={answers[q.id] ?? ""}
+                  onChange={(e) => setAnswers((a) => ({ ...a, [q.id]: e.target.value }))}
+                  className="w-full rounded-lg border border-almi-bg-peach px-3 py-2 text-sm"
+                >
+                  <option value="">— Zuordnung wählen —</option>
+                  {obj.bank.map((b) => (
+                    <option key={b.id} value={b.id}>
+                      {b.id}) {b.text}
+                    </option>
+                  ))}
+                </select>
               ) : (
                 <input
                   type="text"
@@ -220,24 +316,64 @@ export function ExamItemRunner({
 
       {prod && (
         <div className="space-y-4">
-          <div className="rounded-2xl border border-almi-bg-peach bg-almi-paper p-5 text-sm text-almi-text">
-            <p className="font-semibold text-almi-ink">Situation</p>
-            <p className="mt-1">{prod.situation}</p>
-            <p className="mt-3 font-semibold text-almi-ink">Aufgabe</p>
-            <p className="mt-1">{prod.instruction}</p>
-            {item.kind === "speaking" && (
-              <p className="mt-3 text-xs text-almi-text-muted">
-                Audio recording is coming soon. For now, type (or paste) what you would say — it is
-                graded as a transcript, never on accent or pronunciation.
+          {isChoice ? (
+            // 1-of-2 writing: show BOTH themes and let the learner pick one. The choice
+            // is part of the task — you decide which topic you can best argue.
+            <div className="space-y-3">
+              <p className="text-sm text-almi-text-muted">
+                Wählen Sie <strong>eines der beiden Themen</strong> und schreiben Sie dazu.
               </p>
-            )}
-          </div>
+              {choices!.map((c, idx) => {
+                const p = c.payload as ProductivePayload;
+                return (
+                  <label
+                    key={c.id}
+                    className={`block cursor-pointer rounded-2xl border p-5 text-sm text-almi-text ${
+                      chosen === idx ? "border-almi-coral bg-almi-coral/5" : "border-almi-bg-peach bg-almi-paper"
+                    }`}
+                  >
+                    <span className="flex items-start gap-3">
+                      <input
+                        type="radio"
+                        name="thema"
+                        checked={chosen === idx}
+                        onChange={() => setChosen(idx)}
+                        className="mt-1"
+                      />
+                      <span>
+                        <span className="font-semibold text-almi-ink">
+                          Thema {idx + 1}: {c.title}
+                        </span>
+                        <span className="mt-1 block">{p.situation}</span>
+                        <span className="mt-2 block font-semibold text-almi-ink">Aufgabe</span>
+                        <span className="mt-1 block">{p.instruction}</span>
+                      </span>
+                    </span>
+                  </label>
+                );
+              })}
+            </div>
+          ) : (
+            <div className="rounded-2xl border border-almi-bg-peach bg-almi-paper p-5 text-sm text-almi-text">
+              <p className="font-semibold text-almi-ink">Situation</p>
+              <p className="mt-1">{prod.situation}</p>
+              <p className="mt-3 font-semibold text-almi-ink">Aufgabe</p>
+              <p className="mt-1">{prod.instruction}</p>
+              {activeItem.kind === "speaking" && (
+                <p className="mt-3 text-xs text-almi-text-muted">
+                  Audio recording is coming soon. For now, type (or paste) what you would say — it is
+                  graded as a transcript, never on accent or pronunciation.
+                </p>
+              )}
+            </div>
+          )}
           <textarea
             value={text}
             onChange={(e) => setText(e.target.value)}
-            rows={item.kind === "speaking" ? 6 : 10}
-            className="w-full rounded-2xl border border-almi-bg-peach bg-white p-4 text-[15px] leading-relaxed text-almi-ink"
-            placeholder="Schreiben Sie hier auf Deutsch …"
+            rows={activeItem.kind === "speaking" ? 6 : 10}
+            disabled={isChoice && chosen == null}
+            className="w-full rounded-2xl border border-almi-bg-peach bg-white p-4 text-[15px] leading-relaxed text-almi-ink disabled:cursor-not-allowed disabled:bg-almi-bg/50"
+            placeholder={isChoice && chosen == null ? "Wählen Sie zuerst ein Thema …" : "Schreiben Sie hier auf Deutsch …"}
           />
           <p className="text-xs text-almi-text-muted">
             {words} Wörter

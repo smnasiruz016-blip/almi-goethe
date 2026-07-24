@@ -25,6 +25,22 @@ export function isStateScoped(section: string): boolean {
   return STATE_SCOPED_SECTIONS.includes(section);
 }
 
+// ── 1-OF-2 WRITING (Schriftlicher Ausdruck: "ein Brief / eine Stellungnahme aus zwei
+// Themen") ──────────────────────────────────────────────────────────────────
+// telc B2 and telc C1 Hochschule give the candidate TWO themes and ask for ONE text.
+// The choice IS part of the task — serving a single prompt silently halves it (you
+// remove the decision of which topic you can best argue). So for these sections the
+// draw PAIRS two distinct items and the learner picks one. The themes are two real
+// bank items, not a second prompt smuggled into one payload.
+const ONE_OF_TWO_WRITING: ReadonlySet<string> = new Set([
+  "TELC_B2::SCHRIFTLICHER_AUSDRUCK",
+  "TELC_C1_HOCHSCHULE::SCHRIFTLICHER_AUSDRUCK",
+]);
+
+export function isOneOfTwoWriting(exam: string, section: string): boolean {
+  return ONE_OF_TWO_WRITING.has(`${exam}::${section}`);
+}
+
 export type StateDraw<T> = {
   items: T[];
   /** What the sourced envelope asks for (the real test's count). */
@@ -81,6 +97,8 @@ export type ClientItem = {
  */
 export type PickResult =
   | { kind: "item"; item: ClientItem }
+  // A 1-of-2 writing task: two themes, the learner writes on ONE. Exactly two items.
+  | { kind: "choice"; items: ClientItem[] }
   | { kind: "needs-bundesland" }
   | { kind: "empty" };
 
@@ -118,26 +136,50 @@ export async function pickClientItem(
     : items;
   if (pool.length === 0) return { kind: "empty" };
 
-  const chosen = pool[Math.floor(Math.random() * pool.length)];
-  let payload: unknown = chosen.payload;
-  if (def.kind === "objective") {
-    const parsed = objectivePayloadSchema.safeParse(chosen.payload);
-    payload = parsed.success ? redactObjectivePayload(parsed.data) : chosen.payload;
+  // 1-of-2 writing: pair two DISTINCT themes and let the learner pick one. Only when
+  // at least two exist — with a single theme there is no choice to offer, so serve it.
+  if (isOneOfTwoWriting(exam, def.key) && pool.length >= 2) {
+    const first = Math.floor(Math.random() * pool.length);
+    let second = Math.floor(Math.random() * (pool.length - 1));
+    if (second >= first) second += 1; // pick a distinct second index, uniformly
+    return { kind: "choice", items: [toClientItem(pool[first], def.kind), toClientItem(pool[second], def.kind)] };
   }
 
+  const chosen = pool[Math.floor(Math.random() * pool.length)];
+  return { kind: "item", item: toClientItem(chosen, def.kind) };
+}
+
+/** Shape a database row into a client item, stripping the answer key for objective
+ *  sections. Productive (writing/speaking) payloads carry no key, so they pass through. */
+function toClientItem(
+  row: {
+    id: string;
+    exam: GermanExam;
+    section: string;
+    taskType: string;
+    title: string;
+    prompt: string;
+    guidanceNote: string | null;
+    timeLimitSeconds: number;
+    payload: unknown;
+  },
+  kind: ClientItem["kind"],
+): ClientItem {
+  let payload: unknown = row.payload;
+  if (kind === "objective") {
+    const parsed = objectivePayloadSchema.safeParse(row.payload);
+    payload = parsed.success ? redactObjectivePayload(parsed.data) : row.payload;
+  }
   return {
-    kind: "item",
-    item: {
-      id: chosen.id,
-      exam: chosen.exam,
-      section: chosen.section,
-      taskType: chosen.taskType,
-      title: chosen.title,
-      prompt: chosen.prompt,
-      guidanceNote: chosen.guidanceNote,
-      timeLimitSeconds: chosen.timeLimitSeconds,
-      kind: def.kind,
-      payload,
-    },
+    id: row.id,
+    exam: row.exam,
+    section: row.section,
+    taskType: row.taskType,
+    title: row.title,
+    prompt: row.prompt,
+    guidanceNote: row.guidanceNote,
+    timeLimitSeconds: row.timeLimitSeconds,
+    kind,
+    payload,
   };
 }

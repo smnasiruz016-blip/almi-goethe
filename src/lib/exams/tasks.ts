@@ -72,6 +72,29 @@ export const bankOptionSchema = z.object({
   text: z.string(),
 });
 
+/**
+ * A NOTE SHEET the learner completes while listening — telc C1 Hochschule
+ * Hörverstehen Teil 3 (Notizen ergänzen). The learner hears a longer talk and fills a
+ * skeleton of notes; each line is either fixed context or a blank (`gap`) that maps to
+ * one of the item's questions by id. The blanks ARE the objective questions (scored by
+ * deterministic lenient match); this field gives them their surrounding structure, so
+ * the learner sees a coherent note sheet rather than ten isolated prompts.
+ *
+ * ⚠️ FOURTH TIME FOR THE ZOD-STRIP TRAP — same as segments, bank and themen.
+ * objectivePayloadSchema is a non-strict z.object, so an undeclared `notizen` is
+ * SILENTLY STRIPPED by .parse()/.safeParse(), and pickClientItem sends `parsed.data`
+ * to the client — the note sheet would vanish between the database and the learner with
+ * nothing erroring. HOERVERSTEHEN is served through the OBJECTIVE path
+ * (registry SECTION_META kind "objective" → objectivePayloadSchema, deterministic
+ * scoring), so the field belongs HERE, not on productivePayloadSchema. The seed asserts
+ * the round-trip survives parse before any item is written.
+ */
+export const noteLineSchema = z.object({
+  text: z.string(),
+  /** Question id this line's blank fills, when the line is a gap (omitted for context lines). */
+  gap: z.string().optional(),
+});
+
 export const objectivePayloadSchema = z.object({
   instructions: z.string().optional(),
   // Reading stimulus (German passage) and/or listening script (spoken German, TTS).
@@ -79,6 +102,7 @@ export const objectivePayloadSchema = z.object({
   audioScript: z.string().optional(),
   segments: z.array(segmentSchema).optional(),
   bank: z.array(bankOptionSchema).optional(),
+  notizen: z.array(noteLineSchema).optional(),
   questions: z.array(objectiveQuestionSchema),
 });
 export type ObjectivePayload = z.infer<typeof objectivePayloadSchema>;

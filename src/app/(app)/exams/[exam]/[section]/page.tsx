@@ -36,6 +36,7 @@ export default async function ExamSectionPracticePage({
     ? null
     : await pickClientItem(examDef.exam, sectionDef.key, { bundesland: land });
   const item = result?.kind === "item" ? result.item : null;
+  const choices = result?.kind === "choice" ? result.items : null;
   const needsLand = result?.kind === "needs-bundesland";
 
   // The sourced envelope vs what this Land can honestly supply. Shown, not hidden.
@@ -89,6 +90,9 @@ export default async function ExamSectionPracticePage({
             ))}
           </ul>
         </div>
+      ) : choices ? (
+        // 1-of-2 writing: two themes, the learner picks one. The choice is the task.
+        <ExamItemRunner item={choices[0]} choices={choices} isTestDaf={testDaf} thresholdPending={thresholdPending} />
       ) : !item ? (
         <p className="rounded-xl border border-almi-coral/40 bg-almi-coral/5 px-4 py-3 text-sm text-almi-coral-deep">
           No practice items are seeded for this section yet. Check back soon.
