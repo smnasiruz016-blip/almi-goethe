@@ -25,6 +25,7 @@ import {
   objectivePayloadSchema,
   redactObjectivePayload,
   scoreObjective,
+  productivePayloadSchema,
 } from "../../src/lib/exams/tasks";
 
 let failures = 0;
@@ -92,6 +93,32 @@ const result = scoreObjective(parsed.data, { answers: { q1: "c", q2: "h", q3: "a
 check("a fully correct submission marks 3/3", result.pointsEarned === 3 && result.pointsMax === 3);
 const wrong = scoreObjective(parsed.data, { answers: { q1: "a", q2: "h", q3: "a" } });
 check("a wrong assignment is marked wrong", wrong.pointsEarned === 2);
+
+// ── 4. THE SAME TRAP ON THE PRODUCTIVE SIDE ────────────────────────────────
+// Three payload fields have now hit this in three stages — `segments` (HV Teil 3),
+// `bank` (Zuordnung) and `themen` (the telc 1-of-2 writing choice). The productive
+// schema is a separate non-strict z.object parsed at registry.ts:228, so it needs its
+// own assertion: an undeclared `themen` silently drops and the Brief renders with no
+// topics at all. Verified by mutation — removing the declaration strips all 16.
+const prod = productivePayloadSchema.safeParse({
+  situation: "Rahmen",
+  instruction: "Wählen Sie ein Thema.",
+  themen: [
+    { label: "Thema 1", situation: "…", leitpunkte: ["a", "b", "c"] },
+    { label: "Thema 2", situation: "…", leitpunkte: ["a", "b", "c"] },
+  ],
+  wordMin: 130,
+  wordMax: 180,
+});
+check("a productive payload with a 1-of-2 choice parses", prod.success);
+check(
+  "`themen` SURVIVES the productive parse (both Themen reach the learner)",
+  prod.success && Array.isArray((prod.data as any).themen) && (prod.data as any).themen.length === 2,
+);
+check(
+  "each Thema keeps its Leitpunkte",
+  prod.success && (prod.data as any).themen?.every((t: any) => Array.isArray(t.leitpunkte) && t.leitpunkte.length >= 3),
+);
 
 console.log("");
 if (failures > 0) {

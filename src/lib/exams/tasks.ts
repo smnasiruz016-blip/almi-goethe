@@ -106,9 +106,30 @@ export function redactObjectivePayload(payload: ObjectivePayload): ObjectivePayl
 
 // ---- Productive item payload (writing / speaking) --------------------------
 
+/**
+ * One of the two Themen a telc writing task offers. The candidate picks ONE and
+ * writes to its Leitpunkte; the exam is a choice, not a single prompt, and serving
+ * one prompt quietly removes half the task.
+ *
+ * ⚠️ THIRD TIME FOR THIS TRAP. productivePayloadSchema is a non-strict z.object and
+ * registry.ts:228 runs `productivePayloadSchema.parse(payload)` — so an undeclared
+ * `themen` is SILENTLY DROPPED and the item renders with no topics at all. The seed
+ * files for DSH/DTZ/ÖSD/telc-B1 writing already say so in their own comments
+ * ("parse() strips every other key"), which is exactly why it has to be declared
+ * here rather than merely written by the seed. Same as `segments` and `bank`.
+ */
+export const themaSchema = z.object({
+  label: z.string(),
+  situation: z.string(),
+  /** The 3–4 Leitpunkte the candidate must cover. */
+  leitpunkte: z.array(z.string()),
+});
+
 export const productivePayloadSchema = z.object({
   situation: z.string(), // scenario / context (original)
   instruction: z.string(), // what to produce
+  /** Present when the task is a 1-of-N choice (telc Schriftlicher Ausdruck). */
+  themen: z.array(themaSchema).optional(),
   // Writing bounds (optional — omitted for speaking).
   wordMin: z.number().int().nonnegative().optional(),
   wordMax: z.number().int().nonnegative().optional(),

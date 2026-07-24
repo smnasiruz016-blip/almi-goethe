@@ -595,9 +595,9 @@ export const B2_STRUCTURE: Record<string, SectionStructure> = {
     minutes: null,
     sourced: true,
     aufgaben: [
-      { key: "TELC_B2_SP_T1", label: "Teil 1 — Präsentation", items: null, sourced: true, answerFormat: "PRODUCTIVE" },
+      { key: "TELC_B2_SP_T1", label: "Teil 1 — Über Erfahrungen sprechen", items: null, sourced: true, answerFormat: "PRODUCTIVE" },
       { key: "TELC_B2_SP_T2", label: "Teil 2 — Diskussion", items: null, sourced: true, answerFormat: "PRODUCTIVE" },
-      { key: "TELC_B2_SP_T3", label: "Teil 3 — gemeinsam eine Aufgabe lösen", items: null, sourced: true, answerFormat: "PRODUCTIVE" },
+      { key: "TELC_B2_SP_T3", label: "Teil 3 — Gemeinsam etwas planen", items: null, sourced: true, answerFormat: "PRODUCTIVE" },
     ],
   },
 };
