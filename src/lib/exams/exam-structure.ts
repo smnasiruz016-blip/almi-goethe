@@ -523,19 +523,6 @@ export const OESD_PRODUCTIVE = {
 /** Exams whose structure is recorded here. An exam absent from this map is NOT
  *  silently skipped by the conformance gate — it is reported, because an
  *  unstructured exam is an unchecked exam. */
-export const EXAM_STRUCTURES: Record<string, Record<string, SectionStructure>> = {
-  TESTDAF: TESTDAF_STRUCTURE,
-  TELC_B1: TELC_B1_STRUCTURE,
-  DTZ: DTZ_STRUCTURE,
-  EINBUERGERUNGSTEST: EINBUERGERUNG_STRUCTURE,
-  DSH: DSH_STRUCTURE,
-  OESD_B1: OESD_STRUCTURE,
-};
-
-/** Exams registered in the product but not yet structured. Explicit, so the gap is
- *  visible in code rather than inferred from a missing key. Batches are staged
- *  deliberately: telc B2, telc C1 Hochschule, Goethe-Zertifikat A1–C2, then the new
- *  engines (DSH, DTZ, Einbürgerungstest, ÖSD ZDÖ B1). */
 // ── ⑧ telc Deutsch B2 ───────────────────────────────────────────────────────
 // SOURCED from the official telc B2 handbook cell tables, corroborated against the
 // item-numbered Übungstest (LV 5/5/10 · SB 10/10 · HV 5/10/5). Objective total 60.
@@ -602,7 +589,22 @@ export const B2_STRUCTURE: Record<string, SectionStructure> = {
   },
 };
 
-export const UNSTRUCTURED_EXAMS = ["TELC_B2", "TELC_C1_HOCHSCHULE"] as const;
+export const EXAM_STRUCTURES: Record<string, Record<string, SectionStructure>> = {
+  TESTDAF: TESTDAF_STRUCTURE,
+  TELC_B1: TELC_B1_STRUCTURE,
+  DTZ: DTZ_STRUCTURE,
+  TELC_B2: B2_STRUCTURE,
+  EINBUERGERUNGSTEST: EINBUERGERUNG_STRUCTURE,
+  DSH: DSH_STRUCTURE,
+  OESD_B1: OESD_STRUCTURE,
+};
+
+/** Exams registered in the product but not yet structured. Explicit, so the gap is
+ *  visible in code rather than inferred from a missing key. Batches are staged
+ *  deliberately: telc B2, telc C1 Hochschule, Goethe-Zertifikat A1–C2, then the new
+ *  engines (DSH, DTZ, Einbürgerungstest, ÖSD ZDÖ B1). */
+
+export const UNSTRUCTURED_EXAMS = ["TELC_C1_HOCHSCHULE"] as const;
 
 /** Look up the Aufgabe an item's taskType claims to be. */
 export function aufgabeFor(exam: string, section: string, taskType: string): Aufgabe | undefined {

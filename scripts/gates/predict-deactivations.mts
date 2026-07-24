@@ -36,35 +36,13 @@
 // per-section files, importing only the four original modules undercounted the
 // baseline (the split files were invisible), inflating the predicted insert count.
 // Import the WHOLE baseline tree — the same module set _bank.mts loads for current.
-import { ITEMS as B_TESTDAF } from "../../.baseline/scripts/seed/exams/testdaf";
-import { ITEMS as B_TESTDAF_LV } from "../../.baseline/scripts/seed/exams/testdaf-leseverstehen";
-import { ITEMS as B_TESTDAF_HV } from "../../.baseline/scripts/seed/exams/testdaf-hoerverstehen";
-import { ITEMS as B_TESTDAF_SA } from "../../.baseline/scripts/seed/exams/testdaf-schriftlicher-ausdruck";
-import { ITEMS as B_TESTDAF_MA } from "../../.baseline/scripts/seed/exams/testdaf-muendlicher-ausdruck";
-import { ITEMS as B_C1H } from "../../.baseline/scripts/seed/exams/telc-c1-hochschule";
-import { ITEMS as B_B1 } from "../../.baseline/scripts/seed/exams/telc-b1";
-import { ITEMS as B_B1_LV } from "../../.baseline/scripts/seed/exams/telc-b1-leseverstehen";
-import { ITEMS as B_B1_SB } from "../../.baseline/scripts/seed/exams/telc-b1-sprachbausteine";
-import { ITEMS as B_B1_HV } from "../../.baseline/scripts/seed/exams/telc-b1-hoerverstehen";
-import { ITEMS as B_B1_SA } from "../../.baseline/scripts/seed/exams/telc-b1-schriftlicher-ausdruck";
-import { ITEMS as B_B1_SP } from "../../.baseline/scripts/seed/exams/telc-b1-sprechen";
-import { ITEMS as B_B2 } from "../../.baseline/scripts/seed/exams/telc-b2";
-import { ITEMS as B_DTZ_HV } from "../../.baseline/scripts/seed/exams/dtz-hoeren";
-import { ITEMS as B_DTZ_LV } from "../../.baseline/scripts/seed/exams/dtz-lesen";
-import { ITEMS as B_DTZ_SA } from "../../.baseline/scripts/seed/exams/dtz-schreiben";
-import { ITEMS as B_DTZ_SP } from "../../.baseline/scripts/seed/exams/dtz-sprechen";
-import { ITEMS as B_EINB } from "../../.baseline/scripts/seed/exams/einbuergerungstest";
-import { ITEMS as B_DSH_HV } from "../../.baseline/scripts/seed/exams/dsh-hoerverstehen";
-import { ITEMS as B_DSH_LV } from "../../.baseline/scripts/seed/exams/dsh-leseverstehen";
-import { ITEMS as B_DSH_WS } from "../../.baseline/scripts/seed/exams/dsh-strukturen";
-import { ITEMS as B_DSH_TP } from "../../.baseline/scripts/seed/exams/dsh-textproduktion";
-import { ITEMS as B_DSH_SP } from "../../.baseline/scripts/seed/exams/dsh-muendlich";
 import { examBank } from "./_bank.mjs";
+import { examBank as baselineExamBank } from "../../.baseline/scripts/gates/_bank.mjs";
 import { EXAM_STRUCTURES, aufgabeFor } from "../../src/lib/exams/exam-structure";
 
 const key = (r: any) => `${r.exam}::${r.level}::${r.section}::${r.title}`;
 
-const baseline = [...B_TESTDAF, ...B_TESTDAF_LV, ...B_TESTDAF_HV, ...B_TESTDAF_SA, ...B_TESTDAF_MA, ...B_C1H, ...B_B1, ...B_B1_LV, ...B_B1_SB, ...B_B1_HV, ...B_B1_SA, ...B_B1_SP, ...B_B2, ...B_DTZ_HV, ...B_DTZ_LV, ...B_DTZ_SA, ...B_DTZ_SP, ...B_EINB, ...B_DSH_HV, ...B_DSH_LV, ...B_DSH_WS, ...B_DSH_TP, ...B_DSH_SP] as any[];
+const baseline = baselineExamBank() as any[];
 const current = examBank() as any[];
 const currentKeys = new Set(current.map(key));
 

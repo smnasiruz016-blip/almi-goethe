@@ -26,10 +26,14 @@
 // registry.ts:228 parses productive payloads and Zod drops undeclared keys. That is
 // the third time this trap has appeared (segments, bank, themen).
 //
-// ⚠️ CONVENTION, NOT SOURCED: the ~150-word envelope (130–180 here) and the oral
-// prep/speak seconds. The telc B2 Handbuch figures we DO have are the weights and
-// the pass rule, both recorded in docs/AlmiGoethe_TestDaF_telc_Verified_Scoring_Specs.md
-// and untouched by this file.
+// ── SOURCING OF THE NUMBERS ────────────────────────────────────────────────
+// SOURCED: the ~150-word floor (telc B2 Handbuch; reclassified from convention on
+// 2026-07-24 after beta-g sourced it). Also sourced, and untouched by this file: the
+// section weights and the pass rule, in
+// docs/AlmiGoethe_TestDaF_telc_Verified_Scoring_Specs.md.
+// ⚠️ STILL CONVENTION: the 180-word CEILING and the oral prep/speak seconds. A real
+// exam sets a floor and a time, not a maximum — the ceiling exists so the UI can show
+// a target range, exactly as TESTDAF_PRODUCTIVE records for its writing task 1.
 //
 // NO FABRICATION: every scenario uses generic entities — die Firma, das Amt, die
 // Nachbarin, der Verein, die Hausverwaltung, der Sprachkurs. No real company,
@@ -40,7 +44,7 @@ import { EXAM_LEVEL, SECTION, type ExamItemInput } from "./_shared";
 
 const L = EXAM_LEVEL.TELC_B2;
 
-const WORD_MIN = 130;
+const WORD_MIN = 150; // SOURCED (telc B2 Handbuch) — reclassified from convention 2026-07-24
 const WORD_MAX = 180;
 
 type Thema = { label: string; situation: string; leitpunkte: string[] };
