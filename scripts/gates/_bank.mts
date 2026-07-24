@@ -35,6 +35,7 @@ import { ITEMS as TESTDAF_SA } from "../seed/exams/testdaf-schriftlicher-ausdruc
 import { ITEMS as TESTDAF_MA } from "../seed/exams/testdaf-muendlicher-ausdruck";
 import { ITEMS as TELC_C1H } from "../seed/exams/telc-c1-hochschule";
 import { ITEMS as C1H_LVZ } from "../seed/exams/telc-c1h-lv-zuordnung";
+import { ITEMS as C1H_SB } from "../seed/exams/telc-c1h-sprachbausteine";
 import { ITEMS as TELC_B1 } from "../seed/exams/telc-b1";
 import { ITEMS as TELC_B1_LV } from "../seed/exams/telc-b1-leseverstehen";
 import { ITEMS as TELC_B1_SB } from "../seed/exams/telc-b1-sprachbausteine";
@@ -82,7 +83,7 @@ export function goetheBank(): GoetheRow[] {
  *  registered but absent from this list fails as "0 items", loudly, rather than
  *  disappearing from the counts. */
 export function examBank(): ExamRow[] {
-  return [...TESTDAF, ...TESTDAF_LV, ...TESTDAF_HV, ...TESTDAF_SA, ...TESTDAF_MA, ...TELC_C1H, ...C1H_LVZ, ...TELC_B1, ...TELC_B1_LV, ...TELC_B1_SB, ...TELC_B1_HV, ...TELC_B1_SA, ...TELC_B1_SP, ...B2_LV_T2, ...B2_SB_T1, ...B2_HV, ...B2_LVZ, ...B2_SB_T2, ...B2_PROD, ...DTZ_HV, ...DTZ_LV, ...DTZ_SA, ...DTZ_SP, ...EINB, ...EINB_BL, ...DSH_HV, ...DSH_LV, ...DSH_WS, ...DSH_TP, ...DSH_SP, ...OESD_LV, ...OESD_HV, ...OESD_SA, ...OESD_SP];
+  return [...TESTDAF, ...TESTDAF_LV, ...TESTDAF_HV, ...TESTDAF_SA, ...TESTDAF_MA, ...TELC_C1H, ...C1H_LVZ, ...C1H_SB, ...TELC_B1, ...TELC_B1_LV, ...TELC_B1_SB, ...TELC_B1_HV, ...TELC_B1_SA, ...TELC_B1_SP, ...B2_LV_T2, ...B2_SB_T1, ...B2_HV, ...B2_LVZ, ...B2_SB_T2, ...B2_PROD, ...DTZ_HV, ...DTZ_LV, ...DTZ_SA, ...DTZ_SP, ...EINB, ...EINB_BL, ...DSH_HV, ...DSH_LV, ...DSH_WS, ...DSH_TP, ...DSH_SP, ...OESD_LV, ...OESD_HV, ...OESD_SA, ...OESD_SP];
 }
 
 /** Group rows by a key, preserving insertion order of first appearance. */
