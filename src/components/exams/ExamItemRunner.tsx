@@ -12,7 +12,21 @@ import type { ClientItem } from "@/lib/exams/pick";
 
 type Option = { id: string; text: string };
 type Question = { id: string; stem: string; options?: Option[] };
-type ObjectivePayload = { instructions?: string; passage?: string; audioScript?: string; questions: Question[] };
+type BankEntry = { id: string; text: string };
+type Segment = { id: string; label?: string; script: string };
+type NoteLine = { text: string; gap?: string };
+type ObjectivePayload = {
+  instructions?: string;
+  passage?: string;
+  audioScript?: string;
+  // Several short spoken texts (telc HV Teil 1 speakers, B2 HV Teil 3 Ansagen).
+  segments?: Segment[];
+  // Shared option bank for a Zuordnung (LV Teil 1/2, HV Teil 1). Questions assign INTO it.
+  bank?: BankEntry[];
+  // Note-sheet skeleton for note-taking (C1H HV Teil 3). Gap lines carry the question id.
+  notizen?: NoteLine[];
+  questions: Question[];
+};
 type ProductivePayload = {
   situation: string;
   instruction: string;
@@ -184,7 +198,65 @@ export function ExamItemRunner({
         </details>
       )}
 
-      {isObjective &&
+      {/* Several short spoken texts (HV Teil 1 speakers, B2 HV Teil 3 Ansagen). The
+          client receives these in `segments`; without this branch a Zuordnung showed
+          questions with nothing to read. Audio narration is TTS, coming soon. */}
+      {obj?.segments && obj.segments.length > 0 && (
+        <details open className="rounded-2xl border border-almi-bg-peach bg-almi-paper p-4">
+          <summary className="cursor-pointer text-sm font-semibold text-almi-ink">
+            🎧 Aussagen (Audio kommt bald — zum Üben als Text)
+          </summary>
+          <div className="mt-3 space-y-2 text-[15px] leading-relaxed text-almi-text">
+            {obj.segments.map((s) => (
+              <p key={s.id}>
+                {s.label && <span className="font-semibold text-almi-ink">{s.label}: </span>}
+                {s.script}
+              </p>
+            ))}
+          </div>
+        </details>
+      )}
+
+      {/* Shared Zuordnung bank. Client-facing (the learner reads it to assign); the
+          per-question answer is the bank id, chosen below. */}
+      {isObjective && obj?.bank && obj.bank.length > 0 && (
+        <div className="rounded-2xl border border-almi-bg-peach bg-almi-paper p-5">
+          <p className="text-sm font-semibold text-almi-ink">Zur Auswahl</p>
+          <ul className="mt-2 space-y-1 text-sm text-almi-text">
+            {obj.bank.map((b) => (
+              <li key={b.id}>
+                <span className="font-semibold text-almi-ink">{b.id})</span> {b.text}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {/* Note-taking: render the note-sheet skeleton (context lines + inline gap
+          inputs) instead of a flat question list. Gap lines carry the question id. */}
+      {isObjective && obj?.notizen && obj.notizen.length > 0 && (
+        <div className="space-y-3 rounded-2xl border border-almi-bg-peach bg-almi-paper p-5">
+          {obj.notizen.map((line, i) => {
+            const q = line.gap ? obj.questions.find((qq) => qq.id === line.gap) : undefined;
+            if (!q) return <p key={i} className="text-sm font-semibold text-almi-ink">{line.text}</p>;
+            const n = obj.questions.indexOf(q) + 1;
+            return (
+              <label key={i} className="block text-sm text-almi-text">
+                <span className="text-almi-ink">{n}. {line.text}</span>
+                <input
+                  type="text"
+                  value={answers[q.id] ?? ""}
+                  onChange={(e) => setAnswers((a) => ({ ...a, [q.id]: e.target.value }))}
+                  className="mt-1 w-full rounded-lg border border-almi-bg-peach px-3 py-2 text-sm"
+                  placeholder="Ihre Notiz"
+                />
+              </label>
+            );
+          })}
+        </div>
+      )}
+
+      {isObjective && !(obj?.notizen && obj.notizen.length > 0) &&
         obj?.questions.map((q, i) => (
           <fieldset key={q.id} className="rounded-2xl border border-almi-bg-peach bg-almi-paper p-5">
             <legend className="px-1 text-sm font-semibold text-almi-ink">
@@ -205,6 +277,19 @@ export function ExamItemRunner({
                     <span className="text-sm text-almi-text">{o.text}</span>
                   </label>
                 ))
+              ) : obj?.bank && obj.bank.length > 0 ? (
+                <select
+                  value={answers[q.id] ?? ""}
+                  onChange={(e) => setAnswers((a) => ({ ...a, [q.id]: e.target.value }))}
+                  className="w-full rounded-lg border border-almi-bg-peach px-3 py-2 text-sm"
+                >
+                  <option value="">— Zuordnung wählen —</option>
+                  {obj.bank.map((b) => (
+                    <option key={b.id} value={b.id}>
+                      {b.id}) {b.text}
+                    </option>
+                  ))}
+                </select>
               ) : (
                 <input
                   type="text"
