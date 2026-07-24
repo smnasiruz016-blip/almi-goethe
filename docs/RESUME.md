@@ -11,12 +11,13 @@ per-Bundesland cells · DSH · ÖSD ZDÖ B1), alongside the Goethe-Zertifikat A1
 live — they are just under the ⑤ restructure. The homepage and `/pruefung` say "eight"
 and that is accurate to what a learner can practise today.
 
-**⑤ telc B2 / C1 Hochschule restructure — IN FLIGHT.** Both were authored but
-UNSTRUCTURED (gates reported, did not enforce) and carried the clustered-key defect
-(option "a" correct 92–100%, "c" never). Status: **Stage A GREEN** (LV T2 · SB T1) ·
-**Stage B GREEN** (Hörverstehen, 100 richtig/falsch statements) · **Stage C in progress**
-(Zuordnung bank cells + redaction proof). Then de-game, then the reported→enforced flip,
-then C1 Hochschule the same way.
+**⑤ telc B2 — COMPLETE & LIVE (2026-07-24).** Restructured to the real telc cells
+across Stages A–D, de-gamed, enforced, reconciled and deployed. Verified live by
+STATE: `examItemsActive` 628 · B2 = 78 rows (LV 15 · SB 16 · HV 15 · SA 16 · SP 16) ·
+**zero old taskTypes surviving**. Reconcile: 66 deactivated · 64 inserted · 14 updated
+in place, 10.5% — under the guard, so NO `RECONCILE_FORCE` was used or needed.
+
+**⑤ telc C1 Hochschule — the one remaining goethe thread.** Same A–D treatment.
 
 ## The six engines (all live, five scoring philosophies)
 
@@ -96,6 +97,38 @@ by reading the gate output.
 - rule7 (≥15/module), title-uniqueness, real-entity (no invented doc names a real
   company), reconcile-guard proof, ledger.
 
+## THE C1 HOCHSCHULE PLAYBOOK (the last goethe thread)
+
+Run the same A–D shape B2 just went through. **Verify every cell against the C1H
+handbook first** — do not assume B2's fixes transfer. Known shape, to be confirmed:
+
+| Cell | Shape | Note |
+|---|---|---|
+| LV Teil 1 / 2 | 6 + 6, Zuordnung | current bank is MC-3 → re-author |
+| LV Teil 3 | 12 = 11× richtig/falsch/nicht-im-Text + 1 MC | the 3-way R/F/N is a format we have nowhere else |
+| SB | 22, **MC-4** | current bank is MC-3 → wrong option count, cannot be re-tagged |
+| HV Teil 1 | 8, Zuordnung | |
+| HV Teil 2 | 10, MC-3 | the one cell whose format already matches |
+| HV Teil 3 | 10, **productive note-taking** | **ZERO items exist — must be built from nothing** |
+| SA | Essay / Stellungnahme | ⚠️ may ALREADY be correct — unlike B2's Forumsbeiträge. VERIFY before deactivating |
+| MA | Präsentation + Zusammenfassung + Diskussion | ⚠️ Teil 1 genuinely IS a Präsentation here, unlike B2. VERIFY |
+
+**Four lessons from B2 that carry over — all four cost real defects there:**
+1. **The parse trap, now hit three times.** Any NEW payload field must be declared in
+   `objectivePayloadSchema` / `productivePayloadSchema` or Zod silently strips it
+   between database and learner, with nothing erroring. C1H needs at least one new
+   field for HV Teil 3 note-taking. Declare it, then mutation-test the declaration.
+2. **De-game vs. order.** `deGame`'s binary mode REORDERS questions. That is wrong
+   wherever items follow a text or a numbered segment — author the balance and
+   assert it instead. It also cannot create balance from a uniform set.
+3. **Near-synonym co-keys.** Two bank words that both fit a gap pass every mechanical
+   gate. Distractors must be semantically FAR; difficulty comes from the size of the
+   field, not from shading two words together.
+4. **Uniqueness by fit, not by exhaustion.** A key that is only correct because the
+   better word is spent on another gap is not determined by its sentence.
+
+Plus: keep the bank SHUFFLED (B2's SB T2 was authored answers-first, so a–j were
+always correct and k–o never — invisible to every gate).
 ## ⚠️ STANDING WATCH — telc B2 sections sit ON the rule7 floor
 
 After the ⑤ restructure, B2 `HOERVERSTEHEN` and `LESEVERSTEHEN` hold **exactly 15**
@@ -132,11 +165,10 @@ sections) → runner `Outcome.x` + result block → seed files (RED-first) → w
 
 ## OPEN THREADS (nothing lost)
 
-1. **Content-refresh (NEW, priority):** surface DTZ / DSH / Einbürgerungstest / ÖSD
-   on the **homepage + nav** as available practice; drop the stale "TestDaF & telc =
-   supplementary guides" framing — they and the four new engines are now full
-   practice banks. Copy scope for beta-g. (Originally logged in
-   [[project_almigoethe]] as the post-reconcile copy gap.)
+1. ~~**Content-refresh**~~ **DONE & LIVE** (PR #21, 2026-07-23). Homepage and
+   `/pruefung` surface all eight exams as real practice; the "TestDaF & telc =
+   supplementary guides" framing is gone, and the `… | AlmiGoethe · AlmiGoethe`
+   title double-suffix is fixed. Verified live by rendered state.
 2. ~~**WS-grammar independent pass**~~ **DONE.** The 16 `WISS_STRUKTUREN` (DSH)
    items passed beta-g's independent grammar check — GREEN, no fixes. Every marked
    key is correct and uniquely correct; no wrong keys, no double answers, no
@@ -167,11 +199,15 @@ sections) → runner `Outcome.x` + result block → seed files (RED-first) → w
    they are cited to bpb.de + the Parlamente-in-Deutschland listing instead of
    guessing a URL. Image-based state questions (coats of arms, maps) are out of scope
    for a text engine.
-4. **Austrian-brand gate hardening:** add Austrian brands to the real-entity
+4. ~~**telc B2 restructure (⑤)**~~ **DONE & LIVE** (2026-07-24) — Stages A–D,
+   enforced, reconciled (66 deactivated · 64 inserted → 628), verified live.
+5. **telc C1 Hochschule (⑤, the last one):** same A–D treatment — see the C1H
+   playbook above for the known cell shapes and the four carry-over lessons.
+6. **Austrian-brand gate hardening:** add Austrian brands to the real-entity
    blocklist CAREFULLY — `willhaben` is safe; `Spar` (= imperative of sparen) and
    `Hofer` (a surname) are common-word/surname false-positive risks, so likely
    leave those to reading. See [[feedback_gate_false_positives_disable_gates]].
-5. **Optional (wider AT ladder):** ÖSD A1–C2 ladder + the ÖIF Integrationsprüfung.
+7. **Optional (wider AT ladder):** ÖSD A1–C2 ladder + the ÖIF Integrationsprüfung.
 
 ## After goethe → product #5 + the backport list
 
