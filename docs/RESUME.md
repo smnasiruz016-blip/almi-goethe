@@ -159,4 +159,43 @@ backport list:
   gate iterates the whole bank, not the registry — the almi-portuguese hole). See
   [[project_almiworld_content_gates]].
 
+## NEW PRODUCT LINE (pipeline, behind current products — one at a time)
+
+### Legal exams
+
+**PRIMARY — TOLES (Test of Legal English Skills).** Best fit for the network and the
+lowest risk in this line, because it tests legal **language**, not substantive law:
+nothing in the bank has to assert what the law *is*.
+- Levels: Foundation · Higher · Advanced.
+- Scoring: percentage + performance band — telc-style, so
+  `src/lib/exams/scoring/telc.ts` already covers the shape. No sixth scoring
+  philosophy needed.
+- Provider: Global Legal English. ⚠️ The founder's note also attributes it to the
+  International Division of the Law Society of England & Wales — a REAL professional
+  body, so that attribution must be SOURCED before it appears in any user-facing copy
+  or disclaimer. See [[feedback_fabricated_docs_real_company]]: the invented letter
+  signed "Helvetia" survived review precisely because its facts were right. A
+  correct-sounding institutional claim is the dangerous kind.
+- ⏳ Beta-g owes a **sourced TOLES envelope** (sections · task types · scoring bands)
+  when this reaches the front of the queue. Do not author before it lands — that is
+  the mistake telc B2 is currently being unwound from.
+
+**LATER / HIGHER RISK — US bar (MBE) and England & Wales SQE1.** Substantive-law
+multiple choice. Buildable, but they need an authoritative, current,
+jurisdiction-specific legal fact-base that is far larger AND far more perishable than
+the 44-fact civic base — case law and statute move, and a stale key here is not a thin
+item but a wrong statement of law. Two distinct harms: accuracy harm to someone
+preparing for a professional qualification, and the legal-advice line. Only under
+heavy sourcing discipline, with the civic-sourcing pattern (every item keyed to a
+cited fact) as the FLOOR, not the ceiling. Framing stays "exam practice, never legal
+advice", as the civic engine does for citizenship.
+
+**LOW PRIORITY — LSAT.** Reasoning and reading, not law content, so it teaches nothing
+jurisdiction-specific; LSAC copyright is tight. Not a near-term candidate.
+
+**DO NOT BUILD — ILEC.** Discontinued December 2016. Building it would be the
+stale-exam trap in a new place — the same class of error as the DET/CELPIP ancestor
+leaks, except the product itself would be the artefact that no longer exists.
+Recorded here so nobody rediscovers it as an opportunity.
+
 Repo: `C:\Projects\almi-goethe`. Prod: `almigoethe.almiworld.com`. Branch = `main`.
