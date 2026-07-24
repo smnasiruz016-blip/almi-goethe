@@ -52,10 +52,15 @@ function rfn(title: string, passage: string, sts: St[]): ExamItemInput {
     ...base,
     taskType: "TELC_C1H_LV_T3_RFN",
     title,
-    prompt: "Lesen Sie den Text. Entscheiden Sie für jede Aussage: richtig, falsch oder nicht im Text.",
+    prompt: "Lesen Sie den Text. Entscheiden Sie NACH DEM TEXT, ob jede Aussage richtig, falsch oder nicht im Text ist.",
     timeLimitSeconds: 720,
     payload: {
-      instructions: "Kreuzen Sie für jede Aussage (1–11) an: richtig, falsch oder nicht im Text.",
+      // The verdict is TEXT-relative, and the instruction says so explicitly: a
+      // statement that may be true in the world but is not addressed by the passage
+      // (a price, who dreams more, …) is "nicht im Text", not "richtig". Without this
+      // anchor the world-knowledge statements would carry two defensible answers.
+      instructions:
+        "Kreuzen Sie für jede Aussage (1–11) an: richtig, falsch oder nicht im Text. Maßgeblich ist allein der Text: Wählen Sie „richtig“ oder „falsch“ nur, wenn der Text die Aussage bestätigt oder ihr widerspricht. Sagt der Text dazu nichts, wählen Sie „nicht im Text“ — auch wenn die Aussage an sich zutreffen mag.",
       passage,
       questions: sts.map((x, i) => ({ id: `q${i + 1}`, stem: x.s, options: RFN, answer: x.a })),
     },
