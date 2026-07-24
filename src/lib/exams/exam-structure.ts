@@ -589,22 +589,150 @@ export const B2_STRUCTURE: Record<string, SectionStructure> = {
   },
 };
 
+// ── ⑨ telc Deutsch C1 Hochschule ────────────────────────────────────────────
+// SOURCED from the telc C1 Hochschule handbook cell tables (beta-g verify-first,
+// 2026-07-24). Academic register; %-per-part AND an overall pass (see the scoring
+// spec — not restated here). Objective written total 74 (LV 24 · SB 22 · HV 28).
+//
+// This structure is the RED-FIRST TARGET. The current bank is 80 items authored
+// before any cell existed: LV/SB/HV are ALL MC-3, the whole answer key is 135/144
+// "a", and the productive cells carry only Teil 1A. Wiring this in (below, in
+// EXAM_STRUCTURES) and removing C1H from UNSTRUCTURED_EXAMS makes conformance +
+// distribution measure the bank against these cells — every current taskType is now
+// "not an Aufgabe", and every cell below is "uncovered". That RED is the point:
+// author cell-by-cell until it clears, exactly as B2 was run.
+//
+// ── CORRECTIONS THIS STRUCTURE ENCODES (from the Stage-A map) ────────────────
+//   • LV Teil 1/2 are ZUORDNUNG, not MC-3 (current bank is MC-3 → re-author).
+//   • LV Teil 3 is the three-way richtig/falsch/nicht-im-Text — a format the repo
+//     has nowhere else — plus one trailing MC. Encoded FAITHFULLY as two Aufgaben
+//     (11 RFN + 1 MC) rather than fabricating a uniform "12 RFN"; see the note on
+//     the cell. ⚠️ DECISION POINT for beta-g: collapse to one RFN-12 cell instead?
+//   • SB is MC-4 (current bank is MC-3 — wrong option count, cannot be re-tagged).
+//   • HV Teil 2 (MC-3) is the ONE cell whose item format already matches; Teil 1 is
+//     ZUORDNUNG and Teil 3 is productive note-taking, which does not exist at all.
+//   • SA (Stellungnahme) and MA Teil 1A (Präsentation) are GENUINE C1H shapes —
+//     KEEP, re-tag; do NOT deactivate. MA Teil 1B/2 are built with explicit
+//     self-study framing (documented adaptation, ruling 2).
+//
+// ── bankSize IS PENDING, DELIBERATELY OMITTED ───────────────────────────────
+// The ZUORDNUNG cells carry no bankSize yet: the handbook table gave counts, not the
+// size of each shared option bank. Omitting it (the field is optional) is honest —
+// the gate checks membership + count now, and the bank spread is pinned when those
+// cells are authored against a sourced bank. Writing a guessed bankSize here would be
+// the fabricated-then-enforced number this file's header forbids.
+//
+// ── PRODUCTIVE WORD BANDS ARE CONVENTION (ruling 5) ─────────────────────────
+// The SA word band is this product's convention, not a published figure, so it lives
+// unenforced in C1H_PRODUCTIVE below — never in the conformance gate. Enforcing our
+// own target would manufacture proof.
+export const C1H_STRUCTURE: Record<string, SectionStructure> = {
+  LESEVERSTEHEN: {
+    section: "LESEVERSTEHEN",
+    totalItems: 24, // 6 + 6 + (11 + 1)
+    minutes: null,
+    sourced: true,
+    aufgaben: [
+      { key: "TELC_C1H_LV_T1_ZUORDNUNG", label: "Teil 1 — Textabschnitten Aussagen/Überschriften zuordnen", items: 6, sourced: true, answerFormat: "ZUORDNUNG" },
+      { key: "TELC_C1H_LV_T2_ZUORDNUNG", label: "Teil 2 — Zuordnung zum Text", items: 6, sourced: true, answerFormat: "ZUORDNUNG" },
+      // Teil 3 is 12 items = 11 three-way (richtig/falsch/nicht im Text) + 1 MC. The
+      // one-format-per-Aufgabe model encodes that as TWO Aufgaben rather than pretend
+      // it is uniform. The RFN eleven are order-bound (ruling 4): balance is AUTHORED
+      // and asserted at seed time, never de-gamed (deRhythm would reorder them).
+      { key: "TELC_C1H_LV_T3_RFN", label: "Teil 3 — richtig / falsch / nicht im Text", items: 11, sourced: true, answerFormat: "RFN" },
+      { key: "TELC_C1H_LV_T3_MC", label: "Teil 3 — abschließende Mehrfachauswahl", items: 1, sourced: true, answerFormat: "MC-3" },
+    ],
+  },
+  SPRACHBAUSTEINE: {
+    section: "SPRACHBAUSTEINE",
+    totalItems: 22,
+    minutes: null,
+    sourced: true,
+    aufgaben: [
+      // MC-4 — four options per gap. The current bank is MC-3, so these cannot be
+      // re-tagged: a fourth (semantically FAR) option must be authored per gap.
+      { key: "TELC_C1H_SB_MC", label: "Sprachbausteine — 22 Lücken, Auswahl aus vier Optionen", items: 22, sourced: true, answerFormat: "MC-4" },
+    ],
+  },
+  HOERVERSTEHEN: {
+    section: "HOERVERSTEHEN",
+    totalItems: 28, // 8 + 10 + 10
+    minutes: null,
+    sourced: true,
+    aufgaben: [
+      { key: "TELC_C1H_HV_T1_ZUORDNUNG", label: "Teil 1 — Aussagen zuordnen", items: 8, sourced: true, answerFormat: "ZUORDNUNG" },
+      { key: "TELC_C1H_HV_T2_MC", label: "Teil 2 — Mehrfachauswahl zu einem längeren Hörtext", items: 10, sourced: true, answerFormat: "MC-3" },
+      // Teil 3 is PRODUCTIVE note-taking: the learner completes ~10 notes while
+      // listening. It sits in an objective section but is typed, not keyed a/b/c, so
+      // its format is PRODUCTIVE (the distribution gate's position-spread is
+      // meaningless for it). ⚠️ needs a NEW payload field for the note gaps + accepted
+      // answers — declare it in productivePayloadSchema and assert-survives-parse
+      // (ruling 3), or Zod strips it between DB and learner.
+      { key: "TELC_C1H_HV_T3_NOTIZEN", label: "Teil 3 — Notizen zum Hörtext ergänzen", items: 10, sourced: true, answerFormat: "PRODUCTIVE" },
+    ],
+  },
+  SCHRIFTLICHER_AUSDRUCK: {
+    section: "SCHRIFTLICHER_AUSDRUCK",
+    totalItems: 1,
+    minutes: null,
+    sourced: true,
+    aufgaben: [
+      // ONE argumentative text (Stellungnahme/Erörterung), chosen from TWO themes.
+      // The 1-of-2 choice is a DRAW-SEAM concern (ruling 1), not a per-item field —
+      // the essays are authored standalone and paired at selection.
+      { key: "TELC_C1H_SA_STELLUNGNAHME", label: "Schriftlicher Ausdruck — argumentative Stellungnahme (1 von 2 Themen)", items: 1, sourced: true, answerFormat: "PRODUCTIVE" },
+    ],
+  },
+  MUENDLICHER_AUSDRUCK: {
+    section: "MUENDLICHER_AUSDRUCK",
+    totalItems: null, // an oral part — tasks, not scored objective items
+    minutes: null,
+    sourced: true,
+    aufgaben: [
+      { key: "TELC_C1H_MA_T1A_PRAESENTATION", label: "Teil 1A — Präsentation", items: null, sourced: true, answerFormat: "PRODUCTIVE" },
+      // 1B/2 are partner-dependent in the paired exam; built with explicit self-study
+      // framing (ruling 2): 1B provides a given presentation to summarise, 2 provides
+      // a statement + points to discuss. Documented adaptation, not a copy of the exam.
+      { key: "TELC_C1H_MA_T1B_ZUSAMMENFASSUNG", label: "Teil 1B — Zusammenfassung (self-study: gegebene Präsentation zusammenfassen)", items: null, sourced: true, answerFormat: "PRODUCTIVE" },
+      { key: "TELC_C1H_MA_T2_DISKUSSION", label: "Teil 2 — Diskussion (self-study: Aussage + Punkte diskutieren)", items: null, sourced: true, answerFormat: "PRODUCTIVE" },
+    ],
+  },
+};
+
+/** telc C1 Hochschule productive bounds. The SA word band is CONVENTION (ruling 5),
+ *  so — like telc B1's letter target — it is recorded, flagged, and left UNENFORCED.
+ *  It is deliberately NOT wired into the conformance gate. */
+export const C1H_PRODUCTIVE = {
+  SCHRIFTLICHER_AUSDRUCK: {
+    TELC_C1H_SA_STELLUNGNAHME: {
+      // Shown to the learner as a target range; not a published rule.
+      bandMinConvention: 250,
+      bandMaxConvention: 380,
+      bandSourced: false,
+    },
+  },
+} as const;
+
 export const EXAM_STRUCTURES: Record<string, Record<string, SectionStructure>> = {
   TESTDAF: TESTDAF_STRUCTURE,
   TELC_B1: TELC_B1_STRUCTURE,
   DTZ: DTZ_STRUCTURE,
   TELC_B2: B2_STRUCTURE,
+  TELC_C1_HOCHSCHULE: C1H_STRUCTURE,
   EINBUERGERUNGSTEST: EINBUERGERUNG_STRUCTURE,
   DSH: DSH_STRUCTURE,
   OESD_B1: OESD_STRUCTURE,
 };
 
 /** Exams registered in the product but not yet structured. Explicit, so the gap is
- *  visible in code rather than inferred from a missing key. Batches are staged
- *  deliberately: telc B2, telc C1 Hochschule, Goethe-Zertifikat A1–C2, then the new
- *  engines (DSH, DTZ, Einbürgerungstest, ÖSD ZDÖ B1). */
+ *  visible in code rather than inferred from a missing key. Batches were staged
+ *  deliberately: telc B2, then telc C1 Hochschule — both now STRUCTURED (above).
+ *
+ *  Empty is the honest state: every exam that flows through examBank() now has a
+ *  structure. An exam absent from EXAM_STRUCTURES and from this list is a hard
+ *  conformance violation, not a silent skip (see the conformance gate). */
 
-export const UNSTRUCTURED_EXAMS = ["TELC_C1_HOCHSCHULE"] as const;
+export const UNSTRUCTURED_EXAMS = [] as const;
 
 /** Look up the Aufgabe an item's taskType claims to be. */
 export function aufgabeFor(exam: string, section: string, taskType: string): Aufgabe | undefined {
