@@ -1,8 +1,22 @@
 # RESUME — AlmiGoethe cold-start
 
-Checkpoint 2026-07-23, end of day. **Goethe route-3 full build is COMPLETE.** Six
+Checkpoint updated 2026-07-24. **The German corridor is COMPLETE & LIVE.** Six
 German-exam engines are built, gated, reconciled and LIVE in production. Germany
 **and** Austria are covered.
+
+⚠️ SIX vs EIGHT — both numbers are right, do not "correct" one to match the other.
+**Six** = the completed engines (TestDaF · telc B1 · DTZ · Einbürgerungstest, incl.
+per-Bundesland cells · DSH · ÖSD ZDÖ B1), alongside the Goethe-Zertifikat A1–C2 itself.
+**Eight** = what `/pruefung` surfaces, because telc **B2** and **C1 Hochschule** are also
+live — they are just under the ⑤ restructure. The homepage and `/pruefung` say "eight"
+and that is accurate to what a learner can practise today.
+
+**⑤ telc B2 / C1 Hochschule restructure — IN FLIGHT.** Both were authored but
+UNSTRUCTURED (gates reported, did not enforce) and carried the clustered-key defect
+(option "a" correct 92–100%, "c" never). Status: **Stage A GREEN** (LV T2 · SB T1) ·
+**Stage B GREEN** (Hörverstehen, 100 richtig/falsch statements) · **Stage C in progress**
+(Zuordnung bank cells + redaction proof). Then de-game, then the reported→enforced flip,
+then C1 Hochschule the same way.
 
 ## The six engines (all live, five scoring philosophies)
 
@@ -158,5 +172,86 @@ backport list:
 - **whole-bank gate-iteration check** on french / swiss (confirm the conformance
   gate iterates the whole bank, not the registry — the almi-portuguese hole). See
   [[project_almiworld_content_gates]].
+
+## NEW PRODUCT LINES (pipeline, behind current products — one at a time)
+
+### DOCTRINE #4 — language-not-knowledge (governs everything in this section)
+
+Profession-specific **language** exams and standardised **skills** tests fit the model
+and can be honestly sourced. Substantive-**knowledge** licensing exams (medicine,
+nursing, law, finance) carry accuracy-harm plus professional-advice risk: they test the
+profession, not the language. Those get **format/readiness tools only, never unverified
+professional items** — the same STRICT tier the medical set already sits in.
+
+Source of truth for this whole section: the founder's master roadmap
+`AlmiWorld_Future_Product_Pipeline` (updated 2026-07-24). What follows is the goethe-repo
+mirror of it, not a second opinion — if they disagree, the roadmap wins.
+
+### Occupation & professional-language set
+
+**Goethe extensions — cheapest of everything here.** These ride the EXISTING telc engine
+and its %-per-part scoring; they are extensions, not new products, so no Stripe slot and
+no new scoring philosophy:
+- **telc Deutsch B1 · B2 Pflege** — nursing/care; Germany's worldwide care-worker corridor.
+- **telc Deutsch B2 · C1 Medizin** — doctors' Fachsprachprüfung for the Approbation.
+- **telc Deutsch B2 / A2 · B1 Beruf** — workplace German.
+They test professional *communication*, not clinical content, so they stay inside
+doctrine #4. Spec-verify each against the telc handbooks before authoring.
+⚠️ SEQUENCING: do not start these until ⑤ closes. They inherit the very structure and
+answer-format machinery telc B2/C1H is currently being unwound for; adding four more telc
+variants on top of an unfinished restructure repeats the defect at four times the size.
+
+**New standalone products:**
+- **TOLES** (legal English) — see below.
+- **Aviation English** — ICAO language-proficiency requirement (Operational Level 4),
+  tested via **ELPAC** (EUROCONTROL) for pilots and air-traffic controllers.
+  Regulator-mandated, published rating scale, recurring re-test demand.
+- **Maritime English** — **ICS Marlins** test for seafarers (International Chamber of
+  Shipping). Same family as OET, which is already live.
+⚠️ ICAO · EUROCONTROL · the International Chamber of Shipping · the Law Society of England
+& Wales are all REAL bodies. Every one of those attributions is SOURCE-BEFORE-USE — see
+[[feedback_fabricated_docs_real_company]]. Aviation English is additionally safety-adjacent:
+it is language, not knowledge, so it stays inside doctrine #4, but a wrong phraseology key
+is not a thin item.
+
+**⚠ STEER-AWAY — do NOT build:** US bar / **MBE** · England & Wales **SQE1** · **USMLE** ·
+**NCLEX** · **PLAB** · **CFA**. Substantive-knowledge licensing; breaks doctrine #4.
+Format/readiness tools only.
+
+**DO NOT BUILD — ILEC.** Discontinued December 2016. Stale-exam trap.
+
+⏳ Beta-g owes a **sourced envelope** (sections · task types · scoring) for each of these
+when it reaches the front of the queue.
+
+### Legal exams
+
+**PRIMARY — TOLES (Test of Legal English Skills).** Best fit for the network and the
+lowest risk in this line, because it tests legal **language**, not substantive law:
+nothing in the bank has to assert what the law *is*.
+- Levels: Foundation · Higher · Advanced.
+- Scoring: percentage + performance band — telc-style, so
+  `src/lib/exams/scoring/telc.ts` already covers the shape. No sixth scoring
+  philosophy needed.
+- Provider: Global Legal English. ⚠️ The founder's note also attributes it to the
+  International Division of the Law Society of England & Wales — a REAL professional
+  body, so that attribution must be SOURCED before it appears in any user-facing copy
+  or disclaimer. See [[feedback_fabricated_docs_real_company]]: the invented letter
+  signed "Helvetia" survived review precisely because its facts were right. A
+  correct-sounding institutional claim is the dangerous kind.
+- ⏳ Beta-g owes a **sourced TOLES envelope** (sections · task types · scoring bands)
+  when this reaches the front of the queue. Do not author before it lands — that is
+  the mistake telc B2 is currently being unwound from.
+
+**STEER-AWAY — US bar (MBE) and England & Wales SQE1.** Logged 2026-07-23 as
+"later / higher risk"; **doctrine #4 (2026-07-24) supersedes that — do not build.**
+They are substantive-law MC: they test the profession, not the language. The reasoning
+is kept because it is the clearest statement of WHY the doctrine exists — a
+jurisdiction-specific legal fact-base is larger AND far more perishable than the
+44-fact civic base; case law and statute move, so a stale key is not a thin item but a
+wrong statement of law to someone sitting a professional qualification. Format/readiness
+tools only, never unverified professional items.
+
+**LOW PRIORITY — LSAT.** Reasoning and reading, not law content, so it teaches nothing
+jurisdiction-specific; LSAC copyright is tight. Not a near-term candidate.
 
 Repo: `C:\Projects\almi-goethe`. Prod: `almigoethe.almiworld.com`. Branch = `main`.
