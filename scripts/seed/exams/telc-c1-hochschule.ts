@@ -1588,77 +1588,279 @@ export const ITEMS: ExamItemInput[] = [
   },
 
   // ----------------------------------------------------------------- HOERVERSTEHEN
+  // telc C1 Hochschule Hörverstehen Teil 2 — detailliertes Hören: ONE longer text
+  // (Vortrag oder Interview), 10 Mehrfachauswahl-Fragen (a/b/c), zweimal gehört.
+  //
+  // CONSOLIDATION: the previous bank held 16 short standalone audios with 3 MC each —
+  // the WRONG architecture for Teil 2, which is one longer text carrying 10 questions.
+  // Those 16 are removed here (deactivate-never-delete at reconcile); these five carry
+  // the real shape.
+  //
+  // BALANCE IS AUTHORED, NOT DE-GAMED (ruling 4). The questions are order-bound to the
+  // recording — a learner tracks answer 1..10 against audio that plays 1..10 — so
+  // deRhythm's reorder would be a worse defect than any rhythm it repairs. The key
+  // spread (aggregate a/b/c ≈ 16/17/17, top 34%, every option live, no uniform item)
+  // is authored and ASSERTED at the foot of this file, never permuted.
   {
     exam: EXAM,
     level: L,
     section: SECTION.HOERVERSTEHEN,
-    taskType: "TELC_C1H_HV_LECTURE",
-    title: "Vortrag: Mehrsprachigkeit als Ressource",
-    prompt: "Hören Sie den Vortragsausschnitt und beantworten Sie die Fragen.",
+    taskType: "TELC_C1H_HV_T2_MC",
+    title: "Vortrag: Mehrsprachigkeit an der Hochschule",
+    prompt: "Hören Sie den Vortrag und beantworten Sie die zehn Fragen.",
     difficulty: "CORE",
     topicTag: "wissenschaft",
-    timeLimitSeconds: 720,
+    timeLimitSeconds: 900,
     payload: {
-      instructions: "Sie hören einen Ausschnitt aus einem Vortrag. Wählen Sie die richtige Antwort.",
+      instructions: "Sie hören einen längeren Vortrag, zweimal. Wählen Sie für jede Frage die richtige Antwort (a, b oder c).",
       audioScript:
-        "Meine Damen und Herren, in der öffentlichen Debatte wird Mehrsprachigkeit gelegentlich als Belastung dargestellt, gerade mit Blick auf Kinder, die mit zwei Sprachen aufwachsen. Die Forschung zeichnet jedoch ein anderes Bild. Zwar mischen mehrsprachige Kinder in frühen Jahren die Sprachen bisweilen, doch dieser Effekt gleicht sich mit der Zeit aus. Langfristig zeigen viele von ihnen sogar Vorteile, etwa eine größere Flexibilität im Denken. Wichtig ist allerdings, dass beide Sprachen im Alltag verlässlich vorkommen; eine Sprache, die nur selten gesprochen wird, entwickelt sich naturgemäß schwächer.",
+        "Meine Damen und Herren, ich möchte heute über Mehrsprachigkeit an Hochschulen sprechen. In der öffentlichen Debatte wird das Aufwachsen mit mehreren Sprachen gelegentlich noch als Belastung dargestellt. Die neuere Forschung widerspricht dieser Sicht deutlich. Zwar vermischen mehrsprachige Kinder in den ersten Jahren die Sprachen zuweilen, doch dieser Effekt verschwindet mit der Zeit von selbst. Langfristig zeigen viele mehrsprachige Sprecher sogar Vorteile, etwa eine größere geistige Flexibilität und ein feineres Gespür dafür, was ein Gegenüber tatsächlich versteht. Entscheidend ist jedoch, dass beide Sprachen im Alltag verlässlich gebraucht werden; eine Sprache, die kaum vorkommt, entwickelt sich zwangsläufig schwächer. An den Universitäten stellt sich die Frage neu, seit viele Studiengänge auf Englisch unterrichtet werden. Befürworter verweisen auf die internationale Anschlussfähigkeit der Absolventen. Kritiker warnen dagegen, dass die deutsche Fachsprache verkümmere, wenn sie in der Lehre nicht mehr geübt werde. Meine eigene Position ist, dass sich beides nicht ausschließt: Wer die Fachbegriffe in zwei Sprachen beherrscht, ist im Vorteil. Voraussetzung dafür ist allerdings, dass die Hochschulen beide Sprachen bewusst pflegen, statt die eine der anderen zu opfern. Studien schließlich, die einen unmittelbaren Zusammenhang zwischen Mehrsprachigkeit und besseren Prüfungsnoten behaupten, sehe ich mit Vorsicht; die Datenlage dazu ist bislang uneindeutig.",
       questions: [
         {
           id: "q1",
-          stem: "Wie wird Mehrsprachigkeit in der öffentlichen Debatte teils dargestellt?",
+          stem: "Wie wird Mehrsprachigkeit in der öffentlichen Debatte laut Vortrag teils noch gesehen?",
           options: [
             { id: "a", text: "als eindeutiger Vorteil" },
-            { id: "b", text: "als mögliche Belastung" },
-            { id: "c", text: "als völlig unbedeutend" },
+            { id: "b", text: "als Belastung" },
+            { id: "c", text: "als bedeutungslos" },
           ],
           answer: "b",
         },
         {
           id: "q2",
-          stem: "Was sagt die Forschung über das Mischen der Sprachen?",
+          stem: "Was sagt die neuere Forschung zum Mischen der Sprachen bei Kindern?",
           options: [
-            { id: "a", text: "Es bleibt dauerhaft bestehen." },
-            { id: "b", text: "Es gleicht sich mit der Zeit aus." },
-            { id: "c", text: "Es tritt nie auf." },
+            { id: "a", text: "Es verschwindet mit der Zeit von selbst." },
+            { id: "b", text: "Es bleibt dauerhaft bestehen." },
+            { id: "c", text: "Es tritt gar nicht auf." },
           ],
-          answer: "b",
+          answer: "a",
         },
         {
           id: "q3",
-          stem: "Welche Bedingung nennt der Vortragende?",
+          stem: "Welchen langfristigen Vorteil nennt der Vortragende?",
           options: [
-            { id: "a", text: "Beide Sprachen müssen im Alltag verlässlich vorkommen." },
+            { id: "a", text: "ein besseres Zahlengedächtnis" },
+            { id: "b", text: "eine höhere Lesegeschwindigkeit" },
+            { id: "c", text: "eine größere geistige Flexibilität" },
+          ],
+          answer: "c",
+        },
+        {
+          id: "q4",
+          stem: "Welche Bedingung nennt er für eine gute Sprachentwicklung?",
+          options: [
+            { id: "a", text: "Beide Sprachen müssen im Alltag verlässlich gebraucht werden." },
             { id: "b", text: "Eine Sprache sollte klar bevorzugt werden." },
             { id: "c", text: "Die Sprachen sollten strikt getrennt bleiben." },
           ],
           answer: "a",
         },
+        {
+          id: "q5",
+          stem: "Warum stellt sich die Frage an Universitäten neu?",
+          options: [
+            { id: "a", text: "weil weniger Menschen studieren" },
+            { id: "b", text: "weil viele Studiengänge auf Englisch unterrichtet werden" },
+            { id: "c", text: "weil Fremdsprachen abgeschafft wurden" },
+          ],
+          answer: "b",
+        },
+        {
+          id: "q6",
+          stem: "Womit begründen die Befürworter des englischsprachigen Unterrichts ihre Position?",
+          options: [
+            { id: "a", text: "mit geringeren Kosten" },
+            { id: "b", text: "mit besseren Bibliotheken" },
+            { id: "c", text: "mit der internationalen Anschlussfähigkeit der Absolventen" },
+          ],
+          answer: "c",
+        },
+        {
+          id: "q7",
+          stem: "Was befürchten die Kritiker?",
+          options: [
+            { id: "a", text: "dass zu wenige Studierende Englisch lernen" },
+            { id: "b", text: "dass die deutsche Fachsprache verkümmert" },
+            { id: "c", text: "dass die Prüfungen zu leicht werden" },
+          ],
+          answer: "b",
+        },
+        {
+          id: "q8",
+          stem: "Wie lautet die eigene Position des Vortragenden?",
+          options: [
+            { id: "a", text: "Deutsch und Englisch in der Lehre schließen sich nicht aus." },
+            { id: "b", text: "Nur Englisch sollte unterrichtet werden." },
+            { id: "c", text: "Nur Deutsch sollte unterrichtet werden." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q9",
+          stem: "Welche Voraussetzung nennt er dafür?",
+          options: [
+            { id: "a", text: "dass die Studierenden im Ausland studieren" },
+            { id: "b", text: "dass eine Sprache aufgegeben wird" },
+            { id: "c", text: "dass die Hochschulen beide Sprachen bewusst pflegen" },
+          ],
+          answer: "c",
+        },
+        {
+          id: "q10",
+          stem: "Wie bewertet er Studien, die Mehrsprachigkeit direkt mit besseren Noten verbinden?",
+          options: [
+            { id: "a", text: "Er hält sie für eindeutig bewiesen." },
+            { id: "b", text: "Er sieht sie mit Vorsicht, da die Datenlage uneindeutig ist." },
+            { id: "c", text: "Er lehnt jede Forschung dazu grundsätzlich ab." },
+          ],
+          answer: "b",
+        },
       ],
     },
-    guidanceNote: "„Zwar … doch …“ und „allerdings“ kündigen Einschränkungen an — dort verstecken sich oft die Antworten.",
+    guidanceNote: "Einschränkende Signale („Entscheidend ist jedoch …“, „allerdings“, „mit Vorsicht“) tragen bei C1 oft die Antwort.",
   },
   {
     exam: EXAM,
     level: L,
     section: SECTION.HOERVERSTEHEN,
-    taskType: "TELC_C1H_HV_LECTURE",
-    title: "Vortrag: Erinnerung als Rekonstruktion",
-    prompt: "Hören Sie den Vortragsausschnitt und beantworten Sie die Fragen.",
+    taskType: "TELC_C1H_HV_T2_MC",
+    title: "Interview: Arbeit in der Feldforschung",
+    prompt: "Hören Sie das Interview und beantworten Sie die zehn Fragen.",
     difficulty: "STRETCH",
     topicTag: "wissenschaft",
-    timeLimitSeconds: 720,
+    timeLimitSeconds: 900,
     payload: {
-      instructions: "Sie hören einen Ausschnitt aus einem Vortrag. Wählen Sie die richtige Antwort.",
+      instructions: "Sie hören ein längeres Interview, zweimal. Wählen Sie für jede Frage die richtige Antwort (a, b oder c).",
       audioScript:
-        "Meine Damen und Herren, wir stellen uns die Erinnerung gern wie ein Archiv vor, aus dem wir Aufnahmen unverändert abrufen. Die Forschung zeigt jedoch ein anderes Bild: Jede Erinnerung wird im Moment des Abrufs neu zusammengesetzt. Dabei fließen unser heutiges Wissen und unsere Erwartungen mit ein. Das erklärt, warum Zeugen dasselbe Ereignis unterschiedlich schildern und warum Erinnerungen sich mit der Zeit verändern können, ohne dass wir es merken. Erinnern ist also weniger ein Wiedergeben als ein Neuerschaffen.",
+        "MODERATOR: Frau Dr. Renner, Sie erforschen Gemeinschaften vor Ort, oft über viele Monate. Was ist dabei die größte Herausforderung? RENNER: Eindeutig, die nötige Distanz zu wahren. Man lebt lange mit den Menschen und muss dennoch den Blick von außen behalten. MODERATOR: Verändert Ihre bloße Anwesenheit nicht schon das, was Sie beobachten? RENNER: Doch, das lässt sich nie ganz vermeiden. Wichtig ist, diesen Einfluss offen zu benennen, statt so zu tun, als sei man unsichtbar. MODERATOR: Wie halten Sie Ihre Beobachtungen fest? RENNER: Ich schreibe jeden Abend ein ausführliches Feldtagebuch. Alles erst am Monatsende aus dem Gedächtnis zu rekonstruieren, wäre unzuverlässig. MODERATOR: Arbeiten Sie mit Aufnahmegeräten? RENNER: Nur mit Einverständnis, und längst nicht immer. Ein Mikrofon verändert die Gespräche mehr, als viele glauben. MODERATOR: Wie gehen Sie mit persönlichen Beziehungen um? RENNER: Behutsam. Vertrauen ist die Grundlage der Arbeit, aber ich muss aufpassen, dass Nähe mein Urteil nicht trübt. MODERATOR: Wem legen Sie Ihre Ergebnisse vor, bevor Sie veröffentlichen? RENNER: Zuerst den Beteiligten selbst. Sie sollen widersprechen können, wenn sie sich falsch dargestellt sehen. MODERATOR: Hat sich Ihre Methode über die Jahre geändert? RENNER: Ja. Früher hielt ich strikte Distanz für das Ideal, heute halte ich die ehrliche Reflexion der eigenen Rolle für wichtiger. MODERATOR: Und was raten Sie jungen Forschenden? RENNER: Geduld. Die aufschlussreichsten Beobachtungen kommen selten schon in den ersten Wochen.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Was ist laut Renner die größte Herausforderung?",
+          options: [
+            { id: "a", text: "genügend Fördermittel zu finden" },
+            { id: "b", text: "die richtige Ausrüstung zu wählen" },
+            { id: "c", text: "die nötige Distanz zu wahren" },
+          ],
+          answer: "c",
+        },
+        {
+          id: "q2",
+          stem: "Wie geht sie mit dem Einfluss ihrer Anwesenheit um?",
+          options: [
+            { id: "a", text: "Sie versucht, unsichtbar zu bleiben." },
+            { id: "b", text: "Sie benennt ihn offen." },
+            { id: "c", text: "Sie bricht die Forschung ab." },
+          ],
+          answer: "b",
+        },
+        {
+          id: "q3",
+          stem: "Wie hält sie ihre Beobachtungen fest?",
+          options: [
+            { id: "a", text: "in einem täglichen Feldtagebuch" },
+            { id: "b", text: "aus dem Gedächtnis erst am Monatsende" },
+            { id: "c", text: "ausschließlich per Video" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q4",
+          stem: "Wie steht sie zu Aufnahmegeräten?",
+          options: [
+            { id: "a", text: "Sie setzt sie immer ein." },
+            { id: "b", text: "Nur mit Einverständnis und nicht immer." },
+            { id: "c", text: "Sie lehnt sie grundsätzlich ab." },
+          ],
+          answer: "b",
+        },
+        {
+          id: "q5",
+          stem: "Worauf achtet sie bei persönlichen Beziehungen?",
+          options: [
+            { id: "a", text: "dass sie gar keinen Kontakt hat" },
+            { id: "b", text: "dass sie möglichst schnell fertig wird" },
+            { id: "c", text: "dass Nähe ihr Urteil nicht trübt" },
+          ],
+          answer: "c",
+        },
+        {
+          id: "q6",
+          stem: "Wem legt sie ihre Ergebnisse zuerst vor?",
+          options: [
+            { id: "a", text: "den Beteiligten selbst" },
+            { id: "b", text: "der Presse" },
+            { id: "c", text: "einem Geldgeber" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q7",
+          stem: "Warum legt sie die Ergebnisse zuerst diesen Personen vor?",
+          options: [
+            { id: "a", text: "um Werbung für ihre Arbeit zu machen" },
+            { id: "b", text: "um Kosten zu sparen" },
+            { id: "c", text: "damit sie widersprechen können, wenn sie sich falsch dargestellt sehen" },
+          ],
+          answer: "c",
+        },
+        {
+          id: "q8",
+          stem: "Wie hat sich ihre Methode über die Jahre geändert?",
+          options: [
+            { id: "a", text: "Ehrliche Reflexion der eigenen Rolle ist ihr heute wichtiger als strikte Distanz." },
+            { id: "b", text: "Sie hält heute strikte Distanz für das alleinige Ideal." },
+            { id: "c", text: "Sie verzichtet heute ganz auf Beobachtung." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q9",
+          stem: "Was war früher ihr Ideal?",
+          options: [
+            { id: "a", text: "möglichst große Nähe" },
+            { id: "b", text: "strikte Distanz" },
+            { id: "c", text: "der Verzicht auf ein Tagebuch" },
+          ],
+          answer: "b",
+        },
+        {
+          id: "q10",
+          stem: "Was rät sie jungen Forschenden?",
+          options: [
+            { id: "a", text: "möglichst schnell zu publizieren" },
+            { id: "b", text: "Aufnahmegeräte immer einzusetzen" },
+            { id: "c", text: "Geduld, da aufschlussreiche Beobachtungen selten früh kommen" },
+          ],
+          answer: "c",
+        },
+      ],
+    },
+    guidanceNote: "Bei Interviews sitzt die Antwort in der Aussage der befragten Person, nicht in der Frage des Moderators.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.HOERVERSTEHEN,
+    taskType: "TELC_C1H_HV_T2_MC",
+    title: "Vortrag: Wie das Gedächtnis rekonstruiert",
+    prompt: "Hören Sie den Vortrag und beantworten Sie die zehn Fragen.",
+    difficulty: "STRETCH",
+    topicTag: "wissenschaft",
+    timeLimitSeconds: 900,
+    payload: {
+      instructions: "Sie hören einen längeren Vortrag, zweimal. Wählen Sie für jede Frage die richtige Antwort (a, b oder c).",
+      audioScript:
+        "Meine Damen und Herren, wir stellen uns die Erinnerung gern wie ein Archiv vor, aus dem wir gespeicherte Aufnahmen unverändert abrufen. Die Gedächtnisforschung zeichnet ein anderes Bild. Jede Erinnerung wird im Augenblick des Abrufs neu zusammengesetzt, und dabei fließen unser heutiges Wissen und unsere Erwartungen mit ein. Das erklärt, warum zwei Zeugen dasselbe Ereignis unterschiedlich schildern. Es erklärt auch, warum Erinnerungen sich mit der Zeit verändern können, ohne dass wir es bemerken. Besonders eindrücklich zeigen das Experimente, in denen sich Versuchspersonen an Ereignisse erinnerten, die nie stattgefunden hatten, nachdem man sie ihnen nur eindringlich geschildert hatte. Daraus folgt aber nicht, dass unser Gedächtnis wertlos wäre. Für den Alltag ist es erstaunlich zuverlässig. Problematisch wird die Sache erst dort, wo großes Gewicht auf einer einzelnen Erinnerung ruht, etwa vor Gericht. Fachleute empfehlen deshalb, Zeugenaussagen möglichst früh und ohne suggestive Fragen aufzunehmen. Auch die Sicherheit, mit der jemand etwas berichtet, ist übrigens kein verlässliches Maß für die Richtigkeit: Menschen können sich sehr sicher sein und sich dennoch irren. Erinnern, so mein Fazit, ist weniger ein Wiedergeben als ein Neuerschaffen.",
       questions: [
         {
           id: "q1",
           stem: "Wie stellen wir uns Erinnerung laut Vortrag oft vor?",
           options: [
             { id: "a", text: "wie ein Archiv mit unveränderten Aufnahmen" },
-            { id: "b", text: "wie einen leeren Raum" },
-            { id: "c", text: "wie eine exakte Kamera" },
+            { id: "b", text: "wie eine unbeschriebene Tafel" },
+            { id: "c", text: "wie eine fehlerfreie Kamera" },
           ],
           answer: "a",
         },
@@ -1666,14 +1868,84 @@ export const ITEMS: ExamItemInput[] = [
           id: "q2",
           stem: "Was geschieht laut Forschung beim Abruf einer Erinnerung?",
           options: [
-            { id: "a", text: "Sie wird neu zusammengesetzt." },
-            { id: "b", text: "Sie bleibt völlig unverändert." },
-            { id: "c", text: "Sie wird gelöscht." },
+            { id: "a", text: "Sie bleibt exakt erhalten." },
+            { id: "b", text: "Sie wird vollständig gelöscht." },
+            { id: "c", text: "Sie wird neu zusammengesetzt." },
+          ],
+          answer: "c",
+        },
+        {
+          id: "q3",
+          stem: "Was fließt beim Abruf mit ein?",
+          options: [
+            { id: "a", text: "nur die ursprünglichen Sinneseindrücke" },
+            { id: "b", text: "unser heutiges Wissen und unsere Erwartungen" },
+            { id: "c", text: "ausschließlich Gefühle" },
+          ],
+          answer: "b",
+        },
+        {
+          id: "q4",
+          stem: "Womit erklärt der Vortrag unterschiedliche Zeugenaussagen?",
+          options: [
+            { id: "a", text: "mit absichtlicher Täuschung" },
+            { id: "b", text: "mit schlechtem Hörvermögen" },
+            { id: "c", text: "mit der rekonstruktiven Natur des Erinnerns" },
+          ],
+          answer: "c",
+        },
+        {
+          id: "q5",
+          stem: "Was zeigten die erwähnten Experimente?",
+          options: [
+            { id: "a", text: "Menschen erinnerten sich an Ereignisse, die nie stattgefunden hatten." },
+            { id: "b", text: "Menschen vergaßen alle geschilderten Ereignisse." },
+            { id: "c", text: "Menschen erinnerten sich stets völlig korrekt." },
           ],
           answer: "a",
         },
         {
-          id: "q3",
+          id: "q6",
+          stem: "Wie bewertet der Vortrag das Gedächtnis für den Alltag?",
+          options: [
+            { id: "a", text: "als völlig unbrauchbar" },
+            { id: "b", text: "als erstaunlich zuverlässig" },
+            { id: "c", text: "als durchweg gefährlich" },
+          ],
+          answer: "b",
+        },
+        {
+          id: "q7",
+          stem: "Wann wird die Sache laut Vortrag problematisch?",
+          options: [
+            { id: "a", text: "wenn großes Gewicht auf einer einzelnen Erinnerung ruht" },
+            { id: "b", text: "wenn viele Zeugen übereinstimmen" },
+            { id: "c", text: "wenn Erinnerungen schriftlich vorliegen" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q8",
+          stem: "Was empfehlen Fachleute für Zeugenaussagen?",
+          options: [
+            { id: "a", text: "sie möglichst spät aufzunehmen" },
+            { id: "b", text: "sie durch gezielte Vorschläge zu stützen" },
+            { id: "c", text: "sie früh und ohne suggestive Fragen aufzunehmen" },
+          ],
+          answer: "c",
+        },
+        {
+          id: "q9",
+          stem: "Was sagt der Vortrag über die Sicherheit einer Aussage?",
+          options: [
+            { id: "a", text: "Sie beweist die Richtigkeit." },
+            { id: "b", text: "Sie ist kein verlässliches Maß für die Richtigkeit." },
+            { id: "c", text: "Sie ist immer nur gespielt." },
+          ],
+          answer: "b",
+        },
+        {
+          id: "q10",
           stem: "Wie fasst der Vortragende das Erinnern zusammen?",
           options: [
             { id: "a", text: "als Neuerschaffen statt bloßes Wiedergeben" },
@@ -1684,693 +1956,245 @@ export const ITEMS: ExamItemInput[] = [
         },
       ],
     },
-    guidanceNote: "„weniger ein … als ein …“ formuliert die Kernthese des Vortrags.",
+    guidanceNote: "„weniger ein … als ein …“ am Schluss formuliert die Kernthese — ein häufiger Prüfungsfokus.",
   },
   {
     exam: EXAM,
     level: L,
     section: SECTION.HOERVERSTEHEN,
-    taskType: "TELC_C1H_HV_INTERVIEW",
-    title: "Interview: Feldforschung",
-    prompt: "Hören Sie das Interview und beantworten Sie die Fragen.",
+    taskType: "TELC_C1H_HV_T2_MC",
+    title: "Interview: Open Access in der Wissenschaft",
+    prompt: "Hören Sie das Interview und beantworten Sie die zehn Fragen.",
     difficulty: "CORE",
     topicTag: "wissenschaft",
-    timeLimitSeconds: 720,
+    timeLimitSeconds: 900,
     payload: {
-      instructions: "Sie hören ein kurzes Interview. Wählen Sie die richtige Antwort.",
+      instructions: "Sie hören ein längeres Interview, zweimal. Wählen Sie für jede Frage die richtige Antwort (a, b oder c).",
       audioScript:
-        "MODERATOR: Frau Dr. Renner, Sie erforschen Gemeinschaften vor Ort. Was ist dabei die größte Herausforderung? RENNER: Sicher die Distanz zu wahren. Man lebt oft monatelang mit den Menschen und muss trotzdem den Blick von außen behalten. MODERATOR: Verändert Ihre Anwesenheit nicht das, was Sie beobachten? RENNER: Doch, das lässt sich nie ganz vermeiden. Wichtig ist, diesen Einfluss offen zu benennen, statt so zu tun, als sei man unsichtbar. MODERATOR: Und wie gehen Sie mit persönlichen Beziehungen um? RENNER: Behutsam. Vertrauen ist die Grundlage, aber ich muss aufpassen, dass Nähe mein Urteil nicht trübt.",
+        "MODERATORIN: Herr Dr. Vogt, Sie setzen sich für den freien Zugang zu Forschungsergebnissen ein, für Open Access. Worum geht es dabei im Kern? VOGT: Darum, dass Forschung, die mit öffentlichen Mitteln bezahlt wurde, auch für alle frei zugänglich sein sollte, statt hinter teuren Bezahlschranken zu liegen. MODERATORIN: Die Verlage verweisen auf ihre Kosten. VOGT: Zu Recht, Begutachtung und Herausgabe kosten Geld. Nur verschwinden diese Kosten beim Open Access nicht, sie verlagern sich lediglich von den Lesenden zu den Autoren, die für die Veröffentlichung zahlen. MODERATORIN: Ist das nicht auch ein Problem? VOGT: Ein erhebliches sogar. Forschende aus ärmeren Einrichtungen können sich hohe Publikationsgebühren oft nicht leisten. Die Zugangshürde wandert also nur von der einen auf die andere Seite. MODERATORIN: Wie ließe sich das lösen? VOGT: Am ehesten durch Modelle, die von Bibliotheken oder Konsortien getragen werden, sodass weder Leser noch Autor einzeln zahlen. MODERATORIN: Sie fordern auch, dass Wissenschaftler ihre Arbeit allgemein verständlich erklären. Warum? VOGT: Weil eine informierte Öffentlichkeit bessere Entscheidungen trifft und weil sie die Forschung ja mitfinanziert. MODERATORIN: Kritiker sagen, Vereinfachung führe zu Fehlern. VOGT: Diese Gefahr besteht, ich bestreite sie nicht. Aber die Antwort darauf ist gute Vermittlung, nicht Schweigen. MODERATORIN: Sollte öffentliche Kommunikation die Karriere fördern? VOGT: Unbedingt. Solange sie nicht zählt, werden viele sie als verlorene Zeit ansehen. MODERATORIN: Ihr wichtigster Punkt zum Schluss? VOGT: Wissen, das die Allgemeinheit bezahlt hat, sollte der Allgemeinheit auch gehören.",
       questions: [
         {
           id: "q1",
-          stem: "Was ist laut Renner die größte Herausforderung?",
+          stem: "Was fordert Open Access im Kern?",
           options: [
-            { id: "a", text: "die nötige Distanz zu wahren" },
-            { id: "b", text: "die richtige Ausrüstung zu finden" },
-            { id: "c", text: "genügend Geld zu bekommen" },
+            { id: "a", text: "höhere Preise für Fachzeitschriften" },
+            { id: "b", text: "freien Zugang zu öffentlich finanzierter Forschung" },
+            { id: "c", text: "ein Ende aller Veröffentlichungen" },
+          ],
+          answer: "b",
+        },
+        {
+          id: "q2",
+          stem: "Wie steht Vogt zu den Kosten der Verlage?",
+          options: [
+            { id: "a", text: "Er bestreitet, dass überhaupt Kosten entstehen." },
+            { id: "b", text: "Er hält die Verlage für vollkommen überflüssig." },
+            { id: "c", text: "Er erkennt an, dass Begutachtung und Herausgabe Geld kosten." },
+          ],
+          answer: "c",
+        },
+        {
+          id: "q3",
+          stem: "Was passiert laut Vogt mit den Kosten beim Open Access?",
+          options: [
+            { id: "a", text: "Sie verlagern sich von den Lesern zu den Autoren." },
+            { id: "b", text: "Sie verschwinden vollständig." },
+            { id: "c", text: "Sie steigen allein für die Leser." },
           ],
           answer: "a",
         },
         {
-          id: "q2",
-          stem: "Wie geht sie mit dem Einfluss ihrer Anwesenheit um?",
+          id: "q4",
+          stem: "Welches Problem sieht er dabei?",
           options: [
-            { id: "a", text: "Sie benennt ihn offen." },
-            { id: "b", text: "Sie leugnet ihn." },
-            { id: "c", text: "Sie ignoriert ihn." },
+            { id: "a", text: "dass niemand mehr publiziert" },
+            { id: "b", text: "dass die Verlage bankrottgehen" },
+            { id: "c", text: "dass ärmere Einrichtungen die Publikationsgebühren kaum zahlen können" },
+          ],
+          answer: "c",
+        },
+        {
+          id: "q5",
+          stem: "Wie ließe sich das seiner Meinung nach lösen?",
+          options: [
+            { id: "a", text: "durch höhere Gebühren für Leser" },
+            { id: "b", text: "durch Modelle, die von Bibliotheken oder Konsortien getragen werden" },
+            { id: "c", text: "durch Abschaffung der Begutachtung" },
+          ],
+          answer: "b",
+        },
+        {
+          id: "q6",
+          stem: "Warum sollen Wissenschaftler ihre Arbeit verständlich erklären?",
+          options: [
+            { id: "a", text: "weil eine informierte Öffentlichkeit bessere Entscheidungen trifft" },
+            { id: "b", text: "weil es die Druckkosten senkt" },
+            { id: "c", text: "weil Fachzeitschriften es vorschreiben" },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q7",
+          stem: "Wie reagiert Vogt auf den Einwand, Vereinfachung führe zu Fehlern?",
+          options: [
+            { id: "a", text: "Er hält den Einwand für völlig unsinnig." },
+            { id: "b", text: "Er räumt die Gefahr ein, fordert aber gute Vermittlung statt Schweigen." },
+            { id: "c", text: "Er rät Wissenschaftlern, nicht mehr öffentlich zu sprechen." },
+          ],
+          answer: "b",
+        },
+        {
+          id: "q8",
+          stem: "Was meint er zur Rolle öffentlicher Kommunikation in der Karriere?",
+          options: [
+            { id: "a", text: "Sie sollte keinerlei Rolle spielen." },
+            { id: "b", text: "Sie sollte eher bestraft werden." },
+            { id: "c", text: "Sie sollte zählen, sonst gilt sie vielen als verlorene Zeit." },
+          ],
+          answer: "c",
+        },
+        {
+          id: "q9",
+          stem: "Wie lautet sein wichtigster Punkt zum Schluss?",
+          options: [
+            { id: "a", text: "Wissen, das die Allgemeinheit bezahlt hat, sollte ihr auch gehören." },
+            { id: "b", text: "Forschung sollte grundsätzlich geheim bleiben." },
+            { id: "c", text: "Allein die Verlage sollten entscheiden." },
+          ],
+          answer: "a",
+        },
+        {
+          id: "q10",
+          stem: "Wie ist Vogts Haltung zu den Verlagen insgesamt?",
+          options: [
+            { id: "a", text: "grundsätzlich ablehnend" },
+            { id: "b", text: "differenziert — er erkennt ihre Leistung an, kritisiert aber die Zugangshürden" },
+            { id: "c", text: "völlig gleichgültig" },
+          ],
+          answer: "b",
+        },
+      ],
+    },
+    guidanceNote: "Achten Sie auf Zugeständnisse („Zu Recht …“, „ich bestreite sie nicht“) — sie trennen die differenzierte von der pauschalen Antwort.",
+  },
+  {
+    exam: EXAM,
+    level: L,
+    section: SECTION.HOERVERSTEHEN,
+    taskType: "TELC_C1H_HV_T2_MC",
+    title: "Vortrag: Warum Prognosen an Grenzen stoßen",
+    prompt: "Hören Sie den Vortrag und beantworten Sie die zehn Fragen.",
+    difficulty: "STRETCH",
+    topicTag: "wissenschaft",
+    timeLimitSeconds: 900,
+    payload: {
+      instructions: "Sie hören einen längeren Vortrag, zweimal. Wählen Sie für jede Frage die richtige Antwort (a, b oder c).",
+      audioScript:
+        "Guten Tag. Ich möchte erklären, warum Vorhersagen über die Zukunft aus einem grundsätzlichen Grund schwierig sind. Viele Systeme, ob das Wetter oder eine Volkswirtschaft, reagieren empfindlich auf kleinste Unterschiede in den Ausgangsbedingungen. Ein winziger Fehler in den Anfangsdaten kann sich aufschaukeln und die Prognose nach kurzer Zeit unbrauchbar machen. Man nennt das die Empfindlichkeit gegenüber den Anfangsbedingungen. Daraus folgt aber nicht, dass Vorhersagen sinnlos wären. Für kurze Zeiträume sind sie oft erstaunlich verlässlich; die Wettervorhersage für morgen trifft meist zu. Je weiter wir jedoch in die Zukunft blicken, desto größer wird die Unsicherheit. Wichtig ist: Das ist keine Frage besserer Rechner, sondern liegt in der Natur solcher Systeme selbst. Ein schnellerer Computer verschiebt die Grenze nur ein wenig, er hebt sie nicht auf. Sinnvoll ist deshalb, nicht eine einzige Zahl zu nennen, sondern mit Wahrscheinlichkeiten und Bandbreiten zu arbeiten. Und man sollte Prognosen regelmäßig überprüfen und anpassen, sobald neue Daten vorliegen. Wer dagegen eine punktgenaue Vorhersage für zehn Jahre verspricht, verkennt entweder die Sache oder verspricht zu viel. Mein Fazit: Prognosen sind nützlich, solange man ihre Grenzen kennt und offen ausspricht.",
+      questions: [
+        {
+          id: "q1",
+          stem: "Warum sind Vorhersagen laut Vortrag grundsätzlich schwierig?",
+          options: [
+            { id: "a", text: "weil es nie genügend Daten gibt" },
+            { id: "b", text: "weil sich niemand dafür interessiert" },
+            { id: "c", text: "weil viele Systeme empfindlich auf kleinste Ausgangsunterschiede reagieren" },
+          ],
+          answer: "c",
+        },
+        {
+          id: "q2",
+          stem: "Was kann ein winziger Fehler in den Anfangsdaten bewirken?",
+          options: [
+            { id: "a", text: "Er kann sich aufschaukeln und die Prognose unbrauchbar machen." },
+            { id: "b", text: "Er bleibt stets folgenlos." },
+            { id: "c", text: "Er verbessert die Vorhersage." },
           ],
           answer: "a",
         },
         {
           id: "q3",
-          stem: "Worauf achtet sie bei persönlichen Beziehungen?",
+          stem: "Wie nennt man diese Eigenschaft?",
           options: [
-            { id: "a", text: "dass Nähe ihr Urteil nicht trübt" },
-            { id: "b", text: "dass sie keinen Kontakt hat" },
-            { id: "c", text: "dass sie schnell fertig wird" },
+            { id: "a", text: "Trägheit der Systeme" },
+            { id: "b", text: "Empfindlichkeit gegenüber den Anfangsbedingungen" },
+            { id: "c", text: "Gleichgewicht der Kräfte" },
           ],
-          answer: "a",
-        },
-      ],
-    },
-    guidanceNote: "Achten Sie auf „Doch, das lässt sich nie ganz vermeiden“ — eine ehrliche Einschränkung.",
-  },
-  {
-    exam: EXAM,
-    level: L,
-    section: SECTION.HOERVERSTEHEN,
-    taskType: "TELC_C1H_HV_LECTURE",
-    title: "Vortrag: Warum Prognosen schwierig sind",
-    prompt: "Hören Sie den Vortragsausschnitt und beantworten Sie die Fragen.",
-    difficulty: "STRETCH",
-    topicTag: "wissenschaft",
-    timeLimitSeconds: 720,
-    payload: {
-      instructions: "Sie hören einen Ausschnitt aus einem Vortrag. Wählen Sie die richtige Antwort.",
-      audioScript:
-        "Guten Tag. Vorhersagen über die Zukunft sind aus einem grundsätzlichen Grund schwierig: Viele Systeme, ob Wetter oder Wirtschaft, reagieren empfindlich auf kleinste Ausgangsunterschiede. Ein winziger Fehler in den Anfangsdaten kann sich aufschaukeln und die Prognose nach kurzer Zeit unbrauchbar machen. Das bedeutet nicht, dass Vorhersagen sinnlos wären. Für kurze Zeiträume sind sie oft erstaunlich verlässlich. Je weiter wir jedoch in die Zukunft blicken, desto größer wird die Unsicherheit — und das ist keine Frage besserer Rechner, sondern der Natur solcher Systeme.",
-      questions: [
-        {
-          id: "q1",
-          stem: "Warum sind Vorhersagen grundsätzlich schwierig?",
-          options: [
-            { id: "a", text: "Kleinste Ausgangsunterschiede schaukeln sich auf." },
-            { id: "b", text: "Es fehlt immer an Daten." },
-            { id: "c", text: "Niemand interessiert sich dafür." },
-          ],
-          answer: "a",
+          answer: "b",
         },
         {
-          id: "q2",
+          id: "q4",
           stem: "Was sagt der Vortrag über kurze Zeiträume?",
           options: [
-            { id: "a", text: "Vorhersagen sind oft erstaunlich verlässlich." },
-            { id: "b", text: "Vorhersagen sind völlig unmöglich." },
-            { id: "c", text: "Vorhersagen sind dort am schwierigsten." },
+            { id: "a", text: "Vorhersagen sind dort oft erstaunlich verlässlich." },
+            { id: "b", text: "Vorhersagen sind dort am schwierigsten." },
+            { id: "c", text: "Vorhersagen sind dort völlig unmöglich." },
           ],
           answer: "a",
         },
         {
-          id: "q3",
-          stem: "Woran liegt die wachsende Unsicherheit laut Vortrag?",
+          id: "q5",
+          stem: "Woran liegt die wachsende Unsicherheit bei langen Zeiträumen?",
           options: [
-            { id: "a", text: "an der Natur solcher Systeme, nicht an den Rechnern" },
-            { id: "b", text: "allein an zu langsamen Computern" },
-            { id: "c", text: "an mangelndem Interesse" },
+            { id: "a", text: "an zu langsamen Rechnern" },
+            { id: "b", text: "allein an ungenauen Messgeräten" },
+            { id: "c", text: "an der Natur solcher Systeme selbst" },
+          ],
+          answer: "c",
+        },
+        {
+          id: "q6",
+          stem: "Was bewirkt ein schnellerer Computer laut Vortrag?",
+          options: [
+            { id: "a", text: "Er hebt die Grenze der Vorhersagbarkeit auf." },
+            { id: "b", text: "Er verschiebt die Grenze nur ein wenig." },
+            { id: "c", text: "Er macht Prognosen völlig unmöglich." },
+          ],
+          answer: "b",
+        },
+        {
+          id: "q7",
+          stem: "Was empfiehlt der Vortragende statt einer einzigen Zahl?",
+          options: [
+            { id: "a", text: "gänzlich auf eine Vorhersage zu verzichten" },
+            { id: "b", text: "eine punktgenaue Jahreszahl zu nennen" },
+            { id: "c", text: "mit Wahrscheinlichkeiten und Bandbreiten zu arbeiten" },
+          ],
+          answer: "c",
+        },
+        {
+          id: "q8",
+          stem: "Was soll man mit Prognosen tun, sobald neue Daten vorliegen?",
+          options: [
+            { id: "a", text: "sie regelmäßig überprüfen und anpassen" },
+            { id: "b", text: "sie unverändert lassen" },
+            { id: "c", text: "sie sofort verwerfen" },
           ],
           answer: "a",
+        },
+        {
+          id: "q9",
+          stem: "Wie beurteilt er jemanden, der eine punktgenaue Zehnjahresprognose verspricht?",
+          options: [
+            { id: "a", text: "als besonders zuverlässig" },
+            { id: "b", text: "als jemanden, der die Sache verkennt oder zu viel verspricht" },
+            { id: "c", text: "als vorbildlich vorsichtig" },
+          ],
+          answer: "b",
+        },
+        {
+          id: "q10",
+          stem: "Wie lautet sein Fazit?",
+          options: [
+            { id: "a", text: "Prognosen sind grundsätzlich sinnlos." },
+            { id: "b", text: "Prognosen gelingen mit besseren Rechnern immer." },
+            { id: "c", text: "Prognosen sind nützlich, solange man ihre Grenzen kennt und ausspricht." },
+          ],
+          answer: "c",
         },
       ],
     },
-    guidanceNote: "„keine Frage besserer Rechner, sondern der Natur …“ — die Ursache wird bewusst verschoben.",
-  },
-  {
-    exam: EXAM,
-    level: L,
-    section: SECTION.HOERVERSTEHEN,
-    taskType: "TELC_C1H_HV_INTERVIEW",
-    title: "Interview: Fußgängerzonen",
-    prompt: "Hören Sie das Interview und beantworten Sie die Fragen.",
-    difficulty: "CORE",
-    topicTag: "gesellschaft",
-    timeLimitSeconds: 720,
-    payload: {
-      instructions: "Sie hören ein kurzes Interview. Wählen Sie die richtige Antwort.",
-      audioScript:
-        "MODERATORIN: Herr Kessler, viele Städte weiten ihre Fußgängerzonen aus. Lohnt sich das? KESSLER: In der Regel ja, aber nicht automatisch. Eine Zone allein belebt noch keine Innenstadt. Es kommt darauf an, ob sie gut erreichbar ist und ob es dort etwas zu erleben gibt. MODERATORIN: Klagen nicht die Geschäfte über wegfallende Parkplätze? KESSLER: Am Anfang oft, ja. Studien zeigen aber, dass der Umsatz nach der Umstellung meist steigt, weil sich mehr Menschen gern länger aufhalten. MODERATORIN: Also ein Selbstläufer? KESSLER: Nein, das wäre zu einfach. Ohne begleitende Maßnahmen kann eine Zone auch veröden.",
-      questions: [
-        {
-          id: "q1",
-          stem: "Belebt eine Fußgängerzone laut Kessler automatisch die Innenstadt?",
-          options: [
-            { id: "a", text: "Nein, es kommt auf Erreichbarkeit und Angebot an." },
-            { id: "b", text: "Ja, immer." },
-            { id: "c", text: "Nein, sie schadet immer." },
-          ],
-          answer: "a",
-        },
-        {
-          id: "q2",
-          stem: "Was zeigen Studien zum Umsatz nach der Umstellung?",
-          options: [
-            { id: "a", text: "Er steigt meist." },
-            { id: "b", text: "Er bricht immer ein." },
-            { id: "c", text: "Er bleibt gleich." },
-          ],
-          answer: "a",
-        },
-        {
-          id: "q3",
-          stem: "Ist die Zone ein Selbstläufer?",
-          options: [
-            { id: "a", text: "Nein, ohne begleitende Maßnahmen kann sie veröden." },
-            { id: "b", text: "Ja, sie funktioniert von allein." },
-            { id: "c", text: "Nein, sie ist immer erfolglos." },
-          ],
-          answer: "a",
-        },
-      ],
-    },
-    guidanceNote: "„aber nicht automatisch“ und „das wäre zu einfach“ relativieren die Zustimmung.",
-  },
-  {
-    exam: EXAM,
-    level: L,
-    section: SECTION.HOERVERSTEHEN,
-    taskType: "TELC_C1H_HV_LECTURE",
-    title: "Vortrag: Der Placebo-Effekt",
-    prompt: "Hören Sie den Vortragsausschnitt und beantworten Sie die Fragen.",
-    difficulty: "STRETCH",
-    topicTag: "gesundheit",
-    timeLimitSeconds: 720,
-    payload: {
-      instructions: "Sie hören einen Ausschnitt aus einem Vortrag. Wählen Sie die richtige Antwort.",
-      audioScript:
-        "Guten Tag. Unter dem Placebo-Effekt versteht man, dass ein Scheinmedikament ohne Wirkstoff dennoch eine Besserung bewirken kann. Lange galt das als bloße Einbildung. Heute wissen wir, dass dabei messbare Vorgänge im Körper ablaufen, etwa die Ausschüttung körpereigener Stoffe. Der Effekt ist also real, auch wenn kein Wirkstoff im Spiel ist. Für die Forschung bedeutet das eine Herausforderung: Um die Wirkung eines echten Medikaments zu belegen, muss sie deutlich über den Placebo-Effekt hinausgehen.",
-      questions: [
-        {
-          id: "q1",
-          stem: "Was versteht man unter dem Placebo-Effekt?",
-          options: [
-            { id: "a", text: "Ein Scheinmedikament bewirkt eine Besserung." },
-            { id: "b", text: "Ein Medikament wirkt gar nicht." },
-            { id: "c", text: "Ein Wirkstoff schadet dem Körper." },
-          ],
-          answer: "a",
-        },
-        {
-          id: "q2",
-          stem: "Wie wird der Effekt heute bewertet?",
-          options: [
-            { id: "a", text: "als real, mit messbaren Vorgängen im Körper" },
-            { id: "b", text: "als bloße Einbildung" },
-            { id: "c", text: "als gefährlich" },
-          ],
-          answer: "a",
-        },
-        {
-          id: "q3",
-          stem: "Was bedeutet der Effekt für die Forschung?",
-          options: [
-            { id: "a", text: "Ein echtes Medikament muss klar darüber hinauswirken." },
-            { id: "b", text: "Medikamente müssen nicht mehr getestet werden." },
-            { id: "c", text: "Der Effekt macht Forschung überflüssig." },
-          ],
-          answer: "a",
-        },
-      ],
-    },
-    guidanceNote: "„auch wenn kein Wirkstoff im Spiel ist“ betont, dass der Effekt trotzdem real ist.",
-  },
-  {
-    exam: EXAM,
-    level: L,
-    section: SECTION.HOERVERSTEHEN,
-    taskType: "TELC_C1H_HV_INTERVIEW",
-    title: "Interview: Quellenkritik",
-    prompt: "Hören Sie das Interview und beantworten Sie die Fragen.",
-    difficulty: "CORE",
-    topicTag: "wissenschaft",
-    timeLimitSeconds: 720,
-    payload: {
-      instructions: "Sie hören ein kurzes Interview. Wählen Sie die richtige Antwort.",
-      audioScript:
-        "MODERATOR: Frau Professorin Sommer, was heißt eigentlich Quellenkritik? SOMMER: Vereinfacht gesagt, jede Quelle danach zu befragen, wer sie warum verfasst hat. Ein Brief eines Beteiligten ist etwas anderes als ein amtlicher Bericht. MODERATOR: Kann man einer Quelle denn je ganz trauen? SOMMER: Nicht blind. Aber das ist kein Grund zur Verzweiflung. Gerade wenn man die Absicht hinter einer Quelle kennt, kann man sie umso besser deuten. MODERATOR: Verändern digitale Archive Ihre Arbeit? SOMMER: Sehr. Wir haben mehr Material als je zuvor, aber die eigentliche Aufgabe, es kritisch zu prüfen, bleibt dieselbe.",
-      questions: [
-        {
-          id: "q1",
-          stem: "Was heißt Quellenkritik laut Sommer?",
-          options: [
-            { id: "a", text: "zu fragen, wer eine Quelle warum verfasst hat" },
-            { id: "b", text: "alle Quellen abzulehnen" },
-            { id: "c", text: "nur amtliche Berichte zu lesen" },
-          ],
-          answer: "a",
-        },
-        {
-          id: "q2",
-          stem: "Kann man einer Quelle ganz trauen?",
-          options: [
-            { id: "a", text: "Nicht blind, aber das ist kein Grund zur Verzweiflung." },
-            { id: "b", text: "Ja, jeder Quelle vollständig." },
-            { id: "c", text: "Nein, keiner Quelle jemals." },
-          ],
-          answer: "a",
-        },
-        {
-          id: "q3",
-          stem: "Was sagt sie über digitale Archive?",
-          options: [
-            { id: "a", text: "Mehr Material, aber die kritische Prüfung bleibt." },
-            { id: "b", text: "Sie machen Quellenkritik überflüssig." },
-            { id: "c", text: "Sie liefern weniger Material." },
-          ],
-          answer: "a",
-        },
-      ],
-    },
-    guidanceNote: "„Nicht blind. Aber …“ — die Einschränkung wird sofort relativiert.",
-  },
-  {
-    exam: EXAM,
-    level: L,
-    section: SECTION.HOERVERSTEHEN,
-    taskType: "TELC_C1H_HV_LECTURE",
-    title: "Vortrag: Zusammenarbeit im Tierreich",
-    prompt: "Hören Sie den Vortragsausschnitt und beantworten Sie die Fragen.",
-    difficulty: "CORE",
-    topicTag: "wissenschaft",
-    timeLimitSeconds: 720,
-    payload: {
-      instructions: "Sie hören einen Ausschnitt aus einem Vortrag. Wählen Sie die richtige Antwort.",
-      audioScript:
-        "Meine Damen und Herren, oft wird die Natur allein als Kampf ums Dasein beschrieben. Dabei gerät leicht in Vergessenheit, wie verbreitet Zusammenarbeit im Tierreich ist. Viele Arten teilen Nahrung, warnen einander vor Feinden oder ziehen gemeinsam Nachwuchs auf. Solches Verhalten widerspricht der Evolution keineswegs. Wer anderen hilft, kann selbst profitieren, etwa wenn die Hilfe später erwidert wird oder wenn nahe Verwandte begünstigt werden. Kooperation ist also keine Ausnahme von der Natur, sondern ein fester Bestandteil von ihr.",
-      questions: [
-        {
-          id: "q1",
-          stem: "Was gerät laut Vortrag oft in Vergessenheit?",
-          options: [
-            { id: "a", text: "wie verbreitet Zusammenarbeit im Tierreich ist" },
-            { id: "b", text: "dass Tiere nie kooperieren" },
-            { id: "c", text: "dass es keinen Wettbewerb gibt" },
-          ],
-          answer: "a",
-        },
-        {
-          id: "q2",
-          stem: "Widerspricht Kooperation der Evolution?",
-          options: [
-            { id: "a", text: "Nein, wer hilft, kann selbst profitieren." },
-            { id: "b", text: "Ja, sie ist unmöglich." },
-            { id: "c", text: "Ja, sie schadet immer." },
-          ],
-          answer: "a",
-        },
-        {
-          id: "q3",
-          stem: "Wie fasst der Vortrag Kooperation zusammen?",
-          options: [
-            { id: "a", text: "als fester Bestandteil der Natur" },
-            { id: "b", text: "als seltene Ausnahme" },
-            { id: "c", text: "als Widerspruch zur Natur" },
-          ],
-          answer: "a",
-        },
-      ],
-    },
-    guidanceNote: "„keine Ausnahme …, sondern ein fester Bestandteil“ — die Umwertung ist der Kern.",
-  },
-  {
-    exam: EXAM,
-    level: L,
-    section: SECTION.HOERVERSTEHEN,
-    taskType: "TELC_C1H_HV_INTERVIEW",
-    title: "Interview: Warum wir aufschieben",
-    prompt: "Hören Sie das Interview und beantworten Sie die Fragen.",
-    difficulty: "STRETCH",
-    topicTag: "wissenschaft",
-    timeLimitSeconds: 720,
-    payload: {
-      instructions: "Sie hören ein kurzes Interview. Wählen Sie die richtige Antwort.",
-      audioScript:
-        "MODERATORIN: Herr Dr. Falk, warum schieben Menschen unangenehme Aufgaben auf? FALK: Meist nicht aus Faulheit, wie oft angenommen. Häufig steckt die Angst vor dem Scheitern dahinter oder der Wunsch, eine Sache perfekt zu machen. MODERATORIN: Hilft es dann, sich zusammenzureißen? FALK: Nur bedingt. Wirksamer ist es, die Aufgabe in kleine Schritte zu zerlegen, sodass der erste Schritt nicht mehr abschreckt. MODERATORIN: Ist Aufschieben denn immer schlecht? FALK: Nicht unbedingt. Manchmal reift ein Gedanke, während man wartet. Problematisch wird es erst, wenn das Aufschieben zur Gewohnheit wird und Leidensdruck entsteht.",
-      questions: [
-        {
-          id: "q1",
-          stem: "Woran liegt Aufschieben laut Falk meist?",
-          options: [
-            { id: "a", text: "an Angst vor dem Scheitern oder Perfektionswunsch" },
-            { id: "b", text: "allein an Faulheit" },
-            { id: "c", text: "an fehlender Zeit" },
-          ],
-          answer: "a",
-        },
-        {
-          id: "q2",
-          stem: "Was hält Falk für wirksam?",
-          options: [
-            { id: "a", text: "die Aufgabe in kleine Schritte zu zerlegen" },
-            { id: "b", text: "sich einfach zusammenzureißen" },
-            { id: "c", text: "die Aufgabe ganz zu lassen" },
-          ],
-          answer: "a",
-        },
-        {
-          id: "q3",
-          stem: "Wann wird Aufschieben laut Falk problematisch?",
-          options: [
-            { id: "a", text: "wenn es zur Gewohnheit wird und Leidensdruck entsteht" },
-            { id: "b", text: "immer, ausnahmslos" },
-            { id: "c", text: "nie" },
-          ],
-          answer: "a",
-        },
-      ],
-    },
-    guidanceNote: "„nicht aus Faulheit, wie oft angenommen“ korrigiert eine verbreitete Annahme.",
-  },
-  {
-    exam: EXAM,
-    level: L,
-    section: SECTION.HOERVERSTEHEN,
-    taskType: "TELC_C1H_HV_LECTURE",
-    title: "Vortrag: Der Nutzen der Langeweile",
-    prompt: "Hören Sie den Vortragsausschnitt und beantworten Sie die Fragen.",
-    difficulty: "STRETCH",
-    topicTag: "gesellschaft",
-    timeLimitSeconds: 720,
-    payload: {
-      instructions: "Sie hören einen Ausschnitt aus einem Vortrag. Wählen Sie die richtige Antwort.",
-      audioScript:
-        "Guten Tag. Langeweile hat einen schlechten Ruf, und viele Menschen greifen bei der ersten leeren Minute zum Telefon. Dabei zeigt die Forschung, dass Langeweile durchaus nützlich sein kann. Wenn der Geist nicht ständig beschäftigt ist, beginnt er zu schweifen, und in diesen Momenten entstehen oft neue Ideen. Wer jede Pause sofort füllt, nimmt sich womöglich die Gelegenheit dazu. Das heißt nicht, dass ständige Unterforderung erstrebenswert wäre. Doch gelegentliche Langeweile auszuhalten, statt sie sofort zu vertreiben, kann der Kreativität nützen.",
-      questions: [
-        {
-          id: "q1",
-          stem: "Was tun viele bei der ersten leeren Minute?",
-          options: [
-            { id: "a", text: "Sie greifen zum Telefon." },
-            { id: "b", text: "Sie machen ein Nickerchen." },
-            { id: "c", text: "Sie schreiben Ideen auf." },
-          ],
-          answer: "a",
-        },
-        {
-          id: "q2",
-          stem: "Was geschieht laut Forschung, wenn der Geist schweift?",
-          options: [
-            { id: "a", text: "Oft entstehen neue Ideen." },
-            { id: "b", text: "Man wird sofort krank." },
-            { id: "c", text: "Nichts von Bedeutung." },
-          ],
-          answer: "a",
-        },
-        {
-          id: "q3",
-          stem: "Wie lautet die abgewogene Schlussaussage?",
-          options: [
-            { id: "a", text: "Gelegentliche Langeweile auszuhalten kann der Kreativität nützen." },
-            { id: "b", text: "Ständige Unterforderung ist erstrebenswert." },
-            { id: "c", text: "Langeweile ist immer schädlich." },
-          ],
-          answer: "a",
-        },
-      ],
-    },
-    guidanceNote: "„Das heißt nicht, dass …“ verhindert ein Missverständnis — der Vortrag bleibt differenziert.",
-  },
-  {
-    exam: EXAM,
-    level: L,
-    section: SECTION.HOERVERSTEHEN,
-    taskType: "TELC_C1H_HV_INTERVIEW",
-    title: "Interview: Dialekte im Wandel",
-    prompt: "Hören Sie das Interview und beantworten Sie die Fragen.",
-    difficulty: "CORE",
-    topicTag: "wissenschaft",
-    timeLimitSeconds: 720,
-    payload: {
-      instructions: "Sie hören ein kurzes Interview. Wählen Sie die richtige Antwort.",
-      audioScript:
-        "MODERATOR: Frau Dr. Wieland, sterben die Dialekte aus? WIELAND: So dramatisch würde ich es nicht sagen. Sie verändern sich, das ja. Viele starke Formen weichen ab, aber neue regionale Färbungen entstehen auch. MODERATOR: Ist das ein Verlust? WIELAND: Für manche schon, weil ein Stück Identität verschwindet. Ich sehe es nüchterner: Sprache war immer in Bewegung. MODERATOR: Kann man Dialekte bewusst erhalten? WIELAND: In gewissem Maße, etwa durch Theater oder Schulen. Aber erzwingen lässt sich das nicht. Eine Sprachform lebt nur, solange die Menschen sie im Alltag verwenden.",
-      questions: [
-        {
-          id: "q1",
-          stem: "Sterben die Dialekte laut Wieland aus?",
-          options: [
-            { id: "a", text: "Nein, aber sie verändern sich." },
-            { id: "b", text: "Ja, vollständig." },
-            { id: "c", text: "Nein, sie bleiben unverändert." },
-          ],
-          answer: "a",
-        },
-        {
-          id: "q2",
-          stem: "Wie bewertet sie den Wandel?",
-          options: [
-            { id: "a", text: "nüchtern — Sprache war immer in Bewegung" },
-            { id: "b", text: "als reine Katastrophe" },
-            { id: "c", text: "als bedeutungslos" },
-          ],
-          answer: "a",
-        },
-        {
-          id: "q3",
-          stem: "Was sagt sie zum bewussten Erhalt?",
-          options: [
-            { id: "a", text: "In gewissem Maße möglich, aber nicht erzwingbar." },
-            { id: "b", text: "vollständig steuerbar" },
-            { id: "c", text: "völlig unmöglich" },
-          ],
-          answer: "a",
-        },
-      ],
-    },
-    guidanceNote: "„So dramatisch würde ich es nicht sagen“ dämpft die zugespitzte Frage.",
-  },
-  {
-    exam: EXAM,
-    level: L,
-    section: SECTION.HOERVERSTEHEN,
-    taskType: "TELC_C1H_HV_LECTURE",
-    title: "Vortrag: Schwarmverhalten",
-    prompt: "Hören Sie den Vortragsausschnitt und beantworten Sie die Fragen.",
-    difficulty: "CORE",
-    topicTag: "wissenschaft",
-    timeLimitSeconds: 720,
-    payload: {
-      instructions: "Sie hören einen Ausschnitt aus einem Vortrag. Wählen Sie die richtige Antwort.",
-      audioScript:
-        "Meine Damen und Herren, ein Vogelschwarm, der wie ein einziger Körper am Himmel schwenkt, wirkt fast rätselhaft. Dabei folgt jedes einzelne Tier nur wenigen einfachen Regeln: Halte Abstand zum Nachbarn, richte dich nach ihm aus, bleibe in der Nähe. Aus diesen schlichten Regeln entsteht das komplexe Muster des ganzen Schwarms, ohne dass ein Anführer nötig wäre. Solche Selbstorganisation beobachten Forscher auch anderswo, etwa bei Fischen oder Insekten. Sie zeigt, dass komplexes Verhalten keine zentrale Steuerung voraussetzt.",
-      questions: [
-        {
-          id: "q1",
-          stem: "Wonach richtet sich jedes einzelne Tier im Schwarm?",
-          options: [
-            { id: "a", text: "nach wenigen einfachen Regeln" },
-            { id: "b", text: "nach einem Anführer" },
-            { id: "c", text: "nach dem Zufall allein" },
-          ],
-          answer: "a",
-        },
-        {
-          id: "q2",
-          stem: "Was entsteht aus diesen Regeln?",
-          options: [
-            { id: "a", text: "das komplexe Muster des ganzen Schwarms" },
-            { id: "b", text: "völliges Durcheinander" },
-            { id: "c", text: "Stillstand" },
-          ],
-          answer: "a",
-        },
-        {
-          id: "q3",
-          stem: "Was zeigt die Selbstorganisation laut Vortrag?",
-          options: [
-            { id: "a", text: "Komplexes Verhalten braucht keine zentrale Steuerung." },
-            { id: "b", text: "Ohne Anführer geht nichts." },
-            { id: "c", text: "Regeln sind unnötig." },
-          ],
-          answer: "a",
-        },
-      ],
-    },
-    guidanceNote: "„ohne dass ein Anführer nötig wäre“ ist der überraschende Kernpunkt.",
-  },
-  {
-    exam: EXAM,
-    level: L,
-    section: SECTION.HOERVERSTEHEN,
-    taskType: "TELC_C1H_HV_INTERVIEW",
-    title: "Interview: Digitale Archive",
-    prompt: "Hören Sie das Interview und beantworten Sie die Fragen.",
-    difficulty: "STRETCH",
-    topicTag: "medien",
-    timeLimitSeconds: 720,
-    payload: {
-      instructions: "Sie hören ein kurzes Interview. Wählen Sie die richtige Antwort.",
-      audioScript:
-        "MODERATORIN: Herr Brandt, digitale Archive gelten als sicher für die Ewigkeit. Stimmt das? BRANDT: Das ist ein weit verbreiteter Irrtum. Papier kann Jahrhunderte überdauern; digitale Formate veralten oft schon nach wenigen Jahrzehnten. MODERATORIN: Was heißt das konkret? BRANDT: Dateien müssen regelmäßig in neue Formate übertragen werden, sonst kann sie irgendwann niemand mehr öffnen. Das kostet Aufwand und Geld. MODERATORIN: Also lieber alles auf Papier? BRANDT: Nein, das wäre der falsche Schluss. Digitale Archive haben große Vorteile. Man darf nur nicht glauben, sie pflegten sich von selbst.",
-      questions: [
-        {
-          id: "q1",
-          stem: "Was hält Brandt für einen Irrtum?",
-          options: [
-            { id: "a", text: "dass digitale Archive für die Ewigkeit sicher seien" },
-            { id: "b", text: "dass Papier lange hält" },
-            { id: "c", text: "dass Archive wichtig sind" },
-          ],
-          answer: "a",
-        },
-        {
-          id: "q2",
-          stem: "Was muss laut Brandt regelmäßig geschehen?",
-          options: [
-            { id: "a", text: "Dateien in neue Formate übertragen" },
-            { id: "b", text: "alles ausdrucken" },
-            { id: "c", text: "die Archive löschen" },
-          ],
-          answer: "a",
-        },
-        {
-          id: "q3",
-          stem: "Sollte man deshalb alles auf Papier speichern?",
-          options: [
-            { id: "a", text: "Nein, das wäre der falsche Schluss." },
-            { id: "b", text: "Ja, unbedingt." },
-            { id: "c", text: "Ja, Papier ist immer besser." },
-          ],
-          answer: "a",
-        },
-      ],
-    },
-    guidanceNote: "„das wäre der falsche Schluss“ warnt vor einer voreiligen Folgerung.",
-  },
-  {
-    exam: EXAM,
-    level: L,
-    section: SECTION.HOERVERSTEHEN,
-    taskType: "TELC_C1H_HV_LECTURE",
-    title: "Vortrag: Warum Wiederholung hilft",
-    prompt: "Hören Sie den Vortragsausschnitt und beantworten Sie die Fragen.",
-    difficulty: "CORE",
-    topicTag: "bildung",
-    timeLimitSeconds: 720,
-    payload: {
-      instructions: "Sie hören einen Ausschnitt aus einem Vortrag. Wählen Sie die richtige Antwort.",
-      audioScript:
-        "Guten Tag. Wer etwas dauerhaft lernen möchte, kommt an der Wiederholung nicht vorbei. Entscheidend ist jedoch nicht, wie oft, sondern wann man wiederholt. Untersuchungen zeigen, dass verteiltes Lernen, bei dem man den Stoff über mehrere Tage immer wieder aufgreift, weit wirksamer ist als das Pauken in einer einzigen langen Sitzung. Der Grund liegt darin, dass das Gedächtnis gerade durch das mühsame Wiederhervorholen gestärkt wird. Kurz vor der Prüfung alles auf einmal zu lernen, mag für den Moment genügen, hinterlässt aber selten dauerhaftes Wissen.",
-      questions: [
-        {
-          id: "q1",
-          stem: "Was ist laut Vortrag entscheidend?",
-          options: [
-            { id: "a", text: "nicht wie oft, sondern wann man wiederholt" },
-            { id: "b", text: "möglichst lange am Stück zu lernen" },
-            { id: "c", text: "gar nicht zu wiederholen" },
-          ],
-          answer: "a",
-        },
-        {
-          id: "q2",
-          stem: "Was ist wirksamer als Pauken in einer Sitzung?",
-          options: [
-            { id: "a", text: "verteiltes Lernen über mehrere Tage" },
-            { id: "b", text: "eine einzige lange Sitzung" },
-            { id: "c", text: "gar kein Lernen" },
-          ],
-          answer: "a",
-        },
-        {
-          id: "q3",
-          stem: "Was sagt der Vortrag über Lernen kurz vor der Prüfung?",
-          options: [
-            { id: "a", text: "Es genügt für den Moment, hinterlässt aber selten dauerhaftes Wissen." },
-            { id: "b", text: "Es ist die beste Methode." },
-            { id: "c", text: "Es schadet immer." },
-          ],
-          answer: "a",
-        },
-      ],
-    },
-    guidanceNote: "„nicht wie oft, sondern wann“ verschiebt den Fokus — häufig die erste Frage.",
-  },
-  {
-    exam: EXAM,
-    level: L,
-    section: SECTION.HOERVERSTEHEN,
-    taskType: "TELC_C1H_HV_INTERVIEW",
-    title: "Interview: Verhaltensökonomie",
-    prompt: "Hören Sie das Interview und beantworten Sie die Fragen.",
-    difficulty: "STRETCH",
-    topicTag: "wissenschaft",
-    timeLimitSeconds: 720,
-    payload: {
-      instructions: "Sie hören ein kurzes Interview. Wählen Sie die richtige Antwort.",
-      audioScript:
-        "MODERATOR: Herr Professor Nolte, die klassische Wirtschaftslehre nimmt an, der Mensch entscheide rational. Trifft das zu? NOLTE: Nur eingeschränkt. Menschen verhalten sich oft anders, als es der reine Nutzen nahelegt. Wir überschätzen kurzfristige Belohnungen und scheuen Verluste stärker, als wir Gewinne schätzen. MODERATOR: Ist der Mensch also unvernünftig? NOLTE: Das würde ich nicht sagen. Unsere Abweichungen folgen erkennbaren Mustern. Man kann sie sogar nutzen, um Menschen sanft zu besseren Entscheidungen zu bewegen. MODERATOR: Ohne Zwang? NOLTE: Genau. Man verändert die Rahmenbedingungen, lässt die Wahl aber frei.",
-      questions: [
-        {
-          id: "q1",
-          stem: "Entscheidet der Mensch laut Nolte rein rational?",
-          options: [
-            { id: "a", text: "Nur eingeschränkt." },
-            { id: "b", text: "Ja, immer." },
-            { id: "c", text: "Nie, in keiner Weise." },
-          ],
-          answer: "a",
-        },
-        {
-          id: "q2",
-          stem: "Ist der Mensch deshalb unvernünftig?",
-          options: [
-            { id: "a", text: "Nein, die Abweichungen folgen erkennbaren Mustern." },
-            { id: "b", text: "Ja, völlig unberechenbar." },
-            { id: "c", text: "Ja, ohne jedes Muster." },
-          ],
-          answer: "a",
-        },
-        {
-          id: "q3",
-          stem: "Wie kann man Menschen zu besseren Entscheidungen bewegen?",
-          options: [
-            { id: "a", text: "indem man die Rahmenbedingungen ändert, die Wahl aber frei lässt" },
-            { id: "b", text: "durch Zwang" },
-            { id: "c", text: "durch Verbote" },
-          ],
-          answer: "a",
-        },
-      ],
-    },
-    guidanceNote: "„Das würde ich nicht sagen“ weist die Zuspitzung zurück; achten Sie auf „ohne Zwang“.",
-  },
-  {
-    exam: EXAM,
-    level: L,
-    section: SECTION.HOERVERSTEHEN,
-    taskType: "TELC_C1H_HV_LECTURE",
-    title: "Vortrag: Die Bedeutung des Vergessens",
-    prompt: "Hören Sie den Vortragsausschnitt und beantworten Sie die Fragen.",
-    difficulty: "STRETCH",
-    topicTag: "wissenschaft",
-    timeLimitSeconds: 720,
-    payload: {
-      instructions: "Sie hören einen Ausschnitt aus einem Vortrag. Wählen Sie die richtige Antwort.",
-      audioScript:
-        "Guten Tag. Vergessen gilt gemeinhin als Schwäche unseres Gedächtnisses. Aus der Sicht der Forschung ist es jedoch eine wichtige Leistung. Würden wir uns an jede Einzelheit erinnern, würde uns die Flut an Nebensächlichem geradezu erdrücken. Vergessen sortiert aus, was nicht mehr gebraucht wird, und lässt Raum für das Wesentliche. Erst dadurch können wir von einzelnen Erfahrungen abstrahieren und allgemeine Regeln bilden. Ein Gedächtnis, das nichts vergisst, wäre also kein Vorteil, sondern eine Last.",
-      questions: [
-        {
-          id: "q1",
-          stem: "Wie gilt Vergessen gemeinhin?",
-          options: [
-            { id: "a", text: "als Schwäche des Gedächtnisses" },
-            { id: "b", text: "als besondere Stärke" },
-            { id: "c", text: "als völlig bedeutungslos" },
-          ],
-          answer: "a",
-        },
-        {
-          id: "q2",
-          stem: "Welche Leistung erfüllt Vergessen laut Vortrag?",
-          options: [
-            { id: "a", text: "Es sortiert Unwichtiges aus und schafft Raum für Wesentliches." },
-            { id: "b", text: "Es löscht alle Erinnerungen." },
-            { id: "c", text: "Es verhindert das Lernen." },
-          ],
-          answer: "a",
-        },
-        {
-          id: "q3",
-          stem: "Wie bewertet der Vortrag ein Gedächtnis, das nichts vergisst?",
-          options: [
-            { id: "a", text: "als Last statt Vorteil" },
-            { id: "b", text: "als idealen Zustand" },
-            { id: "c", text: "als unmöglich zu erreichen" },
-          ],
-          answer: "a",
-        },
-      ],
-    },
-    guidanceNote: "„kein Vorteil, sondern eine Last“ kehrt die verbreitete Sicht um — der Kern des Vortrags.",
+    guidanceNote: "Der Vortrag betont, das Problem liege nicht an den Rechnern, sondern in der Natur der Systeme — ein beliebter Distraktor.",
   },
 
   // ------------------------------------------------------------ SCHRIFTLICHER_AUSDRUCK
@@ -2378,7 +2202,7 @@ export const ITEMS: ExamItemInput[] = [
     exam: EXAM,
     level: L,
     section: SECTION.SCHRIFTLICHER_AUSDRUCK,
-    taskType: "TELC_C1H_SA_ESSAY",
+    taskType: "TELC_C1H_SA_STELLUNGNAHME",
     title: "Leserbrief: Anwesenheitspflicht an der Universität",
     prompt: "Schreiben Sie einen strukturierten Text (circa 300 Wörter).",
     difficulty: "CORE",
@@ -2399,7 +2223,7 @@ export const ITEMS: ExamItemInput[] = [
     exam: EXAM,
     level: L,
     section: SECTION.SCHRIFTLICHER_AUSDRUCK,
-    taskType: "TELC_C1H_SA_ESSAY",
+    taskType: "TELC_C1H_SA_STELLUNGNAHME",
     title: "Stellungnahme: KI-Werkzeuge in Hausarbeiten",
     prompt: "Schreiben Sie einen strukturierten Text (circa 300 Wörter).",
     difficulty: "STRETCH",
@@ -2419,7 +2243,7 @@ export const ITEMS: ExamItemInput[] = [
     exam: EXAM,
     level: L,
     section: SECTION.SCHRIFTLICHER_AUSDRUCK,
-    taskType: "TELC_C1H_SA_ESSAY",
+    taskType: "TELC_C1H_SA_STELLUNGNAHME",
     title: "Stellungnahme: Präsenz- oder Online-Lehre",
     prompt: "Schreiben Sie einen strukturierten Text (circa 300 Wörter).",
     difficulty: "CORE",
@@ -2439,7 +2263,7 @@ export const ITEMS: ExamItemInput[] = [
     exam: EXAM,
     level: L,
     section: SECTION.SCHRIFTLICHER_AUSDRUCK,
-    taskType: "TELC_C1H_SA_ESSAY",
+    taskType: "TELC_C1H_SA_STELLUNGNAHME",
     title: "Stellungnahme: Englisch als Wissenschaftssprache",
     prompt: "Schreiben Sie einen strukturierten Text (circa 300 Wörter).",
     difficulty: "STRETCH",
@@ -2459,7 +2283,7 @@ export const ITEMS: ExamItemInput[] = [
     exam: EXAM,
     level: L,
     section: SECTION.SCHRIFTLICHER_AUSDRUCK,
-    taskType: "TELC_C1H_SA_ESSAY",
+    taskType: "TELC_C1H_SA_STELLUNGNAHME",
     title: "Stellungnahme: Anwesenheit als Studienleistung",
     prompt: "Schreiben Sie einen strukturierten Text (circa 300 Wörter).",
     difficulty: "CORE",
@@ -2479,7 +2303,7 @@ export const ITEMS: ExamItemInput[] = [
     exam: EXAM,
     level: L,
     section: SECTION.SCHRIFTLICHER_AUSDRUCK,
-    taskType: "TELC_C1H_SA_ESSAY",
+    taskType: "TELC_C1H_SA_STELLUNGNAHME",
     title: "Leserbrief: Studiengebühren für internationale Studierende",
     prompt: "Schreiben Sie einen strukturierten Text (circa 300 Wörter).",
     difficulty: "STRETCH",
@@ -2499,7 +2323,7 @@ export const ITEMS: ExamItemInput[] = [
     exam: EXAM,
     level: L,
     section: SECTION.SCHRIFTLICHER_AUSDRUCK,
-    taskType: "TELC_C1H_SA_ESSAY",
+    taskType: "TELC_C1H_SA_STELLUNGNAHME",
     title: "Stellungnahme: Recht auf Homeoffice",
     prompt: "Schreiben Sie einen strukturierten Text (circa 300 Wörter).",
     difficulty: "CORE",
@@ -2519,7 +2343,7 @@ export const ITEMS: ExamItemInput[] = [
     exam: EXAM,
     level: L,
     section: SECTION.SCHRIFTLICHER_AUSDRUCK,
-    taskType: "TELC_C1H_SA_ESSAY",
+    taskType: "TELC_C1H_SA_STELLUNGNAHME",
     title: "Stellungnahme: Ein Tempolimit auf Autobahnen",
     prompt: "Schreiben Sie einen strukturierten Text (circa 300 Wörter).",
     difficulty: "STRETCH",
@@ -2539,7 +2363,7 @@ export const ITEMS: ExamItemInput[] = [
     exam: EXAM,
     level: L,
     section: SECTION.SCHRIFTLICHER_AUSDRUCK,
-    taskType: "TELC_C1H_SA_ESSAY",
+    taskType: "TELC_C1H_SA_STELLUNGNAHME",
     title: "Stellungnahme: Kulturförderung mit Steuergeld",
     prompt: "Schreiben Sie einen strukturierten Text (circa 300 Wörter).",
     difficulty: "CORE",
@@ -2559,7 +2383,7 @@ export const ITEMS: ExamItemInput[] = [
     exam: EXAM,
     level: L,
     section: SECTION.SCHRIFTLICHER_AUSDRUCK,
-    taskType: "TELC_C1H_SA_ESSAY",
+    taskType: "TELC_C1H_SA_STELLUNGNAHME",
     title: "Stellungnahme: Weniger Einwegverpackungen",
     prompt: "Schreiben Sie einen strukturierten Text (circa 300 Wörter).",
     difficulty: "CORE",
@@ -2579,7 +2403,7 @@ export const ITEMS: ExamItemInput[] = [
     exam: EXAM,
     level: L,
     section: SECTION.SCHRIFTLICHER_AUSDRUCK,
-    taskType: "TELC_C1H_SA_ESSAY",
+    taskType: "TELC_C1H_SA_STELLUNGNAHME",
     title: "Stellungnahme: Grünflächen in der Stadt",
     prompt: "Schreiben Sie einen strukturierten Text (circa 300 Wörter).",
     difficulty: "CORE",
@@ -2599,7 +2423,7 @@ export const ITEMS: ExamItemInput[] = [
     exam: EXAM,
     level: L,
     section: SECTION.SCHRIFTLICHER_AUSDRUCK,
-    taskType: "TELC_C1H_SA_ESSAY",
+    taskType: "TELC_C1H_SA_STELLUNGNAHME",
     title: "Stellungnahme: Soziale Netzwerke stärker regulieren",
     prompt: "Schreiben Sie einen strukturierten Text (circa 300 Wörter).",
     difficulty: "STRETCH",
@@ -2619,7 +2443,7 @@ export const ITEMS: ExamItemInput[] = [
     exam: EXAM,
     level: L,
     section: SECTION.SCHRIFTLICHER_AUSDRUCK,
-    taskType: "TELC_C1H_SA_ESSAY",
+    taskType: "TELC_C1H_SA_STELLUNGNAHME",
     title: "Stellungnahme: Die Vier-Tage-Woche",
     prompt: "Schreiben Sie einen strukturierten Text (circa 300 Wörter).",
     difficulty: "CORE",
@@ -2639,7 +2463,7 @@ export const ITEMS: ExamItemInput[] = [
     exam: EXAM,
     level: L,
     section: SECTION.SCHRIFTLICHER_AUSDRUCK,
-    taskType: "TELC_C1H_SA_ESSAY",
+    taskType: "TELC_C1H_SA_STELLUNGNAHME",
     title: "Stellungnahme: Ehrenamt und Gesellschaft",
     prompt: "Schreiben Sie einen strukturierten Text (circa 300 Wörter).",
     difficulty: "CORE",
@@ -2659,7 +2483,7 @@ export const ITEMS: ExamItemInput[] = [
     exam: EXAM,
     level: L,
     section: SECTION.SCHRIFTLICHER_AUSDRUCK,
-    taskType: "TELC_C1H_SA_ESSAY",
+    taskType: "TELC_C1H_SA_STELLUNGNAHME",
     title: "Stellungnahme: Lebenslanges Lernen",
     prompt: "Schreiben Sie einen strukturierten Text (circa 300 Wörter).",
     difficulty: "STRETCH",
@@ -2679,7 +2503,7 @@ export const ITEMS: ExamItemInput[] = [
     exam: EXAM,
     level: L,
     section: SECTION.SCHRIFTLICHER_AUSDRUCK,
-    taskType: "TELC_C1H_SA_ESSAY",
+    taskType: "TELC_C1H_SA_STELLUNGNAHME",
     title: "Stellungnahme: Wissenschaft und Öffentlichkeit",
     prompt: "Schreiben Sie einen strukturierten Text (circa 300 Wörter).",
     difficulty: "STRETCH",
@@ -2701,7 +2525,7 @@ export const ITEMS: ExamItemInput[] = [
     exam: EXAM,
     level: L,
     section: SECTION.MUENDLICHER_AUSDRUCK,
-    taskType: "TELC_C1H_MA_PRESENT",
+    taskType: "TELC_C1H_MA_T1A_PRAESENTATION",
     title: "Kurzvortrag: Vor- und Nachteile von Online-Prüfungen",
     prompt: "Bereiten Sie einen kurzen Vortrag vor und sprechen Sie dann.",
     difficulty: "STRETCH",
@@ -2722,7 +2546,7 @@ export const ITEMS: ExamItemInput[] = [
     exam: EXAM,
     level: L,
     section: SECTION.MUENDLICHER_AUSDRUCK,
-    taskType: "TELC_C1H_MA_PRESENT",
+    taskType: "TELC_C1H_MA_T1A_PRAESENTATION",
     title: "Kurzvortrag: Anwesenheitspflicht an der Universität",
     prompt: "Bereiten Sie einen kurzen Vortrag vor und sprechen Sie dann.",
     difficulty: "CORE",
@@ -2742,7 +2566,7 @@ export const ITEMS: ExamItemInput[] = [
     exam: EXAM,
     level: L,
     section: SECTION.MUENDLICHER_AUSDRUCK,
-    taskType: "TELC_C1H_MA_PRESENT",
+    taskType: "TELC_C1H_MA_T1A_PRAESENTATION",
     title: "Kurzvortrag: Ein Studium im Ausland",
     prompt: "Bereiten Sie einen kurzen Vortrag vor und sprechen Sie dann.",
     difficulty: "CORE",
@@ -2762,7 +2586,7 @@ export const ITEMS: ExamItemInput[] = [
     exam: EXAM,
     level: L,
     section: SECTION.MUENDLICHER_AUSDRUCK,
-    taskType: "TELC_C1H_MA_PRESENT",
+    taskType: "TELC_C1H_MA_T1A_PRAESENTATION",
     title: "Kurzvortrag: Verständliche Wissenschaft",
     prompt: "Bereiten Sie einen kurzen Vortrag vor und sprechen Sie dann.",
     difficulty: "STRETCH",
@@ -2782,7 +2606,7 @@ export const ITEMS: ExamItemInput[] = [
     exam: EXAM,
     level: L,
     section: SECTION.MUENDLICHER_AUSDRUCK,
-    taskType: "TELC_C1H_MA_PRESENT",
+    taskType: "TELC_C1H_MA_T1A_PRAESENTATION",
     title: "Kurzvortrag: Fremdsprachen im Studium",
     prompt: "Bereiten Sie einen kurzen Vortrag vor und sprechen Sie dann.",
     difficulty: "CORE",
@@ -2802,7 +2626,7 @@ export const ITEMS: ExamItemInput[] = [
     exam: EXAM,
     level: L,
     section: SECTION.MUENDLICHER_AUSDRUCK,
-    taskType: "TELC_C1H_MA_PRESENT",
+    taskType: "TELC_C1H_MA_T1A_PRAESENTATION",
     title: "Kurzvortrag: Gedruckte oder digitale Fachliteratur",
     prompt: "Bereiten Sie einen kurzen Vortrag vor und sprechen Sie dann.",
     difficulty: "CORE",
@@ -2822,7 +2646,7 @@ export const ITEMS: ExamItemInput[] = [
     exam: EXAM,
     level: L,
     section: SECTION.MUENDLICHER_AUSDRUCK,
-    taskType: "TELC_C1H_MA_PRESENT",
+    taskType: "TELC_C1H_MA_T1A_PRAESENTATION",
     title: "Kurzvortrag: Der Nutzen von Gruppenarbeit",
     prompt: "Bereiten Sie einen kurzen Vortrag vor und sprechen Sie dann.",
     difficulty: "CORE",
@@ -2842,7 +2666,7 @@ export const ITEMS: ExamItemInput[] = [
     exam: EXAM,
     level: L,
     section: SECTION.MUENDLICHER_AUSDRUCK,
-    taskType: "TELC_C1H_MA_PRESENT",
+    taskType: "TELC_C1H_MA_T1A_PRAESENTATION",
     title: "Kurzvortrag: Noten oder nur bestanden?",
     prompt: "Bereiten Sie einen kurzen Vortrag vor und sprechen Sie dann.",
     difficulty: "STRETCH",
@@ -2862,7 +2686,7 @@ export const ITEMS: ExamItemInput[] = [
     exam: EXAM,
     level: L,
     section: SECTION.MUENDLICHER_AUSDRUCK,
-    taskType: "TELC_C1H_MA_PRESENT",
+    taskType: "TELC_C1H_MA_T1A_PRAESENTATION",
     title: "Kurzvortrag: Praktika im Studium",
     prompt: "Bereiten Sie einen kurzen Vortrag vor und sprechen Sie dann.",
     difficulty: "CORE",
@@ -2882,7 +2706,7 @@ export const ITEMS: ExamItemInput[] = [
     exam: EXAM,
     level: L,
     section: SECTION.MUENDLICHER_AUSDRUCK,
-    taskType: "TELC_C1H_MA_PRESENT",
+    taskType: "TELC_C1H_MA_T1A_PRAESENTATION",
     title: "Kurzvortrag: Ranglisten für Universitäten",
     prompt: "Bereiten Sie einen kurzen Vortrag vor und sprechen Sie dann.",
     difficulty: "STRETCH",
@@ -2902,7 +2726,7 @@ export const ITEMS: ExamItemInput[] = [
     exam: EXAM,
     level: L,
     section: SECTION.MUENDLICHER_AUSDRUCK,
-    taskType: "TELC_C1H_MA_PRESENT",
+    taskType: "TELC_C1H_MA_T1A_PRAESENTATION",
     title: "Kurzvortrag: Der Wert der Grundlagenforschung",
     prompt: "Bereiten Sie einen kurzen Vortrag vor und sprechen Sie dann.",
     difficulty: "STRETCH",
@@ -2922,7 +2746,7 @@ export const ITEMS: ExamItemInput[] = [
     exam: EXAM,
     level: L,
     section: SECTION.MUENDLICHER_AUSDRUCK,
-    taskType: "TELC_C1H_MA_PRESENT",
+    taskType: "TELC_C1H_MA_T1A_PRAESENTATION",
     title: "Kurzvortrag: Studienwahl nach Neigung oder Aussicht",
     prompt: "Bereiten Sie einen kurzen Vortrag vor und sprechen Sie dann.",
     difficulty: "CORE",
@@ -2942,7 +2766,7 @@ export const ITEMS: ExamItemInput[] = [
     exam: EXAM,
     level: L,
     section: SECTION.MUENDLICHER_AUSDRUCK,
-    taskType: "TELC_C1H_MA_PRESENT",
+    taskType: "TELC_C1H_MA_T1A_PRAESENTATION",
     title: "Kurzvortrag: Kritisches Denken im Studium",
     prompt: "Bereiten Sie einen kurzen Vortrag vor und sprechen Sie dann.",
     difficulty: "STRETCH",
@@ -2962,7 +2786,7 @@ export const ITEMS: ExamItemInput[] = [
     exam: EXAM,
     level: L,
     section: SECTION.MUENDLICHER_AUSDRUCK,
-    taskType: "TELC_C1H_MA_PRESENT",
+    taskType: "TELC_C1H_MA_T1A_PRAESENTATION",
     title: "Kurzvortrag: Auslandserfahrung und Beruf",
     prompt: "Bereiten Sie einen kurzen Vortrag vor und sprechen Sie dann.",
     difficulty: "CORE",
@@ -2982,7 +2806,7 @@ export const ITEMS: ExamItemInput[] = [
     exam: EXAM,
     level: L,
     section: SECTION.MUENDLICHER_AUSDRUCK,
-    taskType: "TELC_C1H_MA_PRESENT",
+    taskType: "TELC_C1H_MA_T1A_PRAESENTATION",
     title: "Kurzvortrag: Lebenslanges Lernen",
     prompt: "Bereiten Sie einen kurzen Vortrag vor und sprechen Sie dann.",
     difficulty: "CORE",
@@ -3002,7 +2826,7 @@ export const ITEMS: ExamItemInput[] = [
     exam: EXAM,
     level: L,
     section: SECTION.MUENDLICHER_AUSDRUCK,
-    taskType: "TELC_C1H_MA_PRESENT",
+    taskType: "TELC_C1H_MA_T1A_PRAESENTATION",
     title: "Kurzvortrag: Digitale Werkzeuge beim Lernen",
     prompt: "Bereiten Sie einen kurzen Vortrag vor und sprechen Sie dann.",
     difficulty: "CORE",
@@ -3019,3 +2843,29 @@ export const ITEMS: ExamItemInput[] = [
     guidanceNote: "Es kommt auf den bewussten Einsatz an — dieser Gedanke trägt ein differenziertes Fazit.",
   },
 ];
+
+// ── HV TEIL 2: authored balance, ASSERTED — never de-gamed (ruling 4) ────────
+// The ten questions are order-bound to the recording, so deRhythm's reorder is the
+// wrong tool here: a learner would track answer 1..10 against audio that plays 1..10.
+// Balance is authored above and verified at seed time instead, mirroring the
+// answer-distribution gate's own MC rules — no item may be uniform, every option must
+// stay live across the Aufgabe, and none may cluster past 60%. A future edit that
+// unbalances the set throws here, at seed time, rather than shipping and waiting for
+// the gate to notice.
+(function assertHvT2Balance() {
+  const t2 = ITEMS.filter((it) => it.taskType === "TELC_C1H_HV_T2_MC");
+  const agg: Record<string, number> = {};
+  let total = 0;
+  for (const it of t2) {
+    const seq = ((it.payload as { questions: { answer: string }[] }).questions).map((q) => q.answer);
+    if (new Set(seq).size < 2) throw new Error(`HV T2 "${it.title}": answer sequence is uniform (${seq.join("")})`);
+    for (const a of seq) {
+      agg[a] = (agg[a] ?? 0) + 1;
+      total++;
+    }
+  }
+  for (const opt of ["a", "b", "c"]) {
+    if (!agg[opt]) throw new Error(`HV T2: option "${opt}" is never correct across ${total} questions (dead option)`);
+    if (agg[opt] / total > 0.6) throw new Error(`HV T2: option "${opt}" is ${agg[opt]}/${total} (${Math.round((100 * agg[opt]) / total)}%) — clustered past 60%`);
+  }
+})();
