@@ -51,12 +51,34 @@ export const segmentSchema = z.object({
   script: z.string(),
 });
 
+/**
+ * A Zuordnung's SHARED option bank — telc B2 Leseverstehen Teil 1 (Überschriften,
+ * a–j), Teil 3 (Anzeigen, a–l plus x) and Sprachbausteine Teil 2 (Wortliste, a–o).
+ * One bank per item; each question is an assignment INTO it, so the options live
+ * here and not on the question.
+ *
+ * ⚠️ Declared here for the same reason as `segments`: objectivePayloadSchema is a
+ * non-strict z.object, Zod silently strips undeclared keys, and pickClientItem sends
+ * `parsed.data` to the client. An undeclared `bank` would vanish between database and
+ * learner, leaving a Zuordnung with nothing to assign to and no error anywhere.
+ *
+ * The bank IS client-facing — a learner has to read the ten headlines to choose one.
+ * The ASSIGNMENTS are not: which bank entry answers which question is the key, and it
+ * is stripped by redactObjectivePayload exactly like an MCQ key. Proven in
+ * scripts/gates/zuordnung-redaction.test.mts.
+ */
+export const bankOptionSchema = z.object({
+  id: z.string(),
+  text: z.string(),
+});
+
 export const objectivePayloadSchema = z.object({
   instructions: z.string().optional(),
   // Reading stimulus (German passage) and/or listening script (spoken German, TTS).
   passage: z.string().optional(),
   audioScript: z.string().optional(),
   segments: z.array(segmentSchema).optional(),
+  bank: z.array(bankOptionSchema).optional(),
   questions: z.array(objectiveQuestionSchema),
 });
 export type ObjectivePayload = z.infer<typeof objectivePayloadSchema>;
