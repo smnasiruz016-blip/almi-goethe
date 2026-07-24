@@ -82,6 +82,17 @@ by reading the gate output.
 - rule7 (≥15/module), title-uniqueness, real-entity (no invented doc names a real
   company), reconcile-guard proof, ledger.
 
+## ⚠️ STANDING WATCH — telc B2 sections sit ON the rule7 floor
+
+After the ⑤ restructure, B2 `HOERVERSTEHEN` and `LESEVERSTEHEN` hold **exactly 15**
+items each (HV: T1 5 · T2 5 · T3 5 — LV: T1 5 · T2 5 · T3 5). That clears the ≥15
+floor with **zero headroom**: removing or merging a single item trips rule7 and fails
+the build. Same fragility already flagged for almi-icelandic.
+
+Any future change to those sections must keep each at ≥15. If a Teil is ever
+re-scoped, ADD an instance before removing one — the floor is enforced in `build`,
+so the failure lands at deploy, not in review.
+(SPRACHBAUSTEINE 16 · SCHRIFTLICHER_AUSDRUCK 16 · SPRECHEN 16 have one spare each.)
 ## Deploy & reconcile discipline (learned the hard way — see docs/DEPLOY_PROTOCOL.md)
 
 - Deploy the **committed commit** (git-integration / clean checkout), never a local
