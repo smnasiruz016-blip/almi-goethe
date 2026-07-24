@@ -40,7 +40,12 @@ import { ITEMS as TELC_B1_SB } from "../seed/exams/telc-b1-sprachbausteine";
 import { ITEMS as TELC_B1_HV } from "../seed/exams/telc-b1-hoerverstehen";
 import { ITEMS as TELC_B1_SA } from "../seed/exams/telc-b1-schriftlicher-ausdruck";
 import { ITEMS as TELC_B1_SP } from "../seed/exams/telc-b1-sprechen";
-import { ITEMS as TELC_B2 } from "../seed/exams/telc-b2";
+import { ITEMS as B2_LV_T2 } from "../seed/exams/telc-b2-lv-t2";
+import { ITEMS as B2_SB_T1 } from "../seed/exams/telc-b2-sb-t1";
+import { ITEMS as B2_HV } from "../seed/exams/telc-b2-hv";
+import { ITEMS as B2_LVZ } from "../seed/exams/telc-b2-lv-zuordnung";
+import { ITEMS as B2_SB_T2 } from "../seed/exams/telc-b2-sb-t2";
+import { ITEMS as B2_PROD } from "../seed/exams/telc-b2-produktiv";
 import { ITEMS as DTZ_HV } from "../seed/exams/dtz-hoeren";
 import { ITEMS as DTZ_LV } from "../seed/exams/dtz-lesen";
 import { ITEMS as DTZ_SA } from "../seed/exams/dtz-schreiben";
@@ -76,7 +81,7 @@ export function goetheBank(): GoetheRow[] {
  *  registered but absent from this list fails as "0 items", loudly, rather than
  *  disappearing from the counts. */
 export function examBank(): ExamRow[] {
-  return [...TESTDAF, ...TESTDAF_LV, ...TESTDAF_HV, ...TESTDAF_SA, ...TESTDAF_MA, ...TELC_C1H, ...TELC_B1, ...TELC_B1_LV, ...TELC_B1_SB, ...TELC_B1_HV, ...TELC_B1_SA, ...TELC_B1_SP, ...TELC_B2, ...DTZ_HV, ...DTZ_LV, ...DTZ_SA, ...DTZ_SP, ...EINB, ...EINB_BL, ...DSH_HV, ...DSH_LV, ...DSH_WS, ...DSH_TP, ...DSH_SP, ...OESD_LV, ...OESD_HV, ...OESD_SA, ...OESD_SP];
+  return [...TESTDAF, ...TESTDAF_LV, ...TESTDAF_HV, ...TESTDAF_SA, ...TESTDAF_MA, ...TELC_C1H, ...TELC_B1, ...TELC_B1_LV, ...TELC_B1_SB, ...TELC_B1_HV, ...TELC_B1_SA, ...TELC_B1_SP, ...B2_LV_T2, ...B2_SB_T1, ...B2_HV, ...B2_LVZ, ...B2_SB_T2, ...B2_PROD, ...DTZ_HV, ...DTZ_LV, ...DTZ_SA, ...DTZ_SP, ...EINB, ...EINB_BL, ...DSH_HV, ...DSH_LV, ...DSH_WS, ...DSH_TP, ...DSH_SP, ...OESD_LV, ...OESD_HV, ...OESD_SA, ...OESD_SP];
 }
 
 /** Group rows by a key, preserving insertion order of first appearance. */

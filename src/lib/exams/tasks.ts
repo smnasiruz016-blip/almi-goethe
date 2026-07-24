@@ -32,11 +32,53 @@ const objectiveQuestionSchema = z.object({
   exact: z.boolean().optional(), // true = exact id match; false/undefined = lenient text match
 });
 
+/**
+ * A Teil made of SEVERAL short texts, one statement each — telc B2 Hörverstehen
+ * Teil 3 (Ansagen/Durchsagen). Modelled explicitly rather than by concatenating the
+ * five texts into one audioScript string, because a question has to say which Ansage
+ * it belongs to, and a string cannot be asked that.
+ *
+ * ⚠️ This field has to be DECLARED here, not merely written by a seed file.
+ * objectivePayloadSchema is a non-strict z.object, so Zod silently STRIPS unknown
+ * keys — and pickClientItem sends `parsed.data` to the client. An undeclared
+ * `segments` would therefore vanish between the database and the learner, leaving
+ * five questions attached to no text at all, with no error anywhere. Same trap
+ * applies to the Zuordnung `bank` in the next stage.
+ */
+export const segmentSchema = z.object({
+  id: z.string(),
+  label: z.string().optional(),
+  script: z.string(),
+});
+
+/**
+ * A Zuordnung's SHARED option bank — telc B2 Leseverstehen Teil 1 (Überschriften,
+ * a–j), Teil 3 (Anzeigen, a–l plus x) and Sprachbausteine Teil 2 (Wortliste, a–o).
+ * One bank per item; each question is an assignment INTO it, so the options live
+ * here and not on the question.
+ *
+ * ⚠️ Declared here for the same reason as `segments`: objectivePayloadSchema is a
+ * non-strict z.object, Zod silently strips undeclared keys, and pickClientItem sends
+ * `parsed.data` to the client. An undeclared `bank` would vanish between database and
+ * learner, leaving a Zuordnung with nothing to assign to and no error anywhere.
+ *
+ * The bank IS client-facing — a learner has to read the ten headlines to choose one.
+ * The ASSIGNMENTS are not: which bank entry answers which question is the key, and it
+ * is stripped by redactObjectivePayload exactly like an MCQ key. Proven in
+ * scripts/gates/zuordnung-redaction.test.mts.
+ */
+export const bankOptionSchema = z.object({
+  id: z.string(),
+  text: z.string(),
+});
+
 export const objectivePayloadSchema = z.object({
   instructions: z.string().optional(),
   // Reading stimulus (German passage) and/or listening script (spoken German, TTS).
   passage: z.string().optional(),
   audioScript: z.string().optional(),
+  segments: z.array(segmentSchema).optional(),
+  bank: z.array(bankOptionSchema).optional(),
   questions: z.array(objectiveQuestionSchema),
 });
 export type ObjectivePayload = z.infer<typeof objectivePayloadSchema>;
@@ -64,9 +106,30 @@ export function redactObjectivePayload(payload: ObjectivePayload): ObjectivePayl
 
 // ---- Productive item payload (writing / speaking) --------------------------
 
+/**
+ * One of the two Themen a telc writing task offers. The candidate picks ONE and
+ * writes to its Leitpunkte; the exam is a choice, not a single prompt, and serving
+ * one prompt quietly removes half the task.
+ *
+ * ⚠️ THIRD TIME FOR THIS TRAP. productivePayloadSchema is a non-strict z.object and
+ * registry.ts:228 runs `productivePayloadSchema.parse(payload)` — so an undeclared
+ * `themen` is SILENTLY DROPPED and the item renders with no topics at all. The seed
+ * files for DSH/DTZ/ÖSD/telc-B1 writing already say so in their own comments
+ * ("parse() strips every other key"), which is exactly why it has to be declared
+ * here rather than merely written by the seed. Same as `segments` and `bank`.
+ */
+export const themaSchema = z.object({
+  label: z.string(),
+  situation: z.string(),
+  /** The 3–4 Leitpunkte the candidate must cover. */
+  leitpunkte: z.array(z.string()),
+});
+
 export const productivePayloadSchema = z.object({
   situation: z.string(), // scenario / context (original)
   instruction: z.string(), // what to produce
+  /** Present when the task is a 1-of-N choice (telc Schriftlicher Ausdruck). */
+  themen: z.array(themaSchema).optional(),
   // Writing bounds (optional — omitted for speaking).
   wordMin: z.number().int().nonnegative().optional(),
   wordMax: z.number().int().nonnegative().optional(),
