@@ -32,11 +32,31 @@ const objectiveQuestionSchema = z.object({
   exact: z.boolean().optional(), // true = exact id match; false/undefined = lenient text match
 });
 
+/**
+ * A Teil made of SEVERAL short texts, one statement each — telc B2 Hörverstehen
+ * Teil 3 (Ansagen/Durchsagen). Modelled explicitly rather than by concatenating the
+ * five texts into one audioScript string, because a question has to say which Ansage
+ * it belongs to, and a string cannot be asked that.
+ *
+ * ⚠️ This field has to be DECLARED here, not merely written by a seed file.
+ * objectivePayloadSchema is a non-strict z.object, so Zod silently STRIPS unknown
+ * keys — and pickClientItem sends `parsed.data` to the client. An undeclared
+ * `segments` would therefore vanish between the database and the learner, leaving
+ * five questions attached to no text at all, with no error anywhere. Same trap
+ * applies to the Zuordnung `bank` in the next stage.
+ */
+export const segmentSchema = z.object({
+  id: z.string(),
+  label: z.string().optional(),
+  script: z.string(),
+});
+
 export const objectivePayloadSchema = z.object({
   instructions: z.string().optional(),
   // Reading stimulus (German passage) and/or listening script (spoken German, TTS).
   passage: z.string().optional(),
   audioScript: z.string().optional(),
+  segments: z.array(segmentSchema).optional(),
   questions: z.array(objectiveQuestionSchema),
 });
 export type ObjectivePayload = z.infer<typeof objectivePayloadSchema>;
