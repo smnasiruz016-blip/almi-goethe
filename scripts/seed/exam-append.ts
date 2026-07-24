@@ -47,6 +47,7 @@ import { ITEMS as TESTDAF_MA } from "./exams/testdaf-muendlicher-ausdruck";
 import { handleSeedFailure } from "./_failure";
 import { isDirectRun } from "./_entry";
 import { ITEMS as C1H } from "./exams/telc-c1-hochschule";
+import { ITEMS as C1H_LVZ } from "./exams/telc-c1h-lv-zuordnung";
 import { ITEMS as B1 } from "./exams/telc-b1";
 import { ITEMS as B1_LV } from "./exams/telc-b1-leseverstehen";
 import { ITEMS as B1_SB } from "./exams/telc-b1-sprachbausteine";
@@ -78,7 +79,7 @@ import { ITEMS as OESD_SP } from "./exams/oesd-sprechen";
 const prisma = new PrismaClient();
 const DRY = process.argv.includes("--dry");
 
-const ALL = [...TESTDAF, ...TESTDAF_LV, ...TESTDAF_HV, ...TESTDAF_SA, ...TESTDAF_MA, ...C1H, ...B1, ...B1_LV, ...B1_SB, ...B1_HV, ...B1_SA, ...B1_SP, ...B2_LV_T2, ...B2_SB_T1, ...B2_HV, ...B2_LVZ, ...B2_SB_T2, ...B2_PROD, ...DTZ_HV, ...DTZ_LV, ...DTZ_SA, ...DTZ_SP, ...EINB, ...EINB_BL, ...DSH_HV, ...DSH_LV, ...DSH_WS, ...DSH_TP, ...DSH_SP, ...OESD_LV, ...OESD_HV, ...OESD_SA, ...OESD_SP];
+const ALL = [...TESTDAF, ...TESTDAF_LV, ...TESTDAF_HV, ...TESTDAF_SA, ...TESTDAF_MA, ...C1H, ...C1H_LVZ, ...B1, ...B1_LV, ...B1_SB, ...B1_HV, ...B1_SA, ...B1_SP, ...B2_LV_T2, ...B2_SB_T1, ...B2_HV, ...B2_LVZ, ...B2_SB_T2, ...B2_PROD, ...DTZ_HV, ...DTZ_LV, ...DTZ_SA, ...DTZ_SP, ...EINB, ...EINB_BL, ...DSH_HV, ...DSH_LV, ...DSH_WS, ...DSH_TP, ...DSH_SP, ...OESD_LV, ...OESD_HV, ...OESD_SA, ...OESD_SP];
 
 /** Identity: what makes two rows "the same item". Content is NOT part of it —
  *  that is the point, so a corrected item updates in place rather than inserting

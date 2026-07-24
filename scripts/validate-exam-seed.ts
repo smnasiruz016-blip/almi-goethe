@@ -7,13 +7,14 @@
 // Run: tsx scripts/validate-exam-seed.ts
 import { ITEMS as TESTDAF } from "./seed/exams/testdaf";
 import { ITEMS as C1H } from "./seed/exams/telc-c1-hochschule";
+import { ITEMS as C1H_LVZ } from "./seed/exams/telc-c1h-lv-zuordnung";
 import { ITEMS as B1 } from "./seed/exams/telc-b1";
 import { ITEMS as B2 } from "./seed/exams/telc-b2";
 import { sectionDefFor } from "../src/lib/exams/registry";
 import { objectivePayloadSchema, productivePayloadSchema } from "../src/lib/exams/tasks";
 import type { GermanExam } from "@prisma/client";
 
-const all = [...TESTDAF, ...C1H, ...B1, ...B2];
+const all = [...TESTDAF, ...C1H, ...C1H_LVZ, ...B1, ...B2];
 let bad = 0;
 const fail = (msg: string) => {
   bad++;
