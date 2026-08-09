@@ -7,7 +7,10 @@ import { buildMetadata } from "@/lib/goethe/seo/meta";
 import { LevelOriginPage } from "@/components/goethe-seo/pages-level";
 
 export const revalidate = false;
-export const dynamicParams = true;
+// HOLDING 2026-08-09 — ISR page-generation frozen (level x from-country). Nothing is prerendered and
+// nothing renders on demand, so every URL under this route 404s and no ISR write can occur.
+// Data and templates are untouched. Reverse by restoring `dynamicParams = true`.
+export const dynamicParams = false;
 
 // Pure on-demand ISR — the level×origin matrix (6 × 193) is built on first request.
 export function generateStaticParams() {
