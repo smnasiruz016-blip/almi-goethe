@@ -6,7 +6,10 @@ import { buildMetadata } from "@/lib/goethe/seo/meta";
 import { UniversityOriginPage } from "@/components/goethe-seo/pages-university";
 
 export const revalidate = false;
-export const dynamicParams = true;
+// HOLDING 2026-08-09 — ISR page-generation frozen (university x origin, about 96k URLs). Nothing is prerendered and
+// nothing renders on demand, so every URL under this route 404s and no ISR write can occur.
+// Data and templates are untouched. Reverse by restoring `dynamicParams = true`.
+export const dynamicParams = false;
 
 export function generateStaticParams() {
   return [];

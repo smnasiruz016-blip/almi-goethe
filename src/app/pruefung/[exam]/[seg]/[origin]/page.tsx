@@ -7,7 +7,10 @@ import { examPurposeOriginUrl } from "@/lib/exams/seo/urls";
 import { ExamPurposeOriginPage } from "@/components/exams-seo/pages";
 
 export const revalidate = false;
-export const dynamicParams = true;
+// HOLDING 2026-08-09 — ISR page-generation frozen (exam x from-country x origin). Nothing is prerendered and
+// nothing renders on demand, so every URL under this route 404s and no ISR write can occur.
+// Data and templates are untouched. Reverse by restoring `dynamicParams = true`.
+export const dynamicParams = false;
 
 export function generateStaticParams() {
   return [];

@@ -28,7 +28,10 @@ export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
       // Real search engines: full access to the long-tail leaves — that IS the pSEO product.
-      { userAgent: ["Googlebot", "Bingbot"], allow: "/", disallow: PRIVATE },
+      // HOLDING 2026-08-09 — DEEP_LEAVES now applies to Googlebot and Bingbot too; everything below
+      // the hubs no longer renders. Advisory only — the route config is what stops the ISR writes
+      // (almi-danish kept writing for a fortnight after the same block went live).
+      { userAgent: ["Googlebot", "Bingbot"], allow: "/", disallow: [...PRIVATE, ...DEEP_LEAVES] },
       // Everyone else: landing + hubs only, skip the per-origin leaves, gentle pace.
       { userAgent: "*", allow: "/", disallow: [...PRIVATE, ...DEEP_LEAVES], crawlDelay: 10 },
       // Heavy, no-SEO-value crawlers: off entirely.
