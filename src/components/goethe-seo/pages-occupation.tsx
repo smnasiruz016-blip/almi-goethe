@@ -64,7 +64,7 @@ export function OccupationHub({ occupation }: { occupation: Occupation }) {
         intro={
           <>
             {occupation.name} is among the occupations Germany actively recruits for from abroad. Here is the
-            German level the role typically expects, the recognition path, and free practice toward it.
+            German level the role typically expects, the recognition path, and AI-scored practice toward it.
           </>
         }
       />

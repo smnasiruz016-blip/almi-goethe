@@ -75,7 +75,7 @@ export function LevelOriginPage({ level, country }: { level: GoetheLevel; countr
       <Hero
         eyebrow={`Goethe ${level} · from ${country.name}`}
         title={`Goethe-Zertifikat ${level} from ${country.name}`}
-        intro={<>{info.blurb} Here is how {level} fits a move to Germany from {country.name}, and free practice toward it.</>}
+        intro={<>{info.blurb} Here is how {level} fits a move to Germany from {country.name}, and AI-scored practice toward it.</>}
       />
       <section className="mt-10">
         <h2 className="text-xl font-semibold text-almi-ink">Studying in Germany from {country.name}</h2>
@@ -127,7 +127,7 @@ export function LevelPurposeOriginPage({
           <>
             Aiming for Goethe {level} and planning {purpose.name.toLowerCase()} in Germany from{" "}
             {country.name}? Here is the real German level this route requires, how your {level} target
-            relates, and free practice.
+            relates, and AI-scored practice.
           </>
         }
       />

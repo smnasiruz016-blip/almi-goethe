@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: { params: Promise<{ level: st
   const lvl = resolve(level);
   if (!lvl) return {};
   return buildMetadata({
-    title: `Goethe-Zertifikat ${lvl} — purpose, requirements & free practice`,
+    title: `Goethe-Zertifikat ${lvl} — purpose, requirements & practice`,
     description: `What Goethe-Zertifikat ${lvl} is for, the German levels real goals (study, work, visa, citizenship) require, and free original practice for all four modules. ${LEVEL_INFO[lvl].blurb}`,
     path: levelHubUrl(lvl),
   });

@@ -43,7 +43,7 @@ export async function POST(req: Request): Promise<NextResponse> {
   }
 
   // AI feedback (writing/speaking) is a paid feature; objective marking is free.
-  if (def.scoringMode === "AI" && !hasPaidAccess(user)) {
+  if (!hasPaidAccess(user)) {
     return NextResponse.json(
       { ok: false, error: "AI feedback needs a subscription", upgradeUrl: "/pricing" },
       { status: 402 },
