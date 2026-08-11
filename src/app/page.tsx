@@ -76,7 +76,7 @@ const FAQ = [
   },
   {
     q: "How much does AlmiGoethe cost?",
-    a: "$12 per month with a 7-day free trial, monthly only, cancel anytime. Lesen and Hören practice is free; AI feedback on Schreiben and Sprechen is part of the subscription.",
+    a: "$12 per month with a 7-day free trial, monthly only, cancel anytime. Everything is included: auto-marked Lesen and Hören, and AI feedback on Schreiben and Sprechen.",
   },
 ] as const;
 
@@ -151,7 +151,7 @@ export default function Home() {
                 href="/signup"
                 className="inline-flex min-h-[48px] items-center justify-center rounded-full bg-almi-coral px-7 py-3 text-base font-semibold text-almi-ink hover:bg-almi-coral-deep focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-almi-coral/30"
               >
-                Practise free
+                Start 7-day free trial
               </Link>
               <Link href="/login" className="text-sm font-medium text-almi-coral hover:underline">
                 Already have an account? Log in →
@@ -198,7 +198,7 @@ export default function Home() {
                 <li key={m} className="flex h-full flex-col rounded-2xl border border-almi-bg-peach bg-almi-paper p-6">
                   <div className="flex items-baseline justify-between gap-3">
                     <h3 className="text-lg font-semibold text-almi-ink">{MODULE_LABEL[m]}</h3>
-                    <span className="text-xs text-almi-text-muted">{def.scoringMode === "AI" ? "AI feedback · Pro" : "Auto-marked · Free"}</span>
+                    <span className="text-xs text-almi-text-muted">{def.scoringMode === "AI" ? "AI feedback" : "Auto-marked"}</span>
                   </div>
                   <p className="mt-2 flex-1 text-sm text-almi-text">{def.blurb}</p>
                   <span className="mt-3 text-xs text-almi-text-muted">Points estimate · 60% pass mark</span>
@@ -306,7 +306,7 @@ export default function Home() {
           </ul>
           <div className="mt-8">
             <Link href="/signup" className="inline-flex min-h-[48px] items-center justify-center rounded-full bg-almi-coral px-7 py-3 text-base font-semibold text-almi-ink hover:bg-almi-coral-deep">
-              Practise free
+              Start 7-day free trial
             </Link>
           </div>
           <p className="mt-4 text-sm text-almi-text-muted">
@@ -342,7 +342,7 @@ export default function Home() {
           </p>
           <div className="mt-8">
             <Link href="/signup" className="inline-flex min-h-[48px] items-center justify-center rounded-full bg-almi-coral px-7 py-3 text-base font-semibold text-almi-ink hover:bg-almi-coral-deep">
-              Practise free
+              Start 7-day free trial
             </Link>
           </div>
         </div>

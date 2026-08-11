@@ -99,7 +99,7 @@ export function ExamsIndexPage() {
       <Hero
         eyebrow="German & Austrian exams"
         title="German and Austrian exams — for study, work, citizenship and integration"
-        intro="Eight separate exams, each with its own real format and scoring — across Germany and Austria. Pick the one your goal needs, see what it takes from your country, and practise free."
+        intro="Eight separate exams, each with its own real format and scoring — across Germany and Austria. Pick the one your goal needs, see what it takes from your country, and start practising."
       />
       <section className="mt-10 space-y-4">
         {ALL_EXAM_SEO.map((e) => (
@@ -241,7 +241,7 @@ export function ExamPurposeOriginPage({
         intro={
           <>
             Planning {purpose.name.toLowerCase()} in Germany from {country.name}? Here is the real German
-            level this route requires, how {exam.name} fits, and free practice.
+            level this route requires, how {exam.name} fits, and AI-scored practice.
           </>
         }
       />

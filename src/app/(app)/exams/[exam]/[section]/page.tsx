@@ -29,7 +29,7 @@ export default async function ExamSectionPracticePage({
 
   const testDaf = isTestDaf(examDef.exam);
   const thresholdPending = isTelc(examDef.exam) && !getTelcConfig(examDef.exam).thresholdVerified;
-  const needsPaid = sectionDef.scoringMode === "AI" && !hasPaidAccess(user);
+  const needsPaid = !hasPaidAccess(user);
   const stateScoped = isStateScoped(sectionDef.key);
 
   const result = needsPaid
@@ -67,7 +67,7 @@ export default async function ExamSectionPracticePage({
           <a href="/pricing" className="font-semibold underline">
             See plans
           </a>{" "}
-          — reading, listening and language-element practice is free.
+         
         </div>
       ) : needsLand ? (
         // No Land chosen — ASK. Never draw "any state": these answers are true of

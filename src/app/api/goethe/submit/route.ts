@@ -72,8 +72,8 @@ export async function POST(req: Request): Promise<NextResponse> {
     );
   }
 
-  // AI feedback is a paid feature; objective auto-marking is free practice.
-  if (handler.mode === "AI" && !hasPaidAccess(user)) {
+  // AI feedback is a paid feature; objective auto-marking is AI-scored practice.
+  if (!hasPaidAccess(user)) {
     return NextResponse.json(
       { ok: false, error: "AI feedback needs a subscription", upgradeUrl: "/pricing" },
       { status: 402 },

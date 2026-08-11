@@ -17,7 +17,7 @@ async function beginAction(formData: FormData) {
   if (!def || !def.live) redirect("/practice");
   const user = await requireUser();
   if (!user.targetLevel) redirect("/account?needlevel=1");
-  if (def.scoringMode === "AI" && !hasPaidAccess(user)) redirect("/pricing");
+  if (!hasPaidAccess(user)) redirect("/pricing");
   const id = await startSession({
     userId: user.id,
     mode: "PRACTICE_SET",
@@ -42,7 +42,7 @@ export default async function TaskStartPage({
   if (!def || !def.live) notFound();
 
   const isObjective = def.scoringMode === "DETERMINISTIC";
-  const needsPaid = def.scoringMode === "AI" && !hasPaidAccess(user);
+  const needsPaid = !hasPaidAccess(user);
   const needsLevel = !user.targetLevel;
 
   return (
@@ -86,7 +86,7 @@ export default async function TaskStartPage({
           <a href="/pricing" className="font-semibold underline">
             See plans
           </a>{" "}
-          — Lesen and Hören practice is free.
+         
         </div>
       ) : (
         <form action={beginAction}>

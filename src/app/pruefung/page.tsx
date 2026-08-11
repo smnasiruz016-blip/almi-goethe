@@ -8,7 +8,7 @@ export function generateMetadata() {
   return buildExamMetadata({
     title: "German & Austrian exams — TestDaF, telc, DTZ, DSH, Einbürgerungstest & ÖSD",
     description:
-      "Eight German and Austrian exams: TestDaF, telc B1/B2/C1 Hochschule, the DTZ, DSH, the Einbürgerungstest and ÖSD B1 — real format, honest scoring, free practice.",
+      "Eight German and Austrian exams: TestDaF, telc B1/B2/C1 Hochschule, the DTZ, DSH, the Einbürgerungstest and ÖSD B1 — real format, honest scoring, AI-scored practice.",
     path: EXAMS_INDEX,
   });
 }

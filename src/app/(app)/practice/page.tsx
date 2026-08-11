@@ -9,7 +9,7 @@ import { MODULE_DEFS, type ModuleDef } from "@/lib/goethe/registry";
 import { MODULE_ORDER, LEVEL_LABEL } from "@/lib/goethe/types";
 
 function ModuleCard({ def }: { def: ModuleDef }) {
-  const tag = def.scoringMode === "AI" ? "AI feedback · Pro" : "Auto-marked · Free";
+  const tag = def.scoringMode === "AI" ? "AI feedback" : "Auto-marked";
   return (
     <Link
       href={`/practice/${def.slug}`}

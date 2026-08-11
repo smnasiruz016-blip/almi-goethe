@@ -50,7 +50,7 @@ export function UniversityHub({ uni }: { uni: GermanUni }) {
           <>
             Planning to study at {uni.name}{uni.city ? ` in ${uni.city}` : ""}? Here is the German level a
             German-taught degree typically needs, where to confirm your programme's exact requirement, and
-            free practice toward it.
+            AI-scored practice toward it.
           </>
         }
       />
@@ -98,7 +98,7 @@ export function UniversityOriginPage({ uni, country }: { uni: GermanUni; country
           <>
             Applying to {uni.name}{uni.city ? ` in ${uni.city}` : ""} from {country.name}? Here is the German
             level a German-taught degree typically needs, the admission and visa route for your country, and
-            free practice toward it.
+            AI-scored practice toward it.
           </>
         }
       />

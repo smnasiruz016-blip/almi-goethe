@@ -63,7 +63,7 @@ export default async function ExamSectionsPage({
             <div className="flex items-baseline justify-between gap-3">
               <h3 className="text-base font-semibold text-almi-ink">{s.label}</h3>
               <span className="text-[11px] text-almi-text-muted">
-                {s.scoringMode === "AI" ? "AI feedback · Pro" : "Auto-marked · Free"}
+                {s.scoringMode === "AI" ? "AI feedback" : "Auto-marked"}
               </span>
             </div>
             <p className="mt-2 text-sm font-semibold text-almi-coral">Practise →</p>
