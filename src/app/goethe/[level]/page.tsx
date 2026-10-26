@@ -6,7 +6,7 @@ import { buildMetadata } from "@/lib/goethe/seo/meta";
 import { LevelHub } from "@/components/goethe-seo/pages-level";
 
 export const revalidate = false;
-export const dynamicParams = true;
+export const dynamicParams = false;
 
 // Prebuild the six level hubs; everything below them is on-demand ISR.
 export function generateStaticParams() {
