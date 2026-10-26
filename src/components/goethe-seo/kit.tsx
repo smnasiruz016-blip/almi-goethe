@@ -3,7 +3,7 @@
 // applies identically across all ~112k Wave-1 pages.
 
 import Link from "next/link";
-import { COUNTRIES, originParam, type CountryEntry } from "@/lib/goethe/seo/countries";
+import type { CountryEntry } from "@/lib/goethe/seo/countries";
 
 export const FAMILY = {
   study: "https://almistudy.almiworld.com/",
@@ -69,41 +69,6 @@ export function Hero({
   );
 }
 
-export function RequirementCard({
-  heading,
-  headline,
-  detail,
-  extra,
-  note,
-  links,
-}: {
-  heading: string;
-  headline: string;
-  detail: string;
-  extra?: string;
-  note: string;
-  links: { label: string; href: string }[];
-}) {
-  return (
-    <section className="mt-10 rounded-2xl border border-almi-coral/30 bg-almi-coral/5 p-6">
-      <h2 className="text-xl font-semibold text-almi-ink">{heading}</h2>
-      <p className="mt-2 text-lg font-semibold text-almi-coral-deep">{headline}</p>
-      <p className="mt-2 text-sm text-almi-text">{detail}</p>
-      {extra && <p className="mt-2 text-sm text-almi-text">{extra}</p>}
-      <p className="mt-4 rounded-xl border border-almi-bg-peach bg-almi-paper px-4 py-3 text-sm text-almi-text">
-        {note}
-      </p>
-      <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-sm font-semibold">
-        {links.map((l) => (
-          <a key={l.href} href={l.href} target="_blank" rel="noopener noreferrer" className="text-almi-coral hover:underline">
-            {l.label} ↗
-          </a>
-        ))}
-      </div>
-    </section>
-  );
-}
-
 export function PrepCta({ levelHint }: { levelHint?: string }) {
   return (
     <section className="mt-10">
@@ -136,31 +101,6 @@ export function LinkChips({ title, links }: { title: string; links: { label: str
             className="rounded-full border border-almi-bg-peach bg-almi-paper px-3 py-1 text-xs font-medium text-almi-text hover:border-almi-coral"
           >
             {l.label}
-          </Link>
-        ))}
-      </div>
-    </section>
-  );
-}
-
-export function CountryGrid({
-  title,
-  intro,
-  hrefFor,
-}: {
-  title: string;
-  intro?: string;
-  hrefFor: (c: CountryEntry) => string;
-}) {
-  const sorted = [...COUNTRIES].sort((a, b) => a.name.localeCompare(b.name));
-  return (
-    <section className="mt-10 border-t border-almi-bg-peach pt-6">
-      <h2 className="text-xl font-semibold text-almi-ink">{title}</h2>
-      {intro && <p className="mt-1 text-sm text-almi-text">{intro}</p>}
-      <div className="mt-4 grid grid-cols-2 gap-x-4 gap-y-1.5 sm:grid-cols-3">
-        {sorted.map((c) => (
-          <Link key={c.code} href={hrefFor(c)} className="text-sm text-almi-text hover:text-almi-coral hover:underline">
-            {c.name}
           </Link>
         ))}
       </div>

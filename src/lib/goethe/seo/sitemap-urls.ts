@@ -45,20 +45,17 @@ export function buildGoetheSitemapUrls(): MetadataRoute.Sitemap {
 // exam engines. Exam URLs are appended at the TAIL so every existing Goethe URL
 // keeps its position (and therefore its chunk) as the set grows — the same
 // stable-order guarantee the Goethe builder relies on.
-// HOLDING 2026-08-09 — only URLs whose route still renders may be advertised. The origin/purpose
-// matrices below the hubs are frozen (dynamicParams = false, nothing prerendered), so they now 404
-// and listing them would burn crawl budget and feed GSC 404s. Keep-set shapes, by depth:
-//   /                          /goethe/<level>            /goethe/occupation/<occupation>
-//   ordinary static pages      /pruefung/<exam>           /goethe/university/<uni>
-// Delete this filter (and its use below) to reverse — the builders themselves are untouched.
+// Only URLs whose route still renders may be advertised (everything deeper answers 410 Gone).
+// Keep-set shapes: /, ordinary static pages, the /goethe and /pruefung index pages,
+// /goethe/<level> and /pruefung/<exam>.
 function isHoldingKeepSet(entry: MetadataRoute.Sitemap[number]): boolean {
   const seg = new URL(entry.url).pathname.split("/").filter(Boolean);
   if (seg.length === 0) return true;
   if (seg[0] === "goethe") {
-    // /goethe/<level> only — /goethe/occupation/* and /goethe/university/* are 410 Gone.
-    return seg.length === 2 && seg[1] !== "occupation" && seg[1] !== "university";
+    // /goethe and /goethe/<level> only — /goethe/occupation/* and /goethe/university/* are 410 Gone.
+    return seg.length === 1 || (seg.length === 2 && seg[1] !== "occupation" && seg[1] !== "university");
   }
-  if (seg[0] === "pruefung") return seg.length === 2; // /pruefung/<exam>
+  if (seg[0] === "pruefung") return seg.length <= 2; // /pruefung and /pruefung/<exam>
   return true; // ordinary static marketing pages
 }
 

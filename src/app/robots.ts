@@ -5,40 +5,25 @@ const SITE_URL = "https://almigoethe.almiworld.com";
 // Private / app-only paths — blocked for ALL bots (unchanged from the original rule).
 const PRIVATE = ["/practice/", "/account", "/admin", "/api/"];
 
-// Deep per-origin long-tail leaves (the ×occupation / ×university / ×level·seg / ×exam·seg
-// fan-out crossed with [origin]). Goethe has NO literal "from/" marker like the siblings —
-// the [origin] leaf is simply the 3rd path segment under /goethe and /pruefung, while every
-// hub (landing, /goethe, /goethe/<level>, /goethe/<level>/<seg>, /goethe/occupation/<occ>,
-// /goethe/university/<uni>, /pruefung/<exam>, /pruefung/<exam>/<seg>) is 1–2 segments deep.
-// So "/goethe/*/*/" and "/pruefung/*/*/" trim ONLY the 3-deep [origin] leaves for generic
-// bots; 1–2-deep hubs stay crawlable (a trailing segment is required to match).
-const DEEP_LEAVES = ["/goethe/*/*/", "/pruefung/*/*/"];
-
-// Heavy crawlers that burn Vercel invocations + edge requests with ~no SEO upside.
-// robots.txt is advisory — these DO obey it; truly abusive scrapers need BotID/WAF.
-// Google-Extended = Gemini/Vertex TRAINING token, NOT search — blocking it does not
-// affect ranking. Trim this list if you want AI-search (ChatGPT/Perplexity) citations.
-const HEAVY_BOTS = [
-  "GPTBot", "OAI-SearchBot", "ChatGPT-User", "ClaudeBot", "anthropic-ai",
-  "CCBot", "Bytespider", "Amazonbot", "PerplexityBot", "Google-Extended",
-  "AhrefsBot", "SemrushBot", "MJ12bot", "DotBot", "DataForSeoBot", "PetalBot",
-];
+// AI crawlers are NEVER blocked (owner ruling 27 Oct 2026: AI visibility is the product goal).
+// GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, Claude-SearchBot, anthropic-ai, PerplexityBot,
+// Google-Extended, CCBot, Amazonbot, Bytespider, Meta-ExternalAgent and the like fall under `*`.
+// Only pure SEO-tool scrapers (no search or AI audience) stay off entirely.
+//
+// The old DEEP_LEAVES disallow (/goethe/*/*/, /pruefung/*/*/) is gone too: it covered only the
+// removed programmatic pages, which now answer 410 Gone from src/proxy.ts — crawlers must be
+// able to SEE the 410 to drop those URLs.
+const SEO_TOOL_SCRAPERS = ["AhrefsBot", "SemrushBot", "MJ12bot", "DotBot", "DataForSeoBot"];
 
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
-      // Real search engines: full access to the long-tail leaves — that IS the pSEO product.
-      // HOLDING 2026-08-09 — DEEP_LEAVES now applies to Googlebot and Bingbot too; everything below
-      // the hubs no longer renders. Advisory only — the route config is what stops the ISR writes
-      // (almi-danish kept writing for a fortnight after the same block went live).
-      { userAgent: ["Googlebot", "Bingbot"], allow: "/", disallow: [...PRIVATE, ...DEEP_LEAVES] },
-      // Everyone else: landing + hubs only, skip the per-origin leaves, gentle pace.
-      { userAgent: "*", allow: "/", disallow: [...PRIVATE, ...DEEP_LEAVES], crawlDelay: 10 },
-      // Heavy, no-SEO-value crawlers: off entirely.
-      { userAgent: HEAVY_BOTS, disallow: "/" },
+      { userAgent: ["Googlebot", "Bingbot"], allow: "/", disallow: PRIVATE },
+      { userAgent: "*", allow: "/", disallow: PRIVATE, crawlDelay: 10 },
+      { userAgent: SEO_TOOL_SCRAPERS, disallow: "/" },
     ],
     // Next 16's generateSitemaps has no auto-index at /sitemap.xml — point crawlers
-    // at our explicit sitemap index, which lists all sharded sitemaps.
+    // at our explicit sitemap index.
     sitemap: `${SITE_URL}/sitemap-index.xml`,
   };
 }
