@@ -1,20 +1,19 @@
 // SEO page components for the eight German and Austrian exam engines under /pruefung. These
-// reuse the shared Goethe SEO kit (SeoShell, Breadcrumb, Hero, RequirementCard,
-// LinkChips, CountryGrid, CrossLinkFooter) and add two exam-specific pieces: an
+// reuse the shared Goethe SEO kit (SeoShell, Breadcrumb, Hero, LinkChips,
+// CrossLinkFooter) and add two exam-specific pieces: an
 // honest PrepCta pointing at the /exams practice hub, and a disclaimer naming the
 // real providers (telc / TestDaF-Institut / g.a.s.t.) we are NOT affiliated with.
 
+//
+// The exam × origin and exam × purpose × origin pages were removed (cost fix, Oct 2026) and
+// answer 410 Gone, so nothing here links to them.
+
 import Link from "next/link";
-import type { CountryEntry } from "@/lib/goethe/seo/countries";
-import { studyAngle, workAngle } from "@/lib/goethe/seo/recognition";
-import type { Purpose } from "@/lib/goethe/seo/levels";
 import {
   SeoShell,
   Breadcrumb,
   Hero,
-  RequirementCard,
   LinkChips,
-  CountryGrid,
   CrossLinkFooter,
 } from "@/components/goethe-seo/kit";
 import { EXAM_ESTIMATE_DISCLAIMER } from "@/lib/exams/types";
@@ -24,10 +23,7 @@ import {
   purposesForExam,
   type ExamSeo,
 } from "@/lib/exams/seo/exams-data";
-import { examHubUrl, examOriginUrl, examPurposeOriginUrl } from "@/lib/exams/seo/urls";
-
-// Whether a purpose leans study vs work — drives which real origin angle we show.
-const STUDY_PURPOSES = new Set(["university"]);
+import { examHubUrl } from "@/lib/exams/seo/urls";
 
 function ExamPrepCta({ exam }: { exam: ExamSeo }) {
   return (
@@ -134,13 +130,18 @@ export function ExamHubPage({ exam }: { exam: ExamSeo }) {
         intro={exam.tagline}
       />
       <ExamFacts exam={exam} />
-      <LinkChips
-        title="By purpose"
-        links={purposes.map((p) => ({
-          label: p.name,
-          href: examPurposeOriginUrl(exam.exam, p, { code: "PK", name: "Pakistan" } as CountryEntry),
-        }))}
-      />
+      {purposes.length > 0 && (
+        <section className="mt-10">
+          <h2 className="text-xl font-semibold text-almi-ink">By purpose</h2>
+          <ul className="mt-3 flex flex-wrap gap-2">
+            {purposes.map((p) => (
+              <li key={p.slug} className="rounded-full border border-almi-bg-peach bg-almi-paper px-3 py-1 text-sm text-almi-text">
+                {p.name}
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
       <ExamPrepCta exam={exam} />
       <LinkChips
         title="Other German exams"
@@ -149,133 +150,7 @@ export function ExamHubPage({ exam }: { exam: ExamSeo }) {
           href: examHubUrl(e.exam),
         }))}
       />
-      <CountryGrid
-        title={`${exam.name} — by country you're coming from`}
-        intro="Pick your country for the local study/work-in-Germany angle."
-        hrefFor={(c) => examOriginUrl(exam.exam, c)}
-      />
       <CrossLinkFooter />
-      <ExamDisclaimer exam={exam} />
-    </SeoShell>
-  );
-}
-
-// ---- exam × origin: /pruefung/[exam]/from-<country> ------------------------
-
-export function ExamOriginPage({ exam, country }: { exam: ExamSeo; country: CountryEntry }) {
-  const purposes = purposesForExam(exam.exam);
-  return (
-    <SeoShell>
-      <Breadcrumb
-        trail={[
-          { label: "German exams", href: EXAMS_INDEX },
-          { label: exam.name, href: examHubUrl(exam.exam) },
-          { label: country.name },
-        ]}
-      />
-      <Hero
-        eyebrow={`${exam.name} · from ${country.name}`}
-        title={`${exam.name} from ${country.name}`}
-        intro={
-          <>
-            {exam.tagline} Here is how {exam.name} fits a move to Germany from {country.name}, and free
-            practice toward it.
-          </>
-        }
-      />
-      <ExamFacts exam={exam} />
-      <section className="mt-10">
-        <h2 className="text-xl font-semibold text-almi-ink">Studying in Germany from {country.name}</h2>
-        <p className="mt-2 text-sm text-almi-text">{studyAngle(country)}</p>
-      </section>
-      <section className="mt-8">
-        <h2 className="text-xl font-semibold text-almi-ink">Working in Germany from {country.name}</h2>
-        <p className="mt-2 text-sm text-almi-text">{workAngle(country)}</p>
-      </section>
-      <LinkChips
-        title={`${exam.name} by purpose — from ${country.name}`}
-        links={purposes.map((p) => ({ label: p.name, href: examPurposeOriginUrl(exam.exam, p, country) }))}
-      />
-      <ExamPrepCta exam={exam} />
-      <LinkChips
-        title={`Other German exams — from ${country.name}`}
-        links={ALL_EXAM_SEO.filter((e) => e.slug !== exam.slug).map((e) => ({
-          label: e.name,
-          href: examOriginUrl(e.exam, country),
-        }))}
-      />
-      <CrossLinkFooter country={country} />
-      <ExamDisclaimer exam={exam} />
-    </SeoShell>
-  );
-}
-
-// ---- exam × purpose × origin: /pruefung/[exam]/for-<purpose>/from-<country> -
-
-export function ExamPurposeOriginPage({
-  exam,
-  purpose,
-  country,
-  real,
-}: {
-  exam: ExamSeo;
-  purpose: Purpose;
-  country: CountryEntry;
-  real: boolean; // exam genuinely certifies for this purpose
-}) {
-  const isStudy = STUDY_PURPOSES.has(purpose.slug);
-  const others = purposesForExam(exam.exam).filter((p) => p.slug !== purpose.slug);
-  return (
-    <SeoShell>
-      <Breadcrumb
-        trail={[
-          { label: "German exams", href: EXAMS_INDEX },
-          { label: exam.name, href: examHubUrl(exam.exam) },
-          { label: country.name, href: examOriginUrl(exam.exam, country) },
-          { label: purpose.name },
-        ]}
-      />
-      <Hero
-        eyebrow={`${purpose.name} · from ${country.name}`}
-        title={`${exam.name} for ${purpose.name} — from ${country.name}`}
-        intro={
-          <>
-            Planning {purpose.name.toLowerCase()} in Germany from {country.name}? Here is the real German
-            level this route requires, how {exam.name} fits, and free practice.
-          </>
-        }
-      />
-      {!real && (
-        <p className="mt-6 rounded-xl border border-amber-300/60 bg-amber-50 px-4 py-3 text-sm text-almi-text">
-          Note: {exam.name} is not the standard German proof for {purpose.name.toLowerCase()}. This page is
-          for orientation only — check which certificate this route actually accepts with {purpose.authority}.
-        </p>
-      )}
-      <RequirementCard
-        heading={`${purpose.name} — German requirement`}
-        headline={`Typically ${purpose.typicalLevel}`}
-        detail={purpose.detail}
-        note={`Requirements can change and depend on your exact case. Confirm the German level and accepted certificate for ${purpose.name.toLowerCase()} with ${purpose.authority}.`}
-        links={[{ label: purpose.authority, href: purpose.authorityUrl }]}
-      />
-      <section className="mt-8">
-        <h2 className="text-xl font-semibold text-almi-ink">How {exam.name} fits</h2>
-        <p className="mt-2 text-sm text-almi-text">
-          {exam.name} certifies German at {exam.cefr}. {exam.usedFor}
-        </p>
-      </section>
-      <section className="mt-8">
-        <h2 className="text-xl font-semibold text-almi-ink">From {country.name}</h2>
-        <p className="mt-2 text-sm text-almi-text">{isStudy ? studyAngle(country) : workAngle(country)}</p>
-      </section>
-      <ExamPrepCta exam={exam} />
-      {others.length > 0 && (
-        <LinkChips
-          title={`Other purposes — ${exam.name} from ${country.name}`}
-          links={others.map((p) => ({ label: p.name, href: examPurposeOriginUrl(exam.exam, p, country) }))}
-        />
-      )}
-      <CrossLinkFooter country={country} />
       <ExamDisclaimer exam={exam} />
     </SeoShell>
   );
