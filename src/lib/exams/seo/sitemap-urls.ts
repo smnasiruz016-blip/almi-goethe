@@ -5,10 +5,9 @@
 // listed here and are marked noindex at the route.
 
 import type { MetadataRoute } from "next";
-import { COUNTRIES } from "@/lib/goethe/seo/countries";
 import { SITE_URL } from "@/lib/goethe/seo/meta";
-import { ALL_EXAM_SEO, EXAMS_INDEX, purposesForExam } from "./exams-data";
-import { examHubUrl, examOriginUrl, examPurposeOriginUrl } from "./urls";
+import { ALL_EXAM_SEO, EXAMS_INDEX } from "./exams-data";
+import { examHubUrl } from "./urls";
 
 type Entry = MetadataRoute.Sitemap[number];
 
@@ -27,13 +26,9 @@ export function buildExamSitemapUrls(): MetadataRoute.Sitemap {
   push(EXAMS_INDEX, 0.9, "weekly");
   for (const e of ALL_EXAM_SEO) push(examHubUrl(e.exam), 0.8, "weekly");
 
-  // exam × origin (all real — the exam is real, the origin angle is real).
-  for (const e of ALL_EXAM_SEO) for (const c of COUNTRIES) push(examOriginUrl(e.exam, c), 0.6);
-
-  // exam × purpose × origin — only where the exam→purpose mapping is real.
-  for (const e of ALL_EXAM_SEO)
-    for (const p of purposesForExam(e.exam))
-      for (const c of COUNTRIES) push(examPurposeOriginUrl(e.exam, p, c), 0.6);
+  // The exam × origin and exam × purpose × origin pages were removed (cost fix,
+  // 26 Oct 2026): /pruefung/<exam>/<seg>[/<origin>] now answers 410 Gone from
+  // src/proxy.ts, so they are never listed here.
 
   return urls;
 }

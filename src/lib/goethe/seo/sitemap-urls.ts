@@ -5,20 +5,8 @@
 // (Wikidata CC0) × 193 origins.
 
 import type { MetadataRoute } from "next";
-import { COUNTRIES } from "./countries";
-import { GERMAN_UNIS } from "./universities";
-import { OCCUPATIONS } from "./occupations";
-import { LEVELS, PURPOSES } from "./levels";
-import {
-  GOETHE_INDEX,
-  levelHubUrl,
-  levelOriginUrl,
-  levelPurposeOriginUrl,
-  occupationHubUrl,
-  occupationOriginUrl,
-  uniHubUrl,
-  uniOriginUrl,
-} from "./urls";
+import { LEVELS } from "./levels";
+import { GOETHE_INDEX, levelHubUrl } from "./urls";
 import { buildExamSitemapUrls } from "@/lib/exams/seo/sitemap-urls";
 
 const SITE_URL = process.env.NEXT_PUBLIC_APP_URL ?? "https://almigoethe.almiworld.com";
@@ -45,16 +33,10 @@ export function buildGoetheSitemapUrls(): MetadataRoute.Sitemap {
   push("/signup", 0.6, "weekly");
   push("/login", 0.5, "weekly");
 
-  // Hubs.
+  // Level hubs. The occupation and university hubs and every origin/purpose
+  // matrix were removed (cost fix, 26 Oct 2026): they answer 410 Gone from
+  // src/proxy.ts, so they are never listed here.
   for (const l of LEVELS) push(levelHubUrl(l), 0.8, "weekly");
-  for (const o of OCCUPATIONS) push(occupationHubUrl(o), 0.7, "weekly");
-  for (const u of GERMAN_UNIS) push(uniHubUrl(u), 0.7, "weekly");
-
-  // Matrices (the bulk).
-  for (const l of LEVELS) for (const c of COUNTRIES) push(levelOriginUrl(l, c), 0.6);
-  for (const l of LEVELS) for (const p of PURPOSES) for (const c of COUNTRIES) push(levelPurposeOriginUrl(l, p, c), 0.6);
-  for (const o of OCCUPATIONS) for (const c of COUNTRIES) push(occupationOriginUrl(o, c), 0.6);
-  for (const u of GERMAN_UNIS) for (const c of COUNTRIES) push(uniOriginUrl(u, c), 0.5);
 
   return urls;
 }
@@ -73,9 +55,8 @@ function isHoldingKeepSet(entry: MetadataRoute.Sitemap[number]): boolean {
   const seg = new URL(entry.url).pathname.split("/").filter(Boolean);
   if (seg.length === 0) return true;
   if (seg[0] === "goethe") {
-    if (seg.length === 2) return true; // /goethe/<level>
-    if (seg.length === 3 && (seg[1] === "occupation" || seg[1] === "university")) return true;
-    return false;
+    // /goethe/<level> only — /goethe/occupation/* and /goethe/university/* are 410 Gone.
+    return seg.length === 2 && seg[1] !== "occupation" && seg[1] !== "university";
   }
   if (seg[0] === "pruefung") return seg.length === 2; // /pruefung/<exam>
   return true; // ordinary static marketing pages
