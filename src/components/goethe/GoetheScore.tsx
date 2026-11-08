@@ -10,7 +10,7 @@ import { VERDICT_LABEL } from "@/lib/goethe/goethe-scale";
 const VERDICT_CLASS: Record<NonNullable<ModuleScore>["verdict"], string> = {
   passed: "bg-almi-teal/15 text-almi-ink",
   borderline: "bg-almi-gold/15 text-almi-ink",
-  "not-yet": "bg-almi-coral/10 text-almi-coral-deep",
+  "not-yet": "bg-almi-coral/10 text-almi-coral-text",
 };
 
 export function GoetheScore({

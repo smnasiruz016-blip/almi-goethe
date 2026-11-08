@@ -72,7 +72,7 @@ export default async function ExamsPage() {
                 <span className="text-[11px] text-almi-text-muted">{TAG[exam]}</span>
               </div>
               <p className="mt-2 text-sm text-almi-text">{BLURB[exam]}</p>
-              <p className="mt-3 text-sm font-semibold text-almi-coral">Practise →</p>
+              <p className="mt-3 text-sm font-semibold text-almi-coral-text">Practise →</p>
             </Link>
           );
         })}

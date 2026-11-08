@@ -117,10 +117,10 @@ export function CrossLinkFooter({ country }: { country?: CountryEntry }) {
         German is one step. The rest of AlmiWorld helps with everything around it — all original, honest tools:
       </p>
       <ul className="mt-3 space-y-2 text-sm text-almi-text">
-        <li>• <a href={FAMILY.study} target="_blank" rel="noopener noreferrer" className="font-semibold text-almi-coral hover:underline">AlmiStudy</a> — compare German universities and entry requirements.</li>
-        <li>• <a href={FAMILY.job} target="_blank" rel="noopener noreferrer" className="font-semibold text-almi-coral hover:underline">AlmiJob</a> — find roles and see what German employers ask for.</li>
-        <li>• <a href={FAMILY.cv} target="_blank" rel="noopener noreferrer" className="font-semibold text-almi-coral hover:underline">AlmiCV</a> — build a German-format Lebenslauf.</li>
-        <li>• <a href={FAMILY.prep} target="_blank" rel="noopener noreferrer" className="font-semibold text-almi-coral hover:underline">AlmiPrep</a> / <a href={FAMILY.toefl} target="_blank" rel="noopener noreferrer" className="font-semibold text-almi-coral hover:underline">AlmiTOEFL</a> — for English-taught programmes (IELTS / TOEFL).</li>
+        <li>• <a href={FAMILY.study} target="_blank" rel="noopener noreferrer" className="font-semibold text-almi-coral-text hover:underline">AlmiStudy</a> — compare German universities and entry requirements.</li>
+        <li>• <a href={FAMILY.job} target="_blank" rel="noopener noreferrer" className="font-semibold text-almi-coral-text hover:underline">AlmiJob</a> — find roles and see what German employers ask for.</li>
+        <li>• <a href={FAMILY.cv} target="_blank" rel="noopener noreferrer" className="font-semibold text-almi-coral-text hover:underline">AlmiCV</a> — build a German-format Lebenslauf.</li>
+        <li>• <a href={FAMILY.prep} target="_blank" rel="noopener noreferrer" className="font-semibold text-almi-coral-text hover:underline">AlmiPrep</a> / <a href={FAMILY.toefl} target="_blank" rel="noopener noreferrer" className="font-semibold text-almi-coral-text hover:underline">AlmiTOEFL</a> — for English-taught programmes (IELTS / TOEFL).</li>
       </ul>
       <p className="mt-4 text-xs text-almi-text-muted">
         AlmiWorld gives 25% of its proceeds to the{" "}

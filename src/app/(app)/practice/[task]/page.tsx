@@ -70,7 +70,7 @@ export default async function TaskStartPage({
       </div>
 
       {empty && (
-        <p className="rounded-xl border border-almi-coral/40 bg-almi-coral/5 px-4 py-3 text-sm text-almi-coral-deep">
+        <p className="rounded-xl border border-almi-coral/40 bg-almi-coral/5 px-4 py-3 text-sm text-almi-coral-text">
           No practice items are seeded for this module at your level yet.
         </p>
       )}

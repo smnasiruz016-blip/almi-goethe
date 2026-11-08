@@ -94,7 +94,7 @@ export default async function ExamSectionPracticePage({
         // 1-of-2 writing: two themes, the learner picks one. The choice is the task.
         <ExamItemRunner item={choices[0]} choices={choices} isTestDaf={testDaf} thresholdPending={thresholdPending} />
       ) : !item ? (
-        <p className="rounded-xl border border-almi-coral/40 bg-almi-coral/5 px-4 py-3 text-sm text-almi-coral-deep">
+        <p className="rounded-xl border border-almi-coral/40 bg-almi-coral/5 px-4 py-3 text-sm text-almi-coral-text">
           No practice items are seeded for this section yet. Check back soon.
         </p>
       ) : (

@@ -154,7 +154,7 @@ function ListeningAudio({ attemptId }: { attemptId: string }) {
         </button>
       </div>
       {state === "error" && (
-        <p className="mt-2 text-xs font-medium text-almi-coral-deep">
+        <p className="mt-2 text-xs font-medium text-almi-coral-text">
           Audio could not be played. Press Retry. (Listening audio needs the OPENAI_API_KEY set.)
         </p>
       )}
@@ -190,7 +190,7 @@ function ListeningComposer({
           />
         ))}
       </div>
-      {error && <p className="text-sm font-medium text-almi-coral-deep">{error}</p>}
+      {error && <p className="text-sm font-medium text-almi-coral-text">{error}</p>}
       <button type="button" onClick={() => submit({ answers })} disabled={submitting} className={SUBMIT_BTN}>
         {submitting ? "Checking…" : "Submit answers"}
       </button>
@@ -264,7 +264,7 @@ function ReadingComposer({
           />
         ))}
       </div>
-      {error && <p className="text-sm font-medium text-almi-coral-deep">{error}</p>}
+      {error && <p className="text-sm font-medium text-almi-coral-text">{error}</p>}
       <button type="button" onClick={() => submit({ answers })} disabled={submitting} className={SUBMIT_BTN}>
         {submitting ? "Checking…" : "Submit answers"}
       </button>
@@ -324,7 +324,7 @@ function WritingComposer({ attemptId, prompt, payload }: { attemptId: string; pr
         {words} words{p.wordMin ? ` · Goethe expects ${p.wordMin}–${p.wordMax ?? p.wordMin}` : ""}. You&apos;ll get
         honest feedback against the official Goethe writing criteria.
       </p>
-      {error && <p className="text-sm font-medium text-almi-coral-deep">{error}</p>}
+      {error && <p className="text-sm font-medium text-almi-coral-text">{error}</p>}
       <button type="button" onClick={() => submit({ text })} disabled={submitting} className={SUBMIT_BTN}>
         {submitting ? "Submitting…" : isSurvey ? "Submit response" : "Submit email"}
       </button>
@@ -546,7 +546,7 @@ function SpeakingComposer({ attemptId, prompt, payload }: { attemptId: string; p
         </button>
       )}
 
-      {error && <p className="text-sm font-medium text-almi-coral-deep">{error}</p>}
+      {error && <p className="text-sm font-medium text-almi-coral-text">{error}</p>}
     </div>
   );
 }

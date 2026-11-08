@@ -77,7 +77,7 @@ function ExamFacts({ exam }: { exam: ExamSeo }) {
         <h2 className="text-xl font-semibold text-almi-ink">What {exam.name} is for</h2>
         <p className="mt-2 text-sm text-almi-text">{exam.usedFor}</p>
         <div className="mt-3 text-sm font-semibold">
-          <a href={exam.officialUrl} target="_blank" rel="noopener noreferrer" className="text-almi-coral hover:underline">
+          <a href={exam.officialUrl} target="_blank" rel="noopener noreferrer" className="text-almi-coral-text hover:underline">
             Official: {exam.officialLabel} ↗
           </a>
         </div>
