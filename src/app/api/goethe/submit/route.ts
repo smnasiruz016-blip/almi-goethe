@@ -77,6 +77,9 @@ export async function POST(req: Request): Promise<NextResponse> {
   // Objective auto-marking (Lesen, Hören) is free practice, exactly as before.
   // RR-397: AI feedback (Schreiben, Sprechen): paid users as before; a free account (48 hours, no card) gets ONE AI-scored
   // Writing and ONE AI-scored Speaking, within today's free-AI budget. AI in the full mock stays behind hasPaidAccess().
+  // RR-399 A3: the free door reserves the free use; if transcription or scoring then fails, the learner received nothing and
+  // releaseFreeUse() gives it back (paid users and the full mock have nothing to give back).
+  let releaseFreeUse: () => Promise<void> = async () => {};
   if (handler.mode === "AI") {
     if (attempt.session?.mode === "MOCK") {
       if (!hasPaidAccess(user)) {
@@ -95,6 +98,7 @@ export async function POST(req: Request): Promise<NextResponse> {
       const kind = attempt.module === "SPRECHEN" ? "SPEAKING" : "WRITING";
       const gate = await aiGate(user, kind, () => countAiScored(user.id, kind));
       if (!gate.ok) return NextResponse.json(gate.body, { status: gate.status });
+      releaseFreeUse = gate.release;
     }
   }
 
@@ -110,6 +114,7 @@ export async function POST(req: Request): Promise<NextResponse> {
       responseValue = { transcript };
     } catch (err) {
       console.error("[goethe.submit] transcription failed:", err);
+      await releaseFreeUse();
       return NextResponse.json(
         { ok: false, error: "Could not transcribe your recording. Try again." },
         { status: 500 },
@@ -127,6 +132,7 @@ export async function POST(req: Request): Promise<NextResponse> {
     });
   } catch (err) {
     console.error("[goethe.submit] scoring failed:", err);
+    await releaseFreeUse();
     return NextResponse.json(
       { ok: false, error: "Could not score this attempt. Try again in a moment." },
       { status: 500 },
