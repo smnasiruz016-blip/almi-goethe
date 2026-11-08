@@ -10,6 +10,7 @@ import type { ModuleScore } from "@/lib/goethe/types";
 import { ESTIMATE_DISCLAIMER } from "@/lib/goethe/goethe-scale";
 import { GoetheScore } from "@/components/goethe/GoetheScore";
 import { buildObjectiveReview } from "@/lib/goethe/review";
+import { ModelAnswers } from "@/components/goethe/ModelAnswers";
 
 function ObjectiveReview({ item, attempt }: { item: GoetheItem; attempt: GoetheAttempt }) {
   const review = buildObjectiveReview(attempt.module, item.payload, attempt.response);
@@ -151,6 +152,8 @@ export function GoetheResult({
           <div className="mt-3"><FeedbackBlock feedback={feedback} /></div>
         </section>
       )}
+
+      <ModelAnswers item={item} />
 
       {variant === "single" && (
         <>
