@@ -48,7 +48,7 @@ threshold nobody has quoted is a threshold the learner should not be shown as fa
 criteria. Every surface that says so also tells the reader to confirm with the
 Einbürgerungsbehörde, because the requirement is set by the authority and changes.
 
-$12/month + 7-day trial; objective modules free, AI feedback paid.
+$12/month + 48-hour trial; objective modules free, AI feedback paid.
 
 ## What the build enforces
 
