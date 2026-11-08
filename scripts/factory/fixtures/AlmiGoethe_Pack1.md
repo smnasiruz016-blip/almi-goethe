@@ -148,7 +148,7 @@ Elena
 
 # Aufgabe 2.1 — Handys in der Schule
 
-> **Im Online-Gästebuch einer Sendung lesen Sie: „Handys sollten in der Schule komplett verboten sein. Kinder lernen besser ohne Ablenkung." (Thomas, 45)**
+> **Im Online-Gästebuch einer Sendung lesen Sie: „Handys sollten in der Schule komplett verboten sein. Kinder lernen besser ohne Ablenkung.“ (Thomas, 45)**
 > **Schreiben Sie nun Ihre Meinung (ca. 80 Wörter).**
 
 ## sehr gut
@@ -179,7 +179,7 @@ Ich finde Thomas hat recht. Handy ist schlecht für Kinder. Sie spielen immer un
 
 # Aufgabe 2.2 — Feste Arbeitszeiten
 
-> **Im Forum einer Zeitschrift schreibt Anna (31): „Ich finde feste Arbeitszeiten von 8 bis 17 Uhr besser als flexible Zeiten. So weiß jeder, wann die Kollegen da sind."**
+> **Im Forum einer Zeitschrift schreibt Anna (31): „Ich finde feste Arbeitszeiten von 8 bis 17 Uhr besser als flexible Zeiten. So weiß jeder, wann die Kollegen da sind.“**
 > **Schreiben Sie Ihre Meinung (ca. 80 Wörter).**
 
 ## sehr gut
@@ -204,7 +204,7 @@ Natürlich müssen die Kollegen zusammen planen, aber das geht mit E-Mails und K
 
 # Aufgabe 2.3 — Online einkaufen
 
-> **In einem Gästebuch lesen Sie: „Ich kaufe fast alles online. Das ist billiger und spart Zeit." (Kai, 27)**
+> **In einem Gästebuch lesen Sie: „Ich kaufe fast alles online. Das ist billiger und spart Zeit.“ (Kai, 27)**
 > **Schreiben Sie Ihre Meinung (ca. 80 Wörter).**
 
 ## sehr gut
@@ -331,11 +331,11 @@ Lucía Gómez
 
 # Teil 2 — Ein Thema präsentieren (ca. 3 Minuten)
 
-> **Thema: „Sollten Kinder schon im Kindergarten eine Fremdsprache lernen?"** Folie 1: Thema vorstellen · Folie 2: persönliche Erfahrung · Folie 3: Situation im Heimatland · Folie 4: Vor- und Nachteile, Meinung · Folie 5: Abschluss und Dank
+> **Thema: „Sollten Kinder schon im Kindergarten eine Fremdsprache lernen?“** Folie 1: Thema vorstellen · Folie 2: persönliche Erfahrung · Folie 3: Situation im Heimatland · Folie 4: Vor- und Nachteile, Meinung · Folie 5: Abschluss und Dank
 
 **Modell-Präsentation (sehr gut):**
 
-Ich möchte heute über das Thema „Fremdsprachen im Kindergarten" sprechen. Zuerst erzähle ich von meinen eigenen Erfahrungen, dann berichte ich über die Situation in meinem Heimatland, und am Ende nenne ich Vor- und Nachteile und meine Meinung.
+Ich möchte heute über das Thema „Fremdsprachen im Kindergarten“ sprechen. Zuerst erzähle ich von meinen eigenen Erfahrungen, dann berichte ich über die Situation in meinem Heimatland, und am Ende nenne ich Vor- und Nachteile und meine Meinung.
 
 Ich selbst habe erst mit zwölf Jahren Englisch gelernt. Am Anfang war das schwierig, vor allem die Aussprache. Meine kleine Nichte dagegen lernt schon im Kindergarten Englisch, mit Liedern und Spielen, und sie spricht viele Wörter ohne Akzent.
 
@@ -348,6 +348,8 @@ Damit komme ich zum Ende meiner Präsentation. Vielen Dank für Ihre Aufmerksamk
 **Notes:** follows all five slides in order with clear signposting (*Zuerst*, *dann*, *am Ende*, *Damit komme ich zum Ende*), a personal example, information about the home country, a balanced argument and a polite close. *(Brasilien is an example. Each candidate talks about their own country.)*
 
 # Teil 3 — Über ein Thema sprechen (ca. 2 Minuten)
+
+> **Ihre Partnerin / Ihr Partner hat zum Thema „Fremdsprachen im Kindergarten“ präsentiert. Geben Sie eine Rückmeldung, stellen Sie eine Frage, und beantworten Sie danach eine Frage zu Ihrer eigenen Präsentation.**
 
 *Task: after your partner's presentation, give feedback, ask a question, and answer your partner's question about your own presentation.*
 

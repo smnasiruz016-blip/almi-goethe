@@ -237,7 +237,7 @@
    "title": "Aufgabe 2.1 — Handys in der Schule",
    "prompt": "Aufgabe 2: Meinung im Forum (25 Minuten, ca. 80 Wörter)",
    "payload": {
-    "situation": "Im Online-Gästebuch einer Sendung lesen Sie: „Handys sollten in der Schule komplett verboten sein. Kinder lernen besser ohne Ablenkung.\" (Thomas, 45)",
+    "situation": "Im Online-Gästebuch einer Sendung lesen Sie: „Handys sollten in der Schule komplett verboten sein. Kinder lernen besser ohne Ablenkung.“ (Thomas, 45)",
     "instruction": "Schreiben Sie nun Ihre Meinung (ca. 80 Wörter).",
     "wordMin": 70,
     "wordMax": 100
@@ -316,7 +316,7 @@
    "title": "Aufgabe 2.2 — Feste Arbeitszeiten",
    "prompt": "Aufgabe 2: Meinung im Forum (25 Minuten, ca. 80 Wörter)",
    "payload": {
-    "situation": "Im Forum einer Zeitschrift schreibt Anna (31): „Ich finde feste Arbeitszeiten von 8 bis 17 Uhr besser als flexible Zeiten. So weiß jeder, wann die Kollegen da sind.\"",
+    "situation": "Im Forum einer Zeitschrift schreibt Anna (31): „Ich finde feste Arbeitszeiten von 8 bis 17 Uhr besser als flexible Zeiten. So weiß jeder, wann die Kollegen da sind.“",
     "instruction": "Schreiben Sie Ihre Meinung (ca. 80 Wörter).",
     "wordMin": 70,
     "wordMax": 100
@@ -378,7 +378,7 @@
    "title": "Aufgabe 2.3 — Online einkaufen",
    "prompt": "Aufgabe 2: Meinung im Forum (25 Minuten, ca. 80 Wörter)",
    "payload": {
-    "situation": "In einem Gästebuch lesen Sie: „Ich kaufe fast alles online. Das ist billiger und spart Zeit.\" (Kai, 27)",
+    "situation": "In einem Gästebuch lesen Sie: „Ich kaufe fast alles online. Das ist billiger und spart Zeit.“ (Kai, 27)",
     "instruction": "Schreiben Sie Ihre Meinung (ca. 80 Wörter).",
     "wordMin": 70,
     "wordMax": 100
@@ -634,7 +634,7 @@
    "title": "Sprechen Teil 2 — Ein Thema präsentieren",
    "prompt": "Ein Thema präsentieren (ca. 3 Minuten)",
    "payload": {
-    "taskPrompt": "Thema: „Sollten Kinder schon im Kindergarten eine Fremdsprache lernen?\" Folie 1: Thema vorstellen · Folie 2: persönliche Erfahrung · Folie 3: Situation im Heimatland · Folie 4: Vor- und Nachteile, Meinung · Folie 5: Abschluss und Dank",
+    "taskPrompt": "Thema: „Sollten Kinder schon im Kindergarten eine Fremdsprache lernen?“ Folie 1: Thema vorstellen · Folie 2: persönliche Erfahrung · Folie 3: Situation im Heimatland · Folie 4: Vor- und Nachteile, Meinung · Folie 5: Abschluss und Dank",
     "prepSeconds": 0,
     "speakSeconds": 180
    },
@@ -653,7 +653,7 @@
       {
        "heading": "Modell-Präsentation (sehr gut)",
        "paragraphs": [
-        "Ich möchte heute über das Thema „Fremdsprachen im Kindergarten\" sprechen. Zuerst erzähle ich von meinen eigenen Erfahrungen, dann berichte ich über die Situation in meinem Heimatland, und am Ende nenne ich Vor- und Nachteile und meine Meinung.",
+        "Ich möchte heute über das Thema „Fremdsprachen im Kindergarten“ sprechen. Zuerst erzähle ich von meinen eigenen Erfahrungen, dann berichte ich über die Situation in meinem Heimatland, und am Ende nenne ich Vor- und Nachteile und meine Meinung.",
         "Ich selbst habe erst mit zwölf Jahren Englisch gelernt. Am Anfang war das schwierig, vor allem die Aussprache. Meine kleine Nichte dagegen lernt schon im Kindergarten Englisch, mit Liedern und Spielen, und sie spricht viele Wörter ohne Akzent.",
         "In meinem Heimatland, Brasilien, bieten vor allem private Kindergärten Englisch an. In staatlichen Kindergärten ist das noch selten, weil Geld und Lehrkräfte fehlen.",
         "Ein großer Vorteil ist, dass kleine Kinder Sprachen spielerisch und ohne Angst lernen. Ein Nachteil ist, dass manche Kinder vielleicht überfordert sind, wenn sie noch ihre Muttersprache lernen. Ich finde trotzdem, dass ein bisschen Fremdsprache im Kindergarten sinnvoll ist, aber nur spielerisch und ohne Druck.",
@@ -678,7 +678,7 @@
    "title": "Sprechen Teil 3 — Über ein Thema sprechen",
    "prompt": "Über ein Thema sprechen (ca. 2 Minuten)",
    "payload": {
-    "taskPrompt": "Task: after your partner's presentation, give feedback, ask a question, and answer your partner's question about your own presentation.",
+    "taskPrompt": "Ihre Partnerin / Ihr Partner hat zum Thema „Fremdsprachen im Kindergarten“ präsentiert. Geben Sie eine Rückmeldung, stellen Sie eine Frage, und beantworten Sie danach eine Frage zu Ihrer eigenen Präsentation.\nTask: after your partner's presentation, give feedback, ask a question, and answer your partner's question about your own presentation.",
     "prepSeconds": 0,
     "speakSeconds": 120
    },

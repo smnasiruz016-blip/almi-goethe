@@ -90,7 +90,8 @@ export function shapeItem(item: PackItem): Pick<ModelItem, "title" | "prompt" | 
   }
   const min = minutesOf(item.heading);
   if (!min) throw new Error(`Teil ${item.number}: the heading names no minutes: ${item.heading}`);
-  const taskPrompt = item.box.length ? item.box.join("\n") : (item.taskLine ?? "");
+  // the German task box, then the pack's English task line when it gives one (Teil 3 has both)
+  const taskPrompt = [...item.box, ...(item.taskLine ? [item.taskLine] : [])].join("\n");
   if (!taskPrompt) throw new Error(`Teil ${item.number}: no task text`);
   return { title, prompt: item.heading.replace(/^Teil \d — /, ""), payload: { taskPrompt, prepSeconds: 0, speakSeconds: min * 60 }, timeLimitSeconds: 0 };
 }
@@ -134,9 +135,12 @@ export function importPack(pack: Pack, lt: Lt, existingKeys: string[] = []): Imp
     const shaped = shapeItem(item);
     if (existing.has(key("B1", taskType, shaped.title))) { skippedDuplicates.push(`${where}: an item with the same title is already in the bank`); continue; }
 
-    const boxText = shaped.payload && "situation" in shaped.payload ? `${shaped.payload.situation}\n${shaped.payload.instruction}` : (shaped.payload as { taskPrompt: string }).taskPrompt;
-    const isGerman = item.box.length > 0;
-    const pf = isGerman ? gateDe(boxText, `${where} · task text`) : gateEn(plainNote(boxText));
+    // German task text in de-DE; an English task line (Sprechen) in en-GB AND en-US
+    const boxText = "situation" in shaped.payload ? `${shaped.payload.situation}\n${shaped.payload.instruction}` : item.box.join("\n");
+    const pf = [
+      ...(boxText ? gateDe(boxText, `${where} · task text`) : []),
+      ...(item.module === "SPRECHEN" && item.taskLine ? gateEn(plainNote(item.taskLine)) : []),
+    ];
     if (pf.length) { blocked.push({ where: `${where} · task text`, reason: "grammar or spelling", findings: pf }); continue; }
 
     const answers: ModelAnswer[] = [];

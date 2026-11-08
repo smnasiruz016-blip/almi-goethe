@@ -32,12 +32,11 @@ export const ALLOWLIST_DE = new Set(["almigoethe", "karimi", "gómez", "lucía"]
 
 /**
  * German rules that never block, each for a stated reason. They are still reported to beta-g (see `notices`).
- *  - quote-mark rules: typography. LanguageTool files an unpaired „…" under PUNCTUATION in one text and under TYPOGRAPHY in another;
- *    it is the same defect either way (the closing mark should be “), so it is reported, not blocked.
+ *  (Round 1 also listed the quote-mark rules here; beta-g fixed every „…" in Pack 1 on 8 Nov, so they block again.)
  *  - AUFFORDERUNG_MIT_FRAGEZEICHEN: a hedged hint ("if this sentence is a request, use a full stop"); in the task box the question
  *    after the colon ("Beschreiben Sie: Wie ist die neue Wohnung?") is a real question, the exam's own form.
  */
-export const NOTICE_RULES_DE = new Set(["DE_UNPAIRED_QUOTES", "FALSCHES_ANFUEHRUNGSZEICHEN", "TYPOGRAFISCHE_ANFUEHRUNGSZEICHEN", "AUFFORDERUNG_MIT_FRAGEZEICHEN"]);
+export const NOTICE_RULES_DE = new Set(["AUFFORDERUNG_MIT_FRAGEZEICHEN"]);
 
 export const isBlockingEn = (m: LtMatch) => BLOCKING_CATEGORIES_EN.has(m.rule.category.id) || BLOCKING_ISSUES.has(m.rule.issueType ?? "");
 export const isBlockingDe = (m: LtMatch) => !NOTICE_RULES_DE.has(m.rule.id) && (BLOCKING_CATEGORIES_DE.has(m.rule.category.id) || BLOCKING_ISSUES.has(m.rule.issueType ?? ""));

@@ -72,9 +72,16 @@ check("a German punctuation error blocks", r3b.blocked.some((b) => b.where.inclu
 // typography (quote marks) never blocks
 const r3c = importPack(pack, (text, lang) => (lang === "de-DE" ? [{ ...typo(text, text.slice(0, 3)), rule: { id: "TYPOGRAFISCHE_ANFUEHRUNGSZEICHEN", issueType: "typographical", category: { id: "TYPOGRAPHY" } } }] : []), existing);
 check("typography hints never block", r3c.blocked.length === 0 && r3c.hints > 0);
-// an unpaired quote mark (LanguageTool files it under PUNCTUATION) is reported to beta-g, not blocked
-const r3d = importPack(pack, (text, lang) => (lang === "de-DE" && text === sg12 ? [{ ...typo(text, "Hütte", "PUNCTUATION"), rule: { id: "DE_UNPAIRED_QUOTES", issueType: "typographical", category: { id: "PUNCTUATION" } } }] : []), existing);
-check("an unpaired quote mark is a notice for beta-g, not a block", r3d.blocked.length === 0 && r3d.notices.length === 1);
+// the hedged "request with a question mark" hint is reported to beta-g, not blocked
+const r3d = importPack(pack, (text, lang) => (lang === "de-DE" && text === sg12 ? [{ ...typo(text, "Hütte", "PUNCTUATION"), rule: { id: "AUFFORDERUNG_MIT_FRAGEZEICHEN", issueType: "typographical", category: { id: "PUNCTUATION" } } }] : []), existing);
+check("AUFFORDERUNG_MIT_FRAGEZEICHEN is a notice for beta-g, not a block", r3d.blocked.length === 0 && r3d.notices.length === 1);
+// an unpaired quote mark (filed under PUNCTUATION) blocks again: beta-g fixed every „…" in Pack 1
+const r3e = importPack(pack, (text, lang) => (lang === "de-DE" && text === sg12 ? [{ ...typo(text, "Hütte", "PUNCTUATION"), rule: { id: "DE_UNPAIRED_QUOTES", issueType: "typographical", category: { id: "PUNCTUATION" } } }] : []), existing);
+check("an unpaired „ quote mark blocks", r3e.blocked.some((b) => b.where.includes("Aufgabe 1.2")) && r3e.notices.length === 0);
+// Sprechen Teil 3: the German task box is shown before the English line
+const t3 = base.data.items.find((i) => i.provenance.number === "T3")!;
+check("Sprechen Teil 3 shows the German task box, then the English line", "taskPrompt" in t3.payload && t3.payload.taskPrompt.startsWith("Ihre Partnerin / Ihr Partner hat zum Thema „Fremdsprachen im Kindergarten“ präsentiert.") && t3.payload.taskPrompt.includes("\nTask: after your partner's presentation"));
+check("no „ in the pack is closed by a straight quote", !/„[^“"\n]*"/.test(md));
 
 // a wrong table count: that model stays out
 const tampered = parsePack(md.replace("| Aufgabe 2.2 | sehr gut | 82 |", "| Aufgabe 2.2 | sehr gut | 83 |"), PACK_FILE);

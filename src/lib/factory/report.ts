@@ -16,8 +16,8 @@ export function renderReport(pack: Pack, res: ImportResult): string {
     L.push("");
   }
   if (res.notices.length) {
-    L.push("### Not blocking, for beta-g (quote marks and one hedged hint)", "");
-    L.push("These LanguageTool findings never block (see the gate's NOTICE_RULES_DE), but they are real typography points beta-g may want to fix: an opening „ closed by a straight \" instead of “.", "");
+    L.push("### Not blocking, for beta-g (a hedged hint)", "");
+    L.push("These LanguageTool findings never block (see the gate's NOTICE_RULES_DE); they are listed so beta-g can see them.", "");
     for (const b of res.notices) for (const f of b.findings ?? []) L.push(`- ${b.where}: "${f.text}" in: …${f.snippet}… · rule \`${f.rule}\``);
     L.push("");
   }
