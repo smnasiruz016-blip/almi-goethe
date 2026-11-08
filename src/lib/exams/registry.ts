@@ -86,6 +86,12 @@ const DSH_SECTION_ORDER: string[] = ["HOERVERSTEHEN", "LESEVERSTEHEN", "WISS_STR
 // ÖSD ZDÖ B1: written module (Lesen, Hören, Schreiben) then oral (Sprechen).
 const OESD_SECTION_ORDER: string[] = ["LESEVERSTEHEN", "HOERVERSTEHEN", "SCHRIFTLICHER_AUSDRUCK", "SPRECHEN"];
 
+/** RR-397: the section keys scored by AI for one productive skill, across every engine (used to count a free account's
+ *  AI-scored Writing / Speaking for the free 48 hours). */
+export function productiveSectionKeys(kind: "writing" | "speaking"): string[] {
+  return Object.entries(SECTION_META).filter(([, m]) => m.kind === kind).map(([k]) => k);
+}
+
 function sectionDef(key: string): ExamSectionDef {
   const meta = SECTION_META[key];
   if (!meta) throw new Error(`No section meta for ${key}`);

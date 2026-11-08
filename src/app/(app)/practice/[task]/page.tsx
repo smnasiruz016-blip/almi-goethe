@@ -1,11 +1,12 @@
 // Module start page: opens a practice session for one module at the user's target
 // CEFR level and routes into it. Objective modules (Lesen/Hören) run a short
-// practice set and are free; AI modules (Schreiben/Sprechen) run a single item and
-// need a subscription.
+// practice set and are free; AI modules (Schreiben/Sprechen) run a single item for
+// paid users and inside the free 48 hours (one AI-scored attempt of each, RR-397).
 
 import { notFound, redirect } from "next/navigation";
 import { requireUser } from "@/lib/auth";
-import { hasPaidAccess } from "@/lib/billing/plans";
+import { hasPracticeAccess } from "@/lib/billing/free-access";
+import { FreeTimeBanner } from "@/components/FreeTimeBanner";
 import { startSession } from "@/lib/goethe/session";
 import { moduleBySlug } from "@/lib/goethe/registry";
 import { MODULE_LABEL, LEVEL_LABEL } from "@/lib/goethe/types";
@@ -17,7 +18,8 @@ async function beginAction(formData: FormData) {
   if (!def || !def.live) redirect("/practice");
   const user = await requireUser();
   if (!user.targetLevel) redirect("/account?needlevel=1");
-  if (def.scoringMode === "AI" && !hasPaidAccess(user)) redirect("/pricing");
+  // RR-397: AI modules open for paid users and inside the free 48 hours (the AI scoring is limited to one of each by aiGate()).
+  if (def.scoringMode === "AI" && !hasPracticeAccess(user)) redirect("/pricing");
   const id = await startSession({
     userId: user.id,
     mode: "PRACTICE_SET",
@@ -42,7 +44,8 @@ export default async function TaskStartPage({
   if (!def || !def.live) notFound();
 
   const isObjective = def.scoringMode === "DETERMINISTIC";
-  const needsPaid = def.scoringMode === "AI" && !hasPaidAccess(user);
+  const needsPaid = def.scoringMode === "AI" && !hasPracticeAccess(user);
+  const aiKind = def.module === "SPRECHEN" ? "SPEAKING" : "WRITING";
   const needsLevel = !user.targetLevel;
 
   return (
@@ -72,6 +75,10 @@ export default async function TaskStartPage({
         </p>
       )}
 
+      {/* RR-397: on Schreiben and Sprechen, the free-48-hours banner (hours left, or "Your free 48 hours are over" with
+          "Unlock for $12/month"; nothing for paid users). Lesen and Hören stay free, so they show no banner. */}
+      {!isObjective && <FreeTimeBanner user={user} ai={aiKind} />}
+
       {needsLevel ? (
         <div className="rounded-xl border border-almi-accent/40 bg-almi-accent/10 px-4 py-3 text-sm text-almi-ink">
           Choose which CEFR level you&apos;re preparing for first.{" "}
@@ -81,13 +88,7 @@ export default async function TaskStartPage({
           .
         </div>
       ) : needsPaid ? (
-        <div className="rounded-xl border border-almi-accent/40 bg-almi-accent/10 px-4 py-3 text-sm text-almi-ink">
-          AI feedback on Schreiben and Sprechen is part of a subscription.{" "}
-          <a href="/pricing" className="font-semibold underline">
-            See plans
-          </a>{" "}
-          — Lesen and Hören practice is free.
-        </div>
+        <p className="text-sm text-almi-text-muted">Lesen and Hören practice stays free.</p>
       ) : (
         <form action={beginAction}>
           <input type="hidden" name="slug" value={def.slug} />
