@@ -383,7 +383,7 @@ export function ExamItemRunner({
       )}
 
       {error && (
-        <p className="rounded-xl border border-almi-coral/40 bg-almi-coral/5 px-4 py-3 text-sm text-almi-coral-deep">
+        <p className="rounded-xl border border-almi-coral/40 bg-almi-coral/5 px-4 py-3 text-sm text-almi-coral-text">
           {error}{" "}
           {upgrade && (
             <a href={upgrade} className="font-semibold underline">
@@ -597,7 +597,7 @@ function ExamResult({
       <button
         type="button"
         onClick={onAgain}
-        className="inline-flex min-h-[48px] items-center justify-center rounded-full border border-almi-coral px-7 py-3 text-base font-semibold text-almi-coral-deep hover:bg-almi-coral/10"
+        className="inline-flex min-h-[48px] items-center justify-center rounded-full border border-almi-coral px-7 py-3 text-base font-semibold text-almi-coral-text hover:bg-almi-coral/10"
       >
         Nächste Aufgabe →
       </button>

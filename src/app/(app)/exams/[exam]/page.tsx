@@ -66,7 +66,7 @@ export default async function ExamSectionsPage({
                 {s.scoringMode === "AI" ? "AI feedback · Pro" : "Auto-marked · Free"}
               </span>
             </div>
-            <p className="mt-2 text-sm font-semibold text-almi-coral">Practise →</p>
+            <p className="mt-2 text-sm font-semibold text-almi-coral-text">Practise →</p>
           </Link>
         ))}
       </div>

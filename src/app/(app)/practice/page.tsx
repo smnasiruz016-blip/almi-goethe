@@ -21,7 +21,7 @@ function ModuleCard({ def }: { def: ModuleDef }) {
         <span className="text-xs text-almi-text-muted">{tag}</span>
       </div>
       <p className="mt-2 text-sm text-almi-text">{def.blurb}</p>
-      <p className="mt-3 text-sm font-semibold text-almi-coral">Practise →</p>
+      <p className="mt-3 text-sm font-semibold text-almi-coral-text">Practise →</p>
     </Link>
   );
 }
@@ -42,7 +42,7 @@ export default async function PracticePage() {
           range with a 60% pass mark — a practice estimate, never an official score.
         </p>
         {user.targetLevel ? (
-          <p className="mt-3 inline-flex rounded-full bg-almi-coral/10 px-3 py-1 text-sm font-semibold text-almi-coral-deep">
+          <p className="mt-3 inline-flex rounded-full bg-almi-coral/10 px-3 py-1 text-sm font-semibold text-almi-coral-text">
             Practising at {LEVEL_LABEL[user.targetLevel]} ·{" "}
             <Link href="/account" className="ml-1 underline">
               change level
@@ -85,7 +85,7 @@ export default async function PracticePage() {
               No fabricated overall.
             </p>
           </div>
-          <span className="text-sm font-semibold text-almi-coral">Start full mock →</span>
+          <span className="text-sm font-semibold text-almi-coral-text">Start full mock →</span>
         </div>
       </Link>
 

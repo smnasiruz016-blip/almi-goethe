@@ -110,7 +110,7 @@ function ScoreMockup() {
           {SAMPLE.map((s) => (
             <li key={s.name} className="flex items-baseline justify-between text-sm">
               <span className="font-medium text-almi-ink">{s.name}</span>
-              <span className="font-semibold text-almi-coral-deep">{s.range}</span>
+              <span className="font-semibold text-almi-coral-text">{s.range}</span>
             </li>
           ))}
         </ul>
@@ -138,7 +138,7 @@ export default function Home() {
           <div>
             <p className="text-sm font-bold uppercase tracking-widest text-almi-accent-deep">AlmiGoethe · Goethe-Zertifikat German practice</p>
             <h1 className="mt-4 text-balance text-4xl font-semibold leading-[1.08] text-almi-ink sm:text-5xl">
-              Practise the Goethe-Zertifikat with <span className="text-almi-coral">honest AI feedback.</span>
+              Practise the Goethe-Zertifikat with <span className="text-almi-coral-text">honest AI feedback.</span>
             </h1>
             <p className="mt-5 text-lg text-almi-text">
               Original German practice for all four modules at every CEFR level (A1–C2), with a
@@ -153,7 +153,7 @@ export default function Home() {
               >
                 Practise free
               </Link>
-              <Link href="/login" className="text-sm font-medium text-almi-coral hover:underline">
+              <Link href="/login" className="text-sm font-medium text-almi-coral-text hover:underline">
                 Already have an account? Log in →
               </Link>
             </div>

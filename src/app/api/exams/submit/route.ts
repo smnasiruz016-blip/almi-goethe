@@ -47,6 +47,9 @@ export async function POST(req: Request): Promise<NextResponse> {
   // Objective marking is free, exactly as before.
   // RR-397: AI feedback (writing/speaking): paid users as before; a free account (48 hours, no card) gets ONE AI-scored
   // Writing and ONE AI-scored Speaking in total (shared with the Goethe modules), within today's free-AI budget.
+  // RR-399 A3: the free door reserves the free use (one per kind per account, shared with the Goethe modules); if scoring then
+  // fails, the learner received nothing and releaseFreeUse() gives it back (paid users have nothing to give back).
+  let releaseFreeUse: () => Promise<void> = async () => {};
   if (def.scoringMode === "AI") {
     if (!hasPaidAccess(user) && !isEmailVerified(user)) {
       return NextResponse.json(
@@ -57,6 +60,7 @@ export async function POST(req: Request): Promise<NextResponse> {
     const kind = def.kind === "speaking" ? "SPEAKING" : "WRITING";
     const gate = await aiGate(user, kind, () => countAiScored(user.id, kind));
     if (!gate.ok) return NextResponse.json(gate.body, { status: gate.status });
+    releaseFreeUse = gate.release;
   }
 
   let outcome;
@@ -70,6 +74,7 @@ export async function POST(req: Request): Promise<NextResponse> {
     });
   } catch (err) {
     console.error("[exams.submit] scoring failed:", err);
+    await releaseFreeUse();
     return NextResponse.json(
       { ok: false, error: "Could not score this attempt. Try again in a moment." },
       { status: 500 },

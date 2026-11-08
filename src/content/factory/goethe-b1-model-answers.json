@@ -1,0 +1,719 @@
+{
+ "schema": 1,
+ "label": "AlmiGoethe model answer (estimate), not an official Goethe-Institut result",
+ "trademark": "Goethe-Zertifikat is a trademark of the Goethe-Institut. AlmiGoethe is not affiliated with the Goethe-Institut.",
+ "levelPoints": {
+  "sehr gut": "about 90–100 points",
+  "gut": "about 70–80 points",
+  "nicht bestanden": "below 60 points; it contains mistakes on purpose, which the notes name"
+ },
+ "items": [
+  {
+   "id": "fac-goethe-b1-p1-1-1",
+   "level": "B1",
+   "module": "SCHREIBEN",
+   "taskType": "SCHREIBEN_MESSAGE",
+   "topicTag": "wohnen",
+   "title": "Aufgabe 1.1 — Neue Wohnung",
+   "prompt": "Aufgabe 1: E-Mail an Freunde (20 Minuten, ca. 80 Wörter)",
+   "payload": {
+    "situation": "Sie sind vor zwei Wochen in eine neue Wohnung umgezogen. Ihr Freund Jonas konnte beim Umzug nicht helfen.",
+    "instruction": "Beschreiben Sie: Wie ist die neue Wohnung?\nBegründen Sie: Warum sind Sie umgezogen?\nMachen Sie einen Vorschlag für ein Treffen.",
+    "wordMin": 70,
+    "wordMax": 100
+   },
+   "timeLimitSeconds": 1200,
+   "provenance": {
+    "author": "beta-g",
+    "date": "8 Nov 2026",
+    "file": "AlmiGoethe_Pack1.md",
+    "number": "1.1"
+   },
+   "answers": [
+    {
+     "id": "fac-goethe-b1-p1-1-1-sehr-gut",
+     "level": "sehr gut",
+     "parts": [
+      {
+       "heading": null,
+       "paragraphs": [
+        "Lieber Jonas,",
+        "endlich habe ich Zeit, dir zu schreiben! Vor zwei Wochen bin ich in meine neue Wohnung umgezogen. Sie liegt im dritten Stock, hat zwei helle Zimmer und sogar einen kleinen Balkon, auf dem ich morgens Kaffee trinke.",
+        "Ich bin umgezogen, weil meine alte Wohnung zu weit von meiner Arbeit entfernt war. Jetzt brauche ich mit dem Fahrrad nur zehn Minuten, und das spart mir jeden Tag viel Zeit.",
+        "Hast du am Samstagabend Zeit? Dann koche ich für uns und zeige dir alles.",
+        "Viele Grüße\nMira"
+       ]
+      }
+     ],
+     "wordCount": 82,
+     "notes": [
+      "**Erfüllung:** all three points are covered with details (*dritter Stock*, *Balkon*, *zehn Minuten mit dem Fahrrad*, a concrete day).",
+      "**Kohärenz:** a clear structure with a friendly greeting and closing; connectors (*weil*, *und das*, *Dann*).",
+      "**Wortschatz:** varied for B1 (*endlich*, *entfernt*, *spart mir Zeit*).",
+      "**Strukturen:** subordinate clauses (*weil … war*), a relative clause (*auf dem ich … trinke*) and correct word order; no errors."
+     ],
+     "withMistakes": false
+    },
+    {
+     "id": "fac-goethe-b1-p1-1-1-gut",
+     "level": "gut",
+     "parts": [
+      {
+       "heading": null,
+       "paragraphs": [
+        "Lieber Jonas,",
+        "wie geht es dir? Ich wohne jetzt in einer neuen Wohnung. Die Wohnung ist groß und hell. Sie hat zwei Zimmer, eine Küche und einen Balkon. Ich finde sie sehr schön.",
+        "Ich bin umgezogen, weil meine alte Wohnung sehr weit von meiner Arbeit war. Jetzt kann ich mit dem Fahrrad zur Arbeit fahren. Das dauert nur zehn Minuten.",
+        "Möchtest du mich am Wochenende besuchen? Wir können zusammen essen. Schreib mir bitte!",
+        "Liebe Grüße\nMira"
+       ]
+      }
+     ],
+     "wordCount": 71,
+     "notes": [
+      "all points are covered; the language is correct but simple, and sentences are short. *weit von meiner Arbeit* would be better as *weit von meiner Arbeit entfernt*."
+     ],
+     "withMistakes": false
+    },
+    {
+     "id": "fac-goethe-b1-p1-1-1-nicht-bestanden",
+     "level": "nicht bestanden",
+     "parts": [
+      {
+       "heading": null,
+       "paragraphs": [
+        "Hallo Jonas,",
+        "ich habe neue Wohnung. Die Wohnung ist sehr gut und groß. Ich habe umgezogen weil die alte Wohnung ist teuer. Du kommst zu mir?",
+        "Tschüss\nMira"
+       ]
+      }
+     ],
+     "wordCount": 24,
+     "notes": [
+      "far too short (about 25 words), and the meeting suggestion has no day or plan. Errors: a missing article (*neue Wohnung*), the wrong auxiliary (*Ich habe umgezogen*; correct: *Ich bin umgezogen*), and the verb in the wrong place after *weil* (correct: *weil die alte Wohnung teuer war*)."
+     ],
+     "withMistakes": true
+    }
+   ]
+  },
+  {
+   "id": "fac-goethe-b1-p1-1-2",
+   "level": "B1",
+   "module": "SCHREIBEN",
+   "taskType": "SCHREIBEN_MESSAGE",
+   "topicTag": "reisen",
+   "title": "Aufgabe 1.2 — Ein Wochenende in den Bergen",
+   "prompt": "Aufgabe 1: E-Mail an Freunde (20 Minuten, ca. 80 Wörter)",
+   "payload": {
+    "situation": "Sie haben letztes Wochenende einen Ausflug in die Berge gemacht. Ihre Freundin Lea war nicht dabei.",
+    "instruction": "Beschreiben Sie: Was haben Sie gemacht?\nBegründen Sie: Was hat Ihnen besonders gut gefallen?\nMachen Sie einen Vorschlag für einen gemeinsamen Ausflug.",
+    "wordMin": 70,
+    "wordMax": 100
+   },
+   "timeLimitSeconds": 1200,
+   "provenance": {
+    "author": "beta-g",
+    "date": "8 Nov 2026",
+    "file": "AlmiGoethe_Pack1.md",
+    "number": "1.2"
+   },
+   "answers": [
+    {
+     "id": "fac-goethe-b1-p1-1-2-sehr-gut",
+     "level": "sehr gut",
+     "parts": [
+      {
+       "heading": null,
+       "paragraphs": [
+        "Liebe Lea,",
+        "schade, dass du letztes Wochenende nicht dabei warst! Wir sind am Samstag früh mit dem Zug nach Garmisch gefahren und dann fast vier Stunden zu einer Hütte gewandert. Dort haben wir übernachtet und am Abend mit anderen Wanderern Karten gespielt.",
+        "Am besten hat mir der Sonnenaufgang am Sonntag gefallen. Die Berge waren ganz rot, und es war unglaublich still. So etwas habe ich noch nie erlebt.",
+        "Wollen wir im Juli zusammen wandern? Ich kenne eine leichte Tour, die dir bestimmt gefällt.",
+        "Herzliche Grüße\nSara"
+       ]
+      }
+     ],
+     "wordCount": 81,
+     "notes": [
+      "every point is answered vividly. Correct perfect tense with *sein* and *haben* (*sind gefahren*, *haben übernachtet*), a relative clause (*die dir bestimmt gefällt*), and a natural, personal tone."
+     ],
+     "withMistakes": false
+    },
+    {
+     "id": "fac-goethe-b1-p1-1-2-gut",
+     "level": "gut",
+     "parts": [
+      {
+       "heading": null,
+       "paragraphs": [
+        "Liebe Lea,",
+        "letztes Wochenende war ich mit Freunden in den Bergen. Wir sind viel gewandert und haben in einer Hütte geschlafen. Das Wetter war sehr schön.",
+        "Am besten hat mir die Aussicht gefallen, weil man sehr weit sehen konnte. Am Abend haben wir zusammen gegessen und viel gelacht. Es war ein toller Tag.",
+        "Hast du Lust, im Sommer mit mir in die Berge zu fahren? Das macht bestimmt Spaß!",
+        "Viele Grüße\nSara"
+       ]
+      }
+     ],
+     "wordCount": 67,
+     "notes": [
+      "complete and correct; simpler vocabulary and fewer details."
+     ],
+     "withMistakes": false
+    }
+   ]
+  },
+  {
+   "id": "fac-goethe-b1-p1-1-3",
+   "level": "B1",
+   "module": "SCHREIBEN",
+   "taskType": "SCHREIBEN_MESSAGE",
+   "topicTag": "freizeit",
+   "title": "Aufgabe 1.3 — Ein neuer Sportkurs",
+   "prompt": "Aufgabe 1: E-Mail an Freunde (20 Minuten, ca. 80 Wörter)",
+   "payload": {
+    "situation": "Sie machen seit einem Monat einen Sportkurs. Schreiben Sie Ihrem Freund Paul.",
+    "instruction": "Beschreiben Sie: Was für ein Kurs ist das?\nBegründen Sie: Warum macht Ihnen der Kurs Spaß?\nMachen Sie einen Vorschlag: Paul soll mitkommen.",
+    "wordMin": 70,
+    "wordMax": 100
+   },
+   "timeLimitSeconds": 1200,
+   "provenance": {
+    "author": "beta-g",
+    "date": "8 Nov 2026",
+    "file": "AlmiGoethe_Pack1.md",
+    "number": "1.3"
+   },
+   "answers": [
+    {
+     "id": "fac-goethe-b1-p1-1-3-sehr-gut",
+     "level": "sehr gut",
+     "parts": [
+      {
+       "heading": null,
+       "paragraphs": [
+        "Lieber Paul,",
+        "stell dir vor: Ich mache seit einem Monat einen Yogakurs im Sportzentrum! Der Kurs findet jeden Dienstag und Donnerstag von 18 bis 19 Uhr statt, und wir sind ungefähr zwölf Leute.",
+        "Am Anfang war ich ziemlich unbeweglich, aber jetzt geht es schon viel besser. Außerdem hilft mir Yoga, nach der Arbeit abzuschalten, und ich schlafe seitdem besser.",
+        "Komm doch nächsten Dienstag einfach mit! Die erste Stunde ist kostenlos, und danach können wir noch etwas trinken gehen.",
+        "Bis bald\nElena"
+       ]
+      }
+     ],
+     "wordCount": 76,
+     "notes": [
+      "all points with specific details; a trennbares Verb used correctly (*findet … statt*, *abzuschalten*); good connectors (*Außerdem*, *seitdem*, *danach*)."
+     ],
+     "withMistakes": false
+    },
+    {
+     "id": "fac-goethe-b1-p1-1-3-gut",
+     "level": "gut",
+     "parts": [
+      {
+       "heading": null,
+       "paragraphs": [
+        "Lieber Paul,",
+        "ich mache jetzt einen Yogakurs. Der Kurs ist zweimal pro Woche am Abend im Sportzentrum. Die Lehrerin ist sehr nett.",
+        "Der Kurs macht mir Spaß, weil ich mich danach entspannt fühle. Ich habe auch weniger Rückenschmerzen und schlafe besser. Die Gruppe ist klein und freundlich.",
+        "Möchtest du nächste Woche mitkommen? Die erste Stunde kostet nichts. Ich würde mich freuen!",
+        "Viele Grüße\nElena"
+       ]
+      }
+     ],
+     "wordCount": 59,
+     "notes": [
+      "clear and correct, with less variety."
+     ],
+     "withMistakes": false
+    }
+   ]
+  },
+  {
+   "id": "fac-goethe-b1-p1-2-1",
+   "level": "B1",
+   "module": "SCHREIBEN",
+   "taskType": "SCHREIBEN_ESSAY",
+   "topicTag": "lernen",
+   "title": "Aufgabe 2.1 — Handys in der Schule",
+   "prompt": "Aufgabe 2: Meinung im Forum (25 Minuten, ca. 80 Wörter)",
+   "payload": {
+    "situation": "Im Online-Gästebuch einer Sendung lesen Sie: „Handys sollten in der Schule komplett verboten sein. Kinder lernen besser ohne Ablenkung.“ (Thomas, 45)",
+    "instruction": "Schreiben Sie nun Ihre Meinung (ca. 80 Wörter).",
+    "wordMin": 70,
+    "wordMax": 100
+   },
+   "timeLimitSeconds": 1500,
+   "provenance": {
+    "author": "beta-g",
+    "date": "8 Nov 2026",
+    "file": "AlmiGoethe_Pack1.md",
+    "number": "2.1"
+   },
+   "answers": [
+    {
+     "id": "fac-goethe-b1-p1-2-1-sehr-gut",
+     "level": "sehr gut",
+     "parts": [
+      {
+       "heading": null,
+       "paragraphs": [
+        "Ich verstehe Thomas, denn viele Schüler schauen im Unterricht ständig auf ihr Handy und können sich dann nicht konzentrieren. Trotzdem finde ich ein komplettes Verbot nicht richtig.",
+        "Handys können nämlich auch beim Lernen helfen, zum Beispiel mit Wörterbuch-Apps oder kurzen Videos zu schwierigen Themen. Außerdem müssen Eltern ihre Kinder in Notfällen erreichen können.",
+        "Meiner Meinung nach ist eine klare Regel besser: Im Unterricht bleibt das Handy in der Tasche, außer wenn die Lehrkraft es erlaubt. In den Pausen dürfen die Schüler es benutzen. So lernen Kinder, verantwortungsvoll mit Technik umzugehen."
+       ]
+      }
+     ],
+     "wordCount": 90,
+     "notes": [
+      "responds to the post directly, gives a clear opinion with two reasons and a practical suggestion. Very good connectors (*denn*, *Trotzdem*, *nämlich*, *Außerdem*, *Meiner Meinung nach*, *So*)."
+     ],
+     "withMistakes": false
+    },
+    {
+     "id": "fac-goethe-b1-p1-2-1-gut",
+     "level": "gut",
+     "parts": [
+      {
+       "heading": null,
+       "paragraphs": [
+        "Ich bin nicht ganz der gleichen Meinung wie Thomas. Es stimmt, dass Handys im Unterricht stören können. Viele Schüler spielen Spiele oder schreiben Nachrichten.",
+        "Aber Handys sind auch nützlich. Man kann im Internet Informationen suchen oder Vokabeln lernen. Wenn es ein Problem gibt, können die Eltern ihre Kinder anrufen. Das finde ich wichtig.",
+        "Ich denke, die Schüler sollten das Handy im Unterricht ausschalten, aber in der Pause benutzen dürfen."
+       ]
+      }
+     ],
+     "wordCount": 69,
+     "notes": [
+      "a clear opinion with reasons; correct but simpler structures."
+     ],
+     "withMistakes": false
+    },
+    {
+     "id": "fac-goethe-b1-p1-2-1-nicht-bestanden",
+     "level": "nicht bestanden",
+     "parts": [
+      {
+       "heading": null,
+       "paragraphs": [
+        "Ich finde Thomas hat recht. Handy ist schlecht für Kinder. Sie spielen immer und lernen nicht. Ich meine Handy muss verboten."
+       ]
+      }
+     ],
+     "wordCount": 21,
+     "notes": [
+      "far too short; no real reasons; errors (*Handy ist schlecht* without an article, *Handy muss verboten* without *werden*); a comma is missing before the clause (*Ich finde, Thomas hat recht*)."
+     ],
+     "withMistakes": true
+    }
+   ]
+  },
+  {
+   "id": "fac-goethe-b1-p1-2-2",
+   "level": "B1",
+   "module": "SCHREIBEN",
+   "taskType": "SCHREIBEN_ESSAY",
+   "topicTag": "arbeit",
+   "title": "Aufgabe 2.2 — Feste Arbeitszeiten",
+   "prompt": "Aufgabe 2: Meinung im Forum (25 Minuten, ca. 80 Wörter)",
+   "payload": {
+    "situation": "Im Forum einer Zeitschrift schreibt Anna (31): „Ich finde feste Arbeitszeiten von 8 bis 17 Uhr besser als flexible Zeiten. So weiß jeder, wann die Kollegen da sind.“",
+    "instruction": "Schreiben Sie Ihre Meinung (ca. 80 Wörter).",
+    "wordMin": 70,
+    "wordMax": 100
+   },
+   "timeLimitSeconds": 1500,
+   "provenance": {
+    "author": "beta-g",
+    "date": "8 Nov 2026",
+    "file": "AlmiGoethe_Pack1.md",
+    "number": "2.2"
+   },
+   "answers": [
+    {
+     "id": "fac-goethe-b1-p1-2-2-sehr-gut",
+     "level": "sehr gut",
+     "parts": [
+      {
+       "heading": null,
+       "paragraphs": [
+        "Annas Argument ist verständlich, denn mit festen Zeiten ist die Zusammenarbeit im Team oft einfacher. Ich selbst bevorzuge aber flexible Arbeitszeiten.",
+        "Jeder Mensch hat einen anderen Rhythmus: Manche arbeiten frühmorgens am besten, andere eher am Nachmittag. Außerdem können Eltern mit flexiblen Zeiten ihre Kinder leichter zur Schule bringen oder abholen.",
+        "Damit das Team trotzdem gut funktioniert, könnte man eine Kernzeit einführen, zum Beispiel von 10 bis 15 Uhr. In dieser Zeit sind alle erreichbar, und davor oder danach kann jeder selbst entscheiden."
+       ]
+      }
+     ],
+     "wordCount": 82,
+     "notes": [
+      "a balanced view, two reasons and a compromise (*Kernzeit*); a *damit* clause and *könnte man* used correctly."
+     ],
+     "withMistakes": false
+    },
+    {
+     "id": "fac-goethe-b1-p1-2-2-gut",
+     "level": "gut",
+     "parts": [
+      {
+       "heading": null,
+       "paragraphs": [
+        "Ich bin nicht Annas Meinung. Ich finde flexible Arbeitszeiten besser. Morgens bin ich oft müde, deshalb möchte ich lieber später anfangen und auch später nach Hause gehen.",
+        "Mit flexiblen Zeiten kann man auch Termine beim Arzt oder bei Behörden leichter machen. Das ist sehr praktisch.",
+        "Natürlich müssen die Kollegen zusammen planen, aber das geht mit E-Mails und Kalendern. So sind alle zufrieden."
+       ]
+      }
+     ],
+     "wordCount": 62,
+     "notes": [
+      "a clear opinion and personal reasons; *Termine … machen* would be better as *Termine wahrnehmen* or *zu Terminen gehen*."
+     ],
+     "withMistakes": false
+    }
+   ]
+  },
+  {
+   "id": "fac-goethe-b1-p1-2-3",
+   "level": "B1",
+   "module": "SCHREIBEN",
+   "taskType": "SCHREIBEN_ESSAY",
+   "topicTag": "einkaufen",
+   "title": "Aufgabe 2.3 — Online einkaufen",
+   "prompt": "Aufgabe 2: Meinung im Forum (25 Minuten, ca. 80 Wörter)",
+   "payload": {
+    "situation": "In einem Gästebuch lesen Sie: „Ich kaufe fast alles online. Das ist billiger und spart Zeit.“ (Kai, 27)",
+    "instruction": "Schreiben Sie Ihre Meinung (ca. 80 Wörter).",
+    "wordMin": 70,
+    "wordMax": 100
+   },
+   "timeLimitSeconds": 1500,
+   "provenance": {
+    "author": "beta-g",
+    "date": "8 Nov 2026",
+    "file": "AlmiGoethe_Pack1.md",
+    "number": "2.3"
+   },
+   "answers": [
+    {
+     "id": "fac-goethe-b1-p1-2-3-sehr-gut",
+     "level": "sehr gut",
+     "parts": [
+      {
+       "heading": null,
+       "paragraphs": [
+        "Ich kann Kai teilweise zustimmen. Online-Shopping ist tatsächlich bequem, besonders wenn man wenig Zeit hat oder etwas Spezielles sucht, das es in der eigenen Stadt nicht gibt.",
+        "Trotzdem kaufe ich Kleidung und Lebensmittel lieber im Geschäft. Dort kann ich die Sachen anfassen und anprobieren, und ich muss nichts zurückschicken. Außerdem möchte ich die kleinen Läden in meinem Viertel unterstützen, denn ohne sie wäre die Innenstadt leer.",
+        "Für mich ist eine Mischung ideal: Technik und Bücher bestelle ich online, alles andere kaufe ich vor Ort."
+       ]
+      }
+     ],
+     "wordCount": 84,
+     "notes": [
+      "a nuanced opinion, a concrete personal approach and a social argument; *wäre* (Konjunktiv II) used correctly."
+     ],
+     "withMistakes": false
+    },
+    {
+     "id": "fac-goethe-b1-p1-2-3-gut",
+     "level": "gut",
+     "parts": [
+      {
+       "heading": null,
+       "paragraphs": [
+        "Ich finde Online-Shopping auch praktisch, weil man von zu Hause bestellen kann. Oft sind die Preise im Internet niedriger.",
+        "Aber ich kaufe nicht alles online. Kleidung probiere ich lieber im Geschäft an, weil die Größen oft anders sind. Außerdem gibt es viele Pakete und viel Verpackung, und das ist schlecht für die Umwelt.",
+        "Deshalb kaufe ich nur manchmal online ein, zum Beispiel Bücher."
+       ]
+      }
+     ],
+     "wordCount": 63,
+     "notes": [
+      "a clear opinion with reasons; correct but basic."
+     ],
+     "withMistakes": false
+    }
+   ]
+  },
+  {
+   "id": "fac-goethe-b1-p1-3-1",
+   "level": "B1",
+   "module": "SCHREIBEN",
+   "taskType": "SCHREIBEN_LETTER",
+   "topicTag": "lernen",
+   "title": "Aufgabe 3.1 — Termin absagen",
+   "prompt": "Aufgabe 3: Formelle E-Mail (15 Minuten, ca. 40 Wörter)",
+   "payload": {
+    "situation": "Sie haben morgen einen Termin bei Ihrer Kursleiterin, Frau Schulz. Sie können nicht kommen.",
+    "instruction": "Schreiben Sie Frau Schulz: Entschuldigen Sie sich höflich und nennen Sie einen Grund.",
+    "wordMin": 30,
+    "wordMax": 50
+   },
+   "timeLimitSeconds": 900,
+   "provenance": {
+    "author": "beta-g",
+    "date": "8 Nov 2026",
+    "file": "AlmiGoethe_Pack1.md",
+    "number": "3.1"
+   },
+   "answers": [
+    {
+     "id": "fac-goethe-b1-p1-3-1-sehr-gut",
+     "level": "sehr gut",
+     "parts": [
+      {
+       "heading": null,
+       "paragraphs": [
+        "Sehr geehrte Frau Schulz,",
+        "leider kann ich morgen nicht zu unserem Termin um 15 Uhr kommen, da ich kurzfristig für eine kranke Kollegin arbeiten muss. Das tut mir sehr leid. Wäre es möglich, den Termin auf Donnerstag zu verschieben?",
+        "Mit freundlichen Grüßen\nAhmed Karimi"
+       ]
+      }
+     ],
+     "wordCount": 35,
+     "notes": [
+      "formal and polite (*Sehr geehrte*, *Wäre es möglich*, *Mit freundlichen Grüßen*); an apology, a reason and a new suggestion in about 40 words."
+     ],
+     "withMistakes": false
+    },
+    {
+     "id": "fac-goethe-b1-p1-3-1-gut",
+     "level": "gut",
+     "parts": [
+      {
+       "heading": null,
+       "paragraphs": [
+        "Sehr geehrte Frau Schulz,",
+        "ich kann morgen leider nicht zum Termin kommen, weil ich für eine Kollegin arbeiten muss. Es tut mir sehr leid. Können wir bitte einen neuen Termin machen, vielleicht am Donnerstag?",
+        "Mit freundlichen Grüßen\nAhmed Karimi"
+       ]
+      }
+     ],
+     "wordCount": 30,
+     "notes": [
+      "correct and polite; a little short and simple."
+     ],
+     "withMistakes": false
+    },
+    {
+     "id": "fac-goethe-b1-p1-3-1-nicht-bestanden",
+     "level": "nicht bestanden",
+     "parts": [
+      {
+       "heading": null,
+       "paragraphs": [
+        "Hallo Frau Schulz,",
+        "morgen ich kann nicht kommen. Ich muss arbeiten. Sorry.",
+        "Ahmed"
+       ]
+      }
+     ],
+     "wordCount": 9,
+     "notes": [
+      "the wrong register (*Hallo*, *Sorry*, no formal closing), a word-order error (*morgen ich kann*; correct: *morgen kann ich*), and it is too short."
+     ],
+     "withMistakes": true
+    }
+   ]
+  },
+  {
+   "id": "fac-goethe-b1-p1-3-2",
+   "level": "B1",
+   "module": "SCHREIBEN",
+   "taskType": "SCHREIBEN_LETTER",
+   "topicTag": "lernen",
+   "title": "Aufgabe 3.2 — Anfrage an eine Sprachschule",
+   "prompt": "Aufgabe 3: Formelle E-Mail (15 Minuten, ca. 40 Wörter)",
+   "payload": {
+    "situation": "Sie möchten im Sommer einen Intensivkurs Deutsch machen.",
+    "instruction": "Schreiben Sie an die Sprachschule und fragen Sie nach Preis und Kursbeginn.",
+    "wordMin": 30,
+    "wordMax": 50
+   },
+   "timeLimitSeconds": 900,
+   "provenance": {
+    "author": "beta-g",
+    "date": "8 Nov 2026",
+    "file": "AlmiGoethe_Pack1.md",
+    "number": "3.2"
+   },
+   "answers": [
+    {
+     "id": "fac-goethe-b1-p1-3-2-sehr-gut",
+     "level": "sehr gut",
+     "parts": [
+      {
+       "heading": null,
+       "paragraphs": [
+        "Sehr geehrte Damen und Herren,",
+        "ich interessiere mich für einen Intensivkurs Deutsch auf Niveau B1 im Juli oder August. Könnten Sie mir bitte mitteilen, wann die Kurse beginnen und wie viel ein vierwöchiger Kurs kostet?",
+        "Vielen Dank im Voraus.",
+        "Mit freundlichen Grüßen\nLucía Gómez"
+       ]
+      }
+     ],
+     "wordCount": 34,
+     "notes": [
+      "formal, precise and polite (*Könnten Sie mir bitte mitteilen*, *Vielen Dank im Voraus*); an indirect question with correct word order (*wann die Kurse beginnen*)."
+     ],
+     "withMistakes": false
+    },
+    {
+     "id": "fac-goethe-b1-p1-3-2-gut",
+     "level": "gut",
+     "parts": [
+      {
+       "heading": null,
+       "paragraphs": [
+        "Sehr geehrte Damen und Herren,",
+        "ich möchte im Sommer einen Intensivkurs Deutsch bei Ihnen machen. Mein Niveau ist B1. Wann beginnt der Kurs und was kostet er? Ich freue mich auf Ihre Antwort.",
+        "Mit freundlichen Grüßen\nLucía Gómez"
+       ]
+      }
+     ],
+     "wordCount": 28,
+     "notes": [
+      "correct and appropriate; direct questions instead of more formal indirect questions."
+     ],
+     "withMistakes": false
+    }
+   ]
+  },
+  {
+   "id": "fac-goethe-b1-p1-t1",
+   "level": "B1",
+   "module": "SPRECHEN",
+   "taskType": "SPRECHEN_DISCUSS",
+   "topicTag": "arbeit",
+   "title": "Sprechen Teil 1 — Gemeinsam etwas planen",
+   "prompt": "Gemeinsam etwas planen (ca. 3 Minuten)",
+   "payload": {
+    "taskPrompt": "Ein Kollege, Herr Braun, geht in Rente. Planen Sie zusammen eine kleine Abschiedsfeier im Büro. Punkte: Wann? Wo? Essen und Getränke? Geschenk? Wer macht was?",
+    "prepSeconds": 0,
+    "speakSeconds": 180
+   },
+   "timeLimitSeconds": 0,
+   "provenance": {
+    "author": "beta-g",
+    "date": "8 Nov 2026",
+    "file": "AlmiGoethe_Pack1.md",
+    "number": "T1"
+   },
+   "answers": [
+    {
+     "id": "fac-goethe-b1-p1-t1-sehr-gut",
+     "level": "sehr gut",
+     "parts": [
+      {
+       "heading": "Modell-Dialog (sehr gut)",
+       "paragraphs": [
+        "A: Herr Braun geht ja Ende des Monats in Rente. Sollen wir für ihn eine kleine Feier organisieren?",
+        "B: Ja, gute Idee! Wann passt es dir? Ich würde den letzten Freitag vorschlagen, am Nachmittag.",
+        "A: Freitag ist gut, aber vielleicht nicht zu spät. Viele Kollegen gehen freitags früher nach Hause. Wie wäre es mit 14 Uhr?",
+        "B: Einverstanden. Und wo? Unser Besprechungsraum ist ziemlich klein.",
+        "A: Stimmt. Wir könnten die Kantine fragen. Dort ist genug Platz für alle.",
+        "B: Gute Idee, ich rufe morgen dort an. Was machen wir mit dem Essen?",
+        "A: Ich finde, jeder könnte etwas mitbringen, zum Beispiel Salat oder Kuchen. Das ist günstig und persönlich.",
+        "B: Ja, und die Getränke kaufen wir zusammen. Und das Geschenk? Herr Braun wandert doch so gern.",
+        "A: Genau! Vielleicht ein Gutschein für ein Sportgeschäft, und alle Kollegen unterschreiben eine Karte.",
+        "B: Perfekt. Dann sammle ich das Geld, und du kümmerst dich um die Karte, okay?",
+        "A: Okay, abgemacht. Ich schreibe heute noch eine E-Mail an alle."
+       ]
+      }
+     ],
+     "wordCount": null,
+     "notes": [
+      "both partners make suggestions, react to each other (*Einverstanden*, *Stimmt*, *Gute Idee*), politely disagree (*aber vielleicht nicht zu spät*), and divide the tasks at the end. Useful phrases: *Wie wäre es mit …?*, *Wir könnten …*, *Ich würde … vorschlagen*, *Du kümmerst dich um …*."
+     ],
+     "withMistakes": false
+    }
+   ]
+  },
+  {
+   "id": "fac-goethe-b1-p1-t2",
+   "level": "B1",
+   "module": "SPRECHEN",
+   "taskType": "SPRECHEN_PRESENT",
+   "topicTag": "lernen",
+   "title": "Sprechen Teil 2 — Ein Thema präsentieren",
+   "prompt": "Ein Thema präsentieren (ca. 3 Minuten)",
+   "payload": {
+    "taskPrompt": "Thema: „Sollten Kinder schon im Kindergarten eine Fremdsprache lernen?“ Folie 1: Thema vorstellen · Folie 2: persönliche Erfahrung · Folie 3: Situation im Heimatland · Folie 4: Vor- und Nachteile, Meinung · Folie 5: Abschluss und Dank",
+    "prepSeconds": 0,
+    "speakSeconds": 180
+   },
+   "timeLimitSeconds": 0,
+   "provenance": {
+    "author": "beta-g",
+    "date": "8 Nov 2026",
+    "file": "AlmiGoethe_Pack1.md",
+    "number": "T2"
+   },
+   "answers": [
+    {
+     "id": "fac-goethe-b1-p1-t2-sehr-gut",
+     "level": "sehr gut",
+     "parts": [
+      {
+       "heading": "Modell-Präsentation (sehr gut)",
+       "paragraphs": [
+        "Ich möchte heute über das Thema „Fremdsprachen im Kindergarten“ sprechen. Zuerst erzähle ich von meinen eigenen Erfahrungen, dann berichte ich über die Situation in meinem Heimatland, und am Ende nenne ich Vor- und Nachteile und meine Meinung.",
+        "Ich selbst habe erst mit zwölf Jahren Englisch gelernt. Am Anfang war das schwierig, vor allem die Aussprache. Meine kleine Nichte dagegen lernt schon im Kindergarten Englisch, mit Liedern und Spielen, und sie spricht viele Wörter ohne Akzent.",
+        "In meinem Heimatland, Brasilien, bieten vor allem private Kindergärten Englisch an. In staatlichen Kindergärten ist das noch selten, weil Geld und Lehrkräfte fehlen.",
+        "Ein großer Vorteil ist, dass kleine Kinder Sprachen spielerisch und ohne Angst lernen. Ein Nachteil ist, dass manche Kinder vielleicht überfordert sind, wenn sie noch ihre Muttersprache lernen. Ich finde trotzdem, dass ein bisschen Fremdsprache im Kindergarten sinnvoll ist, aber nur spielerisch und ohne Druck.",
+        "Damit komme ich zum Ende meiner Präsentation. Vielen Dank für Ihre Aufmerksamkeit! Haben Sie noch Fragen?"
+       ]
+      }
+     ],
+     "wordCount": null,
+     "notes": [
+      "follows all five slides in order with clear signposting (*Zuerst*, *dann*, *am Ende*, *Damit komme ich zum Ende*), a personal example, information about the home country, a balanced argument and a polite close. *(Brasilien is an example. Each candidate talks about their own country.)*"
+     ],
+     "withMistakes": false
+    }
+   ]
+  },
+  {
+   "id": "fac-goethe-b1-p1-t3",
+   "level": "B1",
+   "module": "SPRECHEN",
+   "taskType": "SPRECHEN_DISCUSS",
+   "topicTag": "lernen",
+   "title": "Sprechen Teil 3 — Über ein Thema sprechen",
+   "prompt": "Über ein Thema sprechen (ca. 2 Minuten)",
+   "payload": {
+    "taskPrompt": "Ihre Partnerin / Ihr Partner hat zum Thema „Fremdsprachen im Kindergarten“ präsentiert. Geben Sie eine Rückmeldung, stellen Sie eine Frage, und beantworten Sie danach eine Frage zu Ihrer eigenen Präsentation.\nTask: after your partner's presentation, give feedback, ask a question, and answer your partner's question about your own presentation.",
+    "prepSeconds": 0,
+    "speakSeconds": 120
+   },
+   "timeLimitSeconds": 0,
+   "provenance": {
+    "author": "beta-g",
+    "date": "8 Nov 2026",
+    "file": "AlmiGoethe_Pack1.md",
+    "number": "T3"
+   },
+   "answers": [
+    {
+     "id": "fac-goethe-b1-p1-t3-sehr-gut",
+     "level": "sehr gut",
+     "parts": [
+      {
+       "heading": "Modell (sehr gut), Rückmeldung und Frage",
+       "paragraphs": [
+        "Vielen Dank für deine Präsentation, das war wirklich interessant. Besonders gut fand ich das Beispiel mit deiner Nichte, weil es sehr anschaulich war. Ich habe noch eine Frage: Welche Sprache sollten die Kinder deiner Meinung nach lernen, nur Englisch oder vielleicht auch die Sprache eines Nachbarlandes?"
+       ]
+      },
+      {
+       "heading": "Modell (sehr gut), Antwort auf eine Frage",
+       "paragraphs": [
+        "Das ist eine gute Frage. Ich denke, Englisch ist am wichtigsten, weil man es überall braucht. Aber in Grenzregionen wäre die Sprache des Nachbarlandes auch sehr sinnvoll, zum Beispiel Spanisch in Südbrasilien."
+       ]
+      }
+     ],
+     "wordCount": null,
+     "notes": [
+      "specific, positive feedback with a reason, a relevant open question, and a short, structured answer with an example."
+     ],
+     "withMistakes": false
+    }
+   ]
+  }
+ ]
+}
