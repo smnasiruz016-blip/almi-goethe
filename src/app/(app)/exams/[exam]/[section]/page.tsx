@@ -1,11 +1,12 @@
 // Practice one section item. Loads a random active ExamItem (answer key stripped),
-// gates writing/speaking on paid access, and hands off to the client runner, which
+// opens writing/speaking to paid users and the free 48 hours (RR-397), and hands off to the client runner, which
 // submits to /api/exams/submit and renders the exam's own honest result.
 
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { requireUser } from "@/lib/auth";
-import { hasPaidAccess } from "@/lib/billing/plans";
+import { hasPracticeAccess } from "@/lib/billing/free-access";
+import { FreeTimeBanner } from "@/components/FreeTimeBanner";
 import { examBySlug, sectionDefFor } from "@/lib/exams/registry";
 import { getTelcConfig, isTelc, isTestDaf } from "@/lib/exams/scoring";
 import { pickClientItem, isStateScoped, requestedCountFor } from "@/lib/exams/pick";
@@ -29,7 +30,8 @@ export default async function ExamSectionPracticePage({
 
   const testDaf = isTestDaf(examDef.exam);
   const thresholdPending = isTelc(examDef.exam) && !getTelcConfig(examDef.exam).thresholdVerified;
-  const needsPaid = sectionDef.scoringMode === "AI" && !hasPaidAccess(user);
+  // RR-397: writing/speaking open for paid users and inside the free 48 hours (one AI-scored attempt of each, by aiGate()).
+  const needsPaid = sectionDef.scoringMode === "AI" && !hasPracticeAccess(user);
   const stateScoped = isStateScoped(sectionDef.key);
 
   const result = needsPaid
@@ -61,14 +63,12 @@ export default async function ExamSectionPracticePage({
         </p>
       )}
 
+      {sectionDef.scoringMode === "AI" && (
+        <FreeTimeBanner user={user} ai={sectionDef.kind === "speaking" ? "SPEAKING" : "WRITING"} />
+      )}
+
       {needsPaid ? (
-        <div className="rounded-xl border border-almi-accent/40 bg-almi-accent/10 px-4 py-3 text-sm text-almi-ink">
-          AI feedback on writing and speaking is part of a subscription.{" "}
-          <a href="/pricing" className="font-semibold underline">
-            See plans
-          </a>{" "}
-          — reading, listening and language-element practice is free.
-        </div>
+        <p className="text-sm text-almi-text-muted">Reading, listening and language-element practice stays free.</p>
       ) : needsLand ? (
         // No Land chosen — ASK. Never draw "any state": these answers are true of
         // exactly one Bundesland, and the wrong one is a wrong answer.

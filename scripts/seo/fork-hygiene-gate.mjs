@@ -48,6 +48,9 @@ const SCAN_EXT = /\.(ts|tsx|js|mjs|json|prisma|css|md)$/;
 
 const ALLOWLIST = new Map([
   ["src/lib/nav/family.ts", "links to sibling AlmiWorld products by name"],
+  // RR-398: the generated AlmiWorld header/footer data (almiworld-site/tools/make-family-kit.mjs, never hand-edited) —
+  // the same reason as nav/family.ts: it links to every sibling product by name, as almiworld.com does.
+  ["src/lib/almiworld-family.ts", "links to sibling AlmiWorld products by name (RR-398 generated kit)"],
   ["scripts/seo/fork-hygiene-gate.mjs", "documents the banned nouns"],
 ]);
 

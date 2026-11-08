@@ -1,10 +1,11 @@
 // Practice hub — the logged-in "Choose a module" page. Lists the four Goethe
 // modules from the registry, plus the full per-level mock. Lesen + Hören are free;
-// the AI-graded Schreiben + Sprechen and the mock need a subscription. Everything
-// runs at the user's chosen CEFR level.
+// the AI-graded Schreiben + Sprechen give one of each in the free 48 hours (RR-397)
+// and the mock needs a subscription. Everything runs at the user's chosen CEFR level.
 
 import Link from "next/link";
 import { requireUser } from "@/lib/auth";
+import { FreeTimeBanner } from "@/components/FreeTimeBanner";
 import { MODULE_DEFS, type ModuleDef } from "@/lib/goethe/registry";
 import { MODULE_ORDER, LEVEL_LABEL } from "@/lib/goethe/types";
 
@@ -57,6 +58,8 @@ export default async function PracticePage() {
           </p>
         )}
       </header>
+
+      <FreeTimeBanner user={user} />
 
       <div className="grid gap-4 sm:grid-cols-2">
         {MODULE_ORDER.map((m) => (

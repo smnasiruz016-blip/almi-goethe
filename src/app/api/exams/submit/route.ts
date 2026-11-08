@@ -1,13 +1,15 @@
 // Submit endpoint for the new exam engines (TestDaF + telc B1/B2/C1H). Re-loads the
 // ExamItem by id server-side (the client never holds the answer key), gates AI
-// sections on paid access, scores via the registry's scoreSection dispatch, and
+// sections through aiGate() (RR-397), scores via the registry's scoreSection dispatch, and
 // persists an ExamAttempt. Returns the exam's OWN result shape — a TestDaF per-
 // section TDN (no total, no pass/fail) or a telc percentage against 60%.
 
 import { NextResponse } from "next/server";
 import { Prisma } from "@prisma/client";
 import { getCurrentUser } from "@/lib/auth";
-import { hasPaidAccess } from "@/lib/billing/plans";
+import { hasPaidAccess, isEmailVerified } from "@/lib/billing/plans";
+import { aiGate } from "@/lib/billing/free-access";
+import { countAiScored } from "@/lib/billing/free-ai-usage";
 import { prisma } from "@/lib/prisma";
 import { scoreSection, sectionDefFor } from "@/lib/exams/registry";
 
@@ -42,12 +44,19 @@ export async function POST(req: Request): Promise<NextResponse> {
     return NextResponse.json({ ok: false, error: "Section not available" }, { status: 400 });
   }
 
-  // AI feedback (writing/speaking) is a paid feature; objective marking is free.
-  if (def.scoringMode === "AI" && !hasPaidAccess(user)) {
-    return NextResponse.json(
-      { ok: false, error: "AI feedback needs a subscription", upgradeUrl: "/pricing" },
-      { status: 402 },
-    );
+  // Objective marking is free, exactly as before.
+  // RR-397: AI feedback (writing/speaking): paid users as before; a free account (48 hours, no card) gets ONE AI-scored
+  // Writing and ONE AI-scored Speaking in total (shared with the Goethe modules), within today's free-AI budget.
+  if (def.scoringMode === "AI") {
+    if (!hasPaidAccess(user) && !isEmailVerified(user)) {
+      return NextResponse.json(
+        { ok: false, error: "Please verify your email before getting AI feedback." },
+        { status: 403 },
+      );
+    }
+    const kind = def.kind === "speaking" ? "SPEAKING" : "WRITING";
+    const gate = await aiGate(user, kind, () => countAiScored(user.id, kind));
+    if (!gate.ok) return NextResponse.json(gate.body, { status: gate.status });
   }
 
   let outcome;

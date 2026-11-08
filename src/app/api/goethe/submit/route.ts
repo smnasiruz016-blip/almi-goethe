@@ -2,13 +2,15 @@
 // module — it looks the handler up in the registry by module, runs it (passing the
 // CEFR level so the AI graders judge at the right standard), turns the result into
 // an honest per-module points estimate, and persists. AI modules (Schreiben,
-// Sprechen) are gated on paid access; objective modules (Lesen, Hören) are free
+// Sprechen) pass through aiGate() (RR-397); objective modules (Lesen, Hören) are free
 // practice. Sprechen arrives as multipart audio, transcribed (Whisper, de) first.
 
 import { NextResponse } from "next/server";
 import { Prisma } from "@prisma/client";
 import { getCurrentUser } from "@/lib/auth";
-import { hasPaidAccess } from "@/lib/billing/plans";
+import { hasPaidAccess, isEmailVerified } from "@/lib/billing/plans";
+import { aiGate } from "@/lib/billing/free-access";
+import { countAiScored } from "@/lib/billing/free-ai-usage";
 import { prisma } from "@/lib/prisma";
 import { MODULE_HANDLERS } from "@/lib/goethe/registry";
 import { fractionToModuleScore } from "@/lib/goethe/goethe-scale";
@@ -55,7 +57,7 @@ export async function POST(req: Request): Promise<NextResponse> {
 
   const attempt = await prisma.goetheAttempt.findFirst({
     where: { id: attemptId, userId: user.id },
-    include: { item: true },
+    include: { item: true, session: { select: { mode: true } } },
   });
   if (!attempt) {
     return NextResponse.json({ ok: false, error: "Attempt not found" }, { status: 404 });
@@ -72,12 +74,28 @@ export async function POST(req: Request): Promise<NextResponse> {
     );
   }
 
-  // AI feedback is a paid feature; objective auto-marking is free practice.
-  if (handler.mode === "AI" && !hasPaidAccess(user)) {
-    return NextResponse.json(
-      { ok: false, error: "AI feedback needs a subscription", upgradeUrl: "/pricing" },
-      { status: 402 },
-    );
+  // Objective auto-marking (Lesen, Hören) is free practice, exactly as before.
+  // RR-397: AI feedback (Schreiben, Sprechen): paid users as before; a free account (48 hours, no card) gets ONE AI-scored
+  // Writing and ONE AI-scored Speaking, within today's free-AI budget. AI in the full mock stays behind hasPaidAccess().
+  if (handler.mode === "AI") {
+    if (attempt.session?.mode === "MOCK") {
+      if (!hasPaidAccess(user)) {
+        return NextResponse.json(
+          { ok: false, error: "The full mock is part of a subscription. Unlock for $12/month.", upgradeUrl: "/pricing" },
+          { status: 402 },
+        );
+      }
+    } else {
+      if (!hasPaidAccess(user) && !isEmailVerified(user)) {
+        return NextResponse.json(
+          { ok: false, error: "Please verify your email before getting AI feedback." },
+          { status: 403 },
+        );
+      }
+      const kind = attempt.module === "SPRECHEN" ? "SPEAKING" : "WRITING";
+      const gate = await aiGate(user, kind, () => countAiScored(user.id, kind));
+      if (!gate.ok) return NextResponse.json(gate.body, { status: gate.status });
+    }
   }
 
   // Sprechen: transcribe the uploaded German audio before scoring.

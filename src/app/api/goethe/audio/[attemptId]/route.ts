@@ -4,6 +4,9 @@
 //
 // Some Listening tasks are conversations/discussions with two or more speakers, so
 // we alternate voices using payload.speakers; single-speaker items use one voice.
+//
+// RR-397: free part kept — Hören was free practice before RR-397 and stays exactly as it was. This route does no AI scoring
+// (it only reads the item aloud), so it does not pass through the free-48-hours AI door.
 
 import { NextResponse } from "next/server";
 import { z } from "zod";
